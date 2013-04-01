@@ -3,7 +3,7 @@ Gallery WordPress Plugin
 
 This plugin makes it possible to implement as many galleries as you want into your website. You can add multiple pictures and description for each gallery, show them all at one page, view each one separately. Moreover, it's possible to upload HQ pictures.
 
-Official plugin page: http://bestwebsoft.com/plugin/portfolio-plugin/
+Official plugin page: http://bestwebsoft.com/plugin/gallery-plugin/
 
 
 Features
