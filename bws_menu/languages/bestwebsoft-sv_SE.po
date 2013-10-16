@@ -1,0 +1,405 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bestwebsoft\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-30 10:49+0300\n"
+"PO-Revision-Date: 2013-08-30 10:49+0300\n"
+"Last-Translator: \n"
+"Language-Team: Christer Rönningborg, Blittan <blittan@xbmc.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv_SE\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: bws_menu.php:85
+msgid "Not set"
+msgstr "Inte angiven"
+
+#: bws_menu.php:87
+#: bws_menu.php:91
+msgid "On"
+msgstr "På"
+
+#: bws_menu.php:89
+#: bws_menu.php:93
+msgid "Off"
+msgstr "Av"
+
+#: bws_menu.php:97
+#: bws_menu.php:101
+#: bws_menu.php:105
+#: bws_menu.php:109
+#: bws_menu.php:113
+#: bws_menu.php:139
+msgid "N/A"
+msgstr "Finns ej"
+
+#: bws_menu.php:111
+msgid " Mb"
+msgstr " Mb"
+
+#: bws_menu.php:115
+#: bws_menu.php:119
+#: bws_menu.php:123
+#: bws_menu.php:134
+msgid "Yes"
+msgstr "Ja"
+
+#: bws_menu.php:117
+#: bws_menu.php:121
+#: bws_menu.php:125
+#: bws_menu.php:136
+msgid "No"
+msgstr "Nej"
+
+#: bws_menu.php:150
+msgid "Operating System"
+msgstr "Operativsystem"
+
+#: bws_menu.php:151
+msgid "Server"
+msgstr "Server"
+
+#: bws_menu.php:152
+msgid "Memory usage"
+msgstr "Minnesanvändning"
+
+#: bws_menu.php:153
+msgid "MYSQL Version"
+msgstr "MySQL-version"
+
+#: bws_menu.php:154
+msgid "SQL Mode"
+msgstr "SQL-läge"
+
+#: bws_menu.php:155
+msgid "PHP Version"
+msgstr "PHP-version"
+
+#: bws_menu.php:156
+msgid "PHP Safe Mode"
+msgstr "PHP säkert läge"
+
+#: bws_menu.php:157
+msgid "PHP Allow URL fopen"
+msgstr "PHP tillåt URL fopen"
+
+#: bws_menu.php:158
+msgid "PHP Memory Limit"
+msgstr "PHP Minnesgräns"
+
+#: bws_menu.php:159
+msgid "PHP Max Upload Size"
+msgstr "PHP Max uppladdningstorlek"
+
+#: bws_menu.php:160
+msgid "PHP Max Post Size"
+msgstr "PHP Max poststorlek"
+
+#: bws_menu.php:161
+msgid "PHP Max Script Execute Time"
+msgstr "PHP Max skriptexekverinstid"
+
+#: bws_menu.php:162
+msgid "PHP Exif support"
+msgstr "PHP Exifstöd"
+
+#: bws_menu.php:163
+msgid "PHP IPTC support"
+msgstr "PHP ITPC-stöd"
+
+#: bws_menu.php:164
+msgid "PHP XML support"
+msgstr "PHP XML-stöd"
+
+#: bws_menu.php:165
+msgid "Site URL"
+msgstr "SajtURL"
+
+#: bws_menu.php:166
+msgid "Home URL"
+msgstr "HemURL"
+
+#: bws_menu.php:167
+msgid "WordPress Version"
+msgstr "WordPress-version"
+
+#: bws_menu.php:168
+msgid "WordPress DB Version"
+msgstr "WordPress-DB-version"
+
+#: bws_menu.php:169
+msgid "Multisite"
+msgstr "Multisajt"
+
+#: bws_menu.php:170
+msgid "Active Theme"
+msgstr "Aktivt tema"
+
+#: bws_menu.php:185
+msgid "Please enter a valid email address."
+msgstr "Var god ange en giltig epost-adress."
+
+#: bws_menu.php:189
+msgid "Email with system info is sent to "
+msgstr "Epost med systeminfo är skickat till"
+
+#: bws_menu.php:193
+msgid "Thank you for contacting us."
+msgstr "Tack för att du kontaktade oss."
+
+#: bws_menu.php:221
+msgid "Sorry, email message could not be delivered."
+msgstr "Ledsen, eposten kunde inte levereras."
+
+#: bws_menu.php:229
+msgid "Pro plugins"
+msgstr "Betaltillägg"
+
+#: bws_menu.php:232
+#: bws_menu.php:258
+msgid "Activated plugins"
+msgstr "Aktiverade tillägg"
+
+#: bws_menu.php:234
+#: bws_menu.php:242
+#: bws_menu.php:250
+#: bws_menu.php:260
+#: bws_menu.php:268
+#: bws_menu.php:276
+msgid "Read more"
+msgstr "Läs mer"
+
+#: bws_menu.php:234
+#: bws_menu.php:260
+msgid "Settings"
+msgstr "Inställningar"
+
+#: bws_menu.php:240
+#: bws_menu.php:266
+msgid "Installed plugins"
+msgstr "Installerade tillägg"
+
+#: bws_menu.php:248
+#: bws_menu.php:274
+msgid "Recommended plugins"
+msgstr "Rekommenderade tillägg"
+
+#: bws_menu.php:250
+msgid "Purchase"
+msgstr "Köp"
+
+#: bws_menu.php:255
+msgid "Free plugins"
+msgstr "Gratis tillägg"
+
+#: bws_menu.php:276
+msgid "Download"
+msgstr "Hämta"
+
+#: bws_menu.php:276
+#, php-format
+msgid "Install %s"
+msgstr "Installera %s"
+
+#: bws_menu.php:276
+msgid "Install now from wordpress.org"
+msgstr "Installera nu från wordpress.org"
+
+#: bws_menu.php:281
+msgid "If you have any questions, please contact us via"
+msgstr "Om du har några frågor, kontakta oss via"
+
+#: bws_menu.php:288
+msgid "System status"
+msgstr "Systemstatus"
+
+#: bws_menu.php:292
+msgid "Environment"
+msgstr "Miljövariabler"
+
+#: bws_menu.php:303
+msgid "Active Plugins"
+msgstr "Aktiverade tillägg"
+
+#: bws_menu.php:314
+msgid "Inactive Plugins"
+msgstr "Inaktiverade tillägg"
+
+#: bws_menu.php:328
+msgid "Send to support"
+msgstr "Skicka till support"
+
+#: bws_menu.php:335
+msgid "Send to custom email &#187;"
+msgstr "Skicka till anpassad epost &#187;"
+
+#~ msgid "Login form"
+#~ msgstr "Inloggningsformulär"
+#~ msgid "Registration form"
+#~ msgstr "Registreringsformulär"
+#~ msgid "Register form"
+#~ msgstr "Registreringsformulär"
+#~ msgid "Reset Password form"
+#~ msgstr "Formulär för att återställa lösenord"
+#~ msgid "Lost password form"
+#~ msgstr "Formulär för att återställa lösenord"
+#~ msgid "Comments form"
+#~ msgstr "Kommentarsformulär"
+#~ msgid "Hide CAPTCHA for registered users"
+#~ msgstr "Dölj CAPTCHA för registrerade användare"
+#~ msgid "Plus (&#43;)"
+#~ msgstr "Plus (&#43;)"
+#~ msgid "Plus"
+#~ msgstr "Plus"
+#~ msgid "Minus (&minus;)"
+#~ msgstr "Minus (&minus;)"
+#~ msgid "Minus"
+#~ msgstr "Minus"
+#~ msgid "Multiplication (&times;)"
+#~ msgstr "Multiplikation (&times;)"
+#~ msgid "Multiply"
+#~ msgstr "Multiplicera"
+#~ msgid "Numbers"
+#~ msgstr "Siffror"
+#~ msgid "Words"
+#~ msgstr "Ord"
+#~ msgid "Captcha Settings"
+#~ msgstr "Captchainställningar"
+#~ msgid "Captcha"
+#~ msgstr "Captcha"
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
+#~ msgid "Support"
+#~ msgstr "Support"
+#~ msgid ""
+#~ "Please select one item in the block Arithmetic and Complexity for CAPTCHA"
+#~ msgstr ""
+#~ "Var god markera ett val i avdelningarna Aritmetiska metoder och "
+#~ "Svårighetsgrad för CAPTCHA"
+#~ msgid "Options saved."
+#~ msgstr "Inställningar sparade."
+#~ msgid "Enable CAPTCHA for:"
+#~ msgstr "Aktivera CAPTCHA för:"
+#~ msgid "Contact form"
+#~ msgstr "Kontaktformulär"
+#~ msgid "(powered by bestwebsoft.com)"
+#~ msgstr "(tillhandahålls av bestwebsoft.com)"
+#~ msgid "Activate contact form"
+#~ msgstr "Aktivera kontaktformulär"
+#~ msgid "Download contact form"
+#~ msgstr "Hämta kontaktformulär"
+#~ msgid ""
+#~ "If you would like to customize this plugin for a custom form, please "
+#~ "contact us via"
+#~ msgstr ""
+#~ "Om du vill anpassa detta tillägg för ett skräddarsytt formulär, vänligen "
+#~ "kontakta oss via"
+#~ msgid "Title for CAPTCHA in the form"
+#~ msgstr "Etikett för CAPTCHA i formulär"
+#~ msgid "Arithmetic actions for CAPTCHA"
+#~ msgstr "Aritmetiska metoder för CAPTCHA"
+#~ msgid "CAPTCHA complexity level"
+#~ msgstr "CAPTCHA-svårighetsgrad"
+#~ msgid "Save Changes"
+#~ msgstr "Spara ändringar"
+#~ msgid "ERROR"
+#~ msgstr "FEL"
+#~ msgid "Please fill the form."
+#~ msgstr "Var god fyll i formuläret."
+#~ msgid "Please enter a valid CAPTCHA value."
+#~ msgstr "Var god fyll i CAPTCHA."
+#~ msgid ""
+#~ "Error: You have entered an incorrect CAPTCHA value. Click the BACK button "
+#~ "on your browser, and try again."
+#~ msgstr ""
+#~ "Fel: Du angav ett felaktigt svar i fältet för CAPTCHA. Klicka på tillbaka-"
+#~ "knappen i din webbläsare och försök igen."
+#~ msgid "zero"
+#~ msgstr "noll"
+#~ msgid "one"
+#~ msgstr "ett"
+#~ msgid "two"
+#~ msgstr "två"
+#~ msgid "three"
+#~ msgstr "tre"
+#~ msgid "four"
+#~ msgstr "fyra"
+#~ msgid "five"
+#~ msgstr "fem"
+#~ msgid "six"
+#~ msgstr "sex"
+#~ msgid "seven"
+#~ msgstr "sju"
+#~ msgid "eight"
+#~ msgstr "åtta"
+#~ msgid "nine"
+#~ msgstr "nio"
+#~ msgid "eleven"
+#~ msgstr "elva"
+#~ msgid "twelve"
+#~ msgstr "tolv"
+#~ msgid "thirteen"
+#~ msgstr "tretton"
+#~ msgid "fourteen"
+#~ msgstr "fjorton"
+#~ msgid "fifteen"
+#~ msgstr "femton"
+#~ msgid "sixteen"
+#~ msgstr "sexton"
+#~ msgid "seventeen"
+#~ msgstr "sjutton"
+#~ msgid "eighteen"
+#~ msgstr "arton"
+#~ msgid "nineteen"
+#~ msgstr "nitton"
+#~ msgid "ten"
+#~ msgstr "tio"
+#~ msgid "twenty"
+#~ msgstr "tjugo"
+#~ msgid "thirty"
+#~ msgstr "trettio"
+#~ msgid "forty"
+#~ msgstr "fyrtio"
+#~ msgid "fifty"
+#~ msgstr "femtio"
+#~ msgid "sixty"
+#~ msgstr "sextio"
+#~ msgid "seventy"
+#~ msgstr "sjuttio"
+#~ msgid "eighty"
+#~ msgstr "åttio"
+#~ msgid "ninety"
+#~ msgstr "nittio"
+#~ msgid "and"
+#~ msgstr "och"
+#~ msgid "Encryption password is not set"
+#~ msgstr "Lösenord för kodning har inte angetts"
+#~ msgid "Decryption password is not set"
+#~ msgstr "Lösenord för avkodning har inte angetts"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Om du har frågor, vänligen kontakta oss via plugin@bestwebsoft.com eller "
+#~ "fyll i kontaktformuläret på vår hemsida"
+#~ msgid "Increase"
+#~ msgstr "Öka"
+#~ msgid "Difficulty for CAPTCHA"
+#~ msgstr "Svårighetsgrad för CAPTCHA"
+#~ msgid "That CAPTCHA was incorrect."
+#~ msgstr "Angiven CAPTCHA var felaktig."
+#~ msgid "The password of encryption is not set"
+#~ msgstr "Lösenordet för krytering har inte angetts"
+#~ msgid "null"
+#~ msgstr "noll"
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
+

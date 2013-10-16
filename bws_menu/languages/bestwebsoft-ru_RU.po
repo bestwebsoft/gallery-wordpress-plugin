@@ -1,0 +1,402 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bestwebsoft\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-30 10:48+0300\n"
+"PO-Revision-Date: 2013-09-06 15:20+0300\n"
+"Last-Translator: \n"
+"Language-Team: bestwebsoft.com <http://support.bestwebsoft.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: bws_menu.php:85
+msgid "Not set"
+msgstr "Не задан"
+
+#: bws_menu.php:87
+#: bws_menu.php:91
+msgid "On"
+msgstr "Вкл"
+
+#: bws_menu.php:89
+#: bws_menu.php:93
+msgid "Off"
+msgstr "Выкл"
+
+#: bws_menu.php:97
+#: bws_menu.php:101
+#: bws_menu.php:105
+#: bws_menu.php:109
+#: bws_menu.php:113
+#: bws_menu.php:139
+msgid "N/A"
+msgstr "Неизвестно"
+
+#: bws_menu.php:111
+msgid " Mb"
+msgstr "Mb"
+
+#: bws_menu.php:115
+#: bws_menu.php:119
+#: bws_menu.php:123
+#: bws_menu.php:134
+msgid "Yes"
+msgstr "Да"
+
+#: bws_menu.php:117
+#: bws_menu.php:121
+#: bws_menu.php:125
+#: bws_menu.php:136
+msgid "No"
+msgstr "Нет"
+
+#: bws_menu.php:150
+msgid "Operating System"
+msgstr "Операционная система"
+
+#: bws_menu.php:151
+msgid "Server"
+msgstr "Тип сервера"
+
+#: bws_menu.php:152
+msgid "Memory usage"
+msgstr "Памяти использовано"
+
+#: bws_menu.php:153
+msgid "MYSQL Version"
+msgstr "Версия MYSQL"
+
+#: bws_menu.php:154
+msgid "SQL Mode"
+msgstr "Режим SQL"
+
+#: bws_menu.php:155
+msgid "PHP Version"
+msgstr "Версия PHP"
+
+#: bws_menu.php:156
+msgid "PHP Safe Mode"
+msgstr "PHP Safe Mode"
+
+#: bws_menu.php:157
+msgid "PHP Allow URL fopen"
+msgstr "PHP Allow URL fopen"
+
+#: bws_menu.php:158
+msgid "PHP Memory Limit"
+msgstr "Лимит памяти"
+
+#: bws_menu.php:159
+msgid "PHP Max Upload Size"
+msgstr "Макс. размер загружаемого файла"
+
+#: bws_menu.php:160
+msgid "PHP Max Post Size"
+msgstr "Макс. размер записи"
+
+#: bws_menu.php:161
+msgid "PHP Max Script Execute Time"
+msgstr "Макс. время выполнения сценария"
+
+#: bws_menu.php:162
+msgid "PHP Exif support"
+msgstr "Поддержка PHP Exif"
+
+#: bws_menu.php:163
+msgid "PHP IPTC support"
+msgstr "Поддержка PHP IPTC"
+
+#: bws_menu.php:164
+msgid "PHP XML support"
+msgstr "Поддержка PHP XML"
+
+#: bws_menu.php:165
+msgid "Site URL"
+msgstr "Адрес сайта"
+
+#: bws_menu.php:166
+msgid "Home URL"
+msgstr "Основной адрес сайта"
+
+#: bws_menu.php:167
+msgid "WordPress Version"
+msgstr "Версия WordPress"
+
+#: bws_menu.php:168
+msgid "WordPress DB Version"
+msgstr "Версия базы данных WordPress"
+
+#: bws_menu.php:169
+msgid "Multisite"
+msgstr "Мультиблог"
+
+#: bws_menu.php:170
+msgid "Active Theme"
+msgstr "Текущая тема"
+
+#: bws_menu.php:185
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста, введите валидный емайл."
+
+#: bws_menu.php:189
+msgid "Email with system info is sent to "
+msgstr "E-mail с системной информацией отправлен на"
+
+#: bws_menu.php:193
+msgid "Thank you for contacting us."
+msgstr "Спасибо что связались с нами."
+
+#: bws_menu.php:221
+msgid "Sorry, email message could not be delivered."
+msgstr "Извините, ваш email не может быть отправлен."
+
+#: bws_menu.php:229
+msgid "Pro plugins"
+msgstr "Pro плагины"
+
+#: bws_menu.php:232
+#: bws_menu.php:258
+msgid "Activated plugins"
+msgstr "Активированные плагины"
+
+#: bws_menu.php:234
+#: bws_menu.php:242
+#: bws_menu.php:250
+#: bws_menu.php:260
+#: bws_menu.php:268
+#: bws_menu.php:276
+msgid "Read more"
+msgstr "Подробнее..."
+
+#: bws_menu.php:234
+#: bws_menu.php:260
+msgid "Settings"
+msgstr "Настройки"
+
+#: bws_menu.php:240
+#: bws_menu.php:266
+msgid "Installed plugins"
+msgstr "Установленные плагины"
+
+#: bws_menu.php:248
+#: bws_menu.php:274
+msgid "Recommended plugins"
+msgstr "Рекомендованные к установке плагины"
+
+#: bws_menu.php:250
+msgid "Purchase"
+msgstr "Купить"
+
+#: bws_menu.php:255
+msgid "Free plugins"
+msgstr "Бесплатные плагины"
+
+#: bws_menu.php:276
+msgid "Download"
+msgstr "Скачать"
+
+#: bws_menu.php:276
+#, php-format
+msgid "Install %s"
+msgstr "Установлено %s"
+
+#: bws_menu.php:276
+msgid "Install now from wordpress.org"
+msgstr "Установить с wordpress.org"
+
+#: bws_menu.php:281
+msgid "If you have any questions, please contact us via"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
+
+#: bws_menu.php:288
+msgid "System status"
+msgstr "Системная информация"
+
+#: bws_menu.php:292
+msgid "Environment"
+msgstr "Системная среда"
+
+#: bws_menu.php:303
+msgid "Active Plugins"
+msgstr "Активированные плагины"
+
+#: bws_menu.php:314
+msgid "Inactive Plugins"
+msgstr "Неактивированные плагины"
+
+#: bws_menu.php:328
+msgid "Send to support"
+msgstr "Отправить в тех. поддержку"
+
+#: bws_menu.php:335
+msgid "Send to custom email &#187;"
+msgstr "Отправить на емейл &#187;"
+
+#~ msgid "Login form"
+#~ msgstr "Форма логина"
+#~ msgid "Registration form"
+#~ msgstr "Форма регистрации"
+#~ msgid "Register form"
+#~ msgstr "Форма регистрации"
+#~ msgid "Reset Password form"
+#~ msgstr "Форма восстановления пароля"
+#~ msgid "Lost password form"
+#~ msgstr "Форма восстановления пароля"
+#~ msgid "Comments form"
+#~ msgstr "Форма комментариев"
+#~ msgid "Hide CAPTCHA for registered users"
+#~ msgstr "Не отображать для зарегистрированных пользователей"
+#~ msgid "Plus (&#43;)"
+#~ msgstr "Плюс (&#43;)"
+#~ msgid "Plus"
+#~ msgstr "Плюс (&#43;)"
+#~ msgid "Minus (&minus;)"
+#~ msgstr "Минус (&minus;)"
+#~ msgid "Minus"
+#~ msgstr "Минус (&minus;)"
+#~ msgid "Multiplication (&times;)"
+#~ msgstr "Умножение (&times;)"
+#~ msgid "Multiply"
+#~ msgstr "Умножить"
+#~ msgid "Numbers"
+#~ msgstr "Цифры"
+#~ msgid "Words"
+#~ msgstr "Слова"
+#~ msgid "Captcha Settings"
+#~ msgstr "Настройки КАПЧИ"
+#~ msgid "Captcha"
+#~ msgstr "КАПЧА"
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
+#~ msgid "Support"
+#~ msgstr "Поддержка"
+#~ msgid ""
+#~ "Please select one item in the block Arithmetic and Complexity for CAPTCHA"
+#~ msgstr ""
+#~ "Пожалуйста, выберите 1 пункт из блока Арифметические дейтсвия и Сложность "
+#~ "для КАПЧИ"
+#~ msgid "Options saved."
+#~ msgstr "Опции сохранены"
+#~ msgid "Enable CAPTCHA for:"
+#~ msgstr "Отображать КАПЧУ для:"
+#~ msgid "Contact form"
+#~ msgstr "Контактная форма"
+#~ msgid "(powered by bestwebsoft.com)"
+#~ msgstr "(разработано компанией bestwebsoft.com)"
+#~ msgid "Activate contact form"
+#~ msgstr "Активировать контакную форму"
+#~ msgid "Download contact form"
+#~ msgstr "Скачать контактную форму"
+#~ msgid ""
+#~ "If you would like to customize this plugin for a custom form, please "
+#~ "contact us via"
+#~ msgstr ""
+#~ "Если вы хотите кастомизировать плагин для кастомной формы, обращайтесь на"
+#~ msgid "Title for CAPTCHA in the form"
+#~ msgstr "Заголовок для КАПЧИ в форме"
+#~ msgid "Arithmetic actions for CAPTCHA"
+#~ msgstr "Арифметические действия для КАПЧИ"
+#~ msgid "CAPTCHA complexity level"
+#~ msgstr "Уровень сложности КАПЧИ"
+#~ msgid "Save Changes"
+#~ msgstr "Сохранить изменения"
+#~ msgid "ERROR"
+#~ msgstr "Ошибка"
+#~ msgid "Please fill the form."
+#~ msgstr "Пожалуйста, заполните КАПЧУ."
+#~ msgid "Please enter a valid CAPTCHA value."
+#~ msgstr "Пожалуйста, заполните КАПЧУ."
+#~ msgid ""
+#~ "Error: You have entered an incorrect CAPTCHA value. Click the BACK button "
+#~ "on your browser, and try again."
+#~ msgstr ""
+#~ "Ошибка: Вы ввели КАПЧУ неправильно. Надмите НАЗАД в браузере и попробуйте "
+#~ "еще раз"
+#~ msgid "zero"
+#~ msgstr "ноль"
+#~ msgid "one"
+#~ msgstr "один"
+#~ msgid "two"
+#~ msgstr "два"
+#~ msgid "three"
+#~ msgstr "три"
+#~ msgid "four"
+#~ msgstr "четыре"
+#~ msgid "five"
+#~ msgstr "пять"
+#~ msgid "six"
+#~ msgstr "шесть"
+#~ msgid "seven"
+#~ msgstr "семь"
+#~ msgid "eight"
+#~ msgstr "восемь"
+#~ msgid "nine"
+#~ msgstr "девять"
+#~ msgid "eleven"
+#~ msgstr "одиннадцать"
+#~ msgid "twelve"
+#~ msgstr "двенадать"
+#~ msgid "thirteen"
+#~ msgstr "тринадцать"
+#~ msgid "fourteen"
+#~ msgstr "четырнадать"
+#~ msgid "fifteen"
+#~ msgstr "пятнадцать"
+#~ msgid "sixteen"
+#~ msgstr "шестнадцать"
+#~ msgid "seventeen"
+#~ msgstr "семнадцать"
+#~ msgid "eighteen"
+#~ msgstr "восемнадцать"
+#~ msgid "nineteen"
+#~ msgstr "девятнадцать"
+#~ msgid "ten"
+#~ msgstr "десять"
+#~ msgid "twenty"
+#~ msgstr "двадцать"
+#~ msgid "thirty"
+#~ msgstr "тридцать"
+#~ msgid "forty"
+#~ msgstr "сорок"
+#~ msgid "fifty"
+#~ msgstr "пятьдесят"
+#~ msgid "sixty"
+#~ msgstr "шестьдесят"
+#~ msgid "seventy"
+#~ msgstr "семьдесят"
+#~ msgid "eighty"
+#~ msgstr "восемьдесят"
+#~ msgid "ninety"
+#~ msgstr "девяносто"
+#~ msgid "and"
+#~ msgstr "и"
+#~ msgid "Encryption password is not set"
+#~ msgstr "Пароль для шифрования не установлен"
+#~ msgid "Decryption password is not set"
+#~ msgstr "Пароль для дешифровки не установлен"
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Если у вас есть какие-то впросы, обращайтесь на plugin@bestwebsoft.com "
+#~ "или заполните контактную форму на нашем сайте"
+#~ msgid "The password of encryption is not set"
+#~ msgstr "Пароль для шифрования не установлен"
+#~ msgid "Increase"
+#~ msgstr "Умножить"
+#~ msgid "Difficulty for CAPTCHA"
+#~ msgstr "Уровень сложности КАПЧИ"
+#~ msgid "That CAPTCHA was incorrect."
+#~ msgstr "КАПЧА введена некорректно"
+#~ msgid "null"
+#~ msgstr "ноль"
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
+

@@ -1,0 +1,505 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gallery\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-02 12:13+0300\n"
+"PO-Revision-Date: 2013-10-02 12:13+0300\n"
+"Last-Translator: \n"
+"Language-Team: Josef Sukdol <josef.sukdol@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs_CZ\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: gallery-plugin.php:101
+#: gallery-plugin.php:696
+msgid "The following files \"gallery-template.php\" and \"gallery-single-template.php\" were not found in the directory of your theme. Please copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to the directory of your theme for the correct work of the Gallery plugin"
+msgstr ""
+
+#: gallery-plugin.php:125
+#: gallery-plugin.php:135
+msgid "Galleries"
+msgstr "Galerie"
+
+#: gallery-plugin.php:126
+#: gallery-plugin.php:579
+msgid "Gallery"
+msgstr "Galerie"
+
+#: gallery-plugin.php:127
+#, fuzzy
+msgid "Add a Gallery"
+msgstr "Vložit novou galerii"
+
+#: gallery-plugin.php:128
+msgid "Add New Gallery"
+msgstr "Vložit novou galerii"
+
+#: gallery-plugin.php:129
+msgid "Edit Gallery"
+msgstr "Upravit galerii"
+
+#: gallery-plugin.php:130
+msgid "New Gallery"
+msgstr "Nová galerie"
+
+#: gallery-plugin.php:131
+msgid "View Gallery"
+msgstr "Zobrazit galerii"
+
+#: gallery-plugin.php:132
+#, fuzzy
+msgid "Find a Gallery"
+msgstr "Upravit galerii"
+
+#: gallery-plugin.php:133
+#, fuzzy
+msgid "No Gallery found"
+msgstr "Nebyla nalezena žádná galerie"
+
+#: gallery-plugin.php:190
+msgid "Upload File"
+msgstr "Nahrát soubor"
+
+#: gallery-plugin.php:191
+msgid "Gallery Shortcode"
+msgstr "Nastavení galerie"
+
+#: gallery-plugin.php:208
+msgid "The gallery temp directory (gallery-plugin/upload/files) is not available for record on your webserver. Please use the standard WP functionality to upload images (media library)"
+msgstr ""
+
+#: gallery-plugin.php:212
+#, fuzzy
+msgid "Choose an image for upload:"
+msgstr "Vyberte náhled pro nahrání:"
+
+#: gallery-plugin.php:217
+msgid "Please enable JavaScript to use the file uploader."
+msgstr "Prosím aktivujte JavaScript pro použití nahrávacího apletu."
+
+#: gallery-plugin.php:224
+msgid "Allow the download link for all images in this gallery"
+msgstr ""
+
+#: gallery-plugin.php:225
+msgid "Please use the drag and drop function to change an order of the images displaying and do not forget to save the post."
+msgstr ""
+
+#: gallery-plugin.php:227
+msgid "Please make a choice"
+msgstr ""
+
+#: gallery-plugin.php:227
+#: gallery-plugin.php:809
+#, fuzzy
+msgid "Sort images by"
+msgstr "Počet náhledů zobrazených v jedné řádce"
+
+#: gallery-plugin.php:227
+#, fuzzy
+msgid "sort images"
+msgstr "Počet náhledů zobrazených v jedné řádce"
+
+#: gallery-plugin.php:227
+msgid "on the plugin settings page ("
+msgstr ""
+
+#: gallery-plugin.php:271
+#: gallery-plugin.php:475
+msgid "Title"
+msgstr "Název"
+
+#: gallery-plugin.php:273
+msgid "URL"
+msgstr ""
+
+#: gallery-plugin.php:273
+msgid "(by click on image opens a link in a new window)"
+msgstr ""
+
+#: gallery-plugin.php:274
+msgid "This setting is available in Pro version"
+msgstr ""
+
+#: gallery-plugin.php:275
+msgid "Open the link"
+msgstr ""
+
+#: gallery-plugin.php:275
+msgid "Current window"
+msgstr ""
+
+#: gallery-plugin.php:275
+msgid "New window"
+msgstr ""
+
+#: gallery-plugin.php:276
+msgid "Delete"
+msgstr ""
+
+#: gallery-plugin.php:289
+msgid "You can add a Single Gallery to the page or post by inserting this shortcode into the content"
+msgstr ""
+
+#: gallery-plugin.php:291
+msgid "If you want to display a short description containing a screenshot and the link to the Single Gallery Page"
+msgstr ""
+
+#: gallery-plugin.php:476
+msgid "Author"
+msgstr "Autor"
+
+#: gallery-plugin.php:477
+#, fuzzy
+msgid "Photo"
+msgstr "Fotky"
+
+#: gallery-plugin.php:478
+#, fuzzy
+msgid "Publishing"
+msgstr "Veřejné"
+
+#: gallery-plugin.php:479
+#: gallery-plugin.php:813
+msgid "Date"
+msgstr "Datum"
+
+#: gallery-plugin.php:605
+#, fuzzy
+msgid "See images &raquo;"
+msgstr "Zobrazit obsah galerie &raquo;"
+
+#: gallery-plugin.php:689
+#, fuzzy
+msgid "Settings are saved"
+msgstr "Nastavení uložena."
+
+#: gallery-plugin.php:702
+#, fuzzy
+msgid "Gallery Settings"
+msgstr "Nastavení galerie"
+
+#: gallery-plugin.php:705
+msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
+msgstr ""
+
+#: gallery-plugin.php:709
+#, fuzzy
+msgid "Image size for the album cover"
+msgstr "Размер для "
+
+#: gallery-plugin.php:711
+#: gallery-plugin.php:719
+#: gallery-plugin.php:732
+#, fuzzy
+msgid "Image size"
+msgstr "Název rozměru"
+
+#: gallery-plugin.php:712
+#: gallery-plugin.php:720
+msgid "Width (in px)"
+msgstr "Šířka (v px)"
+
+#: gallery-plugin.php:713
+#: gallery-plugin.php:721
+msgid "Height (in px)"
+msgstr "Výška (v px)"
+
+#: gallery-plugin.php:717
+#, fuzzy
+msgid "Gallery image size"
+msgstr "Galerie"
+
+#: gallery-plugin.php:725
+#, fuzzy
+msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
+msgstr "WordPress vytvoří kopii náhledu obrázku v zadaných rozměrech při nahrání nového obrázku."
+
+#: gallery-plugin.php:730
+msgid "Gallery image size in the lightbox"
+msgstr ""
+
+#: gallery-plugin.php:733
+#, fuzzy
+msgid "Max width (in px)"
+msgstr "Šířka (v px)"
+
+#: gallery-plugin.php:734
+#, fuzzy
+msgid "Max height (in px)"
+msgstr "Výška (v px)"
+
+#: gallery-plugin.php:735
+msgid "Display a full size image in the lightbox"
+msgstr ""
+
+#: gallery-plugin.php:739
+msgid "Crop position"
+msgstr ""
+
+#: gallery-plugin.php:741
+msgid "Horizontal"
+msgstr ""
+
+#: gallery-plugin.php:743
+msgid "left"
+msgstr ""
+
+#: gallery-plugin.php:744
+#: gallery-plugin.php:751
+msgid "center"
+msgstr ""
+
+#: gallery-plugin.php:745
+msgid "right"
+msgstr ""
+
+#: gallery-plugin.php:748
+msgid "Vertical"
+msgstr ""
+
+#: gallery-plugin.php:750
+msgid "top"
+msgstr ""
+
+#: gallery-plugin.php:752
+msgid "bottom"
+msgstr ""
+
+#: gallery-plugin.php:757
+msgid "Lightbox background"
+msgstr ""
+
+#: gallery-plugin.php:759
+msgid "Default"
+msgstr ""
+
+#: gallery-plugin.php:760
+msgid "Background transparency (from 0 to 1)"
+msgstr ""
+
+#: gallery-plugin.php:762
+msgid "Select a background color"
+msgstr ""
+
+#: gallery-plugin.php:764
+msgid "Background color"
+msgstr ""
+
+#: gallery-plugin.php:771
+#: gallery-plugin.php:882
+msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
+msgstr ""
+
+#: gallery-plugin.php:778
+msgid "Images with border"
+msgstr ""
+
+#: gallery-plugin.php:781
+msgid "Border width in px, just numbers"
+msgstr ""
+
+#: gallery-plugin.php:783
+#: gallery-plugin.php:785
+msgid "Select a border color"
+msgstr ""
+
+#: gallery-plugin.php:791
+#, fuzzy
+msgid "Number of images in the row"
+msgstr "Počet náhledů zobrazených v jedné řádce"
+
+#: gallery-plugin.php:797
+msgid "Start slideshow"
+msgstr ""
+
+#: gallery-plugin.php:803
+msgid "Slideshow interval"
+msgstr ""
+
+#: gallery-plugin.php:811
+msgid "Attachment ID"
+msgstr ""
+
+#: gallery-plugin.php:812
+#, fuzzy
+msgid "Image Name"
+msgstr "Název rozměru"
+
+#: gallery-plugin.php:814
+msgid "Sorting order (the input field for sorting order in the Insert / Upload Media Gallery dialog)"
+msgstr ""
+
+#: gallery-plugin.php:815
+msgid "Random"
+msgstr ""
+
+#: gallery-plugin.php:819
+#, fuzzy
+msgid "Sort images"
+msgstr "Počet náhledů zobrazených v jedné řádce"
+
+#: gallery-plugin.php:821
+msgid "ASC (ascending order from lowest to highest values - 1, 2, 3; a, b, c)"
+msgstr ""
+
+#: gallery-plugin.php:822
+msgid "DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
+msgstr ""
+
+#: gallery-plugin.php:826
+msgid "Display text above the image"
+msgstr ""
+
+#: gallery-plugin.php:828
+msgid "Turn off the checkbox, if you want to display text just in a lightbox"
+msgstr ""
+
+#: gallery-plugin.php:832
+msgid "Display the Back link"
+msgstr ""
+
+#: gallery-plugin.php:838
+msgid "Display the Back link in the shortcode"
+msgstr ""
+
+#: gallery-plugin.php:844
+msgid "The Back link text"
+msgstr ""
+
+#: gallery-plugin.php:850
+msgid "The Back link URL"
+msgstr ""
+
+#: gallery-plugin.php:852
+msgid "Gallery page (Page with Gallery Template)"
+msgstr ""
+
+#: gallery-plugin.php:854
+msgid "(Full URL to custom page)"
+msgstr ""
+
+#: gallery-plugin.php:858
+msgid "The Read More link text"
+msgstr ""
+
+#: gallery-plugin.php:866
+msgid "Display Like buttons in the lightbox"
+msgstr ""
+
+#: gallery-plugin.php:868
+msgid "FaceBook"
+msgstr ""
+
+#: gallery-plugin.php:869
+#, fuzzy
+msgid "Twitter"
+msgstr "Název"
+
+#: gallery-plugin.php:870
+msgid "Pinterest"
+msgstr ""
+
+#: gallery-plugin.php:871
+msgid "Google +1"
+msgstr ""
+
+#: gallery-plugin.php:875
+#, fuzzy
+msgid "Slug for gallery item"
+msgstr "Rozměry náhledu obrázku v albu"
+
+#: gallery-plugin.php:877
+msgid "for any structure of permalinks except the default structure"
+msgstr ""
+
+#: gallery-plugin.php:890
+msgid "Save Changes"
+msgstr "Uložit změny"
+
+#: gallery-plugin.php:902
+#: gallery-plugin.php:917
+msgid "Settings"
+msgstr "Nastavení"
+
+#: gallery-plugin.php:903
+msgid "FAQ"
+msgstr "FAQ "
+
+#: gallery-plugin.php:904
+msgid "Support"
+msgstr "Podpora"
+
+#: gallery-plugin.php:1114
+#: template/gallery-single-template.php:76
+#, fuzzy
+msgid "Sorry, nothing found."
+msgstr "Omlouvám se - nic nenalezeno."
+
+#: gallery-plugin.php:1136
+#: template/gallery-single-template.php:102
+msgid "Download high resolution image"
+msgstr ""
+
+#: template/gallery-single-template.php:102
+msgid "Image"
+msgstr ""
+
+#, fuzzy
+#~ msgid "PHP Max Upload Size"
+#~ msgstr "Nahrát soubor"
+
+#, fuzzy
+#~ msgid "Pro plugins"
+#~ msgstr "Doporučené pluginy"
+#~ msgid "Activated plugins"
+#~ msgstr "Aktivní pluginy"
+#~ msgid "Read more"
+#~ msgstr "Další informace"
+#~ msgid "Installed plugins"
+#~ msgstr "Nainstalované pluginy"
+#~ msgid "Recommended plugins"
+#~ msgstr "Doporučené pluginy"
+
+#, fuzzy
+#~ msgid "Free plugins"
+#~ msgstr "Doporučené pluginy"
+#~ msgid "Download"
+#~ msgstr "Stáhnout"
+#~ msgid "Install %s"
+#~ msgstr "Instaluj %s"
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "Instaluj ihned z wordpress.org"
+
+#, fuzzy
+#~ msgid "If you have any questions, please contact us via"
+#~ msgstr ""
+#~ "Pokud máte jakékoliv dotazy, prosím kontaktujte nás na plugin@bestwebsoft."
+#~ "com a nebo vyplňte kontaktní formulář na našich stránkách."
+
+#, fuzzy
+#~ msgid "Active Plugins"
+#~ msgstr "Aktivní pluginy"
+
+#, fuzzy
+#~ msgid "Inactive Plugins"
+#~ msgstr "Aktivní pluginy"
+
+#, fuzzy
+#~ msgid "Send to support"
+#~ msgstr "Podpora"
+#~ msgid "Add New"
+#~ msgstr "Vložit novou"
+#~ msgid "Search Galleries"
+#~ msgstr "Hledat galerii"
+#~ msgid "The size of the cover album for gallery"
+#~ msgstr "Rozměry náhledu alba v galerii"
+#~ msgid "date"
+#~ msgstr "Datum"
+

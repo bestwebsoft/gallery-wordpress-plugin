@@ -1,0 +1,479 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gallery\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-04 17:39+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Ismail Demirbilek <ce.demirbilek@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: gallery-plugin.php:101
+#: gallery-plugin.php:695
+msgid "The following files \"gallery-template.php\" and \"gallery-single-template.php\" were not found in the directory of your theme. Please copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to the directory of your theme for the correct work of the Gallery plugin"
+msgstr "\"gallery-template.php\" ve \"gallery-single-template.php\" dosyaları tema klasörünüzde bulunamadı. Lütfen bu dosyaları `/wp-content/plugins/gallery-plugin/template/` dizininden tema dizininize kopyalayınız. Aksi halde Galeri eklentisi doğru çalışmayacaktır."
+
+#: gallery-plugin.php:125
+#: gallery-plugin.php:135
+msgid "Galleries"
+msgstr "Galeriler"
+
+#: gallery-plugin.php:126
+#: gallery-plugin.php:579
+msgid "Gallery"
+msgstr "Galeri"
+
+#: gallery-plugin.php:127
+msgid "Add a Gallery"
+msgstr "Yeni Galeri"
+
+#: gallery-plugin.php:128
+msgid "Add New Gallery"
+msgstr "Yeni Galeri"
+
+#: gallery-plugin.php:129
+msgid "Edit Gallery"
+msgstr "Galeriyi Düzenle"
+
+#: gallery-plugin.php:130
+msgid "New Gallery"
+msgstr "Yeni Galeri"
+
+#: gallery-plugin.php:131
+msgid "View Gallery"
+msgstr "Galeriyi görüntüle"
+
+#: gallery-plugin.php:132
+msgid "Find a Gallery"
+msgstr "Galeri bul"
+
+#: gallery-plugin.php:133
+msgid "No Gallery found"
+msgstr "Galeri bulunamadı"
+
+#: gallery-plugin.php:190
+msgid "Upload File"
+msgstr "Resim Yükle"
+
+#: gallery-plugin.php:191
+msgid "Gallery Shortcode"
+msgstr "Galeri Kısa Kodu"
+
+#: gallery-plugin.php:208
+msgid "The gallery temp directory (gallery-plugin/upload/files) is not available for record on your webserver. Please use the standard WP functionality to upload images (media library)"
+msgstr "Geçici galeri dizini (gallery-plugin/upload/files) yazma izni verilmediği için kullanılamıyor. Lütfen ortam bölümünden resimlerinizi upload ediniz."
+
+#: gallery-plugin.php:212
+msgid "Choose an image for upload:"
+msgstr "Yüklemek için bir resim seçiniz:"
+
+#: gallery-plugin.php:217
+msgid "Please enable JavaScript to use the file uploader."
+msgstr "Uploader'ı kullanmak için JavaScript desteğini aktifleştirmelisiniz."
+
+#: gallery-plugin.php:224
+msgid "Allow the download link for all images in this gallery"
+msgstr "İndirme bağlantısını bu galerideki tüm resimlere ekle"
+
+#: gallery-plugin.php:225
+msgid "Please use the drag and drop function to change an order of the images displaying and do not forget to save the post."
+msgstr "Sıralamayı değiştirmek için resimleri sürükleyin. Değişiklikleri kaydetmeyi uutmayın."
+
+#: gallery-plugin.php:227
+msgid "Please make a choice"
+msgstr "Lütfen bir seçim yapınız"
+
+#: gallery-plugin.php:227
+#: gallery-plugin.php:808
+msgid "Sort images by"
+msgstr "Resimleri sırala buna göre sırala"
+
+#: gallery-plugin.php:227
+msgid "sort images"
+msgstr "görselleri sırala"
+
+#: gallery-plugin.php:227
+msgid "on the plugin settings page ("
+msgstr "Eklenti ayarları: ("
+
+#: gallery-plugin.php:271
+#: gallery-plugin.php:475
+msgid "Title"
+msgstr "Başlık"
+
+#: gallery-plugin.php:273
+msgid "URL"
+msgstr "URL"
+
+#: gallery-plugin.php:273
+msgid "(by click on image opens a link in a new window)"
+msgstr "(görsele tıklanınca yeni bir pencerede link açılır)"
+
+#: gallery-plugin.php:274
+msgid "This setting is available in Pro version"
+msgstr "Bu ayar Pro verisyonda yapılabilir"
+
+#: gallery-plugin.php:275
+msgid "Open the link"
+msgstr "Linki aç"
+
+#: gallery-plugin.php:275
+msgid "Current window"
+msgstr "Geçerli pencere"
+
+#: gallery-plugin.php:275
+msgid "New window"
+msgstr "Yeni pencere"
+
+#: gallery-plugin.php:276
+msgid "Delete"
+msgstr "Sil"
+
+#: gallery-plugin.php:289
+msgid "You can add a Single Gallery to the page or post by inserting this shortcode into the content"
+msgstr "Sayfa ya da yazılara kısa kodu yazarak tekil galeri ekleyebilirsiniz. Aşağıdaki kısa kodu yazının içerisine yapıştırmanız yeterli"
+
+#: gallery-plugin.php:291
+msgid "If you want to display a short description containing a screenshot and the link to the Single Gallery Page"
+msgstr "Eğer Galeri sayfasına link içeren galeri önizlemesi eklemek isterseniz aşağıdaki kodu yapıştırınız"
+
+#: gallery-plugin.php:476
+msgid "Author"
+msgstr "Yazar"
+
+#: gallery-plugin.php:477
+msgid "Photo"
+msgstr "Fotoğraf"
+
+#: gallery-plugin.php:478
+msgid "Publishing"
+msgstr "Yayınlama"
+
+#: gallery-plugin.php:479
+#: gallery-plugin.php:812
+msgid "Date"
+msgstr "Tarih"
+
+#: gallery-plugin.php:605
+msgid "See images &raquo;"
+msgstr "Resimleri Gör  &raquo;"
+
+#: gallery-plugin.php:688
+msgid "Settings are saved"
+msgstr "Ayarlar kaydedildi"
+
+#: gallery-plugin.php:701
+msgid "Gallery Settings"
+msgstr "Galeri ayarları"
+
+#: gallery-plugin.php:704
+msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
+msgstr "Sayfa ya da yazılara tekil galeri eklemek için bu kısa kodu kopyalayıp sayfa ya da yazı içerisine yapıştırın:"
+
+#: gallery-plugin.php:708
+msgid "Image size for the album cover"
+msgstr "Albüm kapağı için resim boyuru"
+
+#: gallery-plugin.php:710
+#: gallery-plugin.php:718
+#: gallery-plugin.php:731
+msgid "Image size"
+msgstr "Resim boyutu"
+
+#: gallery-plugin.php:711
+#: gallery-plugin.php:719
+msgid "Width (in px)"
+msgstr "Yatay boyut (px)"
+
+#: gallery-plugin.php:712
+#: gallery-plugin.php:720
+msgid "Height (in px)"
+msgstr "Yükseklik (px)"
+
+#: gallery-plugin.php:716
+msgid "Gallery image size"
+msgstr "Galeri resim boyutu"
+
+#: gallery-plugin.php:724
+msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
+msgstr "Yeni bir resim yüklediğinizde Wordpress belirlernen boyutlarda bir thumbnail oluşturacaktır."
+
+#: gallery-plugin.php:729
+msgid "Gallery image size in the lightbox"
+msgstr "Lightbox içerisindeki resim boyutu"
+
+#: gallery-plugin.php:732
+msgid "Max width (in px)"
+msgstr "Maksimum yatay boyut (px)"
+
+#: gallery-plugin.php:733
+msgid "Max height (in px)"
+msgstr "Maksimum yükseklik (px)"
+
+#: gallery-plugin.php:734
+msgid "Display a full size image in the lightbox"
+msgstr "Lightbox içerisinde tam boyutlu resim göster"
+
+#: gallery-plugin.php:738
+msgid "Crop position"
+msgstr "Kırpma konumu"
+
+#: gallery-plugin.php:740
+msgid "Horizontal"
+msgstr "Yatay"
+
+#: gallery-plugin.php:742
+msgid "left"
+msgstr "sol"
+
+#: gallery-plugin.php:743
+#: gallery-plugin.php:750
+msgid "center"
+msgstr "orta"
+
+#: gallery-plugin.php:744
+msgid "right"
+msgstr "sağ"
+
+#: gallery-plugin.php:747
+msgid "Vertical"
+msgstr "Dikey"
+
+#: gallery-plugin.php:749
+msgid "top"
+msgstr "üst"
+
+#: gallery-plugin.php:751
+msgid "bottom"
+msgstr "alt"
+
+#: gallery-plugin.php:756
+msgid "Lightbox background"
+msgstr "Lightbox arkaplanı"
+
+#: gallery-plugin.php:758
+msgid "Default"
+msgstr "Öntanımlı"
+
+#: gallery-plugin.php:759
+msgid "Background transparency (from 0 to 1)"
+msgstr "Arkaplan saydamlığı (0 - 10 arasında)"
+
+#: gallery-plugin.php:761
+msgid "Select a background color"
+msgstr "Arkaplan rengi seçiniz"
+
+#: gallery-plugin.php:763
+msgid "Background color"
+msgstr "Arka plan rengi"
+
+#: gallery-plugin.php:770
+#: gallery-plugin.php:879
+msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
+msgstr "Bu özellik Pro versiyonda etkindir. Detaylar için linke tıklayın."
+
+#: gallery-plugin.php:777
+msgid "Images with border"
+msgstr "Çerçeveli resimler"
+
+#: gallery-plugin.php:780
+msgid "Border width in px, just numbers"
+msgstr "Çerçeve kalınlığı (px) [sadece sayı yazınız]"
+
+#: gallery-plugin.php:782
+#: gallery-plugin.php:784
+msgid "Select a border color"
+msgstr "Çerçeve rengi seçiniz"
+
+#: gallery-plugin.php:790
+msgid "Number of images in the row"
+msgstr "Bir satırdaki resim sayısı"
+
+#: gallery-plugin.php:796
+msgid "Start slideshow"
+msgstr "Slayt gösterisini başlat"
+
+#: gallery-plugin.php:802
+msgid "Slideshow interval"
+msgstr "Slayt gösterisi sıklığı"
+
+#: gallery-plugin.php:810
+msgid "Attachment ID"
+msgstr "Ek ID"
+
+#: gallery-plugin.php:811
+msgid "Image Name"
+msgstr "Resim İsmi"
+
+#: gallery-plugin.php:813
+msgid "Sorting order (the input field for sorting order in the Insert / Upload Media Gallery dialog)"
+msgstr "Sıralama"
+
+#: gallery-plugin.php:814
+msgid "Random"
+msgstr "Rastgele"
+
+#: gallery-plugin.php:818
+msgid "Sort images"
+msgstr "Resimleri sırala"
+
+#: gallery-plugin.php:820
+msgid "ASC (ascending order from lowest to highest values - 1, 2, 3; a, b, c)"
+msgstr "Artan Sırada (1,2,3; a,b,c)"
+
+#: gallery-plugin.php:821
+msgid "DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
+msgstr "Azalan Sırada (3,2,1;c,b,a)"
+
+#: gallery-plugin.php:825
+msgid "Display text above the image"
+msgstr "Görsel üzerinde yazı göster"
+
+#: gallery-plugin.php:827
+#, fuzzy
+msgid "Turn off the checkbox, if you want to display text just in a lightbox"
+msgstr "Eğer lightbox içerisinde yazı göstermek isterseniz"
+
+#: gallery-plugin.php:831
+msgid "Display the Back link"
+msgstr "Geri linkini göster"
+
+#: gallery-plugin.php:837
+msgid "Display the Back link in the shortcode"
+msgstr "Kısa kodda Geri linkini göster"
+
+#: gallery-plugin.php:843
+msgid "The Back link text"
+msgstr "Geri linki başlığı"
+
+#: gallery-plugin.php:849
+msgid "The Back link URL"
+msgstr "Geri linki URL'si"
+
+#: gallery-plugin.php:851
+msgid "Gallery page (Page with Gallery Template)"
+msgstr "Galeri sayfası"
+
+#: gallery-plugin.php:853
+msgid "(Full URL to custom page)"
+msgstr "(Özel sayfaya(custom page) tam link)"
+
+#: gallery-plugin.php:857
+msgid "The Read More link text"
+msgstr "Devamını oku linki için etiket"
+
+#: gallery-plugin.php:865
+msgid "Display Like buttons in the lightbox"
+msgstr "Lightbox içerisinde beğen butonlarını göster"
+
+#: gallery-plugin.php:867
+msgid "FaceBook"
+msgstr "Facebook"
+
+#: gallery-plugin.php:868
+msgid "Twitter"
+msgstr "Twitter"
+
+#: gallery-plugin.php:869
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: gallery-plugin.php:870
+msgid "Google +1"
+msgstr "Google +1"
+
+#: gallery-plugin.php:873
+#, fuzzy
+msgid "Slug for gallery item"
+msgstr "Розмір зображення галерея"
+
+#: gallery-plugin.php:875
+msgid "for any structure of permalinks except the default structure"
+msgstr ""
+
+#: gallery-plugin.php:887
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: gallery-plugin.php:899
+#: gallery-plugin.php:914
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: gallery-plugin.php:900
+msgid "FAQ"
+msgstr "SSS"
+
+#: gallery-plugin.php:901
+msgid "Support"
+msgstr "Destek"
+
+#: gallery-plugin.php:1111
+#: template/gallery-single-template.php:76
+msgid "Sorry, nothing found."
+msgstr "Üzgünüz, sonuç bulunamadı."
+
+#: gallery-plugin.php:1133
+#: template/gallery-single-template.php:102
+msgid "Download high resolution image"
+msgstr "Yüksek çözünürlüklü görseli indir"
+
+#: template/gallery-single-template.php:102
+msgid "Image"
+msgstr "Görsel"
+
+#, fuzzy
+#~ msgid "PHP Max Upload Size"
+#~ msgstr "Resim Yükle"
+#~ msgid "Pro plugins"
+#~ msgstr "Pro eklentiler"
+#~ msgid "Activated plugins"
+#~ msgstr "Etkinleştirilmiş eklentiler"
+#~ msgid "Read more"
+#~ msgstr "Devamını Oku"
+#~ msgid "Installed plugins"
+#~ msgstr "Yüklü eklentiler"
+#~ msgid "Recommended plugins"
+#~ msgstr "Önerilen eklentiler"
+#~ msgid "Purchase"
+#~ msgstr "Satın Al"
+#~ msgid "Free plugins"
+#~ msgstr "Ücretsiz eklentiler"
+#~ msgid "Download"
+#~ msgstr "İndir"
+#~ msgid "Install %s"
+#~ msgstr "%s yükle"
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "wordpress.org'dan hemen yükle"
+#~ msgid "If you have any questions, please contact us via"
+#~ msgstr "Herhangi bir sorunuz olursa lütfen bizimle iletişime geçiniz: "
+
+#, fuzzy
+#~ msgid "Active Plugins"
+#~ msgstr "Etkinleştirilmiş eklentiler"
+
+#, fuzzy
+#~ msgid "Inactive Plugins"
+#~ msgstr "Etkinleştirilmiş eklentiler"
+
+#, fuzzy
+#~ msgid "Send to support"
+#~ msgstr "Destek"
+#~ msgid "Add New"
+#~ msgstr "Додати новий"
+#~ msgid "Search Galleries"
+#~ msgstr "Пошук галереї"
+#~ msgid "The size of the cover album for gallery"
+#~ msgstr "Розмір обкладинки альбому для галереї"
+#~ msgid "date"
+#~ msgstr "Дата"
+
