@@ -1,9 +1,16 @@
-Gallery WordPress Plugin
+<a href="http://bestwebsoft.com/plugin/gallery-plugin/" target=_blank>Gallery WordPress Plugin</a>
 ========================
 
-This plugin makes it possible to implement as many galleries as you want into your website. You can add multiple pictures and description for each gallery, show them all at one page, view each one separately. Moreover, it's possible to upload HQ pictures.
+This plugin makes it possible to implement as many galleries as you want into your website. You can add multiple pictures and description for each gallery, show them all at one page, view each one separately. Moreover, you can upload HQ images. Regular updates and simplicity of usage along with efficient functionality make it a perfect choice for your site to have an appealing look. There is also a premium version of the plugin with more useful features available.
 
-Official plugin page: http://bestwebsoft.com/plugin/gallery-plugin/
+<img src="http://bestwebsoft.com/wp-content/uploads/2011/10/gallery2.jpg" />
+
+<a href="http://bestwebsoft.com/plugin/gallery-plugin/#description" target=_blank>Description</a> | 
+<a href="http://bestwebsoft.com/plugin/gallery-plugin/#installation" target=_blank>Installation</a> | 
+<a href="http://bestwebsoft.com/plugin/gallery-plugin/#faq" target=_blank>FAQ</a> | 
+<a href="http://bestwebsoft.com/plugin/gallery-plugin/#screenshots" target=_blank>Screenshots</a> | 
+<a href="http://bestwebsoft.com/plugin/gallery-plugin/#changelog" target=_blank>Changelog</a> | 
+<a href="http://bestwebsoft.com/plugin/gallery-plugin/#download" target=_blank>Download</a>
 
 
 Features
@@ -24,23 +31,17 @@ Features
 Translation
 -----------------------------
 * Brazilian Portuguese (pt_BR) (thanks to DJIO, www.djio.com.br)
-* Chinese (zh_CN) (thanks to <a href="mailto:mibcxb@gmail.com">Xiaobo Chen</a>)
-* Czech (cs_CZ) (thanks to Josef Sukdol)
-* Dutch (nl_NL) (thanks to <a href="mailto:ronald@hostingu.nl">HostingU, Ronald Verheul</a>)
-* French (fr_FR) (thanks to Didier, <a href="mailto:lcapronnier@yahoo.com">L Capronnier</a>)
-* Georgian (ka_GE) (thanks to Vako Patashuri)
-* German (de_DE) (thanks to Thomas Bludau)
-* Hebrew (he_IL) (thanks to Sagive SEO)
-* Hungarian (hu_HU) (thanks to Mészöly Gábor) 
-* Italian (it_IT) (thanks to Stefano Ferruggiara)
-* Lituanian (lt_LT) (thanks to Naglis Jonaitis)
-* Persian (fa_IR) (thanks to Einolah Kiamehr and Meisam)
-* Polish (pl_PL) (thanks to Janusz Janczy, Bezcennyczas.pl)
+* Bulgarian (bg_BG) (thanks to Petya)
+* Chinese (zh_CN) (thanks to Xiaobo Chen)
+* Czech (cs_CZ) (thanks to Lagya)
+* Dutch (nl_NL) (thanks to J Goessens)
+* French (fr_FR) (thanks to Didier, L Capronnier)
+* German (de_DE) (thanks to Thomas Bludau, Jonas Seemann)
 * Russian (ru_RU)
-* Serbian (sr_RS) (thanks to <a href="mailto:andrijanan@webhostinggeeks.com">Andrijana Nikolic</a> www.webhostinggeeks.com )
-* Spanish (es) (thanks to Victor Garcia)
-* Turkish (tr) (thanks to <a href="mailto:ce.demirbilek@gmail.com">Ismail Demirbilek</a>)
-* Ukrainian (uk_UA)
+* Serbian (sr_RS) (thanks to Andrijana Nikolic www.webhostinggeeks.com )
+* Slovak (sk_SK) (thanks to Michal Kralik)
+* Turkish (tr) (thanks to Ismail Demirbilek)
+* Ukrainian (uk)
 
 If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
