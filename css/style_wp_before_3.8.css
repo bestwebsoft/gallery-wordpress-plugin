@@ -1,0 +1,317 @@
+#adminmenu #toplevel_page_bws_plugins div.wp-menu-image {
+    background: url("../images/icon_16.png") no-repeat scroll center center transparent;
+}
+.admin-color-classic #adminmenu #toplevel_page_bws_plugins div.wp-menu-image {
+    background: url("../images/icon_16_b.png") no-repeat scroll center center transparent;
+}
+#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image, #adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image {
+    background: url("../images/icon_16_c.png") no-repeat scroll center center transparent;
+}   
+.wrap #icon-options-general.icon32-bws {
+    background: url("../images/icon_36.png") no-repeat scroll left top transparent;
+}
+.admin-color-classic .wrap #icon-options-general.icon32-bws {
+    background: url("../images/icon_36_b.png") no-repeat scroll left top transparent;
+}
+.wrap #icon-edit.icon32-posts-gallery {
+ background: url("../images/icons_32.png") no-repeat scroll left top transparent;
+}
+.admin-color-classic .wrap #icon-edit.icon32-posts-gallery {
+ background: url("../images/icons_32_b.png") no-repeat scroll left top transparent;
+}
+#adminmenu #menu-posts-gallery:hover div.wp-menu-image, #adminmenu #menu-posts-gallery.wp-has-current-submenu div.wp-menu-image {
+ background: url("../images/menu.png") no-repeat scroll left top transparent;
+}
+.admin-color-classic #adminmenu #menu-posts-gallery:hover div.wp-menu-image, #adminmenu #menu-posts-gallery.wp-has-current-submenu div.wp-menu-image {
+ background: url("../images/menu_b.png") no-repeat scroll left top transparent;
+}
+#adminmenu #menu-posts-gallery div.wp-menu-image {
+    background: url("../images/menu.png?ver=20100531") no-repeat scroll left -32px transparent;
+}
+.admin-color-classic #adminmenu #menu-posts-gallery div.wp-menu-image {
+    background: url("../images/menu_b.png?ver=20100531") no-repeat scroll left -32px transparent;
+}
+#toplevel_page_bws_plugins .wp-submenu .wp-first-item {
+    display: none;
+}
+.bws_go_pro_tab {
+    background-color: #2A95C5;
+    border-color: #11688F;
+    color: #FFFFFF;
+    font-weight: normal !important;
+    text-shadow: none;
+}
+.bws_go_pro_tab:hover {
+    background-color: #2080AB;
+    color: #FFFFFF;
+    border-color: #11688F;
+}
+/*
+* styles for rate-support div on the settings page
+*/
+.bws-plugin-reviews {
+    background: none repeat scroll 0 0 #BEE1F1;
+    border: 1px solid #70A8C2;
+    border-radius: 3px;
+    max-width: 700px;
+}
+.bws-plugin-reviews-rate {
+    padding: 10px;
+    border-bottom: 1px dashed #70A8C2;
+}
+.bws-plugin-reviews-support {
+    padding: 10px;
+}
+/*
+* styles for gallery page
+*/
+ul.gallery {
+     list-style: none outside none;
+}
+.gallery_box ul{
+    list-style: none outside none !important;
+    margin:0;
+}
+.gallery_box li{
+    padding: 10px 10px 0 0;
+    clear: both;
+}
+.gallery_box li img {
+    padding: 5px;
+    margin:0 10px 10px 0;
+    float:left;
+    border: 1px solid #BDBDBD;
+}
+.gallery_box p {
+    margin-bottom:0px;
+}
+.gallery_detail_box {
+    float:left;
+}
+.gallery_box .gallery_detail_box p.title {
+    color: #000000;
+    line-height: 1.5em;
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+.clear {
+    clear:both;
+    height:0;
+}
+.gllr_image_text {
+    width:150px;
+}
+.gllr_link_text, .gllr_image_alt_tag {
+    width:170px;
+}
+.gllr_order_text {
+    width:20px;
+}
+.gallery .gllr_image_block {
+    float: left;
+}
+#content .gallery .gllr_image_block a img {
+    border: 10px solid #F1F1F1;
+    margin-top: 0;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box; /*Firefox 1-3*/
+    -webkit-box-sizing: content-box; /* Safari */
+}
+#Upload-File .gllr_order_message{
+    padding-bottom:10px;
+}
+#Upload-File .gallery .gllr_image_block {
+    float: left;
+}
+#Upload-File .gallery .gllr_border_image {
+    border: 1px solid #BDBDBD;
+}
+#Upload-File .gallery .gllr_border_image img {
+    padding:10px;
+}
+#Upload-File .gallery .small_text{
+    font-size:10px;
+    color:grey;
+}
+.gallery .delete {
+    padding-top:2px;
+    text-align:center;
+}
+#content .gallery_box_single .gallery .gllr_image_block p {
+    border: 1px solid #BDBDBD;
+    margin:5px 6px 0 0;
+    padding: 0;
+}
+.gllr_single_image_text {
+    font-size:12px;
+    color:#888;
+}
+.gllr_image_row {
+    clear:both;
+}
+.gallery li {
+    float: left;
+    margin:5px 6px 10px 0;
+}
+.gallery .gllr_image_container {
+    border: 1px solid #BDBDBD;
+}
+.gallery .delete {
+    padding-top:2px;
+    text-align:center;
+}
+.pp_social {
+    display:none;
+}
+#gllr_form_image_size .gllr_width_labels label {
+    min-width:115px;
+    float:left;
+    margin-right:5px;
+}
+#gllr_form_image_size input[type="radio"] {
+    float:left;
+    position:relative;
+    top:5px;
+    margin-right:5px;
+}
+#gllr_form_image_size .label_radio {
+    width:540px;
+    cursor: default;
+}
+#gllr_border_images_color_small {
+    background: none repeat scroll 0 0 transparent;
+    box-shadow: 0 9px 0 rgba(255, 255, 255, 0.1) inset;
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    vertical-align: middle;
+    width: 20px;
+    top: -2px;
+}
+#fancybox-wrap {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box; /*Firefox 1-3*/
+    -webkit-box-sizing: content-box; /* Safari */
+}
+#fancybox-wrap * {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box; /*Firefox 1-3*/
+    -webkit-box-sizing: content-box; /* Safari */
+}
+.gllr_image_block img {
+    border-style: solid;
+}
+#gllr_loader,
+#gllr_img_loader {
+    float: left;
+    position: relative;
+    display: none;
+}
+#ajax_update_postmeta,
+#ajax_update_images {
+    float: left;
+}
+#gllr_date_additional_field, #gllr_link_additional_field, 
+#gllr_shrdescription_additional_field, #gllr_description_additional_field,
+#gllr_svn_additional_field, #gllr_executor_additional_field,
+#gllr_technologies_additional_field {
+    float: left;
+    position: relative;
+    top: 2px;
+    margin-right: 3px;
+}
+/*
+* styles for pro_version settings, banner and tooltip 
+*/
+a.gllr_pro_version {
+    text-decoration: none;
+    color: #666;
+}
+div.gllr_pro_version {
+    border: 1px solid #AAA;
+    background: #E0E0E0;
+    padding: 2px 3px;
+}
+table.bws_pro_version { 
+    background: #E0E0E0;
+    border: 1px solid #AAA;
+    margin-bottom: 5px;
+    width: auto !important;
+    float: left;
+}
+table.bws_pro_version th,
+table.bws_pro_version td {
+    color: #555;
+    padding-left: 10px;
+}
+.bws_pro_version_tooltip {
+    background: #FFF;
+    border: 1px solid #AAA;
+}
+.form-table.bws_pro_version .bws_pro_version_tooltip th {
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+/* banner on the plugins page */
+.gllr_message {
+    min-width:800px;
+    border:1px solid #d4d4d4;
+    margin:12px 0;
+    background:#ececec;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    position: relative;
+    overflow: hidden;
+}
+.gllr_message .gllr_text {
+    color:#000;
+    font-size: 15px;
+    line-height: 26px;
+    margin-top: 13px;
+    float: left;
+}
+.gllr_message .gllr_text span {
+    font-size: 12px;
+    opacity: 0.7;
+}
+.gllr_message .gllr_button {
+    float: left;
+    border:1px solid #1f75ad; 
+    font-size:14px;
+    margin: 15px 19px 15px 16px;
+    padding:12px 0;
+    color:#FFF;
+    text-shadow: 0 1px 3px #636363;
+    font-weight: bold;
+    background:#227cc2;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    text-decoration:none;
+    height: 50px;
+    text-align: center;
+    width: 147px;
+    -moz-box-shadow:0px 1px 1px 0 #43acd9 inset;
+    -webkit-box-shadow:0px 1px 1px 0 #43acd9 inset;
+    box-shadow:0px 1px 1px 0 #43acd9 inset;
+}
+.gllr_message .gllr_button:hover,
+.gllr_message .gllr_button:focus {    
+    background:#f26e50;
+    color:#FFF;
+    border:1px solid #bf573f;
+    -moz-box-shadow:0px 1px 1px 0 #f5906f inset;
+    -webkit-box-shadow:0px 1px 1px 0 #f5906f inset;
+    box-shadow: 0px 1px 1px 0 #f5906f inset;
+}
+.gllr_message .gllr_icon {
+    float: right;
+    margin: 18px 0;
+}
+.gllr_message .gllr_close_icon {
+    float: right;
+    margin: 8px;
+    cursor: pointer;
+}
