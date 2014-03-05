@@ -34,6 +34,9 @@
 #toplevel_page_bws_plugins .wp-submenu .wp-first-item {
     display: none;
 }
+/*
+* Tab GO PRO
+*/
 .bws_go_pro_tab {
     background-color: #2A95C5;
     border-color: #11688F;
@@ -63,18 +66,113 @@
     padding: 10px;
 }
 /*
+* styles for pro_version settings, banner and tooltip 
+*/
+a.gllr_pro_version {
+    text-decoration: none;
+    color: #666;
+}
+div.gllr_pro_version {
+    border: 1px solid #AAA;
+    background: #E0E0E0;
+    padding: 2px 3px;
+}
+table.bws_pro_version { 
+    background: #E0E0E0;
+    border: 1px solid #AAA;
+    margin-bottom: 5px;
+    width: auto !important;
+    float: left;
+}
+table.bws_pro_version th,
+table.bws_pro_version td {
+    color: #555;
+    padding-left: 10px;
+}
+.bws_pro_version_tooltip {
+    background: #FFF;
+    border: 1px solid #AAA;
+}
+.form-table.bws_pro_version .bws_pro_version_tooltip th {
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+/* banner on the plugins page */
+.bws_banner_on_plugin_page {
+    border: 1px solid #d4d4d4;
+    background: #FFF;
+    position: relative;
+    overflow: hidden;
+    margin: 12px 0;
+    background: #ECECEC;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.bws_banner_on_plugin_page .text {
+    color: #000;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 18px 18px 14px;
+    float: left;
+    width: 80%;
+}
+.bws_banner_on_plugin_page .text span {
+    font-size: 12px;
+    opacity: 0.7;
+}
+.bws_banner_on_plugin_page .button {
+    float: left;
+    border: none; 
+    font-size: 14px;
+    margin: 18px 0 18px 16px;
+    padding: 14px 0;
+    color: #FFF;
+    text-shadow: none;
+    font-weight: bold;
+    background: #0074A2;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-decoration: none;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 147px;
+    box-shadow: none;
+}
+.bws_banner_on_plugin_page .button:hover,
+.bws_banner_on_plugin_page .button:focus {    
+    background: #222;
+    color: #FFF;
+}
+.bws_banner_on_plugin_page .icon {
+    float: right;
+    margin: 18px 8px 8px 0;
+}
+.bws_banner_on_plugin_page .close_icon {
+    float: right;
+    margin: 8px;
+    cursor: pointer;
+}
+/*
 * styles for gallery page
 */
 ul.gallery {
      list-style: none outside none;
 }
-.gallery_box ul{
+.gallery_box_single .gallery.clearfix {
+    display: table;
+    margin: 0 auto;
+}
+.gallery_box ul {
     list-style: none outside none !important;
     margin:0;
 }
-.gallery_box li{
+.gallery_box li {
     padding: 10px 10px 0 0;
     clear: both;
+    list-style: none;
 }
 .gallery_box li img {
     padding: 5px;
@@ -220,98 +318,4 @@ ul.gallery {
     position: relative;
     top: 2px;
     margin-right: 3px;
-}
-/*
-* styles for pro_version settings, banner and tooltip 
-*/
-a.gllr_pro_version {
-    text-decoration: none;
-    color: #666;
-}
-div.gllr_pro_version {
-    border: 1px solid #AAA;
-    background: #E0E0E0;
-    padding: 2px 3px;
-}
-table.bws_pro_version { 
-    background: #E0E0E0;
-    border: 1px solid #AAA;
-    margin-bottom: 5px;
-    width: auto !important;
-    float: left;
-}
-table.bws_pro_version th,
-table.bws_pro_version td {
-    color: #555;
-    padding-left: 10px;
-}
-.bws_pro_version_tooltip {
-    background: #FFF;
-    border: 1px solid #AAA;
-}
-.form-table.bws_pro_version .bws_pro_version_tooltip th {
-    font-weight: normal;
-    padding-bottom: 10px;
-}
-/* banner on the plugins page */
-.gllr_message {
-    min-width:800px;
-    border:1px solid #d4d4d4;
-    margin:12px 0;
-    background:#ececec;
-    -moz-border-radius:3px;
-    border-radius:3px;
-    -webkit-border-radius:3px;
-    position: relative;
-    overflow: hidden;
-}
-.gllr_message .gllr_text {
-    color:#000;
-    font-size: 15px;
-    line-height: 26px;
-    margin-top: 13px;
-    float: left;
-}
-.gllr_message .gllr_text span {
-    font-size: 12px;
-    opacity: 0.7;
-}
-.gllr_message .gllr_button {
-    float: left;
-    border:1px solid #1f75ad; 
-    font-size:14px;
-    margin: 15px 19px 15px 16px;
-    padding:12px 0;
-    color:#FFF;
-    text-shadow: 0 1px 3px #636363;
-    font-weight: bold;
-    background:#227cc2;
-    -moz-border-radius:3px;
-    border-radius:3px;
-    -webkit-border-radius:3px;
-    text-decoration:none;
-    height: 50px;
-    text-align: center;
-    width: 147px;
-    -moz-box-shadow:0px 1px 1px 0 #43acd9 inset;
-    -webkit-box-shadow:0px 1px 1px 0 #43acd9 inset;
-    box-shadow:0px 1px 1px 0 #43acd9 inset;
-}
-.gllr_message .gllr_button:hover,
-.gllr_message .gllr_button:focus {    
-    background:#f26e50;
-    color:#FFF;
-    border:1px solid #bf573f;
-    -moz-box-shadow:0px 1px 1px 0 #f5906f inset;
-    -webkit-box-shadow:0px 1px 1px 0 #f5906f inset;
-    box-shadow: 0px 1px 1px 0 #f5906f inset;
-}
-.gllr_message .gllr_icon {
-    float: right;
-    margin: 18px 0;
-}
-.gllr_message .gllr_close_icon {
-    float: right;
-    margin: 8px;
-    cursor: pointer;
 }

@@ -58,19 +58,21 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			), 
 			'facebook-button-plugin/facebook-button-plugin.php' => array(
 				'name'			=> 'Facebook Like Button',
-				'description'	=> 'Allows you to add a Follow button the easiest way.',
+				'description'	=> 'Allows you to add the Follow and Like buttons the easiest way.',
 				'link'			=> 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/?k=05ec4f12327f55848335802581467d55&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/?k=05ec4f12327f55848335802581467d55&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&type=term&s=Facebook+Like+Button+Plugin+bestwebsoft&plugin-search-input=Search+Plugins',
-				'settings'		=> 'admin.php?page=facebook-button-plugin.php'
+				'settings'		=> 'admin.php?page=facebook-button-plugin.php',
+				'pro_version'	=> 'facebook-button-pro/facebook-button-pro.php'
 			),
 			'twitter-plugin/twitter.php' => array(
 				'name'			=> 'Twitter',
-				'description'	=> 'Allows you to add a Twitter "Follow button" the easiest way.',
+				'description'	=> 'Allows you to add the Twitter "Follow" and "Like" buttons the easiest way.',
 				'link'			=> 'http://bestwebsoft.com/plugin/twitter-plugin/?k=f8cb514e25bd7ec4974d64435c5eb333&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/plugin/twitter-plugin/?k=f8cb514e25bd7ec4974d64435c5eb333&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&type=term&s=Twitter+Plugin+bestwebsoft&plugin-search-input=Search+Plugins',
-				'settings'		=> 'admin.php?page=twitter.php'
+				'settings'		=> 'admin.php?page=twitter.php',
+				'pro_version'	=> 'twitter-pro/twitter-pro.php'
 			), 
 			'portfolio/portfolio.php' => array(
 				'name'			=> 'Portfolio',
@@ -145,7 +147,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/plugin/google-plus-one/?k=ce7a88837f0a857b3a2bb142f470853c&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/plugin/google-plus-one/?k=ce7a88837f0a857b3a2bb142f470853c&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&type=term&s=Google+%2B1+bestwebsoft&plugin-search-input=Search+Plugins',
-				'settings'		=> 'admin.php?page=google-plus-one.php'
+				'settings'		=> 'admin.php?page=google-plus-one.php',
+				'pro_version'	=> 'google-one-pro/google-plus-one-pro.php'
 			),
 			'relevant/related-posts-plugin.php' => array(
 				'name'			=> 'Relevant - Related Posts',
@@ -170,7 +173,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/plugin/pdf-print/?k=bfefdfb522a4c0ff0141daa3f271840c&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/plugin/pdf-print/?k=bfefdfb522a4c0ff0141daa3f271840c&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=PDF+Print+Bestwebsoft&plugin-search-input=Search+Plugins',
-				'settings'		=> 'admin.php?page=pdf-print.php'
+				'settings'		=> 'admin.php?page=pdf-print.php',
+				'pro_version'	=> 'pdf-print-pro/pdf-print-pro.php'
 			),
 			'donate-button/donate.php' => array(
 				'name'			=> 'Donate',
@@ -179,6 +183,46 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/plugin/donate/?k=a8b2e2a56914fb1765dd20297c26401b&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Donate+Bestwebsoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=donate.php'
+			),
+			'post-to-csv/post-to-csv.php' => array(
+				'name'			=> 'Post To CSV',
+				'description'	=> 'The plugin allows to export posts of any types to a csv file.',
+				'link'			=> 'http://bestwebsoft.com/plugin/post-to-csv/?k=653aa55518ae17409293a7a894268b8f&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/post-to-csv/?k=653aa55518ae17409293a7a894268b8f&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Post+To+CSV+Bestwebsoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=post-to-csv.php'
+			),
+			'google-shortlink/google-shortlink.php' => array(
+				'name'			=> 'Google Shortlink',
+				'description'	=> 'Allows you to get short links from goo.gl servise without leaving your site.',
+				'link'			=> 'http://bestwebsoft.com/plugin/google-shortlink/?k=afcf3eaed021bbbbeea1090e16bc22db&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/google-shortlink/?k=afcf3eaed021bbbbeea1090e16bc22db&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Google+Shortlink+Bestwebsoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=gglshrtlnk_options'
+			),
+			'htaccess/htaccess.php' => array(
+				'name'			=> 'Htaccess',
+				'description'	=> 'Allows controlling access to your website using the directives Allow and Deny.',
+				'link'			=> 'http://bestwebsoft.com/plugin/htaccess/?k=2b865fcd56a935d22c5c4f1bba52ed46&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/htaccess/?k=2b865fcd56a935d22c5c4f1bba52ed46&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Htaccess+Bestwebsoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=htaccess.php'
+			),
+			'google-captcha/google-captcha.php' => array(
+				'name'			=> 'Google Captcha (reCAPTCHA)',
+				'description'	=> 'Plugin intended to prove that the visitor is a human being and not a spam robot.',
+				'link'			=> 'http://bestwebsoft.com/plugin/google-captcha/?k=7b59fbe542acf950b29f3e020d5ad735&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/google-captcha/?k=7b59fbe542acf950b29f3e020d5ad735&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Google+Captcha+Bestwebsoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=google-captcha.php'
+			),
+			'sender/sender.php' => array(
+				'name'			=> 'Sender',
+				'description'	=> 'You can send mails to all users or to certain categories of users.',
+				'link'			=> 'http://bestwebsoft.com/plugin/sender/?k=89c297d14ba85a8417a0f2fc05e089c7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/sender/?k=89c297d14ba85a8417a0f2fc05e089c7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Sender+Bestwebsoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=sndr_settings'
 			)
 		);
 		$bws_plugins_pro	= array(
@@ -224,8 +268,36 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'purchase'		=> 'http://bestwebsoft.com/plugin/google-sitemap-pro/?k=7ea384a5cc36cb4c22741caa20dcd56d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
 				'settings'		=> 'admin.php?page=google-sitemap-pro.php'
 			),
+			'twitter-pro/twitter-pro.php' => array(
+				'name'			=> 'Twitter Pro',
+				'description'	=> 'Allows you to add the Twitter "Follow" and "Like" buttons the easiest way.',
+				'link'			=> 'http://bestwebsoft.com/plugin/twitter-pro/?k=63ecbf0cc9cebf060b5a3c9362299700&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/twitter-pro?k=63ecbf0cc9cebf060b5a3c9362299700&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings' 		=> 'admin.php?page=twitter-pro.php'
+			),
+			'google-one-pro/google-plus-one-pro.php' => array(
+				'name'			=> 'Google +1 Pro',
+				'description'	=> 'Allows you to celebrate liked the article.',
+				'link'			=> 'http://bestwebsoft.com/plugin/google-plus-one-pro/?k=f4b0a62d155c9df9601a0531ad5bd832&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/google-plus-one-pro?k=f4b0a62d155c9df9601a0531ad5bd832&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings' 		=> 'admin.php?page=google-plus-one-pro.php'
+			),
+			'facebook-button-pro/facebook-button-pro.php' => array(
+				'name'			=> 'Facebook Like Button Pro',
+				'description'	=> 'Allows you to add the Follow and Like buttons the easiest way.',
+				'link'			=> 'http://bestwebsoft.com/plugin/facebook-like-button-pro/?k=8da168e60a831cfb3525417c333ad275&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/facebook-like-button-pro?k=8da168e60a831cfb3525417c333ad275&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings' 		=> 'admin.php?page=facebook-button-pro.php'
+			),
+			'pdf-print-pro/pdf-print-pro.php' => array(
+				'name'			=> 'PDF & Print Pro',
+				'description'	=> 'Allows you to create PDF and Print page with adding appropriate buttons to the content.',
+				'link'			=> 'http://bestwebsoft.com/plugin/pdf-print-pro/?k=fd43a0e659ddc170a9060027cbfdcc3a&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/pdf-print-pro?k=fd43a0e659ddc170a9060027cbfdcc3a&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings' 		=> 'admin.php?page=pdf-print-pro.php'
+			)
 		);
-
+		
 		$all_plugins = get_plugins();
 		$active_plugins = get_option( 'active_plugins' );
 
@@ -424,6 +496,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 		        __( 'PHP XML support', 'bestwebsoft' )				=> $xml_parser_create,
 				__( 'Site URL', 'bestwebsoft' )						=> $site_url,
 				__( 'Home URL', 'bestwebsoft' )						=> $home_url,
+				'$_SERVER[HTTP_HOST]'								=> $_SERVER['HTTP_HOST'],
+				'$_SERVER[SERVER_NAME]'								=> $_SERVER['SERVER_NAME'],
 				__( 'WordPress Version', 'bestwebsoft' )			=> $wp_version,
 				__( 'WordPress DB Version', 'bestwebsoft' )			=> $db_version,
 				__( 'Multisite', 'bestwebsoft' )					=> $multisite,
@@ -611,12 +685,15 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 							<table class="bws_system_info">
 								<thead><tr><th><?php _e( 'Inactive Plugins', 'bestwebsoft' ); ?></th><th></th></tr></thead>
 								<tbody>
-								<?php foreach ( $system_info['inactive_plugins'] as $key => $value ) { ?>	
-									<tr>
-										<td scope="row"><?php echo $key; ?></td>
-										<td scope="row"><?php echo $value; ?></td>
-									</tr>	
-								<?php } ?>
+								<?php
+								if ( ! empty( $system_info['inactive_plugins'] ) ) {
+									foreach ( $system_info['inactive_plugins'] as $key => $value ) { ?>	
+										<tr>
+											<td scope="row"><?php echo $key; ?></td>
+											<td scope="row"><?php echo $value; ?></td>
+										</tr>	
+									<?php }
+								} ?>
 								</tbody>
 							</table>
 							<div class="clear"></div>						
@@ -963,12 +1040,15 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 						<table class="bws_system_info">
 							<thead><tr><th><?php _e( 'Inactive Plugins', 'bestwebsoft' ); ?></th><th></th></tr></thead>
 							<tbody>
-							<?php foreach ( $system_info['inactive_plugins'] as $key => $value ) { ?>	
-								<tr>
-									<td scope="row"><?php echo $key; ?></td>
-									<td scope="row"><?php echo $value; ?></td>
-								</tr>	
-							<?php } ?>
+							<?php
+							if ( ! empty( $system_info['inactive_plugins'] ) ) {
+								foreach ( $system_info['inactive_plugins'] as $key => $value ) { ?>	
+									<tr>
+										<td scope="row"><?php echo $key; ?></td>
+										<td scope="row"><?php echo $value; ?></td>
+									</tr>	
+								<?php } 
+							} ?>
 							</tbody>
 						</table>
 						<div class="clear"></div>						
