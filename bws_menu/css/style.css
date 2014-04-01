@@ -86,7 +86,7 @@ h4.bws_recommended {
     padding: 0 10px;
     color: #a7a7a7;
     display: none;
-    font-size: 13px;
+    font-size: 12px;
 }
 .bws_product_links {
     padding: 10px 6px 12px;
@@ -136,15 +136,4 @@ h4.bws_recommended {
 }
 .bws_product_button.bws_donate_button:hover {
     background: #D69108 !important;
-}
-.bws_switch_link {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: medium none;
-    color: #0074A2;
-    float: right;
-    cursor: pointer;
-    font-size: 13px;
-}
-.bws_switch_link:hover {
-    color: #2ea2cc;
 }

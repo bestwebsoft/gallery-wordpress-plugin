@@ -1,0 +1,144 @@
+#adminmenu #toplevel_page_bws_plugins div.wp-menu-image,
+.admin-color-classic #adminmenu #toplevel_page_bws_plugins div.wp-menu-image,
+#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image,
+#adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image {
+	background: url("../images/icon_16_single.png") no-repeat scroll center center transparent;
+}
+#adminmenu #toplevel_page_bws_plugins.wp-not-current-submenu div.wp-menu-image {
+	opacity: 0.7;
+}
+#toplevel_page_bws_plugins .wp-submenu .wp-first-item {
+	display: none;
+}
+/*
+* styles for rate-support div on the settings page
+*/
+.bws-plugin-reviews {
+	background: none repeat scroll 0 0 #BEE1F1;
+	border: 1px solid #70A8C2;
+	border-radius: 3px;
+	max-width: 700px;
+}
+.bws-plugin-reviews-rate {
+	padding: 10px;
+	border-bottom: 1px dashed #70A8C2;
+}
+.bws-plugin-reviews-support {
+	padding: 10px;
+}
+/*
+* styles for Go PRO tab
+*/
+.bws_go_pro_tab {
+    background-color: #2A95C5;
+    border-color: #11688F;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-shadow: none;
+}
+.bws_go_pro_tab:hover {
+    background-color: #2080AB;
+    color: #FFFFFF;
+    border-color: #11688F;
+}
+.bws_go_pro_tab.nav-tab-active {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-color: #CCCCCC #CCCCCC #F1F1F1;
+    color: #000000;
+}
+/*
+* styles for pro_version settings and tooltip 
+*/
+table.bws_pro_version { 
+    background: #E0E0E0;
+    border: 1px solid #AAA;
+    margin-bottom: 5px;
+    width: auto !important;
+    float: left;
+}
+table.bws_pro_version th,
+table.bws_pro_version td {
+    color: #555;
+    padding-left: 10px;
+}
+td.bws_pro_version {
+    background: #E0E0E0;
+    border: 1px solid #AAA;
+}
+.bws_pro_version_tooltip {
+    background: #FFF;
+    border: 1px solid #AAA;
+}
+.form-table.bws_pro_version .bws_pro_version_tooltip th {
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+/*
+* styles for banner 
+*/
+.bws_banner_on_plugin_page {
+    border: 1px solid #d4d4d4;
+    margin: 12px 0;
+    background: #FFF;
+    position: relative;
+    overflow: hidden
+}
+.bws_banner_on_plugin_page .text {
+    color: #000;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 18px 18px 14px;
+    float: left;
+    width: auto;
+    max-width: 80%;
+}
+.bws_banner_on_plugin_page .text span {
+    font-size: 12px;
+    opacity: 0.7;
+}
+.bws_banner_on_plugin_page .button {
+    float: left;
+    border: none; 
+    font-size: 14px;
+    margin: 18px 0 18px 16px;
+    padding: 12px 0;
+    color: #FFF;
+    text-shadow: none;
+    font-weight: bold;
+    background: #0074A2;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-decoration: none;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 147px;
+    box-shadow: none;
+    line-height: 26px;
+}
+.bws_banner_on_plugin_page .button:hover,
+.bws_banner_on_plugin_page .button:focus {    
+    background: #222;
+    color: #FFF;
+}
+.bws_banner_on_plugin_page .icon {
+    float: right;
+    margin: 12px 8px 8px 0;
+}
+.bws_banner_on_plugin_page .close_icon {
+    float: right;
+    margin: 8px;
+    cursor: pointer;
+}
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px) {
+    .bws_banner_on_plugin_page .text,
+    .bws_banner_on_plugin_page .icon, 
+    .bws_banner_on_plugin_page .button_div,
+    .bws_banner_on_plugin_page .button {
+        float: none;
+        text-align: center;
+        max-width: 100%;
+    }
+}

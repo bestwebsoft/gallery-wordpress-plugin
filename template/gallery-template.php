@@ -3,7 +3,6 @@
 Template Name: Gallery Template
 */
 ?>
-
 <?php get_header(); ?>
 	<div id="container" class="site-content">
 		<div id="content" class="hentry">
@@ -13,15 +12,20 @@ Template Name: Gallery Template
 			<div class="gallery_box entry-content">
 				<ul>
 					<?php global $post, $wpdb, $wp_query, $request;
-					$paged = $wp_query->query_vars["paged"];
+					
+					if ( get_query_var( 'paged' ) ) {
+						$paged = get_query_var( 'paged' );
+					} elseif ( get_query_var( 'page' ) ) {
+						$paged = get_query_var( 'page' );
+					} else {
+						$paged = 1;
+					}
+
 					$permalink = get_permalink();
 					$gllr_options = get_option( 'gllr_options' );
 					$count = 0;
 					$per_page = $showitems = get_option( 'posts_per_page' );  
 					$count_all_albums = $wpdb->get_var( "SELECT COUNT(*) FROM wp_posts WHERE 1=1 AND wp_posts.post_type = 'gallery' AND (wp_posts.post_status = 'publish')" );
-
-					if ( $paged == 0 )
-						$paged = 1;
 
 					if ( substr( $permalink, strlen( $permalink ) -1 ) != "/" ) {
 						if ( strpos( $permalink, "?" ) !== false ) {
@@ -50,7 +54,7 @@ Template Name: Gallery Template
 							$attachments	= get_post_thumbnail_id( $post->ID );
 							if ( empty ( $attachments ) ) {
 								$attachments = get_children( 'post_parent='.$post->ID.'&post_type=attachment&post_mime_type=image&numberposts=1' );
-								$id = key($attachments);
+								$id = key( $attachments );
 								$image_attributes = wp_get_attachment_image_src( $id, 'album-thumb' );
 							} else {
 								$image_attributes = wp_get_attachment_image_src( $attachments, 'album-thumb' );
