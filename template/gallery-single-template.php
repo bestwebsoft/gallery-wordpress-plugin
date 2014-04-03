@@ -1,15 +1,14 @@
 <?php get_header(); ?>
 	<div id="container" class="site-content">
 		<div id="content" class="hentry">
-			<?php 
-			global $post, $wp_query;
+			<?php global $post, $wp_query;
 			$args = array(
 				'post_type'				=> 'gallery',
 				'post_status'			=> 'publish',
 				'name'					=> $wp_query->query_vars['name'],
 				'posts_per_page'		=> 1
 			);	
-			$second_query = new WP_Query( $args );
+			$second_query = new WP_Query( $args ); 
 			$gllr_options = get_option( 'gllr_options' );
 			$gllr_download_link_title = addslashes( __( 'Download high resolution image', 'gallery' ) );
 			if ( $second_query->have_posts() ) : while ( $second_query->have_posts() ) : $second_query->the_post(); ?>
@@ -93,22 +92,19 @@
 	<script type="text/javascript">
 		(function($){
 			$(document).ready(function(){
-				$( "a[rel=gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>]" ).fancybox( {
-					openSpeed	:	500, 
-					closeSpeed	:	300,
-					helpers		: {
-						title	: { type : 'inside' }
-					},
-					prevEffect	: 'fade',
-					nextEffect	: 'fade',	
-					openEffect	: 'elastic',
-					closeEffect	: 'elastic',		
-					beforeLoad: function() {
-						this.title = '<div id="fancybox-title-inside">' + ( this.title.length ? '<span id="bws_gallery_image_title">' + this.title + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery"); ?> ' + ( this.index + 1 ) + ' / ' + this.group.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + $( this.element ).find('img').attr( 'rel' ) + '" target="_blank"><?php echo $gllr_download_link_title; ?> </a><?php } ?>'
-					}<?php if ( 1 == $gllr_options['start_slideshow'] ) { ?>,
-					autoPlay 	:	true,
-					playSpeed 	: <?php echo empty( $gllr_options['slideshow_interval'] )? 2000 : $gllr_options['slideshow_interval'] ; ?>
-					<?php } ?>
+				$("a[rel=gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>]").fancybox({
+					'transitionIn'			: 'elastic',
+					'transitionOut'			: 'elastic',
+					'titlePosition' 		: 'inside',
+					'speedIn'				:	500, 
+					'speedOut'				:	300,
+					'titleFormat'			: function( title, currentArray, currentIndex, currentOpts ) {
+						return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery"); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + $( currentOpts.orig ).attr('rel') + '" target="_blank"><?php echo $gllr_download_link_title; ?> </a><?php } ?>';
+					}<?php if ( $gllr_options['start_slideshow'] == 1 ) { ?>,
+					'onComplete':	function() {
+						clearTimeout( jQuery.fancybox.slider );
+						jQuery.fancybox.slider = setTimeout("jQuery.fancybox.next()",<?php echo empty( $gllr_options['slideshow_interval'] )? 2000 : $gllr_options['slideshow_interval'] ; ?>);
+					}<?php } ?>
 				});
 			});
 		})(jQuery);

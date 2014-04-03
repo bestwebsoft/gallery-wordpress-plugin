@@ -4,7 +4,7 @@ Plugin Name: Gallery
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to implement gallery page into web site.
 Author: BestWebSoft
-Version: 4.1.7
+Version: 4.1.8
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -163,7 +163,7 @@ if ( ! function_exists( 'gllr_settings' ) ) {
 if ( ! function_exists ( 'gllr_version_check' ) ) {
 	function gllr_version_check() {
 		global $wp_version, $gllr_plugin_info;
-		$require_wp		=	"3.2"; /* Wordpress at least requires version */
+		$require_wp		=	"3.0"; /* Wordpress at least requires version */
 		$plugin			=	plugin_basename( __FILE__ );
 	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
 			if ( is_plugin_active( $plugin ) ) {
@@ -1364,9 +1364,27 @@ if ( ! function_exists ( 'gllr_admin_head' ) ) {
 if ( ! function_exists ( 'gllr_wp_head' ) ) {
 	function gllr_wp_head() {
 		wp_enqueue_style( 'gllr_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-		wp_enqueue_style( 'gllr_fancybox_stylesheet', plugins_url( 'fancybox/jquery.fancybox.css', __FILE__ ) );
-		wp_enqueue_script( 'gllr_fancybox_mousewheel_js', plugins_url( 'fancybox/jquery.mousewheel-3.0.6.pack.js', __FILE__ ), array( 'jquery' ) ); 
-		wp_enqueue_script( 'gllr_fancybox_js', plugins_url( 'fancybox/jquery.fancybox.pack.js', __FILE__ ), array( 'jquery' ) ); 	}
+		wp_enqueue_style( 'gllr_fancybox_stylesheet', plugins_url( 'fancybox/jquery.fancybox-1.3.4.css', __FILE__ ) );
+		wp_enqueue_script( 'gllr_fancybox_mousewheel_js', plugins_url( 'fancybox/jquery.mousewheel-3.0.4.pack.js', __FILE__ ), array( 'jquery' ) ); 
+		wp_enqueue_script( 'gllr_fancybox_js', plugins_url( 'fancybox/jquery.fancybox-1.3.4.pack.js', __FILE__ ), array( 'jquery' ) ); 	
+	}
+}
+
+if ( ! function_exists( 'gllr_add_for_ios' ) ) {
+	function gllr_add_for_ios() { ?>
+		<!-- Start ios -->
+		<script type="text/javascript">
+			(function($){
+				$(document).ready( function() {
+					$( '#fancybox-overlay' ).css({
+						'width' : $(document).width()
+					});	
+				});	
+			})(jQuery);
+		</script>
+		<!-- End ios -->
+	<?php
+	}
 }
 
 if ( ! function_exists ( 'gllr_shortcode' ) ) {
@@ -1496,21 +1514,18 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 			(function($) {
 				$(document).ready( function() {
 					$( "a[rel=gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>]" ).fancybox( {
-						openSpeed	:	500, 
-						closeSpeed	:	300,
-						helpers		: {
-							title	: { type : 'inside' }
-						},
-						prevEffect	: 'fade',
-						nextEffect	: 'fade',	
-						openEffect	: 'elastic',
-						closeEffect	: 'elastic',		
-						beforeLoad: function() {
-							this.title = '<div id="fancybox-title-inside">' + ( this.title.length ? '<span id="bws_gallery_image_title">' + this.title + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery"); ?> ' + ( this.index + 1 ) + ' / ' + this.group.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + $( this.element ).find('img').attr( 'rel' ) + '" target="_blank"><?php echo $gllr_download_link_title; ?> </a><?php } ?>'
+						'transitionIn'		:	'elastic',
+						'transitionOut'		:	'elastic',
+						'titlePosition' 	:	'inside',
+						'speedIn'			:	500, 
+						'speedOut'			:	300,
+						'titleFormat'		:	function( title, currentArray, currentIndex, currentOpts ) {
+							return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery"); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + $( currentOpts.orig ).attr( 'rel' ) + '" target="_blank"><?php echo $gllr_download_link_title; ?> </a><?php } ?>';
 						}<?php if ( 1 == $gllr_options['start_slideshow'] ) { ?>,
-						autoPlay 	:	true,
-						playSpeed 	: <?php echo empty( $gllr_options['slideshow_interval'] )? 2000 : $gllr_options['slideshow_interval'] ; ?>
-						<?php } ?>
+						'onComplete':	function() {
+							clearTimeout( jQuery.fancybox.slider );
+							jQuery.fancybox.slider = setTimeout( "jQuery.fancybox.next()",<?php echo empty( $gllr_options['slideshow_interval'] )? 2000 : $gllr_options['slideshow_interval'] ; ?> );
+						}<?php } ?>
 					});
 				});
 			})(jQuery);
@@ -2025,6 +2040,7 @@ add_action( 'manage_gallery_posts_custom_column', 'gllr_custom_columns', 10, 2 )
 add_action( 'admin_head', 'gllr_add_admin_script' );
 add_action( 'admin_enqueue_scripts', 'gllr_admin_head' );
 add_action( 'wp_enqueue_scripts', 'gllr_wp_head' );
+add_action( 'wp_head', 'gllr_add_for_ios' );
 
 add_shortcode( 'print_gllr', 'gllr_shortcode' );
 add_filter( 'widget_text', 'do_shortcode' );

@@ -29,7 +29,7 @@ Template Name: Gallery Template
 
 					if ( substr( $permalink, strlen( $permalink ) -1 ) != "/" ) {
 						if ( strpos( $permalink, "?" ) !== false ) {
-							$permalink = substr( $permalink, 0, strpos( $permalink, "?" ) -1 )."/";
+							$permalink = substr( $permalink, 0, strpos( $permalink, "?" ) -1 ) . "/";
 						} else {
 							$permalink .= "/";
 						}

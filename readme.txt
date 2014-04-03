@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: gallery, image, gallery image, album, foto, fotoalbum, website gallery, multiple pictures, pictures, photo, photoalbum, photogallery
-Requires at least: 3.2
+Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 4.1.7
+Stable tag: 4.1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -171,6 +171,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. PrettyPhoto pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.1.8 - 02.04.2014 =
+* Update : Fancybox is returned to the old version.
 
 = V4.1.7 - 31.03.2014 =
 * Update : Fancybox is updated.
@@ -425,6 +428,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.1.8 =
+Fancybox is returned to the old version.
 
 = V4.1.7 =
 Fancybox is updated. We fixed the bug of navigation when Gallery Template is a static front page.
