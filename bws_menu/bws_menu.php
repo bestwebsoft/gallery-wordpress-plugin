@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.2.3
+* Version: 1.2.6
 */
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
@@ -222,7 +222,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/plugin/bws-google-maps/?k=d8fac412d7359ebaa4ff53b46572f9f7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/plugin/bws-google-maps/?k=d8fac412d7359ebaa4ff53b46572f9f7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=BestWebSoft+Google+Maps&plugin-search-input=Search+Plugins',
-				'settings'		=> 'admin.php?page=bws-google-maps.php'
+				'settings'		=> 'admin.php?page=bws-google-maps.php',
+				'pro_version'	=> 'bws-google-maps-pro/bws-google-maps-pro.php'
 			),
 			'bws-google-analytics/bws-google-analytics.php' => array(
 				'name'			=> 'BestWebSoft Google Analytics',
@@ -303,6 +304,13 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/plugin/pdf-print-pro/?k=fd43a0e659ddc170a9060027cbfdcc3a&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'purchase' 		=> 'http://bestwebsoft.com/plugin/pdf-print-pro?k=fd43a0e659ddc170a9060027cbfdcc3a&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
 				'settings' 		=> 'admin.php?page=pdf-print-pro.php'
+			),
+			'bws-google-maps-pro/bws-google-maps-pro.php' => array(
+				'name'			=> 'BestWebSoft Google Maps Pro',
+				'description'	=> 'Easy to set up and insert Google Maps to your website.',
+				'link'			=> 'http://bestwebsoft.com/plugin/bws-google-maps-pro/?k=117c3f9fc17f2c83ef430a8a9dc06f56&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/bws-google-maps-pro/?k=117c3f9fc17f2c83ef430a8a9dc06f56&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings' 		=> 'admin.php?page=bws-google-maps-pro.php'
 			)
 		);
 		
@@ -828,7 +836,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			<?php } ?>
 		</div>
 	<?php }
-} 
+}
 
 if ( ! function_exists ( 'bws_plugin_init' ) ) {
 	function bws_plugin_init() {
@@ -841,9 +849,9 @@ if ( ! function_exists ( 'bws_admin_head' ) ) {
 	function bws_admin_head() {
 		global $wp_version;
 		if ( $wp_version < 3.8 )
-			wp_enqueue_style( 'pdfprnt-stylesheet', plugins_url( 'css/general_style_wp_before_3.8.css', __FILE__ ) );	
+			wp_enqueue_style( 'bws-admin-stylesheet', plugins_url( 'css/general_style_wp_before_3.8.css', __FILE__ ) );	
 		else
-			wp_enqueue_style( 'pdfprnt-stylesheet', plugins_url( 'css/general_style.css', __FILE__ ) );
+			wp_enqueue_style( 'bws-admin-stylesheet', plugins_url( 'css/general_style.css', __FILE__ ) );
 
 		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" ) {
 			wp_enqueue_style( 'bws_menu_style', plugins_url( 'css/style.css', __FILE__ ) );
@@ -856,6 +864,6 @@ if ( ! function_exists ( 'bws_admin_head' ) ) {
 	}
 }
 
-add_action( 'init', 'bws_plugin_init' );
+add_action( 'admin_init', 'bws_plugin_init' );
 add_action( 'admin_enqueue_scripts', 'bws_admin_head' );
 ?>

@@ -17,18 +17,6 @@
     background: url("../images/menu_b.png?ver=20100531") no-repeat scroll left -32px transparent;
 }
 /*
-* styles for pro_version settings, banner and tooltip 
-*/
-a.gllr_pro_version {
-    text-decoration: none;
-    color: #666;
-}
-div.gllr_pro_version {
-    border: 1px solid #AAA;
-    background: #E0E0E0;
-    padding: 2px 3px;
-}
-/*
 * styles for gallery page
 */
 ul.gallery {

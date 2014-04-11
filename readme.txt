@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: gallery, image, gallery image, album, foto, fotoalbum, website gallery, multiple pictures, pictures, photo, photoalbum, photogallery
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 4.1.8
+Tested up to: 3.8.2
+Stable tag: 4.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -160,7 +160,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">System_Status.pdf</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
 
 == Screenshots ==
 
@@ -171,6 +171,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. PrettyPhoto pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.1.9 - 11.04.2014 =
+* Update : We updated all functionality for wordpress 3.8.2.
 
 = V4.1.8 - 02.04.2014 =
 * Update : Fancybox is returned to the old version.
@@ -428,6 +431,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.1.9 =
+We updated all functionality for wordpress 3.8.2.
 
 = V4.1.8 =
 Fancybox is returned to the old version.
