@@ -4,7 +4,7 @@ Plugin Name: Gallery
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to implement gallery page into web site.
 Author: BestWebSoft
-Version: 4.1.9
+Version: 4.2.0
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -28,7 +28,8 @@ License: GPLv2 or later
 if ( ! function_exists( 'add_gllr_admin_menu' ) ) {
 	function add_gllr_admin_menu() {
 		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_version = '1.2.6';
+		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
+		$bws_menu_version = $bws_menu_info["Version"];
 		$base = plugin_basename( __FILE__ );
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
@@ -940,6 +941,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 		<h2><?php _e( 'Gallery Settings', 'gallery' ); ?></h2>
 		<h2 class="nav-tab-wrapper">
 			<a class="nav-tab<?php if ( ! isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>"  href="admin.php?page=gallery-plugin.php"><?php _e( 'Settings', 'gallery' ); ?></a>
+			<a class="nav-tab" href="http://bestwebsoft.com/plugin/gallery-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'gallery' ); ?></a>
 			<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=gallery-plugin.php&amp;action=go_pro"><?php _e( 'Go PRO', 'gallery' ); ?></a>
 		</h2>
 		<div id="gllr_settings_message" class="updated fade" <?php if ( ! isset( $_REQUEST['gllr_form_submit'] ) || "" != $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
@@ -1041,11 +1043,17 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 					<div class="bws_pro_version_tooltip">
 						<div class="bws_info">
 							<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'gallery' ); ?> 
-							<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Learn More', 'gallery' ); ?></a>				
+							<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Learn More', 'gallery' ); ?></a>			
 						</div>
-						<a class="bws_button" href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#purchase" target="_blank" title="Gallery Pro Plugin">
-							<?php _e( 'Go', 'gallery' ); ?> <strong>PRO</strong>
-						</a>	
+						<div class="bws_pro_links">
+							<span class="bws_trial_info">
+								<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#trial" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Start Your Trial', 'gallery' ); ?></a>			
+								 <?php _e( 'or', 'gallery' ); ?>
+							</span> 
+							<a class="bws_button" href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#purchase" target="_blank" title="Gallery Pro Plugin">
+								<?php _e( 'Go', 'gallery' ); ?> <strong>PRO</strong>
+							</a>
+						</div>	
 						<div class="clear"></div>					
 					</div>
 				</div>
@@ -1210,9 +1218,15 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 							<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'gallery' ); ?> 
 							<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Learn More', 'gallery' ); ?></a>				
 						</div>
-						<a class="bws_button" href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#purchase" target="_blank" title="Gallery Pro Plugin">
-							<?php _e( 'Go', 'gallery' ); ?> <strong>PRO</strong>
-						</a>	
+						<div class="bws_pro_links">
+							<span class="bws_trial_info">
+								<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#trial" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Start Your Trial', 'gallery' ); ?></a>			
+								 <?php _e( 'or', 'gallery' ); ?>
+							</span>
+							<a class="bws_button" href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#purchase" target="_blank" title="Gallery Pro Plugin">
+								<?php _e( 'Go', 'gallery' ); ?> <strong>PRO</strong>
+							</a>	
+						</div>
 						<div class="clear"></div>					
 					</div>
 				</div>
@@ -1261,7 +1275,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 						$bstwbsftwppdtplgns_options['go_pro']['gallery-plugin-pro/gallery-plugin-pro.php']['time'] < ( time() + ( 24 * 60 * 60 ) ) ) { ?>
 						<p>
 							<input disabled="disabled" type="text" name="bws_license_key" value="<?php echo $bws_license_key; ?>" />
-							<input disabled="disabled" type="submit" class="button-primary" value="<?php _e( 'Go!', 'gallery' ); ?>" />
+							<input disabled="disabled" type="submit" class="button-primary" value="<?php _e( 'Activate', 'gallery' ); ?>" /> <?php _e( 'or', 'gallery' ); ?> <a href="http://bestwebsoft.com/plugin/gallery-pro/#trial" target="_blank"><?php _e( 'Start Your Free 7-Day Trial Now', 'gallery' ); ?></a>
 						</p>
 						<p>
 							<?php _e( "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually.", 'gallery' ); ?>
@@ -1271,11 +1285,12 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 							<input type="text" name="bws_license_key" value="<?php echo $bws_license_key; ?>" />
 							<input type="hidden" name="bws_license_plugin" value="gallery-plugin-pro/gallery-plugin-pro.php" />
 							<input type="hidden" name="bws_license_submit" value="submit" />
-							<input type="submit" class="button-primary" value="<?php _e( 'Go!', 'gallery' ); ?>" />
+							<input type="submit" class="button-primary" value="<?php _e( 'Activate', 'gallery' ); ?>" /> <?php _e( 'or', 'gallery' ); ?> <a href="http://bestwebsoft.com/plugin/gallery-pro/#trial" target="_blank"><?php _e( 'Start Your Free 7-Day Trial Now', 'gallery' ); ?></a>
+							
 							<?php wp_nonce_field( plugin_basename(__FILE__), 'bws_license_nonce_name' ); ?>
 						</p>
 					<?php } ?>
-				</form>
+				</form>				
 			<?php }
 		} ?>
 	</div>
@@ -1968,8 +1983,11 @@ if ( ! function_exists ( 'gllr_plugin_banner' ) ) {
 		if ( 'plugins.php' == $hook_suffix ) { 
 			global $bstwbsftwppdtplgns_cookie_add, $gllr_plugin_info;	  
 			$banner_array = array(
+				array( 'sndr_hide_banner_on_plugin_page', 'sender/sender.php', '0.5' ),
+				array( 'srrl_hide_banner_on_plugin_page', 'user-role/user-role.php', '1.4' ),
 				array( 'pdtr_hide_banner_on_plugin_page', 'updater/updater.php', '1.12' ),
-				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),		
+				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),
+				array( 'cntctfrmmlt_hide_banner_on_plugin_page', 'contact-form-multi/contact-form-multi.php', '1.0.7' ),		
 				array( 'gglmps_hide_banner_on_plugin_page', 'bws-google-maps/bws-google-maps.php', '1.2' ),		
 				array( 'fcbkbttn_hide_banner_on_plugin_page', 'facebook-button-plugin/facebook-button-plugin.php', '2.29' ),
 				array( 'twttr_hide_banner_on_plugin_page', 'twitter-plugin/twitter.php', '2.34' ),

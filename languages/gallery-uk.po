@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-06 10:44+0300\n"
-"PO-Revision-Date: 2014-02-06 10:44+0300\n"
+"POT-Creation-Date: 2014-05-15 17:39+0300\n"
+"PO-Revision-Date: 2014-05-15 17:39+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <http://support.bestwebsoft.com>\n"
 "Language: uk_UA\n"
@@ -13,641 +13,698 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gallery-plugin.php:100
-#: gallery-plugin.php:777
-msgid "The following files \"gallery-template.php\" and \"gallery-single-template.php\" were not found in the directory of your theme. Please copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to the directory of your theme for the correct work of the Gallery plugin"
-msgstr "Файли \"gallery-template.php\" та \"gallery-single-template.php\" не було знайдено в каталозі вашої теми. Будь ласка, скопіюйте їх з каталогу `/wp-content/plugins/gallery-plugin/template/` в каталог вашої теми для коректної роботи плагіну Галерея."
-
-#: gallery-plugin.php:128
-#: gallery-plugin.php:138
-msgid "Galleries"
-msgstr "Галереї"
-
-#: gallery-plugin.php:129
-#: gallery-plugin.php:606
+#: gallery-plugin.php:73
+#: gallery-plugin.php:273
 msgid "Gallery"
 msgstr "Gallery"
 
-#: gallery-plugin.php:130
-msgid "Add a Gallery"
-msgstr "Додати галерею"
-
-#: gallery-plugin.php:131
-msgid "Add New Gallery"
-msgstr "Додати нову галерею"
-
-#: gallery-plugin.php:132
-msgid "Edit Gallery"
-msgstr "Редагувати галерею"
-
-#: gallery-plugin.php:133
-msgid "New Gallery"
-msgstr "Нова галерея"
-
-#: gallery-plugin.php:134
-msgid "View Gallery"
-msgstr "Переглянути галерею"
-
-#: gallery-plugin.php:135
-msgid "Find a Gallery"
-msgstr "Знайти галерею"
-
-#: gallery-plugin.php:136
-msgid "No Gallery found"
-msgstr "Галереї не знайдено"
-
-#: gallery-plugin.php:193
-msgid "Upload File"
-msgstr "Завантажити файл"
-
-#: gallery-plugin.php:194
-msgid "Gallery Shortcode"
-msgstr "Шорткод галереї"
-
-#: gallery-plugin.php:213
-msgid "The gallery temp directory (gallery-plugin/upload/files) is not available for record on your webserver. Please use the standard WP functionality to upload images (media library)"
-msgstr "Каталог галереї для зберігання тимчасових файлів (gallery-plugin/upload/files) закритий для запису на вашому веб-сервері. Будь ласка, скористуйтеся стандартним функціоналом WP для завантаження зображень (медіа-бібліотека)."
-
-#: gallery-plugin.php:217
-msgid "Choose an image for upload:"
-msgstr "Вибрати зображення, щоб завантажити:"
-
-#: gallery-plugin.php:222
-msgid "Please enable JavaScript to use the file uploader."
-msgstr "Будь ласка дозвольте JavaScript, щоб використовувати файл uploader."
-
-#: gallery-plugin.php:229
-msgid "Allow the download link for all images in this gallery"
-msgstr "Дозволити посилання для завантаження для всіх зображень в данії галереї."
-
-#: gallery-plugin.php:230
-msgid "Please use the drag and drop function to change an order of the images displaying and do not forget to save the post."
-msgstr "Будь ласка, скористуйтеся функцією перетягнення, щоб змінити порядок відображення зображень та не забудьте зберегти запис."
-
-#: gallery-plugin.php:232
-msgid "Please make a choice"
-msgstr "Будь ласка, виберіть"
-
-#: gallery-plugin.php:232
-#: gallery-plugin.php:1050
-msgid "Sort images by"
-msgstr "Сортувати зображення за "
-
-#: gallery-plugin.php:232
-msgid "sort images"
-msgstr "Сортувати зображення"
-
-#: gallery-plugin.php:232
-msgid "on the plugin settings page ("
-msgstr "на сторінці установок плагіну ("
-
-#: gallery-plugin.php:277
-#: gallery-plugin.php:503
-msgid "Title"
-msgstr "Назва"
-
-#: gallery-plugin.php:279
-msgid "Alt tag"
-msgstr "Alt tag"
-
-#: gallery-plugin.php:280
-msgid "URL"
-msgstr "Посилання"
-
-#: gallery-plugin.php:280
-msgid "(by click on image opens a link in a new window)"
-msgstr "(натискання на зображення відкриває це посилання у новому вікні браузера)"
-
-#: gallery-plugin.php:281
-msgid "This setting is available in Pro version"
-msgstr " Ці установки доступні у про-версії плагіну."
-
-#: gallery-plugin.php:282
-msgid "Open the link"
-msgstr "Відкрити посилання"
-
-#: gallery-plugin.php:282
-msgid "Current window"
-msgstr "Поточне вікно"
-
-#: gallery-plugin.php:282
-msgid "New window"
-msgstr "Нове вікно"
-
-#: gallery-plugin.php:283
-msgid "Delete"
-msgstr "Видалити"
-
-#: gallery-plugin.php:296
-msgid "You can add a Single Gallery to the page or post by inserting this shortcode into the content"
-msgstr "Ви можете додати галерею на вашу сторінку або у ваш запис шляхом розміщення даного шорткоду в контент"
-
-#: gallery-plugin.php:298
-msgid "If you want to display a short description containing a screenshot and the link to the Single Gallery Page"
-msgstr "Якщо ви хочете вивести короткий опис зі скіншотом та посиланням на сторінку з галереєю"
-
-#: gallery-plugin.php:504
-msgid "Author"
-msgstr "Автор "
-
-#: gallery-plugin.php:505
-msgid "Photo"
-msgstr "Фото"
-
-#: gallery-plugin.php:506
-msgid "Publishing"
-msgstr "Публікація"
-
-#: gallery-plugin.php:507
-#: gallery-plugin.php:1054
-msgid "Date"
-msgstr "Датою"
-
-#: gallery-plugin.php:635
+#: gallery-plugin.php:125
 msgid "See images &raquo;"
-msgstr "Дивитися фото &raquo;"
+msgstr "Дивитися зображення &raquo;"
 
-#: gallery-plugin.php:682
+#: gallery-plugin.php:172
 msgid "requires"
 msgstr "потребує"
 
-#: gallery-plugin.php:682
+#: gallery-plugin.php:172
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
 msgstr "або вище, тому його було деактивовано. Будь ласка, оновіть WordPress та спробуйте ще раз."
 
-#: gallery-plugin.php:682
+#: gallery-plugin.php:172
 msgid "Back to the WordPress"
-msgstr "Назад до WordPress"
+msgstr "Назад до WordPress на"
 
-#: gallery-plugin.php:682
+#: gallery-plugin.php:172
 msgid "Plugins page"
-msgstr "Плагіни про-версії"
+msgstr "Сторінку плагінів"
 
-#: gallery-plugin.php:770
-msgid "Settings are saved"
-msgstr "Установки збережено."
+#: gallery-plugin.php:250
+#: gallery-plugin.php:823
+msgid "The following files \"gallery-template.php\" and \"gallery-single-template.php\" were not found in the directory of your theme. Please copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to the directory of your theme for the correct work of the Gallery plugin"
+msgstr "В папці вашої теми файли \"gallery-template.php\" та \"gallery-single-template.php\" не знайдені. Для правильної роботи плагіну Gallery, будь ласка, перемістіть їх з папки `/wp-content/plugins/gallery-plugin/template/` в папку вашої теми."
 
-#: gallery-plugin.php:799
-#: gallery-plugin.php:838
-msgid "Wrong license key"
-msgstr ""
+#: gallery-plugin.php:272
+#: gallery-plugin.php:282
+msgid "Galleries"
+msgstr "Галереї"
 
-#: gallery-plugin.php:831
-msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
-msgstr ""
+#: gallery-plugin.php:274
+msgid "Add a Gallery"
+msgstr "Додати галерею"
 
-#: gallery-plugin.php:840
-msgid "This license key is bind to another site"
-msgstr ""
+#: gallery-plugin.php:275
+msgid "Add New Gallery"
+msgstr "Додати нову галерею"
 
-#: gallery-plugin.php:842
-#: gallery-plugin.php:1206
-msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
-msgstr ""
+#: gallery-plugin.php:276
+msgid "Edit Gallery"
+msgstr "Редагувати галерею"
 
-#: gallery-plugin.php:860
-msgid "Failed to open the zip archive. Please, upload the plugin manually"
-msgstr ""
+#: gallery-plugin.php:277
+msgid "New Gallery"
+msgstr "Нова галерея"
 
-#: gallery-plugin.php:866
-msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
-msgstr ""
+#: gallery-plugin.php:278
+msgid "View Gallery"
+msgstr "Переглянути галерею"
 
-#: gallery-plugin.php:870
-#: gallery-plugin.php:879
-msgid "Failed to download the zip archive. Please, upload the plugin manually"
-msgstr ""
+#: gallery-plugin.php:279
+msgid "Find a Gallery"
+msgstr "Знайти галерею"
 
-#: gallery-plugin.php:883
-msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvienience."
-msgstr ""
+#: gallery-plugin.php:280
+msgid "No Gallery found"
+msgstr "Галерею не знайдено"
 
-#: gallery-plugin.php:898
-msgid "Please, enter Your license key"
-msgstr ""
+#: gallery-plugin.php:337
+msgid "Upload File"
+msgstr "Завантажити файл"
 
-#: gallery-plugin.php:906
-msgid "Gallery Settings"
-msgstr "Параметри Gallery"
+#: gallery-plugin.php:338
+msgid "Gallery Shortcode"
+msgstr "Шорткод галереї"
 
-#: gallery-plugin.php:908
-#: gallery-plugin.php:1228
-#: gallery-plugin.php:1243
-msgid "Settings"
-msgstr "Установки"
+#: gallery-plugin.php:356
+msgid "The gallery temp directory (gallery-plugin/upload/files) is not available for record on your webserver. Please use the standard WP functionality to upload images (media library)"
+msgstr "Папка галереї для тимчасових файлів (gallery-plugin/upload/files) закрита для доступу. Щоб завантажити зображення (медіа-бібліотеки), будь ласка, скористайтесь стандартним функціоналом WP."
 
-#: gallery-plugin.php:909
-msgid "Go PRO"
-msgstr ""
+#: gallery-plugin.php:359
+msgid "Choose an image for upload:"
+msgstr "Вибрати зображення для завантаження:"
 
-#: gallery-plugin.php:914
-msgid "Notice:"
-msgstr ""
+#: gallery-plugin.php:364
+msgid "Please enable JavaScript to use the file uploader."
+msgstr "Щоб використовувати файл uploader, будь ласка, увімкніть JavaScript."
 
-#: gallery-plugin.php:914
-msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
-msgstr ""
+#: gallery-plugin.php:371
+msgid "Allow the download link for all images in this gallery"
+msgstr "Дозволити посилання для завантаження для всіх зображень в даній галереї."
 
-#: gallery-plugin.php:915
-msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
-msgstr "Якщо ви хочете додати галерею на вашу сторінку або у ваш запис, просто скопіюйте та розмістіть даний шорткод в контент вашого запису або стоінки:"
+#: gallery-plugin.php:372
+msgid "Please use the drag and drop function to change an order of the images displaying and do not forget to save the post."
+msgstr "Щоб змінити порядок відображення зображень, просто перетягніть їх мишкою і розмістіть у зручному для вас порядку. Будь ласка, при виході не забудьте зберегти пост."
 
-#: gallery-plugin.php:917
-#, fuzzy
-msgid "Please enable JavaScript to use the option to renew images."
-msgstr "Будь ласка дозвольте JavaScript, щоб використовувати файл uploader."
+#: gallery-plugin.php:374
+msgid "Please make a choice"
+msgstr "Будь ласка, виберіть"
 
-#: gallery-plugin.php:921
-msgid "Update images for gallery"
-msgstr ""
+#: gallery-plugin.php:374
+#: gallery-plugin.php:1099
+msgid "Sort images by"
+msgstr "Сортувати зображення за "
 
-#: gallery-plugin.php:923
-#, fuzzy
-msgid "Update images"
+#: gallery-plugin.php:374
+msgid "sort images"
 msgstr "Сортувати зображення"
 
-#: gallery-plugin.php:928
+#: gallery-plugin.php:374
+msgid "on the plugin settings page ("
+msgstr "на сторінці налаштувань плагіну ("
+
+#: gallery-plugin.php:416
+#: gallery-plugin.php:637
+msgid "Title"
+msgstr "Назва"
+
+#: gallery-plugin.php:418
+msgid "Alt tag"
+msgstr "Alt tag"
+
+#: gallery-plugin.php:419
+msgid "URL"
+msgstr "Посилання"
+
+#: gallery-plugin.php:419
+msgid "(by click on image opens a link in a new window)"
+msgstr "(клік на зображення відкриває його у новому вікні браузера)"
+
+#: gallery-plugin.php:420
+msgid "This setting is available in Pro version"
+msgstr "Ці установки доступні у Про-версії плагіну."
+
+#: gallery-plugin.php:421
+msgid "Open the URL"
+msgstr "Відкрити посилання"
+
+#: gallery-plugin.php:421
+msgid "Current window"
+msgstr "Поточне вікно"
+
+#: gallery-plugin.php:421
+msgid "New window"
+msgstr "Нове вікно"
+
+#: gallery-plugin.php:422
+msgid "Lightbox button URL"
+msgstr "Посилання кнопки лайтбокса"
+
+#: gallery-plugin.php:423
+msgid "Description"
+msgstr "Опис"
+
+#: gallery-plugin.php:424
+msgid "Delete"
+msgstr "Видалити"
+
+#: gallery-plugin.php:437
+msgid "You can add a Single Gallery to the page or post by inserting this shortcode into the content"
+msgstr "Ви можете додати галерею на вашу сторінку чи пост просто помістивши цей шорткод у текст"
+
+#: gallery-plugin.php:439
+msgid "If you want to display a short description containing a screenshot and the link to the Single Gallery Page"
+msgstr "Якщо ви хочете відображати короткий опис зі скіншотом та посиланням на сторінку з галереєю"
+
+#: gallery-plugin.php:638
+msgid "Author"
+msgstr "Автор "
+
+#: gallery-plugin.php:639
+msgid "Photo"
+msgstr "Фото"
+
+#: gallery-plugin.php:640
+msgid "Publishing"
+msgstr "Публікація"
+
+#: gallery-plugin.php:641
+#: gallery-plugin.php:1103
+msgid "Date"
+msgstr "Дата"
+
+#: gallery-plugin.php:816
+msgid "Settings are saved"
+msgstr "Налаштування збережено."
+
+#: gallery-plugin.php:835
+#: gallery-plugin.php:874
+msgid "Wrong license key"
+msgstr "Невірний ліцензійний ключ"
+
+#: gallery-plugin.php:867
+msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
+msgstr "Щось не так, спробуйте пізніше. Якщо помилка повториться, будь ласка, повідомте нам <a href=http://support.bestwebsoft.com>BestWebSoft</a>. Просимо вибачення за незручності. "
+
+#: gallery-plugin.php:876
+msgid "This license key is bind to another site"
+msgstr "Цей ліцензійний ключ прив'язаний до іншого сайту"
+
+#: gallery-plugin.php:878
+#: gallery-plugin.php:1281
+msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
+msgstr "На жаль, ви перевищили добовий ліміт спроб. Будь ласка, завантажте плагін вручну."
+
+#: gallery-plugin.php:895
+msgid "Failed to open the zip archive. Please, upload the plugin manually"
+msgstr "Помилка при відкритті zip архіву. Будь ласка, завантажте плагін вручну"
+
+#: gallery-plugin.php:901
+msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
+msgstr "Ваш сервер не підтримує формати Zip і Phar. Будь ласка, завантажте плагін вручну"
+
+#: gallery-plugin.php:905
+#: gallery-plugin.php:914
+msgid "Failed to download the zip archive. Please, upload the plugin manually"
+msgstr "Помилка при завантаженні zip архіву. Будь ласка, завантажте плагін вручну"
+
+#: gallery-plugin.php:918
+msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvienience."
+msgstr "Щось не так. Спробуйте пізніше або завантажте плагін вручну. Просимо вибачення за незручності."
+
+#: gallery-plugin.php:933
+msgid "Please, enter Your license key"
+msgstr "Будь ласка, введіть ліцензійний ключ"
+
+#: gallery-plugin.php:941
+msgid "Gallery Settings"
+msgstr "Налаштування Gallery"
+
+#: gallery-plugin.php:943
+#: gallery-plugin.php:1304
+#: gallery-plugin.php:1320
+msgid "Settings"
+msgstr "Налаштування"
+
+#: gallery-plugin.php:944
+#: gallery-plugin.php:1305
+msgid "FAQ"
+msgstr "Часті питання"
+
+#: gallery-plugin.php:945
+msgid "Go PRO"
+msgstr "Придбати ПРО версію"
+
+#: gallery-plugin.php:950
+msgid "Notice:"
+msgstr "Зверніть увагу:"
+
+#: gallery-plugin.php:950
+msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
+msgstr "Налаштування плагіну змінились. Щоб зберегти їх, клікніть на \"Зберегти зміни\" при виході"
+
+#: gallery-plugin.php:951
+msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
+msgstr "Якщо ви хочете додати галерею на вашу сторінку або пост, просто скопіюйте та розмістіть цей шорткод в контент вашого посту або сторінки."
+
+#: gallery-plugin.php:953
+msgid "Please enable JavaScript to use the option to renew images."
+msgstr "Щоб використовувати файл uploader, будь ласка, увімкніть JavaScript."
+
+#: gallery-plugin.php:957
+msgid "Update images for gallery"
+msgstr "Оновити зображення галереї"
+
+#: gallery-plugin.php:959
+msgid "Update images"
+msgstr "Оновити зображення"
+
+#: gallery-plugin.php:964
 msgid "Updating images..."
-msgstr ""
+msgstr "Оновлення зображень…"
 
-#: gallery-plugin.php:929
-#, fuzzy
+#: gallery-plugin.php:965
 msgid "No image found"
-msgstr "Галереї не знайдено"
+msgstr "Зображення не знайдено"
 
-#: gallery-plugin.php:930
+#: gallery-plugin.php:966
 msgid "All images are updated"
-msgstr ""
+msgstr "Всі зображення оновлено"
 
-#: gallery-plugin.php:931
+#: gallery-plugin.php:967
 msgid "Error."
-msgstr ""
+msgstr "Помилка."
 
-#: gallery-plugin.php:937
+#: gallery-plugin.php:973
 msgid "Image size for the album cover"
 msgstr "Розмір зображення для обкладинки альбому"
 
-#: gallery-plugin.php:939
-#: gallery-plugin.php:947
-#: gallery-plugin.php:960
+#: gallery-plugin.php:975
+#: gallery-plugin.php:983
+#: gallery-plugin.php:999
 msgid "Image size"
 msgstr "Розмір зображення"
 
-#: gallery-plugin.php:940
-#: gallery-plugin.php:948
+#: gallery-plugin.php:976
+#: gallery-plugin.php:984
 msgid "Width (in px)"
 msgstr "Ширина (в px)"
 
-#: gallery-plugin.php:941
-#: gallery-plugin.php:949
+#: gallery-plugin.php:977
+#: gallery-plugin.php:985
 msgid "Height (in px)"
 msgstr "Висота (в px)"
 
-#: gallery-plugin.php:945
+#: gallery-plugin.php:981
 msgid "Gallery image size"
 msgstr "Розмір зображення галереї"
 
-#: gallery-plugin.php:953
+#: gallery-plugin.php:989
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
-msgstr "WordPress створить копію ескізу з заданими розмірами, коли ви завантажити нову фотографію."
+msgstr "Коли ви завантажите нове зображення, WordPress створить іконки відповідно до заданих розмірів. "
 
-#: gallery-plugin.php:958
+#: gallery-plugin.php:997
 msgid "Gallery image size in the lightbox"
 msgstr "Розмір зображень галереї в лайтбоксі"
 
-#: gallery-plugin.php:961
+#: gallery-plugin.php:1000
 msgid "Max width (in px)"
 msgstr "Макс. ширина (в px)"
 
-#: gallery-plugin.php:962
+#: gallery-plugin.php:1001
 msgid "Max height (in px)"
 msgstr "Макс. висота (в px)"
 
-#: gallery-plugin.php:963
+#: gallery-plugin.php:1002
 msgid "Display a full size image in the lightbox"
 msgstr "Відображати повне зображення в лайтбоксі"
 
-#: gallery-plugin.php:967
+#: gallery-plugin.php:1006
 msgid "Crop position"
-msgstr "Позиція обтинання"
+msgstr "Обрізання"
 
-#: gallery-plugin.php:969
+#: gallery-plugin.php:1008
 msgid "Horizontal"
 msgstr "Горизонтальна"
 
-#: gallery-plugin.php:971
+#: gallery-plugin.php:1010
 msgid "left"
 msgstr "зліва"
 
-#: gallery-plugin.php:972
-#: gallery-plugin.php:979
+#: gallery-plugin.php:1011
+#: gallery-plugin.php:1018
 msgid "center"
 msgstr "центр"
 
-#: gallery-plugin.php:973
+#: gallery-plugin.php:1012
 msgid "right"
-msgstr "зправа"
+msgstr "справа"
 
-#: gallery-plugin.php:976
+#: gallery-plugin.php:1015
 msgid "Vertical"
 msgstr "Вертикальна"
 
-#: gallery-plugin.php:978
+#: gallery-plugin.php:1017
 msgid "top"
 msgstr "верх"
 
-#: gallery-plugin.php:980
+#: gallery-plugin.php:1019
 msgid "bottom"
 msgstr "низ"
 
-#: gallery-plugin.php:985
+#: gallery-plugin.php:1024
 msgid "Lightbox background"
 msgstr "Фон лайтбокса"
 
-#: gallery-plugin.php:987
+#: gallery-plugin.php:1026
 msgid "Default"
-msgstr "Стандартне значення"
+msgstr "за замовчуванням"
 
-#: gallery-plugin.php:988
+#: gallery-plugin.php:1027
 msgid "Background transparency (from 0 to 1)"
-msgstr "Прозорість для фону (від 0 до 1)"
+msgstr "Прозорість фону (від 0 до 1)"
 
-#: gallery-plugin.php:990
+#: gallery-plugin.php:1029
 msgid "Select a background color"
-msgstr "Вберіть колір фону"
+msgstr "Виберіть колір фону"
 
-#: gallery-plugin.php:992
+#: gallery-plugin.php:1031
 msgid "Background color"
 msgstr "Колір фону"
 
-#: gallery-plugin.php:999
-#: gallery-plugin.php:1145
+#: gallery-plugin.php:1038
+#: gallery-plugin.php:1211
 msgid "If you upgrade to Pro version all your settings and galleries will be saved."
+msgstr "Якщо ви перейшли на Про версію, всі налаштування і галереї буде збережено."
+
+#: gallery-plugin.php:1045
+#: gallery-plugin.php:1218
+msgid "Unlock premium options by upgrading to a PRO version."
+msgstr "Відкрийте додаткові опції, перейшовши на Про версію."
+
+#: gallery-plugin.php:1046
+#: gallery-plugin.php:1219
+#: gallery-plugin.php:2039
+msgid "Learn More"
+msgstr "Дізнатись більше"
+
+#: gallery-plugin.php:1050
+#: gallery-plugin.php:1223
+msgid "Start Your Trial"
 msgstr ""
 
-#: gallery-plugin.php:1004
-#: gallery-plugin.php:1150
-msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
-msgstr "Даний функціонал доступний у про-версії плагіну. За додатковою інформацією, будь ласка, перейдіть за посиланням"
+#: gallery-plugin.php:1051
+#: gallery-plugin.php:1224
+#: gallery-plugin.php:1278
+#: gallery-plugin.php:1288
+msgid "or"
+msgstr ""
 
-#: gallery-plugin.php:1013
+#: gallery-plugin.php:1054
+#: gallery-plugin.php:1227
+msgid "Go"
+msgstr "Вперед"
+
+#: gallery-plugin.php:1062
 msgid "Images with border"
 msgstr "Зображення з рамкою"
 
-#: gallery-plugin.php:1016
+#: gallery-plugin.php:1065
 msgid "Border width in px, just numbers"
 msgstr "Ширина рамки у пікселях, тільки числа"
 
-#: gallery-plugin.php:1018
-#: gallery-plugin.php:1020
+#: gallery-plugin.php:1067
+#: gallery-plugin.php:1069
 msgid "Select a border color"
 msgstr "Виберіть колір рамки"
 
-#: gallery-plugin.php:1026
+#: gallery-plugin.php:1075
 msgid "Number of images in the row"
 msgstr "Кількість зображень у рядку"
 
-#: gallery-plugin.php:1032
+#: gallery-plugin.php:1081
 msgid "Start slideshow"
 msgstr "Розпочати слайд-шоу"
 
-#: gallery-plugin.php:1038
+#: gallery-plugin.php:1087
 msgid "Slideshow interval"
-msgstr "Інтервал часу при показі слайд-шоу"
+msgstr "Інтервал між слайдами "
 
-#: gallery-plugin.php:1044
+#: gallery-plugin.php:1093
 msgid "Use single lightbox for multiple galleries on one page"
-msgstr "Використовувати окремий лайтбокс для багатьох галерей на одній сторйнці."
+msgstr "Використовувати один лайтбокс для багатьох галерей на сторінці."
 
-#: gallery-plugin.php:1052
+#: gallery-plugin.php:1101
 msgid "Attachment ID"
-msgstr "ID зображення"
+msgstr "ID владеного файлу"
 
-#: gallery-plugin.php:1053
+#: gallery-plugin.php:1102
 msgid "Image Name"
-msgstr "Ім'я зображення"
+msgstr "Назва зображення"
 
-#: gallery-plugin.php:1055
+#: gallery-plugin.php:1104
 msgid "Sorting order (the input field for sorting order in the Insert / Upload Media Gallery dialog)"
-msgstr "Порядок сортування (поле для введення порядку сортирування у діалозі Insert / Upload Media Gallery)"
+msgstr "Порядок сортування (поле для введення порядку сортування в Insert / Upload Media Gallery)"
 
-#: gallery-plugin.php:1056
+#: gallery-plugin.php:1105
 msgid "Random"
 msgstr "Довільно"
 
-#: gallery-plugin.php:1060
+#: gallery-plugin.php:1109
 msgid "Sort images"
 msgstr "Сортувати зображення"
 
-#: gallery-plugin.php:1062
+#: gallery-plugin.php:1111
 msgid "ASC (ascending order from lowest to highest values - 1, 2, 3; a, b, c)"
 msgstr "ASC (в порядку зростання від найменшого до найбільшого значення - 1, 2, 3; a, b, c)"
 
-#: gallery-plugin.php:1063
+#: gallery-plugin.php:1112
 msgid "DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
-msgstr "DESC (за зменшенням від найбільшого до найменшого значення - 3, 2, 1; c, b, a)"
+msgstr "DESC (в порядку зменшення від найбільшого до найменшого значення - 3, 2, 1; c, b, a)"
 
-#: gallery-plugin.php:1067
+#: gallery-plugin.php:1116
 msgid "Display text above the image"
 msgstr "Відображення тексту над зображенням"
 
-#: gallery-plugin.php:1069
+#: gallery-plugin.php:1118
 msgid "Turn off the checkbox, if you want to display text just in a lightbox"
-msgstr "Вимкніть позначку, якщо ви хочете відображати текст тільки у лайтбоксі"
+msgstr "Приберіть позначку, якщо ви хочете відображати текст тільки у лайтбоксі"
 
-#: gallery-plugin.php:1073
+#: gallery-plugin.php:1122
 msgid "Display the Back link"
-msgstr "Відображати посилання Повернутися"
+msgstr "Відображати посилання Назад"
 
-#: gallery-plugin.php:1079
+#: gallery-plugin.php:1128
 msgid "Display the Back link in the shortcode"
-msgstr "Відображати посилання Повернутися у шорткоді"
+msgstr "Відображати посилання Назад у шорткоді"
 
-#: gallery-plugin.php:1085
+#: gallery-plugin.php:1134
 msgid "The Back link text"
-msgstr "Текст для посилання Повернутися"
+msgstr "Текст для посилання Назад"
 
-#: gallery-plugin.php:1091
+#: gallery-plugin.php:1140
 msgid "The Back link URL"
-msgstr "URL для посилання Повернутися"
+msgstr "URL для посилання Назад"
 
-#: gallery-plugin.php:1093
+#: gallery-plugin.php:1142
 msgid "Gallery page (Page with Gallery Template)"
 msgstr "Сторінка галереї (сторінка з шаблоном галереї)"
 
-#: gallery-plugin.php:1095
+#: gallery-plugin.php:1144
 msgid "(Full URL to custom page)"
 msgstr "(Повне посилання на сторінку користувача)"
 
-#: gallery-plugin.php:1099
+#: gallery-plugin.php:1148
 msgid "The Read More link text"
 msgstr "Текст для посилання Дізнатися більше"
 
-#: gallery-plugin.php:1105
+#: gallery-plugin.php:1154
 msgid "Add gallery to the search"
 msgstr "Додати галерею до пошуку"
 
-#: gallery-plugin.php:1115
+#: gallery-plugin.php:1164
 msgid "Using"
-msgstr ""
+msgstr "Використання"
 
-#: gallery-plugin.php:1115
+#: gallery-plugin.php:1164
 msgid "powered by"
-msgstr ""
+msgstr "розроблений"
 
-#: gallery-plugin.php:1118
-#: gallery-plugin.php:1122
+#: gallery-plugin.php:1167
+#: gallery-plugin.php:1171
 msgid "Using Custom Search powered by"
 msgstr "Використовуючи Custom Search, розроблений"
 
-#: gallery-plugin.php:1118
+#: gallery-plugin.php:1167
 msgid "Activate Custom Search"
 msgstr "Активувати Custom Search"
 
-#: gallery-plugin.php:1122
+#: gallery-plugin.php:1171
 msgid "Download Custom Search"
 msgstr "Завантажити Custom Search"
 
-#: gallery-plugin.php:1129
-msgid "Display Like buttons in the lightbox"
-msgstr "Відображати Like кнопки у лайтбоксі"
+#: gallery-plugin.php:1181
+msgid "The lightbox helper"
+msgstr "Помічник по лайтбоксу"
 
-#: gallery-plugin.php:1131
+#: gallery-plugin.php:1183
+msgid "Do not use"
+msgstr "Не використовувати"
+
+#: gallery-plugin.php:1184
+msgid "Button helper"
+msgstr "Помічник по кнопкам"
+
+#: gallery-plugin.php:1185
+msgid "Thumbnail helper"
+msgstr "Помічник по значкам"
+
+#: gallery-plugin.php:1189
+msgid "Display Like buttons in the lightbox"
+msgstr "Відображати кнопки Подобається у лайтбоксі"
+
+#: gallery-plugin.php:1191
 msgid "FaceBook"
 msgstr "FaceBook"
 
-#: gallery-plugin.php:1132
+#: gallery-plugin.php:1192
 msgid "Twitter"
 msgstr "Twitter"
 
-#: gallery-plugin.php:1133
+#: gallery-plugin.php:1193
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: gallery-plugin.php:1134
+#: gallery-plugin.php:1194
 msgid "Google +1"
 msgstr "Google +1"
 
-#: gallery-plugin.php:1138
+#: gallery-plugin.php:1198
 msgid "Slug for gallery item"
 msgstr "Назва для елементів галереї"
 
-#: gallery-plugin.php:1140
+#: gallery-plugin.php:1200
 msgid "for any structure of permalinks except the default structure"
-msgstr "для будь-якої структури, за винятком стандартної структури"
+msgstr "для будь-якої структури посилань, за винятком стандартної структури"
 
-#: gallery-plugin.php:1160
+#: gallery-plugin.php:1204
+msgid "Title for lightbox button"
+msgstr "Назва кнопки лайтбоксу"
+
+#: gallery-plugin.php:1235
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
-#: gallery-plugin.php:1166
+#: gallery-plugin.php:1241
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr ""
+msgstr "Якщо вам сподобався плагін, будь ласка, поставте йому п'ять зірочок на WordPress"
 
-#: gallery-plugin.php:1167
-#, fuzzy
+#: gallery-plugin.php:1242
 msgid "Rate the plugin"
-msgstr "Безкоштовні плагіни"
+msgstr "Оцініть плагін"
 
-#: gallery-plugin.php:1170
-#, fuzzy
+#: gallery-plugin.php:1245
 msgid "If there is something wrong about it, please contact us"
-msgstr "Якщо у вас є ябудь-які питання, будь ласка, зв'яжіться з нами через plugin@bestwebsoft.com або заповніть нашу контактну форму на нашому сайті"
+msgstr "Якщо виникли проблеми, будь ласка, повідомте нам"
 
-#: gallery-plugin.php:1181
+#: gallery-plugin.php:1256
 msgid "Congratulations! The PRO version of the plugin is successfully download and activated."
-msgstr ""
+msgstr "Вітаємо! Про версія плагіну була завантажена та активована успішно."
 
-#: gallery-plugin.php:1183
+#: gallery-plugin.php:1258
 msgid "Please, go to"
-msgstr ""
+msgstr "Будь ласка, перейдіть на"
 
-#: gallery-plugin.php:1183
-#, fuzzy
+#: gallery-plugin.php:1258
 msgid "the setting page"
-msgstr "на сторінці установок плагіну ("
+msgstr "сторінку налаштувань"
 
-#: gallery-plugin.php:1184
+#: gallery-plugin.php:1259
 msgid "You will be redirected automatically in 5 seconds."
-msgstr ""
+msgstr "Переадресація через 5 сек."
 
-#: gallery-plugin.php:1189
+#: gallery-plugin.php:1264
 msgid "You can download and activate"
-msgstr ""
+msgstr "Ви можете завантажити та активувати"
 
-#: gallery-plugin.php:1191
+#: gallery-plugin.php:1266
 msgid "version of this plugin by entering Your license key."
-msgstr ""
+msgstr "версію цього плагіну, ввівши Ваш ліцензійний ключ"
 
-#: gallery-plugin.php:1193
+#: gallery-plugin.php:1268
 msgid "You can find your license key on your personal page Client area, by clicking on the link"
-msgstr ""
+msgstr "Ви можете знайти ліцензійний ключ на вкладці \"Клієнтам\" вашої сторінки, клікнувши на лінк"
 
-#: gallery-plugin.php:1195
+#: gallery-plugin.php:1270
 msgid "(your username is the email you specify when purchasing the product)."
+msgstr "(ваше ім'я - це емейл, який ви вказували при покупці)"
+
+#: gallery-plugin.php:1278
+#: gallery-plugin.php:1288
+#, fuzzy
+msgid "Activate"
+msgstr "Активовані плагіни"
+
+#: gallery-plugin.php:1278
+#: gallery-plugin.php:1288
+msgid "Start Your Free 7-Day Trial Now"
 msgstr ""
 
-#: gallery-plugin.php:1203
-#: gallery-plugin.php:1213
-msgid "Go!"
-msgstr ""
-
-#: gallery-plugin.php:1229
-msgid "FAQ"
-msgstr "FAQ "
-
-#: gallery-plugin.php:1230
+#: gallery-plugin.php:1306
 msgid "Support"
 msgstr "Підтримка"
 
-#: gallery-plugin.php:1341
-#: template/gallery-single-template.php:14
+#: gallery-plugin.php:1434
+#: template/gallery-single-template.php:13
 msgid "Download high resolution image"
-msgstr "Завантажити зображення у високій роздільності "
+msgstr "Завантажити зображення у високій якості "
 
-#: gallery-plugin.php:1450
-#: template/gallery-single-template.php:77
+#: gallery-plugin.php:1543
+#: template/gallery-single-template.php:76
 msgid "Sorry, nothing found."
-msgstr "Вибачте - нічого не знайдено."
+msgstr "Вибачте, нічого не знайдено."
 
-#: gallery-plugin.php:1473
-#: template/gallery-single-template.php:103
+#: gallery-plugin.php:1565
+#: template/gallery-single-template.php:102
 msgid "Image"
 msgstr "Зображення"
 
-#: gallery-plugin.php:1764
-#, fuzzy
+#: gallery-plugin.php:1856
 msgid "Image size not defined"
-msgstr "Розмір зображення"
+msgstr "Розмір зображення не визначено"
 
-#: gallery-plugin.php:1779
+#: gallery-plugin.php:1871
 msgid "We can update only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please, manually reload image."
-msgstr ""
+msgstr "Можливі оновлення лише файлів у форматах PNG, JPEG, GIF, WPMP чи XBM. В інших випадках, будь ласка, перезавантажте зображення вручну."
 
-#: gallery-plugin.php:1790
+#: gallery-plugin.php:1882
 msgid "Image size changes not defined"
-msgstr ""
+msgstr "Зміни розміру зображення не визначено"
 
-#: gallery-plugin.php:1819
-#: gallery-plugin.php:1822
-#: gallery-plugin.php:1827
+#: gallery-plugin.php:1911
+#: gallery-plugin.php:1914
+#: gallery-plugin.php:1919
 msgid "Invalid path"
-msgstr ""
+msgstr "Невірний шлях"
 
-#: gallery-plugin.php:1945
-msgid "Learn More"
-msgstr "Читати далі"
-
-#: gallery-plugin.php:1947
+#: gallery-plugin.php:2042
 msgid "It’s time to upgrade your <strong>Gallery plugin</strong> to <strong>PRO</strong> version!"
-msgstr "Час оновити ваш плагін Gallery до про версії!"
+msgstr "Час оновити ваш плагін Gallery до Про версії!"
 
-#: gallery-plugin.php:1948
-msgid "Extend standard plugin functionality with new great options."
-msgstr "Розширити стандартний функціонал плагіну новими опціями."
+#: gallery-plugin.php:2043
+msgid "Extend standard plugin functionality with new great options"
+msgstr "Розширити можливості плагіну, додавши нові опції."
+
+#~ msgid "Go!"
+#~ msgstr "Вперед!"
+
+#~ msgid ""
+#~ "This functionality is available in the Pro version of the plugin. For "
+#~ "more details, please follow the link"
+#~ msgstr ""
+#~ "Даний функціонал доступний у про-версії плагіну. За додатковою "
+#~ "інформацією, будь ласка, перейдіть за посиланням"
 
 #, fuzzy
 #~ msgid "No gallery item found"
@@ -748,9 +805,6 @@ msgstr "Розширити стандартний функціонал плаг�
 
 #~ msgid "Sorry, email message could not be delivered."
 #~ msgstr "Вибачте, електронне повідомлення не може бути відправлено."
-
-#~ msgid "Activated plugins"
-#~ msgstr "Активовані плагіни"
 
 #~ msgid "Installed plugins"
 #~ msgstr "Встановлених модулів"

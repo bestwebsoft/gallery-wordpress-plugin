@@ -1,10 +1,10 @@
 === Gallery ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
-Tags: gallery, image, gallery image, album, foto, fotoalbum, website gallery, multiple pictures, pictures, photo, photoalbum, photogallery
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.0
-Tested up to: 3.8.2
-Stable tag: 4.1.9
+Tested up to: 3.9.1
+Stable tag: 4.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,9 +15,9 @@ This plugin allows you to implement a gallery page into your website.
 This plugin makes it possible to implement as many galleries as you want into your website. You can add multiple pictures and description for each gallery, show them all at one page, view each one separately. Moreover, you can upload HQ images. Regular updates and simplicity of usage along with efficient functionality make it a perfect choice for your site to have an appealing look. 
 There is also a premium version of the plugin with more useful features available.
 
-http://www.youtube.com/watch?v=3NXb9ExQ3QE
+http://www.youtube.com/watch?v=kzC11CMmwbI
 
-<a href="http://www.youtube.com/watch?v=Qr5DD0qKqA4" target="_blank">Video instruction on Installation</a>
+<a href="http://www.youtube.com/watch?v=mivcWwfRVmI" target="_blank">Video instruction on Installation</a>
 
 <a href="http://www.youtube.com/watch?v=z95ql-M2JTc" target="_blank">Video instruction "How to add a gallery"</a>
 
@@ -83,7 +83,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 <a href="https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/edit?pli=1" target="_blank">View a Step-by-step Instruction on Gallery Installation</a>.
 
-http://www.youtube.com/watch?v=Qr5DD0qKqA4
+http://www.youtube.com/watch?v=mivcWwfRVmI
 
 <a href="https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/edit?pli=1" target="_blank">View a Step-by-step Instruction "How to add a Gallery"</a>.
 
@@ -171,6 +171,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. PrettyPhoto pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.2.0 - 15.05.2014 =
+* Update : We updated all functionality for wordpress 3.9.1
+* Update : The French language file is updated.
+* Update : The Ukrainian language file is updated.
 
 = V4.1.9 - 11.04.2014 =
 * Update : We updated all functionality for wordpress 3.8.2.
@@ -431,6 +436,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.2.0 =
+We updated all functionality for wordpress 3.9.1. The French language file is updated. The Ukrainian language file is updated.
 
 = V4.1.9 =
 We updated all functionality for wordpress 3.8.2.

@@ -17,9 +17,7 @@
 		});
 		max = max - parseInt( $( '.bws_product_links' ).css( 'padding-top' ) ) - parseInt( $( '.bws_product_links' ).css( 'padding-bottom' ) );
 		$( '.bws_product_links' ).css( 'height', max + 'px' );		
-		
-		$( '.bws_product_button' ).css( 'display', 'none' );
-	
+			
 		$( '.bws_product_box' ).hover( function() {
 			if ( $( this ).children( '.bws_product' ).children( '.bws_product_content' ).children( '.bws_product_description' ).length > 0 ) {
 				$( this ).children( '.bws_product' ).addClass( 'bws_product_pro' );

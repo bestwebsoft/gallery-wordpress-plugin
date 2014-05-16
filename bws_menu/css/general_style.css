@@ -117,6 +117,13 @@ table.bws_pro_version td {
     float: left;
     padding-top: 10px;
 }
+.bws_pro_version_tooltip .bws_pro_links {
+    float: right;
+}
+.bws_pro_version_tooltip .bws_trial_info {
+    padding-top: 10px;
+    display: inline-block;
+}
 div.bws_pro_version {
     padding: 5px 10px;
 }

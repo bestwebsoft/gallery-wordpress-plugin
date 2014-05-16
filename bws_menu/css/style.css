@@ -29,14 +29,24 @@ h4.bws_recommended {
     color: #999;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 14px;
-    padding-left: 15px;
+    font-size: 14px;    
 }
-h4.bws_installed {
-    background: url("../icons/icon.png") no-repeat 0 5px;
+h4.bws_installed:before,
+h4.bws_recommended:before {
+    border-radius: 9px;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    position: relative;
+    top: -1px;
+    width: 8px;
+    margin-right: 7px;
 }
-h4.bws_recommended {
-    background: url("../icons/icon.png") no-repeat 0 -11px;
+h4.bws_recommended:before {
+    background: #0074a2;
+}
+h4.bws_installed:before {
+    background: #00a22e;
 }
 .bws_product_box {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -76,11 +86,15 @@ h4.bws_recommended {
     color: #fff;
 }
 .bws_product_icon_pro {
-    background: url("../icons/pro.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    background: #F26E50;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
     height: 20px;
-    margin-bottom: -19px;
+    margin: -9px auto -10px;
     position: relative;
-    top: -9px;
+    width: 46px;
 }
 .bws_product_description {
     padding: 0 10px;
@@ -114,7 +128,7 @@ h4.bws_recommended {
     padding: 7px 5px 8px;
     font-size: 14px;
     min-width: 103px;
-    display: inline-block;
+    display: none;
 }
 .bws_product_button:hover{
     background: #008726; 
@@ -136,4 +150,9 @@ h4.bws_recommended {
 }
 .bws_product_button.bws_donate_button:hover {
     background: #D69108 !important;
+}
+
+/* theme page after WP 3.9 */
+.toplevel_page_bws_plugins #availablethemes .theme-browser {
+    margin-top: 25px;
 }

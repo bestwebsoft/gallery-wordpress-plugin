@@ -1,14 +1,14 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.2.6
+* Version: 1.3.1
 */
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $wpdb, $wpmu, $wp_version, $bws_plugin_info;
 		$error = $message = $bwsmn_form_email = '';
-		$bws_donate_link = 'https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13';
+		$bws_donate_link = 'https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94';
 
 		if ( ! function_exists( 'is_plugin_active_for_network' ) )
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -214,7 +214,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/plugin/contact-form-multi/?k=83cdd9e72a9f4061122ad28a67293c72&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/plugin/contact-form-multi/?k=83cdd9e72a9f4061122ad28a67293c72&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Contact+Form+Multi+Bestwebsoft&plugin-search-input=Search+Plugins',
-				'settings'		=> ''
+				'settings'		=> '',
+				'pro_version'	=> 'contact-form-multi-pro/contact-form-multi-pro.php'
 			),
 			'bws-google-maps/bws-google-maps.php' => array(
 				'name'			=> 'BestWebSoft Google Maps',
@@ -232,6 +233,23 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/plugin/bws-google-analytics/?k=261c74cad753fb279cdf5a5db63fbd43&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=BestWebSoft+Google+Analytics&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=bws-google-analytics.php'
+			),
+			'db-manager/db-manager.php' => array(
+				'name'			=> 'DB manager',
+				'description'	=> 'Allows you to download the latest version of PhpMyadmin and Dumper and manage your site.',
+				'link'			=> 'http://bestwebsoft.com/plugin/db-manager/?k=01ed9731780d87f85f5901064b7d76d8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/db-manager/?k=01ed9731780d87f85f5901064b7d76d8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> 'http://bestwebsoft.com/plugin/db-manager/?k=01ed9731780d87f85f5901064b7d76d8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'settings'		=> 'admin.php?page=db-manager.php'
+			),
+			'user-role/user-role.php' => array(
+				'name'			=> 'User Role',
+				'description'	=> 'Allows to change wordpress user role capabilities.',
+				'link'			=> 'http://bestwebsoft.com/plugin/user-role/?k=dfe2244835c6fbf601523964b3f34ccc&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/user-role/?k=dfe2244835c6fbf601523964b3f34ccc&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> 'http://bestwebsoft.com/plugin/user-role/?k=dfe2244835c6fbf601523964b3f34ccc&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'settings'		=> 'admin.php?page=user-role.php',
+				'pro_version'	=> 'user-role-pro/user-role-pro.php'
 			)
 		);
 		$bws_plugins_pro	= array(
@@ -311,6 +329,20 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/plugin/bws-google-maps-pro/?k=117c3f9fc17f2c83ef430a8a9dc06f56&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'purchase' 		=> 'http://bestwebsoft.com/plugin/bws-google-maps-pro/?k=117c3f9fc17f2c83ef430a8a9dc06f56&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
 				'settings' 		=> 'admin.php?page=bws-google-maps-pro.php'
+			),
+			'contact-form-multi-pro/contact-form-multi-pro.php' => array(
+				'name'			=> 'Contact Form Multi Pro',
+				'description'	=> 'This plugin is an exclusive add-on to the Contact Form Pro. Allows to create multiple contact forms.',
+				'link'			=> 'http://bestwebsoft.com/plugin/contact-form-multi-pro/?k=fde3a18581c143654f060c398b07e8ac&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/contact-form-multi-pro/?k=fde3a18581c143654f060c398b07e8ac&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings' 		=> ''
+			),
+			'user-role-pro/user-role-pro.php' => array(
+				'name'			=> 'User Role',
+				'description'	=> 'Allows to change wordpress user role capabilities.',
+				'link'			=> 'http://bestwebsoft.com/plugin/user-role-pro/?k=cfa9cea6613fb3d7c0a3622fa2faaf46&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'purchase' 		=> 'http://bestwebsoft.com/plugin/user-role-pro/?k=cfa9cea6613fb3d7c0a3622fa2faaf46&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#purchase',
+				'settings' 		=> 'admin.php?page=user-role-pro.php'
 			)
 		);
 		
@@ -483,8 +515,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				if ( $result != true )
 					$error = __( "Sorry, email message could not be delivered.", 'bestwebsoft' );
 			}
-		}
-		?>
+		} ?>
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2>BestWebSoft</h2>			
@@ -495,7 +526,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php } ?>
 				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'system_status' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=bws_plugins&amp;action=system_status"><?php _e( 'System status', 'bestwebsoft' ); ?></a>
 			</h2>			
-			<?php if ( !isset( $_GET['action'] ) ) { ?>	
+			<?php if ( !isset( $_GET['action'] ) ) { ?>				
 				<ul class="subsubsub">
 					<li><a <?php if ( !isset( $_GET['sub'] ) ) echo 'class="current" '; ?>href="admin.php?page=bws_plugins"><?php _e( 'All', 'bestwebsoft' ); ?></a></li> |
 					<li><a <?php if ( isset( $_GET['sub'] ) && 'installed' == $_GET['sub'] ) echo 'class="current" '; ?>href="admin.php?page=bws_plugins&amp;sub=installed"><?php _e( 'Installed', 'bestwebsoft' ); ?></a></li> |
@@ -505,7 +536,6 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php if ( ( isset( $_GET['sub'] ) && 'installed' == $_GET['sub'] ) || !isset( $_GET['sub'] ) ) { ?>	
 					<h4 class="bws_installed"><?php _e( 'Installed plugins', 'bestwebsoft' ); ?></h4>
 					<?php foreach ( $all_plugins as $key_plugin => $value_plugin ) {
-
 						if ( isset( $bws_plugins_pro[ $key_plugin ] ) ) {
 							$key_plugin_explode = explode( '-plugin-pro/', $key_plugin );
 							if ( isset( $key_plugin_explode[1] ) )
@@ -531,7 +561,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 										<div class="bws_product_title"><?php echo $value_plugin["Name"]; ?></div>
 										<div class="bws_product_content">
 											<div class="bws_product_icon">
-												<div class="bws_product_icon_pro"></div>
+												<div class="bws_product_icon_pro">PRO</div>
 												<img src="<?php echo plugins_url( "icons/" , __FILE__ ) . $icon . '.png'; ?>"/>												
 											</div>			
 											<div class="bws_product_description"><?php echo $value_plugin["Description"]; ?></div>
@@ -579,7 +609,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 										<div class="bws_product_title"><?php echo $value_plugin["Name"]; ?></div>
 										<div class="bws_product_content">
 											<div class="bws_product_icon">
-												<div class="bws_product_icon_pro"></div>
+												<div class="bws_product_icon_pro">PRO</div>
 												<img src="<?php echo plugins_url( "icons/" , __FILE__ ) . $icon . '.png'; ?>"/>
 											</div>
 											<div class="bws_product_description"><?php echo $bws_plugins_pro[ $key_plugin ]["description"]; ?></div>
@@ -644,15 +674,14 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 								$key_plugin_explode = explode( '/', $key_plugin );
 								$icon = $key_plugin_explode[0];
 							}
-						}
-						?>
+						} ?>
 						<div class="bws_product_box">
 							<div class="bws_product">				
 								<div class="bws_product_title"><?php echo $value_plugin["name"]; ?></div>
 								<div class="bws_product_content">
 									<div class="bws_product_icon">
 										<?php if ( isset( $bws_plugins[ $key_plugin ]['pro_version'] ) && isset( $bws_plugins_pro[ $bws_plugins[ $key_plugin ]['pro_version'] ] ) ) { ?>								
-											<div class="bws_product_icon_pro"></div>
+											<div class="bws_product_icon_pro">PRO</div>
 										<?php } ?>
 										<img src="<?php echo plugins_url( "icons/" , __FILE__ ) . $icon . '.png'; ?>"/>
 									</div>
@@ -679,8 +708,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				} ?>	
 			<?php } elseif ( 'themes' == $_GET['action'] ) { ?>	
 				<div id="availablethemes">
-					<?php
-					global $tabs, $tab, $paged, $type, $theme_field_defaults;
+					<?php global $tabs, $tab, $paged, $type, $theme_field_defaults;
 					include( ABSPATH . 'wp-admin/includes/theme-install.php' );
 					include( ABSPATH . 'wp-admin/includes/class-wp-themes-list-table.php' );
 					include( ABSPATH . 'wp-admin/includes/class-wp-theme-install-list-table.php' );
@@ -703,77 +731,109 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 						'infinite_scroll' => true,
 					) );
 					$themes = $theme_class->items;
-					foreach ( $themes as $theme ) {
-						?><div class="available-theme installable-theme"><?php
-							global $themes_allowedtags;
-							if ( empty( $theme ) )
-								return;
+					if ( $wp_version < '3.9' ) {
+						foreach ( $themes as $theme ) { ?>
+							<div class="available-theme installable-theme"><?php
+								global $themes_allowedtags;
+								if ( empty( $theme ) )
+									return;
 
-							$name   = wp_kses( $theme->name,   $themes_allowedtags );
-							$author = wp_kses( $theme->author, $themes_allowedtags );
-							$preview_title = sprintf( __('Preview &#8220;%s&#8221;'), $name );
-							$preview_url   = add_query_arg( array(
-								'tab'   => 'theme-information',
-								'theme' => $theme->slug,
-							), self_admin_url( 'theme-install.php' ) );
+								$name   = wp_kses( $theme->name,   $themes_allowedtags );
+								$author = wp_kses( $theme->author, $themes_allowedtags );
+								$preview_title = sprintf( __('Preview &#8220;%s&#8221;'), $name );
+								$preview_url   = add_query_arg( array(
+									'tab'   => 'theme-information',
+									'theme' => $theme->slug,
+								), self_admin_url( 'theme-install.php' ) );
 
-							$actions = array();
+								$actions = array();
 
-							$install_url = add_query_arg( array(
-								'action' => 'install-theme',
-								'theme'  => $theme->slug,
-							), self_admin_url( 'update.php' ) );
+								$install_url = add_query_arg( array(
+									'action' => 'install-theme',
+									'theme'  => $theme->slug,
+								), self_admin_url( 'update.php' ) );
 
-							$update_url = add_query_arg( array(
-								'action' => 'upgrade-theme',
-								'theme'  => $theme->slug,
-							), self_admin_url( 'update.php' ) );
+								$update_url = add_query_arg( array(
+									'action' => 'upgrade-theme',
+									'theme'  => $theme->slug,
+								), self_admin_url( 'update.php' ) );
 
-							$status = 'install';
-							$installed_theme = wp_get_theme( $theme->slug );
-							if ( $installed_theme->exists() ) {
-								if ( version_compare( $installed_theme->get('Version'), $theme->version, '=' ) )
-									$status = 'latest_installed';
-								elseif ( version_compare( $installed_theme->get('Version'), $theme->version, '>' ) )
-									$status = 'newer_installed';
-								else
-									$status = 'update_available';
-							}
-							switch ( $status ) {
-								default:
-								case 'install':
-									$actions[] = '<a class="install-now" href="' . esc_url( wp_nonce_url( $install_url, 'install-theme_' . $theme->slug ) ) . '" title="' . esc_attr( sprintf( __( 'Install %s' ), $name ) ) . '">' . __( 'Install Now' ) . '</a>';
-									break;
-								case 'update_available':
-									$actions[] = '<a class="install-now" href="' . esc_url( wp_nonce_url( $update_url, 'upgrade-theme_' . $theme->slug ) ) . '" title="' . esc_attr( sprintf( __( 'Update to version %s' ), $theme->version ) ) . '">' . __( 'Update' ) . '</a>';
-									break;
-								case 'newer_installed':
-								case 'latest_installed':
-									$actions[] = '<span class="install-now" title="' . esc_attr__( 'This theme is already installed and is up to date' ) . '">' . _x( 'Installed', 'theme' ) . '</span>';
-									break;
-							}
-							$actions[] = '<a class="install-theme-preview" href="' . esc_url( $preview_url ) . '" title="' . esc_attr( sprintf( __( 'Preview %s' ), $name ) ) . '">' . __( 'Preview' ) . '</a>';
-							$actions = apply_filters( 'theme_install_actions', $actions, $theme );
-							?>
-							<a class="screenshot install-theme-preview" href="<?php echo esc_url( $preview_url ); ?>" title="<?php echo esc_attr( $preview_title ); ?>">
-								<img src='<?php echo esc_url( $theme->screenshot_url ); ?>' width='150' />
-							</a>
-							<h3><?php echo $name; ?></h3>
-							<div class="theme-author"><?php printf( __( 'By %s' ), $author ); ?></div>
-							<div class="action-links">
-								<ul>
-									<?php foreach ( $actions as $action ): ?>
-										<li><?php echo $action; ?></li>
-									<?php endforeach; ?>
-									<li class="hide-if-no-js"><a href="#" class="theme-detail"><?php _e('Details') ?></a></li>
-								</ul>
+								$status = 'install';
+								$installed_theme = wp_get_theme( $theme->slug );
+								if ( $installed_theme->exists() ) {
+									if ( version_compare( $installed_theme->get('Version'), $theme->version, '=' ) )
+										$status = 'latest_installed';
+									elseif ( version_compare( $installed_theme->get('Version'), $theme->version, '>' ) )
+										$status = 'newer_installed';
+									else
+										$status = 'update_available';
+								}
+								switch ( $status ) {
+									default:
+									case 'install':
+										$actions[] = '<a class="install-now" href="' . esc_url( wp_nonce_url( $install_url, 'install-theme_' . $theme->slug ) ) . '" title="' . esc_attr( sprintf( __( 'Install %s' ), $name ) ) . '">' . __( 'Install Now' ) . '</a>';
+										break;
+									case 'update_available':
+										$actions[] = '<a class="install-now" href="' . esc_url( wp_nonce_url( $update_url, 'upgrade-theme_' . $theme->slug ) ) . '" title="' . esc_attr( sprintf( __( 'Update to version %s' ), $theme->version ) ) . '">' . __( 'Update' ) . '</a>';
+										break;
+									case 'newer_installed':
+									case 'latest_installed':
+										$actions[] = '<span class="install-now" title="' . esc_attr__( 'This theme is already installed and is up to date' ) . '">' . _x( 'Installed', 'theme' ) . '</span>';
+										break;
+								}
+								$actions[] = '<a class="install-theme-preview" href="' . esc_url( $preview_url ) . '" title="' . esc_attr( sprintf( __( 'Preview %s' ), $name ) ) . '">' . __( 'Preview' ) . '</a>';
+								$actions = apply_filters( 'theme_install_actions', $actions, $theme ); ?>
+								<a class="screenshot install-theme-preview" href="<?php echo esc_url( $preview_url ); ?>" title="<?php echo esc_attr( $preview_title ); ?>">
+									<img src='<?php echo esc_url( $theme->screenshot_url ); ?>' width='150' />
+								</a>
+								<h3><?php echo $name; ?></h3>
+								<div class="theme-author"><?php printf( __( 'By %s' ), $author ); ?></div>
+								<div class="action-links">
+									<ul>
+										<?php foreach ( $actions as $action ): ?>
+											<li><?php echo $action; ?></li>
+										<?php endforeach; ?>
+										<li class="hide-if-no-js"><a href="#" class="theme-detail"><?php _e('Details') ?></a></li>
+									</ul>
+								</div>
+								<?php $theme_class->install_theme_info( $theme ); ?>
 							</div>
-							<?php $theme_class->install_theme_info( $theme );
-						?></div>
-					<?php }
-					// end foreach $theme_names
-					$theme_class->theme_installer();
-					?>
+						<?php }
+						// end foreach $theme_names
+						$theme_class->theme_installer();
+					} else { ?>
+						<div class="theme-browser">
+							<div class="themes">
+						<?php foreach ( $themes as $key => $theme ) {
+							$installed_theme = wp_get_theme( $theme->slug );
+							if ( $installed_theme->exists() )
+								$theme->installed = true;
+							else
+								$theme->installed = false;
+							?>
+							<div class="theme" tabindex="0">
+								<?php if ( $theme->screenshot_url ) { ?>
+									<div class="theme-screenshot">
+										<img src="<?php echo $theme->screenshot_url; ?>" alt="" />
+									</div>
+								<?php } else { ?>
+									<div class="theme-screenshot blank"></div>
+								<?php } ?>
+								<div class="theme-author"><?php printf( __( 'By %s' ), $theme->author ); ?></div>
+								<h3 class="theme-name"><?php echo $theme->name; ?></h3>
+								<div class="theme-actions">
+									<a class="button button-secondary preview install-theme-preview" href="theme-install.php?theme=<?php echo $theme->slug ?>"><?php esc_html_e( 'Learn More' ); ?></a>
+								</div>
+								<?php if ( $theme->installed ) { ?>
+									<div class="theme-installed"><?php _e( 'Already Installed' ); ?></div>
+								<?php } ?>
+							</div>
+						<?php } ?>
+							<br class="clear" />
+							</div>
+						</div>
+						<div class="theme-overlay"></div>
+					<?php } ?>
 				</div>
 			<?php } elseif ( 'system_status' == $_GET['action'] ) {	?>
 				<div class="updated fade" <?php if ( ! ( isset( $_REQUEST['bwsmn_form_submit'] ) || isset( $_REQUEST['bwsmn_form_submit_custom_email'] ) ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
@@ -805,8 +865,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 					<table class="bws_system_info">
 						<thead><tr><th><?php _e( 'Inactive Plugins', 'bestwebsoft' ); ?></th><th></th></tr></thead>
 						<tbody>
-						<?php
-						if ( ! empty( $system_info['inactive_plugins'] ) ) {
+						<?php if ( ! empty( $system_info['inactive_plugins'] ) ) {
 							foreach ( $system_info['inactive_plugins'] as $key => $value ) { ?>	
 								<tr>
 									<td scope="row"><?php echo $key; ?></td>
@@ -845,8 +904,8 @@ if ( ! function_exists ( 'bws_plugin_init' ) ) {
 	}
 }
 
-if ( ! function_exists ( 'bws_admin_head' ) ) {
-	function bws_admin_head() {
+if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) ) {
+	function bws_admin_enqueue_scripts() {
 		global $wp_version;
 		if ( $wp_version < 3.8 )
 			wp_enqueue_style( 'bws-admin-stylesheet', plugins_url( 'css/general_style_wp_before_3.8.css', __FILE__ ) );	
@@ -864,6 +923,21 @@ if ( ! function_exists ( 'bws_admin_head' ) ) {
 	}
 }
 
+if ( ! function_exists ( 'bws_admin_head' ) ) {
+	function bws_admin_head() {
+		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" ) { ?>
+			<noscript>
+				<style type="text/css">
+					.bws_product_button {
+						display: inline-block;
+					}
+				</style>
+			</noscript>
+		<?php }
+	}
+}
+
 add_action( 'admin_init', 'bws_plugin_init' );
-add_action( 'admin_enqueue_scripts', 'bws_admin_head' );
+add_action( 'admin_enqueue_scripts', 'bws_admin_enqueue_scripts' );
+add_action( 'admin_head', 'bws_admin_head' );
 ?>
