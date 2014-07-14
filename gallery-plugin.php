@@ -4,7 +4,7 @@ Plugin Name: Gallery
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows you to implement gallery page into web site.
 Author: BestWebSoft
-Version: 4.2.0
+Version: 4.2.1
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -463,8 +463,8 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 			require_once( ABSPATH . 'wp-admin/includes/image.php' );
 			while ( list( $key, $val ) = each( $array_file_name ) ) {
 				$file_name = sanitize_file_name( $val );
-				if ( file_exists( $uploadFile[$key] ) ){
-					$uploadFile[$key] = $uploadDir["path"] . "/" . pathinfo( $uploadFile[ $key ], PATHINFO_FILENAME ).uniqid().".".pathinfo( $uploadFile[$key], PATHINFO_EXTENSION );
+				if ( file_exists( $uploadFile[ $key ] ) ){
+					$uploadFile[ $key ] = $uploadDir["path"] . "/" . pathinfo( $uploadFile[ $key ], PATHINFO_FILENAME ).uniqid().".".pathinfo( $uploadFile[$key], PATHINFO_EXTENSION );
 				}
 
 				if ( copy ( plugin_dir_path( __FILE__ ) . "upload/files/" . $file_name, $uploadFile[ $key ] ) ) {
@@ -507,7 +507,7 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 				"post_parent"		=>	$post->ID ) );
 			foreach ( $posts as $page ) {
 				if ( isset( $_REQUEST['gllr_image_text'][ $page->ID ] ) ) {
-					$value = $_REQUEST['gllr_image_text'][ $page->ID ];
+					$value = htmlspecialchars( trim( $_REQUEST['gllr_image_text'][ $page->ID ] ) );
 					if ( get_post_meta( $page->ID, $key, FALSE ) ) {
 						/* Custom field has a value and this custom field exists in database */
 						update_post_meta( $page->ID, $key, $value );
@@ -535,7 +535,7 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 				"post_parent"		=>	$post->ID ) );
 			foreach ( $posts as $page ) {
 				if ( isset( $_REQUEST['gllr_link_url'][ $page->ID ] ) ) {
-					$value = $_REQUEST['gllr_link_url'][ $page->ID ];
+					$value = htmlspecialchars( trim( $_REQUEST['gllr_link_url'][ $page->ID ] ) );
 					if ( get_post_meta( $page->ID, $link_key, FALSE ) ) {
 						/* Custom field has a value and this custom field exists in database */
 						update_post_meta( $page->ID, $link_key, $value );
@@ -558,7 +558,7 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 				"post_parent"		=>	$post->ID ));
 			foreach ( $posts as $page ) {
 				if ( isset( $_REQUEST['gllr_image_alt_tag'][ $page->ID ] ) ) {
-					$value = $_REQUEST['gllr_image_alt_tag'][ $page->ID ];
+					$value = htmlspecialchars( trim( $_REQUEST['gllr_image_alt_tag'][ $page->ID ] ) );
 					if ( get_post_meta( $page->ID, $alt_tag_key, FALSE ) ) {
 						/* Custom field has a value and this custom field exists in database */
 						update_post_meta( $page->ID, $alt_tag_key, $value );
@@ -735,7 +735,7 @@ if ( ! function_exists( 'gllr_page_css_class' ) ) {
 if ( ! function_exists( 'gllr_settings_page' ) ) {
 	function gllr_settings_page() {
 		global $gllr_options, $wp_version, $wpmu, $gllr_plugin_info;
-		$error = "";
+		$error = $message = "";
 
 		if ( 1 == $wpmu ) {
 			if ( get_site_option( 'cstmsrch_options' ) )
@@ -826,7 +826,6 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 		/* GO PRO */
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
 			global $wpmu, $bstwbsftwppdtplgns_options;
-
 			$bws_license_key = ( isset( $_POST['bws_license_key'] ) ) ? trim( $_POST['bws_license_key'] ) : "";
 
 			if ( isset( $_POST['bws_license_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_license_nonce_name' ) ) {
@@ -834,7 +833,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 					if ( strlen( $bws_license_key ) != 18 ) {
 						$error = __( "Wrong license key", 'gallery' );
 					} else {
-						$bws_license_plugin = trim( $_POST['bws_license_plugin'] );	
+						$bws_license_plugin = trim( $_POST['bws_license_plugin'] );							
 						if ( isset( $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] ) && $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['time'] < ( time() + (24 * 60 * 60) ) ) {
 							$bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] = $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] + 1;
 						} else {
@@ -876,6 +875,10 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 												$error = __( "This license key is bind to another site", 'gallery' );
 											} elseif ( "you_are_banned" == $value->package ) {
 												$error = __( "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually.", 'gallery' );
+											} else if ( "time_out" == $value->package ) {
+												$error = __( 'This license key is valid, but your license has expired.', 'gallery' );
+											} elseif ( "duplicate_domen_for_trial" == $value->package ) {
+												$error = __( "Unfortunately, the PRO licence was already installed to this domain. The PRO Trial license can be installed only once.", 'gallery' );
 											}
 										}
 										if ( '' == $error ) {																	
@@ -1178,6 +1181,13 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 						<div class="bws_table_bg"></div>											
 						<table class="form-table bws_pro_version">
 							<tr valign="top" class="gllr_width_labels">
+								<th scope="row"><?php _e( 'Use pagination for images', 'gallery' ); ?> </th>
+								<td>
+									<input type="checkbox" name="gllrprfssnl_images_pagination" value="1" /> <br />
+									<label><input type="text" name="gllrprfssnl_images_per_page" value="" style="width:100px;" />	<?php _e( 'per page', 'gallery' ); ?></label>					
+								</td>
+							</tr>
+							<tr valign="top" class="gllr_width_labels">
 								<th scope="row"><?php _e( 'The lightbox helper', 'gallery' ); ?> </th>
 								<td>
 									<label><input type="radio" name="gllrprfssnl_fancybox_helper" value="none" /> <?php _e( 'Do not use', 'gallery' ); ?></label><br />
@@ -1286,7 +1296,6 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 							<input type="hidden" name="bws_license_plugin" value="gallery-plugin-pro/gallery-plugin-pro.php" />
 							<input type="hidden" name="bws_license_submit" value="submit" />
 							<input type="submit" class="button-primary" value="<?php _e( 'Activate', 'gallery' ); ?>" /> <?php _e( 'or', 'gallery' ); ?> <a href="http://bestwebsoft.com/plugin/gallery-pro/#trial" target="_blank"><?php _e( 'Start Your Free 7-Day Trial Now', 'gallery' ); ?></a>
-							
 							<?php wp_nonce_field( plugin_basename(__FILE__), 'bws_license_nonce_name' ); ?>
 						</p>
 					<?php } ?>
@@ -1352,6 +1361,9 @@ if ( ! function_exists ( 'gllr_add_admin_script' ) ) {
 								}
 							)
 						}
+					});
+					$('#Upload-File .gallery input').bind( 'click.sortable mousedown.sortable',function( ev ) {
+						ev.target.focus();
 					});
 				}
 				<?php if ( 3.5 > $wp_version && 'gallery-plugin.php' == $_REQUEST['page'] ) { ?>
@@ -2043,7 +2055,7 @@ if ( ! function_exists ( 'gllr_plugin_banner' ) ) {
 								<span><?php _e( 'Extend standard plugin functionality with new great options', 'gallery' ); ?>.</span>
 							</div> 		
 							<div class="icon">			
-								<img title="" src="' . plugins_url( 'images/banner.png', __FILE__ ) . '" alt=""/>	
+								<img title="" src="<?php echo plugins_url( 'images/banner.png', __FILE__ ); ?>" alt=""/>	
 							</div>
 						</div>  
 					</div>
