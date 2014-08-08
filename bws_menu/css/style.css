@@ -95,6 +95,7 @@ h4.bws_installed:before {
     margin: -9px auto -10px;
     position: relative;
     width: 46px;
+    line-height: 19px;
 }
 .bws_product_description {
     padding: 0 10px;
