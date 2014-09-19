@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: Gallery Template
+* Version: 1.1
 */
 ?>
 <?php get_header(); ?>
@@ -76,8 +77,8 @@ Template Name: Gallery Template
 										<div><?php echo htmlspecialchars( $post->post_title ); ?></div>
 										<div><?php echo the_excerpt_max_charlength( 100 ); ?></div>
 										<a href="<?php echo $permalink; echo basename( get_permalink( $post->ID ) ); ?>"><?php echo $gllr_options["read_more_link_text"]; ?></a>
-									</div>
-									<div class="clear"></div>
+									</div><!-- .gallery_detail_box -->
+									<div class="gllr_clear"></div>
 								</li>
 							<?php endwhile; 
 						endif; 
@@ -91,23 +92,23 @@ Template Name: Gallery Template
 					if ( ! $pages ) {
 						$pages = 1;
 					}
-					if ( 1 != $pages ) { ?>
-						</div><!-- .gallery_box -->
-						<div class='clear'></div>
-						<div class='pagination'>
-							<?php for ( $i = 1; $i <= $pages; $i++ ) {
-								if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $showitems ) ) {
-									echo ( $paged == $i ) ? "<span class='current'>". $i ."</span>":"<a href='". get_pagenum_link($i) ."' class='inactive' >". $i ."</a>";
-								}
-							} ?>
-							<div class='clear'></div>
-						</div><!-- .pagination -->
-					<?php } else { ?>
-						</div><!-- .gallery_box -->
-					<?php } 
-					comments_template(); ?>
-			</div>
-		</div>
-	</div>
+				if ( 1 != $pages ) { ?>
+					</div><!-- .gallery_box -->
+					<div class='gllr_clear'></div>
+					<div class='pagination'>
+						<?php for ( $i = 1; $i <= $pages; $i++ ) {
+							if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $showitems ) ) {
+								echo ( $paged == $i ) ? "<span class='current'>". $i ."</span>":"<a href='". get_pagenum_link($i) ."' class='inactive' >". $i ."</a>";
+							}
+						} ?>
+						<div class='gllr_clear'></div>
+					</div><!-- .pagination -->
+				<?php } else { ?>
+					</div><!-- .gallery_box -->
+				<?php } 
+				comments_template(); ?>
+			</div><!-- #content -->
+		</div><!-- #container -->
+	</div><!-- .content-area -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

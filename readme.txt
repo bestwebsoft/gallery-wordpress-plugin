@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.0
-Tested up to: 4.0-beta3
-Stable tag: 4.2.2
+Tested up to: 4.0
+Stable tag: 4.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -171,6 +171,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. PrettyPhoto pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.2.3 - 19.09.2014 =
+* Update : We updated all functionality for wordpress 4.0.
+* Budfix : Social buttons duplicating was fixed.
 
 = V4.2.2 - 07.08.2014 =
 * Budfix : Security Exploit was fixed.
@@ -445,6 +449,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.2.3 =
+We updated all functionality for wordpress 4.0. Social buttons duplicating was fixed.
 
 = V4.2.2 =
 Security Exploit was fixed. The French language file is updated.

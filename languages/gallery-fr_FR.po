@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-07 13:52+0300\n"
-"PO-Revision-Date: 2014-08-07 14:58+0300\n"
+"POT-Creation-Date: 2014-09-18 13:17+0300\n"
+"PO-Revision-Date: 2014-09-18 13:17+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Didier, L Capronnier <lcapronnier@yahoo.com>\n"
 "Language: fr_FR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: gallery-plugin.php:73
-#: gallery-plugin.php:273
+#: gallery-plugin.php:257
 msgid "Gallery"
 msgstr "Galerie"
 
@@ -26,689 +26,690 @@ msgstr "Galerie"
 msgid "See images &raquo;"
 msgstr "Voir les images &raquo;"
 
-#: gallery-plugin.php:172
+#: gallery-plugin.php:169
 msgid "requires"
 msgstr "requis"
 
-#: gallery-plugin.php:172
+#: gallery-plugin.php:169
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
 msgstr "ou supérieure, c'est pourquoi il a été désactive! Merci de faire la mise à jour de WordPress et de ré-essayer!"
 
-#: gallery-plugin.php:172
+#: gallery-plugin.php:169
 msgid "Back to the WordPress"
 msgstr "Retour à WordPress"
 
-#: gallery-plugin.php:172
+#: gallery-plugin.php:169
 msgid "Plugins page"
 msgstr "Page des extensions"
 
-#: gallery-plugin.php:250
-#: gallery-plugin.php:823
+#: gallery-plugin.php:247
+#: gallery-plugin.php:812
 msgid "The following files \"gallery-template.php\" and \"gallery-single-template.php\" were not found in the directory of your theme. Please copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to the directory of your theme for the correct work of the Gallery plugin"
 msgstr "Les fichiers suivants \"gallery-template.php\" et \"gallery-single-template.php\" n'ont pas été trouvés dans le répertoire de votre thème. Merci de les copier depuis le répertoire `/wp-content/plugins/gallery-plugin/template/` dans le répertoire de votre thème pour le bon fonctionnement de l'extension Gallery"
 
-#: gallery-plugin.php:272
-#: gallery-plugin.php:282
+#: gallery-plugin.php:256
+#: gallery-plugin.php:266
 msgid "Galleries"
 msgstr "Galeries"
 
-#: gallery-plugin.php:274
+#: gallery-plugin.php:258
 msgid "Add a Gallery"
 msgstr "Ajouter une galerie"
 
-#: gallery-plugin.php:275
+#: gallery-plugin.php:259
 msgid "Add New Gallery"
 msgstr "Ajouter une nouvelle galerie"
 
-#: gallery-plugin.php:276
+#: gallery-plugin.php:260
 msgid "Edit Gallery"
 msgstr "Modifier la galerie"
 
-#: gallery-plugin.php:277
+#: gallery-plugin.php:261
 msgid "New Gallery"
 msgstr "Nouvelle galerie"
 
-#: gallery-plugin.php:278
+#: gallery-plugin.php:262
 msgid "View Gallery"
 msgstr "Voir la galerie"
 
-#: gallery-plugin.php:279
+#: gallery-plugin.php:263
 msgid "Find a Gallery"
 msgstr "Trouver une galerie"
 
-#: gallery-plugin.php:280
+#: gallery-plugin.php:264
 msgid "No Gallery found"
 msgstr "Pas de galeries trouvées"
 
-#: gallery-plugin.php:337
+#: gallery-plugin.php:321
 msgid "Upload File"
 msgstr "Envoi de fichier"
 
-#: gallery-plugin.php:338
+#: gallery-plugin.php:322
 msgid "Gallery Shortcode"
 msgstr "Gallery Shortcode"
 
-#: gallery-plugin.php:356
+#: gallery-plugin.php:340
 msgid "The gallery temp directory (gallery-plugin/upload/files) is not available for record on your webserver. Please use the standard WP functionality to upload images (media library)"
 msgstr "Le répertoire temporaire de la gallery (gallery-plugin/upload/files) n'est pas autorisé en écriture par votre serveur Web. Merci d'utliser les fonctions standards de WP pour charger les images (Média)"
 
-#: gallery-plugin.php:359
+#: gallery-plugin.php:343
 msgid "Choose an image for upload:"
 msgstr "Choisir l'image à envoyer :"
 
-#: gallery-plugin.php:364
+#: gallery-plugin.php:348
 msgid "Please enable JavaScript to use the file uploader."
 msgstr "Merci d'activer JavaScript pour utiliser l'envoi de fichiers."
 
-#: gallery-plugin.php:371
+#: gallery-plugin.php:355
 msgid "Allow the download link for all images in this gallery"
 msgstr "Autoriser les liens de téléchargement  des images dans cette galerie"
 
-#: gallery-plugin.php:372
+#: gallery-plugin.php:356
 msgid "Please use the drag and drop function to change an order of the images displaying and do not forget to save the post."
 msgstr "Merci d'utiliser les fonctions de glisser/déposer pour modifier l'ordre d'affichage des images. Ne pas oublier d'enregistrer l'article."
 
-#: gallery-plugin.php:374
+#: gallery-plugin.php:358
 msgid "Please make a choice"
 msgstr "Merci de faire un choix"
 
-#: gallery-plugin.php:374
-#: gallery-plugin.php:1102
+#: gallery-plugin.php:358
+#: gallery-plugin.php:1076
 msgid "Sort images by"
 msgstr "Trier les images par"
 
-#: gallery-plugin.php:374
+#: gallery-plugin.php:358
 msgid "sort images"
 msgstr "trier les images"
 
-#: gallery-plugin.php:374
+#: gallery-plugin.php:358
 msgid "on the plugin settings page ("
 msgstr "dans les paramètres de l'extension ("
 
-#: gallery-plugin.php:416
-#: gallery-plugin.php:637
+#: gallery-plugin.php:399
+#: gallery-plugin.php:620
 msgid "Title"
 msgstr "Titre"
 
-#: gallery-plugin.php:418
+#: gallery-plugin.php:401
 msgid "Alt tag"
 msgstr "Tag Alt"
 
-#: gallery-plugin.php:419
+#: gallery-plugin.php:402
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:419
+#: gallery-plugin.php:402
 msgid "(by click on image opens a link in a new window)"
 msgstr "(cliquer sur l'image ouvre le lien dans une nouvelle fenêtre)"
 
-#: gallery-plugin.php:420
+#: gallery-plugin.php:403
 msgid "This setting is available in Pro version"
 msgstr "Ce paramètre est disponible dans la version Pro"
 
-#: gallery-plugin.php:421
+#: gallery-plugin.php:404
 msgid "Open the URL"
 msgstr "Ouvrir le lien"
 
-#: gallery-plugin.php:421
+#: gallery-plugin.php:404
 msgid "Current window"
 msgstr "Fenêtre courrante"
 
-#: gallery-plugin.php:421
+#: gallery-plugin.php:404
 msgid "New window"
 msgstr "Nouvelle fenêtre"
 
-#: gallery-plugin.php:422
+#: gallery-plugin.php:405
 msgid "Lightbox button URL"
 msgstr "URL du bouton pour Lightbox"
 
-#: gallery-plugin.php:423
+#: gallery-plugin.php:406
 msgid "Description"
 msgstr "Description"
 
-#: gallery-plugin.php:424
+#: gallery-plugin.php:407
 msgid "Delete"
 msgstr "Supprimer"
 
-#: gallery-plugin.php:437
+#: gallery-plugin.php:420
 msgid "You can add a Single Gallery to the page or post by inserting this shortcode into the content"
 msgstr "Vous pouvez ajouter la galerie dans la page ou l'article en insérant le code court dans le contenu"
 
-#: gallery-plugin.php:439
+#: gallery-plugin.php:422
 msgid "If you want to display a short description containing a screenshot and the link to the Single Gallery Page"
 msgstr "Si vous voulez avoir un bref aperçu de la galerie avec un lien vers une page unique de la galerie"
 
-#: gallery-plugin.php:638
+#: gallery-plugin.php:621
 msgid "Author"
 msgstr "Auteur"
 
-#: gallery-plugin.php:639
+#: gallery-plugin.php:622
 msgid "Photo"
 msgstr "Photo"
 
-#: gallery-plugin.php:640
+#: gallery-plugin.php:623
 msgid "Publishing"
 msgstr "Public"
 
-#: gallery-plugin.php:641
-#: gallery-plugin.php:1106
+#: gallery-plugin.php:624
+#: gallery-plugin.php:1080
 msgid "Date"
 msgstr "Date"
 
-#: gallery-plugin.php:816
+#: gallery-plugin.php:805
 msgid "Settings are saved"
 msgstr "Paramètres sauvegardés."
 
-#: gallery-plugin.php:834
-#: gallery-plugin.php:873
+#: gallery-plugin.php:823
+#: gallery-plugin.php:855
 msgid "Wrong license key"
 msgstr "Clé de licence incorrecte"
 
-#: gallery-plugin.php:866
+#: gallery-plugin.php:848
 msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
 msgstr "Il est survenu une erreur. Essayer de nouveau. Si l'erreur se produit de nouveau, merci de contacter <a href=http://support.bestwebsoft.com>BestWebSoft</a>. Nous sommes désolés pour le désagrément."
 
-#: gallery-plugin.php:875
+#: gallery-plugin.php:857
 msgid "This license key is bind to another site"
 msgstr "La clé de licence correspond à un autre site."
 
-#: gallery-plugin.php:877
-#: gallery-plugin.php:1291
+#: gallery-plugin.php:859
+#: gallery-plugin.php:1260
 msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
 msgstr "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de télécharger l'extension manuellement."
 
-#: gallery-plugin.php:879
+#: gallery-plugin.php:861
 msgid "This license key is valid, but your license has expired."
 msgstr "La clé de licence est valide, mais elle a expirée."
 
-#: gallery-plugin.php:881
+#: gallery-plugin.php:863
 msgid "Unfortunately, the PRO licence was already installed to this domain. The PRO Trial license can be installed only once."
 msgstr "Malheuresement la licence PRO a déjà été installée sur ce domaine. La licence PRO d'évaluation peut être installée une seule fois."
 
-#: gallery-plugin.php:898
+#: gallery-plugin.php:880
 msgid "Failed to open the zip archive. Please, upload the plugin manually"
 msgstr "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension manuellement."
 
-#: gallery-plugin.php:904
+#: gallery-plugin.php:886
 msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
 msgstr "Votre server n'a pas le support du format des archives ZIP ou Phar. Merci de télécharger l'extension manuellement."
 
-#: gallery-plugin.php:908
-#: gallery-plugin.php:917
+#: gallery-plugin.php:890
+#: gallery-plugin.php:899
 msgid "Failed to download the zip archive. Please, upload the plugin manually"
 msgstr "Erreur de téléchargement de l'archive ZIP. Merci de télécharger l'extension manuellement."
 
-#: gallery-plugin.php:921
+#: gallery-plugin.php:903
 msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvienience."
 msgstr "Il est survenu une erreur. Essayer de nouveau ou bien télécharger l'extension manuellement.Nous sommes désolés pour le désagrément."
 
-#: gallery-plugin.php:936
+#: gallery-plugin.php:918
 msgid "Please, enter Your license key"
 msgstr "Merci de saisir votre clé de liecence"
 
-#: gallery-plugin.php:944
+#: gallery-plugin.php:924
 msgid "Gallery Settings"
 msgstr "Paramètres de la galerie"
 
-#: gallery-plugin.php:946
-#: gallery-plugin.php:1313
-#: gallery-plugin.php:1329
+#: gallery-plugin.php:926
+#: gallery-plugin.php:1282
+#: gallery-plugin.php:1298
 msgid "Settings"
 msgstr "Réglages"
 
-#: gallery-plugin.php:947
-#: gallery-plugin.php:1314
+#: gallery-plugin.php:927
+#: gallery-plugin.php:1283
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:948
+#: gallery-plugin.php:928
 msgid "Go PRO"
 msgstr "Choisir la version PRO"
 
-#: gallery-plugin.php:953
+#: gallery-plugin.php:933
 msgid "Notice:"
 msgstr "Avertissement :"
 
-#: gallery-plugin.php:953
+#: gallery-plugin.php:933
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr "Les paramètres de l'extension ont été changés. Afin de pouvoir les enregistrer, merci de cliquer sur le bouton 'Enregistrer les modifications'."
 
-#: gallery-plugin.php:954
+#: gallery-plugin.php:934
 msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
 msgstr "Si vous voulez ajouter la galerie dans une page ou un article, copier le code court suivant dans le contenu de votre page ou de votre article:"
 
-#: gallery-plugin.php:956
+#: gallery-plugin.php:936
 msgid "Please enable JavaScript to use the option to renew images."
 msgstr "Merci d'activer JavaScript pour utiliser l'option de mise à jour des images."
 
-#: gallery-plugin.php:960
+#: gallery-plugin.php:940
 msgid "Update images for gallery"
 msgstr "Mettre à jour les images pour la galerie"
 
-#: gallery-plugin.php:962
+#: gallery-plugin.php:942
 msgid "Update images"
 msgstr "Mettre à jour les images"
 
-#: gallery-plugin.php:967
-msgid "Updating images..."
-msgstr "Mise à jour des images..."
-
-#: gallery-plugin.php:968
-msgid "No image found"
-msgstr "Pas d'image trouvée"
-
-#: gallery-plugin.php:969
-msgid "All images are updated"
-msgstr "Toutes les images ont été mises à jour"
-
-#: gallery-plugin.php:970
-msgid "Error."
-msgstr "Erreur."
-
-#: gallery-plugin.php:976
+#: gallery-plugin.php:950
 msgid "Image size for the album cover"
 msgstr "Taille de la vignette de l'album"
 
-#: gallery-plugin.php:978
-#: gallery-plugin.php:986
-#: gallery-plugin.php:1002
+#: gallery-plugin.php:952
+#: gallery-plugin.php:960
+#: gallery-plugin.php:976
 msgid "Image size"
 msgstr "Taille de l'image"
 
-#: gallery-plugin.php:979
-#: gallery-plugin.php:987
+#: gallery-plugin.php:953
+#: gallery-plugin.php:961
 msgid "Width (in px)"
 msgstr "Largeur (en pixels)"
 
-#: gallery-plugin.php:980
-#: gallery-plugin.php:988
+#: gallery-plugin.php:954
+#: gallery-plugin.php:962
 msgid "Height (in px)"
 msgstr "Hauteur (en pixels)"
 
-#: gallery-plugin.php:984
+#: gallery-plugin.php:958
 msgid "Gallery image size"
 msgstr "Taille de l'image de la galerie"
 
-#: gallery-plugin.php:992
+#: gallery-plugin.php:966
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "WordPress créera une copie de la miniature avec les dimensions spécifiées quand vous envoyez une nouvelle photo."
 
-#: gallery-plugin.php:1000
+#: gallery-plugin.php:974
 msgid "Gallery image size in the lightbox"
 msgstr "Taille de l'image de la galerie"
 
-#: gallery-plugin.php:1003
+#: gallery-plugin.php:977
 msgid "Max width (in px)"
 msgstr "Largeur maximum (en pixels)"
 
-#: gallery-plugin.php:1004
+#: gallery-plugin.php:978
 msgid "Max height (in px)"
 msgstr "Hauteur maximum (en pixels)"
 
-#: gallery-plugin.php:1005
+#: gallery-plugin.php:979
 msgid "Display a full size image in the lightbox"
 msgstr "Afficher une image en taille normale dans la boite"
 
-#: gallery-plugin.php:1009
+#: gallery-plugin.php:983
 msgid "Crop position"
 msgstr "Point de base"
 
-#: gallery-plugin.php:1011
+#: gallery-plugin.php:985
 msgid "Horizontal"
 msgstr "Horizontale"
 
-#: gallery-plugin.php:1013
+#: gallery-plugin.php:987
 msgid "left"
 msgstr "gauche"
 
-#: gallery-plugin.php:1014
-#: gallery-plugin.php:1021
+#: gallery-plugin.php:988
+#: gallery-plugin.php:995
 msgid "center"
 msgstr "centré"
 
-#: gallery-plugin.php:1015
+#: gallery-plugin.php:989
 msgid "right"
 msgstr "droite"
 
-#: gallery-plugin.php:1018
+#: gallery-plugin.php:992
 msgid "Vertical"
 msgstr "Verticale"
 
-#: gallery-plugin.php:1020
+#: gallery-plugin.php:994
 msgid "top"
 msgstr "haut"
 
-#: gallery-plugin.php:1022
+#: gallery-plugin.php:996
 msgid "bottom"
 msgstr "bas"
 
-#: gallery-plugin.php:1027
+#: gallery-plugin.php:1001
 msgid "Lightbox background"
 msgstr "Fond de la boite"
 
-#: gallery-plugin.php:1029
+#: gallery-plugin.php:1003
 msgid "Default"
 msgstr "Défaut"
 
-#: gallery-plugin.php:1030
+#: gallery-plugin.php:1004
 msgid "Background transparency (from 0 to 1)"
 msgstr "Transparence du fond (de 0 à 1)"
 
-#: gallery-plugin.php:1032
+#: gallery-plugin.php:1006
 msgid "Select a background color"
 msgstr "Choisir une couleur pour le fond"
 
-#: gallery-plugin.php:1034
+#: gallery-plugin.php:1008
 msgid "Background color"
 msgstr "Couleur du fond"
 
-#: gallery-plugin.php:1041
-#: gallery-plugin.php:1221
+#: gallery-plugin.php:1015
+#: gallery-plugin.php:1190
 msgid "If you upgrade to Pro version all your settings and galleries will be saved."
 msgstr "Si vous passez à  la version Pro, tous ces paramètres seront enregistrés."
 
-#: gallery-plugin.php:1048
-#: gallery-plugin.php:1228
+#: gallery-plugin.php:1022
+#: gallery-plugin.php:1197
 msgid "Unlock premium options by upgrading to a PRO version."
 msgstr "Déploquer les options premium en migrant vers la version PRO."
 
-#: gallery-plugin.php:1049
-#: gallery-plugin.php:1229
-#: gallery-plugin.php:2052
+#: gallery-plugin.php:1023
+#: gallery-plugin.php:1198
+#: gallery-plugin.php:2027
 msgid "Learn More"
 msgstr "En savoir plus"
 
-#: gallery-plugin.php:1053
-#: gallery-plugin.php:1233
+#: gallery-plugin.php:1027
+#: gallery-plugin.php:1202
 msgid "Start Your Trial"
 msgstr "Débuter votre essai"
 
-#: gallery-plugin.php:1054
-#: gallery-plugin.php:1234
-#: gallery-plugin.php:1288
-#: gallery-plugin.php:1298
+#: gallery-plugin.php:1028
+#: gallery-plugin.php:1203
+#: gallery-plugin.php:1257
+#: gallery-plugin.php:1267
 msgid "or"
 msgstr "ou"
 
-#: gallery-plugin.php:1057
-#: gallery-plugin.php:1237
+#: gallery-plugin.php:1031
+#: gallery-plugin.php:1206
 msgid "Go"
 msgstr "Allez"
 
-#: gallery-plugin.php:1065
+#: gallery-plugin.php:1039
 msgid "Images with border"
 msgstr "Image avec bordure"
 
-#: gallery-plugin.php:1068
+#: gallery-plugin.php:1042
 msgid "Border width in px, just numbers"
 msgstr "Taille de la bordure en pixel, juste le nombre"
 
-#: gallery-plugin.php:1070
-#: gallery-plugin.php:1072
+#: gallery-plugin.php:1044
+#: gallery-plugin.php:1046
 msgid "Select a border color"
 msgstr "Choisir une couleur pour la bordure"
 
-#: gallery-plugin.php:1078
+#: gallery-plugin.php:1052
 msgid "Number of images in the row"
 msgstr "Nombre d'images par ligne"
 
-#: gallery-plugin.php:1084
+#: gallery-plugin.php:1058
 msgid "Start slideshow"
 msgstr "Démarer le diaporama"
 
-#: gallery-plugin.php:1090
+#: gallery-plugin.php:1064
 msgid "Slideshow interval"
 msgstr "Interval de transition pour le diaporama"
 
-#: gallery-plugin.php:1096
+#: gallery-plugin.php:1070
 msgid "Use single lightbox for multiple galleries on one page"
 msgstr "Utiliser un seul diaporama pour plusieures galeries sur une seule page"
 
-#: gallery-plugin.php:1104
+#: gallery-plugin.php:1078
 msgid "Attachment ID"
 msgstr "ID du fichier"
 
-#: gallery-plugin.php:1105
+#: gallery-plugin.php:1079
 msgid "Image Name"
 msgstr "Nom de l'image "
 
-#: gallery-plugin.php:1107
+#: gallery-plugin.php:1081
 msgid "Sorting order (the input field for sorting order in the Insert / Upload Media Gallery dialog)"
 msgstr "Ordre de tri (le nombre dans la fenêtre d'insertion / téléchargement de la galerie)"
 
-#: gallery-plugin.php:1108
+#: gallery-plugin.php:1082
 msgid "Random"
 msgstr "Aléatoire"
 
-#: gallery-plugin.php:1112
+#: gallery-plugin.php:1086
 msgid "Sort images"
 msgstr "Trier les images"
 
-#: gallery-plugin.php:1114
+#: gallery-plugin.php:1088
 msgid "ASC (ascending order from lowest to highest values - 1, 2, 3; a, b, c)"
 msgstr "ASC (ordre ascendant de la plus petite à la plus grande valeur - 1, 2, 3; a, b, c)"
 
-#: gallery-plugin.php:1115
+#: gallery-plugin.php:1089
 msgid "DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
 msgstr "DESC (ordre descendant de la plus grade à la plus petite - 3, 2, 1; c, b, a)"
 
-#: gallery-plugin.php:1119
-msgid "Display text above the image"
+#: gallery-plugin.php:1093
+#, fuzzy
+msgid "Display text under the image"
 msgstr "Aficher le texte au dessus de l'image"
 
-#: gallery-plugin.php:1121
+#: gallery-plugin.php:1095
 msgid "Turn off the checkbox, if you want to display text just in a lightbox"
 msgstr "Si vous voulez juste afficher du texte dans une boite, désactiver l'option"
 
-#: gallery-plugin.php:1125
+#: gallery-plugin.php:1099
 msgid "Display the Back link"
 msgstr "Afficher le lien de retour"
 
-#: gallery-plugin.php:1131
+#: gallery-plugin.php:1105
 msgid "Display the Back link in the shortcode"
 msgstr "Afficher le lien de retour dans le code court"
 
-#: gallery-plugin.php:1137
+#: gallery-plugin.php:1111
 msgid "The Back link text"
 msgstr "Le text pour le lien de retour"
 
-#: gallery-plugin.php:1143
+#: gallery-plugin.php:1117
 msgid "The Back link URL"
 msgstr "L'URL pour le lien de retour"
 
-#: gallery-plugin.php:1145
+#: gallery-plugin.php:1119
 msgid "Gallery page (Page with Gallery Template)"
 msgstr "Page de la galerie (Page avec le modèle de galerie)"
 
-#: gallery-plugin.php:1147
+#: gallery-plugin.php:1121
 msgid "(Full URL to custom page)"
 msgstr "(URL complète pour la page spécifique)"
 
-#: gallery-plugin.php:1151
+#: gallery-plugin.php:1125
 msgid "The Read More link text"
 msgstr "Texte pour le lien \"Read More\""
 
-#: gallery-plugin.php:1157
+#: gallery-plugin.php:1131
 msgid "Add gallery to the search"
 msgstr "Ajouter les galeries à la recherche"
 
-#: gallery-plugin.php:1167
+#: gallery-plugin.php:1136
 msgid "Using"
 msgstr "Utilisant"
 
-#: gallery-plugin.php:1167
+#: gallery-plugin.php:1136
 msgid "powered by"
 msgstr "fournis par"
 
-#: gallery-plugin.php:1170
-#: gallery-plugin.php:1174
+#: gallery-plugin.php:1139
+#: gallery-plugin.php:1143
 msgid "Using Custom Search powered by"
 msgstr "Utiliser les recherche personalisées fournies par"
 
-#: gallery-plugin.php:1170
+#: gallery-plugin.php:1139
 msgid "Activate Custom Search"
 msgstr "Activer les recherche personalisées"
 
-#: gallery-plugin.php:1174
+#: gallery-plugin.php:1143
 msgid "Download Custom Search"
 msgstr "Télécharger les recherches personalisées"
 
-#: gallery-plugin.php:1184
+#: gallery-plugin.php:1153
 msgid "Use pagination for images"
 msgstr "Utiliser la pagination pour les images"
 
-#: gallery-plugin.php:1187
+#: gallery-plugin.php:1156
 msgid "per page"
 msgstr "par page"
 
-#: gallery-plugin.php:1191
+#: gallery-plugin.php:1160
 msgid "The lightbox helper"
 msgstr "L'aide de lightbox"
 
-#: gallery-plugin.php:1193
+#: gallery-plugin.php:1162
 msgid "Do not use"
 msgstr "Ne pas utliser"
 
-#: gallery-plugin.php:1194
+#: gallery-plugin.php:1163
 msgid "Button helper"
 msgstr "Bouton pour l'assistant"
 
-#: gallery-plugin.php:1195
+#: gallery-plugin.php:1164
 msgid "Thumbnail helper"
 msgstr "Assistant de la galerie"
 
-#: gallery-plugin.php:1199
+#: gallery-plugin.php:1168
 msgid "Display Like buttons in the lightbox"
 msgstr "Afficher les boutons des réseaux sociaux dans la boite"
 
-#: gallery-plugin.php:1201
+#: gallery-plugin.php:1170
 msgid "FaceBook"
 msgstr "FaceBook"
 
-#: gallery-plugin.php:1202
+#: gallery-plugin.php:1171
 msgid "Twitter"
 msgstr "Twitter"
 
-#: gallery-plugin.php:1203
+#: gallery-plugin.php:1172
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: gallery-plugin.php:1204
+#: gallery-plugin.php:1173
 msgid "Google +1"
 msgstr "Google +1"
 
-#: gallery-plugin.php:1208
+#: gallery-plugin.php:1177
 msgid "Slug for gallery item"
 msgstr "Racine pour les pages des galeries"
 
-#: gallery-plugin.php:1210
+#: gallery-plugin.php:1179
 msgid "for any structure of permalinks except the default structure"
 msgstr "pour toute forme de permaliens à l'exception de la forme par défaut"
 
-#: gallery-plugin.php:1214
+#: gallery-plugin.php:1183
 msgid "Title for lightbox button"
 msgstr "Titre pour le bouton lightbox"
 
-#: gallery-plugin.php:1245
+#: gallery-plugin.php:1214
 msgid "Save Changes"
 msgstr "Sauvegarder"
 
-#: gallery-plugin.php:1251
+#: gallery-plugin.php:1220
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr "Si notre extension vous satisfait, merci de la notée avec 5 étoiles dans Wordpress"
 
-#: gallery-plugin.php:1252
+#: gallery-plugin.php:1221
 msgid "Rate the plugin"
 msgstr "Noter l'extension"
 
-#: gallery-plugin.php:1255
+#: gallery-plugin.php:1224
 msgid "If there is something wrong about it, please contact us"
 msgstr "Si vous avez des questions, merci de nous contacter"
 
-#: gallery-plugin.php:1266
+#: gallery-plugin.php:1235
 msgid "Congratulations! The PRO version of the plugin is successfully download and activated."
 msgstr "Félicitations! La version PRO de cette extension a été téléchargée et activée avec succès."
 
-#: gallery-plugin.php:1268
+#: gallery-plugin.php:1237
 msgid "Please, go to"
 msgstr "Merci d'allez à"
 
-#: gallery-plugin.php:1268
+#: gallery-plugin.php:1237
 msgid "the setting page"
 msgstr "la page des paramètres"
 
-#: gallery-plugin.php:1269
+#: gallery-plugin.php:1238
 msgid "You will be redirected automatically in 5 seconds."
 msgstr "Vous allez être redirigé automatiquement dans 5 secondes"
 
-#: gallery-plugin.php:1274
+#: gallery-plugin.php:1243
 msgid "You can download and activate"
 msgstr "Vous pouvez la télécharger et l'activer"
 
-#: gallery-plugin.php:1276
+#: gallery-plugin.php:1245
 msgid "version of this plugin by entering Your license key."
 msgstr "version de cette extension en donnant votre clé de licence."
 
-#: gallery-plugin.php:1278
+#: gallery-plugin.php:1247
 msgid "You can find your license key on your personal page Client area, by clicking on the link"
 msgstr "Vous pouvez trouver votre clé de licence sur votre page personnelle dans la zone cliente en cliquant sur le lien"
 
-#: gallery-plugin.php:1280
+#: gallery-plugin.php:1249
 msgid "(your username is the email you specify when purchasing the product)."
 msgstr "(votre nom d'utilisateur est l'adresse e-mail que vous avez donné lors de l'achat de l'extension)."
 
-#: gallery-plugin.php:1288
-#: gallery-plugin.php:1298
+#: gallery-plugin.php:1257
+#: gallery-plugin.php:1267
 msgid "Activate"
 msgstr "Activer"
 
-#: gallery-plugin.php:1288
-#: gallery-plugin.php:1298
+#: gallery-plugin.php:1257
+#: gallery-plugin.php:1267
 msgid "Start Your Free 7-Day Trial Now"
 msgstr "Débuter votre période d'essai de 7 jours"
 
-#: gallery-plugin.php:1315
+#: gallery-plugin.php:1284
 msgid "Support"
 msgstr "Soutien"
 
-#: gallery-plugin.php:1446
+#: gallery-plugin.php:1387
+msgid "Updating images..."
+msgstr "Mise à jour des images..."
+
+#: gallery-plugin.php:1388
+msgid "No image found"
+msgstr "Pas d'image trouvée"
+
+#: gallery-plugin.php:1389
+msgid "All images are updated"
+msgstr "Toutes les images ont été mises à jour"
+
+#: gallery-plugin.php:1390
+msgid "Error."
+msgstr "Erreur."
+
+#: gallery-plugin.php:1423
 #: template/gallery-single-template.php:14
 msgid "Download high resolution image"
 msgstr "Télécharger l'image en haute résolution"
 
-#: gallery-plugin.php:1555
+#: gallery-plugin.php:1531
 #: template/gallery-single-template.php:77
 msgid "Sorry, nothing found."
 msgstr "Désolé, rien n'a été trouvé"
 
-#: gallery-plugin.php:1577
+#: gallery-plugin.php:1553
 #: template/gallery-single-template.php:104
 msgid "Image"
 msgstr "Image "
 
-#: gallery-plugin.php:1868
+#: gallery-plugin.php:1848
 msgid "Image size not defined"
 msgstr "Taille de l'image non définie"
 
-#: gallery-plugin.php:1883
+#: gallery-plugin.php:1863
 msgid "We can update only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please, manually reload image."
 msgstr "Il n'est possible de mettre à jour que les images de type PNG, JPEG, GIF, WPMP or XBM. Pour les autres, merci de faire une mise à jour manuelle."
 
-#: gallery-plugin.php:1894
+#: gallery-plugin.php:1874
 msgid "Image size changes not defined"
 msgstr "La modification de la taille n'est pas définie"
 
-#: gallery-plugin.php:1923
-#: gallery-plugin.php:1926
-#: gallery-plugin.php:1931
+#: gallery-plugin.php:1903
+#: gallery-plugin.php:1906
+#: gallery-plugin.php:1911
 msgid "Invalid path"
 msgstr "Chemin invalide"
 
-#: gallery-plugin.php:2055
+#: gallery-plugin.php:2030
 msgid "It’s time to upgrade your <strong>Gallery plugin</strong> to <strong>PRO</strong> version!"
 msgstr "Il est peut-être temps de passer votre extension <strong>Gallery</strong> vers la version <strong>PRO</strong> !"
 
-#: gallery-plugin.php:2056
+#: gallery-plugin.php:2031
 msgid "Extend standard plugin functionality with new great options"
 msgstr "Etend les fonctions standards avec de nouveaux paramètres."
 

@@ -53,9 +53,12 @@ ul.gallery {
     margin: 0 0 10px;
     font-weight: bold;
 }
+.gllr_clear {
+    clear: both;
+    height: 0;
+}
 .clear {
-    clear:both;
-    height:0;
+    clear: both;
 }
 .gllr_image_text {
     width:150px;
