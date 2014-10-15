@@ -153,6 +153,21 @@ h4.bws_installed:before {
     background: #D69108 !important;
 }
 
+.subsubsub.bws_title_menu {
+    float: right;
+    margin: 0;
+}
+.subsubsub a.bws_system_status {
+    display: inline-block;
+    background: url("../images/system-status.png") no-repeat scroll 10px 7px #0074a2;
+    color: #fff;
+    padding: 2px 10px 5px 36px;
+    border-radius: 2px;
+    margin-left: 13px;
+}
+.subsubsub a.bws_system_status:hover {
+    background-color: #529FBD;
+}
 /* theme page after WP 3.9 */
 .toplevel_page_bws_plugins #availablethemes .theme-browser {
     margin-top: 25px;

@@ -7,7 +7,7 @@
 #adminmenu #toplevel_page_bws_plugins.wp-not-current-submenu div.wp-menu-image {
 	opacity: 0.7;
 }
-#toplevel_page_bws_plugins .wp-submenu .wp-first-item {
+.sticky-menu #toplevel_page_bws_plugins .wp-submenu .wp-first-item {
 	display: none;
 }
 /*

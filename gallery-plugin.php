@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Gallery
-Plugin URI:  http://bestwebsoft.com/plugin/
+Plugin URI:  http://bestwebsoft.com/products/
 Description: This plugin allows you to implement gallery page into web site.
 Author: BestWebSoft
-Version: 4.2.3
+Version: 4.2.4
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -27,21 +27,15 @@ License: GPLv2 or later
 
 if ( ! function_exists( 'add_gllr_admin_menu' ) ) {
 	function add_gllr_admin_menu() {
-		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
+		global $bstwbsftwppdtplgns_options, $bstwbsftwppdtplgns_added_menu;
 		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
 		$bws_menu_version = $bws_menu_info["Version"];
 		$base = plugin_basename( __FILE__ );
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
-			if ( 1 == $wpmu ) {
-				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
-					add_site_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
-			} else {
-				if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
-					add_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
-			}
+			if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
+				add_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
+			$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
 		}
 
 		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
@@ -89,7 +83,8 @@ if ( ! function_exists ( 'gllr_admin_init' ) ) {
 	function gllr_admin_init() {
 		global $bws_plugin_info, $gllr_plugin_info;
 		/* Add variable for bws_menu */
-		$gllr_plugin_info = get_plugin_data( __FILE__ );
+		if ( ! $gllr_plugin_info )
+			$gllr_plugin_info = get_plugin_data( __FILE__ );
 
 		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '79', 'version' => $gllr_plugin_info["Version"] );
@@ -104,7 +99,7 @@ if ( ! function_exists ( 'gllr_admin_init' ) ) {
 /* Register settings function */
 if ( ! function_exists( 'gllr_settings' ) ) {
 	function gllr_settings() {
-		global $wpmu, $gllr_options, $gllr_plugin_info;
+		global $gllr_options, $gllr_plugin_info;
 
 		if ( ! $gllr_plugin_info )
 			$gllr_plugin_info = get_plugin_data( __FILE__ );
@@ -132,16 +127,11 @@ if ( ! function_exists( 'gllr_settings' ) ) {
 		);
 
 		/* Install the option defaults */
-		if ( 1 == $wpmu ) {
-			if ( ! get_site_option( 'gllr_options' ) )
-				add_site_option( 'gllr_options', $gllr_option_defaults, '', 'yes' );
-		} else {
-			if ( ! get_option( 'gllr_options' ) )
-				add_option( 'gllr_options', $gllr_option_defaults, '', 'yes' );
-		}
+		if ( ! get_option( 'gllr_options' ) )
+			add_option( 'gllr_options', $gllr_option_defaults, '', 'yes' );
 
 		/* Get options from the database */
-		$gllr_options = ( 1 == $wpmu ) ? get_site_option( 'gllr_options' ) : get_option( 'gllr_options' );
+		$gllr_options = get_option( 'gllr_options' );
 
 		/* Array merge incase this version has added new options */
 		if ( ! isset( $gllr_options['plugin_option_version'] ) || $gllr_options['plugin_option_version'] != $gllr_plugin_info["Version"] ) {
@@ -161,12 +151,14 @@ if ( ! function_exists( 'gllr_settings' ) ) {
 if ( ! function_exists ( 'gllr_version_check' ) ) {
 	function gllr_version_check() {
 		global $wp_version, $gllr_plugin_info;
-		$require_wp		=	"3.0"; /* Wordpress at least requires version */
+		$require_wp		=	"3.2"; /* Wordpress at least requires version */
 		$plugin			=	plugin_basename( __FILE__ );
 	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
 	 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			if ( is_plugin_active( $plugin ) ) {
 				deactivate_plugins( $plugin );
+				if ( ! $gllr_plugin_info )
+					$gllr_plugin_info = get_plugin_data( __FILE__ );
 				$admin_url = ( function_exists( 'get_admin_url' ) ) ? get_admin_url( null, 'plugins.php' ) : esc_url( '/wp-admin/plugins.php' );
 				wp_die( "<strong>" . $gllr_plugin_info['Name'] . " </strong> " . __( 'requires', 'gallery' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'gallery') . "<br /><br />" . __( 'Back to the WordPress', 'gallery') . " <a href='" . $admin_url . "'>" . __( 'Plugins page', 'gallery') . "</a>." );
 			}
@@ -403,7 +395,7 @@ if ( ! function_exists( 'gllr_post_custom_box' ) ) {
 					echo '<input type="text" name="gllr_order_text[' . $page->ID . ']" value="' . $page->menu_order . '" class="gllr_order_text ' . ( $page->menu_order == 0 ? "hidden" : '' ) . '" />';
 					echo '<br />' . __( "Alt tag", "gallery" ) . '<br /><input type="text" name="gllr_image_alt_tag[' . $page->ID . ']" value="' . get_post_meta( $page->ID, $alt_tag_key, TRUE ) . '" class="gllr_image_alt_tag" />';
 					echo '<br />' . __( "URL", "gallery" ) . '<br /><input type="text" name="gllr_link_url[' . $page->ID . ']" value="' . get_post_meta( $page->ID, $link_key, TRUE ) . '" class="gllr_link_text" /><br /><span class="small_text">' . __( "(by click on image opens a link in a new window)", "gallery" ) . '</span>';
-					echo '<a class="bws_plugin_pro_version" href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=' . $gllr_plugin_info["Version"] . '&wp_v=' . $wp_version . '" target="_blank" title="' . __( 'This setting is available in Pro version', 'gallery' ) . '">' .
+					echo '<a class="bws_plugin_pro_version" href="http://bestwebsoft.com/products/gallery/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=' . $gllr_plugin_info["Version"] . '&wp_v=' . $wp_version . '" target="_blank" title="' . __( 'This setting is available in Pro version', 'gallery' ) . '">' .
 						'<div>' . __( "Open the URL", "gallery" ) . '<br/><input disabled type="radio" value="_self" > ' . __( "Current window", "gallery" ) . '<br/><input disabled type="radio" value="_blank" > ' . __( "New window", "gallery" ) . '<br/>' .
 						__( "Lightbox button URL", "gallery" ) . '<br><input class="gllrprfssnl_link_text" disabled type="text" value="" name="gllrprfssnl_lightbox_button_url"><br/>' . 
 						__( "Description", "gallery" ) . '<br><input class="gllrprfssnl_link_text" disabled type="text" value="" name="gllrprfssnl_description"></div></a>';
@@ -721,20 +713,13 @@ if ( ! function_exists( 'gllr_page_css_class' ) ) {
 
 if ( ! function_exists( 'gllr_settings_page' ) ) {
 	function gllr_settings_page() {
-		global $gllr_options, $wp_version, $wpmu, $gllr_plugin_info;
+		global $gllr_options, $wp_version, $gllr_plugin_info;
 		$error = $message = "";
 
-		if ( 1 == $wpmu ) {
-			if ( get_site_option( 'cstmsrch_options' ) )
-				$cstmsrch_options = get_site_option( 'cstmsrch_options' );
-			elseif ( get_site_option( 'bws_custom_search' ) )
-				$cstmsrch_options = get_site_option( 'bws_custom_search' ); 
-		} else {
-			if ( get_option( 'cstmsrch_options' ) )
-				$cstmsrch_options = get_option( 'cstmsrch_options' );
-			elseif ( get_option( 'bws_custom_search' ) )
-				$cstmsrch_options = get_option( 'bws_custom_search' );
-		}
+		if ( get_option( 'cstmsrch_options' ) )
+			$cstmsrch_options = get_option( 'cstmsrch_options' );
+		elseif ( get_option( 'bws_custom_search' ) )
+			$cstmsrch_options = get_option( 'bws_custom_search' );
 
 		if ( ! function_exists( 'get_plugins' ) || ! function_exists( 'is_plugin_active_for_network' ) )
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -776,21 +761,13 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 			$gllr_request_options["read_more_link_text"]	=	stripslashes( esc_html( $_REQUEST['gllr_read_more_link_text'] ) );	
 
 			if ( isset( $_REQUEST['gllr_add_to_search'] ) ) {
-				if ( 0 == $wpmu && isset( $cstmsrch_options ) ) {
-					if ( ! in_array( 'gallery', $cstmsrch_options ) )
-						array_push( $cstmsrch_options, 'gallery' );
-				} elseif ( 1 == $wpmu && isset( $cstmsrch_options ) ) {
+				if ( isset( $cstmsrch_options ) ) {
 					if ( ! in_array( 'gallery', $cstmsrch_options ) )
 						array_push( $cstmsrch_options, 'gallery' );
 				}
 			} else {
-				if ( 0 == $wpmu && isset( $cstmsrch_options ) ) {
+				if ( isset( $cstmsrch_options ) ) {
 					if ( in_array( 'gallery', $cstmsrch_options ) ) {
-						$key = array_search( 'gallery', $cstmsrch_options );
-						unset( $cstmsrch_options[ $key ] );
-					}
-				} elseif ( 1 == $wpmu && isset( $cstmsrch_options ) ) {
-					if ( ! in_array( 'gallery', $cstmsrch_options ) ) {
 						$key = array_search( 'gallery', $cstmsrch_options );
 						unset( $cstmsrch_options[ $key ] );
 					}
@@ -818,7 +795,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 
 		/* GO PRO */
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
-			global $wpmu, $bstwbsftwppdtplgns_options;
+			global $bstwbsftwppdtplgns_options;
 			$bws_license_key = ( isset( $_POST['bws_license_key'] ) ) ? trim( esc_html( $_POST['bws_license_key'] ) ) : "";
 
 			if ( isset( $_POST['bws_license_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_license_nonce_name' ) ) {
@@ -928,7 +905,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 			<h2><?php _e( 'Gallery Settings', 'gallery' ); ?></h2>
 			<h2 class="nav-tab-wrapper">
 				<a class="nav-tab<?php if ( ! isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>"  href="admin.php?page=gallery-plugin.php"><?php _e( 'Settings', 'gallery' ); ?></a>
-				<a class="nav-tab" href="http://bestwebsoft.com/plugin/gallery-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'gallery' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/products/gallery/faq/" target="_blank"><?php _e( 'FAQ', 'gallery' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=gallery-plugin.php&amp;action=go_pro"><?php _e( 'Go PRO', 'gallery' ); ?></a>
 			</h2>
 			<div id="gllr_settings_message" class="updated fade" <?php if ( ! isset( $_REQUEST['gllr_form_submit'] ) || "" != $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
@@ -1024,14 +1001,14 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 						<div class="bws_pro_version_tooltip">
 							<div class="bws_info">
 								<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'gallery' ); ?> 
-								<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Learn More', 'gallery' ); ?></a>			
+								<a href="http://bestwebsoft.com/products/gallery/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Learn More', 'gallery' ); ?></a>			
 							</div>
 							<div class="bws_pro_links">
 								<span class="bws_trial_info">
-									<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#trial" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Start Your Trial', 'gallery' ); ?></a>			
+									<a href="http://bestwebsoft.com/products/gallery/trial/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Start Your Trial', 'gallery' ); ?></a>			
 									 <?php _e( 'or', 'gallery' ); ?>
 								</span> 
-								<a class="bws_button" href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#purchase" target="_blank" title="Gallery Pro Plugin">
+								<a class="bws_button" href="http://bestwebsoft.com/products/gallery/buy/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin">
 									<?php _e( 'Go', 'gallery' ); ?> <strong>PRO</strong>
 								</a>
 							</div>	
@@ -1137,14 +1114,14 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 								<?php if ( array_key_exists( 'custom-search-plugin/custom-search-plugin.php', $all_plugins ) ) {
 									if ( 0 < count( preg_grep( '/custom-search-plugin\/custom-search-plugin.php/', $active_plugins ) ) || is_plugin_active_for_network( 'custom-search-plugin/custom-search-plugin.php' ) ) { ?>
 										<input type="checkbox" name="gllr_add_to_search" value="1" <?php if ( isset( $cstmsrch_options ) && in_array( 'gallery', $cstmsrch_options ) ) echo "checked=\"checked\""; ?> />
-										<span style="color: #888888;font-size: 10px;"> (<?php _e( 'Using', 'gallery' ); ?> <a href="admin.php?page=custom_search.php">Custom Search</a> <?php _e( 'powered by', 'gallery' ); ?> <a href="http://bestwebsoft.com/plugin/">bestwebsoft.com</a>)</span>
+										<span style="color: #888888;font-size: 10px;"> (<?php _e( 'Using', 'gallery' ); ?> <a href="admin.php?page=custom_search.php">Custom Search</a> <?php _e( 'powered by', 'gallery' ); ?> <a href="http://bestwebsoft.com/products/">bestwebsoft.com</a>)</span>
 									<?php } else { ?>
 										<input disabled="disabled" type="checkbox" name="gllr_add_to_search" value="1" <?php if ( isset( $cstmsrch_options ) && in_array( 'gallery', $cstmsrch_options ) ) echo "checked=\"checked\""; ?> /> 
-										<span style="color: #888888;font-size: 10px;">(<?php _e( 'Using Custom Search powered by', 'gallery' ); ?> <a href="http://bestwebsoft.com/plugin/">bestwebsoft.com</a>) <a href="<?php echo bloginfo("url"); ?>/wp-admin/plugins.php"><?php _e( 'Activate Custom Search', 'gallery' ); ?></a></span>
+										<span style="color: #888888;font-size: 10px;">(<?php _e( 'Using Custom Search powered by', 'gallery' ); ?> <a href="http://bestwebsoft.com/products/">bestwebsoft.com</a>) <a href="<?php echo bloginfo("url"); ?>/wp-admin/plugins.php"><?php _e( 'Activate Custom Search', 'gallery' ); ?></a></span>
 									<?php }
 								} else { ?>
 									<input disabled="disabled" type="checkbox" name="gllr_add_to_search" value="1" />  
-									<span style="color: #888888;font-size: 10px;">(<?php _e( 'Using Custom Search powered by', 'gallery' ); ?> <a href="http://bestwebsoft.com/plugin/">bestwebsoft.com</a>) <a href="http://bestwebsoft.com/plugin/custom-search-plugin/"><?php _e( 'Download Custom Search', 'gallery' ); ?></a></span>
+									<span style="color: #888888;font-size: 10px;">(<?php _e( 'Using Custom Search powered by', 'gallery' ); ?> <a href="http://bestwebsoft.com/products/">bestwebsoft.com</a>) <a href="http://bestwebsoft.com/products/custom-search/"><?php _e( 'Download Custom Search', 'gallery' ); ?></a></span>
 								<?php } ?>
 							</td>
 						</tr>				
@@ -1199,14 +1176,14 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 						<div class="bws_pro_version_tooltip">
 							<div class="bws_info">
 								<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'gallery' ); ?> 
-								<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Learn More', 'gallery' ); ?></a>				
+								<a href="http://bestwebsoft.com/products/gallery/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Learn More', 'gallery' ); ?></a>				
 							</div>
 							<div class="bws_pro_links">
 								<span class="bws_trial_info">
-									<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#trial" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Start Your Trial', 'gallery' ); ?></a>			
+									<a href="http://bestwebsoft.com/products/gallery/trial/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin"><?php _e( 'Start Your Trial', 'gallery' ); ?></a>			
 									 <?php _e( 'or', 'gallery' ); ?>
 								</span>
-								<a class="bws_button" href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#purchase" target="_blank" title="Gallery Pro Plugin">
+								<a class="bws_button" href="http://bestwebsoft.com/products/gallery/buy/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro Plugin">
 									<?php _e( 'Go', 'gallery' ); ?> <strong>PRO</strong>
 								</a>	
 							</div>
@@ -1245,7 +1222,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 					<form method="post" action="admin.php?page=gallery-plugin.php&amp;action=go_pro">
 						<p>
 							<?php _e( 'You can download and activate', 'gallery' ); ?> 
-							<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro">PRO</a> 
+							<a href="http://bestwebsoft.com/products/gallery/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Gallery Pro">PRO</a> 
 							<?php _e( 'version of this plugin by entering Your license key.', 'gallery' ); ?><br />
 							<span style="color: #888888;font-size: 10px;">
 								<?php _e( 'You can find your license key on your personal page Client area, by clicking on the link', 'gallery' ); ?> 
@@ -1258,7 +1235,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 							$bstwbsftwppdtplgns_options['go_pro']['gallery-plugin-pro/gallery-plugin-pro.php']['time'] < ( time() + ( 24 * 60 * 60 ) ) ) { ?>
 							<p>
 								<input disabled="disabled" type="text" name="bws_license_key" value="<?php echo $bws_license_key; ?>" />
-								<input disabled="disabled" type="submit" class="button-primary" value="<?php _e( 'Activate', 'gallery' ); ?>" /> <?php _e( 'or', 'gallery' ); ?> <a href="http://bestwebsoft.com/plugin/gallery-pro/#trial" target="_blank"><?php _e( 'Start Your Free 7-Day Trial Now', 'gallery' ); ?></a>
+								<input disabled="disabled" type="submit" class="button-primary" value="<?php _e( 'Activate', 'gallery' ); ?>" /> <?php _e( 'or', 'gallery' ); ?> <a href="http://bestwebsoft.com/products/gallery/trial/" target="_blank"><?php _e( 'Start Your Free 7-Day Trial Now', 'gallery' ); ?></a>
 							</p>
 							<p>
 								<?php _e( "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually.", 'gallery' ); ?>
@@ -1268,7 +1245,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 								<input type="text" name="bws_license_key" value="<?php echo $bws_license_key; ?>" />
 								<input type="hidden" name="bws_license_plugin" value="gallery-plugin-pro/gallery-plugin-pro.php" />
 								<input type="hidden" name="bws_license_submit" value="submit" />
-								<input type="submit" class="button-primary" value="<?php _e( 'Activate', 'gallery' ); ?>" /> <?php _e( 'or', 'gallery' ); ?> <a href="http://bestwebsoft.com/plugin/gallery-pro/#trial" target="_blank"><?php _e( 'Start Your Free 7-Day Trial Now', 'gallery' ); ?></a>
+								<input type="submit" class="button-primary" value="<?php _e( 'Activate', 'gallery' ); ?>" /> <?php _e( 'or', 'gallery' ); ?> <a href="http://bestwebsoft.com/products/gallery/trial/" target="_blank"><?php _e( 'Start Your Free 7-Day Trial Now', 'gallery' ); ?></a>
 								<?php wp_nonce_field( plugin_basename(__FILE__), 'bws_license_nonce_name' ); ?>
 							</p>
 						<?php } ?>
@@ -2028,7 +2005,7 @@ if ( ! function_exists ( 'gllr_plugin_banner' ) ) {
 						<div class="gllr_message bws_banner_on_plugin_page" style="display: none;">
 							<img class="close_icon gllr_close_icon" title="" src="<?php echo plugins_url( 'images/close_banner.png', __FILE__ ); ?>" alt=""/>
 							<div class="button_div">
-								<a class="button" target="_blank" href="http://bestwebsoft.com/plugin/gallery-pro/?k=01a04166048e9416955ce1cbe9d5ca16&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Learn More', 'gallery' ); ?></a>				
+								<a class="button" target="_blank" href="http://bestwebsoft.com/products/gallery/?k=01a04166048e9416955ce1cbe9d5ca16&pn=79&v=<?php echo $gllr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Learn More', 'gallery' ); ?></a>				
 							</div>
 							<div class="text"><?php
 								_e( 'It’s time to upgrade your <strong>Gallery plugin</strong> to <strong>PRO</strong> version!', 'gallery' ); ?><br />
@@ -2058,7 +2035,6 @@ if ( ! function_exists( 'gllr_plugin_uninstall' ) ) {
 			add_action( 'admin_notices', create_function( '', ' return "Error delete template file";' ) );
 		}
 		delete_option( 'gllr_options' );
-		delete_site_option( 'gllr_options' );
 	}
 }
 

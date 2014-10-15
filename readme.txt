@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
-Requires at least: 3.0
+Requires at least: 3.2
 Tested up to: 4.0
-Stable tag: 4.2.3
+Stable tag: 4.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ http://www.youtube.com/watch?v=kzC11CMmwbI
 
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
-<a href="http://bestwebsoft.com/plugin/gallery-pro/?k=57ad5c0c7fe312e2a45ef9a76f47334c" target="_blank">Upgrade to Pro Version</a>, <a href="http://bestwebsoft.com/demo-for-gallery-pro/" target="_blank">View Demo of Pro Version</a>
+<a href="http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c" target="_blank">Upgrade to Pro Version</a>, <a href="http://bestwebsoft.com/demo-for-gallery-pro/" target="_blank">View Demo of Pro Version</a>
 
 = Features =
 
@@ -46,7 +46,7 @@ http://www.youtube.com/watch?v=kzC11CMmwbI
 The author of the Gallery also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=6ed3f1f40908b8eb7248953196a4753a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -60,6 +60,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 * Russian (ru_RU)
 * Serbian (sr_RS) (thanks to <a href="mailto:andrijanan@webhostinggeeks.com">Andrijana Nikolic</a> www.webhostinggeeks.com )
 * Slovak (sk_SK) (thanks to <a href="mailto:ja@michalkralik.sk">Michal Kralik</a>)
+* Slovenian (sl_SI) (thanks to <a href="mailto:tilen@divided.si">Tilen</a>)
 * Spanish (es_ES) (thanks to <a href="mailto:climia@climia.es">Carlos Limia</a>)
 * Turkish (tr) (thanks to <a href="mailto:ce.demirbilek@gmail.com">Ismail Demirbilek</a>)
 * Ukrainian (uk)
@@ -168,9 +169,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Gallery albums page in the front-end.
 3. Gallery Settings page in the admin panel.
 4. Single Gallery page.
-5. PrettyPhoto pop-up window containing the album images.
+5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.2.4 - 15.10.2014 =
+* NEW : Slovenian language file is added to the plugin.
 
 = V4.2.3 - 19.09.2014 =
 * Update : We updated all functionality for wordpress 4.0.
@@ -449,6 +453,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.2.4 =
+Slovenian language file is added to the plugin.
 
 = V4.2.3 =
 We updated all functionality for wordpress 4.0. Social buttons duplicating was fixed.
