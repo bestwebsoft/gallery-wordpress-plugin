@@ -4,7 +4,7 @@ Plugin Name: Gallery
 Plugin URI:  http://bestwebsoft.com/products/
 Description: This plugin allows you to implement gallery page into web site.
 Author: BestWebSoft
-Version: 4.2.4
+Version: 4.2.5
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -1430,11 +1430,11 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 							$image_attributes = wp_get_attachment_image_src( $attachments, 'album-thumb' );
 						} ?>
 						<li>
-							<a rel="bookmark" href="<?php echo get_permalink(); ?>" title="<?php echo htmlspecialchars( $post->post_title ); ?>">
-								<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][0][0]; ?>px;" alt="<?php echo htmlspecialchars( $post->post_title ); ?>" title="<?php echo htmlspecialchars( $post->post_title ); ?>" src="<?php echo $image_attributes[0]; ?>" />
+							<a rel="bookmark" href="<?php echo get_permalink(); ?>" title="<?php the_title(); ?>">
+								<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][0][0]; ?>px;" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
 							</a>
 							<div class="gallery_detail_box">
-								<div><?php echo htmlspecialchars( $post->post_title ); ?></div>
+								<div><?php the_title(); ?></div>
 								<div><?php echo the_excerpt_max_charlength( 100 ); ?></div>
 								<a href="<?php echo get_permalink( $post->ID ); ?>"><?php echo $gllr_options["read_more_link_text"]; ?></a>
 							</div><!-- .gallery_detail_box -->
@@ -1492,7 +1492,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 												</a>
 													<?php } ?>
 											</p>
-											<div style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0] + $gllr_border_images; ?>px; <?php if ( 0 == $gllr_options["image_text"] ) echo "visibility:hidden;"; ?>" class="gllr_single_image_text"><?php echo get_post_meta( $attachment->ID, $key, true ); ?>&nbsp;</div>
+											<div style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0] + $gllr_border_images; ?>px; <?php if ( 0 == $gllr_options["image_text"] ) echo "display:none;"; ?>" class="gllr_single_image_text"><?php echo get_post_meta( $attachment->ID, $key, true ); ?>&nbsp;</div>
 										</div><!-- .gllr_image_block -->
 									<?php if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) { ?>
 										</div><!-- .gllr_image_row -->

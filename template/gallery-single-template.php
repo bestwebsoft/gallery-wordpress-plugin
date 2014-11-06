@@ -21,61 +21,65 @@ get_header(); ?>
 					while ( $second_query->have_posts() ) : $second_query->the_post(); ?>
 						<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
 						<div class="gallery_box_single entry-content">
-							<?php the_content(); 
-							$posts = get_posts( array(
-								"showposts"			=> -1,
-								"what_to_show"		=> "posts",
-								"post_status"		=> "inherit",
-								"post_type"			=> "attachment",
-								"orderby"			=> $gllr_options['order_by'],
-								"order"				=> $gllr_options['order'],
-								"post_mime_type"	=> "image/jpeg,image/gif,image/jpg,image/png",
-								"post_parent"		=> $post->ID
-							));
-							if ( count( $posts ) > 0 ) {
-								$count_image_block = 0; ?>
-								<div class="gallery clearfix">
-									<?php foreach ( $posts as $attachment ) { 
-										$key = "gllr_image_text";
-										$link_key = "gllr_link_url";
-										$alt_tag_key = "gllr_image_alt_tag";
-										$image_attributes = wp_get_attachment_image_src( $attachment->ID, 'photo-thumb' );
-										$image_attributes_large = wp_get_attachment_image_src( $attachment->ID, 'large' );
-										$image_attributes_full = wp_get_attachment_image_src( $attachment->ID, 'full' );
-										if ( 1 == $gllr_options['border_images'] ) {
-											$gllr_border = 'border-width: ' . $gllr_options['border_images_width'] . 'px; border-color:' . $gllr_options['border_images_color'] . '';
-											$gllr_border_images = $gllr_options['border_images_width'] * 2;
-										} else {
-											$gllr_border = '';
-											$gllr_border_images = 0;
-										}
-										if ( $count_image_block % $gllr_options['custom_image_row_count'] == 0 ) { ?>
-											<div class="gllr_image_row">
-										<?php } ?>
-											<div class="gllr_image_block">
-												<p style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0] + $gllr_border_images; ?>px;height:<?php echo $gllr_options['gllr_custom_size_px'][1][1] + $gllr_border_images; ?>px;">
-													<?php if ( ( $url_for_link = get_post_meta( $attachment->ID, $link_key, true ) ) != "" ) { ?>
-														<a href="<?php echo $url_for_link; ?>" title="<?php echo get_post_meta( $attachment->ID, $key, true ); ?>" target="_blank">
-															<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0]; ?>px;height:<?php echo $gllr_options['gllr_custom_size_px'][1][1]; ?>px; <?php echo $gllr_border; ?>" alt="<?php echo get_post_meta( $attachment->ID, $alt_tag_key, true ); ?>" title="<?php echo get_post_meta( $attachment->ID, $key, true ); ?>" src="<?php echo $image_attributes[0]; ?>" />
+							<?php if ( ! post_password_required() ) : ?>
+								<?php the_content(); 
+								$posts = get_posts( array(
+									"showposts"			=> -1,
+									"what_to_show"		=> "posts",
+									"post_status"		=> "inherit",
+									"post_type"			=> "attachment",
+									"orderby"			=> $gllr_options['order_by'],
+									"order"				=> $gllr_options['order'],
+									"post_mime_type"	=> "image/jpeg,image/gif,image/jpg,image/png",
+									"post_parent"		=> $post->ID
+								));
+								if ( count( $posts ) > 0 ) {
+									$count_image_block = 0; ?>
+									<div class="gallery clearfix">
+										<?php foreach ( $posts as $attachment ) { 
+											$key = "gllr_image_text";
+											$link_key = "gllr_link_url";
+											$alt_tag_key = "gllr_image_alt_tag";
+											$image_attributes = wp_get_attachment_image_src( $attachment->ID, 'photo-thumb' );
+											$image_attributes_large = wp_get_attachment_image_src( $attachment->ID, 'large' );
+											$image_attributes_full = wp_get_attachment_image_src( $attachment->ID, 'full' );
+											if ( 1 == $gllr_options['border_images'] ) {
+												$gllr_border = 'border-width: ' . $gllr_options['border_images_width'] . 'px; border-color:' . $gllr_options['border_images_color'] . '';
+												$gllr_border_images = $gllr_options['border_images_width'] * 2;
+											} else {
+												$gllr_border = '';
+												$gllr_border_images = 0;
+											}
+											if ( $count_image_block % $gllr_options['custom_image_row_count'] == 0 ) { ?>
+												<div class="gllr_image_row">
+											<?php } ?>
+												<div class="gllr_image_block">
+													<p style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0] + $gllr_border_images; ?>px;height:<?php echo $gllr_options['gllr_custom_size_px'][1][1] + $gllr_border_images; ?>px;">
+														<?php if ( ( $url_for_link = get_post_meta( $attachment->ID, $link_key, true ) ) != "" ) { ?>
+															<a href="<?php echo $url_for_link; ?>" title="<?php echo get_post_meta( $attachment->ID, $key, true ); ?>" target="_blank">
+																<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0]; ?>px;height:<?php echo $gllr_options['gllr_custom_size_px'][1][1]; ?>px; <?php echo $gllr_border; ?>" alt="<?php echo get_post_meta( $attachment->ID, $alt_tag_key, true ); ?>" title="<?php echo get_post_meta( $attachment->ID, $key, true ); ?>" src="<?php echo $image_attributes[0]; ?>" />
+															</a>
+														<?php } else { ?>
+														<a rel="gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>" href="<?php echo $image_attributes_large[0]; ?>" title="<?php echo get_post_meta( $attachment->ID, $key, true ); ?>" >
+															<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0]; ?>px;height:<?php echo $gllr_options['gllr_custom_size_px'][1][1]; ?>px; <?php echo $gllr_border; ?>" alt="<?php echo get_post_meta( $attachment->ID, $alt_tag_key, true ); ?>" title="<?php echo get_post_meta( $attachment->ID, $key, true ); ?>" src="<?php echo $image_attributes[0]; ?>" rel="<?php echo $image_attributes_full[0]; ?>" />
 														</a>
-													<?php } else { ?>
-													<a rel="gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>" href="<?php echo $image_attributes_large[0]; ?>" title="<?php echo get_post_meta( $attachment->ID, $key, true ); ?>" >
-														<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0]; ?>px;height:<?php echo $gllr_options['gllr_custom_size_px'][1][1]; ?>px; <?php echo $gllr_border; ?>" alt="<?php echo get_post_meta( $attachment->ID, $alt_tag_key, true ); ?>" title="<?php echo get_post_meta( $attachment->ID, $key, true ); ?>" src="<?php echo $image_attributes[0]; ?>" rel="<?php echo $image_attributes_full[0]; ?>" />
-													</a>
-													<?php } ?>											
-												</p>
-												<div style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0] + $gllr_border_images; ?>px; <?php if ( 0 == $gllr_options["image_text"] ) echo "visibility:hidden;"; ?>" class="gllr_single_image_text"><?php echo get_post_meta( $attachment->ID, $key, true ); ?>&nbsp;</div>
-											</div><!-- .gllr_image_block -->
-										<?php if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) { ?>
+														<?php } ?>											
+													</p>
+													<div style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0] + $gllr_border_images; ?>px; <?php if ( 0 == $gllr_options["image_text"] ) echo "display:none;"; ?>" class="gllr_single_image_text"><?php echo get_post_meta( $attachment->ID, $key, true ); ?>&nbsp;</div>
+												</div><!-- .gllr_image_block -->
+											<?php if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) { ?>
+												</div><!-- .gllr_image_row -->
+											<?php } 
+											$count_image_block++; 
+										} 
+										if ( $count_image_block > 0 && $count_image_block%$gllr_options['custom_image_row_count'] != 0 ) { ?>
 											</div><!-- .gllr_image_row -->
-										<?php } 
-										$count_image_block++; 
-									} 
-									if ( $count_image_block > 0 && $count_image_block%$gllr_options['custom_image_row_count'] != 0 ) { ?>
-										</div><!-- .gllr_image_row -->
-									<?php } ?>
-								</div><!-- .gallery.clearfix -->
-							<?php } ?>
+										<?php } ?>
+									</div><!-- .gallery.clearfix -->
+								<?php } ?>
+							<?php else : ?>
+								<p><?php echo get_the_password_form(); ?></p>
+							<?php endif; ?>	
 						</div><!-- .gallery_box_single -->
 						<div class="gllr_clear"></div>
 					<?php endwhile;

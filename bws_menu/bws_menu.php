@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.3.8
+* Version: 1.3.9
 */
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
@@ -306,6 +306,14 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/products/job-board/download/?k=b0c504c9ce6edd6692e04222af3fed6f&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&type=term&s=Job+board+BestWebSoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=job-board.php'
+			),
+			'multilanguage/multilanguage.php' => array(
+				'name'			=> 'Multilanguage',
+				'description'	=> 'Allows to create content on a Wordpress site in different languages.',
+				'link'			=> 'http://bestwebsoft.com/products/multilanguage/?k=7d68c7bfec2486dc350c67fff57ad433&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/multilanguage/download/?k=7d68c7bfec2486dc350c67fff57ad433&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&type=term&s=Multilanguage+BestWebSoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=mltlngg_settings'
 			)
 		);
 		

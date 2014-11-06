@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.2
 Tested up to: 4.0
-Stable tag: 4.2.4
+Stable tag: 4.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -172,6 +172,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.2.5 - 06.11.2014 =
+* Update : The French language file is updated.
+* Bugfix : Image hidden title style should be corrected.
+* Update: Changes were made to  gallery templates to have 'password protected' functionality.
 
 = V4.2.4 - 15.10.2014 =
 * NEW : Slovenian language file is added to the plugin.
@@ -453,6 +458,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.2.5 =
+The French language file is updated. Image hidden title style should be corrected. Changes were made to  gallery templates to have 'password protected' functionality.
 
 = V4.2.4 =
 Slovenian language file is added to the plugin.
