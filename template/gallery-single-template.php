@@ -1,11 +1,11 @@
 <?php
 /*
 * Template - Gallery post
-* Version: 1.1
+* Version: 1.2
 */
 get_header(); ?>
-	<div class="content-area">
-		<div id="container" class="site-content">
+	<div id="primary" class="content-area">
+		<div id="container" class="site-content  site-main">
 			<div id="content" class="hentry">
 				<?php global $post, $wp_query;
 				$args = array(
@@ -17,11 +17,11 @@ get_header(); ?>
 				$second_query = new WP_Query( $args ); 
 				$gllr_options = get_option( 'gllr_options' );
 				$gllr_download_link_title = addslashes( __( 'Download high resolution image', 'gallery' ) );
-				if ( $second_query->have_posts() ) :
+				if ( $second_query->have_posts() ) {
 					while ( $second_query->have_posts() ) : $second_query->the_post(); ?>
 						<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
 						<div class="gallery_box_single entry-content">
-							<?php if ( ! post_password_required() ) : ?>
+							<?php if ( ! post_password_required() ) { ?>
 								<?php the_content(); 
 								$posts = get_posts( array(
 									"showposts"			=> -1,
@@ -77,28 +77,27 @@ get_header(); ?>
 										<?php } ?>
 									</div><!-- .gallery.clearfix -->
 								<?php } ?>
-							<?php else : ?>
+							<?php } else { ?>
 								<p><?php echo get_the_password_form(); ?></p>
-							<?php endif; ?>	
-						</div><!-- .gallery_box_single -->
-						<div class="gllr_clear"></div>
-					<?php endwhile;
-				else: ?>
+							<?php }
+						endwhile;
+					if ( 1 == $gllr_options['return_link'] ) {
+						if ( 'gallery_template_url' == $gllr_options["return_link_page"] ) {
+							global $wpdb;
+							$parent = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND (post_status = 'publish' OR post_status = 'private') AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );	?>
+							<div class="return_link"><a href="<?php echo ( !empty( $parent ) ? get_permalink( $parent ) : '' ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
+						<?php } else { ?>
+							<div class="return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
+						<?php }
+					}	
+				} else { ?>
 					<div class="gallery_box_single">
 						<p class="not_found"><?php _e( 'Sorry, nothing found.', 'gallery' ); ?></p>
+				<?php } ?>				
 					</div><!-- .gallery_box_single -->
-				<?php endif; ?>
-				<?php if ( 1 == $gllr_options['return_link'] ) {
-					if ( 'gallery_template_url' == $gllr_options["return_link_page"] ) {
-						global $wpdb;
-						$parent = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND (post_status = 'publish' OR post_status = 'private') AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );	?>
-						<div class="return_link"><a href="<?php echo ( !empty( $parent ) ? get_permalink( $parent ) : '' ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
-					<?php } else { ?>
-						<div class="return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
-					<?php }
-				} ?>
-				<?php comments_template(); ?>
+				<div class="gllr_clear"></div>			
 			</div><!-- #content -->
+			<?php comments_template(); ?>
 		</div><!-- #container -->
 	</div><!-- .content-area -->
 	<?php get_sidebar(); ?>

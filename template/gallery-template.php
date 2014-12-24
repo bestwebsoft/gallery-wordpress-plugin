@@ -1,21 +1,21 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.1
+* Version: 1.2
 */
 ?>
 <?php get_header(); ?>
-	<div class="content-area">
-		<div id="container" class="site-content">
+	<div id="primary" class="content-area">
+		<div id="container" class="site-content site-main">
 			<div id="content" class="hentry">
 				<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
-				<?php if ( ! post_password_required() ) : ?>
+				<?php if ( ! post_password_required() ) { ?>
 					<?php if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) 
 						echo pdfprnt_show_buttons_for_custom_post_type( 'post_type=gallery&orderby=post_date' ); ?>
 					<div class="gallery_box entry-content">
 						<ul>
 							<?php global $post, $wpdb, $wp_query, $request;
-							
+								
 							if ( get_query_var( 'paged' ) ) {
 								$paged = get_query_var( 'paged' );
 							} elseif ( get_query_var( 'page' ) ) {
@@ -86,34 +86,35 @@ Template Name: Gallery Template
 							wp_reset_query(); 
 							$request = $wp_query->request; ?>
 						</ul>
-						<?php $pages = intval ( $count_all_albums / $per_page );
-						if ( $count_all_albums % $per_page > 0 )
-							$pages += 1;
-						$range = 100;
-						if ( ! $pages ) {
-							$pages = 1;
-						}
+					</div><!-- .gallery_box -->
+					</div><!-- #content -->
+					<?php $pages = intval( $count_all_albums / $per_page );
+					if ( $count_all_albums % $per_page > 0 )
+						$pages += 1;
+					$range = 100;
+					if ( ! $pages ) {
+						$pages = 1;
+					}
 					if ( 1 != $pages ) { ?>
-						</div><!-- .gallery_box -->
 						<div class='gllr_clear'></div>
-						<div class='pagination'>
-							<?php for ( $i = 1; $i <= $pages; $i++ ) {
-								if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $showitems ) ) {
-									echo ( $paged == $i ) ? "<span class='current'>". $i ."</span>":"<a href='". get_pagenum_link($i) ."' class='inactive' >". $i ."</a>";
-								}
-							} ?>
-							<div class='gllr_clear'></div>
-						</div><!-- .pagination -->
-					<?php } else { ?>
-						</div><!-- .gallery_box -->
-					<?php } 
-				else : ?>
+						<nav class="paging-navigation" role="navigation">
+							<div class="pagination navigation loop-pagination nav-links">
+								<?php for ( $i = 1; $i <= $pages; $i++ ) {
+									if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $showitems ) ) {
+										echo ( $paged == $i ) ? "<span class='page-numbers current'>". $i ."</span>":"<a class='page-numbers inactive' href='". get_pagenum_link($i) ."'>". $i ."</a>";
+									}
+								} ?>
+								<div class='gllr_clear'></div>
+							</div><!-- .pagination -->		
+						</nav><!-- .paging-navigation -->
+					<?php }
+				} else { ?>
 					<div class="gallery_box entry-content">
 						<p><?php echo get_the_password_form(); ?></p>
 					</div><!-- .gallery_box -->
-				<?php endif;
-				comments_template(); ?>
-			</div><!-- #content -->
+					</div><!-- #content -->
+				<?php } ?>			
+			<?php comments_template(); ?>
 		</div><!-- #container -->
 	</div><!-- .content-area -->
 <?php get_sidebar(); ?>

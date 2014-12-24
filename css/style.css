@@ -155,6 +155,16 @@ ul.gallery {
 .gllr_image_block img {
     border-style: solid;
 }
+/* template fix for theme 2015 */
+.page-template-gallery-template .site-content .site-content,
+.single-gallery .site-content .site-content {
+	margin-left: 0;
+	width: auto;
+}
+
+#Upload-File .gllr_image_block img {
+	border-style: none;
+}
 .minicolors input {
     height: 22px !important;
 }
