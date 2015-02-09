@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.2
 Tested up to: 4.1
-Stable tag: 4.2.6
+Stable tag: 4.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,16 +129,8 @@ After that your theme will support thumbnail option and the error will disappear
 
 = How to change image order on the single gallery page? =
 
-1. Please open the menu "Galleries" and choose random gallery from the list. It will take you to the gallery editing page. 
-Please use the drag and drop function to change the order of the images and do not forget to save the post.
-Please do not forget to select `Sort images by` -> `sort images` in the plugin settings (http://your_domain/wp-admin/admin.php?page=gallery-plugin.php) 
-
-2. Please go to the "Galleries" menu and select random gallery in the list. It will take you to the gallery editing page. 
-There will be one or several media upload icons between the title and the content blocks. Please choose any icon. 
-After that you'll see a popup window containing three or four tabs. 
-Go to the Gallery tab and you will see attachments related to this gallery. 
-You can change their order using the drag and drop option. 
-Just set an order and click the 'Save' button.
+1. If you have WordPress version 3.5 and higher, please open the menu "Galleries" and choose random gallery from the list. It will take you to the gallery editing page. Use the drag and drop function to change the order of the images and do not forget to save the post. Do not forget to select `Sort images by` -> `sort images` in the plugin settings.
+2. If you have WordPress version older than 3.5, please go to the "Galleries" menu and select random gallery in the list. It will take you to the gallery editing page. There will be one or several media upload icons between the title and the content blocks. Choose any icon. After that you'll see a popup window containing three or four tabs. Go to the Gallery tab and you will see attachments related to this gallery. You can change their order using the drag and drop option. Just set an order and click the 'Save' button.
 
 = I am using WP with rtl language and I have a problem with the lightbox displaying on iPad/iPhone. =
 
@@ -172,6 +164,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.2.7 - 09.02.2015 =
+* Update : Plugin functionality was updated for compatibility with Gallery Categories Plugin and Re-attacher Plugin.
+* Update : Gallery template checking functionality was updated.
 
 = V4.2.6 - 24.12.2014 =
 * Update : The Dutch and Chinese language files are updated.
@@ -463,6 +459,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.2.7 =
+Plugin functionality was updated for compatibility with Gallery Categories Plugin and Re-attacher Plugin. Gallery template checking functionality was updated.
 
 = V4.2.6 =
 The Dutch and Chinese language files are updated.  We updated all functionality for wordpress 4.1. Templates are updated.

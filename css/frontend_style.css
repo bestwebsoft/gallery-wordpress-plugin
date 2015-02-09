@@ -1,0 +1,108 @@
+/*
+* styles for gallery page
+*/
+ul.gallery {
+	list-style: none outside none;
+}
+.gallery_box_single .gallery.clearfix {
+    display: table;
+    margin: 0 auto;
+}
+.gallery_box ul {
+	list-style: none outside none !important;
+	margin:0;
+}
+.gallery_box li {
+	padding: 10px 10px 0 0;
+	clear: both;
+    list-style: none;
+}
+.gallery_box li img {
+	padding: 5px;
+	margin:0 10px 10px 0;
+	float:left;
+	border: 1px solid #BDBDBD;
+}
+.gallery_box p {
+	margin-bottom:0px;
+}
+.gallery_detail_box {
+	float:left;
+}
+.gallery_box .gallery_detail_box p.title {
+	color: #000000;
+    line-height: 1.5em;
+    margin: 0 0 10px;
+	font-weight: bold;
+}
+.gllr_clear {
+	clear: both;
+	height: 0;
+}
+.clear {
+	clear: both;
+}
+.gallery .gllr_image_block {
+	float: left;
+}
+.gallery .gllr_image_block a img {
+    border: 10px solid #F1F1F1;
+	margin-top: 0;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box; /*Firefox 1-3*/
+    -webkit-box-sizing: content-box; /* Safari */
+}
+.gallery_box_single .gallery .gllr_image_block p {
+	border: 1px solid #BDBDBD;
+    margin: 5px 6px 0 0;
+	padding: 0;
+}
+.gllr_single_image_text {
+	font-size: 12px;
+	color: #888;
+}
+.gllr_image_row {
+	clear: both;
+}
+.gallery li {
+    float: left;
+	margin: 5px 6px 10px 0;
+}
+.gallery .gllr_image_container {
+    border: 1px solid #BDBDBD;
+}
+.pp_social {
+	display: none;
+}
+#fancybox-wrap {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box; /*Firefox 1-3*/
+    -webkit-box-sizing: content-box; /* Safari */
+}
+#fancybox-wrap * {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box; /*Firefox 1-3*/
+    -webkit-box-sizing: content-box; /* Safari */
+}
+.gllr_image_block img {
+    border-style: solid;
+}
+/* template fix for theme 2015 */
+.page-template-gallery-template .site-content .site-content,
+.single-gallery .site-content .site-content {
+	margin-left: 0;
+	width: auto;
+}
+#ajax_update_postmeta,
+#ajax_update_images {
+    float: left;
+}
+#gllr_date_additional_field, #gllr_link_additional_field, 
+#gllr_shrdescription_additional_field, #gllr_description_additional_field,
+#gllr_svn_additional_field, #gllr_executor_additional_field,
+#gllr_technologies_additional_field {
+    float: left;
+    position: relative;
+    top: 2px;
+    margin-right: 3px;
+}

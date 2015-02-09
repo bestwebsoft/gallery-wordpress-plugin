@@ -4,7 +4,7 @@
 * Version: 1.2
 */
 get_header(); ?>
-	<div id="primary" class="content-area">
+	<div class="content-area">
 		<div id="container" class="site-content  site-main">
 			<div id="content" class="hentry">
 				<?php global $post, $wp_query;

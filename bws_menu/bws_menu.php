@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.4.0
+* Version: 1.4.3
 */
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
@@ -83,7 +83,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'pro_settings'	=> 'admin.php?page=gallery-plugin-pro.php'
 			),
 			'adsense-plugin/adsense-plugin.php'=> array(
-				'name'			=> 'Google AdSense',
+				'name'			=> 'Google AdSense by BestWebSoft',
 				'description'	=> 'Allows Google AdSense implementation to your website.',
 				'link'			=> 'http://bestwebsoft.com/products/google-adsense/?k=60e3979921e354feb0347e88e7d7b73d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/google-adsense/download/?k=60e3979921e354feb0347e88e7d7b73d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
@@ -107,7 +107,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'settings'		=> 'admin.php?page=quotes-and-tips.php'
 			),
 			'google-sitemap-plugin/google-sitemap-plugin.php'=> array(
-				'name'			=> 'Google Sitemap',
+				'name'			=> 'Google Sitemap by BestWebSoft',
 				'description'	=> 'Allows you to add sitemap file to Google Webmaster Tools.',
 				'link'			=> 'http://bestwebsoft.com/products/google-sitemap/?k=5202b2f5ce2cf85daee5e5f79a51d806&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/google-sitemap/download/?k=5202b2f5ce2cf85daee5e5f79a51d806&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
@@ -137,7 +137,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'settings'		=> 'admin.php?page=custom_fields_search.php'
 			),
 			'google-one/google-plus-one.php' => array(
-				'name'			=> 'Google +1',
+				'name'			=> 'Google +1 by BestWebSoft',
 				'description'	=> 'Allows you to see how many times your page has been liked on Google Search Engine as well as who has liked the article.',
 				'link'			=> 'http://bestwebsoft.com/products/google-plus-one/?k=ce7a88837f0a857b3a2bb142f470853c&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/google-plus-one/download/?k=ce7a88837f0a857b3a2bb142f470853c&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
@@ -194,7 +194,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'settings'		=> 'admin.php?page=post-to-csv.php'
 			),
 			'google-shortlink/google-shortlink.php' => array(
-				'name'			=> 'Google Shortlink',
+				'name'			=> 'Google Shortlink by BestWebSoft',
 				'description'	=> 'Allows you to get short links from goo.gl servise without leaving your site.',
 				'link'			=> 'http://bestwebsoft.com/products/google-shortlink/?k=afcf3eaed021bbbbeea1090e16bc22db&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/google-shortlink/download/?k=afcf3eaed021bbbbeea1090e16bc22db&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
@@ -210,7 +210,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'settings'		=> 'admin.php?page=htaccess.php'
 			),
 			'google-captcha/google-captcha.php' => array(
-				'name'			=> 'Google Captcha (reCAPTCHA)',
+				'name'			=> 'Google Captcha (reCAPTCHA) by BestWebSoft',
 				'description'	=> 'Plugin intended to prove that the visitor is a human being and not a spam robot.',
 				'link'			=> 'http://bestwebsoft.com/products/google-captcha/?k=7b59fbe542acf950b29f3e020d5ad735&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/google-captcha/download/?k=7b59fbe542acf950b29f3e020d5ad735&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
@@ -234,7 +234,10 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/products/subscriber/?k=a4ecc1b7800bae7329fbe8b4b04e9c88&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/subscriber/download/?k=a4ecc1b7800bae7329fbe8b4b04e9c88&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&s=Subscriber+Bestwebsoft&plugin-search-input=Search+Plugins',
-				'settings'		=> 'admin.php?page=sbscrbr_settings_page'
+				'settings'		=> 'admin.php?page=sbscrbr_settings_page',
+				'pro_version'	=> 'subscriber-pro/subscriber-pro.php',
+				'purchase' 		=> 'http://bestwebsoft.com/products/subscriber/buy/?k=02dbb8b549925d9b74e70adc2a7282e4&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'pro_settings' 	=> 'admin.php?page=sbscrbrpr_settings_page'
 			),
 			'contact-form-multi/contact-form-multi.php' => array(
 				'name'			=> 'Contact Form Multi',
@@ -248,22 +251,22 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'pro_settings' 	=> ''
 			),
 			'bws-google-maps/bws-google-maps.php' => array(
-				'name'			=> 'BestWebSoft Google Maps',
+				'name'			=> 'Google Maps by BestWebSoft',
 				'description'	=> 'Easy to set up and insert Google Maps to your website.',
 				'link'			=> 'http://bestwebsoft.com/products/bws-google-maps/?k=d8fac412d7359ebaa4ff53b46572f9f7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/bws-google-maps/download/?k=d8fac412d7359ebaa4ff53b46572f9f7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
-				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&s=BestWebSoft+Google+Maps&plugin-search-input=Search+Plugins',
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&s=Google+Maps+Bestwebsoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=bws-google-maps.php',
 				'pro_version'	=> 'bws-google-maps-pro/bws-google-maps-pro.php',
 				'purchase' 		=> 'http://bestwebsoft.com/products/bws-google-maps/buy/?k=117c3f9fc17f2c83ef430a8a9dc06f56&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'pro_settings' 	=> 'admin.php?page=bws-google-maps-pro.php'
 			),
 			'bws-google-analytics/bws-google-analytics.php' => array(
-				'name'			=> 'BestWebSoft Google Analytics',
+				'name'			=> 'Google Analytics by BestWebSoft',
 				'description'	=> 'Allows you to retrieve basic stats from Google Analytics account and add the tracking code to your blog.',
 				'link'			=> 'http://bestwebsoft.com/products/bws-google-analytics/?k=261c74cad753fb279cdf5a5db63fbd43&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/bws-google-analytics/download/?k=261c74cad753fb279cdf5a5db63fbd43&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
-				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&s=BestWebSoft+Google+Analytics&plugin-search-input=Search+Plugins',
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&s=Google+Analytics+Bestwebsoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=bws-google-analytics.php'
 			),
 			'db-manager/db-manager.php' => array(
@@ -319,6 +322,30 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/products/multilanguage/download/?k=7d68c7bfec2486dc350c67fff57ad433&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Multilanguage+BestWebSoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=mltlngg_settings'
+			),
+			'bws-popular-posts/bws-popular-posts.php' => array(
+				'name'			=> 'Popular Posts by BestWebSoft',
+				'description'	=> 'This plugin will help you can display the most popular posts on your blog in the widget.',
+				'link'			=> 'http://bestwebsoft.com/products/popular-posts/?k=4d529f116d2b7f7df3a78018c383f975&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/popular-posts/download/?k=4d529f116d2b7f7df3a78018c383f975&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Popular+Posts+BestWebSoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=popular-posts.php'
+			),
+			'bws-testimonials/bws-testimonials.php' => array(
+				'name'			=> 'Testimonials by BestWebSoft',
+				'description'	=> 'Allows creating and displaying a Testimonial on your website.',
+				'link'			=> 'http://bestwebsoft.com/products/testimonials/?k=3fe4bb89dc901c98e43a113e08f8db73&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/testimonials/download/?k=3fe4bb89dc901c98e43a113e08f8db73&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Testimonials+BestWebSoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=testimonials.php'
+			),
+			'bws-featured-posts/bws-featured-posts.php' => array(
+				'name'			=> 'Featured Posts by BestWebSoft',
+				'description'	=> 'Displays featured posts randomly on any website page.',
+				'link'			=> 'http://bestwebsoft.com/products/featured-posts/?k=f0afb31185ba7c7d6d598528d69f6d97&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/featured-posts/download/?k=f0afb31185ba7c7d6d598528d69f6d97&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Featured+Posts+BestWebSoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=featured-posts.php'
 			)
 		);
 		
@@ -525,7 +552,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 									<?php } ?>
 								</div>
 							</div>								
-						<?php } elseif ( in_array( $key_plugin, $active_plugins ) || is_plugin_active_for_network( $key_plugin ) ) {
+						<?php } elseif ( isset( $bws_plugins[ $key_plugin ] ) && ( in_array( $key_plugin, $active_plugins ) || is_plugin_active_for_network( $key_plugin ) ) ) {
 							if ( isset( $bws_plugins[ $key_plugin ]['pro_version'] ) && isset( $all_plugins[ $bws_plugins[ $key_plugin ]['pro_version'] ] ) ) { ?>
 								<div class="bws_product_box bws_product_deactivated">
 									<div class="bws_product">				
