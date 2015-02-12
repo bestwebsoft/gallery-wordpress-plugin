@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.4.3
+* Version: 1.4.4
 */
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
@@ -346,6 +346,22 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/products/featured-posts/download/?k=f0afb31185ba7c7d6d598528d69f6d97&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Featured+Posts+BestWebSoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=featured-posts.php'
+			),
+			'gallery-categories/gallery-categories.php' => array(
+				'name'			=> 'Gallery Categories',
+				'description'	=> 'Add-on for Gallery Plugin by BestWebSoft',
+				'link'			=> 'http://bestwebsoft.com/products/gallery-categories/?k=7d68c7bfec2486dc350c67fff57ad433&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/gallery-categories/download/?k=7d68c7bfec2486dc350c67fff57ad433&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Gallery+Categories+BestWebSoft&plugin-search-input=Search+Plugins',
+				'settings'		=> ''
+			),
+			're-attacher/re-attacher.php' => array(
+				'name'			=> 'Re-attacher',
+				'description'	=> 'This plugin allows to attach, unattach or reattach media item in different post.',
+				'link'			=> 'http://bestwebsoft.com/products/re-attacher/?k=4d529f116d2b7f7df3a78018c383f975&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/re-attacher/download/?k=4d529f116d2b7f7df3a78018c383f975&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Re-attacher+BestWebSoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=re-attacher.php'
 			)
 		);
 		

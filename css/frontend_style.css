@@ -45,14 +45,14 @@ ul.gallery {
 .gallery .gllr_image_block {
 	float: left;
 }
-.gallery .gllr_image_block a img {
+#content .gallery .gllr_image_block a img {
     border: 10px solid #F1F1F1;
 	margin-top: 0;
     box-sizing: content-box;
     -moz-box-sizing: content-box; /*Firefox 1-3*/
     -webkit-box-sizing: content-box; /* Safari */
 }
-.gallery_box_single .gallery .gllr_image_block p {
+#content .gallery_box_single .gallery .gllr_image_block p {
 	border: 1px solid #BDBDBD;
     margin: 5px 6px 0 0;
 	padding: 0;

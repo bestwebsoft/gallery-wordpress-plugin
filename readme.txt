@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.2
 Tested up to: 4.1
-Stable tag: 4.2.7
+Stable tag: 4.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,8 @@ http://www.youtube.com/watch?v=kzC11CMmwbI
 
 The author of the Gallery also recommends the following plugins:
 
+* <a href="http://wordpress.org/plugins/gallery-categories/">Gallery Categories</a> - This plugin is an exclusive add-on to the Gallery Plugin. It allows creating different categories of galleries on your site. This way, you could organize the galleries on your website, which makes navigating through your content a whole lot easier.
+* <a href="http://wordpress.org/plugins/re-attacher/">Re-attacher</a> - With this plugin, you can reattach previously uploaded images to other posts, as well as detach files from the post completely. This plugin makes using our Gallery and Portfolio plugins a lot more convenient, as you won’t have to upload new images each time you may need them on your gallery or portfolio pages.
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
 There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
@@ -164,6 +166,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.2.8 - 12.02.2015 =
+* Bugfix : Bug with theme permissions was fixed.
 
 = V4.2.7 - 09.02.2015 =
 * Update : Plugin functionality was updated for compatibility with Gallery Categories Plugin and Re-attacher Plugin.
@@ -459,6 +464,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.2.8 =
+Bug with theme permissions was fixed.
 
 = V4.2.7 =
 Plugin functionality was updated for compatibility with Gallery Categories Plugin and Re-attacher Plugin. Gallery template checking functionality was updated.

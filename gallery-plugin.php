@@ -4,7 +4,7 @@ Plugin Name: Gallery
 Plugin URI:  http://bestwebsoft.com/products/
 Description: This plugin allows you to implement gallery page into web site.
 Author: BestWebSoft
-Version: 4.2.7
+Version: 4.2.8
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -188,7 +188,6 @@ if ( ! function_exists ( 'gllr_version_check' ) ) {
 if ( ! function_exists( 'gllr_plugin_install' ) ) {
 	function gllr_plugin_install() {
 		global $gllr_filenames, $gllr_filepath, $gllr_themepath;
-		@chmod( $gllr_themepath, octdec( 755 ) );
 		foreach ( $gllr_filenames as $filename ) {
 			if ( ! file_exists( $gllr_themepath . $filename ) ) {
 				$handle		=	@fopen( $gllr_filepath . $filename, "r" );
@@ -218,7 +217,6 @@ if ( ! function_exists( 'gllr_plugin_install' ) ) {
 				@chmod( $gllr_themepath . $filename, octdec( 755 ) );
 			}
 		}
-		@chmod( $gllr_themepath, octdec( 644 ) );
 	}
 }
 
@@ -909,9 +907,13 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 
 											/* activate Pro */
 											if ( file_exists( WP_PLUGIN_DIR . '/' . $zip_name[0] ) ) {	
-												$active_plugins	=	get_option( 'active_plugins' );		
-												array_push( $active_plugins, $bws_license_plugin );
-												update_option( 'active_plugins', $active_plugins );
+												/* activate Pro */
+												$network_wide = false;
+												if ( is_multisite() ) {
+													if ( is_plugin_active_for_network( plugin_basename( __FILE__ ) ) )
+														$network_wide = true;
+												}
+												activate_plugin( $bws_license_plugin, NULL, $network_wide );
 												$pro_plugin_is_activated = true;
 											} elseif ( '' == $error ) {
 												$error = __( "Failed to download the zip archive. Please, upload the plugin manually", 'gallery' );
@@ -924,12 +926,13 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 				 			}
 						} else {
 							/* activate Pro */
-							if ( ! in_array( $bws_license_plugin, $active_plugins ) ) {			
-								$active_plugins	=	get_option( 'active_plugins' );
-								array_push( $active_plugins, $bws_license_plugin );
-								update_option( 'active_plugins', $active_plugins );
-								$pro_plugin_is_activated = true;
-							}						
+							$network_wide = false;
+							if ( is_multisite() ) {
+								if ( is_plugin_active_for_network( plugin_basename( __FILE__ ) ) )
+									$network_wide = true;
+							}
+							activate_plugin( $bws_license_plugin, NULL, $network_wide );
+							$pro_plugin_is_activated = true;					
 						}
 						if ( is_multisite() )
 							update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
@@ -1301,7 +1304,8 @@ if ( ! function_exists( 'gllr_register_plugin_links' ) ) {
 	function gllr_register_plugin_links( $links, $file ) {
 		$base = plugin_basename( __FILE__ );
 		if ( $file == $base ) {
-			$links[]	=	'<a href="admin.php?page=gallery-plugin.php">' . __( 'Settings', 'gallery' ) . '</a>';
+			if ( ! is_network_admin() )
+				$links[]	=	'<a href="admin.php?page=gallery-plugin.php">' . __( 'Settings', 'gallery' ) . '</a>';
 			$links[]	=	'<a href="http://wordpress.org/plugins/gallery-plugin/faq/" target="_blank">' . __( 'FAQ', 'gallery' ) . '</a>';
 			$links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support', 'gallery' ) . '</a>';
 		}
@@ -1311,14 +1315,16 @@ if ( ! function_exists( 'gllr_register_plugin_links' ) ) {
 
 if ( ! function_exists( 'gllr_plugin_action_links' ) ) {
 	function gllr_plugin_action_links( $links, $file ) {
-		/* Static so we don't call plugin_basename on every plugin row. */
-		static $this_plugin;
-		if ( ! $this_plugin )
-			$this_plugin = plugin_basename( __FILE__ );
+		if ( ! is_network_admin() ) {
+			/* Static so we don't call plugin_basename on every plugin row. */
+			static $this_plugin;
+			if ( ! $this_plugin )
+				$this_plugin = plugin_basename( __FILE__ );
 
-		if ( $file == $this_plugin ) {
-			$settings_link = '<a href="admin.php?page=gallery-plugin.php">' . __( 'Settings', 'gallery' ) . '</a>';
-			array_unshift( $links, $settings_link );
+			if ( $file == $this_plugin ) {
+				$settings_link = '<a href="admin.php?page=gallery-plugin.php">' . __( 'Settings', 'gallery' ) . '</a>';
+				array_unshift( $links, $settings_link );
+			}
 		}
 		return $links;
 	}
