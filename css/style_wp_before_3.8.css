@@ -83,3 +83,7 @@ li.gllr_image_block {
     margin: 0 1px;
     padding: 3px 5px 2px;
 }
+.gllr_span {
+    color: #888888;
+    font-size: 10px;
+}

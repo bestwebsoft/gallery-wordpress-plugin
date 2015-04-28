@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.2
+* Version: 1.2.1
 */
 ?>
 <?php get_header(); ?>
@@ -28,7 +28,7 @@ Template Name: Gallery Template
 							$gllr_options = get_option( 'gllr_options' );
 							$count = 0;
 							$per_page = $showitems = get_option( 'posts_per_page' );  
-							$count_all_albums = $wpdb->get_var( "SELECT COUNT(*) FROM wp_posts WHERE 1=1 AND wp_posts.post_type = 'gallery' AND (wp_posts.post_status = 'publish')" );
+							$count_all_albums = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE $wpdb->posts.post_type = 'gallery' AND ($wpdb->posts.post_status = 'publish')" );
 
 							if ( substr( $permalink, strlen( $permalink ) -1 ) != "/" ) {
 								if ( strpos( $permalink, "?" ) !== false ) {

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-24 10:15+0300\n"
-"PO-Revision-Date: 2014-12-24 10:15+0300\n"
+"POT-Creation-Date: 2015-04-28 12:37+0300\n"
+"PO-Revision-Date: 2015-04-28 12:37+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Xiaobo Chen <mibcxb@gmail.com>\n"
 "Language: zh_CN\n"
@@ -16,788 +16,648 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gallery-plugin.php:67
-#: gallery-plugin.php:251
-msgid "Gallery"
-msgstr "画廊"
-
-#: gallery-plugin.php:120
+#: gallery-plugin.php:95
 msgid "See images &raquo;"
 msgstr "查看影像 &raquo;"
 
-#: gallery-plugin.php:163
-msgid "requires"
-msgstr "需求"
-
-#: gallery-plugin.php:163
-msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr "或更高，这就是它被停用的原因！请升级 WordPress 后重试。"
-
-#: gallery-plugin.php:163
-msgid "Back to the WordPress"
-msgstr "返回 WordPress"
-
-#: gallery-plugin.php:163
-msgid "Plugins page"
-msgstr "插件页面"
-
-#: gallery-plugin.php:241
-#: gallery-plugin.php:793
+#: gallery-plugin.php:206
 msgid "The following files \"gallery-template.php\" and \"gallery-single-template.php\" were not found in the directory of your theme. Please copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to the directory of your theme for the correct work of the Gallery plugin"
 msgstr "在您的主题目录中没有找到文件  \"gallery-template.php\" 和  \"gallery-single-template.php\"。为了画廊插件的正常运行，请从目录 `/wp-content/plugins/gallery-plugin/template/` 中复制他们到您的主题目录中"
 
-#: gallery-plugin.php:250
-#: gallery-plugin.php:260
+#: gallery-plugin.php:215
+#: gallery-plugin.php:225
 msgid "Galleries"
 msgstr "画廊"
 
-#: gallery-plugin.php:252
+#: gallery-plugin.php:216
+msgid "Gallery"
+msgstr "画廊"
+
+#: gallery-plugin.php:217
 msgid "Add a Gallery"
 msgstr "添加画廊"
 
-#: gallery-plugin.php:253
+#: gallery-plugin.php:218
 msgid "Add New Gallery"
 msgstr "新建画廊"
 
-#: gallery-plugin.php:254
+#: gallery-plugin.php:219
 msgid "Edit Gallery"
 msgstr "编辑画廊"
 
-#: gallery-plugin.php:255
+#: gallery-plugin.php:220
 msgid "New Gallery"
 msgstr "新画廊"
 
-#: gallery-plugin.php:256
+#: gallery-plugin.php:221
 msgid "View Gallery"
 msgstr "浏览画廊"
 
-#: gallery-plugin.php:257
+#: gallery-plugin.php:222
 msgid "Find a Gallery"
 msgstr "查找画廊"
 
-#: gallery-plugin.php:258
+#: gallery-plugin.php:223
 msgid "No Gallery found"
 msgstr "没有找到画廊"
 
-#: gallery-plugin.php:315
+#: gallery-plugin.php:280
 msgid "Upload File"
 msgstr "上传文件"
 
-#: gallery-plugin.php:316
+#: gallery-plugin.php:281
 msgid "Gallery Shortcode"
 msgstr "画廊代码"
 
-#: gallery-plugin.php:334
+#: gallery-plugin.php:283
+#: gallery-plugin.php:427
+#, fuzzy
+msgid "Gallery Categories"
+msgstr "画廊中影像的尺寸"
+
+#: gallery-plugin.php:292
+msgid "Choose a media file that will be attached"
+msgstr ""
+
+#: gallery-plugin.php:292
+#, php-format
+msgid "You need to install \"%s\" plugin to use this functionality"
+msgstr ""
+
+#: gallery-plugin.php:293
+msgid "Attach media item to this gallery"
+msgstr ""
+
+#: gallery-plugin.php:312
 msgid "The gallery temp directory (gallery-plugin/upload/files) is not available for record on your webserver. Please use the standard WP functionality to upload images (media library)"
 msgstr "您网页服务器上的图集临时目录 (gallery-plugin/upload/files) 不可写。请使用标准WP函数上传图像 (media library)"
 
-#: gallery-plugin.php:337
+#: gallery-plugin.php:324
 msgid "Choose an image for upload:"
 msgstr "选择一幅影像上传:"
 
-#: gallery-plugin.php:342
+#: gallery-plugin.php:329
 msgid "Please enable JavaScript to use the file uploader."
 msgstr "请打开JavaScript以使用文件上传工具。"
 
-#: gallery-plugin.php:350
+#: gallery-plugin.php:337
 msgid "Allow the download link for all images in this gallery"
 msgstr "在此画廊中为所有影像开启下载链接"
 
-#: gallery-plugin.php:351
+#: gallery-plugin.php:338
 msgid "Please use the drag and drop function to change an order of the images displaying and do not forget to save the post."
 msgstr "请使用拖拽功能改变影像的输出顺序，且不要忘记保存修改。"
 
-#: gallery-plugin.php:353
+#: gallery-plugin.php:340
 msgid "Please make a choice"
 msgstr "请选择"
 
-#: gallery-plugin.php:353
-#: gallery-plugin.php:1057
+#: gallery-plugin.php:340
+#: gallery-plugin.php:980
 msgid "Sort images by"
 msgstr "影像排序按"
 
-#: gallery-plugin.php:353
+#: gallery-plugin.php:340
 msgid "sort images"
 msgstr "影像排序"
 
-#: gallery-plugin.php:353
+#: gallery-plugin.php:340
 msgid "on the plugin settings page ("
 msgstr "在插件的设置页面（"
 
-#: gallery-plugin.php:394
-#: gallery-plugin.php:616
+#: gallery-plugin.php:384
+#: gallery-plugin.php:645
 msgid "Title"
 msgstr "标题"
 
-#: gallery-plugin.php:396
+#: gallery-plugin.php:386
 msgid "Alt tag"
 msgstr "Alt标签"
 
-#: gallery-plugin.php:397
+#: gallery-plugin.php:387
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:397
+#: gallery-plugin.php:387
 msgid "(by click on image opens a link in a new window)"
 msgstr "（通过点击图像在新窗口中打开链接）"
 
-#: gallery-plugin.php:398
+#: gallery-plugin.php:388
 msgid "This setting is available in Pro version"
 msgstr "此设置在高级版本中可用"
 
-#: gallery-plugin.php:399
+#: gallery-plugin.php:389
 msgid "Open the URL"
 msgstr "打开链接"
 
-#: gallery-plugin.php:399
+#: gallery-plugin.php:389
 msgid "Current window"
 msgstr "当前窗口"
 
-#: gallery-plugin.php:399
+#: gallery-plugin.php:389
 msgid "New window"
 msgstr "新窗口"
 
-#: gallery-plugin.php:400
+#: gallery-plugin.php:390
 msgid "Lightbox button URL"
 msgstr "灯箱按钮链接"
 
-#: gallery-plugin.php:401
+#: gallery-plugin.php:391
 msgid "Description"
 msgstr "描述"
 
-#: gallery-plugin.php:402
+#: gallery-plugin.php:392
 msgid "Delete"
 msgstr "删除"
 
-#: gallery-plugin.php:416
+#: gallery-plugin.php:412
 msgid "You can add a Single Gallery to the page or post by inserting this shortcode into the content"
 msgstr "您可以在页面上添加一个画廊或在正文中插入画廊代码"
 
-#: gallery-plugin.php:418
+#: gallery-plugin.php:414
 msgid "If you want to display a short description containing a screenshot and the link to the Single Gallery Page"
 msgstr "如果您想显示一个简述，其包含屏幕截图且具有指向一个图集的链接"
 
-#: gallery-plugin.php:617
+#: gallery-plugin.php:428
+msgid "Most Used"
+msgstr ""
+
+#: gallery-plugin.php:438
+#, fuzzy
+msgid "Add New Gallery Category"
+msgstr "新建画廊"
+
+#: gallery-plugin.php:443
+#, fuzzy
+msgid "Install plugin"
+msgstr "安装插件"
+
+#: gallery-plugin.php:646
 msgid "Author"
 msgstr "作者"
 
-#: gallery-plugin.php:618
+#: gallery-plugin.php:647
 msgid "Photo"
 msgstr "照片"
 
-#: gallery-plugin.php:619
+#: gallery-plugin.php:648
 msgid "Publishing"
 msgstr "发布"
 
-#: gallery-plugin.php:620
-#: gallery-plugin.php:1061
+#: gallery-plugin.php:649
+#: gallery-plugin.php:984
 msgid "Date"
 msgstr "日期"
 
-#: gallery-plugin.php:786
+#: gallery-plugin.php:817
 msgid "Settings are saved"
 msgstr "设置已保存。"
 
-#: gallery-plugin.php:804
-#: gallery-plugin.php:836
-msgid "Wrong license key"
-msgstr "错误的许可密钥"
-
-#: gallery-plugin.php:829
-msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
-msgstr "出错啦，请稍后再试。如果错误再次出现，请联系我们 <a href=http://support.bestwebsoft.com>BestWebSoft</a>。很抱歉给您带来不便。"
-
-#: gallery-plugin.php:838
-msgid "This license key is bind to another site"
-msgstr "此许可密钥已绑定到另一个站点"
-
-#: gallery-plugin.php:840
-#: gallery-plugin.php:1241
-msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
-msgstr "很遗憾，您尝试的次数已达到每日的限制。请手动上传插件。"
-
-#: gallery-plugin.php:842
-msgid "This license key is valid, but your license has expired."
-msgstr "此许可是有效的，但您的许可已过期。"
-
-#: gallery-plugin.php:844
-msgid "Unfortunately, the PRO licence was already installed to this domain. The PRO Trial license can be installed only once."
-msgstr "很遗憾，此域名已安装了高级版许可。高级版试用许可只能安装一次。"
-
-#: gallery-plugin.php:861
-msgid "Failed to open the zip archive. Please, upload the plugin manually"
-msgstr "打开ZIP压缩文件失败。请手动上传插件"
-
-#: gallery-plugin.php:867
-msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
-msgstr "您的服务器不支持ZIP压缩包或Phar。请手动上传插件"
-
-#: gallery-plugin.php:871
-#: gallery-plugin.php:880
-msgid "Failed to download the zip archive. Please, upload the plugin manually"
-msgstr "下载ZIP压缩包失败。请手动上传插件"
-
-#: gallery-plugin.php:884
-msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvienience."
-msgstr "出错啦。请稍后再试，或手动上传插件。很抱歉给您带来不便，"
-
-#: gallery-plugin.php:899
-msgid "Please, enter Your license key"
-msgstr "请输入您的许可密钥"
-
-#: gallery-plugin.php:905
+#: gallery-plugin.php:828
 msgid "Gallery Settings"
 msgstr "画廊设置"
 
-#: gallery-plugin.php:907
-#: gallery-plugin.php:1263
-#: gallery-plugin.php:1279
+#: gallery-plugin.php:830
+#: gallery-plugin.php:1157
+#: gallery-plugin.php:1174
 msgid "Settings"
 msgstr "设置"
 
-#: gallery-plugin.php:908
-#: gallery-plugin.php:1264
+#: gallery-plugin.php:831
+#: gallery-plugin.php:1158
 msgid "FAQ"
 msgstr "常见问题"
 
-#: gallery-plugin.php:909
+#: gallery-plugin.php:832
 msgid "Go PRO"
 msgstr "转到高级版"
 
-#: gallery-plugin.php:914
+#: gallery-plugin.php:837
 msgid "Notice:"
 msgstr "注意："
 
-#: gallery-plugin.php:914
+#: gallery-plugin.php:837
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr "插件的设置已经被修改。为了保存，请不要忘记点击 '保存修改' 按钮。"
 
-#: gallery-plugin.php:915
+#: gallery-plugin.php:838
 msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
 msgstr "如果您想添加一个画廊到页面或公告中，仅需要将画廊代码放到页面或公告的内容中即可："
 
-#: gallery-plugin.php:917
+#: gallery-plugin.php:840
 msgid "Please enable JavaScript to use the option to renew images."
 msgstr "请打开JavaScript以使用选项更新影像"
 
-#: gallery-plugin.php:921
+#: gallery-plugin.php:844
 msgid "Update images for gallery"
 msgstr "为画廊更新影像"
 
-#: gallery-plugin.php:923
+#: gallery-plugin.php:846
 msgid "Update images"
 msgstr "更新影像"
 
-#: gallery-plugin.php:931
+#: gallery-plugin.php:854
 msgid "Image size for the album cover"
 msgstr "专辑封面的尺寸"
 
-#: gallery-plugin.php:933
-#: gallery-plugin.php:941
-#: gallery-plugin.php:957
+#: gallery-plugin.php:856
+#: gallery-plugin.php:864
+#: gallery-plugin.php:880
 msgid "Image size"
 msgstr "影像尺寸"
 
-#: gallery-plugin.php:934
-#: gallery-plugin.php:942
+#: gallery-plugin.php:857
+#: gallery-plugin.php:865
 msgid "Width (in px)"
 msgstr "宽度（像素）"
 
-#: gallery-plugin.php:935
-#: gallery-plugin.php:943
+#: gallery-plugin.php:858
+#: gallery-plugin.php:866
 msgid "Height (in px)"
 msgstr "高度（像素）"
 
-#: gallery-plugin.php:939
+#: gallery-plugin.php:862
 msgid "Gallery image size"
 msgstr "画廊中影像的尺寸"
 
-#: gallery-plugin.php:947
+#: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "当您上传一幅新的照片时，WordPress会创建一个特定尺寸的缩略图副本。"
 
-#: gallery-plugin.php:955
+#: gallery-plugin.php:878
 msgid "Gallery image size in the lightbox"
 msgstr "灯箱中的影像的尺寸"
 
-#: gallery-plugin.php:958
+#: gallery-plugin.php:881
 msgid "Max width (in px)"
 msgstr "最大宽度（像素）"
 
-#: gallery-plugin.php:959
+#: gallery-plugin.php:882
 msgid "Max height (in px)"
 msgstr "最大高度（像素）"
 
-#: gallery-plugin.php:960
+#: gallery-plugin.php:883
 msgid "Display a full size image in the lightbox"
 msgstr "在灯箱中显示全尺寸图像"
 
-#: gallery-plugin.php:964
+#: gallery-plugin.php:887
 msgid "Crop position"
 msgstr "裁剪位置"
 
-#: gallery-plugin.php:966
+#: gallery-plugin.php:889
 msgid "Horizontal"
 msgstr "水平"
 
-#: gallery-plugin.php:968
+#: gallery-plugin.php:891
 msgid "left"
 msgstr "偏左"
 
-#: gallery-plugin.php:969
-#: gallery-plugin.php:976
+#: gallery-plugin.php:892
+#: gallery-plugin.php:899
 msgid "center"
 msgstr "居中"
 
-#: gallery-plugin.php:970
+#: gallery-plugin.php:893
 msgid "right"
 msgstr "偏右"
 
-#: gallery-plugin.php:973
+#: gallery-plugin.php:896
 msgid "Vertical"
 msgstr "垂直"
 
-#: gallery-plugin.php:975
+#: gallery-plugin.php:898
 msgid "top"
 msgstr "偏上"
 
-#: gallery-plugin.php:977
+#: gallery-plugin.php:900
 msgid "bottom"
 msgstr "偏下"
 
-#: gallery-plugin.php:982
+#: gallery-plugin.php:905
 msgid "Lightbox background"
 msgstr "灯箱背景"
 
-#: gallery-plugin.php:984
+#: gallery-plugin.php:907
 msgid "Default"
 msgstr "默认"
 
-#: gallery-plugin.php:985
+#: gallery-plugin.php:908
 msgid "Background transparency (from 0 to 1)"
 msgstr "背景透明度（从 0 到 1）"
 
-#: gallery-plugin.php:987
+#: gallery-plugin.php:910
 msgid "Select a background color"
 msgstr "选择背景色"
 
-#: gallery-plugin.php:989
+#: gallery-plugin.php:912
 msgid "Background color"
 msgstr "背景色"
 
-#: gallery-plugin.php:996
-#: gallery-plugin.php:1171
+#: gallery-plugin.php:919
+#: gallery-plugin.php:1101
 msgid "If you upgrade to Pro version all your settings and galleries will be saved."
 msgstr "如果您升级到高级版本，您的设置和画廊将被保存。"
 
-#: gallery-plugin.php:1003
-#: gallery-plugin.php:1178
+#: gallery-plugin.php:926
+#: gallery-plugin.php:1108
 msgid "Unlock premium options by upgrading to a PRO version."
 msgstr "升级到高级版以解锁额外的选项。"
 
-#: gallery-plugin.php:1004
-#: gallery-plugin.php:1179
-#: gallery-plugin.php:2008
+#: gallery-plugin.php:927
+#: gallery-plugin.php:1109
 msgid "Learn More"
 msgstr "学习更多"
 
-#: gallery-plugin.php:1008
-#: gallery-plugin.php:1183
+#: gallery-plugin.php:931
+#: gallery-plugin.php:1113
 msgid "Start Your Trial"
 msgstr "开始试用"
 
-#: gallery-plugin.php:1009
-#: gallery-plugin.php:1184
-#: gallery-plugin.php:1238
-#: gallery-plugin.php:1248
+#: gallery-plugin.php:932
+#: gallery-plugin.php:1114
 msgid "or"
 msgstr "或"
 
-#: gallery-plugin.php:1012
-#: gallery-plugin.php:1187
+#: gallery-plugin.php:935
+#: gallery-plugin.php:1117
 msgid "Go"
 msgstr "转到"
 
-#: gallery-plugin.php:1020
+#: gallery-plugin.php:943
 msgid "Images with border"
 msgstr "影像边缘"
 
-#: gallery-plugin.php:1023
+#: gallery-plugin.php:946
 msgid "Border width in px, just numbers"
 msgstr "边缘宽度，以像素为单位，只能使用数字"
 
-#: gallery-plugin.php:1025
-#: gallery-plugin.php:1027
+#: gallery-plugin.php:948
+#: gallery-plugin.php:950
 msgid "Select a border color"
 msgstr "选择边框颜色"
 
-#: gallery-plugin.php:1033
+#: gallery-plugin.php:956
 msgid "Number of images in the row"
 msgstr "一行中图像的数量"
 
-#: gallery-plugin.php:1039
+#: gallery-plugin.php:962
 msgid "Start slideshow"
 msgstr "播放幻灯片"
 
-#: gallery-plugin.php:1045
+#: gallery-plugin.php:968
 msgid "Slideshow interval"
 msgstr "幻灯片播放间隔"
 
-#: gallery-plugin.php:1051
+#: gallery-plugin.php:974
 msgid "Use single lightbox for multiple galleries on one page"
 msgstr "在同一页面上为多个画廊使用同一个灯箱"
 
-#: gallery-plugin.php:1059
+#: gallery-plugin.php:982
 msgid "Attachment ID"
 msgstr "附件ID"
 
-#: gallery-plugin.php:1060
+#: gallery-plugin.php:983
 msgid "Image Name"
 msgstr "影像名称"
 
-#: gallery-plugin.php:1062
+#: gallery-plugin.php:985
 msgid "Sorting order (the input field for sorting order in the Insert / Upload Media Gallery dialog)"
 msgstr "分类排序（插入/上传媒体图集对话框中的输入字段）"
 
-#: gallery-plugin.php:1063
+#: gallery-plugin.php:986
 msgid "Random"
 msgstr "随机"
 
-#: gallery-plugin.php:1067
+#: gallery-plugin.php:990
 msgid "Sort images"
 msgstr "影像排序"
 
-#: gallery-plugin.php:1069
+#: gallery-plugin.php:992
 msgid "ASC (ascending order from lowest to highest values - 1, 2, 3; a, b, c)"
 msgstr "升序（由低到高 -  1, 2, 3; a, b, c）"
 
-#: gallery-plugin.php:1070
+#: gallery-plugin.php:993
 msgid "DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
 msgstr "降序（由高到低 - 3, 2, 1; c, b, a）"
 
-#: gallery-plugin.php:1074
+#: gallery-plugin.php:997
 msgid "Display text under the image"
 msgstr "在图像下方显示文本"
 
-#: gallery-plugin.php:1076
+#: gallery-plugin.php:999
 msgid "Turn off the checkbox, if you want to display text just in a lightbox"
 msgstr "取消复选框，如果您仅想在灯箱中显示文本"
 
-#: gallery-plugin.php:1080
+#: gallery-plugin.php:1003
 msgid "Display the Back link"
 msgstr "显示返回链接"
 
-#: gallery-plugin.php:1086
+#: gallery-plugin.php:1009
 msgid "Display the Back link in the shortcode"
 msgstr "以代码方式显示返回链接"
 
-#: gallery-plugin.php:1092
+#: gallery-plugin.php:1015
 msgid "The Back link text"
 msgstr "返回链接文本"
 
-#: gallery-plugin.php:1098
+#: gallery-plugin.php:1021
 msgid "The Back link URL"
 msgstr "返回链接URL"
 
-#: gallery-plugin.php:1100
+#: gallery-plugin.php:1023
 msgid "Gallery page (Page with Gallery Template)"
 msgstr "画廊页面（具有画廊模板的页面）"
 
-#: gallery-plugin.php:1102
+#: gallery-plugin.php:1025
 msgid "(Full URL to custom page)"
 msgstr "（到自定义页面的完整地址）"
 
-#: gallery-plugin.php:1106
+#: gallery-plugin.php:1029
 msgid "The Read More link text"
 msgstr "阅读更多链接的文本"
 
-#: gallery-plugin.php:1112
+#: gallery-plugin.php:1035
 msgid "Add gallery to the search"
 msgstr "将画廊添加到搜索"
 
-#: gallery-plugin.php:1117
+#: gallery-plugin.php:1040
 msgid "Using"
 msgstr "试用"
 
-#: gallery-plugin.php:1117
+#: gallery-plugin.php:1040
 msgid "powered by"
 msgstr "提供方为"
 
-#: gallery-plugin.php:1120
-#: gallery-plugin.php:1124
+#: gallery-plugin.php:1043
+#: gallery-plugin.php:1047
 msgid "Using Custom Search powered by"
 msgstr "自定义搜索技术支持"
 
-#: gallery-plugin.php:1120
+#: gallery-plugin.php:1043
 msgid "Activate Custom Search"
 msgstr "启用自定义搜索"
 
-#: gallery-plugin.php:1124
+#: gallery-plugin.php:1047
 msgid "Download Custom Search"
 msgstr "下载自定义搜索"
 
-#: gallery-plugin.php:1134
+#: gallery-plugin.php:1057
 msgid "Use pagination for images"
 msgstr "为影像使用分页"
 
-#: gallery-plugin.php:1137
+#: gallery-plugin.php:1060
 msgid "per page"
 msgstr "每页"
 
-#: gallery-plugin.php:1141
+#: gallery-plugin.php:1064
 msgid "The lightbox helper"
 msgstr "灯箱帮助"
 
-#: gallery-plugin.php:1143
+#: gallery-plugin.php:1066
 msgid "Do not use"
 msgstr "不要使用"
 
-#: gallery-plugin.php:1144
+#: gallery-plugin.php:1067
 msgid "Button helper"
 msgstr "按钮帮助"
 
-#: gallery-plugin.php:1145
+#: gallery-plugin.php:1068
 msgid "Thumbnail helper"
 msgstr "缩略图帮助"
 
-#: gallery-plugin.php:1149
+#: gallery-plugin.php:1072
 msgid "Display Like buttons in the lightbox"
 msgstr "在灯箱中显示[喜欢]按钮"
 
-#: gallery-plugin.php:1151
+#: gallery-plugin.php:1074
 msgid "FaceBook"
 msgstr "Facebook"
 
-#: gallery-plugin.php:1152
+#: gallery-plugin.php:1075
 msgid "Twitter"
 msgstr "Twitter"
 
-#: gallery-plugin.php:1153
+#: gallery-plugin.php:1076
 msgid "Pinterest"
 msgstr "Printerest"
 
-#: gallery-plugin.php:1154
+#: gallery-plugin.php:1077
 msgid "Google +1"
 msgstr "Google +1"
 
-#: gallery-plugin.php:1158
+#: gallery-plugin.php:1081
 msgid "Slug for gallery item"
 msgstr "画廊项的滑块"
 
-#: gallery-plugin.php:1160
+#: gallery-plugin.php:1083
 msgid "for any structure of permalinks except the default structure"
 msgstr "给任意结构的固定链接，除了默认结构"
 
-#: gallery-plugin.php:1164
+#: gallery-plugin.php:1087
 msgid "Title for lightbox button"
 msgstr "灯箱按钮的标题"
 
-#: gallery-plugin.php:1195
+#: gallery-plugin.php:1093
+msgid "Display all images in the lightbox instead of going into a single gallery"
+msgstr ""
+
+#: gallery-plugin.php:1096
+msgid "When using the gallery template or a shortcode with `display=short` parameter"
+msgstr ""
+
+#: gallery-plugin.php:1125
 msgid "Save Changes"
 msgstr "保存修改"
 
-#: gallery-plugin.php:1201
-msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr "如果您喜欢我们的插件，请在 WordPress 上给它5星评价"
-
-#: gallery-plugin.php:1202
-msgid "Rate the plugin"
-msgstr "给插件评价"
-
-#: gallery-plugin.php:1205
-msgid "If there is something wrong about it, please contact us"
-msgstr "如果您有任何问题，请联系我们"
-
-#: gallery-plugin.php:1216
-msgid "Congratulations! The PRO version of the plugin is successfully download and activated."
-msgstr "祝贺！已成功下载并激活高级版插件。"
-
-#: gallery-plugin.php:1218
-msgid "Please, go to"
-msgstr "请转到"
-
-#: gallery-plugin.php:1218
-msgid "the setting page"
-msgstr "设置页面"
-
-#: gallery-plugin.php:1219
-msgid "You will be redirected automatically in 5 seconds."
-msgstr "您将会在 5 秒后自动跳转。"
-
-#: gallery-plugin.php:1224
-msgid "You can download and activate"
-msgstr "您可以下载并激活"
-
-#: gallery-plugin.php:1226
-msgid "version of this plugin by entering Your license key."
-msgstr "插件的版本取决于您输入的许可密钥。"
-
-#: gallery-plugin.php:1228
-msgid "You can find your license key on your personal page Client area, by clicking on the link"
-msgstr "您可以在个人页面中通过点击链接查找您的许可密钥"
-
-#: gallery-plugin.php:1230
-msgid "(your username is the email you specify when purchasing the product)."
-msgstr "（您的用户名就是你在购买产品时指定的电子邮件）。"
-
-#: gallery-plugin.php:1238
-#: gallery-plugin.php:1248
-msgid "Activate"
-msgstr "激活"
-
-#: gallery-plugin.php:1238
-#: gallery-plugin.php:1248
-msgid "Start Your Free 7-Day Trial Now"
-msgstr "现在就开始您的 7 天免费试用"
-
-#: gallery-plugin.php:1265
+#: gallery-plugin.php:1159
 msgid "Support"
 msgstr "支持"
 
-#: gallery-plugin.php:1368
+#: gallery-plugin.php:1267
 msgid "Updating images..."
 msgstr "正在更新影像..."
 
-#: gallery-plugin.php:1369
-msgid "No image found"
+#: gallery-plugin.php:1268
+#, fuzzy
+msgid "No image found."
 msgstr "没有找到影像"
 
-#: gallery-plugin.php:1370
-msgid "All images are updated"
+#: gallery-plugin.php:1269
+#, fuzzy
+msgid "All images are updated."
 msgstr "已更新全部影像"
 
-#: gallery-plugin.php:1371
+#: gallery-plugin.php:1270
 msgid "Error."
 msgstr "错误。"
+
+#: gallery-plugin.php:1279
+#, fuzzy
+msgid "Learn more"
+msgstr "学习更多"
+
+#: gallery-plugin.php:1284
+#: gallery-plugin.php:1324
+msgid "Activate"
+msgstr "激活"
+
+#: gallery-plugin.php:1291
+#: gallery-plugin.php:1331
+#, fuzzy
+msgid "Install now"
+msgstr "安装 %s"
+
+#: gallery-plugin.php:1300
+msgid "Add multiple gallery categories"
+msgstr ""
+
+#: gallery-plugin.php:1300
+msgid "Install Gallery Categories plugin to add unlimited number of categories."
+msgstr ""
+
+#: gallery-plugin.php:1309
+#: gallery-plugin.php:1350
+msgid "Close"
+msgstr ""
+
+#: gallery-plugin.php:1341
+msgid "Already attached?"
+msgstr ""
+
+#: gallery-plugin.php:1341
+msgid "If you'd like to attach the files, which are already uploaded, please use Re-attacher plugin."
+msgstr ""
 
 #: gallery-plugin.php:1404
 #: template/gallery-single-template.php:19
 msgid "Download high resolution image"
 msgstr "下载高分辨率图像"
 
-#: gallery-plugin.php:1512
-#: template/gallery-single-template.php:88
+#: gallery-plugin.php:1557
+#: template/gallery-single-template.php:95
 msgid "Sorry, nothing found."
 msgstr "对不起 - 没有找到。"
 
-#: gallery-plugin.php:1534
-#: template/gallery-single-template.php:115
+#: gallery-plugin.php:1579
+#: template/gallery-single-template.php:114
 msgid "Image"
 msgstr "影像"
 
-#: gallery-plugin.php:1829
+#: gallery-plugin.php:1875
 msgid "Image size not defined"
 msgstr "影像尺寸未定义"
 
-#: gallery-plugin.php:1844
+#: gallery-plugin.php:1890
 msgid "We can update only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please, manually reload image."
 msgstr "我们仅可以更新 PNG，JPEG，GIF，WPMP 或 XBM 文件。对于其他文件类型，请手动重新加载影像。"
 
-#: gallery-plugin.php:1855
+#: gallery-plugin.php:1901
 msgid "Image size changes not defined"
 msgstr "图像大小的变化没有定义"
 
-#: gallery-plugin.php:1884
-#: gallery-plugin.php:1887
-#: gallery-plugin.php:1892
+#: gallery-plugin.php:1930
+#: gallery-plugin.php:1933
+#: gallery-plugin.php:1938
 msgid "Invalid path"
 msgstr "无效的路径"
 
-#: gallery-plugin.php:2011
-msgid "It’s time to upgrade your <strong>Gallery plugin</strong> to <strong>PRO</strong> version!"
-msgstr "是时候升级您的 <strong>Gallery plugin</strong> 到 <strong>PRO</strong> 版了！"
-
-#: gallery-plugin.php:2012
-msgid "Extend standard plugin functionality with new great options"
-msgstr "使用更好的选项扩展标准插件功能。"
-
-#~ msgid ""
-#~ "This functionality is available in the Pro version of the plugin. For "
-#~ "more details, please follow the link"
-#~ msgstr "此功能在插件的高级版本中可用。如需查看详细信息，请点击以下链接"
-
-#~ msgid "Change the way to store your post_meta information for gallery"
-#~ msgstr "为画廊改变存储 post_meta 信息的方式"
-
-#~ msgid "Update All Info"
-#~ msgstr "更新全部信息"
-
-#~ msgid "Updating post_meta information..."
-#~ msgstr "更新 post_meta 信息..."
-
-#~ msgid "No gallery item found"
-#~ msgstr "没有找到画廊项"
-
-#~ msgid "All info is updated"
-#~ msgstr "已更新全部信息"
-
-#, fuzzy
-#~ msgid "PHP Max Upload Size"
-#~ msgstr "上传文件"
-
-#, fuzzy
-#~ msgid "Site URL"
-#~ msgstr "链接网址"
-
-#~ msgid "Installed plugins"
-#~ msgstr "安装插件"
-
-#~ msgid "Recommended plugins"
-#~ msgstr "推荐的插件"
-
-#~ msgid "Purchase"
-#~ msgstr "购买"
-
-#~ msgid "Download"
-#~ msgstr "下载"
-
-#~ msgid "Install %s"
-#~ msgstr "安装 %s"
-
-#~ msgid "Install now from wordpress.org"
-#~ msgstr "现在从 wordpress.org 安装"
-
-#, fuzzy
-#~ msgid "Active Plugins"
-#~ msgstr "已激活的插件"
-
-#, fuzzy
-#~ msgid "Inactive Plugins"
-#~ msgstr "已激活的插件"
-
-#, fuzzy
-#~ msgid "Send to support"
-#~ msgstr "支持"
-
-#~ msgid "Add New"
-#~ msgstr "新增"
-
-#~ msgid "Search Galleries"
-#~ msgstr "搜索图集"
-
-#~ msgid "Please do not forget to select "
-#~ msgstr "请不要忘记选择"
-
-#~ msgid "Attachments order by"
-#~ msgstr "附件按"
-
-#~ msgid "attachments order"
-#~ msgstr "附件排序"
-
-#~ msgid "The size of the cover album for gallery"
-#~ msgstr "封面专辑的图像尺寸"
-
-#~ msgid "attachment title"
-#~ msgstr "附件标题"
-
-#~ msgid "date"
-#~ msgstr "日期"
-
-#~ msgid "Attachments order"
-#~ msgstr "附件排序"
-
-#~ msgid "Label for Return link"
-#~ msgstr "返回链接的标签"
-
-#~ msgid "URL for Return link"
-#~ msgstr "返回链接的地址"

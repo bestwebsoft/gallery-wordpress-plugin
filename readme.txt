@@ -1,10 +1,10 @@
-=== Gallery ===
+=== Gallery by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.2
-Tested up to: 4.1
-Stable tag: 4.2.8
+Tested up to: 4.2
+Stable tag: 4.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -166,6 +166,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.2.9 - 28.04.2015 =
+* Update : The French language file is updated.
+* Bugfix : Bug with the DB-table prefix in template file was fixed.
+* Bugfix : Bug with updating rewrite rules on each page load was fixed.
 
 = V4.2.8 - 12.02.2015 =
 * Bugfix : Bug with theme permissions was fixed.
@@ -464,6 +469,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.2.9 =
+The French language file is updated. Bug with the DB-table prefix in template file was fixed. Bug with updating rewrite rules on each page load was fixed.
 
 = V4.2.8 =
 Bug with theme permissions was fixed.
