@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:35+0300\n"
-"PO-Revision-Date: 2015-04-28 12:35+0300\n"
+"POT-Creation-Date: 2015-05-18 12:48+0300\n"
+"PO-Revision-Date: 2015-05-18 12:48+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Jonas Seemann <info@ahoidesign.de>\n"
 "Language: uk_UA\n"
@@ -281,15 +281,17 @@ msgid "Height (in px)"
 msgstr "Höhe (in px)"
 
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "Bildgröße für Galerie"
+#, fuzzy
+msgid "Image size for thumbnails"
+msgstr "Bildgröße für Beitragsbild"
 
 #: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "Wordpress wird ein neues Thumbnail mit den Einstellungen erstellen, wenn du ein neues Bild hochlädst."
 
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
+#, fuzzy
+msgid "Image size in the lightbox"
 msgstr "Galeriegröße in der Lightbox"
 
 #: gallery-plugin.php:881
@@ -668,3 +670,5 @@ msgstr ""
 msgid "Invalid path"
 msgstr ""
 
+#~ msgid "Gallery image size"
+#~ msgstr "Bildgröße für Galerie"

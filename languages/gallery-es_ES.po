@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:36+0300\n"
-"PO-Revision-Date: 2015-04-28 12:36+0300\n"
+"POT-Creation-Date: 2015-05-18 12:48+0300\n"
+"PO-Revision-Date: 2015-05-18 12:48+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Carlos Limia <climia@climia.es>\n"
 "Language: pt_BR\n"
@@ -332,8 +332,9 @@ msgstr "Altura (em px)"
 
 # @ gallery
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "Tamanño de da imagen de la galeria"
+#, fuzzy
+msgid "Image size for thumbnails"
+msgstr "Tamanño de la imagen para la portada del álbum"
 
 # @ gallery
 #: gallery-plugin.php:870
@@ -342,7 +343,8 @@ msgstr "WordPress creara una miniatura nueva cuando suba una nueva imagen."
 
 # @ gallery
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
+#, fuzzy
+msgid "Image size in the lightbox"
 msgstr "Tamanño de la imagen en la galeria del Lightbox"
 
 # @ gallery

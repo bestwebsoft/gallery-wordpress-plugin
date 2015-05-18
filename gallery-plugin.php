@@ -4,7 +4,7 @@ Plugin Name: Gallery by BestWebSoft
 Plugin URI:  http://bestwebsoft.com/products/
 Description: This plugin allows you to implement gallery page into web site.
 Author: BestWebSoft
-Version: 4.2.9
+Version: 4.3.0
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -859,7 +859,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 							</td>
 						</tr>
 						<tr valign="top" class="gllr_width_labels">
-							<th scope="row"><?php _e( 'Gallery image size', 'gallery' ); ?> </th>
+							<th scope="row"><?php _e( 'Image size for thumbnails', 'gallery' ); ?> </th>
 							<td>
 								<label for="custom_image_size_name"><?php _e( 'Image size', 'gallery' ); ?></label> <?php echo $gllr_options["gllr_custom_size_name"][1]; ?><br />
 								<label for="custom_image_size_w"><?php _e( 'Width (in px)', 'gallery' ); ?></label> <input type="text" name="gllr_custom_image_size_w_photo" value="<?php echo $gllr_options["gllr_custom_size_px"][1][0]; ?>" /><br />
@@ -875,7 +875,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 							<div class="bws_table_bg"></div>
 							<table class="form-table bws_pro_version">
 								<tr valign="top" class="gllr_width_labels">
-									<th scope="row"><?php _e( 'Gallery image size in the lightbox', 'gallery' ); ?> </th>
+									<th scope="row"><?php _e( 'Image size in the lightbox', 'gallery' ); ?> </th>
 									<td>
 										<label for="custom_image_size_name"><?php _e( 'Image size', 'gallery' ); ?></label> full-photo<br />
 										<label for="custom_image_size_w"><?php _e( 'Max width (in px)', 'gallery' ); ?></label> <input disabled class="gllrprfssnl_size_photo_full" type="text" name="gllrprfssnl_custom_image_size_w_full" value="1024"/><br />
@@ -1995,7 +1995,7 @@ if ( ! function_exists ( 'gllr_theme_body_classes' ) ) {
 	function gllr_theme_body_classes( $classes ) {
 		if ( function_exists( 'wp_get_theme' ) ) {
 			$current_theme = wp_get_theme();
-			$classes[] = basename( $current_theme->get( 'ThemeURI' ) );
+			$classes[] = 'gllr_' . basename( $current_theme->get( 'ThemeURI' ) );
 		}
 		return $classes;
 	}
@@ -2006,7 +2006,7 @@ if ( ! function_exists ( 'gllr_plugin_banner' ) ) {
 		global $hook_suffix;
 		if ( 'plugins.php' == $hook_suffix ) {
 			global $gllr_plugin_info;
-			bws_plugin_banner( $gllr_plugin_info, 'gllr', 'gallery', '01a04166048e9416955ce1cbe9d5ca16', '79', 'http://ps.w.org/gallery-plugin/assets/icon-128x128.png' );
+			bws_plugin_banner( $gllr_plugin_info, 'gllr', 'gallery', '01a04166048e9416955ce1cbe9d5ca16', '79', '//ps.w.org/gallery-plugin/assets/icon-128x128.png' );
 		}
 	}
 }

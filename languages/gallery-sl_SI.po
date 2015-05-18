@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:36+0300\n"
-"PO-Revision-Date: 2015-04-28 12:36+0300\n"
+"POT-Creation-Date: 2015-05-18 12:54+0300\n"
+"PO-Revision-Date: 2015-05-18 12:54+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Tilen <tilen@divided.si>\n"
 "Language: sl_SI\n"
@@ -278,15 +278,17 @@ msgid "Height (in px)"
 msgstr "Višina (v pikslih)"
 
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "Velikost slike v galeriji"
+#, fuzzy
+msgid "Image size for thumbnails"
+msgstr "Velikost slike albuma"
 
 #: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "WordPress bo ustvaril novo predolgedno sliko z danimi dimenzijami pri naslednjem nalaganju nove slike."
 
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
+#, fuzzy
+msgid "Image size in the lightbox"
 msgstr "Velikost slike v lightbox-u"
 
 #: gallery-plugin.php:881
@@ -662,3 +664,5 @@ msgstr "Spremembe velikosti slike niso podane"
 msgid "Invalid path"
 msgstr "Napačna pot"
 
+#~ msgid "Gallery image size"
+#~ msgstr "Velikost slike v galeriji"

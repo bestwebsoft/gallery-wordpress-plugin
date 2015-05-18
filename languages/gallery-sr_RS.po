@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:36+0300\n"
-"PO-Revision-Date: 2015-04-28 12:36+0300\n"
+"POT-Creation-Date: 2015-05-18 12:54+0300\n"
+"PO-Revision-Date: 2015-05-18 12:54+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Radovan Georgijevic, Andrijana Nikolic <http://www.georgijevic.info, andrijanan@webhostinggeeks.com>\n"
 "Language: fr_FR\n"
@@ -282,15 +282,17 @@ msgid "Height (in px)"
 msgstr "Visina (u pikselima)"
 
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "Veličina slika u galeriji"
+#, fuzzy
+msgid "Image size for thumbnails"
+msgstr "Veličina slike za naslovnu stranicu albuma"
 
 #: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "WordPress će kreirati novi umanjeni prikaz sa navedenim dimenzijama kada učitate novu sliku."
 
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
+#, fuzzy
+msgid "Image size in the lightbox"
 msgstr "Veličina slika u galeriji u lightbox skriptu"
 
 #: gallery-plugin.php:881
@@ -673,3 +675,5 @@ msgstr ""
 msgid "Invalid path"
 msgstr ""
 
+#~ msgid "Gallery image size"
+#~ msgstr "Veličina slika u galeriji"

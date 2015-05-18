@@ -2,19 +2,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:36+0300\n"
-"PO-Revision-Date: 2015-04-28 12:36+0300\n"
+"POT-Creation-Date: 2015-05-18 12:49+0300\n"
+"PO-Revision-Date: 2015-05-18 12:49+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Didier, L Capronnier <lcapronnier@yahoo.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;esc_html;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: gallery-plugin.php:95
@@ -72,22 +72,21 @@ msgstr "Gallery Shortcode"
 
 #: gallery-plugin.php:283
 #: gallery-plugin.php:427
-#, fuzzy
 msgid "Gallery Categories"
-msgstr "Taille de l'image de la galerie"
+msgstr "Catégories de galeries"
 
 #: gallery-plugin.php:292
 msgid "Choose a media file that will be attached"
-msgstr ""
+msgstr "Choisissez une fichier qui sera attaché"
 
 #: gallery-plugin.php:292
 #, php-format
 msgid "You need to install \"%s\" plugin to use this functionality"
-msgstr ""
+msgstr "Vous devez installer l'extension %s pour utiliser cette fonction"
 
 #: gallery-plugin.php:293
 msgid "Attach media item to this gallery"
-msgstr ""
+msgstr "Attacher un fichier média à cette galerie"
 
 #: gallery-plugin.php:312
 msgid "The gallery temp directory (gallery-plugin/upload/files) is not available for record on your webserver. Please use the standard WP functionality to upload images (media library)"
@@ -181,17 +180,15 @@ msgstr "Si vous voulez avoir un bref aperçu de la galerie avec un lien vers une
 
 #: gallery-plugin.php:428
 msgid "Most Used"
-msgstr ""
+msgstr "Les plus utiliser"
 
 #: gallery-plugin.php:438
-#, fuzzy
 msgid "Add New Gallery Category"
-msgstr "Ajouter une nouvelle galerie"
+msgstr "Ajouter une nouvelle catégorie de galerie"
 
 #: gallery-plugin.php:443
-#, fuzzy
 msgid "Install plugin"
-msgstr "Extensions installées"
+msgstr "Installer l'extension"
 
 #: gallery-plugin.php:646
 msgid "Author"
@@ -243,7 +240,7 @@ msgstr "Les paramètres de l'extension ont été changés. Afin de pouvoir les e
 
 #: gallery-plugin.php:838
 msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
-msgstr "Si vous voulez ajouter la galerie dans une page ou un article, copier le code court suivant dans le contenu de votre page ou de votre article:"
+msgstr "Si vous voulez ajouter la galerie dans une page ou un article, copier le code court suivant dans le contenu de votre page ou de votre article :"
 
 #: gallery-plugin.php:840
 msgid "Please enable JavaScript to use the option to renew images."
@@ -278,15 +275,17 @@ msgid "Height (in px)"
 msgstr "Hauteur (en pixels)"
 
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "Taille de l'image de la galerie"
+#, fuzzy
+msgid "Image size for thumbnails"
+msgstr "Taille de la vignette de l'album"
 
 #: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "WordPress créera une copie de la miniature avec les dimensions spécifiées quand vous envoyez une nouvelle photo."
 
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
+#, fuzzy
+msgid "Image size in the lightbox"
 msgstr "Taille de l'image de la galerie"
 
 #: gallery-plugin.php:881
@@ -560,11 +559,11 @@ msgstr "Titre pour le bouton lightbox"
 
 #: gallery-plugin.php:1093
 msgid "Display all images in the lightbox instead of going into a single gallery"
-msgstr ""
+msgstr "Afficher toutes les images dans une 'lightbox' au lieu de d'une seule galerie"
 
 #: gallery-plugin.php:1096
 msgid "When using the gallery template or a shortcode with `display=short` parameter"
-msgstr ""
+msgstr "Quand vous utilisez le modèle de galerie ou le code court avec le paramètre `display=short`"
 
 #: gallery-plugin.php:1125
 msgid "Save Changes"
@@ -579,14 +578,12 @@ msgid "Updating images..."
 msgstr "Mise à jour des images..."
 
 #: gallery-plugin.php:1268
-#, fuzzy
 msgid "No image found."
-msgstr "Pas d'image trouvée"
+msgstr "Pas d'image trouvée."
 
 #: gallery-plugin.php:1269
-#, fuzzy
 msgid "All images are updated."
-msgstr "Toutes les images ont été mises à jour"
+msgstr "Toutes les images ont été mises à jour."
 
 #: gallery-plugin.php:1270
 msgid "Error."
@@ -608,25 +605,24 @@ msgstr "Installé maintenant"
 
 #: gallery-plugin.php:1300
 msgid "Add multiple gallery categories"
-msgstr ""
+msgstr "Ajouter des catégories de galeries"
 
 #: gallery-plugin.php:1300
 msgid "Install Gallery Categories plugin to add unlimited number of categories."
-msgstr ""
+msgstr "Installer l'extension 'Gallery Categories' pour ajouter un nombre infini de catégories."
 
 #: gallery-plugin.php:1309
 #: gallery-plugin.php:1350
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: gallery-plugin.php:1341
-#, fuzzy
 msgid "Already attached?"
-msgstr "Déjà installé"
+msgstr "Déjà lié?"
 
 #: gallery-plugin.php:1341
 msgid "If you'd like to attach the files, which are already uploaded, please use Re-attacher plugin."
-msgstr ""
+msgstr "Si vous voulez lier des fichiers qui se trouvent déjà sur le site, merci d'utiliser l'extension 'Re-attacher'"
 
 #: gallery-plugin.php:1404
 #: template/gallery-single-template.php:19
@@ -661,3 +657,569 @@ msgstr "La modification de la taille n'est pas définie"
 msgid "Invalid path"
 msgstr "Chemin invalide"
 
+#~ msgid "Gallery image size"
+#~ msgstr "Taille de l'image de la galerie"
+
+#~ msgid "requires"
+#~ msgstr "requis"
+
+#~ msgid ""
+#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
+#~ "and try again."
+#~ msgstr ""
+#~ "ou supérieure, c'est pourquoi il a été désactive! Merci de faire la mise "
+#~ "à jour de WordPress et de ré-essayer!"
+
+#~ msgid "Back to the WordPress"
+#~ msgstr "Retour à WordPress"
+
+#~ msgid "Plugins page"
+#~ msgstr "Page des extensions"
+
+#~ msgid "It’s time to upgrade your"
+#~ msgstr "C'est le moment de mettre à jour votre "
+
+#~ msgid "to"
+#~ msgstr "à"
+
+#~ msgid "version!"
+#~ msgstr "version"
+
+#~ msgid "Extend standard plugin functionality with new great options."
+#~ msgstr ""
+#~ "Etend les fonctionalités classiques de l'extension avec des nouvelles "
+#~ "options."
+
+#~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+#~ msgstr ""
+#~ "Si notre extension vous satisfait, merci de la notée avec 5 étoiles dans "
+#~ "Wordpress"
+
+#~ msgid "Rate the plugin"
+#~ msgstr "Noter l'extension"
+
+#~ msgid "If there is something wrong about it, please contact us"
+#~ msgstr "Si vous avez des questions, merci de nous contacter"
+
+#~ msgid "Wrong license key"
+#~ msgstr "Clé de licence incorrecte"
+
+#~ msgid ""
+#~ "Something went wrong. Please try again later. If the error appears again, "
+#~ "please contact us"
+#~ msgstr ""
+#~ "Il est survenu une erreur. Essayer de nouveau. Si l'erreur se produit de "
+#~ "nouveau, merci de contacter <a href=http://support.bestwebsoft."
+#~ "com>BestWebSoft</a>. Nous sommes désolés pour le désagrément."
+
+#~ msgid "We are sorry for inconvenience."
+#~ msgstr "Nous sommes désolés pour le désagrément."
+
+#~ msgid "This license key is bind to another site"
+#~ msgstr "La clé de licence correspond à un autre site."
+
+#~ msgid ""
+#~ "Unfortunately, you have exceeded the number of available tries per day. "
+#~ "Please, upload the plugin manually."
+#~ msgstr ""
+#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
+#~ "télécharger l'extension manuellement."
+
+#~ msgid ""
+#~ "Unfortunately, Your license has expired. To continue getting top-priority "
+#~ "support and plugin updates you should extend it in your"
+#~ msgstr ""
+#~ "Désoler, votre licence est terminée. Pour continuer à disposer du support "
+#~ "rapide et des mises à jour de l'extension vous devez la renouveller dans "
+#~ "votre"
+
+#~ msgid ""
+#~ "Unfortunately, the PRO licence was already installed to this domain. The "
+#~ "PRO Trial license can be installed only once."
+#~ msgstr ""
+#~ "Malheuresement la licence PRO a déjà été installée sur ce domaine. La "
+#~ "licence PRO d'évaluation peut être installée une seule fois."
+
+#~ msgid ""
+#~ "Failed to download the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur de téléchargement de l'archive ZIP. Merci de télécharger "
+#~ "l'extension manuellement."
+
+#~ msgid "Failed to open the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
+#~ "manuellement."
+
+#~ msgid ""
+#~ "Your server does not support either ZipArchive or Phar. Please, upload "
+#~ "the plugin manually"
+#~ msgstr ""
+#~ "Votre server n'a pas le support du format des archives ZIP ou Phar. Merci "
+#~ "de télécharger l'extension manuellement."
+
+#~ msgid "UploadDir is not writable. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
+#~ "manuellement."
+
+#~ msgid ""
+#~ "Something went wrong. Try again later or upload the plugin manually. We "
+#~ "are sorry for inconvenience."
+#~ msgstr ""
+#~ "Il est survenu une erreur. Essayer de nouveau ou bien télécharger "
+#~ "l'extension manuellement.Nous sommes désolés pour le désagrément."
+
+#~ msgid "Please, enter Your license key"
+#~ msgstr "Merci de saisir votre clé de liecence"
+
+#~ msgid ""
+#~ "Congratulations! The PRO version of the plugin is successfully download "
+#~ "and activated."
+#~ msgstr ""
+#~ "Félicitations! La version PRO de cette extension a été téléchargée et "
+#~ "activée avec succès."
+
+#~ msgid "Please, go to"
+#~ msgstr "Merci d'allez à"
+
+#~ msgid "the setting page"
+#~ msgstr "la page des paramètres"
+
+#~ msgid "You will be redirected automatically in 5 seconds."
+#~ msgstr "Vous allez être redirigé automatiquement dans 5 secondes"
+
+#~ msgid "You can download and activate"
+#~ msgstr "Vous pouvez la télécharger et l'activer"
+
+#~ msgid "version of this plugin by entering Your license key."
+#~ msgstr "version de cette extension en donnant votre clé de licence."
+
+#~ msgid ""
+#~ "You can find your license key on your personal page Client area, by "
+#~ "clicking on the link"
+#~ msgstr ""
+#~ "Vous pouvez trouver votre clé de licence sur votre page personnelle dans "
+#~ "la zone cliente en cliquant sur le lien"
+
+#~ msgid ""
+#~ "(your username is the email you specify when purchasing the product)."
+#~ msgstr ""
+#~ "(votre nom d'utilisateur est l'adresse e-mail que vous avez donné lors de "
+#~ "l'achat de l'extension)."
+
+#~ msgid "Start Your Free %s-Day Trial Now"
+#~ msgstr "Débuter votre licence d'évaluation gratuite de %s jours"
+
+#~ msgid ""
+#~ "In order to continue using the plugin it is necessary to buy a %s license."
+#~ msgstr ""
+#~ "Afin de pouvoir continuer à utiliser cette extension il est nécessaire "
+#~ "d'acheter une licence %s."
+
+#~ msgid "After that you can activate it by entering your license key."
+#~ msgstr ""
+#~ " Après vous pouvez activer cette extension en donnant votre clé de "
+#~ "licence."
+
+#~ msgid ""
+#~ "Unfortunately, you have exceeded the number of available tries per day."
+#~ msgstr ""
+#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
+#~ "télécharger l'extension manuellement."
+
+#~ msgid ""
+#~ "Congratulations! The PRO license of the plugin is successfully activated."
+#~ msgstr ""
+#~ "Félicitations! La version PRO de cette extension a été téléchargée et "
+#~ "activée avec succès."
+
+#~ msgid "Wrong license key."
+#~ msgstr "Clé de licence incorrecte."
+
+#~ msgid "This license key is bind to another site."
+#~ msgstr "La clé de licence correspond à un autre site."
+
+#~ msgid ""
+#~ "This license key is valid, but Your license has expired. If you want to "
+#~ "update our plugin in future, you should extend the license."
+#~ msgstr ""
+#~ "La clé de licence est valide mais votre durée de validité est passée. "
+#~ "Pour continuer à disposer du support rapide et des mises à jour de "
+#~ "l'extension vous devez la renouveller."
+
+#~ msgid "Unfortunately, you have exceeded the number of available tries."
+#~ msgstr ""
+#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
+#~ "télécharger l'extension manuellement."
+
+#~ msgid ""
+#~ "Unfortunately, the PRO Trial licence was already installed to this "
+#~ "domain. The PRO Trial license can be installed only once."
+#~ msgstr ""
+#~ "Malheuresement la licence PRO a déjà été installée sur ce domaine. La "
+#~ "licence PRO d'évaluation peut être installée une seule fois."
+
+#~ msgid "The PRO Trial license key is valid."
+#~ msgstr "La clé de licence d'évaluation est valide."
+
+#~ msgid "The license key is valid."
+#~ msgstr "La clé de licence est valide."
+
+#~ msgid "Your license will expire on"
+#~ msgstr "Votre licence se termine le "
+
+#~ msgid "Please, enter your license key"
+#~ msgstr "Merci de saisir votre clé de licence"
+
+#~ msgid ""
+#~ "If needed you can check if the license key is correct or reenter it in "
+#~ "the field below. You can find your license key on your personal page - "
+#~ "Client area - on our website"
+#~ msgstr ""
+#~ "Si nécessaire vous pouvez vérifier que la clé de licence est correcte ou "
+#~ "la saisir de nouveau dans le champ ci-dessous. Vous pouvez trouver votre "
+#~ "clé de licence sur votre page personnelle (zone client) sur notre site "
+#~ "web."
+
+#~ msgid ""
+#~ "(your username is the email you specify when purchasing the product). If "
+#~ "necessary, please submit \"Lost your password?\" request."
+#~ msgstr ""
+#~ "(votre nom d'utilisateur est l'adresse e-mail que vous avez donné lors de "
+#~ "l'achat de l'extension). Si nécessaire, utilisez la fonction de demande "
+#~ "de mot de passe perdu."
+
+#~ msgid "Check license key"
+#~ msgstr "Vérifier la clé de licence"
+
+#~ msgid ""
+#~ "WARNING: We have noticed illegal use of our plugin by you. We strongly "
+#~ "recommend you to solve the problem within 24 hours, otherwise the plugin "
+#~ "will be deactivated. Please go to your personal"
+#~ msgstr ""
+#~ "AVERTISSEMENT : Nous avons détecté une utilisation abusive de notre "
+#~ "extension. Nous vous recommandons de résoudre ce problème dans les 24 "
+#~ "heures, sinon l'extension sera rendue inactive. Merci de vous rendre dans "
+#~ "votre espace personel"
+
+#~ msgid ""
+#~ "(your username is the email you specify when purchasing the product), "
+#~ "where you can make the necessary changes."
+#~ msgstr ""
+#~ "(votre nom d'utilisateur est l'adresse e-mail que vous avez donné lors de "
+#~ "l'achat de l'extension), où vous pourrez faire les modifications "
+#~ "nécessaires."
+
+#~ msgid ""
+#~ "Notice: Your PRO Trial license has expired. To continue using the plugin "
+#~ "you should buy a PRO license"
+#~ msgstr ""
+#~ "Votre licence d'évaluation est terminée. Pour continuer à disposer du "
+#~ "support rapide et des mises à jour de l'extension vous devez la "
+#~ "renouveller."
+
+#~ msgid ""
+#~ "Your license has expired. To continue getting top-priority support and "
+#~ "plugin updates you should extend it."
+#~ msgstr ""
+#~ "Votre licence est terminée. Pour continuer à disposer du support rapide "
+#~ "et des mises à jour de l'extension vous devez la renouveller."
+
+#~ msgid "Notice: You are using the PRO Trial license of %s plugin."
+#~ msgstr ""
+#~ "Avertissement : vous utilisez la version d'évaluation de l'extension %s."
+
+#~ msgid "Notice: You are using the PRO Trial license of plugin."
+#~ msgstr ""
+#~ "Avertissement : vous utilisez la version d'évaluation de l'extension."
+
+#~ msgid "The PRO Trial license will expire on"
+#~ msgstr "Votre licence se termine le "
+
+#~ msgid "You license for"
+#~ msgstr "Votre licence pour"
+
+#~ msgid "expires on"
+#~ msgstr "se termine le"
+
+#~ msgid "and you won't be granted TOP-PRIORITY SUPPORT or UPDATES."
+#~ msgstr "et vous ne diposerez plus du support rapide et des mises à jour."
+
+#~ msgid "Not set"
+#~ msgstr "Not set"
+
+#~ msgid "On"
+#~ msgstr "On"
+
+#~ msgid "Off"
+#~ msgstr "Off"
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
+
+#~ msgid " Mb"
+#~ msgstr " Mb"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "No"
+#~ msgstr "No"
+
+#~ msgid "Operating System"
+#~ msgstr "Operating System"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Memory usage"
+#~ msgstr "Memory usage"
+
+#~ msgid "MYSQL Version"
+#~ msgstr "MYSQL Version"
+
+#~ msgid "SQL Mode"
+#~ msgstr "SQL Mode"
+
+#~ msgid "PHP Version"
+#~ msgstr "PHP Version"
+
+#~ msgid "PHP Safe Mode"
+#~ msgstr "PHP Safe Mode"
+
+#~ msgid "PHP Allow URL fopen"
+#~ msgstr "PHP Allow URL fopen"
+
+#~ msgid "PHP Memory Limit"
+#~ msgstr "PHP Memory Limit"
+
+#~ msgid "PHP Max Upload Size"
+#~ msgstr "PHP Max Upload Size"
+
+#~ msgid "PHP Max Post Size"
+#~ msgstr "PHP Max Post Size"
+
+#~ msgid "PHP Max Script Execute Time"
+#~ msgstr "PHP Max Script Execute Time"
+
+#~ msgid "PHP Exif support"
+#~ msgstr "PHP Exif support"
+
+#~ msgid "PHP IPTC support"
+#~ msgstr "PHP IPTC support"
+
+#~ msgid "PHP XML support"
+#~ msgstr "PHP XML support"
+
+#~ msgid "Site URL"
+#~ msgstr "Site URL"
+
+#~ msgid "Home URL"
+#~ msgstr "Home URL"
+
+#~ msgid "WordPress Version"
+#~ msgstr "WordPress Version"
+
+#~ msgid "WordPress DB Version"
+#~ msgstr "WordPress DB Version"
+
+#~ msgid "Multisite"
+#~ msgstr "Multisite"
+
+#~ msgid "Active Theme"
+#~ msgstr "Active Theme"
+
+#~ msgid "Please enter a valid email address."
+#~ msgstr "Merci de fournir une adresse e-mail valide."
+
+#~ msgid "Email with system info is sent to "
+#~ msgstr "L'e-mail avec les informations systèmes est envoyé à "
+
+#~ msgid "Thank you for contacting us."
+#~ msgstr "Merci d'avoir pris contact avec nous."
+
+#~ msgid "Sorry, email message could not be delivered."
+#~ msgstr "Désoler, l'e-mail n'a pas pu être envoyé."
+
+#~ msgid "Need help?"
+#~ msgstr "Besoin d'aide ?"
+
+#~ msgid "Client area"
+#~ msgstr "Espace client"
+
+#~ msgid "System status"
+#~ msgstr "System status"
+
+#~ msgid "Plugins"
+#~ msgstr "Extensions"
+
+#~ msgid "Themes"
+#~ msgstr "Thèmes"
+
+#~ msgid "All"
+#~ msgstr "Tous"
+
+#~ msgid "Installed"
+#~ msgstr "Installé"
+
+#~ msgid "Recommended"
+#~ msgstr "Recommandé"
+
+#~ msgid "Installed plugins"
+#~ msgstr "Extensions installées"
+
+#~ msgid "Activate this plugin"
+#~ msgstr "Activer cette extension"
+
+#~ msgid "DONATE"
+#~ msgstr "Faire un don"
+
+#~ msgid "Recommended plugins"
+#~ msgstr "Extensions recommandées"
+
+#~ msgid "Try again"
+#~ msgstr "Essayer de nouveau"
+
+#~ msgid "Preview &#8220;%s&#8221;"
+#~ msgstr "Pré-visualiser &#8220;%s&#8221;"
+
+#~ msgid "Install %s"
+#~ msgstr "Installation %s"
+
+#~ msgid "Install Now"
+#~ msgstr "Installer maintenant"
+
+#~ msgid "Update to version %s"
+#~ msgstr "Mettre à jour pour la version %s"
+
+#~ msgid "Update"
+#~ msgstr "Mettre à jour"
+
+#~ msgid "This theme is already installed and is up to date"
+#~ msgstr "Le thème est déjà en place et est à jour."
+
+#~ msgid "Preview %s"
+#~ msgstr "Pré-visualiser %s"
+
+#~ msgid "Preview"
+#~ msgstr "Pré-visualiser"
+
+#~ msgid "By %s"
+#~ msgstr "Par %s"
+
+#~ msgid "Details"
+#~ msgstr "Détails"
+
+#~ msgid "Already Installed"
+#~ msgstr "Déjà installé"
+
+#~ msgid "Environment"
+#~ msgstr "Environment"
+
+#~ msgid "Active Plugins"
+#~ msgstr "Extensions actives"
+
+#~ msgid "Inactive Plugins"
+#~ msgstr "Extensions inactives"
+
+#~ msgid "Send to support"
+#~ msgstr "Envoyer au support"
+
+#~ msgid "Send to custom email &#187;"
+#~ msgstr "Envoyer un e-mail spécifique &#187;"
+
+#~ msgid "This license key is valid, but your license has expired."
+#~ msgstr "La clé de licence est valide, mais elle a expirée."
+
+#~ msgid ""
+#~ "It’s time to upgrade your <strong>Gallery plugin</strong> to <strong>PRO</"
+#~ "strong> version!"
+#~ msgstr ""
+#~ "Il est peut-être temps de passer votre extension <strong>Gallery</strong> "
+#~ "vers la version <strong>PRO</strong> !"
+
+#~ msgid "Go!"
+#~ msgstr "Allez!"
+
+#~ msgid ""
+#~ "This functionality is available in the Pro version of the plugin. For "
+#~ "more details, please follow the link"
+#~ msgstr ""
+#~ "Cette fonction est disponible dans le version pro de cette extension. "
+#~ "Pour plus de détails, suivre le lien"
+
+#~ msgid "Switch to new interface"
+#~ msgstr "Basculer vers la nouvelle interface"
+
+#~ msgid "Pro plugins"
+#~ msgstr "Extensions Pro"
+
+#~ msgid "Activated plugins"
+#~ msgstr "Extensions activées"
+
+#~ msgid "Read more"
+#~ msgstr "Lire plus..."
+
+#~ msgid "Purchase"
+#~ msgstr "Acheter"
+
+#~ msgid "Free plugins"
+#~ msgstr "Extensions gratuites"
+
+#~ msgid "Download"
+#~ msgstr "Télécharger"
+
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "Installation à partir de  wordpress.org"
+
+#~ msgid "Free themes"
+#~ msgstr "Thèmes gratuits"
+
+#~ msgid "Activated theme"
+#~ msgstr "Thème actif"
+
+#~ msgid "Customize &#8220;%s&#8221;"
+#~ msgstr "Personnaliser &#8220;%s&#8221;"
+
+#~ msgid "Customize"
+#~ msgstr "Personnaliser"
+
+#~ msgid "Installed themes"
+#~ msgstr "Thèmes installés"
+
+#~ msgid "Recommended themes"
+#~ msgstr "Thèmes recommandés"
+
+#~ msgid "If you have any questions, please contact us via"
+#~ msgstr "Si vous avez des questions, merci de nous contacter via "
+
+#~ msgid "Switch to old interface"
+#~ msgstr "Basculer vers l'ancienne interface"
+
+#~ msgid "Add New"
+#~ msgstr "Ajouter"
+
+#~ msgid "Search Galleries"
+#~ msgstr "Rechercher une galerie"
+
+#~ msgid "Please do not forget to select "
+#~ msgstr "Merci de ne pas oublier de sélectionner"
+
+#~ msgid "Attachments order by"
+#~ msgstr "Fichiers trier par"
+
+#~ msgid "attachments order"
+#~ msgstr "ordre des fichiers"
+
+#~ msgid "attachment title"
+#~ msgstr "titre du fichier"
+
+#~ msgid "Attachments order"
+#~ msgstr "Ordre des fichiers"
+
+#~ msgid "Label for Return link"
+#~ msgstr "Texte du lien de retour"
+
+#~ msgid "URL for Return link"
+#~ msgstr "URL du lien de retour"

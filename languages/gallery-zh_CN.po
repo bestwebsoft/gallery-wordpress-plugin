@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:37+0300\n"
-"PO-Revision-Date: 2015-04-28 12:37+0300\n"
+"POT-Creation-Date: 2015-05-18 12:58+0300\n"
+"PO-Revision-Date: 2015-05-18 12:58+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Xiaobo Chen <mibcxb@gmail.com>\n"
 "Language: zh_CN\n"
@@ -277,15 +277,17 @@ msgid "Height (in px)"
 msgstr "高度（像素）"
 
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "画廊中影像的尺寸"
+#, fuzzy
+msgid "Image size for thumbnails"
+msgstr "专辑封面的尺寸"
 
 #: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "当您上传一幅新的照片时，WordPress会创建一个特定尺寸的缩略图副本。"
 
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
+#, fuzzy
+msgid "Image size in the lightbox"
 msgstr "灯箱中的影像的尺寸"
 
 #: gallery-plugin.php:881
@@ -661,3 +663,5 @@ msgstr "图像大小的变化没有定义"
 msgid "Invalid path"
 msgstr "无效的路径"
 
+#~ msgid "Gallery image size"
+#~ msgstr "画廊中影像的尺寸"

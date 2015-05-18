@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:35+0300\n"
-"PO-Revision-Date: 2015-04-28 12:35+0300\n"
+"POT-Creation-Date: 2015-05-18 12:48+0300\n"
+"PO-Revision-Date: 2015-05-18 12:48+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Lagya <lagya@me.com>\n"
 "Language: cs\n"
@@ -280,15 +280,17 @@ msgid "Height (in px)"
 msgstr "Výška (v px)"
 
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "Velikost obrázku v galerii"
+#, fuzzy
+msgid "Image size for thumbnails"
+msgstr "Velikost obrázku na obalu alba"
 
 #: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "WordPress se vytvoří novou miniaturu se zadanými rozměry, když nahrajete novou fotku."
 
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
+#, fuzzy
+msgid "Image size in the lightbox"
 msgstr "Velikost obrazu v Lightboxu"
 
 #: gallery-plugin.php:881
@@ -667,3 +669,5 @@ msgstr "Změna velikosti obrázku není definována"
 msgid "Invalid path"
 msgstr "Špatná cesta"
 
+#~ msgid "Gallery image size"
+#~ msgstr "Velikost obrázku v galerii"

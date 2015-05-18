@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:37+0300\n"
-"PO-Revision-Date: 2015-04-28 12:37+0300\n"
+"POT-Creation-Date: 2015-05-18 12:56+0300\n"
+"PO-Revision-Date: 2015-05-18 12:58+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <http://support.bestwebsoft.com>\n"
 "Language: uk_UA\n"
@@ -274,16 +274,16 @@ msgid "Height (in px)"
 msgstr "Висота (в px)"
 
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "Розмір зображення галереї"
+msgid "Image size for thumbnails"
+msgstr "Розмір зображення для мініатюр"
 
 #: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "Коли ви завантажите нове зображення, WordPress створить іконки відповідно до заданих розмірів."
 
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
-msgstr "Розмір зображень галереї в лайтбоксі"
+msgid "Image size in the lightbox"
+msgstr "Розмір зображень в лайтбоксі"
 
 #: gallery-plugin.php:881
 msgid "Max width (in px)"
@@ -556,11 +556,11 @@ msgstr "Назва кнопки лайтбоксу"
 
 #: gallery-plugin.php:1093
 msgid "Display all images in the lightbox instead of going into a single gallery"
-msgstr ""
+msgstr "Відображати всі зображення у лайтбоксі замість переходу до окремої галереї"
 
 #: gallery-plugin.php:1096
 msgid "When using the gallery template or a shortcode with `display=short` parameter"
-msgstr ""
+msgstr "Коли використовується темплейт галереї або шорткод з параметром `display=short`"
 
 #: gallery-plugin.php:1125
 msgid "Save Changes"
@@ -654,3 +654,5 @@ msgstr "Зміни розміру зображення не визначено"
 msgid "Invalid path"
 msgstr "Невірний шлях"
 
+#~ msgid "Gallery image size"
+#~ msgstr "Розмір зображення галереї"

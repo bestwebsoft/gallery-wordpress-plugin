@@ -1,10 +1,10 @@
 === Gallery by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.2
-Tested up to: 4.2
-Stable tag: 4.2.9
+Tested up to: 4.2.2
+Stable tag: 4.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -136,22 +136,23 @@ After that your theme will support thumbnail option and the error will disappear
 
 = I am using WP with rtl language and I have a problem with the lightbox displaying on iPad/iPhone. =
 
-1. In the file header.php you should substitute
-<html <?php language_attributes(); ?>>
-with
-<html>
+1. In the file header.php you should substitute `<html <?php language_attributes(); ?>>` with `<html>`
 2. Remove the "direction:rtl" from the css of the body, and move it to the main wrapper. For example, in your theme CSS file (usually it's rtl.css) remove the following lines:
-body {
+
+`body {
     direction:rtl;
-}
+}`
+
 and add (for the themes Twenty Eleven or Twenty Ten):
-.hfeed {
+
+`.hfeed {
     direction:rtl;
-}
+}`
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
@@ -166,6 +167,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.3.0 - 18.05.2015 =
+* Update : We updated all functionality for wordpress 4.2.2.
 
 = V4.2.9 - 28.04.2015 =
 * Update : The French language file is updated.
@@ -469,6 +473,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.3.0 =
+We updated all functionality for wordpress 4.2.2.
 
 = V4.2.9 =
 The French language file is updated. Bug with the DB-table prefix in template file was fixed. Bug with updating rewrite rules on each page load was fixed.

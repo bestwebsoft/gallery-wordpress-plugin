@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 12:36+0300\n"
-"PO-Revision-Date: 2015-04-28 12:36+0300\n"
+"POT-Creation-Date: 2015-05-18 12:49+0300\n"
+"PO-Revision-Date: 2015-05-18 12:49+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: J Goessens <j.goessens@gmail.com>\n"
 "Language: nl_NL\n"
@@ -278,15 +278,17 @@ msgid "Height (in px)"
 msgstr "Hoogte (in px)"
 
 #: gallery-plugin.php:862
-msgid "Gallery image size"
-msgstr "Afmeting galerij foto"
+#, fuzzy
+msgid "Image size for thumbnails"
+msgstr "Foto afmeting voor de omslag van het album"
 
 #: gallery-plugin.php:870
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
 msgstr "WordPress zal een nieuw voorbeeld maken, met de opgegeven afmetingen, als er een nieuwe foto wordt geupload."
 
 #: gallery-plugin.php:878
-msgid "Gallery image size in the lightbox"
+#, fuzzy
+msgid "Image size in the lightbox"
 msgstr "Foto afmeting voor lightbox"
 
 #: gallery-plugin.php:881
@@ -662,3 +664,5 @@ msgstr "Wijzigingen van foto afmetingen, niet gedefinieerd"
 msgid "Invalid path"
 msgstr "Ongeldig pad"
 
+#~ msgid "Gallery image size"
+#~ msgstr "Afmeting galerij foto"
