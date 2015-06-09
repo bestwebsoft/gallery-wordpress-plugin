@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.2.1
+* Version: 1.2.2
 */
 ?>
 <?php get_header(); ?>
@@ -72,7 +72,7 @@ Template Name: Gallery Template
 									$count++; ?>
 									<li>
 										<a rel="bookmark" href="<?php echo get_permalink(); ?>" title="<?php the_title(); ?>">
-											<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][0][0]; ?>px; <?php echo $gllr_border; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
+											<img width="<?php echo $gllr_options['gllr_custom_size_px'][0][0]; ?>" height="<?php echo $gllr_options['gllr_custom_size_px'][0][1]; ?>" style="width:<?php echo $gllr_options['gllr_custom_size_px'][0][0]; ?>px; height:<?php echo $gllr_options['gllr_custom_size_px'][0][1]; ?>px; <?php echo $gllr_border; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
 										</a>
 										<div class="gallery_detail_box">
 											<div><?php the_title(); ?></div>

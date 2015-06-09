@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.2
 Tested up to: 4.2.2
-Stable tag: 4.3.0
+Stable tag: 4.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -115,7 +115,13 @@ http://www.youtube.com/watch?v=z95ql-M2JTc
 
 = How to add many images? =
 
-Multiple files upload is supported by all modern browsers except Internet Explorer. 
+Multiple files upload is supported by all modern browsers except Internet Explorer.
+
+= How to add image from Media library into gallery? =
+
+Since our Gallery plugin works with attached images, this cannot be done by standard means.
+However, you can re-attach previously downloaded images to your gallery. Please note that after this, that image will not be available as an attachment in that post to which it was attached earlier.
+You can re-attach images using our plugin Re-attacher - <a href="http://wordpress.org/plugins/re-attacher/">Re-attacher</a>. With this plugin, you can reattach previously uploaded images to other posts, as well as detach files from the post completely. Re-attacher allows you to manage both single files and groups of files. This plugin makes using our Gallery and Portfolio plugins a lot more convenient, as you won't have to upload new images each time you may need them on your gallery or portfolio pages.
 
 = I'm getting the following error: "Fatal error: Call to undefined function get_post_thumbnail_id()". What should I do? =
 
@@ -167,6 +173,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.3.1 - 09.06.2015 =
+* NEW : We added functionality for disable rewriting templates after plugin update.
+* NEW : We added 'width' and 'height' attributes to the 'img' HTML tag.
+* Update : The French language file is updated.
 
 = V4.3.0 - 18.05.2015 =
 * Update : We updated all functionality for wordpress 4.2.2.
@@ -473,6 +484,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.3.1 =
+We added functionality for disable rewriting templates after plugin update. We added 'width' and 'height' attributes to the 'img' HTML tag. The French language file is updated.
 
 = V4.3.0 =
 We updated all functionality for wordpress 4.2.2.
