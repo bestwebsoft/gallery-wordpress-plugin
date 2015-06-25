@@ -73,10 +73,6 @@ li.gllr_image_block {
     position: relative;
     display: none;
 }
-#ajax_update_postmeta,
-#ajax_update_images {
-    float: left;
-}
 .gllr_code {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
     font-size: 13px;

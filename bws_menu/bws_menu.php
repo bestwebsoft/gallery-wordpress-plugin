@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.6.3
+* Version: 1.6.5
 */
 
 if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) )
@@ -431,7 +431,15 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/products/pagination/download/?k=22adb940256f149559ba8fedcd728ac8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Pagination+BestWebSoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=pagination.php'
-			)
+			),
+			'visitors-online/visitors-online.php' => array(
+				'name'			=> 'Visitors online',
+				'description'	=> 'See how many users, guests and bots are online at the website.',
+				'link'			=> 'http://bestwebsoft.com/products/visitors-online/?k=93c28013a4f830671b3bba9502ed5177&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/visitors-online/download/?k=93c28013a4f830671b3bba9502ed5177&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Visitors+online+BestWebSoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=visitors-online.php'
+			)			
 		);
 
 		$all_plugins = get_plugins();
@@ -945,7 +953,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 						<p>
 							<input type="hidden" name="bwsmn_form_submit_custom_email" value="submit" />
 							<input type="submit" class="button" value="<?php _e( 'Send to custom email &#187;', 'bestwebsoft' ) ?>" />
-							<input type="text" value="<?php echo $bwsmn_form_email; ?>" name="bwsmn_form_email" />
+							<input type="text" maxlength="250" value="<?php echo $bwsmn_form_email; ?>" name="bwsmn_form_email" />
 							<?php wp_nonce_field( plugin_basename(__FILE__), 'bwsmn_nonce_submit_custom_email' ); ?>
 						</p>
 					</form>
