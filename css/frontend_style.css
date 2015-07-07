@@ -60,9 +60,7 @@ ul.gallery {
 .gllr_single_image_text {
 	font-size: 12px;
 	color: #888;
-}
-.gllr_image_row {
-	clear: both;
+	word-break: break-word;
 }
 .gallery li {
     float: left;

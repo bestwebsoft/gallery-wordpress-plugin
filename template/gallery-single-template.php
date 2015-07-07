@@ -65,7 +65,9 @@ get_header(); ?>
 														</a>
 														<?php } ?>											
 													</p>
-													<div style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0] + $gllr_border_images; ?>px; <?php if ( 0 == $gllr_options["image_text"] ) echo "display:none;"; ?>" class="gllr_single_image_text"><?php echo get_post_meta( $attachment->ID, $key, true ); ?>&nbsp;</div>
+													<?php if ( 1 == $gllr_options["image_text"] ) { ?>
+														<div style="width:<?php echo $gllr_options['gllr_custom_size_px'][1][0] + $gllr_border_images; ?>px;" class="gllr_single_image_text"><?php echo get_post_meta( $attachment->ID, $key, true ); ?>&nbsp;</div>
+													<?php } ?>
 												</div><!-- .gllr_image_block -->
 											<?php if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) { ?>
 												</div><!-- .gllr_image_row -->
