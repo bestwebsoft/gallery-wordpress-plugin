@@ -1,18 +1,27 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.2.2
+* Version: 1.2.3
 */
 ?>
 <?php get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="container" class="site-content site-main">
 			<div id="content" class="hentry">
-				<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
+				<h1 class="home_page_title entry-header">
+					<?php if ( isset( $wp_query->query_vars["gallery_categories"] ) ) {
+						$term = get_term_by( 'slug', $wp_query->query_vars["gallery_categories"], 'gallery_categories' );
+						echo __( 'Gallery Category', 'gallery' ) . ':&nbsp;' . ( $term->name );
+					} else {
+						the_title();
+					} ?>
+				</h1>
 				<?php if ( ! post_password_required() ) { ?>
-					<?php if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) 
-						echo pdfprnt_show_buttons_for_custom_post_type( 'post_type=gallery&orderby=post_date' ); ?>
 					<div class="gallery_box entry-content">
+						<?php if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) 
+							echo pdfprnt_show_buttons_for_custom_post_type();
+						elseif ( function_exists( 'pdfprntpr_show_buttons_for_custom_post_type' ) ) 
+							echo pdfprntpr_show_buttons_for_custom_post_type(); ?>
 						<ul>
 							<?php global $post, $wpdb, $wp_query, $request;
 								
@@ -24,11 +33,10 @@ Template Name: Gallery Template
 								$paged = 1;
 							}
 
-							$permalink = get_permalink();
+							$permalink    = get_permalink();
 							$gllr_options = get_option( 'gllr_options' );
-							$count = 0;
+							$count        = 0;
 							$per_page = $showitems = get_option( 'posts_per_page' );  
-							$count_all_albums = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE $wpdb->posts.post_type = 'gallery' AND ($wpdb->posts.post_status = 'publish')" );
 
 							if ( substr( $permalink, strlen( $permalink ) -1 ) != "/" ) {
 								if ( strpos( $permalink, "?" ) !== false ) {
@@ -37,7 +45,6 @@ Template Name: Gallery Template
 									$permalink .= "/";
 								}
 							}
-
 							$args = array(
 								'post_type'				=> 'gallery',
 								'post_status'			=> 'publish',
@@ -45,10 +52,16 @@ Template Name: Gallery Template
 								'posts_per_page'		=> $per_page,
 								'paged'					=> $paged
 							);
+							if ( isset( $wp_query->query_vars["gallery_categories"] ) && ( ! empty( $wp_query->query_vars["gallery_categories"] ) ) ) {
+								$args['tax_query'] = array(
+									array(
+										'taxonomy'  => 'gallery_categories',
+										'field'     => 'slug',
+										'terms'     => $wp_query->query_vars["gallery_categories"]
+									)
+								);
+							}
 							$second_query = new WP_Query( $args );
-
-							if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) 
-								echo pdfprnt_show_buttons_for_custom_post_type( $second_query );
 							
 							$request = $second_query->request;
 
@@ -76,19 +89,20 @@ Template Name: Gallery Template
 										</a>
 										<div class="gallery_detail_box">
 											<div><?php the_title(); ?></div>
-											<div><?php echo the_excerpt_max_charlength( 100 ); ?></div>
-											<a href="<?php echo $permalink; echo basename( get_permalink( $post->ID ) ); ?>"><?php echo $gllr_options["read_more_link_text"]; ?></a>
+											<div><?php if ( function_exists( 'gllr_the_excerpt_max_charlength' ) ) echo gllr_the_excerpt_max_charlength( 100 ); ?></div>
+											<a href="<?php echo get_permalink(); ?>"><?php echo $gllr_options["read_more_link_text"]; ?></a>
 										</div><!-- .gallery_detail_box -->
 										<div class="gllr_clear"></div>
 									</li>
 								<?php endwhile; 
-							endif; 
-							wp_reset_query(); 
-							$request = $wp_query->request; ?>
+							endif;  ?>
 						</ul>
 					</div><!-- .gallery_box -->
 					</div><!-- #content -->
-					<?php $pages = intval( $count_all_albums / $per_page );
+					<?php $count_all_albums = $second_query->found_posts;
+					wp_reset_query(); 
+					$request = $wp_query->request;
+					$pages = intval( $count_all_albums / $per_page );
 					if ( $count_all_albums % $per_page > 0 )
 						$pages += 1;
 					$range = 100;
@@ -105,7 +119,7 @@ Template Name: Gallery Template
 									}
 								} ?>
 								<div class='gllr_clear'></div>
-							</div><!-- .pagination -->		
+							</div><!-- .pagination -->
 						</nav><!-- .paging-navigation -->
 					<?php }
 				} else { ?>

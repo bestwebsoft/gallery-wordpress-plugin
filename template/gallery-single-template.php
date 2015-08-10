@@ -1,7 +1,7 @@
 <?php
 /*
 * Template - Gallery post
-* Version: 1.2.1
+* Version: 1.2.2
 */
 get_header(); ?>
 	<div class="content-area">
@@ -21,8 +21,12 @@ get_header(); ?>
 					while ( $second_query->have_posts() ) : $second_query->the_post(); ?>
 						<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
 						<div class="gallery_box_single entry-content">
-							<?php if ( ! post_password_required() ) { ?>
-								<?php the_content(); 
+							<?php if ( ! post_password_required() ) {
+								if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) 
+									echo pdfprnt_show_buttons_for_custom_post_type();
+								elseif ( function_exists( 'pdfprntpr_show_buttons_for_custom_post_type' ) ) 
+									echo pdfprntpr_show_buttons_for_custom_post_type();
+								the_content(); 
 								$posts = get_posts( array(
 									"showposts"			=> -1,
 									"what_to_show"		=> "posts",
@@ -44,7 +48,7 @@ get_header(); ?>
 											$image_attributes_large = wp_get_attachment_image_src( $attachment->ID, 'large' );
 											$image_attributes_full = wp_get_attachment_image_src( $attachment->ID, 'full' );
 											if ( 1 == $gllr_options['border_images'] ) {
-												$gllr_border = 'border-width: ' . $gllr_options['border_images_width'] . 'px; border-color:' . $gllr_options['border_images_color'] . '';
+												$gllr_border = 'border-width: ' . $gllr_options['border_images_width'] . 'px; border-color:' . $gllr_options['border_images_color'] . ';border: ' . $gllr_options['border_images_width'] . 'px solid ' . $gllr_options['border_images_color'];
 												$gllr_border_images = $gllr_options['border_images_width'] * 2;
 											} else {
 												$gllr_border = '';
@@ -117,7 +121,7 @@ get_header(); ?>
 					}<?php if ( $gllr_options['start_slideshow'] == 1 ) { ?>,
 					'onComplete':	function() {
 						clearTimeout( jQuery.fancybox.slider );
-						jQuery.fancybox.slider = setTimeout("jQuery.fancybox.next()",<?php echo empty( $gllr_options['slideshow_interval'] )? 2000 : $gllr_options['slideshow_interval'] ; ?>);
+						jQuery.fancybox.slider = setTimeout("jQuery.fancybox.next()",<?php echo $gllr_options['slideshow_interval']; ?>);
 					}<?php } ?>
 				});
 			});

@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.2
-Tested up to: 4.2.2
-Stable tag: 4.3.3
+Tested up to: 4.2.4
+Stable tag: 4.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,8 @@ http://www.youtube.com/watch?v=kzC11CMmwbI
 * Display: Choose a number of pictures to display in one row in the gallery album.
 * Slideshow: View pictures as a slide show and in a full size.
 * Ability: The ability to add comments to a Single Gallery.
+* Ability: The ability to install (and delete) demo data. 
+
 
 = Recommended Plugins =
 
@@ -162,7 +164,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instruction on System Status</a>
 
 == Screenshots ==
 
@@ -173,6 +175,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.3.4 - 10.08.2015 =
+* NEW : We added ability to restore settings to defaults.
+* NEW : We added ability to install demo data for plugin.
+* Bugfix : We fixed bug with displaying of galleries by categories ( if Gallery Categories plugin is installed and activated ).
+* Bugfix : We fixed bug with displaying of plugin settings page for rtl-oriented languages.
+* Update : We updated all functionality for wordpress 4.2.4.
 
 = V4.3.3 - 07.07.2015 =
 * NEW : We`ve made responsive gallery display.
@@ -492,6 +501,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.3.4 =
+We added ability to restore settings to defaults. We added ability to install demo data for plugin. We fixed bug with displaying of galleries by categories ( if Gallery Categories plugin is installed and activated ). We fixed bug with displaying of plugin settings page for rtl-oriented languages. We updated all functionality for wordpress 4.2.4.
 
 = V4.3.3 =
 We`ve made responsive gallery display.

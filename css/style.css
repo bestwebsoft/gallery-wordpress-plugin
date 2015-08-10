@@ -82,3 +82,7 @@ li.gllr_image_block {
     color: #888888;
     font-size: 10px;
 }
+.rtl #gllr_settings_form label {
+    float: right;
+    width: 100%;
+}
