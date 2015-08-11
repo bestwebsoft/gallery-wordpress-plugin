@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-10 09:09+0300\n"
-"PO-Revision-Date: 2015-08-10 09:09+0300\n"
+"POT-Creation-Date: 2015-08-11 12:13+0300\n"
+"PO-Revision-Date: 2015-08-11 12:13+0300\n"
 "Last-Translator: BestWebSoft team <wp@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <http://support.bestwebsoft.com>\n"
 "Language: uk_UA\n"
@@ -699,11 +699,11 @@ msgstr "Невірний шлях"
 msgid "Gallery Category"
 msgstr "Категорія галерей"
 
-#: inc/demo-data/demo-data-loader.php:75
+#: inc/demo-data/demo-data-loader.php:77
 msgid "Install Demo Data"
 msgstr "Встановити демо-дані"
 
-#: inc/demo-data/demo-data-loader.php:76
+#: inc/demo-data/demo-data-loader.php:78
 msgid ""
 "If you install the demo-data, will be created galleries with images, demo-"
 "post with available shortcodes and page with a list of all the galleries, \n"
@@ -715,83 +715,83 @@ msgstr ""
 "плагіну були перезаписані, але, під час видалення демо-даних, вони будуть "
 "відновлені."
 
-#: inc/demo-data/demo-data-loader.php:80
+#: inc/demo-data/demo-data-loader.php:82
 msgid "Remove Demo Data"
 msgstr "Вилалити демо-дані"
 
-#: inc/demo-data/demo-data-loader.php:81
+#: inc/demo-data/demo-data-loader.php:83
 msgid "Delete demo-data and restore old plugin settings."
 msgstr "Видалити демо-дані та відновити старі налаштування плагіну."
 
-#: inc/demo-data/demo-data-loader.php:105
+#: inc/demo-data/demo-data-loader.php:108
 msgid "Yes, install demo data"
 msgstr "Так, встановити демо-дані"
 
-#: inc/demo-data/demo-data-loader.php:106
+#: inc/demo-data/demo-data-loader.php:109
 msgid "Are you sure you want to install demo data?"
 msgstr "Ві впевнені, що бажаєте встановити демо-дані?"
 
-#: inc/demo-data/demo-data-loader.php:108
+#: inc/demo-data/demo-data-loader.php:111
 msgid "Yes, remove demo data"
 msgstr "Так, видалити демо-дані"
 
-#: inc/demo-data/demo-data-loader.php:109
+#: inc/demo-data/demo-data-loader.php:112
 msgid "Are you sure you want to remove demo data?"
 msgstr "Ви впевнені, що бажаєте видалити демо-дані?"
 
-#: inc/demo-data/demo-data-loader.php:116
+#: inc/demo-data/demo-data-loader.php:119
 msgid "No, go back to the settings page"
 msgstr "Ні, повернутися на сторінку налаштувань"
 
-#: inc/demo-data/demo-data-loader.php:165
+#: inc/demo-data/demo-data-loader.php:167
 msgid "Can not get demo data."
 msgstr "Неможливо отримати демо-дані."
 
-#: inc/demo-data/demo-data-loader.php:171
+#: inc/demo-data/demo-data-loader.php:173
 msgid "Demo options already installed."
 msgstr "Демо-дані вже встановлені."
 
-#: inc/demo-data/demo-data-loader.php:292
+#: inc/demo-data/demo-data-loader.php:294
 msgid "Demo data successfully installed."
 msgstr "Вемо-дані успішно встановлені."
 
-#: inc/demo-data/demo-data-loader.php:294
+#: inc/demo-data/demo-data-loader.php:296
 msgid "View post with shortcodes"
 msgstr "Перегляньте запис із шорткодами "
 
-#: inc/demo-data/demo-data-loader.php:297
+#: inc/demo-data/demo-data-loader.php:299
 msgid "View page with examples"
 msgstr "Перегляньте сторінку із прикладами"
 
-#: inc/demo-data/demo-data-loader.php:301
+#: inc/demo-data/demo-data-loader.php:303
 msgid "Installation of demo data with some errors occurred."
 msgstr "Установка демо-даних пройшла з помилками."
 
-#: inc/demo-data/demo-data-loader.php:304
+#: inc/demo-data/demo-data-loader.php:306
 msgid "Posts data is missing."
 msgstr "Контент запису відсутній."
 
-#: inc/demo-data/demo-data-loader.php:329
+#: inc/demo-data/demo-data-loader.php:331
 msgid "Demo data have already been removed."
 msgstr "Демо-дані вже видалені. "
 
-#: inc/demo-data/demo-data-loader.php:376
+#: inc/demo-data/demo-data-loader.php:378
 msgid "Demo data successfully removed."
 msgstr "Демо-дані успішно видалені."
 
-#: inc/demo-data/demo-data-loader.php:379
+#: inc/demo-data/demo-data-loader.php:381
 msgid "Removing demo data with some errors occurred."
 msgstr "Видаленні демо-данних пройшло з помилками."
 
-#: inc/demo-data/demo-data-loader.php:508
+#: inc/demo-data/demo-data-loader.php:510
 msgid "Close notice"
 msgstr "Закрити повідомлення"
 
-#: inc/demo-data/demo-data-loader.php:511
+#: inc/demo-data/demo-data-loader.php:513
 msgid "Install demo data"
 msgstr "Встановити демо-дані"
 
-#: inc/demo-data/demo-data-loader.php:511
+#: inc/demo-data/demo-data-loader.php:513
 msgid "for an acquaintance with the possibilities of the"
 msgstr "для ознайомлення із можливостями плагіну"
 

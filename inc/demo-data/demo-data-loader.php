@@ -2,7 +2,7 @@
 
 /**
  * Load demo data
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 /**
@@ -12,8 +12,10 @@
 if ( ! function_exists( 'bws_get_plugin_data' ) ) {
 	function bws_get_plugin_data() {
 		global $bws_plugin_text_domain, $bws_plugin_prefix, $bws_plugin_file, $bws_plugin_name;
-		$plugin_dir = explode( '/', plugin_basename( __FILE__ ) )[0];
-		$bws_plugin_file = array_keys( get_plugins( "/$plugin_dir" ) )[0];
+		$plugin_dir_array      = explode( '/', plugin_basename( __FILE__ ) );
+		$plugin_dir            = $plugin_dir_array[0];
+		$bws_plugin_file_array = array_keys( get_plugins( "/" . $plugin_dir ) );
+		$bws_plugin_file       = $bws_plugin_file_array[0];
 		switch( $bws_plugin_file ) {
 			case 'gallery-plugin.php':
 				$bws_plugin_text_domain = 'gallery';
@@ -66,7 +68,7 @@ if ( ! function_exists( 'bws_get_plugin_data' ) ) {
 if ( ! function_exists ( 'bws_button' ) ) {
 	function bws_button() {
 		if ( ! ( is_multisite() && is_network_admin() ) ) {
-			global $bws_plugin_text_domain, $bws_plugin_prefix;
+			global $bws_plugin_text_domain, $bws_plugin_prefix, $bws_plugin_file;
 			if ( empty( $bws_plugin_prefix ) )
 				bws_get_plugin_data();
 			$demo_options = bws_get_demo_option();
@@ -80,12 +82,13 @@ plugin settings will be overwritten, however, when you delete the demo data, the
 				$button_title = __( 'Remove Demo Data', $bws_plugin_text_domain );
 				$form_title   = __( 'Delete demo-data and restore old plugin settings.', $bws_plugin_text_domain );
 			}
-			$plugin_dir = explode( '/', plugin_basename( __FILE__ ) )[0]; ?>
+			$plugin_dir_array      = explode( '/', plugin_basename( __FILE__ ) );
+			$plugin_dir            = $plugin_dir_array[0]; ?>
 			<form method="post" action="" id="bws_handle_demo_data">
 				<p><?php echo $form_title; ?></p>
 				<p>
 					<button class="button" name="bws_handle_demo" value="<?php echo $value; ?>"><?php echo $button_title; ?></button>
-					<?php wp_nonce_field( $plugin_dir . '/' . array_keys( get_plugins( "/$plugin_dir" ) )[0], 'bws_settings_nonce_name' ); ?>
+					<?php wp_nonce_field( $plugin_dir . '/' . $bws_plugin_file, 'bws_settings_nonce_name' ); ?>
 				</p>
 			</form>
 	<?php }
@@ -123,7 +126,6 @@ if ( ! function_exists ( 'bws_demo_confirm' ) ) {
 
 if ( ! function_exists( 'bws_handle_demo_data' ) ) {
 	function bws_handle_demo_data( $callback ) {
-		$plugin_dir = explode( '/', plugin_basename( __FILE__ ) )[0];
 		if ( isset( $_POST['bws_install_demo_confirm'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_settings_nonce_name' ) )
 			return bws_install_demo_data();
 		elseif ( isset( $_POST['bws_remove_demo_confirm'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_settings_nonce_name' ) ) 
@@ -456,7 +458,9 @@ if ( ! function_exists( 'bws_delete_demo_option' ) ) {
 if ( ! function_exists( 'bws_handle_demo_notice' ) ) {
 	function bws_handle_demo_notice( $show_demo_notice ) { 
 		if ( 1 == $show_demo_notice ) {
-			global $bws_plugin_text_domain, $bws_plugin_file, $bws_plugin_prefix, $bws_plugin_name, $hook_suffix, $wp_version; 
+			global $bws_plugin_text_domain, $bws_plugin_file, $bws_plugin_prefix, $bws_plugin_name, $hook_suffix, $wp_version;
+			$plugin_dir_array = explode( '/', plugin_basename( __FILE__ ) );
+			$plugin_dir = $plugin_dir_array[0];
 			if ( empty( $bws_plugin_text_domain ) )
 				bws_get_plugin_data(); 
 			if ( isset( $_POST['bws_hide_demo_notice'] ) ) {
@@ -482,7 +486,7 @@ if ( ! function_exists( 'bws_handle_demo_notice' ) ) {
 							width: 100%;
 							height: 100%;
 							border: none;
-							background: url("<?php echo plugins_url( explode( '/', plugin_basename( __FILE__ ) )[0] . '/bws_menu/images/close_banner.png' ); ?>") no-repeat center center;
+							background: url("<?php echo plugins_url( $plugin_dir . '/bws_menu/images/close_banner.png' ); ?>") no-repeat center center;
 							box-shadow: none;
 							<?php if ( 3.8 <= $wp_version ) { ?>
 								position: relative;

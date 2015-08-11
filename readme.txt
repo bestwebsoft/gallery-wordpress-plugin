@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
 Requires at least: 3.2
 Tested up to: 4.2.4
-Stable tag: 4.3.4
+Stable tag: 4.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -175,6 +175,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.3.5 - 11.08.2015 =
+* Bugfix : We fixed bug with loading the demo data.
 
 = V4.3.4 - 10.08.2015 =
 * NEW : We added ability to restore settings to defaults.
@@ -501,6 +504,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.3.5 =
+We fixed bug with loading the demo data.
 
 = V4.3.4 =
 We added ability to restore settings to defaults. We added ability to install demo data for plugin. We fixed bug with displaying of galleries by categories ( if Gallery Categories plugin is installed and activated ). We fixed bug with displaying of plugin settings page for rtl-oriented languages. We updated all functionality for wordpress 4.2.4.

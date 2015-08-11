@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-10 09:08+0300\n"
-"PO-Revision-Date: 2015-08-10 09:08+0300\n"
+"POT-Creation-Date: 2015-08-11 12:13+0300\n"
+"PO-Revision-Date: 2015-08-11 12:13+0300\n"
 "Last-Translator: BestWebSoft team <wp@bestwebsoft.com>\n"
 "Language-Team: J Goessens <j.goessens@gmail.com>\n"
 "Language: nl_NL\n"
@@ -698,12 +698,12 @@ msgstr "Ongeldig pad"
 msgid "Gallery Category"
 msgstr "Afmeting galerij foto"
 
-#: inc/demo-data/demo-data-loader.php:75
+#: inc/demo-data/demo-data-loader.php:77
 #, fuzzy
 msgid "Install Demo Data"
 msgstr "Установка %"
 
-#: inc/demo-data/demo-data-loader.php:76
+#: inc/demo-data/demo-data-loader.php:78
 msgid ""
 "If you install the demo-data, will be created galleries with images, demo-"
 "post with available shortcodes and page with a list of all the galleries, \n"
@@ -711,85 +711,85 @@ msgid ""
 "they will be restored."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:80
+#: inc/demo-data/demo-data-loader.php:82
 msgid "Remove Demo Data"
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:81
+#: inc/demo-data/demo-data-loader.php:83
 msgid "Delete demo-data and restore old plugin settings."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:105
+#: inc/demo-data/demo-data-loader.php:108
 msgid "Yes, install demo data"
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:106
+#: inc/demo-data/demo-data-loader.php:109
 msgid "Are you sure you want to install demo data?"
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:108
+#: inc/demo-data/demo-data-loader.php:111
 msgid "Yes, remove demo data"
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:109
+#: inc/demo-data/demo-data-loader.php:112
 msgid "Are you sure you want to remove demo data?"
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:116
+#: inc/demo-data/demo-data-loader.php:119
 #, fuzzy
 msgid "No, go back to the settings page"
 msgstr "op de plugin instellingen pagina ("
 
-#: inc/demo-data/demo-data-loader.php:165
+#: inc/demo-data/demo-data-loader.php:167
 msgid "Can not get demo data."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:171
+#: inc/demo-data/demo-data-loader.php:173
 msgid "Demo options already installed."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:292
+#: inc/demo-data/demo-data-loader.php:294
 msgid "Demo data successfully installed."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:294
+#: inc/demo-data/demo-data-loader.php:296
 msgid "View post with shortcodes"
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:297
+#: inc/demo-data/demo-data-loader.php:299
 msgid "View page with examples"
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:301
+#: inc/demo-data/demo-data-loader.php:303
 msgid "Installation of demo data with some errors occurred."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:304
+#: inc/demo-data/demo-data-loader.php:306
 msgid "Posts data is missing."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:329
+#: inc/demo-data/demo-data-loader.php:331
 msgid "Demo data have already been removed."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:376
+#: inc/demo-data/demo-data-loader.php:378
 msgid "Demo data successfully removed."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:379
+#: inc/demo-data/demo-data-loader.php:381
 msgid "Removing demo data with some errors occurred."
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:508
+#: inc/demo-data/demo-data-loader.php:510
 msgid "Close notice"
 msgstr ""
 
-#: inc/demo-data/demo-data-loader.php:511
+#: inc/demo-data/demo-data-loader.php:513
 #, fuzzy
 msgid "Install demo data"
 msgstr "Установка %"
 
-#: inc/demo-data/demo-data-loader.php:511
+#: inc/demo-data/demo-data-loader.php:513
 msgid "for an acquaintance with the possibilities of the"
 msgstr ""
 
