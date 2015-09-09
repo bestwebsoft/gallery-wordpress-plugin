@@ -1,11 +1,11 @@
 <?php
 /*
 * Template - Gallery post
-* Version: 1.2.2
+* Version: 1.2.3
 */
 get_header(); ?>
 	<div class="content-area">
-		<div id="container" class="site-content  site-main">
+		<div id="container" class="site-content site-main">
 			<div id="content" class="hentry">
 				<?php global $post, $wp_query;
 				$args = array(
@@ -22,21 +22,21 @@ get_header(); ?>
 						<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
 						<div class="gallery_box_single entry-content">
 							<?php if ( ! post_password_required() ) {
-								if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) 
-									echo pdfprnt_show_buttons_for_custom_post_type();
-								elseif ( function_exists( 'pdfprntpr_show_buttons_for_custom_post_type' ) ) 
-									echo pdfprntpr_show_buttons_for_custom_post_type();
-								the_content(); 
-								$posts = get_posts( array(
-									"showposts"			=> -1,
-									"what_to_show"		=> "posts",
-									"post_status"		=> "inherit",
-									"post_type"			=> "attachment",
-									"orderby"			=> $gllr_options['order_by'],
-									"order"				=> $gllr_options['order'],
-									"post_mime_type"	=> "image/jpeg,image/gif,image/jpg,image/png",
-									"post_parent"		=> $post->ID
-								));
+								the_content();
+
+								$images_id = get_post_meta( $post->ID, '_gallery_images', true );
+
+								$posts = get_posts( array(								
+									"showposts"			=>	-1,
+									"what_to_show"		=>	"posts",
+									"post_status"		=>	"inherit",
+									"post_type"			=>	"attachment",
+									"orderby"			=>	$gllr_options['order_by'],
+									"order"				=>	$gllr_options['order'],
+									"post_mime_type"	=>	"image/jpeg,image/gif,image/jpg,image/png",
+									'post__in'			=> explode( ',', $images_id ),
+									'meta_key'			=> '_gallery_order_' . $post->ID
+								));	
 								if ( count( $posts ) > 0 ) {
 									$count_image_block = 0; ?>
 									<div class="gallery clearfix">

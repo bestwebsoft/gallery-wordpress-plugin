@@ -1,10 +1,10 @@
 === Gallery by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: add album, add gallery, add picture, add pictures, album, foto, fotoalbum, gallery, galery, galary, gallary, gellery, gellary, gelary, gallerie, gallery decription, gallery image, image, multiple pictures, photo, photoalbum, photogallery, pictures, slide show, slideshow, upload images, upload photos, view images, view pictures, website gallery
-Requires at least: 3.2
-Tested up to: 4.2.4
-Stable tag: 4.3.5
+Tags: add image, add images, add photo, add album, add gallery, add galleries, add picture, add pictures, album, albums, art gallery, best gallery, best gallery plugin, best image slider, best portfolio, best portfolio plugin, content gallery, content slider, easy media gallery, easy gallery, fancybox, fancy gallery, free photo gallery, free gallery, free images, free slider, filterable, filterable gallery, filterable portfolio, foto, fotoalbum, fotogalerie, fullscreen, fullscreen gallery, fullscreen photo, fullscreen slider, gallery, galery, galeri, galerie, galleries, galary, galeria, gallary, gellery, gellary, gelary, gallerie, galerij, Galleria, gallery decription, gallery image, gallery lightbox, Gallery Plugin, gallery shortcode, gallery slider, gallery wordpress, grid, grid gallery, image, image album, image description, image display, image gallery, image gallery plugin, image lightbox, image slider, image slideshow, images, images gallery, jquery, jquery gallery, lightbox, lightbox gallery, lightbox photo, media, media gallery, multi categories galleries, multi categories gallery, multiple pictures, multiply images upload, pagination gallery, pagination portfolio, panorama, panorama views, photo, photo album, photo albums, photo gallery, photoalbum, photographs, photogallery, photographer, photography, photos, photoset, picture, pictures, Picture Gallery, plugin for gallery, plugin gallery, portfolio, portfolio gallery, portfolio plugin, responsive, responsive galleries, responsive gallery, responsive image gallery, responsive slider, responsive slideshow, responsive wordpress photo gallery, shortcode, sidebar, shortcode gallery, Simple gallery, slide, slide show, slideshow, slideshow galleries, slideshow gallery, slideshows, sortable galleries, sortable gallery, thumbnail, thumbnail view, thumb view, thumbnail galleries, thumbnail gallery, thumbnails, thumbs, upload images, upload photos, view images, view pictures, website gallery, widget gallery, wordpress gallery, wordpress gallery plugin, wordpress photo gallery plugin, wordpress responsive gallery, wp gallery, wp gallery plugin, wp gallery plugins
+Requires at least: 3.5
+Tested up to: 4.3
+Stable tag: 4.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,36 +12,36 @@ This plugin allows you to implement a gallery page into your website.
 
 == Description ==
 
-This plugin makes it possible to implement as many galleries as you want into your website. You can add multiple pictures and description for each gallery, show them all at one page, view each one separately. Moreover, you can upload HQ images. Regular updates and simplicity of usage along with efficient functionality make it a perfect choice for your site to have an appealing look. 
+Gallery by BestWebSoft makes it possible to implement as many galleries as you want into your website. You can add multiple pictures and description for each gallery, show them all at one page, view each one separately. Moreover, you can upload HQ images. Regular updates and simplicity of usage along with efficient functionality make it a perfect choice for your site to have an appealing look. 
 There is also a premium version of the plugin with more useful features available.
 
 http://www.youtube.com/watch?v=kzC11CMmwbI
 
-<a href="http://www.youtube.com/watch?v=mivcWwfRVmI" target="_blank">Video instruction on Installation</a>
+<a href="http://www.youtube.com/watch?v=mivcWwfRVmI" target="_blank">Gallery by BestWebSoft Video instruction on Installation</a>
 
-<a href="http://www.youtube.com/watch?v=z95ql-M2JTc" target="_blank">Video instruction "How to add a gallery"</a>
+<a href="http://www.youtube.com/watch?v=z95ql-M2JTc" target="_blank">Gallery by BestWebSoft Video instruction "How to add a gallery"</a>
 
-<a href="http://wordpress.org/plugins/gallery-plugin/faq/" target="_blank">FAQ</a>
+<a href="http://wordpress.org/plugins/gallery-plugin/faq/" target="_blank">Gallery by BestWebSoft FAQ</a>
 
-<a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+<a href="http://support.bestwebsoft.com" target="_blank">Gallery by BestWebSoft Support</a>
 
-<a href="http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c" target="_blank">Upgrade to Pro Version</a>, <a href="http://bestwebsoft.com/demo-for-gallery-pro/" target="_blank">View Demo of Pro Version</a>
+<a href="http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c" target="_blank">Upgrade to Gallery Pro by BestWebSoft</a>, <a href="http://bestwebsoft.com/demo-for-gallery-pro/" target="_blank">View Demo of Gallery Pro by BestWebSoft</a>
 
 = Features =
 
-* Actions: Create any amount of albums in the gallery.
-* Description: Add description to each album.
-* Actions: Set a featured image as an album cover.
-* Actions: Upoad any number of photos to each album in the gallery.
-* Actions: Add Single Gallery to your page or post using a shortcode.
-* Actions: Attachment sorting settings in the admin panel.
-* Caption: Add a caption and alt tag to each photo in the album.
-* Display: Change the size of album cover thumbnails and photos in the album. 
-* Display: Choose a number of pictures to display in one row in the gallery album.
-* Slideshow: View pictures as a slide show and in a full size.
-* Ability: The ability to add comments to a Single Gallery.
-* Ability: The ability to install (and delete) demo data. 
-
+* Create any amount of albums in the gallery.
+* Upload any number of photos to each album in the gallery.
+* Add description to each album.
+* Set a featured image as an album cover.
+* Add a caption and alt tag to each photo in the album.
+* Change the size of album cover thumbnails and photos in the album. 
+* View pictures as a slide show and in a full size.
+* Add Single Gallery to your page or post using a shortcode.
+* Choose a number of pictures to display in one row in the gallery album.
+* Set sorting order for images.
+* Add comments to a Gallery.
+* Install (and delete) demo data. 
+* Add images from WordPress media library.
 
 = Recommended Plugins =
 
@@ -81,12 +81,12 @@ We can fix some things for free for the users who provide translation of our plu
 
 == Installation ==
 
-1. Upload the `Gallery` folder to the directory `/wp-content/plugins/`.
+1. Upload the `gallery-plugin` folder to the directory `/wp-content/plugins/`.
 2. Activate the plugin using the 'Plugins' menu in WordPress.
-3. Please check if you have the template file `gallery-template.php` as well as the template `gallery-single-template.php` in the templates directory. If you can't find these files, then just copy them from the directory  `/wp-content/plugins/gallery/template/` to your templates directory.
+3. Please check if you have the template file `gallery-template.php` as well as the template `gallery-single-template.php` in the templates directory. If you can't find these files, then just copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to your templates directory.
 4. You can adjust the necessary settings using your WordPress admin panel in "BWS Plugins" > "Gallery".
 
-<a href="https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/edit?pli=1" target="_blank">View a Step-by-step Instruction on Gallery Installation</a>.
+<a href="https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/edit?pli=1" target="_blank">View a Step-by-step Instruction on Gallery by BestWebSoft Installation</a>.
 
 http://www.youtube.com/watch?v=mivcWwfRVmI
 
@@ -104,26 +104,10 @@ http://www.youtube.com/watch?v=z95ql-M2JTc
 = How to use the plugin? =
 
 1. Click 'Add New' in the 'Galleries' menu and fill out your page.
-2. Upload pictures via the uploader at the bottom of the page. 
+2. Add or Upload pictures via 'Add Media' button. 
 3. Save the page.
 
-= How to add an image? =
-
-- Choose the necessary gallery in the list on the Galleries page in the admin section (or create a new gallery by clicking 'Add New' in the 'Galleries' menu). 
-- Use the option 'Upload a file' in the uploader, choose the necessary pictures and click 'Open'
-- The files uploading process will start.
-- Once all pictures are uploaded, please save the page.
-- If you see the message 'Please enable JavaScript to use the file uploader', you should enable JavaScript in your browser.
-
-= How to add many images? =
-
-Multiple files upload is supported by all modern browsers except Internet Explorer.
-
-= How to add image from Media library into gallery? =
-
-Since our Gallery plugin works with attached images, this cannot be done by standard means.
-However, you can re-attach previously downloaded images to your gallery. Please note that after this, that image will not be available as an attachment in that post to which it was attached earlier.
-You can re-attach images using our plugin Re-attacher - <a href="http://wordpress.org/plugins/re-attacher/">Re-attacher</a>. With this plugin, you can reattach previously uploaded images to other posts, as well as detach files from the post completely. Re-attacher allows you to manage both single files and groups of files. This plugin makes using our Gallery and Portfolio plugins a lot more convenient, as you won't have to upload new images each time you may need them on your gallery or portfolio pages.
+<a href="https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/edit?pli=1" target="_blank">View a Step-by-step Instruction "How to add a Gallery"</a>.ch files from the post completely. Re-attacher allows you to manage both single files and groups of files. This plugin makes using our Gallery and Portfolio plugins a lot more convenient, as you won't have to upload new images each time you may need them on your gallery or portfolio pages.
 
 = I'm getting the following error: "Fatal error: Call to undefined function get_post_thumbnail_id()". What should I do? =
 
@@ -139,8 +123,7 @@ After that your theme will support thumbnail option and the error will disappear
 
 = How to change image order on the single gallery page? =
 
-1. If you have WordPress version 3.5 and higher, please open the menu "Galleries" and choose random gallery from the list. It will take you to the gallery editing page. Use the drag and drop function to change the order of the images and do not forget to save the post. Do not forget to select `Sort images by` -> `sort images` in the plugin settings.
-2. If you have WordPress version older than 3.5, please go to the "Galleries" menu and select random gallery in the list. It will take you to the gallery editing page. There will be one or several media upload icons between the title and the content blocks. Choose any icon. After that you'll see a popup window containing three or four tabs. Go to the Gallery tab and you will see attachments related to this gallery. You can change their order using the drag and drop option. Just set an order and click the 'Save' button.
+Please open the menu "Galleries" and choose a gallery from the list. It will take you to the gallery editing page. Use the drag and drop function to change the order of the images and do not forget to save the post. Do not forget to select `Sort images by` -> `Sorting order in the Gallery` in the plugin settings.
 
 = I am using WP with rtl language and I have a problem with the lightbox displaying on iPad/iPhone. =
 
@@ -168,13 +151,20 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Screenshots ==
 
-1. Gallery Admin page.
-2. Gallery albums page in the front-end.
-3. Gallery Settings page in the admin panel.
-4. Single Gallery page.
-5. The pop-up window containing the album images.
+1. Edit Gallery page in the grid mode.
+2. Edit Gallery Attachment Info in the grid mode.
+3. Edit Gallery page in the list mode.
+4. Gallery Settings page in the admin panel.
+5. Gallery albums page in the front-end.
+6. Single Gallery page in the front-end.
+7. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.3.6 - 09.09.2015 =
+* Update : Functionality for galleries downloading and displaying in dashboard was updated.
+* NEW : Ability to add images from WordPress media library.
+* NEW : A button for gallery shortcode inserting to the content was added.
 
 = V4.3.5 - 11.08.2015 =
 * Bugfix : We fixed bug with loading the demo data.
@@ -504,6 +494,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.3.6 =
+Functionality for galleries downloading and displaying in dashboard was updated. Ability to add images from WordPress media library. A button for gallery shortcode inserting to the content was added.
 
 = V4.3.5 =
 We fixed bug with loading the demo data.

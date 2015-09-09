@@ -32,7 +32,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'post_title'     => 'DEMO Gastronomy',
 				'post_content'   => 'Nowadays food photographing is becoming more and more popular. Today thousands of blogs are devoted to such pictures. Using our Gallery plugin you can post such images easily! For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
-					'gllr_download_link' => '1'
+					'gllr_download_link' 	=> '1'
 				)
 			),
 			array( 
@@ -99,6 +99,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'post_content'   => '<p>This is a demonstration of a Gallery plugin for Wordpress websites.</p><h2>Create amazing galleries in few clicks</h2><p>Gallery plugin helps you to collect  images and display them on your website. Add unlimited galleries to your website - no programming knowledge required.</p><h2>Get premium features</h2><p>Upgrade to Pro version to unlock premium features like: Lightbox helper (buttons or thumbnails), Lightbox social buttons (Facebook, Twitter, Google +1, Pinterest), a single gallery pagination and more. <a href="http://bestwebsoft.com/products/gallery/" target="_blank">Learn More</a></p><h2>Expand your possibilities with exclusive add-ons</h2><ul><li><a href="http://bestwebsoft.com/products/gallery-categories/" target="_blank">Gallery categories</a>: Create different categories of your galleries.</li><li><a href="http://bestwebsoft.com/products/re-attacher/" target="_blank">Re-attacher</a>: Re-attach previously uploaded images to other gallery without having to upload them again, as well as detach files from the gallery completely.</li></ul><h2><span id="result_box" class="short_text" lang="en"><span class="hps">Help &amp; Support</span></span></h2><p>If you have any questions, our friendly Support Team is happy to help. <a href="http://support.bestwebsoft.com/" target="_blank">Visit our Help Center</a></a><h2>Shortcodes</h2><p>Use <code><strong>&#91;print_gllr id=<i>gallery_id</i> display=short]</strong></code> shortcode for displaying short description and link to the single gallery.</p><div>[print_gllr id={last_post_id} display=short]</div><div></div>Use <code><strong>&#91;print_gllr id=<i>gallery_id</i>]</strong></code> shortcode for displaying all images in gallery.<div>[print_gllr id={last_post_id}]</div>&nbsp;<div>{template_page} | <a href="https://drive.google.com/drive/u/0/folders/0B5l8lO-CaKt9QkJNaERwVEJnSVE" target="_blank">Instructions</a> | <a href="http://bestwebsoft.com/products/gallery/">Buy Now</a></div>',
 			),
 		);
+
 		$attachments = array(
 			/* gastronomy */
 			'apple.jpg' => array(
@@ -435,7 +436,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 			'start_slideshow'                        => 1,
 			'slideshow_interval'                     => 2000,
 			'single_lightbox_for_multiple_galleries' => 1,
-			'order_by'                               => 'menu_order',
+			'order_by'                               => 'meta_value_num',
 			'order'                                  => 'ASC',
 			'read_more_link_text'                    => 'More images in album',
 			'image_text'                             => 1,
@@ -445,8 +446,10 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 			'return_link_url'                        => '',
 			'return_link_shortcode'                  => 1,
 			'rewrite_template'                       => 0,
-			'display_demo_notice'                    => 0
+			'display_demo_notice'				 	=>	0,
+			'display_settings_notice'			 	=>	0
 		);
+
 		return array( 
 			'posts'        => $posts, 
 			'attachments'  => $attachments,
@@ -457,5 +460,3 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 }
 
 add_filter( 'bws_get_demo_data', 'bws_demo_data_array' );
-
-?>

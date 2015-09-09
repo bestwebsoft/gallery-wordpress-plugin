@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.2.3
+* Version: 1.2.4
 */
 ?>
 <?php get_header(); ?>
@@ -69,9 +69,23 @@ Template Name: Gallery Template
 								while ( $second_query->have_posts() ) : $second_query->the_post();
 									$attachments	= get_post_thumbnail_id( $post->ID );
 									if ( empty ( $attachments ) ) {
-										$attachments = get_children( 'post_parent='.$post->ID.'&post_type=attachment&post_mime_type=image&numberposts=1' );
-										$id = key( $attachments );
-										$image_attributes = wp_get_attachment_image_src( $id, 'album-thumb' );
+										$images_id = get_post_meta( $post->ID, '_gallery_images', true );
+										$attachments = get_posts( array(								
+											'showposts'			=>	1,
+											'what_to_show'		=>	'posts',
+											'post_status'		=>	'inherit',
+											'post_type'			=>	'attachment',
+											'orderby'			=>	$gllr_options['order_by'],
+											'order'				=>	$gllr_options['order'],
+											'post_mime_type'	=>	'image/jpeg,image/gif,image/jpg,image/png',
+											'post__in'			=> explode( ',', $images_id ),
+											'meta_key'			=> '_gallery_order_' . $post->ID
+										));
+										if ( ! empty( $attachments[0] ) ) {
+											$first_attachment = $attachments[0];
+											$image_attributes = wp_get_attachment_image_src( $first_attachment->ID, "album-thumb" );
+										} else
+											$image_attributes = array( '' );
 									} else {
 										$image_attributes = wp_get_attachment_image_src( $attachments, 'album-thumb' );
 									}

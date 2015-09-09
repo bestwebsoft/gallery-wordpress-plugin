@@ -48,8 +48,9 @@ if ( ! function_exists( 'bws_get_plugin_data' ) ) {
 		}
 		if ( ! function_exists( 'get_plugin_data' ) )
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-		$plugin_path     = preg_replace( "/inc\/demo-data/", '', dirname( __FILE__ ) );
-		$bws_plugin_info = get_plugin_data( $plugin_path . $bws_plugin_file );
+		$plugin_path     = str_replace( 'inc/demo-data', '', dirname( __FILE__ ) );
+		$plugin_path     = str_replace( 'inc\demo-data', '', $plugin_path );		
+		$bws_plugin_info = get_plugin_data( rtrim( $plugin_path, '/' ) . '/' . $bws_plugin_file );
 		$bws_plugin_name = $bws_plugin_info['Name'];
 		/**
 		 ***********************************************************
@@ -75,8 +76,7 @@ if ( ! function_exists ( 'bws_button' ) ) {
 			if ( empty( $demo_options ) ) {
 				$value        = 'install';
 				$button_title = __( 'Install Demo Data', $bws_plugin_text_domain );
-				$form_title   = __( 'If you install the demo-data, will be created galleries with images, demo-post with available shortcodes and page with a list of all the galleries, 
-plugin settings will be overwritten, however, when you delete the demo data, they will be restored.', $bws_plugin_text_domain );
+				$form_title   = __( 'If you install the demo-data, will be created galleries with images, demo-post with available shortcodes and page with a list of all the galleries, plugin settings will be overwritten, however, when you delete the demo data, they will be restored.', $bws_plugin_text_domain );
 			} else {
 				$value        = 'remove';
 				$button_title = __( 'Remove Demo Data', $bws_plugin_text_domain );
@@ -125,11 +125,11 @@ if ( ! function_exists ( 'bws_demo_confirm' ) ) {
 }
 
 if ( ! function_exists( 'bws_handle_demo_data' ) ) {
-	function bws_handle_demo_data( $callback ) {
+	function bws_handle_demo_data( $install_callback, $remove_callback ) {
 		if ( isset( $_POST['bws_install_demo_confirm'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_settings_nonce_name' ) )
-			return bws_install_demo_data();
+			return bws_install_demo_data( $install_callback );
 		elseif ( isset( $_POST['bws_remove_demo_confirm'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_settings_nonce_name' ) ) 
-			return bws_remove_demo_data( $callback );
+			return bws_remove_demo_data( $remove_callback );
 	}
 }
 
@@ -138,7 +138,7 @@ if ( ! function_exists( 'bws_handle_demo_data' ) ) {
  * @return $messge   array()   message about the result of the query
  */
 if ( ! function_exists ( 'bws_install_demo_data' ) ) {
-	function bws_install_demo_data() {
+	function bws_install_demo_data( $callback = false ) {
 		global $bws_plugin_text_domain, $bws_plugin_prefix, $wpdb;
 		if ( empty( $bws_plugin_prefix ) )
 			bws_get_plugin_data();
@@ -188,7 +188,7 @@ if ( ! function_exists ( 'bws_install_demo_data' ) ) {
 			 * Add custom image sizes
 			 */
 			if ( isset( $demo_data['image_sizes'] ) && ( ! empty( $demo_data['image_sizes'] ) ) && function_exists( 'add_image_size' ) ) {
-				foreach( $demo_data['image_sizes'] as $key => $value ) {
+				foreach ( $demo_data['image_sizes'] as $key => $value ) {
 					$demo_options['image_sizes'][] = $key;
 					add_image_size( $key, $value[0], $value[1], true );
 				}
@@ -214,7 +214,9 @@ if ( ! function_exists ( 'bws_install_demo_data' ) ) {
 					$post_id = wp_insert_post( $post );
 					if ( 'post' == $post['post_type'] )
 						$gallery_post_id = $post_id;
+					
 					$attach_id = 0;
+
 					if ( is_wp_error( $post_id ) || 0 == $post_id ) {
 						$error ++;
 					} else {
@@ -299,6 +301,9 @@ if ( ! function_exists ( 'bws_install_demo_data' ) ) {
 						$message['done'] .= '<br />' . __( 'View page with examples', $bws_plugin_text_domain ) . ':&nbsp;<a href="'.  get_permalink( $page_id ) . '" target="_blank">' . get_the_title( $page_id ) . '</a>';
 					}
 					$message['options'] = $demo_data['options'];
+
+					if ( isset( $callback ) )
+						call_user_func( $callback );
 				} else {
 					$message['error'] = __( 'Installation of demo data with some errors occurred.', $bws_plugin_text_domain );
 				}
@@ -601,4 +606,4 @@ if ( ! function_exists( 'bws_get_lorem_ipsum' ) ) {
 add_action( 'bws_show_demo_button', 'bws_button' );
 add_action( 'bws_display_demo_notice', 'bws_handle_demo_notice' );
 add_filter( 'bws_load_demo_data', 'bws_demo_data' );
-add_filter( 'bws_handle_demo_data', 'bws_handle_demo_data' );
+add_filter( 'bws_handle_demo_data', 'bws_handle_demo_data', 10, 2 );

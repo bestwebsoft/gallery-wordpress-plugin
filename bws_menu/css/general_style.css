@@ -69,6 +69,7 @@ td.bws_pro_version_tooltip {
     margin: 5px 0;
     border: 1px solid #AAAAAA;
     max-width: 800px;
+    overflow: hidden;
 }
 .bws_table_bg { 
     background: #f8e268 url("../images/pattern.png");
@@ -165,7 +166,7 @@ a.bws_plugin_pro_version {
     float: none;
 }
 /* #### Mobile Phones Portrait or Landscape #### */
-@media screen and (max-device-width: 640px) {
+@media screen and (max-device-width: 768px) {
     .bws_pro_version_tooltip {
         padding: 10px;
         text-align: center;
@@ -252,7 +253,7 @@ div.bws_banner_on_plugin_page .icon {
     cursor: pointer;
 }
 /* #### Mobile Phones Portrait or Landscape #### */
-@media screen and (max-device-width: 640px) {
+@media screen and (max-device-width: 768px) {
     .bws_banner_on_plugin_page .text,
     .bws_banner_on_plugin_page .icon, 
     .bws_banner_on_plugin_page .button_div,
@@ -265,4 +266,100 @@ div.bws_banner_on_plugin_page .icon {
         position: relative;
         left: 8px;
     }
+}
+/* display shortcodes */
+span.bws_code {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+    font-size: 13px;
+    margin: 0 1px;
+    padding: 3px 5px 2px;
+}
+/*
+* styles help tooltips
+*/
+.bws_help_box {
+    background-image: url("../images/tooltip_icons.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 28px;
+    position: relative;
+    margin: 3px 5px;
+    width: 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.bws_hidden_help_text {
+    background: #F4F4F4;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    left: 40px;
+    padding: 5px 10px;
+    position: absolute;
+    width: auto;
+    line-height: 1.5;
+    display: none;
+}
+.bws_hidden_help_text:before {
+    content: url("../images/help.png");
+    left: -10px;
+    position: absolute;
+    top: 7px;
+    direction: ltr;
+}
+.bws_help_box:hover .bws_hidden_help_text {
+    display: block;
+    z-index: 10;
+}
+/* RTL styles */
+.bws_help_box_right .bws_hidden_help_text,
+.rtl .bws_hidden_help_text {
+    left: auto;
+    right: 40px;
+}
+.bws_help_box_right .bws_hidden_help_text:before,
+.rtl .bws_hidden_help_text:before {
+    top: 0;
+    left: auto;
+    right: -10px;
+    -webkit-transform: rotate(180deg); /* Chrome y Safari */
+    -moz-transform: rotate(180deg); /* Firefox */
+    -o-transform: rotate(180deg); /* Opera */
+    transform: rotate(180deg);
+}
+
+/* bws shortcode insert */
+#bws_shortcode_content,
+#bws_shortcode_select_plugin {
+    margin-bottom: 10px;
+}
+#bws_shortcode_popup_block h4 {
+    padding: 0;
+    line-height: 2.5;
+    text-transform: uppercase;
+}
+#bws_shortcode_content_bottom p {
+    font-style: italic;
+    color: #666;
+}
+#bws_shortcode_block {
+    background-color: #fdfdfd;
+    border: 1px solid #dfdfdf;
+    overflow: auto;
+    padding: 10px;
+}
+#bws_shortcode_display {
+    margin: 0 auto;
+}
+#bws_shortcode_content fieldset label {
+    margin-top: 5px;
+    display: inline-block;
+}
+#bws_shortcode_content .title {
+    margin-right: 5px;
+    margin-left: 5px;
+    line-height: 2.5;
+}
+#bws_shortcode_content .title,
+#bws_shortcode_content .checkbox-title {
+    white-space: normal;
 }
