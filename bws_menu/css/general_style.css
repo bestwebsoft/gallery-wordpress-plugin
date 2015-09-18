@@ -288,16 +288,32 @@ span.bws_code {
     display: inline-block;
     vertical-align: middle;
 }
+.bws_help_box.dashicons-editor-help {
+    background: none;
+    color: #0074a2;
+    height: auto;
+    width: auto;
+    margin: 0;
+}
+.bws_help_box.dashicons-editor-help:hover {
+    color: #2ea2cc;
+}
 .bws_hidden_help_text {
     background: #F4F4F4;
     border: 1px solid #DCDCDC;
     border-radius: 4px;
     left: 40px;
-    padding: 5px 10px;
+    padding: 5px;
     position: absolute;
     width: auto;
     line-height: 1.5;
     display: none;
+    color: #333;
+    font-size: 12px;
+}
+.dashicons-editor-help .bws_hidden_help_text {
+    left: 30px;
+    top: -6px;
 }
 .bws_hidden_help_text:before {
     content: url("../images/help.png");
@@ -307,14 +323,19 @@ span.bws_code {
     direction: ltr;
 }
 .bws_help_box:hover .bws_hidden_help_text {
-    display: block;
-    z-index: 10;
+    display: inline-block;
+    z-index: 1001;
 }
 /* RTL styles */
 .bws_help_box_right .bws_hidden_help_text,
 .rtl .bws_hidden_help_text {
     left: auto;
     right: 40px;
+}
+.bws_help_box_right.dashicons-editor-help .bws_hidden_help_text,
+.rtl .dashicons-editor-help .bws_hidden_help_text {
+    right: 30px;
+    top: 0;
 }
 .bws_help_box_right .bws_hidden_help_text:before,
 .rtl .bws_hidden_help_text:before {

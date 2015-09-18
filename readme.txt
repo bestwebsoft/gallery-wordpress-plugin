@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add image, add images, add photo, add album, add gallery, add galleries, add picture, add pictures, album, albums, art gallery, best gallery, best gallery plugin, best image slider, best portfolio, best portfolio plugin, content gallery, content slider, easy media gallery, easy gallery, fancybox, fancy gallery, free photo gallery, free gallery, free images, free slider, filterable, filterable gallery, filterable portfolio, foto, fotoalbum, fotogalerie, fullscreen, fullscreen gallery, fullscreen photo, fullscreen slider, gallery, galery, galeri, galerie, galleries, galary, galeria, gallary, gellery, gellary, gelary, gallerie, galerij, Galleria, gallery decription, gallery image, gallery lightbox, Gallery Plugin, gallery shortcode, gallery slider, gallery wordpress, grid, grid gallery, image, image album, image description, image display, image gallery, image gallery plugin, image lightbox, image slider, image slideshow, images, images gallery, jquery, jquery gallery, lightbox, lightbox gallery, lightbox photo, media, media gallery, multi categories galleries, multi categories gallery, multiple pictures, multiply images upload, pagination gallery, pagination portfolio, panorama, panorama views, photo, photo album, photo albums, photo gallery, photoalbum, photographs, photogallery, photographer, photography, photos, photoset, picture, pictures, Picture Gallery, plugin for gallery, plugin gallery, portfolio, portfolio gallery, portfolio plugin, responsive, responsive galleries, responsive gallery, responsive image gallery, responsive slider, responsive slideshow, responsive wordpress photo gallery, shortcode, sidebar, shortcode gallery, Simple gallery, slide, slide show, slideshow, slideshow galleries, slideshow gallery, slideshows, sortable galleries, sortable gallery, thumbnail, thumbnail view, thumb view, thumbnail galleries, thumbnail gallery, thumbnails, thumbs, upload images, upload photos, view images, view pictures, website gallery, widget gallery, wordpress gallery, wordpress gallery plugin, wordpress photo gallery plugin, wordpress responsive gallery, wp gallery, wp gallery plugin, wp gallery plugins
-Requires at least: 3.5
-Tested up to: 4.3
-Stable tag: 4.3.6
+Requires at least: 3.8
+Tested up to: 4.3.1
+Stable tag: 4.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,7 +48,6 @@ http://www.youtube.com/watch?v=kzC11CMmwbI
 The author of the Gallery also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/gallery-categories/">Gallery Categories</a> - This plugin is an exclusive add-on to the Gallery Plugin. It allows creating different categories of galleries on your site. This way, you could organize the galleries on your website, which makes navigating through your content a whole lot easier.
-* <a href="http://wordpress.org/plugins/re-attacher/">Re-attacher</a> - With this plugin, you can reattach previously uploaded images to other posts, as well as detach files from the post completely. This plugin makes using our Gallery and Portfolio plugins a lot more convenient, as you won’t have to upload new images each time you may need them on your gallery or portfolio pages.
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
 There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
@@ -83,7 +82,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the `gallery-plugin` folder to the directory `/wp-content/plugins/`.
 2. Activate the plugin using the 'Plugins' menu in WordPress.
-3. Please check if you have the template file `gallery-template.php` as well as the template `gallery-single-template.php` in the templates directory. If you can't find these files, then just copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to your templates directory.
+3. Please check if you have the template file `gallery-template.php` as well as the template `gallery-single-template.php` in your theme folder. If you can't find these files, then just copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to your theme directory.
 4. You can adjust the necessary settings using your WordPress admin panel in "BWS Plugins" > "Gallery".
 
 <a href="https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/edit?pli=1" target="_blank">View a Step-by-step Instruction on Gallery by BestWebSoft Installation</a>.
@@ -99,7 +98,7 @@ http://www.youtube.com/watch?v=z95ql-M2JTc
 = I cannot view my Gallery page =
 
 1. First of all, you should create your first Gallery page and select 'Gallery' in the list of available templates (it will be used for displaying the Gallery).
-2. If you cannot find 'Gallery' in the list of available templates, then just copy it from the directory `/wp-content/plugins/gallery-plugin/template/` to your templates directory.
+2. If you cannot find 'Gallery' in the list of available templates, then just copy it from the directory `/wp-content/plugins/gallery-plugin/template/` to your theme directory.
 
 = How to use the plugin? =
 
@@ -107,7 +106,7 @@ http://www.youtube.com/watch?v=z95ql-M2JTc
 2. Add or Upload pictures via 'Add Media' button. 
 3. Save the page.
 
-<a href="https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/edit?pli=1" target="_blank">View a Step-by-step Instruction "How to add a Gallery"</a>.ch files from the post completely. Re-attacher allows you to manage both single files and groups of files. This plugin makes using our Gallery and Portfolio plugins a lot more convenient, as you won't have to upload new images each time you may need them on your gallery or portfolio pages.
+<a href="https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/edit?pli=1" target="_blank">View a Step-by-step Instruction "How to add a Gallery"</a>
 
 = I'm getting the following error: "Fatal error: Call to undefined function get_post_thumbnail_id()". What should I do? =
 
@@ -160,6 +159,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 7. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.3.7 - 18.09.2015 =
+* Bugfix : We fixed bug with image uploading in posts.
+* Update : Textdomain was changed.
+* NEW : Help tooltips were added.
+* Update : Updated for compatibility with Gallery Categories Plugin.
 
 = V4.3.6 - 09.09.2015 =
 * Update : Functionality for galleries downloading and displaying in dashboard was updated.
@@ -494,6 +499,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.3.7 =
+We fixed bug with image uploading in posts. Textdomain was changed. Help tooltips were added. Updated for compatibility with Gallery Categories Plugin.
 
 = V4.3.6 =
 Functionality for galleries downloading and displaying in dashboard was updated. Ability to add images from WordPress media library. A button for gallery shortcode inserting to the content was added.

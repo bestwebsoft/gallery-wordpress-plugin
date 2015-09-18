@@ -16,7 +16,7 @@ get_header(); ?>
 				);	
 				$second_query = new WP_Query( $args ); 
 				$gllr_options = get_option( 'gllr_options' );
-				$gllr_download_link_title = addslashes( __( 'Download high resolution image', 'gallery' ) );
+				$gllr_download_link_title = addslashes( __( 'Download high resolution image', 'gallery-plugin' ) );
 				if ( $second_query->have_posts() ) {
 					while ( $second_query->have_posts() ) : $second_query->the_post(); ?>
 						<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
@@ -98,7 +98,7 @@ get_header(); ?>
 					}	
 				} else { ?>
 					<div class="gallery_box_single">
-						<p class="not_found"><?php _e( 'Sorry, nothing found.', 'gallery' ); ?></p>
+						<p class="not_found"><?php _e( 'Sorry, nothing found.', 'gallery-plugin' ); ?></p>
 				<?php } ?>				
 					</div><!-- .gallery_box_single -->
 				<div class="gllr_clear"></div>			
@@ -117,7 +117,7 @@ get_header(); ?>
 					'speedIn'				:	500, 
 					'speedOut'				:	300,
 					'titleFormat'			: function( title, currentArray, currentIndex, currentOpts ) {
-						return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery"); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + $( currentOpts.orig ).attr('rel') + '" target="_blank"><?php echo $gllr_download_link_title; ?> </a><?php } ?>';
+						return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery-plugin" ); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + $( currentOpts.orig ).attr('rel') + '" target="_blank"><?php echo $gllr_download_link_title; ?> </a><?php } ?>';
 					}<?php if ( $gllr_options['start_slideshow'] == 1 ) { ?>,
 					'onComplete':	function() {
 						clearTimeout( jQuery.fancybox.slider );

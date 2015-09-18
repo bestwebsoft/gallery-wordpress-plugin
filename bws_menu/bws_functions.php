@@ -11,13 +11,23 @@ if ( ! function_exists ( 'bws_add_general_menu' ) ) {
 }
 
 /**
-* Function check if plugin is compatible with current WP version
+* Function check if plugin is compatible with current WP version - for old plugin version
 * @return void
 */
 if ( ! function_exists ( 'bws_wp_version_check' ) ) {
 	function bws_wp_version_check( $plugin_basename, $plugin_info, $require_wp ) {
-		global $wp_version;
-		if ( version_compare( $wp_version, $require_wp, "<" ) ) {
+		bws_wp_min_version_check( $plugin_basename, $plugin_info, '3.8' , $require_wp );
+	}
+}
+
+/**
+* Function check if plugin is compatible with current WP version
+* @return void
+*/
+if ( ! function_exists ( 'bws_wp_min_version_check' ) ) {
+	function bws_wp_min_version_check( $plugin_basename, $plugin_info, $require_wp, $min_wp = false ) {
+		global $wp_version, $bws_versions_notice_array;
+		if ( false != $min_wp && version_compare( $wp_version, $min_wp, "<" ) ) {
 			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			if ( is_plugin_active( $plugin_basename ) ) {
 				deactivate_plugins( $plugin_basename );
@@ -35,6 +45,27 @@ if ( ! function_exists ( 'bws_wp_version_check' ) ) {
 					)
 				);
 			}
+		} elseif ( version_compare( $wp_version, $require_wp, "<" ) ) {
+			$bws_versions_notice_array[] = array( 'name' => $plugin_info['Name'], 'version' => $require_wp );
+		}
+	}
+}
+
+if ( ! function_exists( 'bws_versions_notice' ) ) {
+	function bws_versions_notice() {
+		global $bws_versions_notice_array;
+		if ( ! empty( $bws_versions_notice_array ) ) {
+			foreach ( $bws_versions_notice_array as $key => $value ) { ?>
+				<div class="update-nag"><?php
+					echo sprintf(
+							"<strong>%s</strong> %s <strong>WordPress %s</strong> %s",
+							$value['name'],
+							__( 'requires', 'bestwebsoft' ),
+							$value['version'],
+							__( 'or higher! We do not guarantee that our plugin will work correctly. Please upgrade to WordPress latest version.', 'bestwebsoft' )
+						);
+				?></div>
+			<?php }
 		}
 	}
 }
@@ -620,8 +651,19 @@ if ( ! function_exists( 'bws_plugin_banner_to_settings' ) ) {
 	<?php }
 }
 
-if ( ! function_exists ( 'bws_plugin_init' ) ) {
-	function bws_plugin_init() {
+if ( ! function_exists( 'bws_show_settings_notice' ) ) {
+	function bws_show_settings_notice() { ?>
+		<div id="bws_save_settings_notice" class="updated fade" style="display:none">
+			<p>
+				<strong><?php _e( 'Notice', 'bestwebsoft' ); ?></strong>: <?php _e( "The plugin's settings have been changed.", 'bestwebsoft' ); ?> 
+				<a class="bws_save_anchor" href="#bws-submit-button"><?php _e( 'Save Changes', 'bestwebsoft' ); ?></a>
+			</p>
+		</div>
+	<?php }
+}
+
+if ( ! function_exists ( 'bws_plugins_admin_init' ) ) {
+	function bws_plugins_admin_init() {
 		/* Internationalization, first(!) */
 		load_plugin_textdomain( 'bestwebsoft', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
@@ -629,27 +671,22 @@ if ( ! function_exists ( 'bws_plugin_init' ) ) {
 	}
 }
 
-if ( ! function_exists ( 'bws_admin_add_scripts' ) ) {
-	function bws_admin_add_scripts() {
+if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) ) {
+	function bws_admin_enqueue_scripts() {
 		global $wp_version;
-		if ( $wp_version < 3.8 )
-			wp_enqueue_style( 'bws-admin-style', plugins_url( 'css/general_style_wp_before_3.8.css', __FILE__ ) );
-		else
-			wp_enqueue_style( 'bws-admin-style', plugins_url( 'css/general_style.css', __FILE__ ) );
+		wp_enqueue_style( 'bws-admin-css', plugins_url( 'css/general_style.css', __FILE__ ) );
+		wp_enqueue_script( 'bws-admin-scripts', plugins_url( 'js/general_script.js', __FILE__ ), array( 'jquery' ) );
 
 		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" ) {
 			wp_enqueue_style( 'bws_menu_style', plugins_url( 'css/style.css', __FILE__ ) );
 			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js' , __FILE__ ) );
-			if ( $wp_version >= '3.8' )
-				wp_enqueue_script( 'theme-install' );
-			elseif ( $wp_version >= '3.4' )
-				wp_enqueue_script( 'theme' );
+			wp_enqueue_script( 'theme-install' );
 		}
 	}
 }
 
-if ( ! function_exists ( 'bws_admin_head' ) ) {
-	function bws_admin_head() {
+if ( ! function_exists ( 'bws_plugins_admin_head' ) ) {
+	function bws_plugins_admin_head() {
 		global $bws_shortcode_list, $wp_version;
 		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" ) { ?>
 			<noscript>
@@ -664,7 +701,7 @@ if ( ! function_exists ( 'bws_admin_head' ) ) {
 			<!-- TinyMCE Shortcode Plugin -->
 			<script type='text/javascript'>
 				var bws_shortcode_button = {
-					'title': '<?php _e( "Add BWS shortcode", "bestwebsoft" ); ?>',
+					'title': '<?php _e( "Add BWS Plugins Shortcode", "bestwebsoft" ); ?>',
 					'function_name': [
 						<?php foreach ( $bws_shortcode_list as $key => $value ) {
 							if ( isset( $value['js_function'] ) )
@@ -907,7 +944,9 @@ if ( ! function_exists( 'bws_shortcode_media_button_popup' ) ) {
 	}
 }
 
-add_action( 'admin_init', 'bws_plugin_init' );
-add_action( 'admin_enqueue_scripts', 'bws_admin_add_scripts' );
-add_action( 'admin_head', 'bws_admin_head' );
+add_action( 'admin_init', 'bws_plugins_admin_init' );
+add_action( 'admin_enqueue_scripts', 'bws_admin_enqueue_scripts' );
+add_action( 'admin_head', 'bws_plugins_admin_head' );
 add_action( 'admin_footer','bws_shortcode_media_button_popup' );
+
+add_action( 'admin_notices', 'bws_versions_notice' );

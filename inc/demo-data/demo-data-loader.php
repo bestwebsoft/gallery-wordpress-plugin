@@ -18,11 +18,11 @@ if ( ! function_exists( 'bws_get_plugin_data' ) ) {
 		$bws_plugin_file       = $bws_plugin_file_array[0];
 		switch( $bws_plugin_file ) {
 			case 'gallery-plugin.php':
-				$bws_plugin_text_domain = 'gallery';
+				$bws_plugin_text_domain = 'gallery-plugin';
 				$bws_plugin_prefix      = 'gllr_';
 				break;
 			case 'gallery-plugin-pro.php':
-				$bws_plugin_text_domain = 'gallery_pro';
+				$bws_plugin_text_domain = 'gallery-plugin-pro';
 				$bws_plugin_prefix      = 'gllrprfssnl_';
 				break;
 			case 'portfolio.php':
@@ -34,7 +34,7 @@ if ( ! function_exists( 'bws_get_plugin_data' ) ) {
 				$bws_plugin_prefix      = 'prtflpr_';
 				break;
 			case 'quotes-and-tips.php':
-				$bws_plugin_text_domain = 'quotes_and_tips';
+				$bws_plugin_text_domain = 'quotes-and-tips';
 				$bws_plugin_prefix      = 'qtsndtps_';
 				break;
 			case 'realty.php':

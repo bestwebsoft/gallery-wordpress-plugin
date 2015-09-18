@@ -16,14 +16,6 @@ function gllr_setError( msg ) {
 
 (function($) {
 	$(document).ready( function() {	
-		/* add notice about changing in the settings page */	
-		$( '#gllr_settings_form input' ).bind( "change click select", function() {
-			if ( $( this ).attr( 'type' ) != 'submit' ) {
-				$( '.updated.fade' ).css( 'display', 'none' );
-				$( '#gllr_settings_notice' ).css( 'display', 'block' );
-			};
-		});
-
 		$( '#gllr_ajax_update_images' ).click( function() {
 			gllr_setMessage( "<p>" + gllr_vars.update_img_message + "</p>" );
 			var curr = 0;
@@ -72,6 +64,27 @@ function gllr_setError( msg ) {
 				}
 			});
 		});
+
+		if ( $( window ).width() < 800 ) {
+			$.each(	$( '.gllr_add_responsive_column' ), function() {	
+				var content = '<div class="gllr_info hidden">';
+				$.each(	$( this ).find( 'td:hidden' ).not( '.column-order' ), function() {	
+					content = content + '<label>' + $( this ).attr( 'data-colname' ) + '</label><br/>' + $( this ).html() + '<br/>';
+					$( this ).html( '' );			
+				});	
+				content = content + '</div>';			
+				$( this ).find( '.column-title' ).append( content );
+				$( this ).find( '.gllr_info_show' ).show();
+			});
+			$( '.gllr_info_show' ).on( 'click', function( event ) {
+				event.preventDefault();
+				if ( $( this ).next( '.gllr_info' ).is( ':hidden' ) ) {
+					$( this ).next( '.gllr_info' ).show();
+				} else {
+					$( this ).next( '.gllr_info' ).hide();
+				}
+			});
+		}
 		
 		$( '#gllr-media-insert' ).click( function open_media_window() {
 			if ( this.window === undefined ) {
@@ -122,29 +135,38 @@ function gllr_setError( msg ) {
 		});
 
 		if ( $.fn.sortable ) {
-			$( '#the-list' ).sortable( {
-				stop: function( event, ui ) { 
-					var g = $( '#the-list' ).sortable( 'toArray' );
-					var f = g.length;
-					$.each(	g,
-						function( k,l ) {							
-							$( '#' + l + ' input[name^="_gallery_order"]' ).val( k + 1 );
-						}
-					)
-				}
-			});
-			
-			$( '.attachments' ).sortable({
-				stop: function( event, ui ) { 
-					var g = $( '.attachments' ).sortable( 'toArray' );
-					var f = g.length;
-					$.each(	g,
-						function( k,l ) {		
-							$( '#' + l + ' input[name^="_gallery_order"]' ).val( k + 1 );
-						}
-					)
-				}
-			});
+			if ( $( "#the-list tr" ).length > 1 ) {
+				$( '#the-list' ).sortable( {
+					stop: function( event, ui ) { 
+						var g = $( '#the-list' ).sortable( 'toArray' );
+						var f = g.length;
+						$.each(	g,
+							function( k,l ) {							
+								$( '#' + l + ' input[name^="_gallery_order"]' ).val( k + 1 );
+							}
+						)
+					}
+				});
+
+				$( "#the-list input" ).on( 'click', function() { $(this).focus(); });
+			} 
+			if ( $( ".attachments li" ).length > 1 ) {
+				$( '.attachments' ).sortable({
+					start: function( event, ui ) { 
+						$( '.attachments' ).css( 'border', '1px solid #ccc' );
+					},
+					stop: function( event, ui ) { 
+						$( '.attachments' ).css( 'border', 'none' );
+						var g = $( '.attachments' ).sortable( 'toArray' );
+						var f = g.length;
+						$.each(	g,
+							function( k,l ) {		
+								$( '#' + l + ' input[name^="_gallery_order"]' ).val( k + 1 );
+							}
+						)
+					}
+				});
+			}
 		}
 
 		$( '.gllr-media-bulk-select-button' ).on( 'click', function() {
@@ -253,6 +275,25 @@ function gllr_setError( msg ) {
 				$( this ).find( '.gllr-media-attachment-details' ).show();
 			});
 		}
+
+		$( '.post-type-gallery .view-switch a' ).on( 'click', function( event ) {
+			if ( window.confirm( gllr_vars.confirm_update_gallery ) ) {
+				event.preventDefault();
+				if ( $( '.filter-items input[name="mode"]' ).val() == 'grid' )
+					var mode = 'list';
+				else
+					var mode = 'grid';
+				/* change view mode */
+				$.ajax({
+				url: "../wp-admin/admin-ajax.php",
+				type: "POST",
+				data: "action=gllr_change_view_mode&&mode=" + mode + "&gllr_ajax_nonce_field=" + gllr_vars.gllr_nonce,
+				success: function( result ) {				
+						$( '#publishing-action .button-primary' ).click();
+					} 
+				});
+			}
+		});		
 	});
 })(jQuery);
 
@@ -262,7 +303,7 @@ function gllr_notice_wiev( data_id ) {
 		/*	function to send Ajax request to gallery notice */
 		gllr_notice_media_attach = function( post_id, thumb_id, typenow ) {
 			$.ajax({
-				url: "/wp-admin/admin-ajax.php",
+				url: "../wp-admin/admin-ajax.php",
 				type: "POST",
 				data: "action=gllr_media_check&&thumbnail_id=" + thumb_id + "&gllr_ajax_nonce_field=" + gllr_vars.gllr_nonce + "&post_type=" + typenow,
 				success: function( html ) {				

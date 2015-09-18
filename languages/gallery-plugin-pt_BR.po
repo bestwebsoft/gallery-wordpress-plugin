@@ -2,264 +2,312 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 13:28+0300\n"
-"PO-Revision-Date: 2015-09-07 13:28+0300\n"
+"POT-Creation-Date: 2015-09-14 14:32+0300\n"
+"PO-Revision-Date: 2015-09-14 14:32+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
-"Language-Team: Radovan Georgijevic, Andrijana Nikolic <http://www.georgijevic.info, andrijanan@webhostinggeeks.com>\n"
-"Language: fr_FR\n"
+"Language-Team: DJIO | Dionizio Bonfim Bach <wordpress@djio.com.br>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gallery-plugin.php:43
-#: gallery-plugin.php:795
+# @ bestwebsoft
+# @ gallery
+#: gallery-plugin.php:45
+#: gallery-plugin.php:797
 #: gallery-plugin.php:1133
 #: gallery-plugin.php:1150
 msgid "Settings"
-msgstr "Podešavanja"
+msgstr "Configurações"
 
-#: gallery-plugin.php:104
+# @ gallery
+#: gallery-plugin.php:105
 msgid "See images &raquo;"
-msgstr "Pogledaj sliku &raquo;"
+msgstr "Ver imagens &raquo;"
 
-#: gallery-plugin.php:107
+#: gallery-plugin.php:108
 msgid "Return to all albums"
 msgstr ""
 
-#: gallery-plugin.php:331
-msgid "The following files \"gallery-template.php\" and \"gallery-single-template.php\" were not found in the directory of your theme. Please copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to the directory of your theme for the correct work of the Gallery plugin"
-msgstr "Sledeći fajlovi \"gallery-template.php\" i \"gallery-single-template.php\" nisu pronađeni u direktorijumu vaše teme. Molimo vas da ih kopirate iz direktorijuma `/wp-content/plugins/gallery-plugin/template/` u direktorijum vaše teme za ispravan rad modula Galerija"
+# @ gallery
+#: gallery-plugin.php:332
+#, fuzzy, php-format
+msgid "The following files '%s' and '%s' were not found in the directory of your theme. Please copy them from the directory `%s` to the directory of your theme for the correct work of the Gallery plugin"
+msgstr "Os seguintes arquivos \"gallery-template.php\" e \"gallery-single-template.php\" não foram encontrados no diretório do seu tema. Por favor, copie-os a partir do diretório `/wp-content/plugins/gallery-plugin/template/` para o diretório do seu tema para que o plugin Galeria funcione corretamente"
 
-#: gallery-plugin.php:340
-#: gallery-plugin.php:349
-msgid "Galleries"
-msgstr "Galerije"
-
-#: gallery-plugin.php:341
-#: gallery-plugin.php:2511
-msgid "Gallery"
-msgstr "Galerija"
-
+# @ gallery
 #: gallery-plugin.php:342
-msgid "Add New Gallery"
-msgstr "Dodaj novu Galeriju"
+#: gallery-plugin.php:351
+msgid "Galleries"
+msgstr "Galerias"
 
+# @ gallery
 #: gallery-plugin.php:343
-msgid "Edit Gallery"
-msgstr "Uredi Galeriju"
+#: gallery-plugin.php:2530
+msgid "Gallery"
+msgstr "Galeria"
 
+# @ gallery
 #: gallery-plugin.php:344
-msgid "New Gallery"
-msgstr "Nova Galerija"
+msgid "Add New Gallery"
+msgstr "Adicionar Nova Galeria"
 
+# @ gallery
 #: gallery-plugin.php:345
-msgid "View Gallery"
-msgstr "Pregled Galerije"
+msgid "Edit Gallery"
+msgstr "Editar Galeria"
 
+# @ gallery
 #: gallery-plugin.php:346
+msgid "New Gallery"
+msgstr "Nova Galeria"
+
+# @ gallery
+#: gallery-plugin.php:347
+msgid "View Gallery"
+msgstr "Ver Galeria"
+
+# @ gallery
+#: gallery-plugin.php:348
 #, fuzzy
 msgid "Search Galleries"
-msgstr "Galerije"
+msgstr "Galerias"
 
-#: gallery-plugin.php:347
+# @ gallery
+#: gallery-plugin.php:349
 msgid "No Gallery found"
-msgstr "Nije pronađena Galerija"
+msgstr "Nenhuma Galeria foi encontrada"
 
-#: gallery-plugin.php:404
-msgid "Gallery Shortcode"
-msgstr "Kratak kod za Galeriju"
-
+# @ gallery
 #: gallery-plugin.php:406
-#: gallery-plugin.php:438
+msgid "Gallery Shortcode"
+msgstr "Shortcode da Galeria"
+
+# @ gallery
+#: gallery-plugin.php:408
+#: gallery-plugin.php:440
 #, fuzzy
 msgid "Gallery Categories"
-msgstr "Veličina slika u galeriji"
+msgstr "Tamanho da imagem da galeria"
 
-#: gallery-plugin.php:415
+#: gallery-plugin.php:417
 msgid "Add this shortcode to a page, post or widget to display a single gallery"
 msgstr ""
 
-#: gallery-plugin.php:418
+# @ gallery
+#: gallery-plugin.php:420
 #, fuzzy
 msgid "Use this shortcode to display an album image with the description and the link to a single gallery page"
-msgstr "Ako želite da prikažete kratak opis koji sadrži snimak ekrana i link ka stranici sa Jedinstvenom galerijom."
+msgstr "Se você quiser mostrar uma breve descrição contendo a miniatura e o link para a Página da Galeria use assim"
 
-#: gallery-plugin.php:420
+#: gallery-plugin.php:422
 msgid "Short display"
 msgstr ""
 
-#: gallery-plugin.php:439
+#: gallery-plugin.php:441
 msgid "Most Used"
 msgstr ""
 
-#: gallery-plugin.php:444
+# @ gallery
+#: gallery-plugin.php:446
 #: gallery-plugin.php:890
 msgid "Default"
-msgstr "Podrazumevano"
+msgstr "Padrão"
 
-#: gallery-plugin.php:449
+# @ gallery
+#: gallery-plugin.php:451
 #, fuzzy
 msgid "Add New Gallery Category"
-msgstr "Dodaj novu Galeriju"
+msgstr "Adicionar Nova Galeria"
 
-#: gallery-plugin.php:456
-#, fuzzy
+#: gallery-plugin.php:458
 msgid "Install plugin"
-msgstr "Instalirani moduli"
+msgstr ""
 
-#: gallery-plugin.php:611
-#: gallery-plugin.php:2124
-#: gallery-plugin.php:2242
+# @ gallery
+#: gallery-plugin.php:613
+#: gallery-plugin.php:2126
+#: gallery-plugin.php:2240
+#: gallery-plugin.php:2326
 msgid "Title"
-msgstr "Naslov"
+msgstr "Título"
 
-#: gallery-plugin.php:612
+# @ gallery
+#: gallery-plugin.php:614
 msgid "Author"
 msgstr "Autor"
 
-#: gallery-plugin.php:613
+# @ gallery
+#: gallery-plugin.php:615
 #, fuzzy
 msgid "Shortcode"
-msgstr "Kratak kod za Galeriju"
+msgstr "Shortcode da Galeria"
 
-#: gallery-plugin.php:614
+# @ gallery
+#: gallery-plugin.php:616
 #, fuzzy
 msgid "Photos"
 msgstr "Foto"
 
-#: gallery-plugin.php:615
+# @ gallery
+#: gallery-plugin.php:617
 #: gallery-plugin.php:954
 msgid "Date"
-msgstr "Datum"
+msgstr "Data"
 
-#: gallery-plugin.php:768
+# @ gallery
+#: gallery-plugin.php:770
 msgid "Settings are saved"
-msgstr "Podešavanja su sačuvana"
+msgstr "As configurações estão salvas"
 
-#: gallery-plugin.php:781
+# @ gallery
+#: gallery-plugin.php:783
 #, fuzzy
 msgid "All plugin settings were restored."
-msgstr "na stranici za podešavanje modula ("
+msgstr "da página de configurações do plugin ("
 
-#: gallery-plugin.php:793
+# @ gallery
+#: gallery-plugin.php:795
 msgid "Gallery Settings"
-msgstr "Podešavanja Galerije"
+msgstr "Configurações da Galeria"
 
-#: gallery-plugin.php:796
+# @ gallery
+#: gallery-plugin.php:798
 #: gallery-plugin.php:1134
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:797
+#: gallery-plugin.php:799
 msgid "Go PRO"
 msgstr ""
 
-#: gallery-plugin.php:807
+# @ gallery
+#: gallery-plugin.php:809
+#, fuzzy
+msgid "Please enable JavaScript to use the option to renew images."
+msgstr "Favor havilitar o Javascript para usar o envio de arquivos."
+
+#: gallery-plugin.php:810
 msgid "Notice:"
 msgstr ""
 
-#: gallery-plugin.php:807
+#: gallery-plugin.php:810
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr ""
 
-#: gallery-plugin.php:808
+# @ gallery
+#: gallery-plugin.php:811
 msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
-msgstr "Ako želite da dodate Jedinstvenu Galeriju na vašu stranicu ili post, samo kopirajte i prelepite ovaj kratki kod na vaš post ili stranicu:"
-
-#: gallery-plugin.php:812
-#, fuzzy
-msgid "Please enable JavaScript to use the option to renew images."
-msgstr "Molimo vas omogućite da JavaScript koristi program za učitavanje fajlova."
+msgstr "Se você quiser adicionar uma Galeria específica em sua página ou post, basta copiar e colar este shortcode em seu post ou página:"
 
 #: gallery-plugin.php:816
 msgid "Update images for gallery"
 msgstr ""
 
+# @ gallery
 #: gallery-plugin.php:818
 #, fuzzy
 msgid "Update images"
-msgstr "poređaj slike"
+msgstr "ordenar imagens"
 
+# @ gallery
 #: gallery-plugin.php:826
 msgid "Image size for the album cover"
-msgstr "Veličina slike za naslovnu stranicu albuma"
+msgstr "Tamanho da imagem de capa do álbum"
 
+# @ gallery
 #: gallery-plugin.php:828
 #: gallery-plugin.php:842
 #: gallery-plugin.php:864
 msgid "Image size"
-msgstr "Veličina slike"
+msgstr "Tamanho da imagem"
 
+# @ gallery
 #: gallery-plugin.php:831
 #: gallery-plugin.php:845
 msgid "Width (in px)"
-msgstr "Širina (u pikselima)"
+msgstr "Largura (em px)"
 
+# @ gallery
 #: gallery-plugin.php:835
 #: gallery-plugin.php:849
 msgid "Height (in px)"
-msgstr "Visina (u pikselima)"
+msgstr "Altura (em px)"
 
+# @ gallery
 #: gallery-plugin.php:840
 #, fuzzy
 msgid "Image size for thumbnails"
-msgstr "Veličina slike za naslovnu stranicu albuma"
+msgstr "Tamanho da imagem de capa do álbum"
 
+# @ gallery
 #: gallery-plugin.php:854
 msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
-msgstr "WordPress će kreirati novi umanjeni prikaz sa navedenim dimenzijama kada učitate novu sliku."
+msgstr "WordPress irá criar uma nova miniatura com os tamanhos especificados quando você enviar uma nova foto."
 
+# @ gallery
 #: gallery-plugin.php:862
 #, fuzzy
 msgid "Image size in the lightbox"
-msgstr "Veličina slika u galeriji u lightbox skriptu"
+msgstr "Tamanho da imagem da galeria no Lightbox"
 
+# @ gallery
 #: gallery-plugin.php:865
 msgid "Max width (in px)"
-msgstr "Max širina (u pikselima)"
+msgstr "Largura máxima (em px)"
 
+# @ gallery
 #: gallery-plugin.php:866
 msgid "Max height (in px)"
-msgstr "Max visina (u pikselima)"
+msgstr "Altura máxima (em px)"
 
+# @ gallery
 #: gallery-plugin.php:867
 msgid "Display a full size image in the lightbox"
-msgstr "Prikaži sliku u punoj veličini u lightbox-u"
+msgstr "Exibir a imagem em tamanho original no Lightbox"
 
+# @ gallery
 #: gallery-plugin.php:871
 msgid "Crop position"
-msgstr "Pozicija za kropovanje"
+msgstr "Posição de recorte"
 
+# @ gallery
 #: gallery-plugin.php:875
 #: gallery-plugin.php:881
 msgid "center"
-msgstr "centar"
+msgstr "centro"
 
+# @ gallery
 #: gallery-plugin.php:877
 msgid "Horizontal"
-msgstr "Horizontalno"
+msgstr "Horizontal"
 
+# @ gallery
 #: gallery-plugin.php:883
 msgid "Vertical"
-msgstr "Vertikalno"
+msgstr "Vertical"
 
+# @ gallery
 #: gallery-plugin.php:888
 msgid "Lightbox background"
-msgstr "Lightbox pozadina"
+msgstr "Fundo do Lightbox"
 
+# @ gallery
 #: gallery-plugin.php:891
 msgid "Background transparency (from 0 to 1)"
-msgstr "Pozadinska transparentnost (od 0 do 1)"
+msgstr "Transparência de background (de 0 a 1)"
 
+# @ gallery
 #: gallery-plugin.php:892
 msgid "Select a background color"
-msgstr "Izaberi pozadinsku boju"
+msgstr "Selecionar uma cor de fundo"
 
 #: gallery-plugin.php:897
 #: gallery-plugin.php:1077
@@ -283,131 +331,151 @@ msgstr ""
 
 #: gallery-plugin.php:911
 #: gallery-plugin.php:1091
-#, fuzzy
 msgid "Learn More"
-msgstr "Pročitaj više"
+msgstr ""
 
+# @ gallery
 #: gallery-plugin.php:918
 msgid "Images with border"
-msgstr "Slike sa okvirima"
+msgstr "Imagens com borda"
 
+# @ gallery
 #: gallery-plugin.php:921
 msgid "Border width in px, just numbers"
-msgstr "Širina okvira u pikselima, samo brojevi"
+msgstr "Largura da borda em px, apenas os números"
 
+# @ gallery
 #: gallery-plugin.php:922
 msgid "Select a border color"
-msgstr "Izaberite boju okvira"
+msgstr "Escolha a cor da borda"
 
+# @ gallery
 #: gallery-plugin.php:926
 msgid "Number of images in the row"
-msgstr "Broj slika u redu"
+msgstr "Número de imagens por linha"
 
+# @ gallery
 #: gallery-plugin.php:932
 msgid "Start slideshow"
-msgstr "Započni projekciju slajdova"
+msgstr "Iniciar Apresentação de Slides"
 
+# @ gallery
 #: gallery-plugin.php:938
 msgid "Slideshow interval"
-msgstr "Interval projekcije slajdova"
+msgstr "Intervalo de tempo entre cada Slide"
 
 #: gallery-plugin.php:944
 msgid "Use single lightbox for multiple galleries on one page"
 msgstr ""
 
+# @ gallery
 #: gallery-plugin.php:950
 msgid "Sort images by"
-msgstr "Poređaj slike po"
+msgstr "Ordenar imagens por"
 
+# @ gallery
 #: gallery-plugin.php:952
 msgid "Attachment ID"
-msgstr "ID priloga"
+msgstr "ID do anexo"
 
+# @ gallery
 #: gallery-plugin.php:953
 msgid "Image Name"
-msgstr "Ime slike"
+msgstr "Nome da Imagem"
 
 #: gallery-plugin.php:955
 msgid "Sorting order in the Gallery"
 msgstr ""
 
+# @ gallery
 #: gallery-plugin.php:956
 msgid "Random"
-msgstr "Nasumično"
+msgstr "Aleatório"
 
+# @ gallery
 #: gallery-plugin.php:960
 msgid "Sort images"
-msgstr "Sortiraj slike"
+msgstr "Ordenar imagens:"
 
+# @ gallery
 #: gallery-plugin.php:962
 msgid "ASC (ascending order from lowest to highest values - 1, 2, 3; a, b, c)"
-msgstr "ASC (rastući redosled od najnižih do najviših vrednosti - 1, 2, 3; a, b, c)"
+msgstr "ASC (ordem crescente dos valores mais baixos para os mais altos - 1, 2, 3; a, b, c)"
 
+# @ gallery
 #: gallery-plugin.php:963
 msgid "DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
-msgstr "DESC (opadajući redosled od najviših do najnižih vrednosti  - 3, 2, 1; c, b, a)"
+msgstr "DESC (ordem decrescente dos valores mais altos para os mais baixos - 3, 2, 1; c, b, a)"
 
+# @ gallery
 #: gallery-plugin.php:967
 #, fuzzy
 msgid "Display text under the image"
-msgstr "Prikaži tekst iznad slike"
+msgstr "Mostrar texto acima da imagem"
 
+# @ gallery
 #: gallery-plugin.php:969
-#, fuzzy
 msgid "Turn off the checkbox, if you want to display text just in a lightbox"
-msgstr "Ako želite da prikažete tekst samo u lightbox-u"
+msgstr "Desmarque a caixa de seleção, se você deseja mostrar texto apenas numa lightbox"
 
+# @ gallery
 #: gallery-plugin.php:973
 msgid "Display the Back link"
-msgstr "Prikaži povratni link"
+msgstr "Exibir o link Voltar"
 
+# @ gallery
 #: gallery-plugin.php:979
 msgid "Display the Back link in the shortcode"
-msgstr "Prikaži povratni link u kratkom kodu"
+msgstr "Exibir o link Voltar no shortcode"
 
+# @ gallery
 #: gallery-plugin.php:985
 msgid "The Back link text"
-msgstr "Tekst u povratnom linku"
+msgstr "Texto do link Voltar"
 
+# @ gallery
 #: gallery-plugin.php:991
 msgid "The Back link URL"
-msgstr "URL povratnog linka"
+msgstr "URL do link Voltar"
 
+# @ gallery
 #: gallery-plugin.php:993
 msgid "Gallery page (Page with Gallery Template)"
-msgstr "Stranica galerije (Stranica sa šablonom galerije)"
+msgstr "Página da Galeria (página usando o Modelo de Galeria)"
 
+# @ gallery
 #: gallery-plugin.php:995
 msgid "(Full URL to custom page)"
-msgstr "(Puni URL ka korisničkoj stranici)"
+msgstr "(URL completa para a página personalizada)"
 
+# @ gallery
 #: gallery-plugin.php:999
 msgid "The Read More link text"
-msgstr "Tekst u linku Pročitaj više"
+msgstr "Texto do link Leia Mais"
 
 #: gallery-plugin.php:1005
 msgid "Add gallery to the search"
 msgstr ""
 
 #: gallery-plugin.php:1010
+#: gallery-plugin.php:1013
+#: gallery-plugin.php:1017
 msgid "Using"
 msgstr ""
 
 #: gallery-plugin.php:1010
+#: gallery-plugin.php:1013
+#: gallery-plugin.php:1017
 msgid "powered by"
 msgstr ""
 
 #: gallery-plugin.php:1013
-#: gallery-plugin.php:1017
-msgid "Using Custom Search powered by"
-msgstr ""
-
-#: gallery-plugin.php:1013
-msgid "Activate Custom Search"
+#: gallery-plugin.php:1236
+msgid "Activate"
 msgstr ""
 
 #: gallery-plugin.php:1017
-msgid "Download Custom Search"
+msgid "Download"
 msgstr ""
 
 #: gallery-plugin.php:1022
@@ -415,7 +483,8 @@ msgid "Rewrite templates after update"
 msgstr ""
 
 #: gallery-plugin.php:1024
-msgid "Turn off the checkbox, if You edited the file 'gallery-template.php' or 'gallery-single-template.php' file in your theme folder and You don't want to rewrite them"
+#, php-format
+msgid "Turn off the checkbox, if You edited the file '%s' or '%s' file in your theme folder and You don't want to rewrite them"
 msgstr ""
 
 #: gallery-plugin.php:1033
@@ -442,36 +511,40 @@ msgstr ""
 msgid "Thumbnail helper"
 msgstr ""
 
+# @ gallery
 #: gallery-plugin.php:1048
-#, fuzzy
 msgid "Display Like buttons in the lightbox"
-msgstr "Afficher une image en taille normale dans le boite"
+msgstr "Exibir botões de Curtir no Lightbox"
 
+# @ gallery
 #: gallery-plugin.php:1050
 msgid "FaceBook"
-msgstr "FaceBook"
+msgstr "Facebook"
 
+# @ gallery
 #: gallery-plugin.php:1051
-#, fuzzy
 msgid "Twitter"
-msgstr "Titre"
+msgstr "Twitter"
 
+# @ gallery
 #: gallery-plugin.php:1052
 msgid "Pinterest"
 msgstr "Pinterest"
 
+# @ gallery
 #: gallery-plugin.php:1053
 msgid "Google +1"
 msgstr "Google +1"
 
+# @ gallery
 #: gallery-plugin.php:1057
-#, fuzzy
 msgid "Slug for gallery item"
-msgstr "Taille de la vignette de la galerie"
+msgstr "Slug para o item da galeria"
 
+# @ gallery
 #: gallery-plugin.php:1059
 msgid "for any structure of permalinks except the default structure"
-msgstr ""
+msgstr "para qualquer estrutura de links permanentes, exceto a estrutura padrão"
 
 #: gallery-plugin.php:1063
 msgid "Title for lightbox button"
@@ -482,25 +555,29 @@ msgid "Display all images in the lightbox instead of going into a single gallery
 msgstr ""
 
 #: gallery-plugin.php:1072
-msgid "When using the gallery template or a shortcode with `display=short` parameter"
+#, php-format
+msgid "When using the gallery template or a shortcode with `%s` parameter"
 msgstr ""
 
+# @ default
 #: gallery-plugin.php:1098
 msgid "Save Changes"
-msgstr "Sačuvaj izmene"
+msgstr "Salvar Alterações"
 
+# @ gallery
 #: gallery-plugin.php:1135
 msgid "Support"
-msgstr "Podrška"
+msgstr "Suporte"
 
 #: gallery-plugin.php:1202
 msgid "Updating images..."
 msgstr ""
 
+# @ gallery
 #: gallery-plugin.php:1203
 #, fuzzy
 msgid "No image found."
-msgstr "Nije pronađena Galerija"
+msgstr "Nenhuma Galeria foi encontrada"
 
 #: gallery-plugin.php:1204
 msgid "All images are updated."
@@ -517,281 +594,293 @@ msgid ""
 msgstr ""
 
 #: gallery-plugin.php:1217
-msgid "Insert Media"
+msgid "Switching to another mode, all unsaved data will be lost. Save data before switching?"
 msgstr ""
 
 #: gallery-plugin.php:1218
+msgid "Insert Media"
+msgstr ""
+
+#: gallery-plugin.php:1219
 msgid "Insert"
 msgstr ""
 
-#: gallery-plugin.php:1230
-#, fuzzy
+#: gallery-plugin.php:1231
 msgid "Learn more"
-msgstr "Pročitaj više"
+msgstr ""
 
-#: gallery-plugin.php:1235
-#, fuzzy
-msgid "Activate"
-msgstr "Aktivirani moduli"
-
-#: gallery-plugin.php:1242
-#, fuzzy
+#: gallery-plugin.php:1243
 msgid "Install now"
-msgstr "Instalacija %s"
+msgstr ""
 
-#: gallery-plugin.php:1251
+#: gallery-plugin.php:1252
 msgid "Add multiple gallery categories"
 msgstr ""
 
-#: gallery-plugin.php:1251
+#: gallery-plugin.php:1252
 msgid "Install Gallery Categories plugin to add unlimited number of categories."
 msgstr ""
 
-#: gallery-plugin.php:1260
+#: gallery-plugin.php:1261
 msgid "Close"
 msgstr ""
 
-#: gallery-plugin.php:1524
+# @ gallery
+#: gallery-plugin.php:1525
 #: template/gallery-single-template.php:101
 msgid "Sorry, nothing found."
-msgstr "Nažalost nije pronađeno"
+msgstr "Desculpe, nada foi encontrado."
 
-#: gallery-plugin.php:1546
+# @ gallery
+#: gallery-plugin.php:1547
 #: template/gallery-single-template.php:120
 msgid "Image"
-msgstr "Slika"
+msgstr "Imagem"
 
-#: gallery-plugin.php:1546
+# @ gallery
+#: gallery-plugin.php:1547
 #: template/gallery-single-template.php:19
 msgid "Download high resolution image"
-msgstr "Preuzmi sliku u visokoj rezoluciji"
+msgstr "Download de imagem de alta resolução"
 
-#: gallery-plugin.php:1676
+# @ gallery
+#: gallery-plugin.php:1677
 #, fuzzy
 msgid "Image size not defined"
-msgstr "Veličina slike"
+msgstr "Tamanho da imagem"
 
-#: gallery-plugin.php:1691
+#: gallery-plugin.php:1692
 msgid "We can update only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please, manually reload image."
 msgstr ""
 
-#: gallery-plugin.php:1702
+#: gallery-plugin.php:1703
 msgid "Image size changes not defined"
 msgstr ""
 
-#: gallery-plugin.php:1731
-#: gallery-plugin.php:1734
-#: gallery-plugin.php:1739
+#: gallery-plugin.php:1732
+#: gallery-plugin.php:1735
+#: gallery-plugin.php:1740
 msgid "Invalid path"
 msgstr ""
 
-#: gallery-plugin.php:1888
+#: gallery-plugin.php:1889
 msgid "Add images requires JavaScript."
 msgstr ""
 
-#: gallery-plugin.php:1891
+#: gallery-plugin.php:1892
 msgid "Add Media"
 msgstr ""
 
-#: gallery-plugin.php:1901
+#: gallery-plugin.php:1902
 msgid "The grid view for the Gallery images requires JavaScript."
 msgstr ""
 
-#: gallery-plugin.php:1901
+#: gallery-plugin.php:1902
 msgid "Switch to the list view"
 msgstr ""
 
-#: gallery-plugin.php:1928
+#: gallery-plugin.php:1929
 msgid "List View"
 msgstr ""
 
-#: gallery-plugin.php:1929
+#: gallery-plugin.php:1930
 msgid "Grid View"
 msgstr ""
 
-#: gallery-plugin.php:1986
+#: gallery-plugin.php:1987
 msgid "Filter"
 msgstr ""
 
-#: gallery-plugin.php:1990
+#: gallery-plugin.php:1991
 msgid "Empty Trash"
 msgstr ""
 
-#: gallery-plugin.php:2011
+# @ gallery
+#: gallery-plugin.php:2012
 #, fuzzy
 msgid "No images found"
-msgstr "Nije pronađena Galerija"
+msgstr "Nenhuma Galeria foi encontrada"
 
-#: gallery-plugin.php:2065
+#: gallery-plugin.php:2066
 msgid "Select bulk action"
 msgstr ""
 
-#: gallery-plugin.php:2067
+#: gallery-plugin.php:2068
 msgid "Bulk Actions"
 msgstr ""
 
-#: gallery-plugin.php:2077
+#: gallery-plugin.php:2078
 msgid "Apply"
 msgstr ""
 
-#: gallery-plugin.php:2084
-#: gallery-plugin.php:2258
+# @ gallery
+#: gallery-plugin.php:2085
+#: gallery-plugin.php:2264
 #, fuzzy
 msgid "Delete from Gallery"
-msgstr "Nova Galerija"
+msgstr "Nova Galeria"
 
-#: gallery-plugin.php:2097
-#: gallery-plugin.php:2111
-msgid "Display file URL"
-msgstr ""
+# @ gallery
+#: gallery-plugin.php:2098
+#: gallery-plugin.php:2112
+#, fuzzy
+msgid "Display link to the original file under each image in the lightbox"
+msgstr "Exibir a imagem em tamanho original no Lightbox"
 
-#: gallery-plugin.php:2106
+#: gallery-plugin.php:2107
 msgid "Bulk Select"
 msgstr ""
 
-#: gallery-plugin.php:2108
+#: gallery-plugin.php:2109
 msgid "Cancel Selection"
 msgstr ""
 
-#: gallery-plugin.php:2109
+#: gallery-plugin.php:2110
 msgid "Delete Selected"
 msgstr ""
 
-#: gallery-plugin.php:2122
+#: gallery-plugin.php:2124
 msgid "File"
 msgstr ""
 
-#: gallery-plugin.php:2123
-#: gallery-plugin.php:2211
+#: gallery-plugin.php:2125
+#: gallery-plugin.php:2213
+#: gallery-plugin.php:2321
 msgid "Dimensions"
 msgstr ""
 
-#: gallery-plugin.php:2125
+#: gallery-plugin.php:2127
 #: gallery-plugin.php:2246
+#: gallery-plugin.php:2331
 msgid "Alt tag"
 msgstr ""
 
-#: gallery-plugin.php:2126
-#: gallery-plugin.php:2250
-msgid "URL"
-msgstr "URL"
+#: gallery-plugin.php:2127
+#: gallery-plugin.php:2248
+msgid "The alt attribute specifies an alternate text for an image, if the image cannot be displayed."
+msgstr ""
 
-#: gallery-plugin.php:2202
+#: gallery-plugin.php:2128
+#: gallery-plugin.php:2254
+#: gallery-plugin.php:2336
+msgid "Custom URL"
+msgstr ""
+
+#: gallery-plugin.php:2128
+#: gallery-plugin.php:2256
+msgid "By clicking on the thumbnail you'll go to the link (if the field is filled) or the image will be opened in the lightbox (if the field isn't filled)"
+msgstr ""
+
+#: gallery-plugin.php:2205
 msgid "Deselect"
 msgstr ""
 
-#: gallery-plugin.php:2208
+#: gallery-plugin.php:2211
 msgid "File name"
 msgstr ""
 
-#: gallery-plugin.php:2209
+#: gallery-plugin.php:2212
 msgid "File type"
 msgstr ""
 
-#: gallery-plugin.php:2210
-#, fuzzy
-msgid "Uploaded on"
-msgstr "Učitaj fajl"
-
-#: gallery-plugin.php:2214
-#: gallery-plugin.php:2215
-#, fuzzy
-msgid "Edit Attachment"
-msgstr "ID priloga"
-
-#: gallery-plugin.php:2215
+# @ gallery
+#: gallery-plugin.php:2216
 #, fuzzy
 msgid "Edit Attachment Info"
-msgstr "ID priloga"
+msgstr "ID do anexo"
 
-#: gallery-plugin.php:2225
+# @ gallery
+#: gallery-plugin.php:2216
+#, fuzzy
+msgid "Edit Attachment"
+msgstr "ID do anexo"
+
+#: gallery-plugin.php:2226
 msgid "Go Pro"
 msgstr ""
 
-#: gallery-plugin.php:2225
+#: gallery-plugin.php:2226
 msgid "Pro version"
 msgstr ""
 
-#: gallery-plugin.php:2228
+# @ gallery
+#: gallery-plugin.php:2229
 msgid "This setting is available in Pro version"
-msgstr "Ovo podešavanje je dostupno u Pro verziji"
+msgstr "Esta configuração está disponível na versão Pro"
 
-#: gallery-plugin.php:2252
-msgid "(by click on image opens a link in a new window)"
-msgstr "(klikom na sliku otvara se link u novom prozoru)"
-
-#: gallery-plugin.php:2256
+#: gallery-plugin.php:2262
 msgid "Edit more details"
 msgstr ""
 
-#: gallery-plugin.php:2288
+#: gallery-plugin.php:2297
 #, php-format
 msgid "Select %s"
 msgstr ""
 
-#: gallery-plugin.php:2301
-#: gallery-plugin.php:2313
+#: gallery-plugin.php:2310
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
 msgstr ""
 
-#: gallery-plugin.php:2348
-#: gallery-plugin.php:2361
+#: gallery-plugin.php:2354
+#: gallery-plugin.php:2367
 msgid "Edit"
 msgstr ""
 
-#: gallery-plugin.php:2351
-#: gallery-plugin.php:2366
+#: gallery-plugin.php:2357
+#: gallery-plugin.php:2372
 msgid "Trash"
 msgstr ""
 
-#: gallery-plugin.php:2354
-#: gallery-plugin.php:2369
+#: gallery-plugin.php:2360
+#: gallery-plugin.php:2375
 msgid "Delete Permanently"
 msgstr ""
 
-#: gallery-plugin.php:2356
-#: gallery-plugin.php:2374
+#: gallery-plugin.php:2362
+#: gallery-plugin.php:2380
 #, php-format
 msgid "View &#8220;%s&#8221;"
 msgstr ""
 
-#: gallery-plugin.php:2356
-#: gallery-plugin.php:2374
+#: gallery-plugin.php:2362
+#: gallery-plugin.php:2380
 msgid "View"
 msgstr ""
 
-#: gallery-plugin.php:2358
+# @ gallery
+#: gallery-plugin.php:2364
 #, fuzzy
 msgid "Attach"
-msgstr "ID priloga"
+msgstr "ID do anexo"
 
-#: gallery-plugin.php:2364
+#: gallery-plugin.php:2370
 msgid "Restore"
 msgstr ""
 
-#: gallery-plugin.php:2484
+#: gallery-plugin.php:2501
 msgid "Warning"
 msgstr ""
 
-#: gallery-plugin.php:2484
+#: gallery-plugin.php:2501
 msgid "You can add only images to the gallery"
 msgstr ""
 
-#: gallery-plugin.php:2513
+# @ gallery
+#: gallery-plugin.php:2532
 #, fuzzy
 msgid "Sorry, no gallery found."
-msgstr "Nažalost nije pronađeno"
+msgstr "Desculpe, nada foi encontrado."
 
-#: gallery-plugin.php:2519
+# @ gallery
+#: gallery-plugin.php:2538
 #, fuzzy
 msgid "Display an album image with the description and the link to a single gallery page"
-msgstr "Ako želite da prikažete kratak opis koji sadrži snimak ekrana i link ka stranici sa Jedinstvenom galerijom."
+msgstr "Se você quiser mostrar uma breve descrição contendo a miniatura e o link para a Página da Galeria use assim"
 
 #: inc/demo-data/demo-data-loader.php:78
-#, fuzzy
 msgid "Install Demo Data"
-msgstr "Instalacija %s"
+msgstr ""
 
 #: inc/demo-data/demo-data-loader.php:79
 msgid "If you install the demo-data, will be created galleries with images, demo-post with available shortcodes and page with a list of all the galleries, plugin settings will be overwritten, however, when you delete the demo data, they will be restored."
@@ -821,10 +910,11 @@ msgstr ""
 msgid "Are you sure you want to remove demo data?"
 msgstr ""
 
+# @ gallery
 #: inc/demo-data/demo-data-loader.php:119
 #, fuzzy
 msgid "No, go back to the settings page"
-msgstr "na stranici za podešavanje modula ("
+msgstr "da página de configurações do plugin ("
 
 #: inc/demo-data/demo-data-loader.php:167
 msgid "Can not get demo data."
@@ -871,108 +961,82 @@ msgid "Close notice"
 msgstr ""
 
 #: inc/demo-data/demo-data-loader.php:520
-#, fuzzy
 msgid "Install demo data"
-msgstr "Instalacija %s"
+msgstr ""
 
 #: inc/demo-data/demo-data-loader.php:520
 msgid "for an acquaintance with the possibilities of the"
 msgstr ""
 
+# @ gallery
 #: template/gallery-template.php:14
 #, fuzzy
 msgid "Gallery Category"
-msgstr "Veličina slika u galeriji"
+msgstr "Tamanho da imagem da galeria"
 
+# @ gallery
+#~ msgid "URL"
+#~ msgstr "URL"
+# @ gallery
+#, fuzzy
+#~ msgid "Uploaded on"
+#~ msgstr "Enviar Arquivo"
+
+# @ gallery
+#~ msgid "(by click on image opens a link in a new window)"
+#~ msgstr "(clicar na imagem abre um link em uma nova janela)"
+# @ gallery
 #~ msgid "Add a Gallery"
-#~ msgstr "Dodaj Galeriju"
-
+#~ msgstr "Adicionar uma Galeria"
+# @ gallery
 #~ msgid "Find a Gallery"
-#~ msgstr "Pronađi Galeriju"
-
+#~ msgstr "Encontre uma Galeria"
+# @ gallery
 #~ msgid ""
 #~ "The gallery temp directory (gallery-plugin/upload/files) is not available "
 #~ "for record on your webserver. Please use the standard WP functionality to "
 #~ "upload images (media library)"
 #~ msgstr ""
-#~ "Privremeni direktorijum galerije (gallery-plugin/upload/files) nije "
-#~ "dostupan za arhiviranje na vašem web serveru. Molimo vas da koristite "
-#~ "standardne WP funkcije za učitavanje slika (biblioteka medija)"
-
+#~ "O diretório temporário da Galeria (gallery-plugin/upload/files) não está "
+#~ "disponível para escrita em seu servidor Web. Por favor, utilize o método "
+#~ "padrão do WP para fazer upload de imagens (biblioteca de mídia)"
+# @ gallery
 #~ msgid "Choose an image for upload:"
-#~ msgstr "Izaberi sliku za učitavanje:"
-
+#~ msgstr "Escolha uma imagem para fazer upload:"
+# @ gallery
 #~ msgid "Please enable JavaScript to use the file uploader."
-#~ msgstr ""
-#~ "Molimo vas omogućite da JavaScript koristi program za učitavanje fajlova."
-
+#~ msgstr "Favor havilitar o Javascript para usar o envio de arquivos."
+# @ gallery
 #~ msgid "Allow the download link for all images in this gallery"
-#~ msgstr "Dozvoli link za preuzimanje za sve slike u ovoj galeriji"
-
+#~ msgstr "Permitir o link de download para todas as imagens nesta galeria"
+# @ gallery
 #~ msgid ""
 #~ "Please use the drag and drop function to change an order of the images "
 #~ "displaying and do not forget to save the post."
 #~ msgstr ""
-#~ "Molimo vas da koristite funkciju prevlačenja da biste izmenili redosled "
-#~ "prikazanih slika i ne zaboravite da sačuvate post."
-
+#~ "Por favor, use a função arrastar e soltar para alterar a ordem de "
+#~ "exibição das imagens e não se esqueça de salvar o post."
+# @ gallery
 #~ msgid "Please make a choice"
-#~ msgstr "Molimo vas izaberite"
-
+#~ msgstr "Por favor, faça uma escolha"
+# @ gallery
 #~ msgid "sort images"
-#~ msgstr "poređaj slike"
-
+#~ msgstr "ordenar imagens"
+# @ gallery
 #~ msgid "on the plugin settings page ("
-#~ msgstr "na stranici za podešavanje modula ("
-
+#~ msgstr "da página de configurações do plugin ("
+# @ gallery
 #, fuzzy
 #~ msgid "Open the URL"
-#~ msgstr "Otvori link"
+#~ msgstr "Abrir o link"
 
+# @ gallery
 #~ msgid "Current window"
-#~ msgstr "Trenutni prozor"
-
+#~ msgstr "Janela atual"
+# @ gallery
 #~ msgid "New window"
-#~ msgstr "Novi prozor"
-
+#~ msgstr "Nova janela"
+# @ gallery
 #, fuzzy
 #~ msgid "Lightbox button URL"
-#~ msgstr "Lightbox pozadina"
-
-#~ msgid "Delete"
-#~ msgstr "Obriši"
-
-#~ msgid ""
-#~ "You can add a Single Gallery to the page or post by inserting this "
-#~ "shortcode into the content"
-#~ msgstr ""
-#~ "Možete dodati Jedinstvenu galeriju na stranicu ili post ubacivanjem ovog "
-#~ "kratkog koda u sadržaj."
-
-#~ msgid "Publishing"
-#~ msgstr "Izdanje"
-
-#~ msgid "Background color"
-#~ msgstr "Pozadinska boja"
-
-#~ msgid ""
-#~ "Sorting order (the input field for sorting order in the Insert / Upload "
-#~ "Media Gallery dialog)"
-#~ msgstr ""
-#~ "Raspoređivanje (polje za unos za sortiranje u dijalogu Insert / Upload "
-#~ "Media Gallery)"
-
-#~ msgid "left"
-#~ msgstr "levo"
-
-#~ msgid "right"
-#~ msgstr "desno"
-
-#~ msgid "top"
-#~ msgstr "vrh"
-
-#~ msgid "bottom"
-#~ msgstr "dno"
-
-#~ msgid "Gallery image size"
-#~ msgstr "Veličina slika u galeriji"
+#~ msgstr "Fundo do Lightbox"

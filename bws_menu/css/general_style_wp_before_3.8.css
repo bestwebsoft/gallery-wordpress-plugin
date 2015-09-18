@@ -314,7 +314,7 @@ span.bws_code {
 }
 .bws_help_box:hover .bws_hidden_help_text {
     display: block;
-    z-index: 10;
+    z-index: 1001;
 }
 /* RTL styles */
 .rtl .bws_hidden_help_text {

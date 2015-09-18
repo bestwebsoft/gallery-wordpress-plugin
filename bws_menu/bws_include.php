@@ -14,7 +14,7 @@ if ( ! function_exists ( 'bws_include_init' ) ) {
 		$bws_menu_version = $bws_menu_info["Version"];
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
-			if ( is_multisite() ) {
+			if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
 					add_site_option( 'bstwbsftwppdtplgns_options', array() );
 				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
@@ -28,7 +28,7 @@ if ( ! function_exists ( 'bws_include_init' ) ) {
 		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
 			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
 			unset( $bstwbsftwppdtplgns_options['bws_menu_version'] );
-			if ( is_multisite() )
+			if ( function_exists( 'is_multisite' ) && is_multisite() )
 				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
 			else
 				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
@@ -36,7 +36,7 @@ if ( ! function_exists ( 'bws_include_init' ) ) {
 			require_once( dirname( __FILE__ ) . '/bws_functions.php' );
 		} else if ( ! isset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] ) || $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] < $bws_menu_version ) {
 			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
-			if ( is_multisite() )
+			if ( function_exists( 'is_multisite' ) && is_multisite() )
 				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
 			else
 				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
@@ -54,7 +54,7 @@ if ( ! function_exists ( 'bws_include_init' ) ) {
 					}
 				} else {
 					unset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $key ] );
-					if ( is_multisite() )
+					if ( function_exists( 'is_multisite' ) && is_multisite() )
 						update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
 					else
 						update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );

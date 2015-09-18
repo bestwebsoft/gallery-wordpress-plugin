@@ -11,7 +11,7 @@ Template Name: Gallery Template
 				<h1 class="home_page_title entry-header">
 					<?php if ( isset( $wp_query->query_vars["gallery_categories"] ) ) {
 						$term = get_term_by( 'slug', $wp_query->query_vars["gallery_categories"], 'gallery_categories' );
-						echo __( 'Gallery Category', 'gallery' ) . ':&nbsp;' . ( $term->name );
+						echo __( 'Gallery Category', 'gallery-plugin' ) . ':&nbsp;' . ( $term->name );
 					} else {
 						the_title();
 					} ?>
