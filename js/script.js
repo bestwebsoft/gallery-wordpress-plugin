@@ -138,7 +138,7 @@ function gllr_setError( msg ) {
 			if ( $( "#the-list tr" ).length > 1 ) {
 				$( '#the-list' ).sortable( {
 					stop: function( event, ui ) { 
-						var g = $( '#the-list' ).sortable( 'toArray' );
+						var g = $( '#the-list' ).sortable( 'toArray', { handle: ":not(input)" } );
 						var f = g.length;
 						$.each(	g,
 							function( k,l ) {							

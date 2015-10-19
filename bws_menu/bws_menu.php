@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.7.4
+* Version: 1.7.7
 */
 
 if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) )

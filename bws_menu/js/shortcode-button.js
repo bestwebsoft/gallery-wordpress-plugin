@@ -12,6 +12,7 @@
         init : function( ed, url ) {
             ed.addButton( 'add_bws_shortcode', {
                 title : bws_shortcode_button.title,
+                classes: 'bws_shortcode_button widget btn',
                 image : bws_shortcode_button.icon_url,
 				onclick: function() {	
                     if ( bws_shortcode_button.wp_version < '3.9' ) {

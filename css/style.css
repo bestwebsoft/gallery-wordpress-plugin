@@ -17,18 +17,7 @@
 .pp_social {
 	display: none;
 }
-#gllr_border_images_color_small {
-	background: none repeat scroll 0 0 transparent;
-    box-shadow: 0 9px 0 rgba(255, 255, 255, 0.1) inset;
-    border: 1px solid #CCC;
-    display: inline-block;
-    height: 20px;
-    position: relative;
-    vertical-align: middle;
-    width: 20px;
-	top: -2px;
-}
-#gllr_settings_form .minicolors input {
+.gllr_settings_table .minicolors input {
     height: 22px !important;
 }
 #gllr_loader,
@@ -36,7 +25,7 @@
     position: relative;
     display: none;
 }
-.rtl #gllr_settings_form label {
+.rtl .gllr_settings_table label {
     float: right;
     width: 100%;
 }

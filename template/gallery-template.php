@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.2.4
+* Version: 1.2.5
 */
 ?>
 <?php get_header(); ?>
@@ -46,11 +46,12 @@ Template Name: Gallery Template
 								}
 							}
 							$args = array(
-								'post_type'				=> 'gallery',
-								'post_status'			=> 'publish',
-								'orderby'				=> 'post_date',
-								'posts_per_page'		=> $per_page,
-								'paged'					=> $paged
+								'post_type'			=> 'gallery',
+								'post_status'		=> 'publish',
+								'orderby'			=> $gllr_options['album_order_by'],
+								'order'				=> $gllr_options['album_order'],
+								'posts_per_page'	=> $per_page,
+								'paged'				=> $paged
 							);
 							if ( isset( $wp_query->query_vars["gallery_categories"] ) && ( ! empty( $wp_query->query_vars["gallery_categories"] ) ) ) {
 								$args['tax_query'] = array(
