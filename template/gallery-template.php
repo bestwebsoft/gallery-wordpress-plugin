@@ -1,11 +1,11 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.2.5
+* Version: 1.2.6
 */
 ?>
 <?php get_header(); ?>
-	<div id="primary" class="content-area">
+	<div class="content-area">
 		<div id="container" class="site-content site-main">
 			<div id="content" class="hentry">
 				<h1 class="home_page_title entry-header">
@@ -18,13 +18,18 @@ Template Name: Gallery Template
 				</h1>
 				<?php if ( ! post_password_required() ) { ?>
 					<div class="gallery_box entry-content">
-						<?php if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) 
+						<?php if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) {
 							echo pdfprnt_show_buttons_for_custom_post_type();
-						elseif ( function_exists( 'pdfprntpr_show_buttons_for_custom_post_type' ) ) 
-							echo pdfprntpr_show_buttons_for_custom_post_type(); ?>
+						} elseif ( function_exists( 'pdfprntpr_show_buttons_for_custom_post_type' ) ) {
+							echo pdfprntpr_show_buttons_for_custom_post_type();
+						}
+						$gllr_post = get_post( get_the_ID() );
+						if ( ! empty( $gllr_post->post_content ) ) { ?>
+							<div class="gllr_page_content"><?php echo apply_filters( 'the_content', $gllr_post->post_content ); ?></div>
+						<?php } ?>
 						<ul>
 							<?php global $post, $wpdb, $wp_query, $request;
-								
+
 							if ( get_query_var( 'paged' ) ) {
 								$paged = get_query_var( 'paged' );
 							} elseif ( get_query_var( 'page' ) ) {
@@ -36,7 +41,7 @@ Template Name: Gallery Template
 							$permalink    = get_permalink();
 							$gllr_options = get_option( 'gllr_options' );
 							$count        = 0;
-							$per_page = $showitems = get_option( 'posts_per_page' );  
+							$per_page = $showitems = get_option( 'posts_per_page' );
 
 							if ( substr( $permalink, strlen( $permalink ) -1 ) != "/" ) {
 								if ( strpos( $permalink, "?" ) !== false ) {
@@ -45,6 +50,7 @@ Template Name: Gallery Template
 									$permalink .= "/";
 								}
 							}
+
 							$args = array(
 								'post_type'			=> 'gallery',
 								'post_status'		=> 'publish',
@@ -63,15 +69,15 @@ Template Name: Gallery Template
 								);
 							}
 							$second_query = new WP_Query( $args );
-							
+
 							$request = $second_query->request;
 
-							if ( $second_query->have_posts() ) : 
+							if ( $second_query->have_posts() ) :
 								while ( $second_query->have_posts() ) : $second_query->the_post();
 									$attachments	= get_post_thumbnail_id( $post->ID );
 									if ( empty ( $attachments ) ) {
 										$images_id = get_post_meta( $post->ID, '_gallery_images', true );
-										$attachments = get_posts( array(								
+										$attachments = get_posts( array(
 											'showposts'			=>	1,
 											'what_to_show'		=>	'posts',
 											'post_status'		=>	'inherit',
@@ -109,25 +115,23 @@ Template Name: Gallery Template
 										</div><!-- .gallery_detail_box -->
 										<div class="gllr_clear"></div>
 									</li>
-								<?php endwhile; 
+								<?php endwhile;
 							endif;  ?>
 						</ul>
-					</div><!-- .gallery_box -->
-					</div><!-- #content -->
-					<?php $count_all_albums = $second_query->found_posts;
-					wp_reset_query(); 
-					$request = $wp_query->request;
-					$pages = intval( $count_all_albums / $per_page );
-					if ( $count_all_albums % $per_page > 0 )
-						$pages += 1;
-					$range = 100;
-					if ( ! $pages ) {
-						$pages = 1;
-					}
-					if ( 1 != $pages ) { ?>
-						<div class='gllr_clear'></div>
-						<nav class="paging-navigation" role="navigation">
-							<div class="pagination navigation loop-pagination nav-links">
+
+						<?php $count_all_albums = $second_query->found_posts;
+						wp_reset_query();
+						$request = $wp_query->request;
+						$pages = intval( $count_all_albums / $per_page );
+						if ( $count_all_albums % $per_page > 0 )
+							$pages += 1;
+						$range = 100;
+						if ( ! $pages ) {
+							$pages = 1;
+						}
+						if ( 1 != $pages ) { ?>
+							<div class='gllr_clear'></div>
+							<div class="pagination navigation loop-pagination nav-links gllr_pagination">
 								<?php for ( $i = 1; $i <= $pages; $i++ ) {
 									if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $showitems ) ) {
 										echo ( $paged == $i ) ? "<span class='page-numbers current'>". $i ."</span>":"<a class='page-numbers inactive' href='". get_pagenum_link($i) ."'>". $i ."</a>";
@@ -135,15 +139,17 @@ Template Name: Gallery Template
 								} ?>
 								<div class='gllr_clear'></div>
 							</div><!-- .pagination -->
-						</nav><!-- .paging-navigation -->
-					<?php }
-				} else { ?>
+						<?php } ?>
+					</div><!-- .gallery_box -->
+				<?php } else { ?>
 					<div class="gallery_box entry-content">
 						<p><?php echo get_the_password_form(); ?></p>
 					</div><!-- .gallery_box -->
-					</div><!-- #content -->
-				<?php } ?>			
-			<?php comments_template(); ?>
+				<?php } ?>
+			</div><!-- #content -->
+			<?php if ( comments_open() ) {
+				comments_template();
+			} ?>
 		</div><!-- #container -->
 	</div><!-- .content-area -->
 <?php get_sidebar(); ?>

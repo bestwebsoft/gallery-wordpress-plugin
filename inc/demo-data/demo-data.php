@@ -1,106 +1,95 @@
-<?php 
+<?php
 /**
- * Contents array with demo-data for 
+ * Contents array with demo-data for
  * Gallery Plugin by Bestwebsoft
  */
 
-
 if ( ! function_exists( 'bws_demo_data_array' ) ) {
 	function bws_demo_data_array() {
-		global $bws_plugin_prefix;
 		$posts = array(
 			/* Page Template Gallery */
-			array( 
+			array(
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
 				'post_type'      => 'page',
-				'post_author'    => '1',
-				'post_name'      => 'galleries',
 				'post_title'     => 'DEMO Galleries',
 				'post_content'   => '',
 				'page_template'  => 'gallery-template.php'
 			),
 			/* Galleries */
-			array( 
+			array(
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
 				'post_type'      => 'gallery',
-				'post_author'    => '1',
-				'post_name'      => 'gastronomy',
 				'post_title'     => 'DEMO Gastronomy',
 				'post_content'   => 'Nowadays food photographing is becoming more and more popular. Today thousands of blogs are devoted to such pictures. Using our Gallery plugin you can post such images easily! For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
-					'gllr_download_link' 	=> '1'
-				)
+					'gllr_download_link' => '1'
+				),
+				'attachments_folder' => 'gastronomy'
 			),
-			array( 
+			array(
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
 				'post_type'      => 'gallery',
-				'post_author'    => '1',
-				'post_name'      => 'music',
 				'post_title'     => 'DEMO Music',
 				'post_content'   => 'Music is an integral part of our lives. It surrounds us everywhere. Save memorable moments of the concerts and festivals and share them with your friends! Our Gallery plugin will help you with this. For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
 					'gllr_download_link' => '1'
-				)
+				),
+				'attachments_folder' => 'music'
 			),
-			array( 
+			array(
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
 				'post_type'      => 'gallery',
-				'post_author'    => '1',
-				'post_name'      => 'travelling',
 				'post_title'     => 'DEMO Travelling',
 				'post_content'   => 'Millions of people all over the world spend their holidays travelling. Nowadays we can also share our impressions with friends! And our Gallery plugin will help you with this. Also you can use an exclusive add-on Gallery Categories which allows you to create different categories of galleries on your site. For more information visit <a href="http://bestwebsoft.com/">Our Site</a>',
 				'post_meta'      => array(
 					'gllr_download_link' => '1'
-				)
+				),
+				'attachments_folder' => 'travelling'
 			),
-			array( 
+			array(
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
 				'post_type'      => 'gallery',
-				'post_author'    => '1',
-				'post_name'      => 'sport',
 				'post_title'     => 'DEMO Sport',
 				'post_content'   => 'Sport is Life! And now you have a great opportunity to share your achievements with the whole world. And our Gallery plugin will help you with this. For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
 					'gllr_download_link' => '1'
-				)
+				),
+				'attachments_folder' => 'sport'
 			),
-			array( 
+			array(
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
 				'post_type'      => 'gallery',
-				'post_author'    => '1',
-				'post_name'      => 'nature',
 				'post_title'     => 'DEMO Nature',
 				'post_content'   => 'Look for inspiration in the nature! You can admire its beauty all day long. With our Gallery plugin you can share beautiful pictures with your friends. For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
 					'gllr_download_link' => '1'
-				)
+				),
+				'attachments_folder' => 'nature'
 			),
 			/* Post with Gallery shortcodes */
-			array( 
+			array(
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
 				'post_type'      => 'post',
-				'post_author'    => '1',
-				'post_name'      => 'gallery-demo',
 				'post_title'     => 'Gallery DEMO',
-				'post_content'   => '<p>This is a demonstration of a Gallery plugin for Wordpress websites.</p><h2>Create amazing galleries in few clicks</h2><p>Gallery plugin helps you to collect  images and display them on your website. Add unlimited galleries to your website - no programming knowledge required.</p><h2>Get premium features</h2><p>Upgrade to Pro version to unlock premium features like: Lightbox helper (buttons or thumbnails), Lightbox social buttons (Facebook, Twitter, Google +1, Pinterest), a single gallery pagination and more. <a href="http://bestwebsoft.com/products/gallery/" target="_blank">Learn More</a></p><h2>Expand your possibilities with exclusive add-ons</h2><ul><li><a href="http://bestwebsoft.com/products/gallery-categories/" target="_blank">Gallery categories</a>: Create different categories of your galleries.</li><li><a href="http://bestwebsoft.com/products/re-attacher/" target="_blank">Re-attacher</a>: Re-attach previously uploaded images to other gallery without having to upload them again, as well as detach files from the gallery completely.</li></ul><h2><span id="result_box" class="short_text" lang="en"><span class="hps">Help &amp; Support</span></span></h2><p>If you have any questions, our friendly Support Team is happy to help. <a href="http://support.bestwebsoft.com/" target="_blank">Visit our Help Center</a></a><h2>Shortcodes</h2><p>Use <code><strong>&#91;print_gllr id=<i>gallery_id</i> display=short]</strong></code> shortcode for displaying short description and link to the single gallery.</p><div>[print_gllr id={last_post_id} display=short]</div><div></div>Use <code><strong>&#91;print_gllr id=<i>gallery_id</i>]</strong></code> shortcode for displaying all images in gallery.<div>[print_gllr id={last_post_id}]</div>&nbsp;<div>{template_page} | <a href="https://drive.google.com/drive/u/0/folders/0B5l8lO-CaKt9QkJNaERwVEJnSVE" target="_blank">Instructions</a> | <a href="http://bestwebsoft.com/products/gallery/">Buy Now</a></div>',
+				'post_content'   => '<p>This is a demonstration of a Gallery plugin for Wordpress websites.</p><h2>Create amazing galleries in few clicks</h2><p>Gallery plugin helps you to collect  images and display them on your website. Add unlimited galleries to your website - no programming knowledge required.</p><h2>Expand your possibilities with exclusive add-ons</h2><ul><li><a href="http://bestwebsoft.com/products/gallery-categories/" target="_blank">Gallery categories</a>: Create different categories of your galleries.</li><li><a href="http://bestwebsoft.com/products/re-attacher/" target="_blank">Re-attacher</a>: Re-attach previously uploaded images to other gallery without having to upload them again, as well as detach files from the gallery completely.</li></ul><h2><span id="result_box" class="short_text" lang="en"><span class="hps">Help &amp; Support</span></span></h2><p>If you have any questions, our friendly Support Team is happy to help. <a href="http://support.bestwebsoft.com/" target="_blank">Visit our Help Center</a></a><h2>Shortcodes</h2><p>Use <code><strong>&#91;print_gllr id=<i>gallery_id</i> display=short]</strong></code> shortcode for displaying short description and link to the single gallery.</p><div>[print_gllr id={last_post_id} display=short]</div><div></div>Use <code><strong>&#91;print_gllr id=<i>gallery_id</i>]</strong></code> shortcode for displaying all images in gallery.<div>[print_gllr id={last_post_id}]</div>&nbsp;<div>{template_page} | <a href="https://drive.google.com/drive/u/0/folders/0B5l8lO-CaKt9QkJNaERwVEJnSVE" target="_blank">Instructions</a>',
 			),
 		);
 
-		$attachments = array(
+				$attachments = array(
 			/* gastronomy */
 			'apple.jpg' => array(
 				'gllr_image_alt_tag' => 'Apple',
@@ -422,41 +411,9 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'gllr_link_url'      => '',
 			)
 		);
-		$image_sizes = array(
-			'album-thumb' => array( 120, 80 ),
-			'photo-thumb' => array( 160, 120 )
-		);
-		$demo_options = array(
-			'gllr_custom_size_name'                  => array( 'album-thumb', 'photo-thumb' ),
-			'gllr_custom_size_px'                    => array( array( 120, 80 ), array( 160, 120 ) ),
-			'border_images'                          => 1,
-			'border_images_width'                    => 10,
-			'border_images_color'                    => '#F1F1F1',
-			'custom_image_row_count'                 => 3,
-			'start_slideshow'                        => 1,
-			'slideshow_interval'                     => 2000,
-			'single_lightbox_for_multiple_galleries' => 1,
-			'order_by'                               => 'meta_value_num',
-			'order'                                  => 'ASC',
-			'read_more_link_text'                    => 'More images in album',
-			'image_text'                             => 1,
-			'return_link'                            => 1,
-			'return_link_text'                       => 'Back to albums list',
-			'return_link_page'                       => 'gallery_template_url',
-			'return_link_url'                        => '',
-			'return_link_shortcode'                  => 1,
-			'rewrite_template'                       => 0,
-			'display_demo_notice'				 	=>	0,
-			'display_settings_notice'			 	=>	0
-		);
-
-		return array( 
-			'posts'        => $posts, 
-			'attachments'  => $attachments,
-			'image_sizes'  => $image_sizes,
-			'options'      => $demo_options 
+		return array(
+			'posts'       => $posts,
+			'attachments' =>$attachments
 		);
 	}
 }
-
-add_filter( 'bws_get_demo_data', 'bws_demo_data_array' );

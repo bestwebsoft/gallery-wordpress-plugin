@@ -11,7 +11,7 @@
 	display: none;
 }
 .bws_info {
-    color: #888888;
+    color: #888;
     font-size: 10px;
 }
 /*
@@ -51,7 +51,7 @@
     color: #000000;
 }
 /*
-* styles for pro_version settings and tooltip 
+* styles for pro_version settings and tooltip
 */
 td.bws_pro_version,
 tr.bws_pro_version,
@@ -71,7 +71,7 @@ td.bws_pro_version_tooltip {
     max-width: 800px;
     overflow: hidden;
 }
-.bws_table_bg { 
+.bws_table_bg {
     background: #f8e268 url("../images/pattern.png");
     opacity: 0.11;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=11); /* IE 5.5+*/
@@ -84,13 +84,13 @@ td.bws_pro_version_tooltip {
 .bws_hide_premium_options {
     z-index: 5;
 }
-.bws_pro_version_table_bloc table.bws_pro_version { 
+.bws_pro_version_table_bloc table.bws_pro_version {
     background: transparent;
     margin: 0;
     border: none;
     width: 100%;
 }
-table.bws_pro_version { 
+table.bws_pro_version {
     background: #E0E0E0;
     border: 1px solid #AAA;
     margin-bottom: 5px;
@@ -107,8 +107,8 @@ table.bws_pro_version td {
     background: #FFF;
     border-top: 1px solid #AAA;
     position: relative;
-    z-index: 2; 
-    padding: 10px; 
+    z-index: 2;
+    padding: 10px;
     font-size: 14px;
 }
 .bws_pro_version_tooltip .bws_button {
@@ -151,7 +151,7 @@ a.bws_plugin_pro_version {
     color: #666;
 }
 /* style for mini-block (ex. google map) */
-.bws_pro_version_bloc_mini .bws_pro_version_table_bloc table.bws_pro_version { 
+.bws_pro_version_bloc_mini .bws_pro_version_table_bloc table.bws_pro_version {
     width: auto;
 }
 .bws_pro_version_bloc_mini .bws_pro_version_tooltip {
@@ -159,7 +159,7 @@ a.bws_plugin_pro_version {
     text-align: center;
     width: 200px;
 }
-.bws_pro_version_bloc_mini .bws_pro_version_tooltip a {    
+.bws_pro_version_bloc_mini .bws_pro_version_tooltip a {
     display: inline-block;
     line-height: 1.5;
 }
@@ -178,7 +178,7 @@ a.bws_plugin_pro_version {
         float: none;
         text-align: center;
     }
-    .bws_pro_version_tooltip a {   
+    .bws_pro_version_tooltip a {
         display: inline-block;
         line-height: 1.5;
     }
@@ -193,7 +193,7 @@ a.bws_plugin_pro_version {
 }
 
 /*
-* styles for banner 
+* styles for banner
 */
 .bws_banner_on_plugin_page {
     border: 1px solid #d4d4d4;
@@ -212,14 +212,14 @@ a.bws_plugin_pro_version {
     max-width: 80%;
 }
 .bws_banner_on_plugin_page .text span {
-    font-size: 12px;
+    font-size: 14px;
     opacity: 0.7;
 }
 div.bws_banner_on_plugin_page .button {
     float: right;
-    border: none; 
+    border: none;
     font-size: 14px;
-    margin: 18px 16px;
+    margin: 18px 40px;
     padding: 12px 29px;
     color: #FFF;
     text-shadow: none;
@@ -236,7 +236,7 @@ div.bws_banner_on_plugin_page .button {
     line-height: 26px;
 }
 .bws_banner_on_plugin_page .button:hover,
-.bws_banner_on_plugin_page .button:focus {    
+.bws_banner_on_plugin_page .button:focus {
     background: #222;
     color: #FFF;
 }
@@ -247,26 +247,34 @@ div.bws_banner_on_plugin_page .icon {
 .bws_banner_on_plugin_page .icon img {
     max-width: 60px;
 }
+.bws_go_pro_banner .icon:before {
+    content: 'PRO';
+    background: #F26E50;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+    display: block;
+    padding: 0px 4px;
+    margin: 0 15px -7px;
+    position: relative;
+}
 .bws_banner_on_plugin_page .text + .icon {
     display: none;
 }
-.bws_banner_on_plugin_page .close_icon {
-    float: right;
-    margin: 8px;
-    cursor: pointer;
-}
-.rtl .bws_banner_on_plugin_page .close_icon {
+.rtl div.bws_banner_on_plugin_page .button,
+.rtl .bws_pro_version_tooltip .bws_button {
     float: left;
 }
 .rtl div.bws_banner_on_plugin_page .icon,
-.rtl div.bws_banner_on_plugin_page .button,
-.rtl .bws_banner_on_plugin_page .text {
+.rtl .bws_banner_on_plugin_page .text,
+.rtl .bws_pro_version_tooltip .bws_info {
     float: right;
 }
 /* #### Mobile Phones Portrait or Landscape #### */
 @media screen and (max-device-width: 768px) {
     .bws_banner_on_plugin_page .text,
-    .bws_banner_on_plugin_page .icon, 
+    .bws_banner_on_plugin_page .icon,
     .bws_banner_on_plugin_page .button_div,
     .bws_banner_on_plugin_page .button {
         float: none;
@@ -296,7 +304,7 @@ span.bws_code {
     position: relative;
     margin: 3px 5px;
     width: 28px;
-    display: inline-block;    
+    display: inline-block;
 }
 .bws_help_box:not(.dashicons) {
     vertical-align: middle;
@@ -392,8 +400,6 @@ span.bws_code {
 .rtl .bws_hidden_help_text:before {
     margin-right: -2px;
 }
-
-
 /* bws shortcode insert */
 #bws_shortcode_content,
 #bws_shortcode_select_plugin {

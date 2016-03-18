@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.7.7
+* Version: 1.8.2
 */
 
 if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) )
@@ -390,8 +390,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			'bws-smtp/bws-smtp.php' => array(
 				'name'			=> 'SMTP',
 				'description'	=> 'This plugin introduces an easy way to configure sending email messages via SMTP.',
-				'link'			=> 'http://bestwebsoft.com/products/bws-smtp/?k=0546419f962704429ad2d9b88567752f&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
-				'download'		=> 'http://bestwebsoft.com/products/bws-smtp/download/?k=0546419f962704429ad2d9b88567752f&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'link'			=> 'http://bestwebsoft.com/products/smtp/?k=0546419f962704429ad2d9b88567752f&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/smtp/download/?k=0546419f962704429ad2d9b88567752f&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=SMTP+BestWebSoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=bwssmtp_settings'
 			),
@@ -423,7 +423,10 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'link'			=> 'http://bestwebsoft.com/products/zendesk-help-center/?k=2a5fd2f4b2f4bde46f2ca44b8d15846d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/zendesk-help-center/download/?k=2a5fd2f4b2f4bde46f2ca44b8d15846d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Zendesk+Help+Center+Backup+BestWebSoft&plugin-search-input=Search+Plugins',
-				'settings'		=> 'admin.php?page=zendesk_hc.php&tab=settings'
+				'settings'		=> 'admin.php?page=zendesk_hc.php&tab=settings',
+				'pro_version'	=> 'zendesk-help-center-pro/zendesk-help-center-pro.php',
+				'purchase' 		=> 'http://bestwebsoft.com/products/zendesk-help-center/buy/?k=45199e4538b5befe4d9566868a61a3aa&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'pro_settings'	=> 'admin.php?page=zendesk_hc.php&tab=settings'
 			),
 			'social-buttons-pack/social-buttons-pack.php' => array(
 				'name'			=> 'Social Buttons Pack',
@@ -613,8 +616,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			}
 		} ?>
 		<div class="wrap">
-			<div class="icon32 icon32-bws" id="icon-options-general"></div>
-			<h2>
+			<h1>
 				<span class="bws_main title">BestWebSoft</span>
 				<ul class="subsubsub bws_title_menu">
 					<li><a href="<?php echo esc_url( 'http://support.bestwebsoft.com/home' ); ?>" target="_blank"><?php _e( 'Need help?', 'bestwebsoft' ); ?></a></li> |
@@ -622,12 +624,10 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 					<li><a class="bws_system_status <?php if ( isset( $_GET['action'] ) && 'system_status' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=bws_plugins&amp;action=system_status"><?php _e( 'System status', 'bestwebsoft' ); ?></a></li>
 				</ul>
 				<div class="clear"></div>
-			</h2>
+			</h1>
 			<h2 class="nav-tab-wrapper">
 				<a class="nav-tab<?php if ( !isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>" href="admin.php?page=bws_plugins"><?php _e( 'Plugins', 'bestwebsoft' ); ?></a>
-				<?php if ( $wp_version >= '3.4' ) { ?>
-					<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'themes' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=bws_plugins&amp;action=themes"><?php _e( 'Themes', 'bestwebsoft' ); ?></a>
-				<?php } ?>
+				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'themes' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=bws_plugins&amp;action=themes"><?php _e( 'Themes', 'bestwebsoft' ); ?></a>
 			</h2>
 			<?php if ( ! isset( $_GET['action'] ) ) { ?>
 				<ul class="subsubsub">
@@ -637,7 +637,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				</ul>
 				<div class="clear"></div>
 				<?php if ( ( isset( $_GET['sub'] ) && 'installed' == $_GET['sub'] ) || !isset( $_GET['sub'] ) ) { ?>
-					<h4 class="bws_installed"><?php _e( 'Installed plugins', 'bestwebsoft' ); ?></h4>
+					<h3 class="bws_installed"><?php _e( 'Installed plugins', 'bestwebsoft' ); ?></h3>
 					<?php foreach ( $all_plugins as $key_plugin => $value_plugin ) {
 						if ( isset( $bws_plugins_pro[ $key_plugin ] ) )
 							$key_plugin = $bws_plugins_pro[ $key_plugin ];
@@ -755,7 +755,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				} ?>
 				<div class="clear"></div>
 				<?php if ( ( isset( $_GET['sub'] ) && 'recommended' == $_GET['sub'] ) || !isset( $_GET['sub'] ) ) { ?>
-					<h4 class="bws_recommended"><?php _e( 'Recommended plugins', 'bestwebsoft' ); ?></h4>
+					<h3 class="bws_recommended"><?php _e( 'Recommended plugins', 'bestwebsoft' ); ?></h3>
 					<?php foreach ( $recommend_plugins as $key_plugin => $value_plugin ) {
 
 						if ( isset( $bws_plugins[ $key_plugin ] ) ) {
@@ -995,6 +995,7 @@ if ( ! function_exists( 'bws_get_banner_array' ) ) {
 	function bws_get_banner_array() {
 		global $bstwbsftwppdtplgns_banner_array;
 		$bstwbsftwppdtplgns_banner_array = array(
+			array( 'zndskhcpr_hide_banner_on_plugin_page', 'zendesk-help-center/zendesk-help-center.php', '1.0.0' ),
 			array( 'gglcptch_hide_banner_on_plugin_page', 'google-captcha/google-captcha.php', '1.18' ),
 			array( 'mltlngg_hide_banner_on_plugin_page', 'multilanguage/multilanguage.php', '1.1.1' ),
 			array( 'adsns_hide_banner_on_plugin_page', 'adsense-plugin/adsense-plugin.php', '1.36' ),

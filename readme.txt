@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add image, add images, add photo, add album, add gallery, add galleries, add picture, add pictures, album, albums, art gallery, best gallery, best gallery plugin, best image slider, best portfolio, best portfolio plugin, content gallery, content slider, easy media gallery, easy gallery, fancybox, fancy gallery, free photo gallery, free gallery, free images, free slider, filterable, filterable gallery, filterable portfolio, foto, fotoalbum, fotogalerie, fullscreen, fullscreen gallery, fullscreen photo, fullscreen slider, gallery, galery, galeri, galerie, galleries, galary, galeria, gallary, gellery, gellary, gelary, gallerie, galerij, Galleria, gallery decription, gallery image, gallery lightbox, Gallery Plugin, gallery shortcode, gallery slider, gallery wordpress, grid, grid gallery, image, image album, image description, image display, image gallery, image gallery plugin, image lightbox, image slider, image slideshow, images, images gallery, jquery, jquery gallery, lightbox, lightbox gallery, lightbox photo, media, media gallery, multi categories galleries, multi categories gallery, multiple pictures, multiply images upload, pagination gallery, pagination portfolio, panorama, panorama views, photo, photo album, photo albums, photo gallery, photoalbum, photographs, photogallery, photographer, photography, photos, photoset, picture, pictures, Picture Gallery, plugin for gallery, plugin gallery, portfolio, portfolio gallery, portfolio plugin, responsive, responsive galleries, responsive gallery, responsive image gallery, responsive slider, responsive slideshow, responsive wordpress photo gallery, shortcode, sidebar, shortcode gallery, Simple gallery, slide, slide show, slideshow, slideshow galleries, slideshow gallery, slideshows, sortable galleries, sortable gallery, thumbnail, thumbnail view, thumb view, thumbnail galleries, thumbnail gallery, thumbnails, thumbs, upload images, upload photos, view images, view pictures, website gallery, widget gallery, wordpress gallery, wordpress gallery plugin, wordpress photo gallery plugin, wordpress responsive gallery, wp gallery, wp gallery plugin, wp gallery plugins
 Requires at least: 3.8
-Tested up to: 4.3.1
-Stable tag: 4.3.8
+Tested up to: 4.4.2
+Stable tag: 4.3.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ There is also a premium version of the plugin with more useful features availabl
 
 http://www.youtube.com/watch?v=aydaTdOpaRM
 
-<a href="http://www.youtube.com/watch?v=mivcWwfRVmI" target="_blank">Gallery by BestWebSoft Video instruction on Installation</a>
+<a href="http://www.youtube.com/watch?v=3u-Ov-HxZ7U" target="_blank">Gallery by BestWebSoft Video instruction on Installation</a>
 
 <a href="http://www.youtube.com/watch?v=-P9o6-APlv0" target="_blank">Gallery by BestWebSoft Video instruction "How to add a gallery"</a>
 
@@ -159,6 +159,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 7. The pop-up window containing the album images.
 
 == Changelog ==
+
+= V4.3.9 - 18.03.2016 =
+* Bugfix : The bug with plugin menu duplicating was fixed.
+* Bugfix : We fixed bug with displaying single gallery.
+* Bugfix : We fixed bug with gallery album links ( if Featured Posts by BestWebSoft plugin is installed and activated ).
+* Update : The French language files were updated.
 
 = V4.3.8 - 19.10.2015 =
 * NEW : Ability to change galleries sorting order.
@@ -504,6 +510,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.3.9 =
+The bug with plugin menu duplicating was fixed. We fixed bug with displaying single gallery. We fixed bug with gallery album links ( if Featured Posts by BestWebSoft plugin is installed and activated ). The French language files were updated.
 
 = V4.3.8 =
 Ability to change galleries sorting order. We fixed bug with pagination on the edit gallery page. Sort images plugin setting now affect on the displaying in the dashboard too.

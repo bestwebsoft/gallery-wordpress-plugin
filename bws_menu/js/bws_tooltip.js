@@ -34,7 +34,7 @@
 			});
 			/* function to display pointer */
 			function displayPointer( cssSelector ) {
-				cssSelector.pointer(pointer_options).pointer({
+				cssSelector.pointer( pointer_options ).pointer({
 					pointerClass: 'wp-pointer ' + pointer_options["tooltip_id"],
 					content: pointer_options['content'],
 					position: {

@@ -6,16 +6,15 @@ ul.gallery {
 }
 .gallery_box_single .gallery.clearfix {
     display: table;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
 .gallery_box ul {
 	list-style: none outside none !important;
-	margin:0;
+	margin: 0;
+	padding: 0;
 }
-.gallery_box li {
-	padding: 10px 10px 0 0;
-	clear: both;
-    list-style: none;
+.gallery_box ul li {
+	margin: 0 0 20px;
 }
 .gallery_box li img {
 	/*padding: 5px;*/
@@ -53,6 +52,9 @@ ul.gallery {
 	box-sizing: content-box;
 	-moz-box-sizing: content-box; /*Firefox 1-3*/
 	-webkit-box-sizing: content-box; /* Safari */
+}
+#content .gallery_box_single {
+	word-wrap: break-word;
 }
 #content .gallery_box_single .gallery .gllr_image_block p {
 	border: 1px solid #BDBDBD;
@@ -100,7 +102,7 @@ ul.gallery {
 #ajax_update_images {
     float: left;
 }
-#gllr_date_additional_field, #gllr_link_additional_field, 
+#gllr_date_additional_field, #gllr_link_additional_field,
 #gllr_shrdescription_additional_field, #gllr_description_additional_field,
 #gllr_svn_additional_field, #gllr_executor_additional_field,
 #gllr_technologies_additional_field {
@@ -108,4 +110,47 @@ ul.gallery {
     position: relative;
     top: 2px;
     margin-right: 3px;
+}
+.tax-gallery_categories .site-content .site-content {
+    width: 100%;
+    margin-left: 0;
+}
+/* template fix for theme 2016 */
+.gllr_twentysixteen.single-gallery .hentry {
+    margin-bottom: 3.5em;
+}
+@media screen and (min-width: 61.5625em) {
+	.gllr_twentysixteen.single-gallery .hentry {
+	    margin-bottom: 7.0em;
+	}
+}
+@media screen and (min-width: 44.375em) {
+	.gllr_twentysixteen.single-gallery .hentry {
+	    margin-bottom: 5.25em;
+	}
+}
+/* fix pagination */
+.gllr_pagination.pagination {
+	margin: 0 0 20px;
+	border: none;
+	box-shadow: none;
+}
+.gllr_pagination.pagination a {
+	border: none;
+	box-shadow: none;
+}
+.gllr_pagination:before,
+.gllr_pagination:after {
+	display: none;
+}
+.gllr_pagination.pagination a {
+	box-shadow: none;
+}
+.gllr_twentytwelve .gllr_pagination.pagination .page-numbers,
+.gllr_twentythirteen .gllr_pagination.pagination .page-numbers,
+.gllr_twentyfourteen .gllr_pagination.pagination .page-numbers {
+	margin: 0 10px 0 0;
+}
+.gllr_return_link {
+	margin: 0 0 20px !important;
 }
