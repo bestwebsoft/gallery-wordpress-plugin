@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bestwebsoft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-22 15:55+0300\n"
-"PO-Revision-Date: 2016-02-22 15:55+0300\n"
+"POT-Creation-Date: 2016-03-10 15:40+0300\n"
+"PO-Revision-Date: 2016-03-10 15:40+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Andrijana Nikolic <andrijanan@webhostinggeeks.com>\n"
 "Language: fr_FR\n"
@@ -40,6 +40,11 @@ msgstr "Pro moduli"
 msgid ""
 "or higher! We do not guarantee that our plugin will work correctly. Please "
 "upgrade to WordPress latest version."
+msgstr ""
+
+#: bws_functions.php:143 bws_functions.php:652 bws_functions.php:696
+#: bws_functions.php:755
+msgid "Close notice"
 msgstr ""
 
 #: bws_functions.php:148
@@ -198,7 +203,8 @@ msgid "Start Your Free %s-Day Trial Now"
 msgstr ""
 
 #: bws_functions.php:413 bws_functions.php:422 bws_functions.php:452
-#: bws_functions.php:460 bws_menu.php:690 bws_menu.php:747
+#: bws_functions.php:460 bws_functions.php:1232 bws_menu.php:693
+#: bws_menu.php:750
 #, fuzzy
 msgid "Activate"
 msgstr "Aktivirani moduli"
@@ -303,8 +309,9 @@ msgid ""
 "plugin updates you should extend it."
 msgstr ""
 
-#: bws_functions.php:603 bws_functions.php:656 bws_menu.php:666
-#: bws_menu.php:688 bws_menu.php:715 bws_menu.php:745 bws_menu.php:791
+#: bws_functions.php:603 bws_functions.php:656 bws_functions.php:1198
+#: bws_menu.php:669 bws_menu.php:691 bws_menu.php:718 bws_menu.php:748
+#: bws_menu.php:794
 #, fuzzy
 msgid "Learn more"
 msgstr "Pročitaj više"
@@ -352,10 +359,6 @@ msgstr "na stranici za podešavanje modula ("
 msgid "Add New"
 msgstr "Ajouter"
 
-#: bws_functions.php:696 bws_functions.php:755
-msgid "Close notice"
-msgstr ""
-
 #: bws_functions.php:750
 #, fuzzy
 msgid "Thank you for choosing"
@@ -379,7 +382,7 @@ msgstr ""
 msgid "The plugin's settings have been changed."
 msgstr ""
 
-#: bws_functions.php:769
+#: bws_functions.php:769 bws_functions.php:1240
 msgid "Save Changes"
 msgstr "Sačuvaj izmene"
 
@@ -387,10 +390,6 @@ msgstr "Sačuvaj izmene"
 msgid ""
 "You can always look at premium options by clicking on the \"Show Pro features"
 "\" in the \"Go PRO\" tab"
-msgstr ""
-
-#: bws_functions.php:866
-msgid "Add BWS Plugins Shortcode"
 msgstr ""
 
 #: bws_functions.php:886
@@ -402,342 +401,378 @@ msgstr "Kratak kod za Galeriju"
 msgid "Add BestWebSoft plugins' shortcodes using this button."
 msgstr ""
 
-#: bws_functions.php:928
+#: bws_functions.php:935
 msgid "Close"
 msgstr ""
 
-#: bws_functions.php:1020
+#: bws_functions.php:1027
 msgid "Restore all plugin settings to defaults"
 msgstr ""
 
-#: bws_functions.php:1022
+#: bws_functions.php:1029
 #, fuzzy
 msgid "Restore settings"
 msgstr "na stranici za podešavanje modula ("
 
-#: bws_functions.php:1033
+#: bws_functions.php:1040
 msgid "Are you sure you want to restore all settings by default?"
 msgstr ""
 
-#: bws_functions.php:1036
+#: bws_functions.php:1043
 msgid "Yes, restore all settings"
 msgstr ""
 
-#: bws_functions.php:1037
+#: bws_functions.php:1044
 #, fuzzy
 msgid "No, go back to the settings page"
 msgstr "na stranici za podešavanje modula ("
 
-#: bws_functions.php:1083
+#: bws_functions.php:1090
 #, fuzzy
 msgid "Plugin"
 msgstr "Pro moduli"
 
-#: bws_functions.php:1092
+#: bws_functions.php:1099
 #, fuzzy
 msgid "Shortcode settings"
 msgstr "na stranici za podešavanje modula ("
 
-#: bws_functions.php:1097
+#: bws_functions.php:1104
 msgid "The shortcode will be inserted"
 msgstr ""
 
-#: bws_functions.php:1102
+#: bws_functions.php:1109
 msgid "Insert"
 msgstr ""
 
-#: bws_functions.php:1133
+#: bws_functions.php:1140
 msgid "Visit Help Center"
 msgstr ""
 
-#: bws_functions.php:1138
+#: bws_functions.php:1145
 msgid "FAQ"
 msgstr "FAQ"
 
-#: bws_functions.php:1144
+#: bws_functions.php:1151
 msgid "For more information:"
 msgstr ""
 
-#: bws_functions.php:1145
+#: bws_functions.php:1152
 msgid "Documentation"
 msgstr ""
 
-#: bws_functions.php:1146
+#: bws_functions.php:1153
 msgid "Video Instructions"
 msgstr ""
 
-#: bws_functions.php:1147
+#: bws_functions.php:1154
 msgid "Submit a Request"
 msgstr ""
 
-#: bws_menu.php:506
+#: bws_functions.php:1165
+msgid "You do not have sufficient permissions to edit plugins for this site."
+msgstr ""
+
+#: bws_functions.php:1196
+msgid "File edited successfully."
+msgstr ""
+
+#: bws_functions.php:1198
+msgid "Not enough permissions to create or update the file"
+msgstr ""
+
+#: bws_functions.php:1222
+msgid "These styles will be added to the header on all pages of your site."
+msgstr ""
+
+#: bws_functions.php:1225
+msgid "Editing"
+msgstr ""
+
+#: bws_functions.php:1227
+msgid "Browsing"
+msgstr ""
+
+#: bws_functions.php:1235
+#, fuzzy
+msgid "Learn more about CSS"
+msgstr "Pročitaj više"
+
+#: bws_functions.php:1243
+#, php-format
+msgid ""
+"You need to make this file writable before you can save your changes. See %s "
+"the Codex %s for more information."
+msgstr ""
+
+#: bws_menu.php:509
 msgid "Not set"
 msgstr "Nije podešeno"
 
-#: bws_menu.php:508 bws_menu.php:509
+#: bws_menu.php:511 bws_menu.php:512
 msgid "On"
 msgstr "Uključeno"
 
-#: bws_menu.php:508 bws_menu.php:509
+#: bws_menu.php:511 bws_menu.php:512
 msgid "Off"
 msgstr "Isključeno"
 
-#: bws_menu.php:510 bws_menu.php:511 bws_menu.php:512 bws_menu.php:513
-#: bws_menu.php:514 bws_menu.php:526
+#: bws_menu.php:513 bws_menu.php:514 bws_menu.php:515 bws_menu.php:516
+#: bws_menu.php:517 bws_menu.php:529
 msgid "N/A"
 msgstr "N/A"
 
-#: bws_menu.php:514
+#: bws_menu.php:517
 msgid " Mb"
 msgstr " Mb"
 
-#: bws_menu.php:515 bws_menu.php:516 bws_menu.php:517 bws_menu.php:522
+#: bws_menu.php:518 bws_menu.php:519 bws_menu.php:520 bws_menu.php:525
 msgid "Yes"
 msgstr "Da"
 
-#: bws_menu.php:515 bws_menu.php:516 bws_menu.php:517 bws_menu.php:524
+#: bws_menu.php:518 bws_menu.php:519 bws_menu.php:520 bws_menu.php:527
 msgid "No"
 msgstr "Ne"
 
-#: bws_menu.php:534
+#: bws_menu.php:537
 msgid "Operating System"
 msgstr "Operativni Sistem"
 
-#: bws_menu.php:535
+#: bws_menu.php:538
 msgid "Server"
 msgstr "Server"
 
-#: bws_menu.php:536
+#: bws_menu.php:539
 msgid "Memory usage"
 msgstr "Upotreba memorije"
 
-#: bws_menu.php:537
+#: bws_menu.php:540
 msgid "MYSQL Version"
 msgstr "MYSQL Verzija"
 
-#: bws_menu.php:538
+#: bws_menu.php:541
 msgid "SQL Mode"
 msgstr "SQL način"
 
-#: bws_menu.php:539
+#: bws_menu.php:542
 msgid "PHP Version"
 msgstr "PHP Verzija"
 
-#: bws_menu.php:540
+#: bws_menu.php:543
 msgid "PHP Safe Mode"
 msgstr "PHP Sigurni način"
 
-#: bws_menu.php:541
+#: bws_menu.php:544
 msgid "PHP Allow URL fopen"
 msgstr "PHP Dozvoli URL fopen"
 
-#: bws_menu.php:542
+#: bws_menu.php:545
 msgid "PHP Memory Limit"
 msgstr "PHP Ograničenje memorije"
 
-#: bws_menu.php:543
+#: bws_menu.php:546
 #, fuzzy
 msgid "PHP Max Upload Size"
 msgstr "Envoi de fichier"
 
-#: bws_menu.php:544
+#: bws_menu.php:547
 msgid "PHP Max Post Size"
 msgstr "PHP Max veličina za učitavanje"
 
-#: bws_menu.php:545
+#: bws_menu.php:548
 msgid "PHP Max Script Execute Time"
 msgstr "PHP Max veličina posta"
 
-#: bws_menu.php:546
+#: bws_menu.php:549
 msgid "PHP Exif support"
 msgstr "PHP Exif podrška"
 
-#: bws_menu.php:547
+#: bws_menu.php:550
 msgid "PHP IPTC support"
 msgstr "PHP IPTC podrška"
 
-#: bws_menu.php:548
+#: bws_menu.php:551
 msgid "PHP XML support"
 msgstr "PHP XML podrška"
 
-#: bws_menu.php:549
+#: bws_menu.php:552
 #, fuzzy
 msgid "Site URL"
 msgstr "URL du lien"
 
-#: bws_menu.php:550
+#: bws_menu.php:553
 msgid "Home URL"
 msgstr "URL naslovne"
 
-#: bws_menu.php:553
+#: bws_menu.php:556
 msgid "WordPress Version"
 msgstr "WordPress Verzija"
 
-#: bws_menu.php:554
+#: bws_menu.php:557
 msgid "WordPress DB Version"
 msgstr "WordPress DB Verzija"
 
-#: bws_menu.php:555
+#: bws_menu.php:558
 msgid "Multisite"
 msgstr "Višenamenski sajt"
 
-#: bws_menu.php:556
+#: bws_menu.php:559
 msgid "Active Theme"
 msgstr "Aktivna tema"
 
-#: bws_menu.php:571
+#: bws_menu.php:574
 msgid "Please enter a valid email address."
 msgstr "Molimo unesite važeću mejl adresu"
 
-#: bws_menu.php:575
+#: bws_menu.php:578
 msgid "Email with system info is sent to "
 msgstr "Mejl sa sistemskim informacijama je poslat na"
 
-#: bws_menu.php:579
+#: bws_menu.php:582
 msgid "Thank you for contacting us."
 msgstr "Hvala što ste nas kontaktirali"
 
-#: bws_menu.php:612
+#: bws_menu.php:615
 msgid "Sorry, email message could not be delivered."
 msgstr "Nažalost mejl poruka nije prosleđena"
 
-#: bws_menu.php:619
+#: bws_menu.php:622
 msgid "Need help?"
 msgstr ""
 
-#: bws_menu.php:620
+#: bws_menu.php:623
 msgid "Client area"
 msgstr ""
 
-#: bws_menu.php:621 bws_menu.php:930
+#: bws_menu.php:624 bws_menu.php:933
 msgid "System status"
 msgstr "Sistemski status"
 
-#: bws_menu.php:626
+#: bws_menu.php:629
 #, fuzzy
 msgid "Plugins"
 msgstr "Pro moduli"
 
-#: bws_menu.php:627
+#: bws_menu.php:630
 msgid "Themes"
 msgstr ""
 
-#: bws_menu.php:631
+#: bws_menu.php:634
 msgid "All"
 msgstr ""
 
-#: bws_menu.php:632
+#: bws_menu.php:635
 #, fuzzy
 msgid "Installed"
 msgstr "Instalacija %s"
 
-#: bws_menu.php:633
+#: bws_menu.php:636
 #, fuzzy
 msgid "Recommended"
 msgstr "Preporučeni moduli"
 
-#: bws_menu.php:637
+#: bws_menu.php:640
 msgid "Installed plugins"
 msgstr "Instalirani moduli"
 
-#: bws_menu.php:669 bws_menu.php:718
+#: bws_menu.php:672 bws_menu.php:721
 msgid "Settings"
 msgstr "Podešavanja"
 
-#: bws_menu.php:690 bws_menu.php:747
+#: bws_menu.php:693 bws_menu.php:750
 #, fuzzy
 msgid "Activate this plugin"
 msgstr "Aktivirani moduli"
 
-#: bws_menu.php:705 bws_menu.php:735 bws_menu.php:781
+#: bws_menu.php:708 bws_menu.php:738 bws_menu.php:784
 msgid "Go"
 msgstr ""
 
-#: bws_menu.php:709 bws_menu.php:739 bws_menu.php:785
+#: bws_menu.php:712 bws_menu.php:742 bws_menu.php:788
 msgid "DONATE"
 msgstr ""
 
-#: bws_menu.php:755
+#: bws_menu.php:758
 msgid "Recommended plugins"
 msgstr "Preporučeni moduli"
 
-#: bws_menu.php:793
+#: bws_menu.php:796
 #, fuzzy
 msgid "Install now"
 msgstr "Instalacija %s"
 
-#: bws_menu.php:814
+#: bws_menu.php:817
 msgid "Try again"
 msgstr ""
 
-#: bws_menu.php:832
+#: bws_menu.php:835
 #, php-format
 msgid "Preview &#8220;%s&#8221;"
 msgstr ""
 
-#: bws_menu.php:863
+#: bws_menu.php:866
 #, php-format
 msgid "Install %s"
 msgstr "Instalacija %s"
 
-#: bws_menu.php:863
+#: bws_menu.php:866
 #, fuzzy
 msgid "Install Now"
 msgstr "Instalacija %s"
 
-#: bws_menu.php:866
+#: bws_menu.php:869
 #, php-format
 msgid "Update to version %s"
 msgstr ""
 
-#: bws_menu.php:866
+#: bws_menu.php:869
 #, fuzzy
 msgid "Update"
 msgstr "date"
 
-#: bws_menu.php:873
+#: bws_menu.php:876
 #, php-format
 msgid "Preview %s"
 msgstr ""
 
-#: bws_menu.php:873
+#: bws_menu.php:876
 msgid "Preview"
 msgstr ""
 
-#: bws_menu.php:879 bws_menu.php:911
+#: bws_menu.php:882 bws_menu.php:914
 #, php-format
 msgid "By %s"
 msgstr ""
 
-#: bws_menu.php:885
+#: bws_menu.php:888
 msgid "Details"
 msgstr ""
 
-#: bws_menu.php:917
+#: bws_menu.php:920
 #, fuzzy
 msgid "Already Installed"
 msgstr "Instalacija %s"
 
-#: bws_menu.php:933
+#: bws_menu.php:936
 msgid "Environment"
 msgstr "Okruženje"
 
-#: bws_menu.php:944
+#: bws_menu.php:947
 #, fuzzy
 msgid "Active Plugins"
 msgstr "Extensions activées"
 
-#: bws_menu.php:957
+#: bws_menu.php:960
 #, fuzzy
 msgid "Inactive Plugins"
 msgstr "Extensions activées"
 
-#: bws_menu.php:973
+#: bws_menu.php:976
 #, fuzzy
 msgid "Send to support"
 msgstr "Soutien"
 
-#: bws_menu.php:980
+#: bws_menu.php:983
 msgid "Send to custom email &#187;"
 msgstr "Pošalji na korisnički mejl &#187;"
 

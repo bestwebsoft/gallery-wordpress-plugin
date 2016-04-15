@@ -167,7 +167,7 @@ if ( ! function_exists( 'bws_plugin_reviews_block' ) ) {
 		<div class="bws-plugin-reviews">
 			<div class="bws-plugin-reviews-rate">
 				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'bestwebsoft' ); ?>:
-				<a href="http://wordpress.org/support/view/plugin-reviews/<?php echo $plugin_slug; ?>" target="_blank" title="<?php echo $plugin_name; ?> reviews"><?php _e( 'Rate the plugin', 'bestwebsoft' ); ?></a>
+				<a href="http://wordpress.org/support/view/plugin-reviews/<?php echo $plugin_slug; ?>?filter=5" target="_blank" title="<?php echo $plugin_name; ?> reviews"><?php _e( 'Rate the plugin', 'bestwebsoft' ); ?></a>
 			</div>
 			<div class="bws-plugin-reviews-support">
 				<?php _e( 'If there is something wrong about it, please contact us', 'bestwebsoft' ); ?>:
@@ -261,47 +261,47 @@ if ( ! function_exists( 'bws_go_pro_tab_check' ) ) {
 
 										$url = 'http://bestwebsoft.com/wp-content/plugins/paid-products/plugins/downloads/?bws_first_download=' . $bws_license_plugin . '&bws_license_key=' . $bws_license_key . '&download_from=5';
 										$uploadDir = wp_upload_dir();
-											$zip_name = explode( '/', $bws_license_plugin );
-											
-											if ( !function_exists( 'curl_init' ) ) { 
-												$received_content = file_get_contents( $url );
-											} else {
-												$ch = curl_init();
-												curl_setopt( $ch, CURLOPT_URL, $url );
-												curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-												$received_content = curl_exec( $ch );
-												curl_close( $ch );
-											}
+										$zip_name = explode( '/', $bws_license_plugin );
+										
+										if ( !function_exists( 'curl_init' ) ) { 
+											$received_content = file_get_contents( $url );
+										} else {
+											$ch = curl_init();
+											curl_setopt( $ch, CURLOPT_URL, $url );
+											curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+											$received_content = curl_exec( $ch );
+											curl_close( $ch );
+										}
 
-											if ( ! $received_content ) {
-												$result['error'] = __( "Failed to download the zip archive. Please, upload the plugin manually", 'bestwebsoft' );
-											} else {
-												if ( is_writable( $uploadDir["path"] ) ) {
-													$file_put_contents = $uploadDir["path"] . "/" . $zip_name[0] . ".zip";
-													if ( file_put_contents( $file_put_contents, $received_content ) ) {
-														@chmod( $file_put_contents, octdec( 755 ) );
-														if ( class_exists( 'ZipArchive' ) ) {
-															$zip = new ZipArchive();
-															if ( $zip->open( $file_put_contents ) === TRUE ) {
-																$zip->extractTo( WP_PLUGIN_DIR );
-																$zip->close();
-															} else {
-																$result['error'] = __( "Failed to open the zip archive. Please, upload the plugin manually", 'bestwebsoft' );
-															}
-														} elseif ( class_exists( 'Phar' ) ) {
-															$phar = new PharData( $file_put_contents );
-															$phar->extractTo( WP_PLUGIN_DIR );
+										if ( ! $received_content ) {
+											$result['error'] = __( "Failed to download the zip archive. Please, upload the plugin manually", 'bestwebsoft' );
+										} else {
+											if ( is_writable( $uploadDir["path"] ) ) {
+												$file_put_contents = $uploadDir["path"] . "/" . $zip_name[0] . ".zip";
+												if ( file_put_contents( $file_put_contents, $received_content ) ) {
+													@chmod( $file_put_contents, octdec( 755 ) );
+													if ( class_exists( 'ZipArchive' ) ) {
+														$zip = new ZipArchive();
+														if ( $zip->open( $file_put_contents ) === TRUE ) {
+															$zip->extractTo( WP_PLUGIN_DIR );
+															$zip->close();
 														} else {
-															$result['error'] = __( "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually", 'bestwebsoft' );
+															$result['error'] = __( "Failed to open the zip archive. Please, upload the plugin manually", 'bestwebsoft' );
 														}
-														@unlink( $file_put_contents );
+													} elseif ( class_exists( 'Phar' ) ) {
+														$phar = new PharData( $file_put_contents );
+														$phar->extractTo( WP_PLUGIN_DIR );
 													} else {
-														$result['error'] = __( "Failed to download the zip archive. Please, upload the plugin manually", 'bestwebsoft' );
+														$result['error'] = __( "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually", 'bestwebsoft' );
 													}
+													@unlink( $file_put_contents );
 												} else {
-													$result['error'] = __( "UploadDir is not writable. Please, upload the plugin manually", 'bestwebsoft' );
+													$result['error'] = __( "Failed to download the zip archive. Please, upload the plugin manually", 'bestwebsoft' );
 												}
+											} else {
+												$result['error'] = __( "UploadDir is not writable. Please, upload the plugin manually", 'bestwebsoft' );
 											}
+										}
 
 										/* activate Pro */
 										if ( file_exists( WP_PLUGIN_DIR . '/' . $zip_name[0] ) ) {
@@ -897,6 +897,13 @@ if ( ! function_exists ( 'bws_plugins_admin_head' ) ) {
     }
 }
 
+if ( ! function_exists ( 'bws_plugins_include_codemirror' ) ) {
+	function bws_plugins_include_codemirror() {
+		wp_enqueue_style( 'codemirror.css', plugins_url( 'css/codemirror.css', __FILE__ ) );
+		wp_enqueue_script( 'codemirror.js', plugins_url( 'js/codemirror.js', __FILE__ ), array( 'jquery' ) );
+    }
+}
+
 /**
  * Tooltip block
  */
@@ -1149,9 +1156,182 @@ if ( ! function_exists( 'bws_help_tab' ) ) {
 	}
 }
 
+/**
+* Function display 'Custom code' tab
+*/
+if ( ! function_exists( 'bws_custom_code_tab' ) ) {
+	function bws_custom_code_tab() {
+		if ( ! current_user_can( 'edit_plugins' ) )
+			wp_die( __( 'You do not have sufficient permissions to edit plugins for this site.', 'bestwebsoft' ) );
+
+		global $bstwbsftwppdtplgns_options;
+
+		$message = $content = '';
+		$is_active = false;
+
+		$upload_dir = wp_upload_dir();
+		$folder = $upload_dir['basedir'] . '/bws-custom-code';
+		if ( ! $upload_dir["error"] ) {
+			if ( ! is_dir( $folder ) )
+				wp_mkdir_p( $folder, 0755 );
+		}
+
+		$file = 'bws-custom-code.css';
+		$real_file = $folder . '/' . $file;
+		$is_multisite = is_multisite();
+		if ( $is_multisite )
+			$blog_id = get_current_blog_id();
+
+		if ( isset( $_REQUEST['bws_update_custom_code'] ) && check_admin_referer( 'bws_update_' . $file ) ) {
+
+			$newcontent = wp_unslash( $_POST['bws_newcontent_css'] );
+
+
+			if ( ! empty( $newcontent ) && isset( $_REQUEST['bws_custom_css_active'] ) ) {
+				if ( $is_multisite )
+					$bstwbsftwppdtplgns_options['custom_code'][ $blog_id ][ $file ] = $upload_dir['baseurl'] . '/bws-custom-code/' . $file;
+				else
+					$bstwbsftwppdtplgns_options['custom_code'][ $file ] = $upload_dir['baseurl'] . '/bws-custom-code/' . $file;
+			} else {
+				if ( $is_multisite ) {
+					if ( isset( $bstwbsftwppdtplgns_options['custom_code'][ $blog_id ][ $file ] ) )
+						unset( $bstwbsftwppdtplgns_options['custom_code'][ $blog_id ][ $file ] );
+				} else {
+					if ( isset( $bstwbsftwppdtplgns_options['custom_code'][ $file ] ) )
+						unset( $bstwbsftwppdtplgns_options['custom_code'][ $file ] );
+				}
+			}
+
+			if ( $f = fopen( $real_file, 'w+' ) ) {
+				fwrite( $f, $newcontent );
+				fclose( $f );
+				$message = __( 'File edited successfully.', 'bestwebsoft' );
+			} else {
+				$error = __( 'Not enough permissions to create or update the file', 'bestwebsoft' ) . ' ' . $real_file . '. <a href="https://codex.wordpress.org/Changing_File_Permissions">' . __( 'Learn more', 'bestwebsoft' ) . '</a>';
+			}
+
+			if ( $is_multisite )
+				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
+			else
+				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
+		}
+
+		if ( file_exists( $real_file ) ) {
+			update_recently_edited( $real_file );
+			$content = file_get_contents( $real_file );
+			$content = esc_textarea( $content ); 
+			if ( ( $is_multisite && isset( $bstwbsftwppdtplgns_options['custom_code'][ $blog_id ][ $file ] ) ) ||
+				( ! $is_multisite && isset( $bstwbsftwppdtplgns_options['custom_code'][ $file ] ) ) ) {
+				$is_active = true;
+			}
+		}
+
+		if ( ! empty( $message ) ) { ?>
+			<div id="message" class="below-h2 updated notice is-dismissible"><p><?php echo $message; ?></p></div>
+		<?php } ?>
+		<p><?php _e( 'These styles will be added to the header on all pages of your site.', 'bestwebsoft' ); ?></p>
+		<p><big>
+			<?php if ( ! file_exists( $real_file ) || ( is_writeable( $real_file ) ) ) {
+				echo __( 'Editing', 'bestwebsoft' ) . ' <strong>' . $file . '</strong>';
+			} else {
+				echo __( 'Browsing', 'bestwebsoft' ) . ' <strong>' . $file . '</strong>';
+			} ?>
+		</big></p>
+		<form action="" method="post">
+			<?php wp_nonce_field( 'bws_update_' . $file ); ?>
+			<p><label><input type="checkbox" name="bws_custom_css_active" value="1" <?php if ( $is_active ) echo "checked"; ?> />	<?php _e( 'Activate', 'bestwebsoft' ); ?></label></p>
+			<textarea cols="70" rows="25" name="bws_newcontent_css" id="bws_newcontent_css"><?php echo $content; ?></textarea>
+			<p class="description">
+				<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started" target="_blank"><?php _e( 'Learn more about CSS', 'bestwebsoft' ); ?></a>
+			</p>
+			<?php if ( ! file_exists( $real_file ) || is_writeable( $real_file ) ) { ?>
+				<p class="submit">
+					<input type="hidden" name="bws_update_custom_code" value="submit" />					
+					<?php submit_button( __( 'Save Changes', 'bestwebsoft' ), 'primary', 'submit', false ); ?>
+				</p>
+			<?php } else { ?>
+				<p><em><?php printf( __( 'You need to make this file writable before you can save your changes. See %s the Codex %s for more information.', 'bestwebsoft' ),
+				'<a href="https://codex.wordpress.org/Changing_File_Permissions">',
+				'</a>' ); ?></em></p>
+			<?php } ?>
+		</form>
+	<?php }	
+}
+
+if ( ! function_exists( 'bws_enqueue_custom_code' ) ) {
+	function bws_enqueue_custom_code() {
+		global $bstwbsftwppdtplgns_options;
+
+		if ( ! isset( $bstwbsftwppdtplgns_options ) )
+			$bstwbsftwppdtplgns_options = ( function_exists( 'is_multisite' ) && is_multisite() ) ? get_site_option( 'bstwbsftwppdtplgns_options' ) : get_option( 'bstwbsftwppdtplgns_options' );
+
+		if ( ! empty( $bstwbsftwppdtplgns_options['custom_code'] ) ) {
+			$is_multisite = is_multisite();
+			if ( $is_multisite )
+				$blog_id = get_current_blog_id();
+
+			if ( ! $is_multisite && ! empty( $bstwbsftwppdtplgns_options['custom_code']['bws-custom-code.css'] ) )
+				wp_enqueue_style( 'bws-custom-style', $bstwbsftwppdtplgns_options['custom_code']['bws-custom-code.css'] );
+			elseif ( $is_multisite && ! empty( $bstwbsftwppdtplgns_options['custom_code'][ $blog_id ]['bws-custom-code.css'] ) )
+				wp_enqueue_style( 'bws-custom-style', $bstwbsftwppdtplgns_options['custom_code'][ $blog_id ]['bws-custom-code.css'] );
+		}
+	}
+}
+
+if ( ! function_exists( 'bws_delete_plugin' ) ) {
+	function bws_delete_plugin( $basename ) {
+		global $bstwbsftwppdtplgns_options;
+
+		$is_multisite = is_multisite();
+		if ( $is_multisite )
+			$blog_id = get_current_blog_id();
+
+		if ( ! isset( $bstwbsftwppdtplgns_options ) )
+			$bstwbsftwppdtplgns_options = ( $is_multisite ) ? get_site_option( 'bstwbsftwppdtplgns_options' ) : get_option( 'bstwbsftwppdtplgns_options' );
+
+		/* remove bws_menu versions */
+		unset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $basename ] );
+		/* if empty ['bws_menu']['version'] - there is no other bws plugins - delete all */
+		if ( empty( $bstwbsftwppdtplgns_options['bws_menu']['version'] ) ) {
+			/* remove options */
+			if ( $is_multisite ) 
+				delete_site_option( 'bstwbsftwppdtplgns_options' );
+			else
+				delete_option( 'bstwbsftwppdtplgns_options' );
+
+			/* remove custom_code */
+			if ( $is_multisite ) {
+				global $wpdb;
+				$old_blog = $wpdb->blogid;
+				/* Get all blog ids */
+				$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+				foreach ( $blogids as $blog_id ) {
+					switch_to_blog( $blog_id );
+					$upload_dir = wp_upload_dir();
+					$folder = $upload_dir['basedir'] . '/bws-custom-code';
+					if ( file_exists( $folder ) && is_dir( $folder ) ) {
+						array_map( 'unlink', glob( "$folder/*" ) );
+						rmdir( $folder );
+					}
+				}
+				switch_to_blog( $old_blog );
+			} else {
+				$upload_dir = wp_upload_dir();
+				$folder = $upload_dir['basedir'] . '/bws-custom-code';
+				if ( file_exists( $folder ) && is_dir( $folder ) ) {
+					array_map( 'unlink', glob( "$folder/*" ) );
+					rmdir( $folder );
+				}
+			}
+		}	
+	}
+}
+
 add_action( 'admin_init', 'bws_plugins_admin_init' );
 add_action( 'admin_enqueue_scripts', 'bws_admin_enqueue_scripts' );
 add_action( 'admin_head', 'bws_plugins_admin_head' );
 add_action( 'admin_footer','bws_shortcode_media_button_popup' );
 
 add_action( 'admin_notices', 'bws_versions_notice' );
+
+add_action( 'wp_enqueue_scripts', 'bws_enqueue_custom_code', 20 );

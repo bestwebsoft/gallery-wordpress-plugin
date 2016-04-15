@@ -2,7 +2,7 @@
 
 /**
  * Load demo data
- * @version 1.0.2
+ * @version 1.0.3
  */
 
 if ( ! class_exists( 'Bws_Demo_Data' ) ) {
@@ -135,8 +135,16 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 					/* remember old plugin options */
 					if ( ! empty( $plugin_options ) ) {
 						$this->bws_demo_options['options'] = $plugin_options;
+						$demo_data['options']['display_demo_notice'] = 0;
 						update_option( $this->bws_plugin_prefix . 'options', array_merge( $plugin_options, $demo_data['options'] ) );
 					}					
+				} else {
+					/* remove demo notice */
+					$plugin_options = get_option( $this->bws_plugin_prefix . 'options' );
+					if ( 0 != $plugin_options['display_demo_notice'] ) {
+						$plugin_options['display_demo_notice'] = 0;
+						update_option( $this->bws_plugin_prefix . 'options', $plugin_options );
+					}
 				}
 
 				/*

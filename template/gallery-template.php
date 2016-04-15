@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.2.6
+* Version: 1.2.7
 */
 ?>
 <?php get_header(); ?>
@@ -132,13 +132,16 @@ Template Name: Gallery Template
 						if ( 1 != $pages ) { ?>
 							<div class='gllr_clear'></div>
 							<div class="pagination navigation loop-pagination nav-links gllr_pagination">
-								<?php for ( $i = 1; $i <= $pages; $i++ ) {
-									if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $showitems ) ) {
-										echo ( $paged == $i ) ? "<span class='page-numbers current'>". $i ."</span>":"<a class='page-numbers inactive' href='". get_pagenum_link($i) ."'>". $i ."</a>";
-									}
-								} ?>
-								<div class='gllr_clear'></div>
+								<div id="gallery_pagination">
+									<?php for ( $i = 1; $i <= $pages; $i++ ) {
+										if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $showitems ) ) {
+											echo ( $paged == $i ) ? "<span class='page-numbers current'>". $i ."</span>":"<a class='page-numbers inactive' href='". get_pagenum_link($i) ."'>". $i ."</a>";
+										}
+									} ?>
+									<div class='gllr_clear'></div>
+								</div>
 							</div><!-- .pagination -->
+							<?php if ( function_exists( 'pgntn_display_pagination' ) ) pgntn_display_pagination( 'custom', $second_query ); ?>
 						<?php } ?>
 					</div><!-- .gallery_box -->
 				<?php } else { ?>

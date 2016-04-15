@@ -39,6 +39,11 @@ function gllr_setError( msg ) {
 			}
 		});
 
+		/* include color-picker */
+		if ( $.fn.wpColorPicker ) {
+			$( '.gllr_color_field' ).wpColorPicker();
+		}
+
 		$( '#gllr_ajax_update_images' ).click( function() {
 			gllr_setMessage( "<p>" + gllr_vars.update_img_message + "</p>" );
 			var curr = 0;
@@ -58,12 +63,6 @@ function gllr_setError( msg ) {
 
 					function updatenImageItem() {
 						if ( curr >= list.length ) {
-							$.ajax({
-								url: '../wp-admin/admin-ajax.php?action=gllr_update_image',
-								type: "POST",
-								data: "action1=update_options&gllr_ajax_nonce_field=" + gllr_vars.gllr_nonce,
-								success: function( result ) {}
-							});
 							$( "#gllr_ajax_update_images" ).removeAttr( "disabled" );
 							gllr_setMessage( "<p>" + gllr_vars.img_success + "</p>" );
 							$( '#gllr_img_loader' ).css( 'display', 'none' );
@@ -73,7 +72,7 @@ function gllr_setError( msg ) {
 						$.ajax({
 							url: '../wp-admin/admin-ajax.php?action=gllr_update_image',
 							type: "POST",
-							data: "action1=update_image&id=" + list[ curr ].ID + '&gllr_ajax_nonce_field=' + gllr_vars.gllr_nonce,
+							data: "action1=update_image&id=" + list[ curr ] + '&gllr_ajax_nonce_field=' + gllr_vars.gllr_nonce,
 							success: function( result ) {
 								curr = curr + 1;
 								updatenImageItem();

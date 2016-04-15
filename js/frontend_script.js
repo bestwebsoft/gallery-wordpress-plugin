@@ -16,9 +16,9 @@
 					count_images_in_row = ( columns < pre_count_images_in_row ) ? columns : pre_count_images_in_row,
 					count_rows = Math.ceil( count_images / count_images_in_row );
 
-				if( count_images_in_first_row != count_images_in_row && count_images_in_row != 0 ) {
+				if ( count_images_in_first_row != count_images_in_row && count_images_in_row != 0 ) {
 
-					$gallery.html( '' );
+					$gallery.empty();
 
 					for( var i = 1; i <= count_rows; i++ ) {
 						var $new_row = $( '<div/>', {

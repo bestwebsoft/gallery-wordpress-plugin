@@ -17,9 +17,6 @@
 .pp_social {
 	display: none;
 }
-.gllr_settings_table .minicolors input {
-    height: 22px !important;
-}
 #gllr_loader,
 #gllr_img_loader {
     position: relative;
@@ -28,6 +25,14 @@
 .rtl .gllr_settings_table label {
     float: right;
     width: 100%;
+}
+.bws_table_bg.gllr_bws_table_bg {
+	z-index: 0;
+}
+@media screen and (max-width: 480px) {
+	.bws_help_box.gllr_help_box {
+		display: none;
+	}
 }
 
 /* New media style */
