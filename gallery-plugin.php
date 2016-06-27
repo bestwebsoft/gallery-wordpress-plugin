@@ -6,7 +6,7 @@ Description: This plugin allows you to implement gallery page into web site.
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.4.0
+Version: 4.4.1
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -39,7 +39,7 @@ if ( ! function_exists( 'add_gllr_admin_menu' ) ) {
 		global $submenu;
 
 		bws_general_menu();
-		$settings = add_submenu_page( 'bws_plugins', 'Gallery', 'Gallery', 'manage_options', 'gallery-plugin.php', 'gllr_settings_page' );
+		$settings = add_submenu_page( 'bws_panel', 'Gallery', 'Gallery', 'manage_options', 'gallery-plugin.php', 'gllr_settings_page' );
 
 		if ( isset( $submenu['edit.php?post_type=gallery'] ) )
 			$submenu['edit.php?post_type=gallery'][] = array( __( 'Settings', 'gallery-plugin' ), 'manage_options', admin_url( 'admin.php?page=gallery-plugin.php' ) );
@@ -2657,7 +2657,7 @@ if ( ! function_exists ( 'gllr_admin_notices' ) ) {
 				if ( isset( $gllr_options['first_install'] ) && strtotime( '-1 week' ) > $gllr_options['first_install'] )
 					bws_plugin_banner( $gllr_plugin_info, 'gllr', 'gallery', '01a04166048e9416955ce1cbe9d5ca16', '79', '//ps.w.org/gallery-plugin/assets/icon-128x128.png' );
 
-				bws_plugin_banner_to_settings( $gllr_plugin_info, 'gllr_options', 'gallery-plugin', 'admin.php?page=gallery-plugin.php', 'post-new.php?post_type=gallery', 'Gallery' );
+				bws_plugin_banner_to_settings( $gllr_plugin_info, 'gllr_options', 'gallery-plugin', 'admin.php?page=gallery-plugin.php', 'post-new.php?post_type=gallery' );
 			} else {
 				bws_plugin_suggest_feature_banner( $gllr_plugin_info, 'gllr_options', 'gallery-plugin' );
 			}

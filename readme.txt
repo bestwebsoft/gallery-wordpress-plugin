@@ -1,10 +1,10 @@
 === Gallery by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: add image, add images, add photo, add album, add gallery, add galleries, add picture, add pictures, album, albums, art gallery, best gallery, best gallery plugin, best image slider, best portfolio, best portfolio plugin, content gallery, content slider, easy media gallery, easy gallery, fancybox, fancy gallery, free photo gallery, free gallery, free images, free slider, filterable, filterable gallery, filterable portfolio, foto, fotoalbum, fotogalerie, fullscreen, fullscreen gallery, fullscreen photo, fullscreen slider, gallery, galery, galeri, galerie, galleries, galary, galeria, gallary, gellery, gellary, gelary, gallerie, galerij, Galleria, gallery decription, gallery image, gallery lightbox, Gallery Plugin, gallery shortcode, gallery slider, gallery wordpress, grid, grid gallery, image, image album, image description, image display, image gallery, image gallery plugin, image lightbox, image slider, image slideshow, images, images gallery, jquery, jquery gallery, lightbox, lightbox gallery, lightbox photo, media, media gallery, multi categories galleries, multi categories gallery, multiple pictures, multiply images upload, pagination gallery, pagination portfolio, panorama, panorama views, photo, photo album, photo albums, photo gallery, photoalbum, photographs, photogallery, photographer, photography, photos, photoset, picture, pictures, Picture Gallery, plugin for gallery, plugin gallery, portfolio, portfolio gallery, portfolio plugin, responsive, responsive galleries, responsive gallery, responsive image gallery, responsive slider, responsive slideshow, responsive wordpress photo gallery, shortcode, sidebar, shortcode gallery, Simple gallery, slide, slide show, slideshow, slideshow galleries, slideshow gallery, slideshows, sortable galleries, sortable gallery, thumbnail, thumbnail view, thumb view, thumbnail galleries, thumbnail gallery, thumbnails, thumbs, upload images, upload photos, view images, view pictures, website gallery, widget gallery, wordpress gallery, wordpress gallery plugin, wordpress photo gallery plugin, wordpress responsive gallery, wp gallery, wp gallery plugin, wp gallery plugins
+Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 3.8
-Tested up to: 4.5
-Stable tag: 4.4.0
+Tested up to: 4.5.3
+Stable tag: 4.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,11 +70,11 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 * Turkish (tr) (thanks to <a href="mailto:ce.demirbilek@gmail.com">Ismail Demirbilek</a>)
 * Ukrainian (uk)
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
+Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
 
 If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
 Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
@@ -152,15 +152,19 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Screenshots ==
 
-1. Edit Gallery page in the grid mode.
-2. Edit Gallery Attachment Info in the grid mode.
-3. Edit Gallery page in the list mode.
-4. Gallery Settings page in the admin panel.
-5. Gallery albums page in the front-end.
-6. Single Gallery page in the front-end.
-7. The pop-up window containing the album images.
+1. Gallery albums page in the front-end.
+2. Single Gallery page in the front-end.
+3. The pop-up window containing the album images.
+4. Edit Gallery page in the grid mode.
+5. Edit Gallery Attachment Info in the grid mode.
+6. Edit Gallery page in the list mode.
+7. Gallery Settings page in the admin panel.
 
 == Changelog ==
+
+= V4.4.1 - 27.06.2016 =
+* Update : The French language file is updated.
+* Update : BWS Panel section is updated.
 
 = V4.4.0 - 15.04.2016 =
 * Bugfix : Bug with displaying gallery on mobile device (Windows Phone) was fixed.
@@ -517,6 +521,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.4.1  =
+The French language file is updated. BWS Panel section is updated.
 
 = V4.4.0 =
 Bug with displaying gallery on mobile device (Windows Phone) was fixed. Ability to add custom styles. Compatibility with Pagination by BestWebSoft plugin was added.
