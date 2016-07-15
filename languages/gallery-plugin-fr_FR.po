@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: gallery 4.4.0\n"
+"Project-Id-Version: gallery 4.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-27 10:23+0300\n"
-"PO-Revision-Date: 2016-06-27 10:23+0300\n"
+"POT-Creation-Date: 2016-07-15 11:18+0300\n"
+"PO-Revision-Date: 2016-07-15 11:18+0300\n"
 "Last-Translator: Luc Capronnier <lcapronnier@yahoo.com>\n"
 "Language-Team: Didier, L Capronnier <lcapronnier@yahoo.com>\n"
 "Language: fr_FR\n"
@@ -960,6 +960,96 @@ msgstr "Installer les données de démonstration"
 msgid "for an acquaintance with the possibilities of the"
 msgstr "pour une vision des possibilités de "
 
+#~ msgid "Advertisement"
+#~ msgstr "Publicité"
+
+#~ msgid "Content & Media"
+#~ msgstr "Contenu & média"
+
+#~ msgid "Management"
+#~ msgstr "Administration"
+
+#~ msgid "Security"
+#~ msgstr "Sécurité"
+
+#~ msgid "Site Stats"
+#~ msgstr "Statistiques"
+
+#~ msgid "Social"
+#~ msgstr "Social"
+
+#~ msgid "Utilities"
+#~ msgstr "Utilitaires"
+
+#~ msgid "Other"
+#~ msgstr "Autre"
+
+#~ msgid "Wrong license key"
+#~ msgstr "Clé de licence incorrecte"
+
+#~ msgid ""
+#~ "Something went wrong. Please try again later. If the error appears again, "
+#~ "please contact us"
+#~ msgstr ""
+#~ "Il est survenu une erreur. Essayer de nouveau. Si l'erreur se produit de "
+#~ "nouveau, merci de contacter <a href=http://support.bestwebsoft."
+#~ "com>BestWebSoft</a>. Nous sommes désolés pour le désagrément."
+
+#~ msgid "We are sorry for inconvenience."
+#~ msgstr "Nous sommes désolés pour le désagrément."
+
+#~ msgid ""
+#~ "This license key is bind to another website. Change it via personal "
+#~ "Client Area."
+#~ msgstr ""
+#~ "La clé de licence correspond à un autre site. Modifier là au travers de "
+#~ "votre espace client."
+
+#~ msgid "Log in"
+#~ msgstr "Connexion"
+
+#~ msgid ""
+#~ "Unfortunately, you have exceeded the number of available tries per day."
+#~ msgstr ""
+#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
+#~ "télécharger l'extension manuellement."
+
+#~ msgid ""
+#~ "Unfortunately, Your license has expired. To continue getting top-priority "
+#~ "support and plugin updates you should extend it in your"
+#~ msgstr ""
+#~ "Désoler, votre licence est terminée. Pour continuer à disposer du support "
+#~ "rapide et des mises à jour de l'extension vous devez la renouveler dans "
+#~ "votre"
+
+#~ msgid ""
+#~ "Unfortunately, the Pro licence was already installed to this domain. The "
+#~ "Pro Trial license can be installed only once."
+#~ msgstr ""
+#~ "Malheureusement la licence PRO a déjà été installée sur ce domaine. La "
+#~ "licence PRO d'évaluation peut être installée une seule fois."
+
+#~ msgid "The license key is valid."
+#~ msgstr "La clé de licence est valide."
+
+#~ msgid "Your license will expire on"
+#~ msgstr "Votre licence se termine le "
+
+#~ msgid "Congratulations! Pro Membership license is successfully activated."
+#~ msgstr ""
+#~ "Félicitations! La version PRO de cette extension a été téléchargée et "
+#~ "activée avec succès."
+
+#~ msgid ""
+#~ "Something went wrong. Try again later or upload the plugin manually. We "
+#~ "are sorry for inconvenience."
+#~ msgstr ""
+#~ "Il est survenu une erreur. Essayer de nouveau ou bien télécharger "
+#~ "l'extension manuellement.Nous sommes désolés pour le désagrément."
+
+#~ msgid "Please, enter Your license key"
+#~ msgstr "Merci de saisir votre clé de licence"
+
 #~ msgid "Not set"
 #~ msgstr "Not set"
 
@@ -1056,20 +1146,114 @@ msgstr "pour une vision des possibilités de "
 #~ msgid "Sorry, email message could not be delivered."
 #~ msgstr "Désoler, l'e-mail n'a pas pu être envoyé."
 
-#~ msgid "Need help?"
-#~ msgstr "Besoin d'aide ?"
-
-#~ msgid "Client area"
-#~ msgstr "Espace client"
-
-#~ msgid "System status"
-#~ msgstr "System status"
-
 #~ msgid "Plugins"
 #~ msgstr "Extensions"
 
 #~ msgid "Themes"
 #~ msgstr "Thèmes"
+
+#~ msgid "System status"
+#~ msgstr "System status"
+
+#~ msgid "Manage purchased licenses & subscriptions"
+#~ msgstr "Gérer les licences et les adhésions"
+
+#~ msgid "My Account"
+#~ msgstr "Mon compte"
+
+#~ msgid "Get Access to %s+ Premium Plugins"
+#~ msgstr "Accéder à plus de %s extension premiums"
+
+#~ msgid ""
+#~ "Join BestWebSoft Pro Membership today, cancel any time and use all "
+#~ "plugins on a single website %s for only %s per month."
+#~ msgstr ""
+#~ "Rejoignez le réseau PRO de BestWebSoft, arrêtez quand vous le vouler et "
+#~ "utiliser toutes les extensions sur un seul site %s pour seulement %s par "
+#~ "mois."
+
+#~ msgid "Check license key"
+#~ msgstr "Vérifier la clé de licence"
+
+#~ msgid "Enter your license key"
+#~ msgstr "Merci de saisir votre clé de licence"
+
+#~ msgid "Activate Membership"
+#~ msgstr "Activer l'adhésion"
+
+#~ msgid "Don’t have valid license key yet?"
+#~ msgstr "Vous n'avez pas encore de licence valide ?"
+
+#~ msgid "Subscribe to Pro Membership"
+#~ msgstr "Souscrire une adhésion PRO"
+
+#~ msgid "Upload Plugin"
+#~ msgstr "Charger l'extension"
+
+#~ msgid ""
+#~ "The plugin generated %d characters of <strong>unexpected output</strong> "
+#~ "during activation. If you notice &#8220;headers already sent&#8221; "
+#~ "messages, problems with syndication feeds or other issues, try "
+#~ "deactivating or removing this plugin."
+#~ msgstr ""
+#~ "Cette extension a produit %d caractères <strong>inattendus</strong> "
+#~ "durant l'activation. Si vous constatez le message &#8220;headers already "
+#~ "sent&#8221;, des problèmes avec les flux de syndication ou autres, "
+#~ "essayez de désactiver l'extension ou supprimer l'extension."
+
+#~ msgid ""
+#~ "Plugin could not be activated because it triggered a <strong>fatal error</"
+#~ "strong>."
+#~ msgstr ""
+#~ "L'extension ne peut pas être activée car une <strong>erreur fatale</"
+#~ "strong> a été détectée."
+
+#~ msgid "Plugin <strong>activated</strong>."
+#~ msgstr "Extension <strong>activée</strong>."
+
+#~ msgid "Installing Plugin"
+#~ msgstr "Extensions installées"
+
+#~ msgid "Downloading install package from"
+#~ msgstr "Télécharger le paquet d'installation depuis"
+
+#~ msgid ""
+#~ "Failed to download the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur de téléchargement de l'archive ZIP. Merci de télécharger "
+#~ "l'extension manuellement."
+
+#~ msgid "Unpacking the package"
+#~ msgstr "Décompresser le paquet"
+
+#~ msgid "Installing the plugin"
+#~ msgstr "Installer l'extension"
+
+#~ msgid "Failed to open the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
+#~ "manuellement."
+
+#~ msgid ""
+#~ "Your server does not support either ZipArchive or Phar. Please, upload "
+#~ "the plugin manually"
+#~ msgstr ""
+#~ "Votre serveur n'a pas le support du format des archives ZIP ou Phar. "
+#~ "Merci de télécharger l'extension manuellement."
+
+#~ msgid "Successfully installed the plugin"
+#~ msgstr "Extension installée avec succès"
+
+#~ msgid "UploadDir is not writable. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
+#~ "manuellement."
+
+#~ msgid "Activate Plugin"
+#~ msgstr "Activer l'extension"
+
+#~ msgid "Return to BestWebSoft Panel"
+#~ msgstr "Retourner à l'administration BestWebSoft"
 
 #~ msgid "All"
 #~ msgstr "Tous"
@@ -1077,59 +1261,56 @@ msgstr "pour une vision des possibilités de "
 #~ msgid "Installed"
 #~ msgstr "Installé"
 
-#~ msgid "Recommended"
-#~ msgstr "Recommandé"
+#~ msgid "Not Installed"
+#~ msgstr "Non installé"
 
-#~ msgid "Installed plugins"
-#~ msgstr "Extensions installées"
+#~ msgid "Filter results"
+#~ msgstr "Filtrer les résultats"
 
-#~ msgid "Activate this plugin"
-#~ msgstr "Activer cette extension"
+#~ msgid "Category"
+#~ msgstr "Catégorie"
 
-#~ msgid "Go"
-#~ msgstr "Passez"
+#~ msgid "Renew to get updates"
+#~ msgstr "Se réabonner pour avoir les mises à jour"
 
-#~ msgid "DONATE"
-#~ msgstr "Faire un don"
-
-#~ msgid "Recommended plugins"
-#~ msgstr "Extensions recommandées"
-
-#~ msgid "Try again"
-#~ msgstr "Essayer de nouveau"
-
-#~ msgid "Preview &#8220;%s&#8221;"
-#~ msgstr "Pré-visualiser &#8220;%s&#8221;"
-
-#~ msgid "Install %s"
-#~ msgstr "Installation %s"
+#~ msgid "Update to v %s"
+#~ msgstr "Mettre à jour avec la version %s"
 
 #~ msgid "Install Now"
 #~ msgstr "Installer maintenant"
 
-#~ msgid "Update to version %s"
-#~ msgstr "Mettre à jour pour la version %s"
+#~ msgid "Upgrade to Pro"
+#~ msgstr "Passer à la version PRO"
 
-#~ msgid "Update"
-#~ msgstr "Mettre à jour"
+#~ msgid "Donate"
+#~ msgstr "Don"
 
-#~ msgid "This theme is already installed and is up to date"
-#~ msgstr "Le thème est déjà en place et est à jour."
+#~ msgid "Activate this plugin"
+#~ msgstr "Activer cette extension"
 
-#~ msgid "Preview %s"
-#~ msgstr "Pré-visualiser %s"
+#~ msgid "Install this plugin"
+#~ msgstr "Installer cette extension"
 
-#~ msgid "Preview"
-#~ msgstr "Pré-visualiser"
+#~ msgid "Nothing found. Try another criteria."
+#~ msgstr "Pas de réponse. essayer d'autres critères."
 
 #~ msgid "By %s"
 #~ msgstr "Par %s"
 
-#~ msgid "Details"
-#~ msgstr "Détails"
+#~ msgid "This theme is already installed and is up to date"
+#~ msgstr "Le thème est déjà en place et est à jour."
 
 #~ msgid "Already Installed"
 #~ msgstr "Déjà installé"
+
+#~ msgid "Browse Free WordPress Themes"
+#~ msgstr "Parcourir les thèmes gratuits pour WordPress"
+
+#~ msgid "Send to support"
+#~ msgstr "Envoyer au support"
+
+#~ msgid "Send to custom email &#187;"
+#~ msgstr "Envoyer un e-mail spécifique &#187;"
 
 #~ msgid "Environment"
 #~ msgstr "Environment"
@@ -1140,11 +1321,8 @@ msgstr "pour une vision des possibilités de "
 #~ msgid "Inactive Plugins"
 #~ msgstr "Extensions inactives"
 
-#~ msgid "Send to support"
-#~ msgstr "Envoyer au support"
-
-#~ msgid "Send to custom email &#187;"
-#~ msgstr "Envoyer un e-mail spécifique &#187;"
+#~ msgid "System Status"
+#~ msgstr "Etat du système"
 
 #~ msgid "requires"
 #~ msgstr "requis"
@@ -1168,6 +1346,24 @@ msgstr "pour une vision des possibilités de "
 #~ msgstr ""
 #~ "ou plus! Nous ne garantissons pas que notre extension fonctionne "
 #~ "correctement. Merci de mettre à jour votre version de WordPress."
+
+#~ msgid "Thank you for installing"
+#~ msgstr "Merci d'avoir installer"
+
+#~ msgid "Let's get started"
+#~ msgstr "C'est parti"
+
+#~ msgid "Add New"
+#~ msgstr "Ajouter"
+
+#~ msgid "Thank you for installing plugins by BestWebSoft!"
+#~ msgstr "Merci d'avoir installé des extensions de BestWebSoft!"
+
+#~ msgid "More Details"
+#~ msgstr "Plus de détails"
+
+#~ msgid "Less Details"
+#~ msgstr "Moins de détails"
 
 #~ msgid "It’s time to upgrade your"
 #~ msgstr "C'est le moment de mettre à jour votre "
@@ -1194,22 +1390,11 @@ msgstr "pour une vision des possibilités de "
 #~ msgid "If there is something wrong about it, please contact us"
 #~ msgstr "Si vous avez des questions, merci de nous contacter"
 
+#~ msgid "Donations play an important role in supporting great projects"
+#~ msgstr "Les dons jouent un rôle important dans l'aide aux projets"
+
 #~ msgid "Check premium options on the plugin settings page!"
 #~ msgstr "Vérifier les options premium dans les paramètres de l'extension!"
-
-#~ msgid "Wrong license key"
-#~ msgstr "Clé de licence incorrecte"
-
-#~ msgid ""
-#~ "Something went wrong. Please try again later. If the error appears again, "
-#~ "please contact us"
-#~ msgstr ""
-#~ "Il est survenu une erreur. Essayer de nouveau. Si l'erreur se produit de "
-#~ "nouveau, merci de contacter <a href=http://support.bestwebsoft."
-#~ "com>BestWebSoft</a>. Nous sommes désolés pour le désagrément."
-
-#~ msgid "We are sorry for inconvenience."
-#~ msgstr "Nous sommes désolés pour le désagrément."
 
 #~ msgid "This license key is bind to another site"
 #~ msgstr "La clé de licence correspond à un autre site."
@@ -1222,56 +1407,8 @@ msgstr "pour une vision des possibilités de "
 #~ "télécharger l'extension manuellement."
 
 #~ msgid ""
-#~ "Unfortunately, Your license has expired. To continue getting top-priority "
-#~ "support and plugin updates you should extend it in your"
-#~ msgstr ""
-#~ "Désoler, votre licence est terminée. Pour continuer à disposer du support "
-#~ "rapide et des mises à jour de l'extension vous devez la renouveler dans "
-#~ "votre"
-
-#~ msgid ""
-#~ "Unfortunately, the Pro licence was already installed to this domain. The "
-#~ "Pro Trial license can be installed only once."
-#~ msgstr ""
-#~ "Malheureusement la licence PRO a déjà été installée sur ce domaine. La "
-#~ "licence PRO d'évaluation peut être installée une seule fois."
-
-#~ msgid ""
-#~ "Failed to download the zip archive. Please, upload the plugin manually"
-#~ msgstr ""
-#~ "Erreur de téléchargement de l'archive ZIP. Merci de télécharger "
-#~ "l'extension manuellement."
-
-#~ msgid "Failed to open the zip archive. Please, upload the plugin manually"
-#~ msgstr ""
-#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
-#~ "manuellement."
-
-#~ msgid ""
-#~ "Your server does not support either ZipArchive or Phar. Please, upload "
-#~ "the plugin manually"
-#~ msgstr ""
-#~ "Votre serveur n'a pas le support du format des archives ZIP ou Phar. "
-#~ "Merci de télécharger l'extension manuellement."
-
-#~ msgid "UploadDir is not writable. Please, upload the plugin manually"
-#~ msgstr ""
-#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
-#~ "manuellement."
-
-#~ msgid ""
-#~ "Something went wrong. Try again later or upload the plugin manually. We "
-#~ "are sorry for inconvenience."
-#~ msgstr ""
-#~ "Il est survenu une erreur. Essayer de nouveau ou bien télécharger "
-#~ "l'extension manuellement.Nous sommes désolés pour le désagrément."
-
-#~ msgid "Please, enter Your license key"
-#~ msgstr "Merci de saisir votre clé de licence"
-
-#~ msgid ""
-#~ "Congratulations! The Pro version of the plugin is successfully download "
-#~ "and activated."
+#~ "Congratulations! Pro version of the plugin is successfully installed and "
+#~ "activated."
 #~ msgstr ""
 #~ "Félicitations! La version PRO de cette extension a été téléchargée et "
 #~ "activée avec succès."
@@ -1288,24 +1425,19 @@ msgstr "pour une vision des possibilités de "
 #~ msgid "Show Pro features"
 #~ msgstr "Voir les fonctionnalités PRO"
 
-#~ msgid "You can download and activate"
-#~ msgstr "Vous pouvez la télécharger et l'activer"
+#~ msgid "Enter your license key to install and activate"
+#~ msgstr "Saisir votre clé de licence pour installer et activer"
 
-#~ msgid "version of this plugin by entering Your license key."
-#~ msgstr "version de cette extension en donnant votre clé de licence."
+#~ msgid "version of the plugin."
+#~ msgstr "version de l'extension."
 
-#~ msgid ""
-#~ "You can find your license key on your personal page Client area, by "
-#~ "clicking on the link"
+#~ msgid "License key can be found in the"
+#~ msgstr "La clé de licence peut être trouvée dans "
+
+#~ msgid "(your username is the email address specified during the purchase)."
 #~ msgstr ""
-#~ "Vous pouvez trouver votre clé de licence sur votre page personnelle dans "
-#~ "la zone cliente en cliquant sur le lien"
-
-#~ msgid ""
-#~ "(your username is the email you specify when purchasing the product)."
-#~ msgstr ""
-#~ "(votre nom d'utilisateur est l'adresse e-mail que vous avez donné lors de "
-#~ "l'achat de l'extension)."
+#~ "(votre nom d'utilisateur est l'adresse e-mail que vous avez donnée lors "
+#~ "de l'achat de l'extension)."
 
 #~ msgid "Start Your Free %s-Day Trial Now"
 #~ msgstr "Débuter votre licence d'évaluation gratuite de %s jours"
@@ -1320,12 +1452,6 @@ msgstr "pour une vision des possibilités de "
 #~ msgstr ""
 #~ " Après vous pouvez activer cette extension en donnant votre clé de "
 #~ "licence."
-
-#~ msgid ""
-#~ "Unfortunately, you have exceeded the number of available tries per day."
-#~ msgstr ""
-#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
-#~ "télécharger l'extension manuellement."
 
 #~ msgid ""
 #~ "Congratulations! The Pro license of the plugin is successfully activated."
@@ -1362,12 +1488,6 @@ msgstr "pour une vision des possibilités de "
 #~ msgid "The Pro Trial license key is valid."
 #~ msgstr "La clé de licence d'évaluation est valide."
 
-#~ msgid "The license key is valid."
-#~ msgstr "La clé de licence est valide."
-
-#~ msgid "Your license will expire on"
-#~ msgstr "Votre licence se termine le "
-
 #~ msgid "Please, enter your license key"
 #~ msgstr "Merci de saisir votre clé de licence"
 
@@ -1382,15 +1502,12 @@ msgstr "pour une vision des possibilités de "
 #~ "web."
 
 #~ msgid ""
-#~ "(your username is the email you specify when purchasing the product). If "
+#~ "(your username is the email address specified during the purchase). If "
 #~ "necessary, please submit \"Lost your password?\" request."
 #~ msgstr ""
-#~ "(votre nom d'utilisateur est l'adresse e-mail que vous avez donné lors de "
-#~ "l'achat de l'extension). Si nécessaire, utilisez la fonction de demande "
-#~ "de mot de passe perdu."
-
-#~ msgid "Check license key"
-#~ msgstr "Vérifier la clé de licence"
+#~ "(votre nom d'utilisateur est l'adresse e-mail que vous avez donnée lors "
+#~ "de l'achat de l'extension). Si nécessaire, utilisez la fonction de "
+#~ "demande de mot de passe perdu."
 
 #~ msgid "WARNING: Illegal use notification"
 #~ msgstr "AVERTISSEMENT : Notification d'utilisation abusive"
@@ -1440,18 +1557,6 @@ msgstr "pour une vision des possibilités de "
 #~ msgid "and you won't be granted TOP-PRIORITY SUPPORT or UPDATES."
 #~ msgstr "et vous ne disposerez plus du support rapide et des mises à jour."
 
-#~ msgid "Thank you for installing"
-#~ msgstr "Merci d'avoir installer"
-
-#~ msgid "Let's get started"
-#~ msgstr "C'est parti"
-
-#~ msgid "Configure Settings"
-#~ msgstr "Modifier les paramètres"
-
-#~ msgid "Add New"
-#~ msgstr "Ajouter"
-
 #~ msgid "Thank you for choosing"
 #~ msgstr "Merci d'avoir choisi"
 
@@ -1477,6 +1582,9 @@ msgstr "pour une vision des possibilités de "
 #~ msgstr ""
 #~ "Vous pouvez toujours consulter les options premium en cliquant sur \"Voir "
 #~ "les fonctionnalités PRO\" dans l'onglet \"Passer PRO\""
+
+#~ msgid "Add BWS Shortcode"
+#~ msgstr "Ajouter le code court de l'extension BWS"
 
 #~ msgid "Add BWS Plugins Shortcode"
 #~ msgstr "Ajouter le code court de l'extension BWS"
@@ -1528,15 +1636,25 @@ msgstr "pour une vision des possibilités de "
 #~ msgstr ""
 #~ "Vous n'avez pas assez de droits pour modifier l'extension pour ce site."
 
-#~ msgid "File edited successfully."
-#~ msgstr "Fichier modifié avec succès."
+#~ msgid "File %s edited successfully."
+#~ msgstr "Fichier %s modifié avec succès."
 
 #~ msgid "Not enough permissions to create or update the file"
 #~ msgstr "Pas assez de droits pour créer ou modifier le fichier"
 
+#~ msgid "Not enough permissions to create the file"
+#~ msgstr "Pas assez de droits pour créer le fichier"
+
 #~ msgid "These styles will be added to the header on all pages of your site."
 #~ msgstr ""
 #~ "Ces styles seront ajoutés aux entêtes sur tous les pages de votre site."
+
+#~ msgid ""
+#~ "These PHP code will be hooked to the %s action and will be printed on "
+#~ "front end only."
+#~ msgstr ""
+#~ "Ce code PHP sera rattaché à l'action %s et sera affiché uniquement sur la "
+#~ "partie publique."
 
 #~ msgid "Editing"
 #~ msgstr "Modifier"
@@ -1544,15 +1662,70 @@ msgstr "pour une vision des possibilités de "
 #~ msgid "Browsing"
 #~ msgstr "Parcourir"
 
-#~ msgid "Learn more about CSS"
-#~ msgstr "En savoir plus sur les CSS"
+#~ msgid "Learn more about %s"
+#~ msgstr "En savoir plus sur %s"
 
 #~ msgid ""
-#~ "You need to make this file writable before you can save your changes. See "
-#~ "%s the Codex %s for more information."
+#~ "You need to make this files writable before you can save your changes. "
+#~ "See %s the Codex %s for more information."
 #~ msgstr ""
 #~ "Vous devez rendre ce fichier modifiable avant de pouvoir enregistrer vos "
 #~ "modifications. Regarder %s du Codex %s pour plus d'informations."
+
+#~ msgid "Need help?"
+#~ msgstr "Besoin d'aide ?"
+
+#~ msgid "Client area"
+#~ msgstr "Espace client"
+
+#~ msgid "Recommended"
+#~ msgstr "Recommandé"
+
+#~ msgid "Installed plugins"
+#~ msgstr "Extensions installées"
+
+#~ msgid "Go"
+#~ msgstr "Passez"
+
+#~ msgid "DONATE"
+#~ msgstr "Faire un don"
+
+#~ msgid "Recommended plugins"
+#~ msgstr "Extensions recommandées"
+
+#~ msgid "Try again"
+#~ msgstr "Essayer de nouveau"
+
+#~ msgid "Preview &#8220;%s&#8221;"
+#~ msgstr "Pré-visualiser &#8220;%s&#8221;"
+
+#~ msgid "Install %s"
+#~ msgstr "Installation %s"
+
+#~ msgid "Update"
+#~ msgstr "Mettre à jour"
+
+#~ msgid "Preview %s"
+#~ msgstr "Pré-visualiser %s"
+
+#~ msgid "Preview"
+#~ msgstr "Pré-visualiser"
+
+#~ msgid "You can download and activate"
+#~ msgstr "Vous pouvez la télécharger et l'activer"
+
+#~ msgid "version of this plugin by entering Your license key."
+#~ msgstr "version de cette extension en donnant votre clé de licence."
+
+#~ msgid ""
+#~ "You can find your license key on your personal page Client area, by "
+#~ "clicking on the link"
+#~ msgstr ""
+#~ "Vous pouvez trouver votre clé de licence sur votre page personnelle dans "
+#~ "la zone cliente en cliquant sur le lien"
+
+#~ msgid "Configure Settings"
+#~ msgstr "Modifier les paramètres"
 
 #~ msgid "Width (in px)"
 #~ msgstr "Largeur (en pixels)"
@@ -1586,9 +1759,6 @@ msgstr "pour une vision des possibilités de "
 
 #~ msgid "Find a Gallery"
 #~ msgstr "Trouver une galerie"
-
-#~ msgid "Upload File"
-#~ msgstr "Envoi de fichier"
 
 #~ msgid "Choose a media file that will be attached"
 #~ msgstr "Choisissez une fichier qui sera attaché"
@@ -1758,9 +1928,6 @@ msgstr "pour une vision des possibilités de "
 
 #~ msgid "Free themes"
 #~ msgstr "Thèmes gratuits"
-
-#~ msgid "Activated theme"
-#~ msgstr "Thème actif"
 
 #~ msgid "Customize &#8220;%s&#8221;"
 #~ msgstr "Personnaliser &#8220;%s&#8221;"

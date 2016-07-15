@@ -4,11 +4,11 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 3.8
 Tested up to: 4.5.3
-Stable tag: 4.4.1
+Stable tag: 4.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows you to implement a gallery page into your website.
+Add beautiful galleries, albums & images to your Wordpress website in few clicks.
 
 == Description ==
 
@@ -85,7 +85,7 @@ We can fix some things for free for the users who provide translation of our plu
 1. Upload the `gallery-plugin` folder to the directory `/wp-content/plugins/`.
 2. Activate the plugin using the 'Plugins' menu in WordPress.
 3. Please check if you have the template file `gallery-template.php` as well as the template `gallery-single-template.php` in your theme folder. If you can't find these files, then just copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to your theme directory.
-4. You can adjust the necessary settings using your WordPress admin panel in "BWS Plugins" > "Gallery".
+4. You can adjust the necessary settings using your WordPress admin panel in "BWS Panel" > "Gallery".
 
 <a href="https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/edit?pli=1" target="_blank">View a Step-by-step Instruction on Gallery by BestWebSoft Installation</a>.
 
@@ -161,6 +161,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 7. Gallery Settings page in the admin panel.
 
 == Changelog ==
+
+= V4.4.2 - 15.07.2016 =
+* Update : BWS panel section was updated.
+* Update : The French language file is updated.
 
 = V4.4.1 - 27.06.2016 =
 * Update : The French language file is updated.
@@ -521,6 +525,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * The file uploader is added to the Galleries page in admin section. 
 
 == Upgrade Notice ==
+
+= V4.2.2 =
+Usability improved.
 
 = V4.4.1  =
 The French language file is updated. BWS Panel section is updated.

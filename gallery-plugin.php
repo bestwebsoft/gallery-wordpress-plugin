@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Gallery by BestWebSoft
-Plugin URI:  http://bestwebsoft.com/products/
-Description: This plugin allows you to implement gallery page into web site.
+Plugin URI:  http://bestwebsoft.com/products/gallery/
+Description: Add beautiful galleries, albums & images to your Wordpress website in few clicks.
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.4.1
+Version: 4.4.2
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
