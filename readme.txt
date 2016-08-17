@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 3.8
-Tested up to: 4.5.3
-Stable tag: 4.4.2
+Tested up to: 4.6
+Stable tag: 4.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,73 +12,107 @@ Add beautiful galleries, albums & images to your Wordpress website in few clicks
 
 == Description ==
 
-Gallery by BestWebSoft makes it possible to implement as many galleries as you want into your website. You can add multiple pictures and description for each gallery, show them all at one page, view each one separately. Moreover, you can upload HQ images. Regular updates and simplicity of usage along with efficient functionality make it a perfect choice for your site to have an appealing look. 
-There is also a premium version of the plugin with more useful features available.
+The best responsive gallery plugin for your Wordpress website. Create amazing galleries in few clicks. Add an unlimited number of images to your gallery, create albums, add comments, change appearance and much more.
+
+[View Demo](http://bestwebsoft.com/demo-for-gallery-pro/)
 
 http://www.youtube.com/watch?v=aydaTdOpaRM
 
-<a href="http://www.youtube.com/watch?v=3u-Ov-HxZ7U" target="_blank">Gallery by BestWebSoft Video instruction on Installation</a>
+= Free Features =
 
-<a href="http://www.youtube.com/watch?v=-P9o6-APlv0" target="_blank">Gallery by BestWebSoft Video instruction "How to add a gallery"</a>
+* Fully Responsive
+* Add unlimited:
+	* Albums to gallery
+	* Images to album
+* Change image for album cover and its dimensions
+* Change sorting order for images
+* Install/delete demo data
+* Slideshow and full-size image displaying
+* Change border width and color
+* Add:
+	* Any image file format
+	* Comments to galleries
+	* Images from WordPress media library
+	* Descriptions to each album
+* Install [Gallery Categories](http://bestwebsoft.com/products/gallery-categories/) to organize your content
+* Add custom code via plugin settings page
+* Compatible with latest WordPress version
+* Incredibly simple settings for fast setup without modifying code
+* Detailed step-by-step documentation and videos
+* Multilingual (10+ languages) and RTL ready
 
-<a href="http://wordpress.org/plugins/gallery-plugin/faq/" target="_blank">Gallery by BestWebSoft FAQ</a>
+> **Pro Features**
+>
+> All features from Free version included plus:
+>
+> * Change gallery layout:
+> 	* Grid
+> 	* Masonry
+> * Set:
+> 	* Lightbox image size
+> 	* Background color and the lightbox transparency	 
+> 	* Gallery item slug	
+> * Image crop position
+> 	* Horizontal
+> 	* Vertical
+> * Add lightbox helper (button or thumbnail)
+> * Select ‘self’/‘blank’ for external URLs
+> * Show:
+> 	* Lightbox image description
+> 	* Social sharing buttons (Facebook, Twitter, Google Plus One, Pinterest)	
+> * Add a button with URL to the lightbox	 
+> * Single gallery pagination	 
+> * Сonfigure all subsites on the network
+> * Get answer to your support question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+>
+> [Upgrade to Pro Now](http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c)
 
-<a href="http://support.bestwebsoft.com" target="_blank">Gallery by BestWebSoft Support</a>
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
 
-<a href="http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c" target="_blank">Upgrade to Gallery Pro by BestWebSoft</a>, <a href="http://bestwebsoft.com/demo-for-gallery-pro/" target="_blank">View Demo of Gallery Pro by BestWebSoft</a>
+= Documentation & Videos =
 
-= Features =
+* [[Doc] How to Add](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
+* [[Doc] Installation](https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/)
+* [[Doc] Trial License Installation](https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/)
+* [[Doc] Purchase, Installation & Configuration](https://docs.google.com/document/d/1ygAuT1U0k-zM4e3uirlTdpKeJZSTLaSufnqkeOWJn3Q/)
+* [[Video] Installation Instruction](https://www.youtube.com/watch?v=3u-Ov-HxZ7U)
+* [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=KAbiac-iORw)
+* [[Video] How to Add](http://www.youtube.com/watch?v=-P9o6-APlv0)
 
-* Create any amount of albums in the gallery.
-* Upload any number of photos to each album in the gallery.
-* Add description to each album.
-* Set a featured image as an album cover.
-* Add a caption and alt tag to each photo in the album.
-* Change the size of album cover thumbnails and photos in the album. 
-* View pictures as a slide show and in a full size.
-* Add Single Gallery to your page or post using a shortcode.
-* Choose a number of pictures to display in one row in the gallery album.
-* Set sorting order for images.
-* Add comments to a Gallery.
-* Install (and delete) demo data. 
-* Add images from WordPress media library.
+= Help & Support =
 
-If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
-
-= Recommended Plugins =
-
-The author of the Gallery also recommends the following plugins:
-
-* <a href="http://wordpress.org/plugins/gallery-categories/">Gallery Categories</a> - This plugin is an exclusive add-on to the Gallery Plugin. It allows creating different categories of galleries on your site. This way, you could organize the galleries on your website, which makes navigating through your content a whole lot easier.
-* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
 
 = Translation =
 
 * Brazilian Portuguese (pt_BR) (thanks to DJIO, www.djio.com.br)
 * Bulgarian (bg_BG) (thanks to Petya)
-* Chinese (zh_CN) (thanks to <a href="mailto:mibcxb@gmail.com">Xiaobo Chen</a>)
-* Czech (cs_CZ) (thanks to <a href="mailto:lagya@me.com">Lagya</a>)
-* Dutch (nl_NL) (thanks to <a href="mailto:j.goessens@gmail.com">J Goessens</a>)
-* French (fr_FR) (thanks to Didier, <a href="mailto:lcapronnier@yahoo.com">L Capronnier</a>)
-* German (de_DE) (thanks to Thomas Bludau, <a href="mailto:info@ahoidesign.de">Jonas Seemann</a>)
+* Chinese (zh_CN) (thanks to [Xiaobo Chen](mailto:mibcxb@gmail.com))
+* Czech (cs_CZ) (thanks to [Lagya](mailto:lagya@me.com))
+* Dutch (nl_NL) (thanks to [J Goessens](mailto:j.goessens@gmail.com))
+* French (fr_FR) (thanks to Didier, [L Capronnier](mailto:lcapronnier@yahoo.com))
+* German (de_DE) (thanks to Thomas Bludau, [Jonas Seemann](mailto:info@ahoidesign.de))
 * Russian (ru_RU)
-* Serbian (sr_RS) (thanks to <a href="mailto:andrijanan@webhostinggeeks.com">Andrijana Nikolic</a> www.webhostinggeeks.com )
-* Slovak (sk_SK) (thanks to <a href="mailto:ja@michalkralik.sk">Michal Kralik</a>)
-* Slovenian (sl_SI) (thanks to <a href="mailto:tilen@divided.si">Tilen</a>)
-* Spanish (es_ES) (thanks to <a href="mailto:climia@climia.es">Carlos Limia</a>)
-* Turkish (tr) (thanks to <a href="mailto:ce.demirbilek@gmail.com">Ismail Demirbilek</a>)
+* Serbian (sr_RS) (thanks to [Andrijana Nikolic](mailto:andrijanan@webhostinggeeks.com) www.webhostinggeeks.com )
+* Slovak (sk_SK) (thanks to [Michal Kralik](mailto:ja@michalkralik.sk))
+* Slovenian (sl_SI) (thanks to [Tilen](mailto:tilen@divided.si))
+* Spanish (es_ES) (thanks to [Carlos Limia](mailto:climia@climia.es))
+* Turkish (tr) (thanks to [Ismail Demirbilek](mailto:ce.demirbilek@gmail.com))
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
 
-= Technical support =
+= Recommended Plugins =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
+* [Gallery Categories](http://bestwebsoft.com/products/gallery-categories/) - Add unlimited gallery categories. Organize images to make the navigation through content easier.
+* [Updater](http://bestwebsoft.com/products/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
+* [Re-attacher](http://bestwebsoft.com/products/re-attacher/) - Attach, unattach and re-attach media files quickly to WordPress posts and pages.
 
-If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
-We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+= Donate =
+
+Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
+
+[Donate Now](http://bestwebsoft.com/donate/)
 
 == Installation ==
 
@@ -86,14 +120,6 @@ We can fix some things for free for the users who provide translation of our plu
 2. Activate the plugin using the 'Plugins' menu in WordPress.
 3. Please check if you have the template file `gallery-template.php` as well as the template `gallery-single-template.php` in your theme folder. If you can't find these files, then just copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to your theme directory.
 4. You can adjust the necessary settings using your WordPress admin panel in "BWS Panel" > "Gallery".
-
-<a href="https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/edit?pli=1" target="_blank">View a Step-by-step Instruction on Gallery by BestWebSoft Installation</a>.
-
-http://www.youtube.com/watch?v=mivcWwfRVmI
-
-<a href="https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/edit?pli=1" target="_blank">View a Step-by-step Instruction "How to add a Gallery"</a>.
-
-http://www.youtube.com/watch?v=-P9o6-APlv0
 
 == Frequently Asked Questions ==
 
@@ -108,7 +134,7 @@ http://www.youtube.com/watch?v=-P9o6-APlv0
 2. Add or Upload pictures via 'Add Media' button. 
 3. Save the page.
 
-<a href="https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/edit?pli=1" target="_blank">View a Step-by-step Instruction "How to add a Gallery"</a>
+[View a Step-by-step Instruction "How to add a Gallery"](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
 
 = I'm getting the following error: "Fatal error: Call to undefined function get_post_thumbnail_id()". What should I do? =
 
@@ -143,12 +169,12 @@ and add (for the themes Twenty Eleven or Twenty Ten):
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
 
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instruction on System Status</a>
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
 
 == Screenshots ==
 
@@ -161,6 +187,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 7. Gallery Settings page in the admin panel.
 
 == Changelog ==
+
+= V4.4.3 - 17.08.2016 =
+* Update : All functionality for WordPress 4.6 was updated.
 
 = V4.4.2 - 15.07.2016 =
 * Update : BWS panel section was updated.
@@ -250,16 +279,16 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 = V4.2.3 - 19.09.2014 =
 * Update : We updated all functionality for wordpress 4.0.
-* Budfix : Social buttons duplicating was fixed.
+* Bugfix : Social buttons duplicating was fixed.
 
 = V4.2.2 - 07.08.2014 =
-* Budfix : Security Exploit was fixed.
+* Bugfix : Security Exploit was fixed.
 * Update : The French language file is updated.
 
 = V4.2.1 - 11.07.2014 =
-* Budfix : We fixed the bug of htmlspecialchars in image metadata.
-* Budfix : We fixed the bug of displaying sidebar in Twenty Fourteen theme.
-* Budfix : The bug related to editing input fields of images in the admin panel on mobile devices was fixed.
+* Bugfix : We fixed the bug of htmlspecialchars in image metadata.
+* Bugfix : We fixed the bug of displaying sidebar in Twenty Fourteen theme.
+* Bugfix : The bug related to editing input fields of images in the admin panel on mobile devices was fixed.
 
 = V4.2.0 - 15.05.2014 =
 * Update : We updated all functionality for wordpress 3.9.1
@@ -274,11 +303,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 = V4.1.7 - 31.03.2014 =
 * Update : Fancybox is updated.
-* Budfix : We fixed the bug of navigation when Gallery Template is a static front page.
+* Bugfix : We fixed the bug of navigation when Gallery Template is a static front page.
 
 = V4.1.6 - 05.03.2014 =
-* Budfix : Plugin optimization is done.
-* Budfix : Gallery Template is updated.
+* Bugfix : Plugin optimization is done.
+* Bugfix : Gallery Template is updated.
 * Update : The French language file is updated.
 * NEW : Spanish language file are added to the plugin.
 
@@ -305,8 +334,8 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to update images after changing gallery image size.
 
 = V4.1.0 - 6.12.2013 =
-* NEW : A notice when changing settings on the plugin's settings page was added. 
-* NEW : Ability to use shortcode in a text-widget. 
+* NEW : A notice when changing settings on the plugin's settings page was added.
+* NEW : Ability to use shortcode in a text-widget.
 * Bugfix : We fixed the bug of adding gallery to the search.
 
 = V4.0.9 - 29.11.2013 =
@@ -317,10 +346,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : BWS plugins section is updated.
 
 = V4.0.7 - 15.11.2013 =
-* Bugfix : We fixed the bug of image count for lightbox when added multiple galleries on the one page. 
+* Bugfix : We fixed the bug of image count for lightbox when added multiple galleries on the one page.
 
 = V4.0.6 - 8.11.2013 =
-* Update : The French language file is updated. 
+* Update : The French language file is updated.
 
 = V4.0.5 - 1.11.2013 =
 * NEW : Add checking installed wordpress version.
@@ -341,17 +370,17 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : The Brazilian Portuguese language file is updated.
 
 = V4.0.0 - 24.09.2013 =
-* Update : The Ukrainian language file is updated. 
+* Update : The Ukrainian language file is updated.
 
 = V3.9.9 - 13.09.2013 =
-* Update : The French language file is updated. 
+* Update : The French language file is updated.
 * Update : We updated all functionality for wordpress 3.6.1.
 
 = V3.9.8 - 04.09.2013 =
 * Update : Function for displaying BWS plugins section placed in a separate file and has own language files.
 
 = V3.9.7 - 26.08.2013 =
-* Update : The French language file is updated. 
+* Update : The French language file is updated.
 * Bugfix : We added replacing spaces in the file name when uploading.
 
 = V3.9.6 - 13.08.2013 =
@@ -375,12 +404,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : We updated all functionality for wordpress 3.5.2.
 
 = V3.9.1 - 02.07.2013 =
-* Update : The French language file is updated. 
+* Update : The French language file is updated.
 
 = V3.9 - 28.05.2013 =
-* Update : BWS plugins section is updated. 
-* Update : The French language file is updated. 
-* Bugfix : We changed using the abspath to plugin_dir_path(). 
+* Update : BWS plugins section is updated.
+* Update : The French language file is updated.
+* Bugfix : We changed using the abspath to plugin_dir_path().
 
 = V3.8.9 - 16.05.2013 =
 * Bugfix : We fixed the bug of SQL queries.
@@ -397,7 +426,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : The Chinese language file is added to the plugin.
 
 = V3.8.5 - 14.02.2013 =
-* Update : We updated th fancybox displaying for iPhone and iPad.
+* Update : We updated the fancybox displaying for iPhone and iPad.
 * Update : We updated all functionality for wordpress 3.5.1.
 
 = V3.8.4 - 25.01.2013 =
@@ -431,7 +460,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Added a shortcode for displaying short gallery type (like [print_gllr id=211 display=short])
 
 = V3.4 - 24.07.2012 =
-* Bugfix : Cross Site Request Forgery bug was fixed. 
+* Bugfix : Cross Site Request Forgery bug was fixed.
 
 = V3.3 - 12.07.2012 =
 * NEW : Brazilian Portuguese and Hebrew language files are added to the plugin.
@@ -485,7 +514,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Polish language files are added to the plugin.
 
 = V2.09 - 12.03.2012 =
-* Changed : BWS plugins section. 
+* Changed : BWS plugins section.
 
 = V2.08 - 24.02.2012 =
 * Change : Code that is used to connect styles and scripts is added to the plugin for correct SSL verification.
@@ -519,14 +548,17 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Bugfix : Button 'Sluiten' is replaced with a 'Close' button.
 
 = V1.02 - 13.10.2011 =
-* noConflict for jQuery is added.  
+* noConflict for jQuery is added.
 
 = V1.01 - 23.09.2011 =
-* The file uploader is added to the Galleries page in admin section. 
+* The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
 
-= V4.2.2 =
+= V4.4.3 =
+* The compatibility with new WordPress version updated.
+
+= V4.4.2 =
 Usability improved.
 
 = V4.4.1  =
@@ -635,7 +667,7 @@ Ability to turn on/off using single lightbox for all galleries on the one page. 
 We fixed the bug of image count for lightbox when added multiple galleries on the one page.
 
 = V4.0.6 =
-The French language file is updated. 
+The French language file is updated.
 
 = V4.0.5 =
 Add checking installed wordpress version. Activation of radio button or checkbox by clicking on its label. We updated all functionality for wordpress 3.7.1.
@@ -653,7 +685,7 @@ Added Alt tag field for each image in the gallery.
 The Brazilian Portuguese language file is updated.
 
 = V4.0.0 =
-The Ukrainian language file is updated. 
+The Ukrainian language file is updated.
 
 = V3.9.9 =
 The French language file is updated.  We updated all functionality for wordpress 3.6.1.
@@ -676,7 +708,7 @@ Added an ability to display comments on the gallery template pages. The Brazilia
 = V3.9.3 =
 Added an ability to view and send system information by mail.
 
-= V3.9.2 = 
+= V3.9.2 =
 The Chinese language file is updated. We updated all functionality for wordpress 3.5.2.
 
 = V3.9.1 =
@@ -725,7 +757,7 @@ Added function to display 'Download High resolution image' link in lightbox on g
 Lituanian language file is added to the plugin. Added drag and drop function to change the order of the output of images. Added a shortcode for displaying short gallery type (like [print_gllr id=211 display=short])
 
 = V3.4 =
-Cross Site Request Forgery bug was fixed. 
+Cross Site Request Forgery bug was fixed.
 
 = V3.3 =
 Brazilian Portuguese and Hebrew language files are added to the plugin. We updated Italian language file. We updated all functionality for wordpress 3.4.1.
@@ -770,7 +802,7 @@ The bug related with the indication of the menu item on the single page of the g
 Polish language files are added to the plugin.
 
 = V2.09 - 07.03.2012 =
-BWS plugins section has been changed. 
+BWS plugins section has been changed.
 
 = V2.08 =
 Code that is used to connect styles and scripts is added to the plugin for correct SSL verification. The bug with a style for an image block on admin page was fixed.

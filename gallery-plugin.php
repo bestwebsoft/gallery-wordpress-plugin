@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.4.2
+Version: 4.4.3
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -71,7 +71,7 @@ if ( ! function_exists ( 'gllr_init' ) ) {
 			$gllr_plugin_info = get_plugin_data( __FILE__ );
 		}
 		/* Function check if plugin is compatible with current WP version  */
-		bws_wp_min_version_check( plugin_basename( __FILE__ ), $gllr_plugin_info, '3.8', '3.5' );
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $gllr_plugin_info, '3.8' );
 
 		/* Add media button to the gallery post type */
 		if ( ( isset( $_GET['post'] ) && get_post_type( $_GET['post'] ) == 'gallery' ) || ( isset( $pagenow ) && $pagenow == 'post-new.php' && isset( $_GET['post_type'] ) && $_GET['post_type'] == 'gallery' ) ) {
@@ -93,7 +93,7 @@ if ( ! function_exists ( 'gllr_admin_init' ) ) {
 	function gllr_admin_init() {
 		global $bws_plugin_info, $gllr_plugin_info, $bws_shortcode_list;
 		/* Add variable for bws_menu */
-		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) {
+		if ( empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '79', 'version' => $gllr_plugin_info["Version"] );
 		}
 		/* Call register settings function */
