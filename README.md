@@ -1,52 +1,140 @@
 <a href="http://bestwebsoft.com/products/gallery/" target=_blank>Gallery WordPress Plugin</a>
 ========================
 
-The best responsive gallery plugin for your Wordpress website. Create amazing galleries in few clicks. Add an unlimited number of images to your gallery, create albums, add comments, change appearance and much more.
+Add beautiful galleries, albums &#38; images to your Wordpress website in few clicks.
 
 <img src="http://bestwebsoft.com/wp-content/uploads/2014/09/gallery-banner-website.jpg" />
 
-<a href="http://bestwebsoft.com/products/gallery/description/" target=_blank>Description</a> | 
-<a href="http://bestwebsoft.com/products/gallery/installation/" target=_blank>Installation</a> | 
-<a href="http://bestwebsoft.com/products/gallery/faq/" target=_blank>FAQ</a> | 
-<a href="http://bestwebsoft.com/products/gallery/screenshots/" target=_blank>Screenshots</a> | 
-<a href="http://bestwebsoft.com/products/gallery/changelog/" target=_blank>Changelog</a> | 
-<a href="http://bestwebsoft.com/products/gallery/download/" target=_blank>Download</a>
+<p>The best responsive gallery plugin for your Wordpress website. Create amazing galleries in few clicks. Add an unlimited number of images to your gallery, create albums, add comments, change appearance and much more.</p>
+
+<p><a href="http://bestwebsoft.com/demo-for-gallery-pro/">View Demo</a></p>
 
 
-Features
------------------------------
-* Fully Responsive
-* Add unlimited:
+<div class='video'></div>
 
 
-* Albums to gallery
-* Images to album
+<h4>Free Features</h4>
 
+<ul>
+<li>Fully Responsive</li>
+<li>Add unlimited:
 
-Translation
------------------------------
-* Brazilian Portuguese (pt_BR) (thanks to DJIO, www.djio.com.br)
-* Bulgarian (bg_BG) (thanks to Petya)
-* Chinese (zh_CN) (thanks to Xiaobo Chen)
-* Czech (cs_CZ) (thanks to Lagya)
-* Dutch (nl_NL) (thanks to J Goessens)
-* French (fr_FR) (thanks to Didier, L Capronnier)
-* German (de_DE) (thanks to Thomas Bludau, Jonas Seemann)
-* Russian (ru_RU)
-* Serbian (sr_RS) (thanks to Andrijana Nikolic www.webhostinggeeks.com )
-* Slovak (sk_SK) (thanks to Michal Kralik)
-* Slovenian (sl_SI) (thanks to Tilen)
-* Spanish (es_ES) (thanks to Carlos Limia)
-* Turkish (tr) (thanks to Ismail Demirbilek)
-* Ukrainian (uk)
+<ul>
+<li>Albums to gallery</li>
+<li>Images to album</li>
+</ul></li>
+<li>Change image for album cover and its dimensions</li>
+<li>Change sorting order for images</li>
+<li>Install/delete demo data</li>
+<li>Slideshow and full-size image displaying</li>
+<li>Change border width and color</li>
+<li>Add:
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+<ul>
+<li>Any image file format</li>
+<li>Comments to galleries</li>
+<li>Images from WordPress media library</li>
+<li>Descriptions to each album</li>
+</ul></li>
+<li>Install <a href="http://bestwebsoft.com/products/gallery-categories/">Gallery Categories</a> to organize your content</li>
+<li>Add custom code via plugin settings page</li>
+<li>Compatible with latest WordPress version</li>
+<li>Incredibly simple settings for fast setup without modifying code</li>
+<li>Detailed step-by-step documentation and videos</li>
+<li>Multilingual (10+ languages) and RTL ready</li>
+</ul>
 
+<blockquote>
+  <p><strong>Pro Features</strong></p>
+  
+  <p>All features from Free version included plus:</p>
+  
+  <ul>
+  <li>Change gallery layout:
+  
+  <ul>
+  <li>Grid</li>
+  <li>Masonry</li>
+  </ul></li>
+  <li>Set:
+  
+  <ul>
+  <li>Lightbox image size</li>
+  <li>Background color and the lightbox transparency     </li>
+  <li>Gallery item slug </li>
+  </ul></li>
+  <li>Image crop position
+  
+  <ul>
+  <li>Horizontal</li>
+  <li>Vertical</li>
+  </ul></li>
+  <li>Add lightbox helper (button or thumbnail)</li>
+  <li>Select &#8216;self&#8217;/&#8216;blank&#8217; for external URLs</li>
+  <li>Show:
+  
+  <ul>
+  <li>Lightbox image description</li>
+  <li>Social sharing buttons (Facebook, Twitter, Google Plus One, Pinterest)    </li>
+  </ul></li>
+  <li>Add a button with URL to the lightbox    </li>
+  <li>Single gallery pagination    </li>
+  <li>Сonfigure all subsites on the network</li>
+  <li>Get answer to your support question within one business day (<a href="http://bestwebsoft.com/support-policy/">Support Policy</a>)</li>
+  </ul>
+  
+  <p><a href="http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c">Upgrade to Pro Now</a></p>
+</blockquote>
 
-Technical support
------------------------------
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
+<p>If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
 
-If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
-We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+<h4>Documentation &#38; Videos</h4>
+
+<ul>
+<li><a href="https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/">[Doc] How to Add</a></li>
+<li><a href="https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/">[Doc] Installation</a></li>
+<li><a href="https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/">[Doc] Trial License Installation</a></li>
+<li><a href="https://docs.google.com/document/d/1ygAuT1U0k-zM4e3uirlTdpKeJZSTLaSufnqkeOWJn3Q/">[Doc] Purchase, Installation &#38; Configuration</a></li>
+<li><a href="https://www.youtube.com/watch?v=3u-Ov-HxZ7U">[Video] Installation Instruction</a></li>
+<li><a href="https://www.youtube.com/watch?v=KAbiac-iORw">[Video] Purchase, Installation, Configuration Tutorial</a></li>
+<li><a href="http://www.youtube.com/watch?v=-P9o6-APlv0">[Video] How to Add</a></li>
+</ul>
+
+<h4>Help &#38; Support</h4>
+
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8212; <a href="http://support.bestwebsoft.com/">http://support.bestwebsoft.com/</a></p>
+
+<h4>Translation</h4>
+
+<ul>
+<li>Brazilian Portuguese (pt_BR) (thanks to DJIO, <a href="http://www.djio.com.br" rel="nofollow">http://www.djio.com.br</a>)</li>
+<li>Bulgarian (bg_BG) (thanks to Petya)</li>
+<li>Chinese (zh_CN) (thanks to <a href="mailto:mibcxb@gmail.com">Xiaobo Chen</a>)</li>
+<li>Czech (cs_CZ) (thanks to <a href="mailto:lagya@me.com">Lagya</a>)</li>
+<li>Dutch (nl_NL) (thanks to <a href="mailto:j.goessens@gmail.com">J Goessens</a>)</li>
+<li>French (fr_FR) (thanks to Didier, <a href="mailto:lcapronnier@yahoo.com">L Capronnier</a>)</li>
+<li>German (de_DE) (thanks to Thomas Bludau, <a href="mailto:info@ahoidesign.de">Jonas Seemann</a>)</li>
+<li>Russian (ru_RU)</li>
+<li>Serbian (sr_RS) (thanks to <a href="mailto:andrijanan@webhostinggeeks.com">Andrijana Nikolic</a> <a href="http://www.webhostinggeeks.com" rel="nofollow">http://www.webhostinggeeks.com</a> )</li>
+<li>Slovak (sk_SK) (thanks to <a href="mailto:ja@michalkralik.sk">Michal Kralik</a>)</li>
+<li>Slovenian (sl_SI) (thanks to <a href="mailto:tilen@divided.si">Tilen</a>)</li>
+<li>Spanish (es_ES) (thanks to <a href="mailto:climia@climia.es">Carlos Limia</a>)</li>
+<li>Turkish (tr) (thanks to <a href="mailto:ce.demirbilek@gmail.com">Ismail Demirbilek</a>)</li>
+<li>Ukrainian (uk)</li>
+</ul>
+
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php">files Poedit</a>.</p>
+
+<h4>Recommended Plugins</h4>
+
+<ul>
+<li><a href="http://bestwebsoft.com/products/gallery-categories/">Gallery Categories</a> - Add unlimited gallery categories. Organize images to make the navigation through content easier.</li>
+<li><a href="http://bestwebsoft.com/products/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
+<li><a href="http://bestwebsoft.com/products/re-attacher/">Re-attacher</a> - Attach, unattach and re-attach media files quickly to WordPress posts and pages.</li>
+</ul>
+
+<h4>Donate</h4>
+
+<p>Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.</p>
+
+<p><a href="http://bestwebsoft.com/donate/">Donate Now</a></p>
