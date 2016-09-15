@@ -10,8 +10,8 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		private $bws_plugin_text_domain, $bws_plugin_prefix, $bws_plugin_page, $bws_plugin_name, $bws_plugin_basename, $bws_demo_options, $bws_demo_folder;
 
 		public function __construct( $args ) {
-			$plugin_dir_array      	= explode( '/', $args['plugin_basename'] );
-			$this->bws_plugin_basename 		= $args['plugin_basename'];			
+			$plugin_dir_array				= explode( '/', $args['plugin_basename'] );
+			$this->bws_plugin_basename 		= $args['plugin_basename'];
 			$this->bws_plugin_prefix		= $args['plugin_prefix'];
 			$this->bws_plugin_name			= $args['plugin_name'];
 			$this->bws_plugin_page			= $args['plugin_page'];
@@ -48,8 +48,8 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		 * Display page for confirmation action to install demo data
 		 * @return void
 		 */
-		function bws_demo_confirm() { 
-			if ( 'install' == $_POST['bws_handle_demo'] ) { 
+		function bws_demo_confirm() {
+			if ( 'install' == $_POST['bws_handle_demo'] ) {
 				$button_title = __( 'Yes, install demo data', $this->bws_plugin_text_domain );
 				$label        = __( 'Are you sure you want to install demo data?', $this->bws_plugin_text_domain );
 			} else {
@@ -77,7 +77,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		function bws_handle_demo_data( $install_callback = false, $remove_callback = false ) {
 			if ( isset( $_POST['bws_install_demo_confirm'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_settings_nonce_name' ) )
 				return $this->bws_install_demo_data( $install_callback );
-			elseif ( isset( $_POST['bws_remove_demo_confirm'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_settings_nonce_name' ) ) 
+			elseif ( isset( $_POST['bws_remove_demo_confirm'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_settings_nonce_name' ) )
 				return $this->bws_remove_demo_data( $remove_callback );
 			else
 				return false;
@@ -91,7 +91,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		 * @return array $message   message about the result of the query
 		 */
 		function bws_install_demo_data( $callback = false ) {
-			global $wpdb;
+			global $wpdb, $gllr_options;
 			/* get demo data*/
 			$message   = array(
 				'error'   => NULL,
@@ -110,17 +110,17 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 			$page_id = $posttype_post_id = $post_id = '';
 			/* get demo data */
 			@include_once( $this->bws_demo_folder . 'demo-data.php' );
-			$received_demo_data = bws_demo_data_array();
+			$received_demo_data = bws_demo_data_array( $gllr_options['post_type_name'] );
 
-			/* 
-			 * load demo data 
+			/*
+			 * load demo data
 			 */
 			if ( empty( $received_demo_data ) ) {
 				$message['error'] = __( 'Can not get demo data.', $this->bws_plugin_text_domain );
 			} else {
 				$demo_data = array_merge( $demo_data, $received_demo_data );
-				/* 
-				 * check if demo options already loaded 
+				/*
+				 * check if demo options already loaded
 				 */
 				if ( ! empty( $this->bws_demo_options ) ) {
 					$message['error'] = __( 'Demo options already installed.', $this->bws_plugin_text_domain );
@@ -128,16 +128,16 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				}
 
 				/*
-				 * load demo options 
+				 * load demo options
 				 */
-				if ( ! empty( $demo_data['options'] ) ) {				
-					$plugin_options = get_option( $this->bws_plugin_prefix . 'options' );	
+				if ( ! empty( $demo_data['options'] ) ) {
+					$plugin_options = get_option( $this->bws_plugin_prefix . 'options' );
 					/* remember old plugin options */
 					if ( ! empty( $plugin_options ) ) {
 						$this->bws_demo_options['options'] = $plugin_options;
 						$demo_data['options']['display_demo_notice'] = 0;
 						update_option( $this->bws_plugin_prefix . 'options', array_merge( $plugin_options, $demo_data['options'] ) );
-					}					
+					}
 				} else {
 					/* remove demo notice */
 					$plugin_options = get_option( $this->bws_plugin_prefix . 'options' );
@@ -148,13 +148,13 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				}
 
 				/*
-				 * load demo posts 
+				 * load demo posts
 				 */
 				if ( ! empty( $demo_data['posts'] ) ) {
 					$wp_upload_dir      = wp_upload_dir();
 					$attachments_folder = $this->bws_demo_folder . 'images';
 					/*
-					 * load demo terms 
+					 * load demo terms
 					 */
 					if ( ! empty( $demo_data['terms'] ) ) {
 						foreach ( $demo_data['terms'] as $taxonomy_name => $terms_values_array ) {
@@ -182,11 +182,11 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 						if ( ! empty( $term_IDs_new ) ) {
 							$this->bws_demo_options['terms'] = isset( $this->bws_demo_options['terms'] ) ? array_merge( $this->bws_demo_options['terms'], $term_IDs_new ) : $term_IDs_new;
 						}
-					}					
+					}
 
 					/*
-					 * load demo posts 
-					 */					
+					 * load demo posts
+					 */
 					foreach ( $demo_data['posts'] as $post ) {
 						if ( preg_match( '/{last_post_id}/', $post['post_content'] ) && ! empty( $post_id ) ) {
 							$post['post_content'] = preg_replace( '/{last_post_id}/', $post_id, $post['post_content'] );
@@ -204,9 +204,9 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 
 						/* add taxonomy for posttype */
 						if ( 'post' != $post['post_type'] && 'page' != $post['post_type'] && ! empty( $term_IDs ) ) {
-							foreach ( $term_IDs as $taxonomy_name => $term_array ) {							
+							foreach ( $term_IDs as $taxonomy_name => $term_array ) {
 								if ( isset( $post['terms'][ $taxonomy_name ] ) ) {
-									$selected_terms = $post['terms'][ $taxonomy_name ];									
+									$selected_terms = $post['terms'][ $taxonomy_name ];
 								} else {
 									$selected_terms = array();
 									$selected_terms[] = intval( $term_array[ array_rand( $term_array ) ] );
@@ -215,7 +215,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 								foreach ( $selected_terms as $selected_term ) {
 									if ( ! wp_set_object_terms( $post_id, $selected_term, $taxonomy_name, false ) )
 										$error ++;
-								}								
+								}
 							}
 						}
 
@@ -229,16 +229,17 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 
 							$featured_attach_id = '';
 							/*
-							 * load post attachments 
+							 * load post attachments
 							 */
 							if ( ! empty( $post['attachments_folder'] ) ) {
 								$attachments_list = @scandir( $attachments_folder . '/' . $post['attachments_folder'] );
 								if ( 2 < count( $attachments_list ) ) {
+									$k = 1;
 									foreach ( $attachments_list as $attachment ) {
 										$file = $attachments_folder . '/' . $post['attachments_folder'] . '/' . $attachment;
 										/* insert current attachment */
 										/* Check if file is image */
-										$file_data = @getimagesize( $file );
+										$file_data = ( '.' == $attachment || '..' == $attachment ) ? false : @getimagesize( $file );
 										$bws_is_image = ! ( $file_data || in_array( $file_data[2], array( 1, 2, 3 ) ) ) ? false : true;
 										if ( $bws_is_image ) {
 
@@ -247,7 +248,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 
 											if ( copy( $file, $destination ) ) { /* if attachment copied */
 
-												$attachment_data = array( 
+												$attachment_data = array(
 													'post_mime_type' => $wp_filetype['type'],
 													'post_title'     => $attachment,
 													'post_content'   => '',
@@ -273,11 +274,13 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 															add_post_meta( $attach_id, $meta_key, $meta_value );
 														}
 													}
-												} else { 
-													$error ++;																	
+													add_post_meta( $attach_id, '_gallery_order_' . $post_id, $k );
+													$k++;
+												} else {
+													$error ++;
 												}
 											} else {
-												$error ++;												
+												$error ++;
 											}
 										}
 									}
@@ -285,14 +288,14 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 							}
 
 							/*
-							 * load post attachments 
+							 * load post attachments
 							 */
 							if ( ! empty( $post['distant_attachments'] ) ) {
 								foreach ( $post['distant_attachments'] as $attachment_name ) {
 									if ( isset( $demo_data['distant_attachments_metadata'][ $attachment_name ] ) ) {
 										$data = $demo_data['distant_attachments_metadata'][ $attachment_name ];
 
-										$attachment_data = array( 
+										$attachment_data = array(
 											'post_mime_type' => $data['mime_type'],
 											'post_title'     => $data['title'],
 											'post_content'   => '',
@@ -307,7 +310,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 											/* remember attachment ID */
 											$this->bws_demo_options['distant_attachments'][ $attachment_name ] = $attach_id;
 
-											/* insert attachment metadata */										
+											/* insert attachment metadata */
 											$imagesize = @getimagesize( $data['url'] );
 											$sizes = ( isset( $data['sizes'] ) ) ? $data['sizes'] : array();
 											$attach_data = array(
@@ -315,7 +318,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 												'height' 	=> $imagesize[1],
 												'file' 		=> $data['url'],
 												'sizes' 	=> $sizes
-											);									
+											);
 
 											wp_update_attachment_metadata( $attach_id, $attach_data );
 
@@ -327,10 +330,10 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 													add_post_meta( $attach_id, $meta_key, $meta_value );
 												}
 											}
-										} else { 
+										} else {
 											$error ++;
 										}
-									} else { 
+									} else {
 										$error ++;
 									}
 								}
@@ -358,7 +361,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 					 * Save demo options
 					 */
 					add_option( $this->bws_plugin_prefix . 'demo_options', $this->bws_demo_options );
-					
+
 					if ( 0 == $error ) {
 						$message['done'] = __( 'Demo data successfully installed.', $this->bws_plugin_text_domain );
 						if ( ! empty( $posttype_post_id ) ) {
@@ -400,13 +403,14 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		 */
 		function bws_wp_update_attachment_metadata( $data, $id ) {
 			if ( ! empty( $data ) && ! empty( $this->bws_demo_options['distant_attachments'] ) && $attachment_name = array_search( $id, $this->bws_demo_options['distant_attachments'] ) ) {
+				global $gllr_options;
 				/* get demo data */
 				@include_once( $this->bws_demo_folder . 'demo-data.php' );
-				$received_demo_data = bws_demo_data_array();
+				$received_demo_data = bws_demo_data_array( $gllr_options['post_type_name'] );
 
 				if ( isset( $received_demo_data['distant_attachments_metadata'][ $attachment_name ] ) ) {
 
-					/* insert attachment metadata */										
+					/* insert attachment metadata */
 					$imagesize = @getimagesize( $received_demo_data['distant_attachments_metadata'][ $attachment_name ]['url'] );
 					$sizes = ( isset( $received_demo_data['distant_attachments_metadata'][ $attachment_name ]['sizes'] ) ) ? $received_demo_data['distant_attachments_metadata'][ $attachment_name ]['sizes'] : array();
 					$data = array(
@@ -506,7 +510,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 						if ( ! $done )
 							$error ++;
 					}
-				}				
+				}
 				if ( empty( $error ) ) {
 					$message['done']    = __( 'Demo data successfully removed.', $this->bws_plugin_text_domain );
 					$message['options'] = get_option( $this->bws_plugin_prefix . 'options' );
@@ -520,26 +524,26 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 
 		/**
 		 * Delete demo-options
-		 * @return boolean 
+		 * @return boolean
 		 */
 		function bws_delete_demo_option() {
 			$done = delete_option( $this->bws_plugin_prefix . 'demo_options' );
 			return $done;
 		}
 
-		function bws_handle_demo_notice( $show_demo_notice ) { 
+		function bws_handle_demo_notice( $show_demo_notice ) {
 
 			if ( 1 == $show_demo_notice ) {
-				global $wp_version;	
+				global $wp_version;
 
-				if ( isset( $_POST['bws_hide_demo_notice'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_demo_nonce_name' ) ) {			
+				if ( isset( $_POST['bws_hide_demo_notice'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_demo_nonce_name' ) ) {
 					$plugin_options = get_option( $this->bws_plugin_prefix . 'options' );
 					$plugin_options['display_demo_notice'] = 0;
 					update_option( $this->bws_plugin_prefix . 'options', $plugin_options );
 					return;
 				}
-				if ( ! isset( $_POST['bws_handle_demo'] ) && ! isset( $_POST['bws_install_demo_confirm'] ) ) { 
-					if ( 4.2 > $wp_version ) { 
+				if ( ! isset( $_POST['bws_handle_demo'] ) && ! isset( $_POST['bws_install_demo_confirm'] ) ) {
+					if ( 4.2 > $wp_version ) {
 						$plugin_dir_array = explode( '/', plugin_basename( __FILE__ ) ); ?>
 						<style type="text/css">
 							#bws_handle_notice_form {
@@ -547,7 +551,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 								width: 20px;
 								height: 20px;
 								margin-bottom: 0;
-							}							
+							}
 							.bws_hide_demo_notice {
 								width: 100%;
 								height: 100%;
@@ -566,7 +570,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 								float: left;
 							}
 						</style>
-					<?php } 
+					<?php }
 					if ( 4.2 <= $wp_version ) { ?>
 						<style type="text/css">
 							#bws_handle_notice_form {
@@ -589,10 +593,10 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 					</div>
 				<?php }
 			}
-		}		
+		}
 
 		/**
-		 * Generate Lorem Ipsum 
+		 * Generate Lorem Ipsum
 		 * @return   string
 		 */
 		function bws_get_lorem_ipsum() {

@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 3.8
-Tested up to: 4.6
-Stable tag: 4.4.3
+Tested up to: 4.6.1
+Stable tag: 4.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,23 +46,23 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 > All features from Free version included plus:
 >
 > * Change gallery layout:
-> 	* Grid
+> 	* Grid (default)
 > 	* Masonry
 > * Set:
 > 	* Lightbox image size
-> 	* Background color and the lightbox transparency	 
-> 	* Gallery item slug	
+> 	* Background color and the lightbox transparency
+> 	* Gallery item slug
 > * Image crop position
 > 	* Horizontal
 > 	* Vertical
 > * Add lightbox helper (button or thumbnail)
-> * Select ‘self’/‘blank’ for external URLs
+> * Select 'self'/'blank' for external URLs
 > * Show:
 > 	* Lightbox image description
-> 	* Social sharing buttons (Facebook, Twitter, Google Plus One, Pinterest)	
-> * Add a button with URL to the lightbox	 
-> * Single gallery pagination	 
-> * Сonfigure all subsites on the network
+> 	* Social sharing buttons (Facebook, Twitter, Google Plus One, Pinterest)
+> * Add a button with URL to the lightbox
+> * Single gallery pagination
+> * Configure all subsites on the network
 > * Get answer to your support question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
 >
 > [Upgrade to Pro Now](http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c)
@@ -81,7 +81,7 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <http://support.bestwebsoft.com/>
 
 = Translation =
 
@@ -131,7 +131,7 @@ Donations play an important role in supporting open-source projects. We greatly 
 = How to use the plugin? =
 
 1. Click 'Add New' in the 'Galleries' menu and fill out your page.
-2. Add or Upload pictures via 'Add Media' button. 
+2. Add or Upload pictures via 'Add Media' button.
 3. Save the page.
 
 [View a Step-by-step Instruction "How to add a Gallery"](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
@@ -187,6 +187,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 7. Gallery Settings page in the admin panel.
 
 == Changelog ==
+
+= V4.4.4 - 15.09.2016 =
+* Update : The compatibility with Pdf&Print plugin improved.
+* Update : Performance optimized.
 
 = V4.4.3 - 17.08.2016 =
 * Update : All functionality for WordPress 4.6 was updated.
@@ -554,6 +558,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.4.4 =
+* Functionality improved. Performance optimized.
 
 = V4.4.3 =
 * The compatibility with new WordPress version updated.

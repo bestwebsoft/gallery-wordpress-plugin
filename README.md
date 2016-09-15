@@ -53,15 +53,15 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
   <li>Change gallery layout:
   
   <ul>
-  <li>Grid</li>
+  <li>Grid (default)</li>
   <li>Masonry</li>
   </ul></li>
   <li>Set:
   
   <ul>
   <li>Lightbox image size</li>
-  <li>Background color and the lightbox transparency     </li>
-  <li>Gallery item slug </li>
+  <li>Background color and the lightbox transparency</li>
+  <li>Gallery item slug</li>
   </ul></li>
   <li>Image crop position
   
@@ -70,16 +70,16 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
   <li>Vertical</li>
   </ul></li>
   <li>Add lightbox helper (button or thumbnail)</li>
-  <li>Select &#8216;self&#8217;/&#8216;blank&#8217; for external URLs</li>
+  <li>Select 'self'/'blank' for external URLs</li>
   <li>Show:
   
   <ul>
   <li>Lightbox image description</li>
-  <li>Social sharing buttons (Facebook, Twitter, Google Plus One, Pinterest)    </li>
+  <li>Social sharing buttons (Facebook, Twitter, Google Plus One, Pinterest)</li>
   </ul></li>
-  <li>Add a button with URL to the lightbox    </li>
-  <li>Single gallery pagination    </li>
-  <li>Сonfigure all subsites on the network</li>
+  <li>Add a button with URL to the lightbox</li>
+  <li>Single gallery pagination</li>
+  <li>Configure all subsites on the network</li>
   <li>Get answer to your support question within one business day (<a href="http://bestwebsoft.com/support-policy/">Support Policy</a>)</li>
   </ul>
   
@@ -102,7 +102,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 
 <h4>Help &#38; Support</h4>
 
-<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8212; <a href="http://support.bestwebsoft.com/">http://support.bestwebsoft.com/</a></p>
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <a href="http://support.bestwebsoft.com/">http://support.bestwebsoft.com/</a></p>
 
 <h4>Translation</h4>
 

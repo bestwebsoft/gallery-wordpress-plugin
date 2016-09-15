@@ -5,7 +5,7 @@
  */
 
 if ( ! function_exists( 'bws_demo_data_array' ) ) {
-	function bws_demo_data_array() {
+	function bws_demo_data_array( $post_type ) {
 		$posts = array(
 			/* Page Template Gallery */
 			array(
@@ -22,7 +22,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
-				'post_type'      => 'gallery',
+				'post_type'      => $post_type,
 				'post_title'     => 'DEMO Gastronomy',
 				'post_content'   => 'Nowadays food photographing is becoming more and more popular. Today thousands of blogs are devoted to such pictures. Using our Gallery plugin you can post such images easily! For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
@@ -34,7 +34,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
-				'post_type'      => 'gallery',
+				'post_type'      => $post_type,
 				'post_title'     => 'DEMO Music',
 				'post_content'   => 'Music is an integral part of our lives. It surrounds us everywhere. Save memorable moments of the concerts and festivals and share them with your friends! Our Gallery plugin will help you with this. For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
@@ -46,7 +46,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
-				'post_type'      => 'gallery',
+				'post_type'      => $post_type,
 				'post_title'     => 'DEMO Travelling',
 				'post_content'   => 'Millions of people all over the world spend their holidays travelling. Nowadays we can also share our impressions with friends! And our Gallery plugin will help you with this. Also you can use an exclusive add-on Gallery Categories which allows you to create different categories of galleries on your site. For more information visit <a href="http://bestwebsoft.com/">Our Site</a>',
 				'post_meta'      => array(
@@ -58,7 +58,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
-				'post_type'      => 'gallery',
+				'post_type'      => $post_type,
 				'post_title'     => 'DEMO Sport',
 				'post_content'   => 'Sport is Life! And now you have a great opportunity to share your achievements with the whole world. And our Gallery plugin will help you with this. For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
@@ -70,7 +70,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'comment_status' => 'closed',
 				'ping_status'    => 'closed',
 				'post_status'    => 'publish',
-				'post_type'      => 'gallery',
+				'post_type'      => $post_type,
 				'post_title'     => 'DEMO Nature',
 				'post_content'   => 'Look for inspiration in the nature! You can admire its beauty all day long. With our Gallery plugin you can share beautiful pictures with your friends. For more information visit <a href="http://bestwebsoft.com/products/gallery/">Our Site</a>',
 				'post_meta'      => array(
