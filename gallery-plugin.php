@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.4.4
+Version: 4.4.5
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -854,7 +854,7 @@ if ( ! function_exists( 'gllr_template_pagination' ) ) {
 /* this function prints content for single gallery template */
 if ( ! function_exists( 'gllr_single_template_content' ) ) {
 	function gllr_single_template_content() {
-		global $post, $wp_query, $gllr_options;
+		global $post, $wp_query, $gllr_options, $gllr_inline_script;
 		wp_enqueue_script( 'gllr_js', plugins_url( 'js/frontend_script.js', __FILE__ ), array( 'jquery' ) );
 		$args = array(
 			'post_type'				=> $gllr_options['post_type_name'],
@@ -944,28 +944,45 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 					<?php } ?>
 				</div><!-- .gallery_box_single -->
 			<?php }
-			$download_link_title = addslashes( __( 'Download high resolution image', 'gallery-plugin' ) ); ?>
+			$download_link_title = addslashes( __( 'Download high resolution image', 'gallery-plugin' ) );
+			ob_start(); ?>
 			<script type="text/javascript">
-				( function( $ ){
-					$( document ).ready( function() {
-						$("a[rel=gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>]").fancybox( {
-							'transitionIn'			: 'elastic',
-							'transitionOut'			: 'elastic',
-							'titlePosition' 		: 'inside',
-							'speedIn'				:	500,
-							'speedOut'				:	300,
-							'titleFormat'			: function( title, currentArray, currentIndex, currentOpts ) {
-								return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#039;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery-plugin" ); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + $( currentOpts.orig ).attr('rel') + '" target="_blank"><?php echo $download_link_title; ?> </a><?php } ?>';
-							}<?php if ( $gllr_options['start_slideshow'] == 1 ) { ?>,
-							'onComplete':	function() {
-								clearTimeout( jQuery.fancybox.slider );
-								jQuery.fancybox.slider = setTimeout("jQuery.fancybox.next()",<?php echo $gllr_options['slideshow_interval']; ?>);
-							}<?php } ?>
+				( function() {
+					var gllr_onload = window.onload;
+					function gllr_fancy_init() {
+						jQuery( document ).ready( function() {
+							jQuery("a[rel=gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>]").fancybox( {
+								'transitionIn'			: 'elastic',
+								'transitionOut'			: 'elastic',
+								'titlePosition' 		: 'inside',
+								'speedIn'				:	500,
+								'speedOut'				:	300,
+								'titleFormat'			: function( title, currentArray, currentIndex, currentOpts ) {
+									return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#039;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery-plugin" ); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + jQuery( currentOpts.orig ).attr('rel') + '" download="' + jQuery( currentOpts.orig ).attr('rel').substring( jQuery( currentOpts.orig ).attr('rel').lastIndexOf('/') + 1 ) + '" target="_blank"><?php echo $download_link_title; ?> </a><?php } ?>';
+								}<?php if ( $gllr_options['start_slideshow'] == 1 ) { ?>,
+								'onComplete':	function() {
+									clearTimeout( jQuery.fancybox.slider );
+									jQuery.fancybox.slider = setTimeout("jQuery.fancybox.next()",<?php echo $gllr_options['slideshow_interval']; ?>);
+								}<?php } ?>
+							} );
 						} );
-					} );
-				} )( jQuery );
+					}
+					if ( typeof gllr_onload === 'function' ) {
+						window.onload = function() {
+							gllr_onload();
+							gllr_fancy_init();
+						}
+					} else {
+						window.onload = gllr_fancy_init;
+					}
+				} )( 0 );
 			</script>
-		<?php } else { ?>
+			<?php if ( empty( $gllr_inline_script ) ) {
+				$gllr_inline_script = ob_get_clean();
+			} else {
+				$gllr_inline_script .= ob_get_clean();
+			}
+		} else { ?>
 			<div class="gallery_box_single">
 				<p class="not_found"><?php _e( 'Sorry, nothing found.', 'gallery-plugin' ); ?></p>
 			</div><!-- .gallery_box_single -->
@@ -2259,17 +2276,26 @@ if ( ! function_exists ( 'gllr_wp_footer' ) ) {
 		if ( wp_script_is( 'gllr_js', 'enqueued' ) ) {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			if ( ! ( is_plugin_active( 'portfolio-pro/portfolio-pro.php' ) && wp_script_is( 'prtfl_front_script', 'registered' ) ) ) {
-				wp_enqueue_script( 'gllr_fancybox_mousewheel_js', plugins_url( 'fancybox/jquery.mousewheel-3.0.4.pack.js', __FILE__ ), array( 'jquery' ) );
-				wp_enqueue_script( 'gllr_fancybox_js', plugins_url( 'fancybox/jquery.fancybox-1.3.4.pack.js', __FILE__ ), array( 'jquery' ) );
+				wp_enqueue_script( 'gllr_fancybox_mousewheel_js', plugins_url( 'fancybox/jquery.mousewheel-3.0.4.pack.js', __FILE__ ), array( 'jquery' ), true );
+				wp_enqueue_script( 'gllr_fancybox_js', plugins_url( 'fancybox/jquery.fancybox-1.3.4.pack.js', __FILE__ ), array( 'jquery' ), true );
+				wp_enqueue_script( 'gllr_inline_fancybox_script', gllr_inline_fancy_script(), array( 'jquery', 'gllr_js' ), true );
 			}
+		}
+	}
+}
 
+if ( ! function_exists ( 'gllr_inline_fancy_script' ) ) {
+	function gllr_inline_fancy_script() {
+		if ( wp_script_is( 'gllr_js', 'enqueued' ) ) {
+			global $gllr_inline_script;
+			echo $gllr_inline_script;
 		}
 	}
 }
 
 if ( ! function_exists ( 'gllr_shortcode' ) ) {
 	function gllr_shortcode( $attr ) {
-		global $gllr_options;
+		global $gllr_options, $gllr_inline_script;
 		wp_enqueue_script( 'gllr_js', plugins_url( 'js/frontend_script.js', __FILE__ ), array( 'jquery' ) );
 
 		if ( isset( $_GET['print'] ) ) {
@@ -2289,7 +2315,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 			global $post, $wpdb, $wp_query;
 
 			$term = get_term( $cat_id, 'gallery_categories' );
-			if ( !empty( $term ) ) {
+			if ( ! empty( $term ) ) {
 				$old_wp_query = $wp_query;
 
 				$args = array(
@@ -2486,28 +2512,53 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 					<div class="gallery_box_single">
 						<p class="not_found"><?php _e( 'Sorry, nothing found.', 'gallery-plugin' ); ?></p>
 					</div><!-- .gallery_box_single -->
-				<?php } ?>
-				<script type="text/javascript">
-					(function($) {
-						$(document).ready( function() {
-							$( "a[rel=gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>]" ).fancybox( {
+				<?php }
+				$script_post_id = ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) ? '_' . $post->ID : '';
+				$script_download_link = ( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ) ?
+					'<a id="bws_gallery_download_link" href="\' + jQuery( currentOpts.orig ).attr( \'rel\' ) + \'"  download="\' + jQuery( currentOpts.orig ).attr(\'rel\').substring( jQuery( currentOpts.orig ).attr(\'rel\').lastIndexOf(\'/\') + 1 ) + \'" target="_blank">' . addslashes( __( "Download high resolution image", "gallery-plugin" ) ) . ' </a>'
+				:
+					'';
+				$script = "
+					<script type=\"text/javascript\">
+					( function() {
+					var gllr_onload = window.onload;
+					function gllr_fancy_init() {
+						jQuery(document).ready( function() {
+							jQuery( \"a[rel=gallery_fancybox" . $script_post_id . "]\" ).fancybox( {
 								'transitionIn'		:	'elastic',
 								'transitionOut'		:	'elastic',
 								'titlePosition' 	:	'inside',
 								'speedIn'			:	500,
 								'speedOut'			:	300,
-								'titleFormat'		:	function( title, currentArray, currentIndex, currentOpts ) {
-									return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#039;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery-plugin" ); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if( get_post_meta( $post->ID, 'gllr_download_link', true ) != '' ){?><a id="bws_gallery_download_link" href="' + $( currentOpts.orig ).attr( 'rel' ) + '" target="_blank"><?php echo addslashes( __( "Download high resolution image", "gallery-plugin" ) ); ?> </a><?php } ?>';
-								}<?php if ( 1 == $gllr_options['start_slideshow'] ) { ?>,
+								'titleFormat'		:	function( title, currentArray, currentIndex, currentOpts ) {";
+					$script .= "	return '<div id=\"fancybox-title-inside\">' + ( title.length ? '<span id=\"bws_gallery_image_title\">' + title.replace(/&/g, '&amp;').replace(/\"/g, '&quot;').replace(/'/g, '&#039;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span><br />' : '' ) + '<span id=\"bws_gallery_image_counter\">" . __( "Image", "gallery-plugin" ) . " ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div>" . $script_download_link . "';
+								}";
+					if ( 1 == $gllr_options['start_slideshow'] ) {
+						$script .= ",
 								'onComplete':	function() {
 									clearTimeout( jQuery.fancybox.slider );
-									jQuery.fancybox.slider = setTimeout( "jQuery.fancybox.next()",<?php echo $gllr_options['slideshow_interval']; ?> );
-								}<?php } ?>
-							});
+									jQuery.fancybox.slider = setTimeout( \"jQuery.fancybox.next()\"," . $gllr_options['slideshow_interval'] . " );
+								}";
+					}
+					$script .= "	});
 						});
-					})(jQuery);
-				</script>
-			<?php }
+					}
+					if ( typeof gllr_onload === 'function' ) {
+						window.onload = function() {
+							gllr_onload();
+							gllr_fancy_init();
+						}
+					} else {
+						window.onload = gllr_fancy_init;
+					}
+				})( 0 );
+				</script>";
+				if ( empty( $gllr_inline_script ) ) {
+					$gllr_inline_script = $script;
+				} else {
+					$gllr_inline_script .= $script;
+				}
+			}
 			wp_reset_query();
 			$wp_query = $old_wp_query;
 		}

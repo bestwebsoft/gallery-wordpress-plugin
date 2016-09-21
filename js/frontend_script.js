@@ -1,7 +1,7 @@
 (function($) {
 	$(document).ready( function() {
 		$( window ).resize( function() {
-			$( ".gllr_grid" ).each( function () {
+			$( ".gllr_grid:visible" ).each( function () {
 				var $gallery = $( this ),
 					gallery_wrap_width = $gallery.parent( '.gallery_box_single' ).width(),
 					$gallery_rows = $gallery.find( '.gllr_image_row' ),

@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 3.8
 Tested up to: 4.6.1
-Stable tag: 4.4.4
+Stable tag: 4.4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -187,6 +187,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 7. Gallery Settings page in the admin panel.
 
 == Changelog ==
+
+= V4.4.5 - 19.09.2016 =
+* Bugfix : The bug with displaying fancybox was fixed.
 
 = V4.4.4 - 15.09.2016 =
 * Update : The compatibility with Pdf&Print plugin improved.
@@ -558,6 +561,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.4.5 =
+* Bugs fixed.
 
 = V4.4.4 =
 * Functionality improved. Performance optimized.
