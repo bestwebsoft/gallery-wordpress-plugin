@@ -7,6 +7,8 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 
 <p>The best responsive gallery plugin for your Wordpress website. Create amazing galleries in few clicks. Add an unlimited number of images to your gallery, create albums, add comments, change appearance and much more.</p>
 
+<p>Showcase portfolio or just to show off useful images easily with gallery plugin to power up communication with your visitors, spark up your brand, and increase sales!</p>
+
 <p><a href="http://bestwebsoft.com/demo-for-gallery-pro/">View Demo</a></p>
 
 
@@ -24,7 +26,31 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>Images to album</li>
 </ul></li>
 <li>Change image for album cover and its dimensions</li>
-<li>Change sorting order for images</li>
+<li>Set sorting order for images by:
+
+<ul>
+<li>Attachment ID</li>
+<li>Image Name</li>
+<li>Date</li>
+<li>Sorting order in the Gallery</li>
+<li>Random</li>
+<li>ASC (ascending order from lowest to highest values)</li>
+<li>DESC (descending order from highest to lowest values)</li>
+</ul></li>
+<li>Set sorting order for galleries by:
+
+<ul>
+<li>Gallery ID</li>
+<li>Title</li>
+<li>Date</li>
+<li>Last modified date</li>
+<li>Comment count</li>
+<li>Sorting order</li>
+<li>Author</li>
+<li>Random</li>
+<li>ASC (ascending order from lowest to highest values)</li>
+<li>DESC (descending order from highest to lowest values)</li>
+</ul></li>
 <li>Install/delete demo data</li>
 <li>Slideshow and full-size image displaying</li>
 <li>Change border width and color</li>
@@ -36,7 +62,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>Images from WordPress media library</li>
 <li>Descriptions to each album</li>
 </ul></li>
-<li>Install <a href="http://bestwebsoft.com/products/gallery-categories/">Gallery Categories</a> to organize your content</li>
+<li>Install <a href="http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/">Gallery Categories</a> to organize your content</li>
 <li>Add custom code via plugin settings page</li>
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
@@ -56,6 +82,12 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
   <li>Grid (default)</li>
   <li>Masonry</li>
   </ul></li>
+  <li>Display image text:
+  
+  <ul>
+  <li>Under image</li>
+  <li>By mouse hover</li>
+  </ul></li>
   <li>Set:
   
   <ul>
@@ -69,21 +101,29 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
   <li>Horizontal</li>
   <li>Vertical</li>
   </ul></li>
-  <li>Add lightbox helper (button or thumbnail)</li>
-  <li>Select 'self'/'blank' for external URLs</li>
-  <li>Show:
+  <li>Add and display Like buttons:
   
   <ul>
-  <li>Lightbox image description</li>
-  <li>Social sharing buttons (Facebook, Twitter, Google Plus One, Pinterest)</li>
+  <li>Facebook</li>
+  <li>Twitter</li>
+  <li>Pinterest</li>
+  <li>Google +1</li>
   </ul></li>
+  <li>Enable lightbox helper:
+  
+  <ul>
+  <li>Button</li>
+  <li>Thumbnail</li>
+  </ul></li>
+  <li>Select 'self'/'blank' for external URLs</li>
+  <li>Add lightbox image description</li>
   <li>Add a button with URL to the lightbox</li>
   <li>Single gallery pagination</li>
   <li>Configure all subsites on the network</li>
   <li>Get answer to your support question within one business day (<a href="http://bestwebsoft.com/support-policy/">Support Policy</a>)</li>
   </ul>
   
-  <p><a href="http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c">Upgrade to Pro Now</a></p>
+  <p><a href="http://bestwebsoft.com/products/wordpress/plugins/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c">Upgrade to Pro Now</a></p>
 </blockquote>
 
 <p>If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
@@ -128,9 +168,9 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <h4>Recommended Plugins</h4>
 
 <ul>
-<li><a href="http://bestwebsoft.com/products/gallery-categories/">Gallery Categories</a> - Add unlimited gallery categories. Organize images to make the navigation through content easier.</li>
-<li><a href="http://bestwebsoft.com/products/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
-<li><a href="http://bestwebsoft.com/products/re-attacher/">Re-attacher</a> - Attach, unattach and re-attach media files quickly to WordPress posts and pages.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/">Gallery Categories</a> - Add unlimited gallery categories. Organize images to make the navigation through content easier.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/re-attacher/">Re-attacher</a> - Attach, unattach and re-attach media files quickly to WordPress posts and pages.</li>
 </ul>
 
 <h4>Donate</h4>

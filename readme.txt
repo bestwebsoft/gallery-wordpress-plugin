@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 3.8
 Tested up to: 4.6.1
-Stable tag: 4.4.5
+Stable tag: 4.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,8 @@ Add beautiful galleries, albums & images to your Wordpress website in few clicks
 == Description ==
 
 The best responsive gallery plugin for your Wordpress website. Create amazing galleries in few clicks. Add an unlimited number of images to your gallery, create albums, add comments, change appearance and much more.
+
+Showcase portfolio or just to show off useful images easily with gallery plugin to power up communication with your visitors, spark up your brand, and increase sales!
 
 [View Demo](http://bestwebsoft.com/demo-for-gallery-pro/)
 
@@ -25,7 +27,25 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 	* Albums to gallery
 	* Images to album
 * Change image for album cover and its dimensions
-* Change sorting order for images
+* Set sorting order for images by:
+	* Attachment ID
+	* Image Name
+	* Date
+	* Sorting order in the Gallery
+	* Random
+	* ASC (ascending order from lowest to highest values)
+	* DESC (descending order from highest to lowest values)
+* Set sorting order for galleries by:
+	* Gallery ID
+	* Title
+	* Date
+	* Last modified date
+	* Comment count
+	* Sorting order
+	* Author
+	* Random
+	* ASC (ascending order from lowest to highest values)
+	* DESC (descending order from highest to lowest values)
 * Install/delete demo data
 * Slideshow and full-size image displaying
 * Change border width and color
@@ -34,7 +54,7 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 	* Comments to galleries
 	* Images from WordPress media library
 	* Descriptions to each album
-* Install [Gallery Categories](http://bestwebsoft.com/products/gallery-categories/) to organize your content
+* Install [Gallery Categories](http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) to organize your content
 * Add custom code via plugin settings page
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
@@ -48,6 +68,9 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 > * Change gallery layout:
 > 	* Grid (default)
 > 	* Masonry
+> * Display image text:
+> 	* Under image
+> 	* By mouse hover
 > * Set:
 > 	* Lightbox image size
 > 	* Background color and the lightbox transparency
@@ -55,17 +78,22 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 > * Image crop position
 > 	* Horizontal
 > 	* Vertical
-> * Add lightbox helper (button or thumbnail)
+> * Add and display Like buttons:
+> 	* Facebook
+> 	* Twitter
+> 	* Pinterest
+> 	* Google +1
+> * Enable lightbox helper:
+> 	* Button
+> 	* Thumbnail
 > * Select 'self'/'blank' for external URLs
-> * Show:
-> 	* Lightbox image description
-> 	* Social sharing buttons (Facebook, Twitter, Google Plus One, Pinterest)
+> * Add lightbox image description
 > * Add a button with URL to the lightbox
 > * Single gallery pagination
 > * Configure all subsites on the network
 > * Get answer to your support question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
 >
-> [Upgrade to Pro Now](http://bestwebsoft.com/products/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c)
+> [Upgrade to Pro Now](http://bestwebsoft.com/products/wordpress/plugins/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c)
 
 If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
 
@@ -104,9 +132,9 @@ Some of these translations are not complete. We are constantly adding new featur
 
 = Recommended Plugins =
 
-* [Gallery Categories](http://bestwebsoft.com/products/gallery-categories/) - Add unlimited gallery categories. Organize images to make the navigation through content easier.
-* [Updater](http://bestwebsoft.com/products/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
-* [Re-attacher](http://bestwebsoft.com/products/re-attacher/) - Attach, unattach and re-attach media files quickly to WordPress posts and pages.
+* [Gallery Categories](http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) - Add unlimited gallery categories. Organize images to make the navigation through content easier.
+* [Updater](http://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
+* [Re-attacher](http://bestwebsoft.com/products/wordpress/plugins/re-attacher/) - Attach, unattach and re-attach media files quickly to WordPress posts and pages.
 
 = Donate =
 
@@ -187,6 +215,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 7. Gallery Settings page in the admin panel.
 
 == Changelog ==
+
+= V4.4.6 - 13.10.2016 =
+* Update : The compatibility with Pagination plugin improved.
 
 = V4.4.5 - 19.09.2016 =
 * Bugfix : The bug with displaying fancybox was fixed.
@@ -561,6 +592,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.4.6 =
+* The compatibility with new Pagination version updated.
 
 = V4.4.5 =
 * Bugs fixed.
