@@ -1,9 +1,7 @@
-<a href="http://bestwebsoft.com/products/gallery/" target=_blank>Gallery WordPress Plugin</a>
+<a href="http://bestwebsoft.com/products/wordpress/plugins/gallery/" target=_blank>Gallery WordPress Plugin</a>
 ========================
 
 Add beautiful galleries, albums &#38; images to your Wordpress website in few clicks.
-
-<img src="http://bestwebsoft.com/wp-content/uploads/2014/09/gallery-banner-website.jpg" />
 
 <p>The best responsive gallery plugin for your Wordpress website. Create amazing galleries in few clicks. Add an unlimited number of images to your gallery, create albums, add comments, change appearance and much more.</p>
 
