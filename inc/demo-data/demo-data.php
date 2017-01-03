@@ -9,13 +9,13 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 		$posts = array(
 			/* Page Template Gallery */
 			array(
-				'comment_status' => 'closed',
-				'ping_status'    => 'closed',
-				'post_status'    => 'publish',
-				'post_type'      => 'page',
-				'post_title'     => 'DEMO Galleries',
-				'post_content'   => '',
-				'page_template'  => 'gallery-template.php'
+				'comment_status' 		=> 'closed',
+				'ping_status'    		=> 'closed',
+				'post_status'    		=> 'publish',
+				'post_type'      		=> 'page',
+				'post_title'     		=> 'DEMO Galleries',
+				'post_content'   		=> '',
+				'save_to_options'		=> 'page_id_gallery_template'
 			),
 			/* Galleries */
 			array(
@@ -89,7 +89,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 			),
 		);
 
-				$attachments = array(
+		$attachments = array(
 			/* gastronomy */
 			'apple.jpg' => array(
 				'gllr_image_alt_tag' => 'Apple',
@@ -413,7 +413,7 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 		);
 		return array(
 			'posts'       => $posts,
-			'attachments' =>$attachments
+			'attachments' => $attachments
 		);
 	}
 }

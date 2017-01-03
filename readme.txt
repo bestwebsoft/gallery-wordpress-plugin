@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 3.8
-Tested up to: 4.6.1
-Stable tag: 4.4.6
+Tested up to: 4.7
+Stable tag: 4.4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 	* Albums to gallery
 	* Images to album
 * Change image for album cover and its dimensions
-* Set sorting order for images by:
+* Set default sorting order for images by:
 	* Attachment ID
 	* Image Name
 	* Date
@@ -35,7 +35,7 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 	* Random
 	* ASC (ascending order from lowest to highest values)
 	* DESC (descending order from highest to lowest values)
-* Set sorting order for galleries by:
+* Set default gallery projects sorting order by:
 	* Gallery ID
 	* Title
 	* Date
@@ -59,7 +59,7 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentation and videos
-* Multilingual (10+ languages) and RTL ready
+* Multilingual and RTL ready
 
 > **Pro Features**
 >
@@ -146,15 +146,10 @@ Donations play an important role in supporting open-source projects. We greatly 
 
 1. Upload the `gallery-plugin` folder to the directory `/wp-content/plugins/`.
 2. Activate the plugin using the 'Plugins' menu in WordPress.
-3. Please check if you have the template file `gallery-template.php` as well as the template `gallery-single-template.php` in your theme folder. If you can't find these files, then just copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to your theme directory.
+3. Click 'Add New' in the 'Galleries' menu and fill out your page.
 4. You can adjust the necessary settings using your WordPress admin panel in "BWS Panel" > "Gallery".
 
 == Frequently Asked Questions ==
-
-= I cannot view my Gallery page =
-
-1. First of all, you should create your first Gallery page and select 'Gallery' in the list of available templates (it will be used for displaying the Gallery).
-2. If you cannot find 'Gallery' in the list of available templates, then just copy it from the directory `/wp-content/plugins/gallery-plugin/template/` to your theme directory.
 
 = How to use the plugin? =
 
@@ -163,6 +158,15 @@ Donations play an important role in supporting open-source projects. We greatly 
 3. Save the page.
 
 [View a Step-by-step Instruction "How to add a Gallery"](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
+
+= How to change or override plugin templates? =
+
+Plugin template files can be found in the `/wp-content/plugins/gallery-plugin/templates/` directory.
+You can edit these files in an upgrade-safe way using overrides. Copy them into a directory with your theme named `/bws-templates`.
+
+Example: To override the single gallery template, please copy `/wp-content/plugins/gallery-plugin/templates/gallery-single-template.php` to `wp-content/themes/your-theme/bws-templates/gallery-single-template.php`.
+
+Do not edit these files in the plugin's core directly as they are overwritten during the upgrade process and any customizations will be lost.
 
 = I'm getting the following error: "Fatal error: Call to undefined function get_post_thumbnail_id()". What should I do? =
 
@@ -215,6 +219,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 7. Gallery Settings page in the admin panel.
 
 == Changelog ==
+
+= V4.4.7 - 03.01.2017 =
+* Update : Template files loading has been changed.
+* Update : The French language file is updated.
+* Update : All functionality for WordPress 4.7 was updated.
 
 = V4.4.6 - 13.10.2016 =
 * Update : The compatibility with Pagination plugin improved.
@@ -592,6 +601,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.4.7 =
+* Functionality improved.
+* The compatibility with new WordPress version updated.
 
 = V4.4.6 =
 * The compatibility with new Pagination version updated.

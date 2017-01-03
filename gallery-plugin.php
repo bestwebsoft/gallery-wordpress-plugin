@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.4.6
+Version: 4.4.7
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -28,13 +28,6 @@ License: GPLv2 or later
 */
 
 require_once( dirname( __FILE__ ) . '/inc/deprecated.php' );
-
-global $gllr_filenames, $gllr_filepath, $gllr_themepath;
-$gllr_filepath = WP_PLUGIN_DIR . '/gallery-plugin/template/';
-$gllr_themepath = get_stylesheet_directory() . '/';
-
-$gllr_filenames[]	=	'gallery-single-template.php';
-$gllr_filenames[]	=	'gallery-template.php';
 
 if ( ! function_exists( 'add_gllr_admin_menu' ) ) {
 	function add_gllr_admin_menu() {
@@ -82,6 +75,11 @@ if ( ! function_exists ( 'gllr_init' ) ) {
 		/* Call register settings function */
 		gllr_settings();
 
+		if ( ! is_admin() ) {
+			/* add template for gallery pages */
+			add_action( 'template_include', 'gllr_template_include' );
+		}
+
 		/* Add media button to the gallery post type */
 		if (
 			( isset( $_GET['post'] ) && get_post_type( $_GET['post'] ) == $gllr_options['post_type_name'] ) ||
@@ -108,8 +106,6 @@ if ( ! function_exists ( 'gllr_admin_init' ) ) {
 		if ( empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '79', 'version' => $gllr_plugin_info["Version"] );
 		}
-		/* Call register settings function */
-		gllr_settings();
 		/* add gallery to global $bws_shortcode_list  */
 		$bws_shortcode_list['gllr'] = array( 'name' => 'Gallery', 'js_function' => 'gllr_shortcode_init' );
 
@@ -121,7 +117,7 @@ if ( ! function_exists ( 'gllr_admin_init' ) ) {
 /* Register settings function */
 if ( ! function_exists( 'gllr_settings' ) ) {
 	function gllr_settings() {
-		global $gllr_options, $gllr_plugin_info, $gllr_option_defaults;
+		global $gllr_options, $gllr_plugin_info, $gllr_option_defaults, $wpdb;
 
 		$gllr_option_defaults	=	array(
 			'plugin_option_version' 					=> $gllr_plugin_info["Version"],
@@ -145,12 +141,13 @@ if ( ! function_exists( 'gllr_settings' ) ) {
 			'return_link_page'							=> 'gallery_template_url',
 			'return_link_url'							=> '',
 			'return_link_shortcode'						=> 0,
-			'rewrite_template'							=> 1,
 			'display_demo_notice'						=> 1,
 			'display_settings_notice'					=> 1,
 			'first_install'								=> strtotime( "now" ),
 			'suggest_feature_banner'					=> 1,
-			'post_type_name'							=> 'bws-gallery'
+			'post_type_name'							=> 'bws-gallery',
+			'page_id_gallery_template'					=> '',
+			'flush_rewrite_rules'						=> 0
 		);
 
 		/**
@@ -170,19 +167,43 @@ if ( ! function_exists( 'gllr_settings' ) ) {
 		$gllr_options = get_option( 'gllr_options' );
 
 		/* Array merge incase this version has added new options */
-		if ( ! isset( $gllr_options['plugin_option_version'] ) || $gllr_options['plugin_option_version'] != $gllr_plugin_info["Version"] ) {
-			if ( isset( $gllr_options['plugin_option_version'] ) && $gllr_options['plugin_option_version'] < '4.3.6' ) {
-				if ( 'menu_order' == $gllr_options['order_by'] )
-					$gllr_options['order_by'] = 'meta_value_num';
-				gllr_plugin_upgrade( false );
+		if ( $gllr_options['plugin_option_version'] != $gllr_plugin_info["Version"] ) {
+			/**
+			 * @deprecated since 4.4.7
+			 * @todo remove after 30.06.2017
+			 */
+			if ( isset( $gllr_options['plugin_option_version'] ) && $gllr_plugin_info["Version"] <= '4.4.7' ) {
+				/* get template attribute 'gallery-template.php' for pages */
+				$template_pages = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND ( post_status = 'publish' OR post_status = 'private' ) AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );
+				if ( ! empty( $template_pages ) ) {
+					$gllr_options['page_id_gallery_template'] = $template_pages;
+				}						
 			}
+			if ( isset( $gllr_options['rewrite_template'] ) ) {				
+				$themepath = get_stylesheet_directory() . '/';
+				foreach ( array( 'gallery-single-template.php', 'gallery-template.php' ) as $filename ) {
+					if ( file_exists( $themepath . $filename ) ) {
+						if ( 0 == $gllr_options['rewrite_template'] ) {
+							if ( ! is_dir( $themepath  . 'bws-templates/' ) )
+							 	@mkdir( $themepath  . 'bws-templates/', 0755 );
+							if ( rename( $themepath . $filename, $themepath . 'bws-templates/' . $filename ) ) {
+								@unlink( $themepath  . $filename );
+							}
+						} else {
+							@unlink( $themepath  . $filename );
+						}
+					}
+				}
+				unset( $gllr_options['rewrite_template'] );
+			}
+			/* deprecated (end) */
 			/* using old post type name for updated plugin version */
-			if ( ! isset( $gllr_options['post_type_name'] ) ) {
+			if ( ! isset( $gllr_options['post_type_name'] ) )
 				$gllr_options['post_type_name'] = 'gallery';
-			}
 
 			$gllr_option_defaults['display_demo_notice'] = 0;
 			$gllr_option_defaults['display_settings_notice'] = 0;
+
 			$gllr_options = array_merge( $gllr_option_defaults, $gllr_options );
 			$gllr_options['plugin_option_version'] = $gllr_plugin_info["Version"];
 
@@ -190,8 +211,6 @@ if ( ! function_exists( 'gllr_settings' ) ) {
 			$gllr_options['hide_premium_options'] = array();
 
 			update_option( 'gllr_options', $gllr_options );
-			/* update templates when updating plugin */
-			gllr_plugin_install();
 			/* registering uninstall hook */
 			if ( is_multisite() ) {
 				switch_to_blog( 1 );
@@ -239,7 +258,6 @@ if ( ! function_exists( 'gllr_include_demo_data' ) ) {
 if ( ! function_exists( 'gllr_plugin_activate' ) ) {
 	function gllr_plugin_activate() {
 		gllr_settings();
-		gllr_plugin_install();
 		/* first register CPT */
 		gllr_post_type_images();
 		/* then flush rules on activation to add custom post */
@@ -252,57 +270,6 @@ if ( ! function_exists( 'gllr_plugin_activate' ) ) {
 		} else {
 			register_uninstall_hook( __FILE__, 'gllr_plugin_uninstall' );
 		}
-	}
-}
-
-/**
- * Function to copy or update templates
- */
-if ( ! function_exists( 'gllr_plugin_install' ) ) {
-	function gllr_plugin_install() {
-		global $gllr_filenames, $gllr_filepath, $gllr_themepath, $gllr_options;
-		foreach ( $gllr_filenames as $filename ) {
-			if ( ! file_exists( $gllr_themepath . $filename ) ) {
-				$handle		=	@fopen( $gllr_filepath . $filename, "r" );
-				$contents	=	@fread( $handle, filesize( $gllr_filepath . $filename ) );
-				@fclose( $handle );
-				if ( ! ( $handle = @fopen( $gllr_themepath . $filename, 'w' ) ) )
-					return false;
-				@fwrite( $handle, $contents );
-				@fclose( $handle );
-				@chmod( $gllr_themepath . $filename, octdec( 755 ) );
-			} elseif ( ! isset( $gllr_options['rewrite_template'] ) || 1 == $gllr_options['rewrite_template'] ) {
-				$handle		=	@fopen( $gllr_themepath . $filename, "r" );
-				$contents	=	@fread( $handle, filesize( $gllr_themepath . $filename ) );
-				@fclose( $handle );
-				if ( ! ( $handle = @fopen( $gllr_themepath . $filename . '.bak', 'w' ) ) )
-					return false;
-				@fwrite( $handle, $contents );
-				@fclose( $handle );
-
-				$handle		=	@fopen( $gllr_filepath . $filename, "r" );
-				$contents	=	@fread( $handle, filesize( $gllr_filepath . $filename ) );
-				@fclose( $handle );
-				if ( ! ( $handle = @fopen( $gllr_themepath . $filename, 'w' ) ) )
-					return false;
-				@fwrite( $handle, $contents );
-				@fclose( $handle );
-				@chmod( $gllr_themepath . $filename, octdec( 755 ) );
-			}
-		}
-	}
-}
-
-if ( ! function_exists ( 'gllr_after_switch_theme' ) ) {
-	function gllr_after_switch_theme() {
-		global $gllr_filenames, $gllr_themepath;
-		$file_exists_flag = true;
-		foreach ( $gllr_filenames as $filename ) {
-			if ( ! file_exists( $gllr_themepath . $filename ) )
-				$file_exists_flag = false;
-		}
-		if ( ! $file_exists_flag )
-			gllr_plugin_install();
 	}
 }
 
@@ -344,26 +311,6 @@ if ( ! function_exists( 'gllr_plugin_upgrade' ) ) {
 	}
 }
 
-if ( ! function_exists( 'gllr_admin_error' ) ) {
-	function gllr_admin_error() {
-		global $gllr_filenames, $gllr_filepath, $gllr_themepath, $gllr_options;
-
-		$post		=	isset( $_REQUEST['post'] ) ? $_REQUEST['post'] : "" ;
-		$post_type	=	isset( $_REQUEST['post_type'] ) ? $_REQUEST['post_type'] : get_post_type( $post );
-
-		if ( $gllr_options['post_type_name'] == $post_type || ( isset( $_REQUEST['page'] ) && 'gallery-plugin.php' == $_REQUEST['page'] ) ) {
-			$file_exists_flag = true;
-			foreach ( $gllr_filenames as $filename ) {
-				if ( ! file_exists( $gllr_themepath . $filename ) )
-					$file_exists_flag = false;
-			}
-			if ( ! $file_exists_flag ) { ?>
-				<div class="error"><p><strong><?php printf( __( "The following files '%s' and '%s' were not found in the directory of your theme. Please copy them from the directory `%s` to the directory of your theme for the correct work of the Gallery plugin", 'gallery-plugin' ), 'gallery-template.php','gallery-single-template.php', '/wp-content/plugins/gallery-plugin/template/' ); ?></strong></p></div>
-			<?php }
-		}
-	}
-}
-
 /* Create post type for Gallery */
 if ( ! function_exists( 'gllr_post_type_images' ) ) {
 	function gllr_post_type_images() {
@@ -387,6 +334,7 @@ if ( ! function_exists( 'gllr_post_type_images' ) ) {
 			'exclude_from_search'	=>	true,
 			'query_var'				=>	true,
 			'rewrite' 				=>	true,
+			'menu_icon'				=> 'dashicons-format-gallery',
 			'capability_type' 		=>	'post',
 			'has_archive' 			=>	false,
 			'hierarchical' 			=>	true,
@@ -394,44 +342,12 @@ if ( ! function_exists( 'gllr_post_type_images' ) ) {
 			'register_meta_box_cb'	=>	'init_metaboxes_gallery',
 			'taxonomy'				=>	array( 'gallery_categories' )
 		) );
-	}
-}
 
-if ( ! function_exists( 'gllr_addImageAncestorToMenu' ) ) {
-	function gllr_addImageAncestorToMenu( $classes ) {
-		global $gllr_options;
-
-		if ( is_singular( $gllr_options['post_type_name'] ) ) {
-			global $wpdb, $post;
-
-			if ( empty( $post->ancestors ) ) {
-				$parent_id = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE `meta_key` = '_wp_page_template' AND `meta_value` = 'gallery-template.php' AND `post_status` = 'publish' AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );
-				while ( $parent_id ) {
-					$page = get_page( $parent_id );
-					if ( 0 < $page->post_parent )
-						$parent_id  = $page->post_parent;
-					else
-						break;
-				}
-				wp_reset_query();
-				if ( empty( $parent_id ) )
-					return $classes;
-				$post_ancestors = array( $parent_id );
-			} else {
-				$post_ancestors = $post->ancestors;
-			}
-
-			$menuItems = $wpdb->get_col( "SELECT DISTINCT `post_id` FROM $wpdb->postmeta WHERE `meta_key` = '_menu_item_object_id' AND `meta_value` IN (" . implode( ',', $post_ancestors ) . ")" );
-
-			if ( is_array( $menuItems ) ) {
-				foreach ( $menuItems as $menuItem ) {
-					if ( in_array( 'menu-item-' . $menuItem, $classes ) ) {
-						$classes[] = 'current-page-ancestor';
-					}
-				}
-			}
+		if ( isset( $gllr_options["flush_rewrite_rules"] ) && $gllr_options["flush_rewrite_rules"] == 1 ) {
+			flush_rewrite_rules();
+			$gllr_options["flush_rewrite_rules"] = 0;
+			update_option( 'gllr_options', $gllr_options );
 		}
-		return $classes;
 	}
 }
 
@@ -581,14 +497,6 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 		} else {
 			delete_post_meta( $post_id, 'gllr_download_link' );
 		}
-		/* flush rules if the page with gallery-template is saved */
-		if ( isset( $post->post_type ) && $post->post_type == 'page' ) {
-			$post_meta_value = $wpdb->get_var( "SELECT $wpdb->postmeta.meta_value FROM $wpdb->postmeta, $wpdb->posts WHERE meta_key = '_wp_page_template' AND ( post_status = 'publish' OR post_status = 'private' ) AND $wpdb->posts.ID = $wpdb->postmeta.post_id AND $wpdb->posts.ID = $post_id" );
-			if ( 'gallery-template.php' == $post_meta_value ) {
-				/* update rewrite_rules */
-				flush_rewrite_rules();
-			}
-		}
 	}
 }
 
@@ -597,20 +505,21 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
  */
 if ( ! function_exists( 'gllr_custom_permalinks' ) ) {
 	function gllr_custom_permalinks( $rules ) {
-		global $wpdb, $gllr_options;
+		global $gllr_options;
 		$newrules = array();
-		$parents = $wpdb->get_col( "SELECT $wpdb->posts.post_name FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND ( post_status = 'publish' OR post_status = 'private' ) AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );
-		if ( ! empty( $parents ) ) {
-			/* loop through all pages with gallery-template */
-			foreach ( $parents as $parent ) {
-				if ( ! isset( $rules['(.+)/' . $parent . '/([^/]+)/?$'] ) || ! isset( $rules[ $parent . '/([^/]+)/?$'] ) ) {
-					$newrules['(.+)/' . $parent . '/([^/]+)/?$'] 	= 'index.php?post_type=' . $gllr_options['post_type_name'] . '&name=$matches[2]&posts_per_page=-1';
-					$newrules[ $parent . '/([^/]+)/?$'] 			= 'index.php?post_type=' . $gllr_options['post_type_name'] . '&name=$matches[1]&posts_per_page=-1';
-					$newrules[ $parent . '/page/([^/]+)/?$'] 		= 'index.php?pagename=' . $parent . '&paged=$matches[1]';
-					$newrules[ $parent . '/page/([^/]+)?$'] 		= 'index.php?pagename=' . $parent . '&paged=$matches[1]';
+		
+		if ( ! empty( $gllr_options['page_id_gallery_template'] ) ) {
+			$parent = get_post( $gllr_options['page_id_gallery_template'] );
+			if ( ! empty( $parent ) ) {
+				if ( ! isset( $rules['(.+)/' . $parent->post_name . '/([^/]+)/?$'] ) || ! isset( $rules[ $parent->post_name . '/([^/]+)/?$'] ) ) {
+					$newrules['(.+)/' . $parent->post_name . '/([^/]+)/?$'] = 'index.php?post_type=' . $gllr_options['post_type_name'] . '&name=$matches[2]&posts_per_page=-1';
+					$newrules[ $parent->post_name . '/([^/]+)/?$'] = 'index.php?post_type=' . $gllr_options['post_type_name'] . '&name=$matches[1]&posts_per_page=-1';
+					$newrules[ $parent->post_name . '/page/([^/]+)/?$'] = 'index.php?pagename=' . $parent->post_name . '&paged=$matches[1]';
+					$newrules[ $parent->post_name . '/page/([^/]+)?$'] = 'index.php?pagename=' . $parent->post_name . '&paged=$matches[1]';
 				}
 			}
 		}
+
 		if ( false === $rules )
 			return $newrules;
 
@@ -618,30 +527,39 @@ if ( ! function_exists( 'gllr_custom_permalinks' ) ) {
 	}
 }
 
-if ( ! function_exists( 'gllr_template_redirect' ) ) {
-	function gllr_template_redirect() {
-		global $wp_query, $gllr_options, $gllr_filenames, $gllr_themepath;
+/**
+* Load a template. Handles template usage so that plugin can use own templates instead of the themes.
+*
+* Templates are in the 'templates' folder.
+* overrides in /{theme}/bws-templates/ by default.
+* @param mixed $template
+* @return string
+*/
+if ( ! function_exists( 'gllr_template_include' ) ) {
+	function gllr_template_include( $template ) {
+		global $gllr_options, $wp_query;
+
+		if ( function_exists( 'is_embed' ) && is_embed() )
+			return $template;
+
 		$post_type = get_post_type();
-		$file_exists_flag = false;
-		if ( $gllr_options['post_type_name'] == $post_type && "" == $wp_query->query_vars["s"] && ( ! isset( $wp_query->query_vars["gallery_categories"] ) ) ) {
-			foreach ( $gllr_filenames as $filename ) {
-				if ( file_exists( $gllr_themepath . $filename ) ) {
-					$file_exists_flag = true;
-					$template = '/gallery-single-template.php';
-				}
-			}
+		if ( is_single() && $gllr_options['post_type_name'] == $post_type ) {
+			$file = 'gallery-single-template.php';
 		} elseif ( $gllr_options['post_type_name'] == $post_type && isset( $wp_query->query_vars["gallery_categories"] ) ) {
-			foreach ( $gllr_filenames as $filename ) {
-				if ( file_exists( $gllr_themepath . $filename ) ) {
-					$file_exists_flag = true;
-					$template = '/gallery-template.php';
-				}
-			}
+			$file = 'gallery-template.php';
+		} elseif ( is_page( $gllr_options['page_id_gallery_template'] ) ) {
+			$file = 'gallery-template.php';
 		}
-		if ( $file_exists_flag ) {
-			include( STYLESHEETPATH . $template );
-			exit();
+
+		if ( isset( $file ) ) {
+			$find = array( $file, 'bws-templates/' . $file );
+			$template = locate_template( $find );
+
+			if ( ! $template )
+				$template = untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/templates/' . $file;
 		}
+
+		return $template;
 	}
 }
 
@@ -732,7 +650,7 @@ if ( ! function_exists( 'gllr_template_content' ) ) {
 						$border = 'padding:0;';
 						$border_images = 0;
 					}
-					$featured_image = ( false == $featured_image ) ? $image_attributes[0] : $featured_image;
+					$featured_image = ( false == $featured_image ) ? $image_attributes : $featured_image;
 					$count++; ?>
 					<li><?php if ( ! empty( $featured_image[0] ) ) { ?>
 						<a rel="bookmark" href="<?php echo get_permalink(); ?>" title="<?php the_title(); ?>">
@@ -864,10 +782,10 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 						<?php }
 						if ( 1 == $gllr_options['return_link'] ) {
 							if ( 'gallery_template_url' == $gllr_options["return_link_page"] ) {
-								global $wpdb;
-								$parent = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND (post_status = 'publish' OR post_status = 'private') AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );	?>
-								<div class="return_link gllr_return_link"><a href="<?php echo ( !empty( $parent ) ? get_permalink( $parent ) : '' ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
-							<?php } else { ?>
+								if ( ! empty( $gllr_options['page_id_gallery_template'] ) ) { ?>
+								<div class="return_link gllr_return_link"><a href="<?php echo get_permalink( $gllr_options['page_id_gallery_template'] ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
+								<?php }
+							} else { ?>
 								<div class="return_link gllr_return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
 							<?php }
 						}
@@ -1028,7 +946,8 @@ if ( ! function_exists( 'gllr_add_pdf_print_content' ) ) {
 				</div><!-- .gallery_box_single -->';
 			}
 			$custom_content .= '<div class="gllr_clear"></div>';
-		} elseif ( 'gallery-template.php' == basename( get_page_template() ) ) { /* Displaying PDF&PRINT custom content for gallery pro template */
+		} elseif ( $post->ID == $gllr_options['page_id_gallery_template'] ) {
+			/* Displaying PDF&PRINT custom content for gallery pro template */
 			if ( ! is_plugin_active( 'gallery-plugin/gallery-plugin.php' ) ) {
 			} else {
 				$custom_content .= "<style type='text/css'>
@@ -1456,30 +1375,6 @@ if ( ! function_exists( 'gllr_the_excerpt_max_charlength' ) ) {
 	}
 }
 
-if ( ! function_exists( 'gllr_page_css_class' ) ) {
-	function gllr_page_css_class( $classes, $item ) {
-		global $wpdb, $gllr_options;
-
-		$post_type	=	get_query_var( 'post_type' );
-		$parent_id	=	0;
-		if ( $gllr_options['post_type_name'] == $post_type ) {
-			$parent_id = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE `meta_key` = '_wp_page_template' AND `meta_value` = 'gallery-template.php' AND `post_status` = 'publish' AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );
-			while ( $parent_id ) {
-				$page = get_page( $parent_id );
-				if ( 0 < $page->post_parent )
-					$parent_id  = $page->post_parent;
-				else
-					break;
-			}
-			wp_reset_query();
-		}
-		if ( $item->ID == $parent_id ) {
-			array_push( $classes, 'current_page_item' );
-		}
-		return $classes;
-	}
-}
-
 if ( ! function_exists( 'gllr_settings_page' ) ) {
 	function gllr_settings_page() {
 		global $gllr_options, $wp_version, $gllr_plugin_info, $gllr_option_defaults, $gllr_BWS_demo_data;
@@ -1508,6 +1403,8 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 				$hide_result = bws_hide_premium_options( $gllr_request_options );
 				$gllr_request_options = $hide_result['options'];
 			}
+
+			$gllr_request_options['page_id_gallery_template'] = intval( $_REQUEST['gllr_page_id_gallery_template'] );
 
 			$gllr_request_options["custom_size_name"] = $gllr_options["custom_size_name"];
 
@@ -1550,7 +1447,11 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 			$gllr_request_options["return_link_text"]		= ( isset( $_REQUEST['gllr_return_link_text'] ) ) ? stripslashes( esc_html( $_REQUEST['gllr_return_link_text'] ) ) : $gllr_option_defaults["return_link_text"];
 			$gllr_request_options["read_more_link_text"]	= ( isset( $_REQUEST['gllr_read_more_link_text'] ) ) ? stripslashes( esc_html( $_REQUEST['gllr_read_more_link_text'] ) ) : $gllr_option_defaults["read_more_link_text"];
 
-			$gllr_request_options["rewrite_template"] = isset( $_REQUEST['gllr_rewrite_template'] ) ? 1 : 0;
+			/* for rewrite */
+			if ( $gllr_request_options['page_id_gallery_template'] != $gllr_options['page_id_gallery_template'] ) {
+				$gllr_request_options["flush_rewrite_rules"] = 1;
+			}
+
 
 			/**
 			 * rewriting post types name with unique one from default options
@@ -1652,6 +1553,17 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 					</div>
 					<form class="bws_form" method="post" action="admin.php?page=gallery-plugin.php">
 						<table class="gllr_settings_table form-table">
+							<tr valign="top">
+								<th scope="row"><?php _e( 'Galleries page', 'gallery-plugin' ); ?></th>
+								<td>
+									<?php wp_dropdown_pages( array(
+										'depth'                 => 0,
+										'selected'              => $gllr_options['page_id_gallery_template'],
+										'name'                  => 'gllr_page_id_gallery_template',
+										'show_option_none'		=> '...'
+									) ); ?>
+								</td>
+							</tr>
 							<tr valign="top">
 								<th scope="row"><?php _e( 'Number of images in the row', 'gallery-plugin' ); ?> </th>
 								<td>
@@ -1859,12 +1771,6 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 										<input disabled="disabled" type="checkbox" name="gllr_add_to_search" value="1" />
 										<span class="bws_info">(<?php _e( 'Using', 'gallery-plugin' ); ?> Custom Search <?php _e( 'powered by', 'gallery-plugin' ); ?> <a href="http://bestwebsoft.com/products/">bestwebsoft.com</a>) <a href="http://bestwebsoft.com/products/wordpress/plugins/custom-search/"><?php _e( 'Download', 'gallery-plugin' ); ?> Custom Search</a></span>
 									<?php } ?>
-								</td>
-							</tr>
-							<tr valign="top">
-								<th scope="row"><?php _e( 'Rewrite templates after update', 'gallery-plugin' ); ?></th>
-								<td>
-									<input type="checkbox" name="gllr_rewrite_template" value="1" <?php if ( 1 ==  $gllr_options['rewrite_template'] ) echo 'checked="checked"'; ?> /> <span class="bws_info"><?php printf( __( "Turn off the checkbox, if You edited the file '%s' or '%s' file in your theme folder and You don't want to rewrite them", 'gallery-plugin' ), 'gallery-template.php', 'gallery-single-template.php' ); ?></span>
 								</td>
 							</tr>
 							<?php if ( $gllr_options['post_type_name'] != $gllr_option_defaults['post_type_name'] ) { ?>
@@ -2178,10 +2084,13 @@ if ( ! function_exists ( 'gllr_wp_footer' ) ) {
 		if ( ! defined( 'BWS_ENQUEUE_ALL_SCRIPTS' ) && ! wp_script_is( 'gllr_js', 'registered' ) )
 			return;
 
+		wp_enqueue_script( 'jquery' );
+
 		if ( ! wp_script_is( 'gllr_js', 'registered' ) )
-			wp_enqueue_script( 'gllr_js', plugins_url( 'js/frontend_script.js', __FILE__ ), array( 'jquery' ) );
+			wp_enqueue_script( 'gllr_js', plugins_url( 'js/frontend_script.js', __FILE__ ) );
 		else
 			wp_enqueue_script( 'gllr_js' );
+
 		require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		if ( ! ( is_plugin_active( 'portfolio-pro/portfolio-pro.php' ) && wp_script_is( 'prtfl_front_script', 'registered' ) ) ) {
 			wp_enqueue_script( 'gllr_fancybox_mousewheel_js', plugins_url( 'fancybox/jquery.mousewheel-3.0.4.pack.js', __FILE__ ), array( 'jquery' ), true );
@@ -2238,6 +2147,12 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 				<div class="gallery_box">
 					<ul>
 						<?php if ( $second_query->have_posts() ) {
+							if ( 1 == $gllr_options['border_images'] ) {
+								$border = 'border-width: ' . $gllr_options['border_images_width'] . 'px; border-color:' . $gllr_options['border_images_color'] . ';border: ' . $gllr_options['border_images_width'] . 'px solid ' . $gllr_options['border_images_color'];
+							} else {
+								$border = '';
+							}
+
 							while ( $second_query->have_posts() ) {
 								$second_query->the_post();
 								$attachments = get_post_thumbnail_id( $post->ID );
@@ -2264,7 +2179,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 								} ?>
 								<li>
 									<a rel="bookmark" href="<?php echo get_permalink(); ?>" title="<?php the_title(); ?>">
-										<img width="<?php echo $gllr_options['custom_size_px'][0][0]; ?>" height="<?php echo $gllr_options['custom_size_px'][0][1]; ?>" style="width:<?php echo $gllr_options['custom_size_px'][0][0]; ?>px; height:<?php echo $gllr_options['custom_size_px'][0][1]; ?>px;" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
+										<img width="<?php echo $gllr_options['custom_size_px'][0][0]; ?>" height="<?php echo $gllr_options['custom_size_px'][0][1]; ?>" style="width:<?php echo $gllr_options['custom_size_px'][0][0]; ?>px; height:<?php echo $gllr_options['custom_size_px'][0][1]; ?>px; <?php echo $border; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
 									</a>
 									<div class="gallery_detail_box">
 										<div><?php the_title(); ?></div>
@@ -2317,7 +2232,8 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 									$image_attributes = array( '' );
 							} else {
 								$image_attributes = wp_get_attachment_image_src( $attachments, 'album-thumb' );
-							}
+							} 
+
 							if ( 1 == $gllr_options['border_images'] ) {
 								$border = 'border-width: ' . $gllr_options['border_images_width'] . 'px; border-color:' . $gllr_options['border_images_color'] . ';border: ' . $gllr_options['border_images_width'] . 'px solid ' . $gllr_options['border_images_color'];
 							} else {
@@ -2339,6 +2255,13 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 				</div><!-- .gallery_box -->
 			<?php } else {
 				if ( $second_query->have_posts() ) {
+					if ( 1 == $gllr_options['border_images'] ) {
+						$border = 'border-width: ' . $gllr_options['border_images_width'] . 'px; border-color:' . $gllr_options['border_images_color'] . ';border: ' . $gllr_options['border_images_width'] . 'px solid ' . $gllr_options['border_images_color'];
+						$border_images = $gllr_options['border_images_width'] * 2;
+					} else {
+						$border = '';
+						$border_images = 0;
+					}
 					while ( $second_query->have_posts() ) {
 						$second_query->the_post(); ?>
 						<div class="gallery_box_single">
@@ -2368,13 +2291,6 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 										$image_attributes		= 	wp_get_attachment_image_src( $attachment->ID, 'photo-thumb' );
 										$image_attributes_large	=	wp_get_attachment_image_src( $attachment->ID, 'large' );
 										$image_attributes_full	=	wp_get_attachment_image_src( $attachment->ID, 'full' );
-										if ( 1 == $gllr_options['border_images'] ) {
-											$border = 'border-width: ' . $gllr_options['border_images_width'] . 'px; border-color:' . $gllr_options['border_images_color'] . ';border: ' . $gllr_options['border_images_width'] . 'px solid ' . $gllr_options['border_images_color'];
-											$border_images = $gllr_options['border_images_width'] * 2;
-										} else {
-											$border = '';
-											$border_images = 0;
-										}
 										if ( $count_image_block % $gllr_options['custom_image_row_count'] == 0 ) { ?>
 											<div class="gllr_image_row">
 										<?php } ?>
@@ -2406,10 +2322,10 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 							<?php }
 							if ( 1 == $gllr_options['return_link_shortcode'] ) {
 								if ( 'gallery_template_url' == $gllr_options["return_link_page"] ) {
-									global $wpdb;
-									$parent = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND (post_status = 'publish' OR post_status = 'private') AND $wpdb->posts.ID = $wpdb->postmeta.post_id" ); ?>
-									<div class="return_link gllr_return_link"><a href="<?php echo ( ! empty( $parent ) ? get_permalink( $parent ) : '' ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
-								<?php } else { ?>
+									if ( ! empty( $gllr_options["page_id_gallery_template"] ) ) { ?>
+										<div class="return_link gllr_return_link"><a href="<?php echo get_permalink( $gllr_options["page_id_gallery_template"] ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
+									<?php }
+								} else { ?>
 									<div class="return_link gllr_return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
 								<?php }
 							} ?>
@@ -2454,7 +2370,7 @@ if ( ! function_exists( 'gllr_echo_inline_script' ) ) {
 							'speedIn'				:	500,
 							'speedOut'				:	300,
 							'titleFormat'			: function( title, currentArray, currentIndex, currentOpts ) {
-								return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#039;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery-plugin" ); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if ( get_post_meta( $vars['post_id'], 'gllr_download_link', true ) != '' ) { ?><a id="bws_gallery_download_link" href="' + jQuery( currentOpts.orig ).attr('rel') + '" download="' + jQuery( currentOpts.orig ).attr('rel').substring( jQuery( currentOpts.orig ).attr('rel').lastIndexOf('/') + 1 ) + '" target="_blank"><?php echo $download_link_title; ?></a><?php } ?>';
+								return '<div id="fancybox-title-inside">' + ( title.length ? '<span id="bws_gallery_image_title">' + title + '</span><br />' : '' ) + '<span id="bws_gallery_image_counter"><?php _e( "Image", "gallery-plugin" ); ?> ' + ( currentIndex + 1 ) + ' / ' + currentArray.length + '</span></div><?php if ( get_post_meta( $vars['post_id'], 'gllr_download_link', true ) != '' ) { ?><a id="bws_gallery_download_link" href="' + jQuery( currentOpts.orig ).attr('rel') + '" download="' + jQuery( currentOpts.orig ).attr('rel').substring( jQuery( currentOpts.orig ).attr('rel').lastIndexOf('/') + 1 ) + '" target="_blank"><?php echo $download_link_title; ?></a><?php } ?>';
 							}<?php if ( $gllr_options['start_slideshow'] == 1 ) { ?>,
 							'onComplete':	function() {
 								clearTimeout( jQuery.fancybox.slider );
@@ -3454,8 +3370,6 @@ if ( ! function_exists( 'gllr_add_tabs' ) ) {
 if ( ! function_exists ( 'gllr_admin_notices' ) ) {
 	function gllr_admin_notices() {
 		global $hook_suffix, $gllr_plugin_info, $gllr_BWS_demo_data, $gllr_options;
-		/* add error if templates were not found in the theme directory */
-		gllr_admin_error();
 
 		if ( 'plugins.php' == $hook_suffix || ( isset( $_GET['page'] ) && $_GET['page'] == 'gallery-plugin.php' ) ) {
 
@@ -3481,13 +3395,7 @@ if ( ! function_exists ( 'gllr_admin_notices' ) ) {
  */
 if ( ! function_exists( 'gllr_plugin_uninstall' ) ) {
 	function gllr_plugin_uninstall() {
-		global $gllr_filenames, $gllr_themepath, $wpdb, $gllr_BWS_demo_data;
-
-		foreach ( $gllr_filenames as $filename ) {
-			if ( file_exists( $gllr_themepath . $filename ) && ! unlink( $gllr_themepath . $filename ) ) {
-				add_action( 'admin_notices', create_function( '', ' return "Error delete template file";' ) );
-			}
-		}
+		global $wpdb, $gllr_BWS_demo_data;
 
 		if ( ! function_exists( 'get_plugins' ) )
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -3510,31 +3418,9 @@ if ( ! function_exists( 'gllr_plugin_uninstall' ) ) {
 				gllr_include_demo_data();
 				$gllr_BWS_demo_data->bws_remove_demo_data();
 
-				delete_option( 'gllr_options' );
+				delete_option( 'gllr_options' );				
 			}
-		} else {
-			if ( function_exists( 'is_multisite' ) && is_multisite() ) {
-				$old_blog = $wpdb->blogid;
-				/* Get all blog ids */
-				$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
-				foreach ( $blogids as $blog_id ) {
-					switch_to_blog( $blog_id );
-					/* change template attribute from 'gallery-template.php' to 'gallery-pro-template.php' for pages */
-					$free_template_pages = $wpdb->get_col( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND ( post_status = 'publish' OR post_status = 'private' ) AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );
-					if ( ! empty( $free_template_pages ) ) {
-						$free_template_pages = implode( ',', $free_template_pages );
-						$wpdb->query( "UPDATE $wpdb->postmeta SET meta_value = 'gallery-pro-template.php' WHERE post_id IN ( $free_template_pages )" );
-					}
-				}
-				switch_to_blog( $old_blog );
-			} else {
-				/* change template attribute from 'gallery-template.php' to 'gallery-pro-template.php' for pages */
-				$free_template_pages = $wpdb->get_col( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND ( post_status = 'publish' OR post_status = 'private' ) AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );
-				if ( ! empty( $free_template_pages ) ) {
-					$free_template_pages = implode( ',', $free_template_pages );
-					$wpdb->query( "UPDATE $wpdb->postmeta SET meta_value = 'gallery-pro-template.php' WHERE post_id IN ( $free_template_pages )" );
-				}
-			}
+			delete_metadata( 'user', null, 'wp_gllr_media_library_mode', '', true );
 		}
 
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
@@ -3557,12 +3443,7 @@ add_action( 'admin_init', 'gllr_admin_init' );
 
 add_action( 'plugins_loaded', 'gllr_plugins_loaded' );
 
-add_action( 'after_switch_theme', 'gllr_after_switch_theme', 10, 2 );
-
 add_filter( 'rewrite_rules_array', 'gllr_custom_permalinks' ); /* Add custom permalink for gallery */
-
-/* Add themplate for single gallery page */
-add_action( 'template_redirect', 'gllr_template_redirect' );
 
 /* this function returns custom content with images for PDF&Print plugin on Gallery page */
 add_filter( 'bwsplgns_get_pdf_print_content', 'gllr_add_pdf_print_content', 10, 2 );
@@ -3570,9 +3451,6 @@ add_filter( 'bwsplgns_get_pdf_print_content', 'gllr_add_pdf_print_content', 10, 
 /* Save custom data from admin  */
 add_action( 'save_post', 'gllr_save_postdata', 1, 2 );
 add_filter( 'content_save_pre', 'gllr_content_save_pre', 10, 1 );
-
-add_filter( 'nav_menu_css_class', 'gllr_addImageAncestorToMenu' );
-add_filter( 'page_css_class', 'gllr_page_css_class', 10, 2 );
 
 add_action( 'pre_get_posts', 'gllr_manage_pre_get_posts', 1 );
 

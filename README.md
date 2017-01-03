@@ -24,7 +24,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>Images to album</li>
 </ul></li>
 <li>Change image for album cover and its dimensions</li>
-<li>Set sorting order for images by:
+<li>Set default sorting order for images by:
 
 <ul>
 <li>Attachment ID</li>
@@ -35,7 +35,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>ASC (ascending order from lowest to highest values)</li>
 <li>DESC (descending order from highest to lowest values)</li>
 </ul></li>
-<li>Set sorting order for galleries by:
+<li>Set default gallery projects sorting order by:
 
 <ul>
 <li>Gallery ID</li>
@@ -65,7 +65,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
 <li>Detailed step-by-step documentation and videos</li>
-<li>Multilingual (10+ languages) and RTL ready</li>
+<li>Multilingual and RTL ready</li>
 </ul>
 
 <blockquote>

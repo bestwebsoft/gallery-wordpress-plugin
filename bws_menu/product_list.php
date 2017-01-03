@@ -12,7 +12,7 @@ $bws_plugins_category = array(
 	'site-stats'		=> array( 'name' => __( 'Site Stats', 'bestwebsoft' ) ),
 	'social'			=> array( 'name' => __( 'Social', 'bestwebsoft' ) ),
 	'utilities'			=> array( 'name' => __( 'Utilities', 'bestwebsoft' ) ),
-	'other'				=> array( 'name' => __( 'Other', 'bestwebsoft' ) ),	
+	'other'				=> array( 'name' => __( 'Other', 'bestwebsoft' ) ),
 );
 
 $bws_plugins = array(
@@ -89,7 +89,7 @@ $bws_plugins = array(
 		'pro_version'	=> 'custom-search-pro/custom-search-pro.php',
 		'purchase'		=> 'http://bestwebsoft.com/products/wordpress/plugins/custom-search/buy/?k=062b652ac6ac8ba863c9f30fc21d62c6&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings'	=> 'admin.php?page=custom_search_pro.php'
-	),	
+	),
 	'db-manager/db-manager.php' => array(
 		'category'		=> array( 'utilities' ),
 		'name'			=> 'DB Manager',
@@ -97,7 +97,7 @@ $bws_plugins = array(
 		'link'			=> 'http://bestwebsoft.com/products/wordpress/plugins/db-manager/?k=01ed9731780d87f85f5901064b7d76d8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'install_url'	=> 'http://bestwebsoft.com/products/wordpress/plugins/db-manager/download/?k=01ed9731780d87f85f5901064b7d76d8&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'settings'		=> 'admin.php?page=db-manager.php',
-		'icon'			=> plugins_url( 'icons/plugins/', __FILE__ ) . 'db-manager.png'
+		'icon'			=> bws_menu_url( 'icons/plugins/' ) . 'db-manager.png'
 	),
 	'donate-button/donate.php' => array(
 		'category'		=> array( 'other' ),
@@ -136,7 +136,7 @@ $bws_plugins = array(
 		'description'	=> 'Add featured posts to WordPress posts or widgets. Highlight important information.',
 		'link'			=> 'http://bestwebsoft.com/products/wordpress/plugins/featured-posts/?k=f0afb31185ba7c7d6d598528d69f6d97&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'settings'		=> 'admin.php?page=featured-posts.php'
-	),		
+	),
 	'gallery-plugin/gallery-plugin.php' => array(
 		'category'		=> array( 'content-and-media', 'recommended' ),
 		'name'			=> 'Gallery',
@@ -213,14 +213,14 @@ $bws_plugins = array(
 		'pro_version'	=> 'google-sitemap-pro/google-sitemap-pro.php',
 		'purchase'		=> 'http://bestwebsoft.com/products/wordpress/plugins/google-sitemap/buy/?k=7ea384a5cc36cb4c22741caa20dcd56d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings'	=> 'admin.php?page=google-sitemap-pro.php'
-	),	
+	),
 	'google-shortlink/google-shortlink.php' => array(
 		'category'		=> array( 'other' ),
 		'name'			=> 'Google Shortlink',
 		'description'	=> 'Replace external WordPress website links with Google shortlinks and track click stats.',
 		'link'			=> 'http://bestwebsoft.com/products/wordpress/plugins/google-shortlink/?k=afcf3eaed021bbbbeea1090e16bc22db&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'settings'		=> 'admin.php?page=gglshrtlnk_options'
-	),	
+	),
 	'htaccess/htaccess.php' => array(
 		'category'		=> array( 'security' ),
 		'name'			=> 'Htaccess',
@@ -274,7 +274,7 @@ $bws_plugins = array(
 		'pro_version'	=> 'multilanguage-pro/multilanguage-pro.php',
 		'purchase' 		=> 'http://bestwebsoft.com/products/wordpress/plugins/multilanguage/buy/?k=2d1121cd9a5ced583fc29eefd51bdf57&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings'	=> 'admin.php?page=mltlnggpr_settings'
-	),	
+	),
 	'pagination/pagination.php' => array(
 		'category'		=> array( 'content-and-media' ),
 		'name'			=> 'Pagination',
@@ -353,6 +353,13 @@ $bws_plugins = array(
 		'link'			=> 'http://bestwebsoft.com/products/wordpress/plugins/quotes-and-tips/?k=5738a4e85a798c4a5162240c6515098d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'settings'		=> 'admin.php?page=quotes-and-tips.php'
 	),
+	'rating-bws/rating-bws.php' => array(
+		'category'		=> array( 'content-and-media' ),
+		'name'			=> 'Rating',
+		'description'	=> 'Add rating plugin to your WordPress website to receive feedback from your customers.',
+		'link'			=> 'http://bestwebsoft.com/products/wordpress/plugins/rating/?k=c00e0824bb999735a3224616ef51f4c5&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+		'settings'		=> 'admin.php?page=rating.php'
+	),
 	'realty/realty.php' => array(
 		'category'		=> array( 'content-and-media' ),
 		'name'			=> 'Realty',
@@ -362,7 +369,7 @@ $bws_plugins = array(
 		'pro_version'	=> 'realty-pro/realty-pro.php',
 		'purchase' 		=> 'http://bestwebsoft.com/products/wordpress/plugins/realty/buy/?k=c7791f0a72acfb36f564a614dbccb474&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings'	=> 'admin.php?page=realty_pro_settings'
-	),	
+	),
 	're-attacher/re-attacher.php' => array(
 		'category'		=> array( 'utilities' ),
 		'name'			=> 'Re-attacher',
@@ -399,7 +406,10 @@ $bws_plugins = array(
 		'name'			=> 'Social Buttons Pack',
 		'description'	=> 'Add social media buttons and widgets to WordPress posts, pages and widgets. FB, Twitter, G+1, Pinterest, LinkedIn.',
 		'link'			=> 'http://bestwebsoft.com/products/wordpress/plugins/social-buttons-pack/?k=b6440fad9f54274429e536b0c61b42da&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
-		'settings'		=> 'admin.php?page=social-buttons.php'
+		'settings'		=> 'admin.php?page=social-buttons.php',
+		'pro_version'	=> 'social-buttons-pack-pro/social-buttons-pack-pro.php',
+		'purchase' 		=> 'http://bestwebsoft.com/products/wordpress/plugins/social-buttons-pack/buy/?k=e7059cacde0d275b224a5d995c9160fd&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+		'pro_settings'	=> 'admin.php?page=social-buttons.php'
 	),
 	'subscriber/subscriber.php' => array(
 		'category'		=> array( 'social', 'recommended' ),
@@ -423,8 +433,11 @@ $bws_plugins = array(
 		'name'			=> 'Timesheet',
 		'description'	=> 'Best timesheet plugin for WordPress. Track employee time, streamline attendance and generate reports.',
 		'link'			=> 'http://bestwebsoft.com/products/wordpress/plugins/timesheet/?k=06a58bb78c17a43df01825925f05a5c1&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
-		'settings'		=> 'admin.php?page=timesheet_settings'
-	),	
+		'settings'		=> 'admin.php?page=timesheet_settings',
+		'pro_version'	=> 'timesheet-pro/timesheet-pro.php',
+		'purchase' 		=> 'http://bestwebsoft.com/products/wordpress/plugins/timesheet/buy/?k=a448ce4cab0d365b7774c9bc3903b851&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+		'pro_settings' 	=> 'admin.php?page=timesheet_pro_settings'
+	),
 	'twitter-plugin/twitter.php' => array(
 		'category'		=> array( 'social' ),
 		'name'			=> 'Twitter',
@@ -454,7 +467,7 @@ $bws_plugins = array(
 		'pro_version'	=> 'user-role-pro/user-role-pro.php',
 		'purchase' 		=> 'http://bestwebsoft.com/products/wordpress/plugins/user-role/buy/?k=cfa9cea6613fb3d7c0a3622fa2faaf46&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings' 	=> 'admin.php?page=user-role-pro.php'
-	),	
+	),
 	'visitors-online/visitors-online.php' => array(
 		'category'		=> array( 'site-stats' ),
 		'name'			=> 'Visitors Online',
@@ -464,7 +477,7 @@ $bws_plugins = array(
 		'pro_version'	=> 'visitors-online-pro/visitors-online-pro.php',
 		'purchase' 		=> 'http://bestwebsoft.com/products/wordpress/plugins/visitors-online/buy/?k=f9a746075ff8a0a6cb192cb46526afd2&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings'	=> 'admin.php?page=visitors-online-pro.php'
-	),	
+	),
 	'zendesk-help-center/zendesk-help-center.php' => array(
 		'category'		=> array( 'utilities' ),
 		'name'			=> 'Zendesk Help Center',
@@ -475,25 +488,25 @@ $bws_plugins = array(
 		'purchase' 		=> 'http://bestwebsoft.com/products/wordpress/plugins/zendesk-help-center/buy/?k=45199e4538b5befe4d9566868a61a3aa&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_settings'	=> 'admin.php?page=zendesk_hc_pro.php&tab=settings'
 	)
-);	
+);
 
-$themes = array(	
-	(object) array( 
+$themes = array(
+	(object) array(
 		'name' 		=> 'Opening',
 		'slug' 		=> 'opening',
 		'href' 		=> 'http://bestwebsoft.com/products/wordpress/themes/opening-job-board-wordpress-theme/'
 	),
-	(object) array( 
+	(object) array(
 		'name' 		=> 'Real Estate',
 		'slug' 		=> 'realestate',
 		'href' 		=> 'http://bestwebsoft.com/products/wordpress/themes/real-estate-creative-wordpress-theme/'
 	),
-	(object) array( 
+	(object) array(
 		'name' 		=> 'Renty',
 		'slug' 		=> 'renty',
 		'href' 		=> 'http://bestwebsoft.com/products/wordpress/themes/renty-car-rental-booking-wordpress-theme/'
 	),
-	(object) array( 
+	(object) array(
 		'name' 		=> 'Unity',
 		'slug' 		=> 'unity',
 		'href' 		=> 'http://bestwebsoft.com/products/wordpress/themes/unity-multipurpose-wordpress-theme/'

@@ -1,16 +1,15 @@
 <?php
-
 /**
  * Load demo data
- * @version 1.0.3
+ * @version 1.0.5
  */
 
 if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 	class Bws_Demo_Data {
-		private $bws_plugin_text_domain, $bws_plugin_prefix, $bws_plugin_page, $bws_plugin_name, $bws_plugin_basename, $bws_demo_options, $bws_demo_folder;
+		private $bws_plugin_text_domain, $bws_plugin_prefix, $bws_plugin_page, $bws_plugin_name, $bws_plugin_basename, $bws_demo_options, $bws_plugin_options, $bws_demo_folder;
 
 		public function __construct( $args ) {
-			$plugin_dir_array				= explode( '/', $args['plugin_basename'] );
+			$plugin_dir_array      	= explode( '/', $args['plugin_basename'] );
 			$this->bws_plugin_basename 		= $args['plugin_basename'];
 			$this->bws_plugin_prefix		= $args['plugin_prefix'];
 			$this->bws_plugin_name			= $args['plugin_name'];
@@ -18,6 +17,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 			$this->bws_demo_folder			= $args['demo_folder'];
 			$this->bws_plugin_text_domain 	= $plugin_dir_array[0];
 			$this->bws_demo_options 		= get_option( $this->bws_plugin_prefix . 'demo_options' );
+			$this->bws_plugin_options		= get_option( $this->bws_plugin_prefix . 'options' );
 		}
 
 		/**
@@ -60,7 +60,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				<p><?php echo $label; ?></p>
 				<form method="post" action="">
 					<p>
-						<button class="button" name="bws_<?php echo $_POST['bws_handle_demo']; ?>_demo_confirm" value="true"><?php echo $button_title; ?></button>
+						<button class="button button-primary" name="bws_<?php echo $_POST['bws_handle_demo']; ?>_demo_confirm" value="true"><?php echo $button_title; ?></button>
 						<button class="button" name="bws_<?php echo $_POST['bws_handle_demo']; ?>_demo_deny" value="true"><?php _e( 'No, go back to the settings page', $this->bws_plugin_text_domain ) ?></button>
 						<?php wp_nonce_field( $this->bws_plugin_basename, 'bws_settings_nonce_name' ); ?>
 					</p>
@@ -91,7 +91,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		 * @return array $message   message about the result of the query
 		 */
 		function bws_install_demo_data( $callback = false ) {
-			global $wpdb, $gllr_options;
+			global $wpdb;
 			/* get demo data*/
 			$message   = array(
 				'error'   => NULL,
@@ -110,7 +110,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 			$page_id = $posttype_post_id = $post_id = '';
 			/* get demo data */
 			@include_once( $this->bws_demo_folder . 'demo-data.php' );
-			$received_demo_data = bws_demo_data_array( $gllr_options['post_type_name'] );
+			$received_demo_data = bws_demo_data_array( $this->bws_plugin_options['post_type_name'] );
 
 			/*
 			 * load demo data
@@ -131,19 +131,17 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				 * load demo options
 				 */
 				if ( ! empty( $demo_data['options'] ) ) {
-					$plugin_options = get_option( $this->bws_plugin_prefix . 'options' );
 					/* remember old plugin options */
-					if ( ! empty( $plugin_options ) ) {
-						$this->bws_demo_options['options'] = $plugin_options;
+					if ( ! empty( $this->bws_plugin_options ) ) {
+						$this->bws_demo_options['options'] = $this->bws_plugin_options;
 						$demo_data['options']['display_demo_notice'] = 0;
-						update_option( $this->bws_plugin_prefix . 'options', array_merge( $plugin_options, $demo_data['options'] ) );
+						update_option( $this->bws_plugin_prefix . 'options', array_merge( $this->bws_plugin_options, $demo_data['options'] ) );
 					}
 				} else {
 					/* remove demo notice */
-					$plugin_options = get_option( $this->bws_plugin_prefix . 'options' );
-					if ( 0 != $plugin_options['display_demo_notice'] ) {
-						$plugin_options['display_demo_notice'] = 0;
-						update_option( $this->bws_plugin_prefix . 'options', $plugin_options );
+					if ( 0 != $this->bws_plugin_options['display_demo_notice'] ) {
+						$this->bws_plugin_options['display_demo_notice'] = 0;
+						update_option( $this->bws_plugin_prefix . 'options', $this->bws_plugin_options );
 					}
 				}
 
@@ -351,6 +349,13 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 								$page_id = $post_id;
 								$page_template = $post['page_template'];
 							}
+							/* save page_id to options */
+							if ( ! empty( $post['save_to_options'] ) ) {
+								$page_id = $post_id;
+								$this->bws_plugin_options[ $post['save_to_options'] ] = $post_id;
+								update_option( $this->bws_plugin_prefix . 'options', $this->bws_plugin_options );
+							}
+
 							/* first inserted image is thummbnail for post */
 							if ( ! empty( $featured_attach_id ) )
 								update_post_meta( $post_id, '_thumbnail_id', $featured_attach_id );
@@ -373,6 +378,8 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 
 						if ( ! empty( $demo_data['options'] ) )
 							$message['options'] = $demo_data['options'];
+						else
+							$message['options'] = $this->bws_plugin_options;
 
 						if ( $callback && function_exists( $callback ) )
 							call_user_func( $callback );
@@ -403,10 +410,9 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		 */
 		function bws_wp_update_attachment_metadata( $data, $id ) {
 			if ( ! empty( $data ) && ! empty( $this->bws_demo_options['distant_attachments'] ) && $attachment_name = array_search( $id, $this->bws_demo_options['distant_attachments'] ) ) {
-				global $gllr_options;
 				/* get demo data */
 				@include_once( $this->bws_demo_folder . 'demo-data.php' );
-				$received_demo_data = bws_demo_data_array( $gllr_options['post_type_name'] );
+				$received_demo_data = bws_demo_data_array( $this->bws_plugin_options['post_type_name'] );
 
 				if ( isset( $received_demo_data['distant_attachments_metadata'][ $attachment_name ] ) ) {
 
@@ -537,9 +543,8 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				global $wp_version;
 
 				if ( isset( $_POST['bws_hide_demo_notice'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_demo_nonce_name' ) ) {
-					$plugin_options = get_option( $this->bws_plugin_prefix . 'options' );
-					$plugin_options['display_demo_notice'] = 0;
-					update_option( $this->bws_plugin_prefix . 'options', $plugin_options );
+					$this->bws_plugin_options['display_demo_notice'] = 0;
+					update_option( $this->bws_plugin_prefix . 'options', $this->bws_plugin_options );
 					return;
 				}
 				if ( ! isset( $_POST['bws_handle_demo'] ) && ! isset( $_POST['bws_install_demo_confirm'] ) ) {

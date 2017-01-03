@@ -1,11 +1,11 @@
 <?php
 /*
 Template Name: Gallery Template
-* Version: 1.2.8
+* Version: 1.2.9
 */
-?>
-<?php get_header(); ?>
-	<div class="content-area">
+get_header(); ?>
+<div class="wrap gllr_wrap">
+	<div id="primary" class="content-area">
 		<div id="container" class="site-content site-main">
 			<div id="content" class="hentry">
 				<h1 class="home_page_title entry-header">
@@ -46,5 +46,6 @@ Template Name: Gallery Template
 			} ?>
 		</div><!-- #container -->
 	</div><!-- .content-area -->
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
+</div><!-- .wrap -->
 <?php get_footer(); ?>
