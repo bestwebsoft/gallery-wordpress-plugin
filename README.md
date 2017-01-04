@@ -167,6 +167,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 
 <ul>
 <li><a href="http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/">Gallery Categories</a> - Add unlimited gallery categories. Organize images to make the navigation through content easier.</li>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743">Custom Search</a> - Add custom post types to WordPress website search results.</li>
 <li><a href="http://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
 <li><a href="http://bestwebsoft.com/products/wordpress/plugins/re-attacher/">Re-attacher</a> - Attach, unattach and re-attach media files quickly to WordPress posts and pages.</li>
 </ul>

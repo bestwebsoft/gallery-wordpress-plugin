@@ -6,12 +6,12 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.4.7
+Version: 4.4.8
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2016  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  © Copyright 2017  BestWebSoft  ( http://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -547,7 +547,7 @@ if ( ! function_exists( 'gllr_template_include' ) ) {
 			$file = 'gallery-single-template.php';
 		} elseif ( $gllr_options['post_type_name'] == $post_type && isset( $wp_query->query_vars["gallery_categories"] ) ) {
 			$file = 'gallery-template.php';
-		} elseif ( is_page( $gllr_options['page_id_gallery_template'] ) ) {
+		} elseif ( ! empty( $gllr_options['page_id_gallery_template'] ) && is_page( $gllr_options['page_id_gallery_template'] ) ) {
 			$file = 'gallery-template.php';
 		}
 

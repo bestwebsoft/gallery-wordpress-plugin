@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 3.8
 Tested up to: 4.7
-Stable tag: 4.4.7
+Stable tag: 4.4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -133,6 +133,7 @@ Some of these translations are not complete. We are constantly adding new featur
 = Recommended Plugins =
 
 * [Gallery Categories](http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) - Add unlimited gallery categories. Organize images to make the navigation through content easier.
+* [Custom Search](http://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743) - Add custom post types to WordPress website search results.
 * [Updater](http://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
 * [Re-attacher](http://bestwebsoft.com/products/wordpress/plugins/re-attacher/) - Attach, unattach and re-attach media files quickly to WordPress posts and pages.
 
@@ -219,6 +220,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 7. Gallery Settings page in the admin panel.
 
 == Changelog ==
+
+= V4.4.8 - 04.01.2017 =
+* Update : The bug with pages displaying was fixed.
 
 = V4.4.7 - 03.01.2017 =
 * Update : Template files loading has been changed.
@@ -601,6 +605,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.4.8 =
+* Bugs fixed.
 
 = V4.4.7 =
 * Functionality improved.
