@@ -149,7 +149,7 @@
                 return {
                     longname : 'BWS Shortcode Buttons',
                     author : 'BWS',
-                    authorurl : 'http://bestwebsoft.com',
+                    authorurl : 'https://bestwebsoft.com',
                     infourl : '',
                     version : "0.1"
                 };

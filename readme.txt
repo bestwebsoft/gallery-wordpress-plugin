@@ -1,10 +1,10 @@
 === Gallery by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: http://bestwebsoft.com/donate/
+Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
-Requires at least: 3.8
-Tested up to: 4.7
-Stable tag: 4.4.8
+Requires at least: 4.0
+Tested up to: 4.7.2
+Stable tag: 4.4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ The best responsive gallery plugin for your Wordpress website. Create amazing ga
 
 Showcase portfolio or just to show off useful images easily with gallery plugin to power up communication with your visitors, spark up your brand, and increase sales!
 
-[View Demo](http://bestwebsoft.com/demo-for-gallery-pro/)
+[View Demo](https://bestwebsoft.com/demo-for-gallery-pro/)
 
 http://www.youtube.com/watch?v=aydaTdOpaRM
 
@@ -54,7 +54,7 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 	* Comments to galleries
 	* Images from WordPress media library
 	* Descriptions to each album
-* Install [Gallery Categories](http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) to organize your content
+* Install [Gallery Categories](https://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) to organize your content
 * Add custom code via plugin settings page
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
@@ -90,26 +90,27 @@ http://www.youtube.com/watch?v=aydaTdOpaRM
 > * Add lightbox image description
 > * Add a button with URL to the lightbox
 > * Single gallery pagination
+> * Configure every gallery or apply global settings
 > * Configure all subsites on the network
-> * Get answer to your support question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+> * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
-> [Upgrade to Pro Now](http://bestwebsoft.com/products/wordpress/plugins/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c)
+> [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c)
 
-If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
 
 = Documentation & Videos =
 
 * [[Doc] How to Add](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
-* [[Doc] Installation](https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/)
-* [[Doc] Trial License Installation](https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/)
-* [[Doc] Purchase, Installation & Configuration](https://docs.google.com/document/d/1ygAuT1U0k-zM4e3uirlTdpKeJZSTLaSufnqkeOWJn3Q/)
+* [[Doc] How to Receive Trial License](https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/)
+* [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+* [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
+* [[Video] How to Add](http://www.youtube.com/watch?v=-P9o6-APlv0)
 * [[Video] Installation Instruction](https://www.youtube.com/watch?v=3u-Ov-HxZ7U)
 * [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=KAbiac-iORw)
-* [[Video] How to Add](http://www.youtube.com/watch?v=-P9o6-APlv0)
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <http://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <https://support.bestwebsoft.com/>
 
 = Translation =
 
@@ -128,20 +129,20 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 * Turkish (tr) (thanks to [Ismail Demirbilek](mailto:ce.demirbilek@gmail.com))
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
 
 = Recommended Plugins =
 
-* [Gallery Categories](http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) - Add unlimited gallery categories. Organize images to make the navigation through content easier.
-* [Custom Search](http://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743) - Add custom post types to WordPress website search results.
-* [Updater](http://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
-* [Re-attacher](http://bestwebsoft.com/products/wordpress/plugins/re-attacher/) - Attach, unattach and re-attach media files quickly to WordPress posts and pages.
+* [Gallery Categories](https://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) - Add unlimited gallery categories. Organize images to make the navigation through content easier.
+* [Custom Search](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743) - Add custom post types to WordPress website search results.
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
+* [Re-attacher](https://bestwebsoft.com/products/wordpress/plugins/re-attacher/) - Attach, unattach and re-attach media files quickly to WordPress posts and pages.
 
 = Donate =
 
 Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
 
-[Donate Now](http://bestwebsoft.com/donate/)
+[Donate Now](https://bestwebsoft.com/donate/)
 
 == Installation ==
 
@@ -197,12 +198,12 @@ Please open the menu "Galleries" and choose a gallery from the list. It will tak
 and add (for the themes Twenty Eleven or Twenty Ten):
 
 `.hfeed {
-    direction:rtl;
+    direction: rtl;
 }`
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
+Please make sure that the problem hasn't been discussed yet on our forum (<https://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
 
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
@@ -214,12 +215,16 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 1. Gallery albums page in the front-end.
 2. Single Gallery page in the front-end.
 3. The pop-up window containing the album images.
-4. Edit Gallery page in the grid mode.
-5. Edit Gallery Attachment Info in the grid mode.
-6. Edit Gallery page in the list mode.
-7. Gallery Settings page in the admin panel.
+4. Edit Gallery page.
+5. Edit Gallery Image Info.
+6. Gallery Global Settings page.
 
 == Changelog ==
+
+= V4.4.9 - 13.02.2017 =
+* NEW : Cover settings were added.
+* Update : The plugin settings page has been updated.
+* Pro : Ability to adjust the settings for each gallery.
 
 = V4.4.8 - 04.01.2017 =
 * Update : The bug with pages displaying was fixed.
@@ -605,6 +610,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.4.9 =
+* New features added.
+* Usability improved.
 
 = V4.4.8 =
 * Bugs fixed.

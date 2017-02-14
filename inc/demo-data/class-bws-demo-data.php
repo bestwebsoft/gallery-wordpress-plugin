@@ -1,7 +1,7 @@
 <?php
 /**
  * Load demo data
- * @version 1.0.5
+ * @version 1.0.6
  */
 
 if ( ! class_exists( 'Bws_Demo_Data' ) ) {
@@ -15,6 +15,8 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 			$this->bws_plugin_name			= $args['plugin_name'];
 			$this->bws_plugin_page			= $args['plugin_page'];
 			$this->bws_demo_folder			= $args['demo_folder'];
+			$this->install_callback 		= isset( $args['install_callback'] ) ? $args['install_callback'] : false;
+			$this->remove_callback 			= isset( $args['remove_callback'] ) ? $args['remove_callback'] : false;			
 			$this->bws_plugin_text_domain 	= $plugin_dir_array[0];
 			$this->bws_demo_options 		= get_option( $this->bws_plugin_prefix . 'demo_options' );
 			$this->bws_plugin_options		= get_option( $this->bws_plugin_prefix . 'options' );
@@ -24,7 +26,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		 * Display "Install demo data" or "Uninstal demo data" buttons
 		 * @return void
 		 */
-		function bws_show_demo_button( $form_title ) {
+		function bws_show_demo_button( $form_info ) {
 			if ( ! ( is_multisite() && is_network_admin() ) ) {
 				if ( empty( $this->bws_demo_options ) ) {
 					$value        = 'install';
@@ -32,15 +34,10 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				} else {
 					$value        = 'remove';
 					$button_title = __( 'Remove Demo Data', $this->bws_plugin_text_domain );
-					$form_title   = __( 'Delete demo-data and restore old plugin settings.', $this->bws_plugin_text_domain );
+					$form_info   = __( 'Delete demo data and restore old plugin settings.', $this->bws_plugin_text_domain );
 				} ?>
-				<form method="post" action="" id="bws_handle_demo_data">
-					<p><?php echo $form_title; ?></p>
-					<p>
-						<button class="button" name="bws_handle_demo" value="<?php echo $value; ?>"><?php echo $button_title; ?></button>
-						<?php wp_nonce_field( $this->bws_plugin_basename, 'bws_settings_nonce_name' ); ?>
-					</p>
-				</form>
+				<button class="button" name="bws_handle_demo" value="<?php echo $value; ?>"><?php echo $button_title; ?></button>
+				<div class="bws_info"><?php echo $form_info; ?></div>
 			<?php }
 		}
 
@@ -62,23 +59,20 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 					<p>
 						<button class="button button-primary" name="bws_<?php echo $_POST['bws_handle_demo']; ?>_demo_confirm" value="true"><?php echo $button_title; ?></button>
 						<button class="button" name="bws_<?php echo $_POST['bws_handle_demo']; ?>_demo_deny" value="true"><?php _e( 'No, go back to the settings page', $this->bws_plugin_text_domain ) ?></button>
-						<?php wp_nonce_field( $this->bws_plugin_basename, 'bws_settings_nonce_name' ); ?>
+						<?php wp_nonce_field( $this->bws_plugin_basename, 'bws_nonce_name' ); ?>
 					</p>
 				</form>
 			</div>
 		<?php }
 
 		/**
-		 * @param bool $install_callback
-		 * @param bool $remove_callback
-		 *
 		 * @return array
 		 */
-		function bws_handle_demo_data( $install_callback = false, $remove_callback = false ) {
-			if ( isset( $_POST['bws_install_demo_confirm'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_settings_nonce_name' ) )
-				return $this->bws_install_demo_data( $install_callback );
-			elseif ( isset( $_POST['bws_remove_demo_confirm'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_settings_nonce_name' ) )
-				return $this->bws_remove_demo_data( $remove_callback );
+		function bws_handle_demo_data() {
+			if ( isset( $_POST['bws_install_demo_confirm'] ) )
+				return $this->bws_install_demo_data();
+			elseif ( isset( $_POST['bws_remove_demo_confirm'] ) )
+				return $this->bws_remove_demo_data();
 			else
 				return false;
 		}
@@ -86,11 +80,9 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		/**
 		 * Load demo data
 		 *
-		 * @param bool|string $callback
-		 *
 		 * @return array $message   message about the result of the query
 		 */
-		function bws_install_demo_data( $callback = false ) {
+		function bws_install_demo_data() {
 			global $wpdb;
 			/* get demo data*/
 			$message   = array(
@@ -123,7 +115,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				 * check if demo options already loaded
 				 */
 				if ( ! empty( $this->bws_demo_options ) ) {
-					$message['error'] = __( 'Demo options already installed.', $this->bws_plugin_text_domain );
+					$message['error'] = __( 'Demo settings already installed.', $this->bws_plugin_text_domain );
 					return $message;
 				}
 
@@ -368,7 +360,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 					add_option( $this->bws_plugin_prefix . 'demo_options', $this->bws_demo_options );
 
 					if ( 0 == $error ) {
-						$message['done'] = __( 'Demo data successfully installed.', $this->bws_plugin_text_domain );
+						$message['done'] = __( 'Demo data installed successfully.', $this->bws_plugin_text_domain );
 						if ( ! empty( $posttype_post_id ) ) {
 							$message['done'] .= '<br />' . __( 'View post with shortcodes', $this->bws_plugin_text_domain ) . ':&nbsp;<a href="'.  get_permalink( $posttype_post_id ) . '" target="_blank">' . get_the_title( $posttype_post_id ) . '</a>';
 						}
@@ -381,8 +373,8 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 						else
 							$message['options'] = $this->bws_plugin_options;
 
-						if ( $callback && function_exists( $callback ) )
-							call_user_func( $callback );
+						if ( $this->install_callback && function_exists( $this->install_callback ) )
+							call_user_func( $this->install_callback );
 					} else {
 						$message['error'] = __( 'Installation of demo data with some errors occurred.', $this->bws_plugin_text_domain );
 					}
@@ -448,11 +440,9 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 		/**
 		 * Remove demo data
 		 *
-		 * @param $callback
-		 *
 		 * @return array $message   message about the result of the query
 		 */
-		function bws_remove_demo_data( $callback = false ) {
+		function bws_remove_demo_data() {
 			$error        = 0;
 			$message      = array(
 				'error'   => null,
@@ -470,8 +460,8 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				if ( ! empty( $this->bws_demo_options['options'] ) ) {
 					$this->bws_demo_options['options']['display_demo_notice'] = 0;
 					update_option( $this->bws_plugin_prefix . 'options', $this->bws_demo_options['options'] );
-					if ( $callback && function_exists( $callback ) )
-						call_user_func( $callback );
+					if ( $this->remove_callback && function_exists( $this->remove_callback ) )
+						call_user_func( $this->remove_callback );
 				}
 				$done = $this->bws_delete_demo_option();
 				if ( ! $done )
@@ -594,7 +584,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 							<input type="hidden" name="bws_hide_demo_notice" value="hide" />
 							<?php wp_nonce_field( $this->bws_plugin_basename, 'bws_demo_nonce_name' ); ?>
 						</form>
-						<div style="margin: 0 20px;"><a href="<?php echo admin_url( 'admin.php?page=' . $this->bws_plugin_page . '#bws_handle_demo_data' ); ?>"><?php _e( 'Install demo data', $this->bws_plugin_text_domain ); ?></a>&nbsp;<?php echo __( 'for an acquaintance with the possibilities of the', $this->bws_plugin_text_domain ) . '&nbsp;' . $this->bws_plugin_name; ?>.</div>
+						<div style="margin: 0 20px;"><?php _e( 'Do you want to install demo content and settings (You can do this later using Import / Export settings)?', $this->bws_plugin_text_domain ); ?>&nbsp;<a href="<?php echo admin_url( 'admin.php?page=' . $this->bws_plugin_page ); ?>"><?php _e( 'Yes, install demo now', $this->bws_plugin_text_domain ); ?></a></div>
 					</div>
 				<?php }
 			}

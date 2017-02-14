@@ -1,48 +1,49 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: bestwebsoft\n"
+"Project-Id-Version: bws_menu BWS\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-25 17:11+0300\n"
-"PO-Revision-Date: 2017-01-25 17:15+0300\n"
+"PO-Revision-Date: 2017-01-25 17:11+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
-"Language-Team: bestwebsoft.com <https://support.bestwebsoft.com>\n"
-"Language: ru_RU\n"
+"Language-Team: Mik013\n"
+"Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: bws_functions.php:72 bws_functions.php:190
 msgid "requires"
-msgstr "требует"
+msgstr "vyžaduje"
 
 #: bws_functions.php:74
 msgid ""
 "or higher, that is why it has been deactivated! Please upgrade WordPress and "
 "try again."
 msgstr ""
-"или выше, поэтому он был деактивирован! Пожалуйста, обновите WordPress и "
-"попробуйте еще раз."
+"nebo vyšší, to je důvod, proč byl deaktivován! Proveďte upgrade WordPressu a "
+"zkuste to znovu."
 
 #: bws_functions.php:75
 msgid "Back to the WordPress"
-msgstr "Вернуться к WordPress на"
+msgstr "Zpět do WordPressu"
 
 #: bws_functions.php:77
 msgid "Plugins page"
-msgstr "Страницу плагинов"
+msgstr "Stránka pluginů"
 
 #: bws_functions.php:91
+#, fuzzy
 msgid "Like the plugin?"
-msgstr "Понравился плагин?"
+msgstr "Hodnotit plugin"
 
 #: bws_functions.php:93
 msgid "Rate it"
-msgstr "Оценить"
+msgstr ""
 
 #: bws_functions.php:102
 msgid "Need help?"
@@ -50,19 +51,20 @@ msgstr "Нужна помощь?"
 
 #: bws_functions.php:103 bws_functions.php:914
 msgid "Visit Help Center"
-msgstr "Перейти в Help Center"
+msgstr "Navštívit Centrum pomoci"
 
 #: bws_functions.php:106
+#, fuzzy
 msgid "Want to support the plugin?"
-msgstr "Хотите поддержать плагин?"
+msgstr "Hodnotit plugin"
 
 #: bws_functions.php:107 bws_menu.php:553
 msgid "Donate"
-msgstr "Пожертвовать"
+msgstr "Darovat"
 
 #: bws_functions.php:127
 msgid "WARNING: Illegal use notification"
-msgstr "ВНИМАНИЕ: уведомление о незаконном использовании"
+msgstr "POZOR: upozornění na neoprávněné užívání"
 
 #: bws_functions.php:127
 msgid ""
@@ -71,246 +73,243 @@ msgid ""
 "We strongly recommend you to solve the problem within 24 hours, otherwise "
 "the Pro plugin will be deactivated."
 msgstr ""
-"Вы можете использовать одну лицензию Pro плагина только для одного домена. "
-"Пожалуйста, проверьте и отредактируйте при необходимости лицензию или домен, "
-"используя Ваш личный Client Area. Мы настоятельно рекомендуем вам решить "
-"проблему в течение 24 часов, в противном случае плагин будет деактивирован."
+"Pro licenci pluginu můžete používat pouze pro jednu doménu. Prosím "
+"zkontrolujte a případně upravte Váš licenční klíč na vaší osobní stránce - "
+"Klientská zóně. Důrazně doporučujeme, aby jste tento problém odstranili "
+"během 24 hodin, jinak bude Pro plugin deaktivován."
 
 #: bws_functions.php:127 bws_functions.php:339 bws_menu.php:627
 #: class-bws-settings.php:136
 msgid "Learn More"
-msgstr "Подробнее"
+msgstr "Dozvědět se více"
 
 #: bws_functions.php:144
+#, fuzzy
 msgid ""
 "Notice: Your Pro Trial license has expired. To continue using the plugin, "
 "you should buy a Pro license"
 msgstr ""
-"Внимание: Срок действия Pro Trial версии истек. Чтобы продолжить "
-"пользоваться плагином, пожалуйста, приобретите Pro лицензию"
+"Poznámka: Vaše zkušební Pro verze pluginu vypršela. Pro další využíváni "
+"pluginu bude nutné zakoupit Pro licenci"
 
 #: bws_functions.php:146
+#, fuzzy
 msgid ""
 "Your license has expired. To continue getting top-priority support and "
 "plugin updates, you should extend it."
 msgstr ""
-"Время использования вашей лицензии истекло. Если вы хотите обновлять ваш "
-"плагин в дальнейшем и иметь приоритетную тех.поддержку, то вам нужно "
-"продлить лицензию."
+"Vaše licence vypršela. Pro přístup k top-prioritní podpoře a aktualizacím "
+"pluginu ji budete muset prodloužit."
 
 #: bws_functions.php:146 bws_functions.php:382 deprecated.php:584
 msgid "Learn more"
-msgstr "Подробнее"
+msgstr "Dozvědět se více"
 
 #: bws_functions.php:164
 #, php-format
 msgid "Notice: You are using the Pro Trial license of %s plugin."
-msgstr "Внимание: Вы используете Pro Trial версию плагина %s."
+msgstr "Poznámka: Používáte zkušební Pro verzi pluginu %s."
 
 #: bws_functions.php:166
 msgid "Notice: You are using the Pro Trial license of plugin."
-msgstr "Внимание: Вы используете Pro Trial версию плагина."
+msgstr "Poznámka: Používáte zkušební Pro verzi pluginu."
 
 #: bws_functions.php:169
 msgid "The Pro Trial license will expire on"
-msgstr "Ваша лицензия Pro Trial версии плагина истекает"
+msgstr "Zkušební Pro licence vyprší"
 
 #: bws_functions.php:192
 msgid ""
 "or higher! We do not guarantee that our plugin will work correctly. Please "
 "upgrade to WordPress latest version."
 msgstr ""
-"или выше! Мы не гарантируем, что наш плагин будет работать корректно. "
-"Пожалуйста, обновите WordPress до последней версии."
+"nebo vyšší! Nezaručujeme, že náš plugin bude fungovat správně. Prosím "
+"aktualizujte na nejnovější verzi WordPressu."
 
 #: bws_functions.php:207
 msgid "Thank you for installing"
-msgstr "Спасибо за установку"
+msgstr "Děkujeme vám za instalaci"
 
 #: bws_functions.php:208
 msgid "Let's get started"
-msgstr "Давайте начнем"
+msgstr "Začněme"
 
 #: bws_functions.php:209 bws_functions.php:242 bws_menu.php:557
 #: bws_menu.php:559
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Nastavení"
 
 #: bws_functions.php:211 deprecated.php:694 bws_menu.php:328
 #: class-bws-settings.php:736 class-bws-settings.php:1046
 #: class-bws-settings.php:1076
 msgid "or"
-msgstr "или"
+msgstr "nebo"
 
 #: bws_functions.php:212 bws_functions.php:244
 msgid "Add New"
-msgstr "Добавить"
+msgstr "Přidat nový"
 
 #: bws_functions.php:216 bws_functions.php:226 bws_functions.php:330
 #: bws_functions.php:378 bws_functions.php:482
 msgid "Close notice"
-msgstr "Закрыть"
+msgstr "Zavřít poznámku"
 
 #: bws_functions.php:231
 msgid "Thank you for installing plugins by BestWebSoft!"
-msgstr "Спасибо за установку плагинов компании BestWebSoft!"
+msgstr "Děkujeme vám za instalaci pluginů od BestWebSoft!"
 
 #: bws_functions.php:233
 msgid "More Details"
-msgstr "Детали"
+msgstr "Více detailů"
 
 #: bws_functions.php:234
 msgid "Less Details"
-msgstr "Скрыть детали"
+msgstr "Méně detailů"
 
 #: bws_functions.php:262
 msgid "Deprecated function(-s) is used on the site here:"
-msgstr "Устаревшие функции используются на сайте здесь:"
+msgstr ""
 
 #: bws_functions.php:276
 msgid ""
 "This function(-s) will be removed over time. Please update the product(-s)."
 msgstr ""
-"Эти функции будет удалены через некоторое время. Пожалуйста, обновите "
-"продукт."
 
 #: bws_functions.php:335
 msgid "It’s time to upgrade your"
-msgstr "Настало время обновить Ваш"
+msgstr "Je čas na aktualizaci vašeho"
 
 #: bws_functions.php:335
 msgid "to"
-msgstr "до"
+msgstr "na"
 
 #: bws_functions.php:335
 msgid "version!"
-msgstr "версии!"
+msgstr "verzi!"
 
 #: bws_functions.php:336
 msgid "Extend standard plugin functionality with new great options."
-msgstr "Расширяет возможности стандартного функционала плагина."
+msgstr "Rozšiřuje standardní funkce pluginu novými velkými možnostmi."
 
 #: bws_functions.php:382
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "Your license key for %s expires on %s and you won't be granted TOP-PRIORITY "
 "SUPPORT or UPDATES."
-msgstr ""
-"Ваш лицензионный ключ для %s истекает %s и вы не будете получать "
-"приоритетную тех.поддержку или обновления."
+msgstr "a nebudete mít přístup k  TOP-PRIORITNÍ PODPOŘE nebo AKTUALIZACÍM."
 
 #: bws_functions.php:477
 msgid "Thank you for choosing"
-msgstr "Спасибо за выбор"
+msgstr "Děkujeme, že jste si vybrali"
 
 #: bws_functions.php:478
 msgid ""
 "If you have a feature, suggestion or idea you'd like to see in the plugin, "
 "we'd love to hear about it!"
 msgstr ""
-"Если у вас есть предложения по добавлению нового или улучшению текущего "
-"функционала плагина, пожалуйста, присылайте их нам! Мы вседа открыты для "
-"новых идей!"
+"Máte-li nápad, nebo doporučení na novou vlastnost, kterou by jste v pluginu "
+"chtěli vidět, rádi o něm uslyšíme!"
 
 #: bws_functions.php:479
 msgid "Suggest a Feature"
-msgstr "Предложить функционал"
+msgstr "Navrhnout vlastnost"
 
 #: bws_functions.php:495 class-bws-settings.php:527 class-bws-settings.php:530
 #: class-bws-settings.php:585 class-bws-settings.php:588
 msgid "Notice"
-msgstr "Внимание"
+msgstr "Poznámka"
 
 #: bws_functions.php:495
 msgid "The plugin's settings have been changed."
-msgstr "Настройки плагина были изменены"
+msgstr "Nastavení pluginu bylo změněno."
 
 #: bws_functions.php:496 deprecated.php:640 class-bws-settings.php:175
 #: class-bws-settings.php:189
 msgid "Save Changes"
-msgstr "Сохранить изменения"
+msgstr "Uložit změny"
 
 #: bws_functions.php:510
+#, fuzzy
 msgid ""
 "You can always look at premium options by checking the \"Pro Options\" in "
 "the \"Misc\" tab."
 msgstr ""
-"Вы всегда можете просмотреть премиум опции нажав на кнопку \"Pro опции\" на "
-"вкладке \"Разное\"."
+"Vždy se můžete podívat na možnosti prémiové verze, kliknutím na \"Zobrazit "
+"Pro vlastnosti\" na \"Go PRO\" záložce"
 
 #: bws_functions.php:649
 msgid "Add shortcode"
-msgstr "Добавить шорткод"
+msgstr "Přidat krátký kód"
 
 #: bws_functions.php:649
 msgid "Add BestWebSoft plugins' shortcodes using this button."
-msgstr "Добавьте шорткоды BestWebSoft плагинов с помощью этой кнопки."
+msgstr "Pomocí tohoto tlačítka přidat krátké kódy BestWebSoft pluginu."
 
 #: bws_functions.php:698
 msgid "Close"
-msgstr "Закрыть"
+msgstr "Zavřít"
 
 #: bws_functions.php:790
+#, fuzzy
 msgid "Are you sure you want to restore default settings?"
-msgstr ""
-"Вы уверены что хотите восстановить все настройки плагина к настройкам по "
-"умолчанию?"
+msgstr "Jste si jisti, že chcete obnovit veškerá nastavení na výchozí hodnoty?"
 
 #: bws_functions.php:793
 msgid "Yes, restore all settings"
-msgstr "Да, восстановить все настройки"
+msgstr "Ano, obnovit veškerá nastavení"
 
 #: bws_functions.php:794
 msgid "No, go back to the settings page"
-msgstr "Нет, вернуться на страницу настроек"
+msgstr "Ne, vrátit se zpět na stránku nastavení"
 
 #: bws_functions.php:840
 msgid "Plugin"
-msgstr "Плагин"
+msgstr "Plugin"
 
 #: bws_functions.php:849
 msgid "Shortcode settings"
-msgstr "Настройки шорткода"
+msgstr "Nastavení krátkých kódů"
 
 #: bws_functions.php:854
 msgid "The shortcode will be inserted"
-msgstr "Будет вставлен шорткод"
+msgstr "Bude vložen krátký kód"
 
 #: bws_functions.php:859
 msgid "Insert"
-msgstr "Вставить"
+msgstr "Vložit"
 
 #: bws_functions.php:919
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "Často kladené otázky (FAQ)"
 
 #: bws_functions.php:925
 msgid "For more information:"
-msgstr "Для дополнительной информации:"
+msgstr "Pro více informací:"
 
 #: bws_functions.php:926
 msgid "Documentation"
-msgstr "Документация"
+msgstr "Dokumentace"
 
 #: bws_functions.php:927
 msgid "Video Instructions"
-msgstr "Видео инструкции"
+msgstr "Video instrukce"
 
 #: bws_functions.php:928
+#, fuzzy
 msgid "Submit a Request"
-msgstr "Отправить запрос"
+msgstr "Odeslat požadavek"
 
 #: deprecated.php:91 bws_menu.php:307 bws_menu.php:311 bws_menu.php:360
 msgid "Plugins"
-msgstr "Плагины"
+msgstr "Pluginy"
 
 #: deprecated.php:92 bws_menu.php:308 bws_menu.php:312 bws_menu.php:611
 msgid "Themes"
-msgstr "Темы"
+msgstr "Šablony"
 
 #: deprecated.php:93
 msgid "System Status"
-msgstr "Системная информация"
+msgstr "Stav systému"
 
 #: deprecated.php:133 deprecated.php:199 deprecated.php:352 bws_menu.php:120
 #: class-bws-settings.php:807 class-bws-settings.php:873
@@ -319,137 +318,142 @@ msgid ""
 "Something went wrong. Please try again later. If the error appears again, "
 "please contact us"
 msgstr ""
-"Что-то пошло не так. Повторите попытку позже. Если ошибка появится снова, "
-"пожалуйста, свяжитесь с нами"
+"Něco se pokazilo. Prosím zkuste to znovu později. Pokud se chyba objeví "
+"znovu, obraťte se na nás"
 
 #: deprecated.php:133 deprecated.php:199 deprecated.php:352 bws_menu.php:120
 #: class-bws-settings.php:807 class-bws-settings.php:873
 #: class-bws-settings.php:909
 msgid "We are sorry for inconvenience."
-msgstr "Приносим извинения за неудобства."
+msgstr "Omlouváme se za nepříjemnosti."
 
 #: deprecated.php:139 deprecated.php:358 bws_menu.php:126
 #: class-bws-settings.php:813 class-bws-settings.php:915
 msgid "Wrong license key."
-msgstr "Неправильный лицензионный ключ."
+msgstr "Neplatný licenční klíč"
 
 #: deprecated.php:141 deprecated.php:360 class-bws-settings.php:815
 #: class-bws-settings.php:917
+#, fuzzy
 msgid "This license key is bound to another site."
-msgstr "Этот лицензионный ключ привязан к другому сайту."
+msgstr "Tento licenční klíč je přidružen k jiným webovým stránkám."
 
 #: deprecated.php:143 class-bws-settings.php:817
 msgid ""
 "This license key is valid, but Your license has expired. If you want to "
 "update our plugin in future, you should extend the license."
 msgstr ""
-"Лицензионный ключ принят, но срок действия лицензии истек. Если вы хотите "
-"обновлять плагин в будущем, вы должны продлить лицензию."
+"Tento licenční klíč je platný, ale vaše licence vypršela. Chcete-li náš "
+"plugin v budoucnosti aktualizovat, měli by jste licenci prodloužit."
 
 #: deprecated.php:145 class-bws-settings.php:819
 msgid "Unfortunately, you have exceeded the number of available tries."
-msgstr "К сожалению, вы превысили количество доступных попыток."
+msgstr "Bohužel, překročili jste dostupný počet pokusů."
 
 #: deprecated.php:147 class-bws-settings.php:821
 msgid ""
 "Unfortunately, the Pro Trial licence was already installed to this domain. "
 "The Pro Trial license can be installed only once."
 msgstr ""
-"К сожалению, Pro Trial версия плагина уже устанавливалась на этот домен. Pro "
-"Trial версию можно устанавливать лишь один раз."
+"Bohužel, tato zkušební Pro licence již pro tuto doménu byla použita. "
+"Zkušební Pro licence může být instalována pouze jedenkrát."
 
 #: deprecated.php:151 class-bws-settings.php:825
 msgid "The Pro Trial license key is valid."
-msgstr "Ключ Pro Trial версии действителен."
+msgstr "Licenční klíč zkušební Pro verze je platný"
 
 #: deprecated.php:153 bws_menu.php:140 class-bws-settings.php:827
 msgid "The license key is valid."
-msgstr "Лицензионный ключ действителен."
+msgstr "Licenční klíč je platný"
 
 #: deprecated.php:156 bws_menu.php:142 class-bws-settings.php:830
 msgid "Your license will expire on"
-msgstr "Ваша лицензия истечет"
+msgstr "Vaše licence vyprší"
 
 #: deprecated.php:159 deprecated.php:246 class-bws-settings.php:833
 #, php-format
 msgid ""
 "In order to continue using the plugin it is necessary to buy a %s license."
 msgstr ""
-"Чтобы продолжить пользоваться плагином, необходимо приобрести %s лицензию."
+"Pokud chcete nadále využívat tento plugin, je nutné zakoupit %s licenci."
 
 #: deprecated.php:204
 msgid "Please, enter your license key"
-msgstr "Пожалуйста, введите Ваш лицензионный ключ"
+msgstr "Prosím, vložte váš licenční klíč."
 
 #: deprecated.php:223
+#, fuzzy
 msgid ""
 "If necessary, you can check if the license key is correct or reenter it in "
 "the field below. You can find your license key on your personal page - "
 "Client Area - on our website"
 msgstr ""
-"При необходимости вы можете проверить валидность лицензионного ключа или "
-"повторно ввести его в поле ниже. Вы можете найти ваш лицензионный ключ на "
-"своей личной странице - Client Area - на нашем сайте"
+"V případě potřeby zkontrolujte, je-li licenční klíč správně zadán, případně "
+"jej do pole níže vložte znova. Váš licenční klíč najdete na vaší osobní "
+"stránce - Klientská zóna - na našem webu"
 
 #: deprecated.php:223
 msgid ""
 "(your username is the email address specified during the purchase). If "
 "necessary, please submit \"Lost your password?\" request."
 msgstr ""
-"(ваше имя пользователя - это емейл, указанный при покупке). При "
-"необходимости нажмите \"Забыли пароль?\"."
+"(vaše uživatelské jméno je e-mailová adresa uvedena při nákupu). Pokud je to "
+"nutné, prosím odešlete \"Lost your password?\" požadavek."
 
 #: deprecated.php:227 bws_menu.php:336 bws_menu.php:347
 #: class-bws-settings.php:749
 msgid "Check license key"
-msgstr "Проверка лицензионного ключа"
+msgstr "Zkontrolujte licenční klíč"
 
 #: deprecated.php:247
+#, fuzzy
 msgid "After that, you can activate it by entering your license key."
-msgstr "После этого вы сможете активировать его введя лицензионный ключ."
+msgstr "Poté, co jej aktivujete vložením vašeho licenčního klíče."
 
 #: deprecated.php:249 deprecated.php:688
 msgid "License key can be found in the"
-msgstr "Лицензионный ключ можно найти в"
+msgstr "Licenční klíč najdete v"
 
 #: deprecated.php:251 deprecated.php:690
 msgid "(your username is the email address specified during the purchase)."
-msgstr "(ваше имя пользователя - это емейл, указанный при покупке)."
+msgstr "(vaše uživatelské jméno je e-mailová adresa uvedena při nákupu)."
 
 #: deprecated.php:259 deprecated.php:267 deprecated.php:629 deprecated.php:700
 #: deprecated.php:709 bws_menu.php:345 bws_menu.php:563 bws_menu.php:572
 #: class-bws-settings.php:728
 msgid "Activate"
-msgstr "Активировать"
+msgstr "Aktivovat"
 
 #: deprecated.php:261 bws_menu.php:130 bws_menu.php:334
 msgid "Unfortunately, you have exceeded the number of available tries per day."
-msgstr "К сожалению, вы превысили количество доступных попыток."
+msgstr "Bohužel, překročili jste dostupný počet pokusů pro daný den."
 
 #: deprecated.php:278
+#, fuzzy
 msgid ""
 "Congratulations! The Pro license of the plugin is activated successfully."
-msgstr "Поздравляем! Pro версия плагина успешно активирована."
+msgstr "Gratulujeme! PRO licence pluginu je úspěšně aktivována."
 
 #: deprecated.php:280 deprecated.php:669
 msgid "Please, go to"
-msgstr "Пожалуйста, перейдите на"
+msgstr "Prosím, jděte na"
 
 #: deprecated.php:280 deprecated.php:669
+#, fuzzy
 msgid "the setting page"
-msgstr "страницу настроек"
+msgstr "stránka nastavení"
 
 #: deprecated.php:281 deprecated.php:670
 msgid "You will be redirected automatically in 5 seconds."
-msgstr "Вы будете перенаправлены автоматически через 5 секунд."
+msgstr "Budete automaticky přesměrováni za 5 sekund."
 
 #: deprecated.php:315
 msgid "Check premium options on the plugin settings page!"
-msgstr "Просмотрите премиум опции на странице настроек плагина!"
+msgstr "Zkontrolujte prémiové možnosti na stránce nastavení pluginů!"
 
 #: deprecated.php:322 bws_menu.php:99 class-bws-settings.php:781
 msgid "Wrong license key"
-msgstr "Неправильный лицензионный ключ"
+msgstr "Špatný licenční klíč"
 
 #: deprecated.php:362 deprecated.php:703 class-bws-settings.php:733
 #: class-bws-settings.php:919
@@ -457,92 +461,89 @@ msgid ""
 "Unfortunately, you have exceeded the number of available tries per day. "
 "Please, upload the plugin manually."
 msgstr ""
-"К сожалению, вы превысили количество доступных попыток в день. Пожалуйста, "
-"загрузите плагин вручную."
+"Bohužel, jste překročili počet dostupných pokusů za den. Prosím, nahrejte "
+"plugin ručně."
 
 #: deprecated.php:364 bws_menu.php:132 class-bws-settings.php:921
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "Unfortunately, Your license has expired. To continue getting top-priority "
 "support and plugin updates, you should extend it in your %s"
 msgstr ""
-"К сожалению, время использования вашей лицензии истекло. Для получения "
-"обновлений и приоритетной тех.поддержки, вам необходимо продлить лицензию в "
-"вашей %s"
+"Bohužel, Vaše licence vypršela. Chcete-li pokračovat v získávání top-"
+"prioritní podpory a aktualizace pluginu měli byste ji prodloužit ve vašem"
 
 #: deprecated.php:366 bws_menu.php:134 class-bws-settings.php:923
 msgid ""
 "Unfortunately, the Pro licence was already installed to this domain. The Pro "
 "Trial license can be installed only once."
 msgstr ""
-"К сожалению, Pro лицензия уже была установлена на этом доменен. Pro Trial "
-"лицензия может быть установлена только один раз."
+"Bohužel, tato Pro licence již pro tuto doménu byla použita. Zkušební Pro "
+"licence může být instalována pouze jedenkrát."
 
 #: deprecated.php:387 deprecated.php:409 deprecated.php:431 bws_menu.php:400
 #: bws_menu.php:431 bws_menu.php:442 class-bws-settings.php:947
 #: class-bws-settings.php:969 class-bws-settings.php:991
 msgid "Failed to download the zip archive. Please, upload the plugin manually"
-msgstr ""
-"Не удалось загрузить архив плагина. Пожалуйста, загрузите плагин вручную"
+msgstr "Stažení zip archivu selhalo. Prosíme, nahrajte plugin ručně."
 
 #: deprecated.php:399 bws_menu.php:417 class-bws-settings.php:959
 msgid "Failed to open the zip archive. Please, upload the plugin manually"
-msgstr "Не удалось открыть архив ZIP. Пожалуйста, загрузите плагин вручную"
+msgstr "Otevření zip archivu selhalo. Prosíme, nahrajte plugin ručně."
 
 #: deprecated.php:405 bws_menu.php:424 class-bws-settings.php:965
 msgid ""
 "Your server does not support either ZipArchive or Phar. Please, upload the "
 "plugin manually"
 msgstr ""
-"Ваш сервер не поддерживает ни библиотеку ZipArchive, ни библиотеку Phar. "
-"Пожалуйста, загрузите плагин вручную"
+"Váš server nepodporuje buď ZipArchive nebo Phar. Prosím, nahrajte plugin "
+"ručně"
 
 #: deprecated.php:412 bws_menu.php:434 class-bws-settings.php:972
 msgid "UploadDir is not writable. Please, upload the plugin manually"
-msgstr ""
-"Папка загрузки не доступна для записи. Пожалуйста, загрузите плагин вручную"
+msgstr "Nelze zapisovat do UploadDir. Prosím, nahrajte plugin ručně"
 
 #: deprecated.php:435 bws_menu.php:151 class-bws-settings.php:995
 msgid ""
 "Something went wrong. Try again later or upload the plugin manually. We are "
 "sorry for inconvenience."
 msgstr ""
-"Что-то пошло не так. Повторите попытку позже или загрузите плагин вручную. "
-"Приносим извинения за неудобства."
+"Něco se pokazilo. Zkuste to později, nebo nahrajte plugin ručně. Omlouváme "
+"se za nepříjemnosti."
 
 #: deprecated.php:463 class-bws-settings.php:1030
 msgid "Please, enter Your license key"
-msgstr "Пожалуйста, введите ваш лицензионный ключ"
+msgstr "Prosím, vložte váš licenční klíč"
 
 #: deprecated.php:478
 msgid "Restore all plugin settings to defaults"
-msgstr "Восстановить все настройки плагина к настройкам по умолчанию"
+msgstr "Obnovit veškerá nastavení pluginu na výchozí hodnoty?"
 
 #: deprecated.php:480
 msgid "Restore settings"
-msgstr "Восстановить настройки"
+msgstr "Obnovit nastavení"
 
 #: deprecated.php:497 class-bws-settings.php:421
 msgid "You do not have sufficient permissions to edit plugins for this site."
-msgstr ""
-"У вас недостаточно полномочий, чтобы редактировать плагины на этом сайте."
+msgstr "Nemáte dostatečná oprávnění pro úpravu pluginů tohoto webu."
 
 #: deprecated.php:548 deprecated.php:575
 #, php-format
 msgid "File %s edited successfully."
-msgstr "Файл %s успешно изменён."
+msgstr "Soubor %s byl úspěšně upraven."
 
 #: deprecated.php:550 deprecated.php:577
 msgid "Not enough permissions to create or update the file"
-msgstr "Не достаточно прав для создания или обновления файла"
+msgstr "Nedostatečná oprávnění pro vytvoření či úpravu souboru"
 
 #: deprecated.php:580
 msgid "Not enough permissions to create the file"
-msgstr "Не достаточно прав для создания файла"
+msgstr "Nedostatečná oprávnění pro vytvoření souboru"
 
 #: deprecated.php:618 class-bws-settings.php:426
+#, fuzzy
 msgid "These styles will be added to the header on all pages of your site."
-msgstr "Эти стили будут добавлены в хедер на всех страницах вашего сайта."
+msgstr "Tyto styly budou přidány do záhlaví všech stránek vašeho webu."
 
 #: deprecated.php:620 class-bws-settings.php:429
 #, php-format
@@ -550,21 +551,22 @@ msgid ""
 "This PHP code will be hooked to the %s action and will be printed on front "
 "end only."
 msgstr ""
-"Этот PHP код будет прикреплен к %s аction и будет добавлен только во "
-"фронтенде."
+"Tento PHP kód bude hooked to the %s action a bude zobrazen pouze na front "
+"endu."
 
 #: deprecated.php:624
+#, fuzzy
 msgid "Editing"
-msgstr "Редактирование"
+msgstr "Úpravy"
 
 #: deprecated.php:626 class-bws-settings.php:450
 msgid "Browsing"
-msgstr "Просмотр"
+msgstr "Procházení"
 
 #: deprecated.php:633 class-bws-settings.php:461
 #, php-format
 msgid "Learn more about %s"
-msgstr "Подробнее о %s"
+msgstr "Dozvědět se více o %s"
 
 #: deprecated.php:644 class-bws-settings.php:440
 #, php-format
@@ -572,237 +574,255 @@ msgid ""
 "You need to make this files writable before you can save your changes. See "
 "%s the Codex %s for more information."
 msgstr ""
-"Чтобы сохранить изменения, нужно сделать этот файл доступным для записи. "
-"Дополнительную информацию можно получить в %s Кодексе %s."
+"Před tím, než budete moci vaše změny uložit, nastavte těmto souborům "
+"oprávnění pro zápis. Podívejte se %s na Kodex %s pro více informací."
 
 #: deprecated.php:667
+#, fuzzy
 msgid ""
 "Congratulations! Pro version of the plugin is  installed and activated "
 "successfully."
-msgstr "Поздравляем! Pro версия плагина успешно загружена и активирована."
+msgstr "Gratulujeme! PRO verze pluginu byla úspěšně instalována a aktivována."
 
 #: deprecated.php:677
 msgid "Show Pro features"
-msgstr "Показать Pro опции"
+msgstr "Zobrazit Pro vlastnosti"
 
 #: deprecated.php:684
 msgid "Enter your license key to install and activate"
-msgstr "Введите лицензионный ключ для установки и активации"
+msgstr "Vložte váš licenční klíč pro instalaci a aktivaci"
 
 #: deprecated.php:686
 msgid "version of the plugin."
-msgstr "версия плагина."
+msgstr "verze pluginu."
 
 #: deprecated.php:694 class-bws-settings.php:736
 #, php-format
 msgid "Start Your Free %s-Day Trial Now"
-msgstr "Попробуйте %s-дневную Trial версию бесплатно"
+msgstr "Vyzkoušejte vaší %s-denní zkušební verzi zdarma nyní"
 
 #: bws_menu.php:128
+#, fuzzy
 msgid ""
 "This license key is bound to another site. Change it via personal Client "
 "Area."
 msgstr ""
-"Этот лицензионный ключ привязан к другому сайту. Измените это в Client Area."
+"Tento licenční klíč je přidružen k jiným webovým stránkám. Změňte jej "
+"prostřednictvím osobní Klientská zóny."
 
 #: bws_menu.php:128
+#, fuzzy
 msgid "Log in"
-msgstr "Авторизоваться"
+msgstr "Přihlášení"
 
 #: bws_menu.php:144
+#, fuzzy
 msgid "Congratulations! Pro Membership license is  activated successfully."
-msgstr "Поздравляем! Pro Membership лицензия успешно активирована."
+msgstr "Gratulujeme! Členská PRO licence byla úspěšně aktivována."
 
 #: bws_menu.php:161
 msgid "Please enter your license key."
-msgstr "Пожалуйста, введите Ваш лицензионный ключ."
+msgstr "Prosím vložte váš licenční klíč."
 
 #: bws_menu.php:172
+#, fuzzy
 msgid "Not set"
-msgstr "Не задан"
+msgstr "Nenastaveno"
 
 #: bws_menu.php:174 bws_menu.php:175
 msgid "On"
-msgstr "Вкл"
+msgstr "Zapnout"
 
 #: bws_menu.php:174 bws_menu.php:175
+#, fuzzy
 msgid "Off"
-msgstr "Выкл"
+msgstr "Vypnout"
 
 #: bws_menu.php:176 bws_menu.php:177 bws_menu.php:178 bws_menu.php:179
 #: bws_menu.php:180 bws_menu.php:181 bws_menu.php:190
 msgid "N/A"
-msgstr "Неизвестно"
+msgstr "N/A"
 
 #: bws_menu.php:181
 msgid " Mb"
-msgstr "Mb"
+msgstr " Mb"
 
 #: bws_menu.php:182 bws_menu.php:183 bws_menu.php:184 bws_menu.php:188
 msgid "Yes"
-msgstr "Да"
+msgstr "Ano"
 
 #: bws_menu.php:182 bws_menu.php:183 bws_menu.php:184 bws_menu.php:188
 msgid "No"
-msgstr "Нет"
+msgstr "Ne"
 
 #: bws_menu.php:195
+#, fuzzy
 msgid "WordPress Environment"
-msgstr "WordPress Системная среда"
+msgstr "Prostředí"
 
 #: bws_menu.php:197
 msgid "Home URL"
-msgstr "Основной адрес сайта"
+msgstr "Domovská URL"
 
 #: bws_menu.php:198
+#, fuzzy
 msgid "Website URL"
-msgstr "Адрес сайта"
+msgstr "URL webových stránek"
 
 #: bws_menu.php:199
+#, fuzzy
 msgid "WP Version"
-msgstr "Версия WordPress"
+msgstr "PHP Verze"
 
 #: bws_menu.php:200
 msgid "WP Multisite"
-msgstr "Мультисайт"
+msgstr ""
 
 #: bws_menu.php:201
+#, fuzzy
 msgid "WP Memory Limit"
-msgstr "Лимит памяти WordPress"
+msgstr "PHP Limit paměti"
 
 #: bws_menu.php:202
 msgid "Active Theme"
-msgstr "Текущая тема"
+msgstr "Aktivovat šablonu"
 
 #: bws_menu.php:202 bws_menu.php:248 bws_menu.php:251
 #, php-format
 msgid "by %s"
-msgstr "%s"
+msgstr ""
 
 #: bws_menu.php:206
+#, fuzzy
 msgid "Server Environment"
-msgstr "Системная среда сервера"
+msgstr "Prostředí"
 
 #: bws_menu.php:208
 msgid "Operating System"
-msgstr "Операционная система"
+msgstr "Operační systém"
 
 #: bws_menu.php:209
 msgid "Server"
-msgstr "Тип сервера"
+msgstr "Server"
 
 #: bws_menu.php:210
 msgid "PHP Version"
-msgstr "Версия PHP"
+msgstr "PHP Verze"
 
 #: bws_menu.php:211
 msgid "PHP Safe Mode"
-msgstr "PHP Safe Mode"
+msgstr ""
 
 #: bws_menu.php:212
 msgid "PHP Allow URL fopen"
-msgstr "PHP Allow URL fopen"
+msgstr ""
 
 #: bws_menu.php:213
 msgid "PHP Memory Limit"
-msgstr "Лимит памяти"
+msgstr "PHP Limit paměti"
 
 #: bws_menu.php:214
+#, fuzzy
 msgid "Memory Usage"
-msgstr "Использование памяти"
+msgstr "Využití paměti"
 
 #: bws_menu.php:215
 msgid "PHP Max Upload Size"
-msgstr "Макс. размер загружаемого файла"
+msgstr ""
 
 #: bws_menu.php:216
 msgid "PHP Max Post Size"
-msgstr "Макс. размер записи"
+msgstr ""
 
 #: bws_menu.php:217
 msgid "PHP Max Script Execute Time"
-msgstr "Макс. время выполнения сценария"
+msgstr ""
 
 #: bws_menu.php:218
 msgid "PHP Exif support"
-msgstr "Поддержка PHP Exif"
+msgstr ""
 
 #: bws_menu.php:219
 msgid "PHP IPTC support"
-msgstr "Поддержка PHP IPTC"
+msgstr ""
 
 #: bws_menu.php:220
 msgid "PHP XML support"
-msgstr "Поддержка PHP XML"
+msgstr ""
 
 #: bws_menu.php:226
 msgid "Database"
-msgstr "База данных"
+msgstr ""
 
 #: bws_menu.php:228
+#, fuzzy
 msgid "WP DB version"
-msgstr "Версия базы данных WordPress"
+msgstr "WordPress verze DB"
 
 #: bws_menu.php:229
+#, fuzzy
 msgid "MySQL version"
-msgstr "Версия MYSQL"
+msgstr "Verze MYSQL"
 
 #: bws_menu.php:230
 msgid "SQL Mode"
-msgstr "Режим SQL"
+msgstr "Mód SQL"
 
 #: bws_menu.php:234
 msgid "Active Plugins"
-msgstr "Активированные плагины"
+msgstr "Aktivní pluginy"
 
 #: bws_menu.php:239
 msgid "Inactive Plugins"
-msgstr "Неактивированные плагины"
+msgstr "Neaktivní pluginy"
 
 #: bws_menu.php:260
 msgid "Please enter a valid email address."
-msgstr "Пожалуйста, введите валидный емайл."
+msgstr "Prosím vložte platnou e-mailovou adresu."
 
 #: bws_menu.php:264
+#, fuzzy
 msgid "Email with system info is sent to"
-msgstr "Емейл с системной информацией отправлен на"
+msgstr "E-mail se systémovým nastavením byl odeslán na"
 
 #: bws_menu.php:268
 msgid "Thank you for contacting us."
-msgstr "Спасибо что связались с нами."
+msgstr "Děkujeme, že jste nás kontaktovali."
 
 #: bws_menu.php:291
 msgid "Sorry, email message could not be delivered."
-msgstr "Извините, ваш емейл не может быть отправлен."
+msgstr "Je nám líto, ale e-mail nemohl být doručen."
 
 #: bws_menu.php:309 bws_menu.php:313 bws_menu.php:662
 msgid "System status"
-msgstr "Системная информация"
+msgstr "Stav systému"
 
 #: bws_menu.php:317
 msgid "Support"
-msgstr "Тех. поддержка"
+msgstr "Podpora"
 
 #: bws_menu.php:318
+#, fuzzy
 msgid "Manage purchased licenses & subscriptions"
-msgstr "Управление купленными лицензиями и подписками"
+msgstr "Spravovat zakoupené licence & subscriptions"
 
 #: bws_menu.php:326
 #, php-format
 msgid "Get Access to %s+ Premium Plugins"
-msgstr "Получить Доступ к %s+ Премиум Плагинам"
+msgstr "Získejte přístup k %s+ Premiovým pluginům"
 
 #: bws_menu.php:328
+#, fuzzy
 msgid "Subscribe to Pro Membership"
-msgstr "Подписаться на Pro Membership"
+msgstr "Přihlásit se k Pro členství"
 
 #: bws_menu.php:339
 msgid "Enter your license key"
-msgstr "Ваш лицензионный ключ"
+msgstr "Vložte váš licenční klíč"
 
 #: bws_menu.php:361
 msgid "Upload Plugin"
-msgstr "Добавить новый"
+msgstr "Nahrát plugin"
 
 #: bws_menu.php:365
 #, php-format
@@ -812,224 +832,236 @@ msgid ""
 "messages, problems with syndication feeds or other issues, try deactivating "
 "or removing this plugin."
 msgstr ""
-"Плагин произвёл при активации %d символов <strong>неожиданного вывода</"
-"strong>. Если вы заметите ошибку &laquo;headers already sent&raquo;, "
-"проблемы с RSS-лентами или другие неполадки, попробуйте деактивировать или "
-"удалить этот плагин."
+"Plugin generoval %d znaků <strong>neočekávaný výstup</strong> v průběhu "
+"aktivace. If you notice &#8220;headers already sent&#8221; messages, "
+"problems with syndication feeds or other issues, pokuste se deaktivovat, "
+"nebo odstranit tento plugin."
 
 #: bws_menu.php:367
+#, fuzzy
 msgid ""
 "Plugin could not be activated because it triggered a <strong>fatal error</"
 "strong>."
 msgstr ""
-"Плагин не может быть активирован, поскольку он вызвал <strong>фатальную "
-"ошибку</strong>."
+"Plugin nemůže být aktivován, neboť způsobil <strong>fatal error</strong>."
 
 #: bws_menu.php:370
 msgid "Plugin <strong>activated</strong>."
-msgstr "Плагин <strong>активировано</strong>."
+msgstr "Plugin <strong>aktivován</strong>."
 
 #: bws_menu.php:377
 msgid "Installing Plugin"
-msgstr "Установка плагина"
+msgstr "Instalace pluginu"
 
 #: bws_menu.php:383
 msgid "Downloading install package from"
-msgstr "Скачивание установочного пакета из"
+msgstr "Stahování instalačního balíčku z"
 
 #: bws_menu.php:408
 msgid "Unpacking the package"
-msgstr "Распаковка пакета"
+msgstr "Rozbalování balíčku"
 
 #: bws_menu.php:413 bws_menu.php:421
 msgid "Installing the plugin"
-msgstr "Установка плагина"
+msgstr "Instalace pluginu"
 
 #: bws_menu.php:427
 #, php-format
 msgid "The plugin %s is successfully installed."
-msgstr "Плагин %s успешно установлен."
+msgstr ""
 
 #: bws_menu.php:439
 msgid "Activate Plugin"
-msgstr "Активировать плагин"
+msgstr "Aktivovat plugin"
 
 #: bws_menu.php:439 bws_menu.php:445
+#, fuzzy
 msgid "Return to BestWebSoft Panel"
-msgstr "Возврат к BestWebSoft Panel"
+msgstr "Návrat na BestWebSoft panel"
 
 #: bws_menu.php:449 bws_menu.php:464 bws_menu.php:593
 msgid "All"
-msgstr "Все"
+msgstr "Vše"
 
 #: bws_menu.php:450 bws_menu.php:650
 msgid "Installed"
-msgstr "Установленные"
+msgstr "Instalováno"
 
 #: bws_menu.php:451
 msgid "Not Installed"
-msgstr "Не установленные"
+msgstr "Neninstalováno"
 
 #: bws_menu.php:457
+#, fuzzy
 msgid "Filter results"
-msgstr "Фильтр результатов"
+msgstr "Výsledky filtrování"
 
 #: bws_menu.php:460 bws_menu.php:589
 msgid "Category"
-msgstr "Категория"
+msgstr "Rubriky"
 
 #: bws_menu.php:524
 msgid "Not installed"
-msgstr "Не установлен"
+msgstr "Neninstalováno"
 
 #: bws_menu.php:528
+#, fuzzy
 msgid "Renew to get updates"
-msgstr "Продлить для обновления"
+msgstr "Prodloužit pro získání aktualizací"
 
 #: bws_menu.php:531
-#, php-format
+#, fuzzy, php-format
 msgid "Update to v %s"
-msgstr "Обновить до версии %s"
+msgstr "Aktualizovat na v %s"
 
 #: bws_menu.php:543 bws_menu.php:566 bws_menu.php:575
 msgid "Install Now"
-msgstr "Установить"
+msgstr "Instalovat nyní"
 
 #: bws_menu.php:549 class-bws-settings.php:149 class-bws-settings.php:1073
 msgid "Upgrade to Pro"
-msgstr "Обновиться на Pro"
+msgstr "Aktualizovat na Pro"
 
 #: bws_menu.php:563 bws_menu.php:572
 msgid "Activate this plugin"
-msgstr "Активировать плагин"
+msgstr "Aktivovat tento plugin"
 
 #: bws_menu.php:575
 msgid "Install this plugin"
-msgstr "Установить этот плагин"
+msgstr "Instalovat tento plugin"
 
 #: bws_menu.php:584
 msgid "Nothing found. Try another criteria."
-msgstr "Ничего не найдено. Попробуйте другие критерии."
+msgstr "Nic nenalezeno. Zkuste jiná kritéria."
 
 #: bws_menu.php:621 bws_menu.php:641
 #, php-format
 msgid "By %s"
-msgstr "%s"
+msgstr ""
 
 #: bws_menu.php:648
 msgid "Already Installed"
-msgstr "Уже установлена"
+msgstr "Již instalováno"
 
 #: bws_menu.php:659
 msgid "Browse Free WordPress Themes"
-msgstr "Обзор бесплатных WordPress тем"
+msgstr "Procházet WordPress šablony zdarma"
 
 #: bws_menu.php:668
 msgid "Send to support"
-msgstr "Отправить в тех. поддержку"
+msgstr "Odeslat podpoře"
 
 #: bws_menu.php:675
 msgid "Send to custom email &#187;"
-msgstr "Отправить на емейл &#187;"
+msgstr "Odeslat na vlastní e-mail &#187;"
 
 #: product_list.php:7
 msgid "Advertisement"
-msgstr "Реклама"
+msgstr "Reklama"
 
 #: product_list.php:8
 msgid "Content & Media"
-msgstr "Содержание & Медиа"
+msgstr "Obsah & Média"
 
 #: product_list.php:9
 msgid "Management"
-msgstr "Управление"
+msgstr "Správa"
 
 #: product_list.php:10
 msgid "Recommended"
-msgstr "Рекомендованные"
+msgstr "Doporučeno"
 
 #: product_list.php:11
 msgid "Security"
-msgstr "Безопасность"
+msgstr "Bezpečnost"
 
 #: product_list.php:12
 msgid "Site Stats"
-msgstr "Статистика сайта"
+msgstr "Statistiky webu"
 
 #: product_list.php:13
 msgid "Social"
-msgstr "Социальное"
+msgstr "Sociální"
 
 #: product_list.php:14
 msgid "Utilities"
-msgstr "Утилиты"
+msgstr "Utility"
 
 #: product_list.php:15
 msgid "Other"
-msgstr "Другое"
+msgstr "Ostatní"
 
 #: class-bws-settings.php:129
+#, fuzzy
 msgid "Information"
-msgstr "Информация"
+msgstr "Pro více informací:"
 
 #: class-bws-settings.php:136
+#, fuzzy
 msgid "Inactive"
-msgstr "Неактивна"
+msgstr "Neaktivní pluginy"
 
 #: class-bws-settings.php:144
 msgid "Expired"
-msgstr "Истекла"
+msgstr ""
 
 #: class-bws-settings.php:147
 #, php-format
 msgid "%s day(-s) left"
-msgstr "%s дней осталось"
+msgstr ""
 
 #: class-bws-settings.php:153
-#, php-format
+#, fuzzy, php-format
 msgid "Expired on %s"
-msgstr "Истекает %s"
+msgstr "vyprší"
 
 #: class-bws-settings.php:153
 msgid "Renew Now"
-msgstr "Возобновить сейчас"
+msgstr ""
 
 #: class-bws-settings.php:155
+#, fuzzy
 msgid "Active"
-msgstr "Активна"
+msgstr "Aktivovat"
 
 #: class-bws-settings.php:160
+#, fuzzy
 msgid "License"
-msgstr "Лицензия"
+msgstr "Špatný licenční klíč"
 
 #: class-bws-settings.php:163
+#, fuzzy
 msgid "Status"
-msgstr "Статус"
+msgstr "Stav systému"
 
 #: class-bws-settings.php:167
+#, fuzzy
 msgid "Version"
-msgstr "Версия"
+msgstr "verzi!"
 
 #: class-bws-settings.php:276
+#, fuzzy
 msgid "All plugin settings were restored."
-msgstr "Все настройки плагина были восстановлены."
+msgstr "Nastavení pluginu bylo změněno."
 
 #: class-bws-settings.php:417
+#, fuzzy
 msgid "Custom Code"
-msgstr "Пользовательский код"
+msgstr "Кастомизировать"
 
 #: class-bws-settings.php:432
+#, fuzzy
 msgid "These code will be added to the header on all pages of your site."
-msgstr "Этот код будет добавлен в хедер на всех страницах вашего сайта."
+msgstr "Tyto styly budou přidány do záhlaví všech stránek vašeho webu."
 
 #: class-bws-settings.php:454
 #, php-format
 msgid "Activate custom %s code."
-msgstr "Активировать пользовательский %s код."
+msgstr ""
 
 #: class-bws-settings.php:520
 msgid "Miscellaneous Settings"
-msgstr "Прочие настройки"
+msgstr ""
 
 #: class-bws-settings.php:527 class-bws-settings.php:585
 #, php-format
@@ -1037,148 +1069,148 @@ msgid ""
 "It is prohibited to change %s settings on this site in the %s network "
 "settings."
 msgstr ""
-"Cетевыми настройками %s запрещается изменять настройки %s на этом сайте."
 
 #: class-bws-settings.php:530 class-bws-settings.php:588
 #, php-format
 msgid ""
 "It is prohibited to view %s settings on this site in the %s network settings."
 msgstr ""
-"Cетевыми настройками %s запрещается просматривать настройки %s на этом сайте."
 
 #: class-bws-settings.php:536
+#, fuzzy
 msgid "Pro Options"
-msgstr "Pro опции"
+msgstr "Pro плагины"
 
 #: class-bws-settings.php:539
 msgid "Enable to display plugin Pro options."
-msgstr "Включите для отображения Pro опций плагина."
+msgstr ""
 
 #: class-bws-settings.php:544
 msgid "Track Usage"
-msgstr "Собирать статистику"
+msgstr ""
 
 #: class-bws-settings.php:547
 msgid ""
 "Enable to allow tracking plugin usage anonymously in order to make it better."
 msgstr ""
-"Включить, чтобы разрешить анонимно отслеживать использование и сделать "
-"плагин лучше."
 
 #: class-bws-settings.php:551
+#, fuzzy
 msgid "Default Settings"
-msgstr "Настройки по умолчанию"
+msgstr "Nastavení"
 
 #: class-bws-settings.php:553
+#, fuzzy
 msgid "Restore Settings"
-msgstr "Восстановить настройки"
+msgstr "Obnovit nastavení"
 
 #: class-bws-settings.php:554
+#, fuzzy
 msgid "This will restore plugin settings to defaults."
-msgstr "Восстановить все настройки плагина к настройкам по умолчанию."
+msgstr "Obnovit veškerá nastavení pluginu na výchozí hodnoty?"
 
 #: class-bws-settings.php:578
 msgid "Import / Export"
-msgstr "Импорт / Экспорт"
+msgstr ""
 
 #: class-bws-settings.php:701 class-bws-settings.php:724
 #: class-bws-settings.php:746
+#, fuzzy
 msgid "License Key"
-msgstr "Лицензионный ключ"
+msgstr "Špatný licenční klíč"
 
 #: class-bws-settings.php:714
+#, fuzzy
 msgid "Congratulations! Pro license is activated successfully."
-msgstr "Поздравляем! Pro лицензия успешно активирована."
+msgstr "Gratulujeme! Členská PRO licence byla úspěšně aktivována."
 
 #: class-bws-settings.php:715
-#, php-format
+#, fuzzy, php-format
 msgid "You will be automatically redirected to the %s in 7 seconds."
-msgstr "Вы будете автоматически перенаправлены на %s через 7 секунд."
+msgstr "Budete automaticky přesměrováni za 5 sekund."
 
 #: class-bws-settings.php:715
+#, fuzzy
 msgid "Settings page"
-msgstr "страницу Настроек"
+msgstr "Nastavení"
 
 #: class-bws-settings.php:730
-#, php-format
+#, fuzzy, php-format
 msgid "Enter your license key to activate %s and get premium plugin features."
-msgstr ""
-"Введите лицензионный ключ для активации %s и получения дополнительных "
-"возможностей плагина."
+msgstr "Vložte váš licenční klíč pro instalaci a aktivaci"
 
 #: class-bws-settings.php:751
+#, fuzzy
 msgid ""
 "If necessary, you can check if the license key is correct or reenter it in "
 "the field below."
 msgstr ""
-"При необходимости вы можете проверить валидность лицензионного ключа или "
-"повторно ввести его в поле ниже."
+"V případě potřeby zkontrolujte, je-li licenční klíč správně zadán, případně "
+"jej do pole níže vložte znova. Váš licenční klíč najdete na vaší osobní "
+"stránce - Klientská zóna - na našem webu"
 
 #: class-bws-settings.php:756
 msgid "Manage License Settings"
-msgstr "Управление настройками лицензий"
+msgstr ""
 
 #: class-bws-settings.php:758
+#, fuzzy
 msgid "Login to Client Area"
-msgstr "Зайти в Client Area"
+msgstr "Klientská zóna"
 
 #: class-bws-settings.php:760
 msgid ""
 "Manage active licenses, download BWS products, and view your payment history "
 "using BestWebSoft Client Area."
 msgstr ""
-"Управляй активными лицензиями, загружай BWS продукты, а также просматривай "
-"историю платежей с помощью BestWebSoft Client Area."
 
 #: class-bws-settings.php:1044
+#, fuzzy
 msgid "Need Help?"
 msgstr "Нужна помощь?"
 
 #: class-bws-settings.php:1044
+#, fuzzy
 msgid "Read the Instruction"
-msgstr "Читать инструкцию"
+msgstr "Video instrukce"
 
 #: class-bws-settings.php:1046
 msgid "Watch the Video"
-msgstr "Смотреть видео"
+msgstr ""
 
 #: class-bws-settings.php:1077
+#, fuzzy
 msgid "Start Your Free Trial"
-msgstr "Использовать бесплатную Trial версию"
+msgstr "Vyzkoušejte vaší %s-denní zkušební verzi zdarma nyní"
 
 #~ msgid "You license for"
-#~ msgstr "Ваш лицензионный ключ для"
+#~ msgstr "Vaše licence pro"
 
+#, fuzzy
 #~ msgid "expires on"
-#~ msgstr "истекает"
+#~ msgstr "vyprší"
 
 #~ msgid "This license key is bind to another site"
-#~ msgstr "Этот лицензионный ключ привязан к другому сайту"
+#~ msgstr "Tento licenční klíč se váže k jinému webu"
 
 #~ msgid "Successfully installed the plugin"
-#~ msgstr "Успешно установлен плагин"
+#~ msgstr "Plugin byl úspěšně instalován"
 
+#, fuzzy
 #~ msgid "Please, go to %s"
-#~ msgstr "Пожалуйста, перейдите на %s"
-
-#~ msgid "Trial"
-#~ msgstr "Триал"
-
-#~ msgid "Client Area"
-#~ msgstr "Client Area"
+#~ msgstr "Prosím, jděte na"
 
 #~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-#~ msgstr ""
-#~ "Если вам понравился плагин, пожалуйста, поставьте нам 5 звезд на WordPress"
+#~ msgstr "Máte-li rádi náš plugin, prosím dejte mu 5 hvězd na WordPressu"
 
 #~ msgid "If there is something wrong about it, please contact us"
-#~ msgstr "Если у вас есть какие-то вопросы, обращайтесь"
+#~ msgstr "Pokud cokoli není v pořádku, obraťte se na nás"
 
 #~ msgid "Donations play an important role in supporting great projects"
-#~ msgstr "Пожертвования играют важную роль в поддержке проектов"
+#~ msgstr "Dary hrají důležitou roli v podpoře velkých projektů"
 
 #~ msgid "WordPress Version"
-#~ msgstr "Версия WordPress"
+#~ msgstr "Verze WordPress"
 
 #~ msgid "Activate Membership"
 #~ msgstr "Активировать Membership"

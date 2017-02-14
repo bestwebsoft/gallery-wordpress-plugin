@@ -1,4 +1,4 @@
-<a href="http://bestwebsoft.com/products/wordpress/plugins/gallery/" target=_blank>Gallery WordPress Plugin</a>
+<a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/" target=_blank>Gallery WordPress Plugin</a>
 ========================
 
 Add beautiful galleries, albums &#38; images to your Wordpress website in few clicks.
@@ -7,7 +7,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 
 <p>Showcase portfolio or just to show off useful images easily with gallery plugin to power up communication with your visitors, spark up your brand, and increase sales!</p>
 
-<p><a href="http://bestwebsoft.com/demo-for-gallery-pro/">View Demo</a></p>
+<p><a href="https://bestwebsoft.com/demo-for-gallery-pro/">View Demo</a></p>
 
 
 <div class='video'></div>
@@ -60,7 +60,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>Images from WordPress media library</li>
 <li>Descriptions to each album</li>
 </ul></li>
-<li>Install <a href="http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/">Gallery Categories</a> to organize your content</li>
+<li>Install <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery-categories/">Gallery Categories</a> to organize your content</li>
 <li>Add custom code via plugin settings page</li>
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
@@ -117,30 +117,31 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
   <li>Add lightbox image description</li>
   <li>Add a button with URL to the lightbox</li>
   <li>Single gallery pagination</li>
+  <li>Configure every gallery or apply global settings</li>
   <li>Configure all subsites on the network</li>
-  <li>Get answer to your support question within one business day (<a href="http://bestwebsoft.com/support-policy/">Support Policy</a>)</li>
+  <li>Get answer to your support question within one business day (<a href="https://bestwebsoft.com/support-policy/">Support Policy</a>)</li>
   </ul>
   
-  <p><a href="http://bestwebsoft.com/products/wordpress/plugins/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c">Upgrade to Pro Now</a></p>
+  <p><a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c">Upgrade to Pro Now</a></p>
 </blockquote>
 
-<p>If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
+<p>If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
 
 <h4>Documentation &#38; Videos</h4>
 
 <ul>
 <li><a href="https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/">[Doc] How to Add</a></li>
-<li><a href="https://docs.google.com/document/d/1CSkuhf_NrjWlODijrXwyx2lZ_1q5uRw0exTZqz-5fCI/">[Doc] Installation</a></li>
-<li><a href="https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/">[Doc] Trial License Installation</a></li>
-<li><a href="https://docs.google.com/document/d/1ygAuT1U0k-zM4e3uirlTdpKeJZSTLaSufnqkeOWJn3Q/">[Doc] Purchase, Installation &#38; Configuration</a></li>
+<li><a href="https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/">[Doc] How to Receive Trial License</a></li>
+<li><a href="https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/">[Doc] Installation</a></li>
+<li><a href="https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/">[Doc] Purchase</a></li>
+<li><a href="http://www.youtube.com/watch?v=-P9o6-APlv0">[Video] How to Add</a></li>
 <li><a href="https://www.youtube.com/watch?v=3u-Ov-HxZ7U">[Video] Installation Instruction</a></li>
 <li><a href="https://www.youtube.com/watch?v=KAbiac-iORw">[Video] Purchase, Installation, Configuration Tutorial</a></li>
-<li><a href="http://www.youtube.com/watch?v=-P9o6-APlv0">[Video] How to Add</a></li>
 </ul>
 
 <h4>Help &#38; Support</h4>
 
-<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <a href="http://support.bestwebsoft.com/">http://support.bestwebsoft.com/</a></p>
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <a href="https://support.bestwebsoft.com/">https://support.bestwebsoft.com/</a></p>
 
 <h4>Translation</h4>
 
@@ -161,19 +162,19 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>Ukrainian (uk)</li>
 </ul>
 
-<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php">files Poedit</a>.</p>
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="https://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php">files Poedit</a>.</p>
 
 <h4>Recommended Plugins</h4>
 
 <ul>
-<li><a href="http://bestwebsoft.com/products/wordpress/plugins/gallery-categories/">Gallery Categories</a> - Add unlimited gallery categories. Organize images to make the navigation through content easier.</li>
-<li><a href="http://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743">Custom Search</a> - Add custom post types to WordPress website search results.</li>
-<li><a href="http://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
-<li><a href="http://bestwebsoft.com/products/wordpress/plugins/re-attacher/">Re-attacher</a> - Attach, unattach and re-attach media files quickly to WordPress posts and pages.</li>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/gallery-categories/">Gallery Categories</a> - Add unlimited gallery categories. Organize images to make the navigation through content easier.</li>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743">Custom Search</a> - Add custom post types to WordPress website search results.</li>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/re-attacher/">Re-attacher</a> - Attach, unattach and re-attach media files quickly to WordPress posts and pages.</li>
 </ul>
 
 <h4>Donate</h4>
 
 <p>Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.</p>
 
-<p><a href="http://bestwebsoft.com/donate/">Donate Now</a></p>
+<p><a href="https://bestwebsoft.com/donate/">Donate Now</a></p>
