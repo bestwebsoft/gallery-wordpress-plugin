@@ -204,7 +204,7 @@ if ( ! function_exists( 'bws_admin_notices' ) ) {
 							<img title="" src="<?php echo esc_attr( $bws_plugin_banner_to_settings[0]['banner_url'] ); ?>" alt="" />
 						</div>
 						<div class="text">
-							<strong><?php _e( 'Thank you for installing', 'bestwebsoft' ); ?> <?php echo $bws_plugin_banner_to_settings[0]['plugin_info']['Name']; ?> plugin!</strong><br />
+							<strong><?php printf( __( 'Thank you for installing %s plugin!', 'bestwebsoft' ), $bws_plugin_banner_to_settings[0]['plugin_info']['Name'] ); ?> </strong><br />
 							<?php _e( "Let's get started", 'bestwebsoft' ); ?>:
 							<a href="<?php echo $bws_plugin_banner_to_settings[0]['settings_url']; ?>"><?php _e( 'Settings', 'bestwebsoft' ); ?></a>
 							<?php if ( false != $bws_plugin_banner_to_settings[0]['post_type_url'] ) { ?>
@@ -474,7 +474,7 @@ if ( ! function_exists( 'bws_plugin_suggest_feature_banner' ) ) {
 					<img title="" src="<?php echo esc_attr( $banner_url_or_slug ); ?>" alt="" />
 				</div>
 				<div class="text">
-					<strong><?php _e( 'Thank you for choosing', 'bestwebsoft' ); ?> <?php echo $plugin_info['Name']; ?> plugin!</strong><br />
+					<strong><?php printf( __( 'Thank you for choosing %s plugin!', 'bestwebsoft' ), $plugin_info['Name'] ); ?></strong><br />
 					<?php _e( "If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it!", 'bestwebsoft' ); ?>
 					<a target="_blank" href="https://support.bestwebsoft.com/hc/en-us/requests/new"><?php _e( 'Suggest a Feature', 'bestwebsoft' ); ?></a>
 				</div>
@@ -630,7 +630,6 @@ if ( ! function_exists ( 'bws_plugins_admin_head' ) ) {
 				var bws_shortcode_button = {
 					'label': '<?php esc_attr_e( "Add BWS Shortcode", "bestwebsoft" ); ?>',
 					'title': '<?php esc_attr_e( "Add BWS Plugins Shortcode", "bestwebsoft" ); ?>',
-					'icon_url': '<?php echo bws_menu_url( "images/shortcode-icon.png" ); ?>',
 					'function_name': [
 						<?php foreach ( $bws_shortcode_list as $key => $value ) {
 							if ( isset( $value['js_function'] ) )

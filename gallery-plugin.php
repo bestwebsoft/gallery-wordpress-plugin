@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.4.9
+Version: 4.5.0
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -686,7 +686,7 @@ if ( ! function_exists( 'gllr_template_pagination' ) ) {
 	function gllr_template_pagination( $args ) {
 		extract( $args );
 		for ( $i = 1; $i <= $pages; $i++ ) {
-			if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $per_page ) ) {
+			if ( 1 != $pages && ( !( $i >= ( $paged + $range + 1 ) || $i <= ( $paged - $range - 1 ) ) || $pages <= $per_page ) ) {
 				echo ( $paged == $i ) ? "<span class='page-numbers current'>". $i ."</span>" : "<a class='page-numbers inactive' href='". get_pagenum_link( $i ) ."'>" . $i . "</a>";
 			}
 		}
@@ -760,7 +760,7 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 										<div class="gllr_image_row">
 									<?php } ?>
 										<div class="gllr_image_block">
-											<p style="<?php if ( $width ) echo 'width:' . $width + $border_images . 'px;'; if ( $height ) echo 'height:' . $height + $border_images . 'px;'; ?>">
+											<p style="<?php if ( $width ) echo 'width:' . ( $width + $border_images ) . 'px;'; if ( $height ) echo 'height:' . ( $height + $border_images ) . 'px;'; ?>">
 												<?php if ( ! empty( $url_for_link ) ) { ?>
 													<a href="<?php echo $url_for_link; ?>" title="<?php echo $image_text; ?>" target="_blank">
 														<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" />
@@ -1797,7 +1797,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 											<div class="gllr_image_row">
 										<?php } ?>
 											<div class="gllr_image_block">
-												<p style="<?php if ( $width ) echo 'width:' . $width + $border_images . 'px;'; if ( $height ) echo 'height:' . $height + $border_images . 'px;'; ?>">
+												<p style="<?php if ( $width ) echo 'width:' . ( $width + $border_images ) . 'px;'; if ( $height ) echo 'height:' . ( $height + $border_images ) . 'px;'; ?>">
 													<?php if ( ! empty( $url_for_link ) ) { ?>
 														<a href="<?php echo $url_for_link; ?>" title="<?php echo $image_text; ?>" target="_blank">
 															<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" />

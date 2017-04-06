@@ -86,7 +86,7 @@ if ( ! function_exists ( 'bws_general_menu' ) ) {
 				}
 			}
 
-			add_menu_page( 'BWS Panel', 'BWS Panel', 'manage_options', 'bws_panel', 'bws_add_menu_render', bws_menu_url( 'images/logo-white-min.png' ), '1001' );
+			add_menu_page( 'BWS Panel', 'BWS Panel', 'manage_options', 'bws_panel', 'bws_add_menu_render', 'none', '1001' );
 
 			add_submenu_page( 'bws_panel', __( 'Plugins', 'bestwebsoft' ), __( 'Plugins', 'bestwebsoft' ), 'manage_options', 'bws_panel', 'bws_add_menu_render' );
 			add_submenu_page( 'bws_panel', __( 'Themes', 'bestwebsoft' ), __( 'Themes', 'bestwebsoft' ), 'manage_options', 'bws_themes', 'bws_add_menu_render' );
@@ -128,7 +128,7 @@ if ( ! function_exists( 'bws_check_pro_license' ) ) {
 							'body' => array( 'plugins' => serialize( $to_send ) ),
 							'user-agent' => 'WordPress/' . $wp_version . '; ' . get_bloginfo( 'url' )
 						);
-					$raw_response = wp_remote_post( 'https://bestwebsoft.com/wp-content/plugins/paid-products/plugins/update-check/1.0/', $options );
+					$raw_response = wp_remote_post( 'http://bestwebsoft.com/wp-content/plugins/paid-products/plugins/update-check/1.0/', $options );
 					if ( is_wp_error( $raw_response ) || 200 != wp_remote_retrieve_response_code( $raw_response ) ) {
 						$result['error'] = __( 'Something went wrong. Please try again later. If the error appears again, please contact us', 'bestwebsoft' ) . ' <a href=https://support.bestwebsoft.com>BestWebSoft</a>. ' . __( 'We are sorry for inconvenience.', 'bestwebsoft' );
 					} else {
@@ -346,7 +346,7 @@ if ( ! function_exists( 'bws_go_pro_tab_check' ) ) {
 								'timeout' => ( ( defined( 'DOING_CRON' ) && DOING_CRON ) ? 30 : 3 ),
 								'body' => array( 'plugins' => serialize( $to_send ) ),
 								'user-agent' => 'WordPress/' . $wp_version . '; ' . get_bloginfo( 'url' ) );
-							$raw_response = wp_remote_post( 'https://bestwebsoft.com/wp-content/plugins/paid-products/plugins/update-check/1.0/', $options );
+							$raw_response = wp_remote_post( 'http://bestwebsoft.com/wp-content/plugins/paid-products/plugins/update-check/1.0/', $options );
 
 							if ( is_wp_error( $raw_response ) || 200 != wp_remote_retrieve_response_code( $raw_response ) ) {
 								$result['error'] = __( "Something went wrong. Please try again later. If the error appears again, please contact us", 'bestwebsoft' ) . ' <a href="https://support.bestwebsoft.com">BestWebSoft</a>. ' . __( "We are sorry for inconvenience.", 'bestwebsoft' );
@@ -369,7 +369,7 @@ if ( ! function_exists( 'bws_go_pro_tab_check' ) ) {
 									if ( empty( $result['error'] ) ) {
 										$bstwbsftwppdtplgns_options[ $bws_license_plugin ] = $bws_license_key;
 
-										$url = 'https://bestwebsoft.com/wp-content/plugins/paid-products/plugins/downloads/?bws_first_download=' . $bws_license_plugin . '&bws_license_key=' . $bws_license_key . '&download_from=5';
+										$url = 'http://bestwebsoft.com/wp-content/plugins/paid-products/plugins/downloads/?bws_first_download=' . $bws_license_plugin . '&bws_license_key=' . $bws_license_key . '&download_from=5';
 										$uploadDir = wp_upload_dir();
 										$zip_name = explode( '/', $bws_license_plugin );
 

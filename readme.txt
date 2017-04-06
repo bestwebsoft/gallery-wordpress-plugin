@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 4.0
-Tested up to: 4.7.2
-Stable tag: 4.4.9
+Tested up to: 4.7.3
+Stable tag: 4.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Showcase portfolio or just to show off useful images easily with gallery plugin 
 
 [View Demo](https://bestwebsoft.com/demo-for-gallery-pro/)
 
-http://www.youtube.com/watch?v=aydaTdOpaRM
+https://www.youtube.com/watch?v=aydaTdOpaRM
 
 = Free Features =
 
@@ -104,7 +104,7 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 * [[Doc] How to Receive Trial License](https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/)
 * [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 * [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
-* [[Video] How to Add](http://www.youtube.com/watch?v=-P9o6-APlv0)
+* [[Video] How to Add](https://www.youtube.com/watch?v=-P9o6-APlv0)
 * [[Video] Installation Instruction](https://www.youtube.com/watch?v=3u-Ov-HxZ7U)
 * [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=KAbiac-iORw)
 
@@ -117,10 +117,11 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 * Brazilian Portuguese (pt_BR) (thanks to DJIO, www.djio.com.br)
 * Bulgarian (bg_BG) (thanks to Petya)
 * Chinese (zh_CN) (thanks to [Xiaobo Chen](mailto:mibcxb@gmail.com))
-* Czech (cs_CZ) (thanks to [Lagya](mailto:lagya@me.com))
+* Czech (cs_CZ) (thanks to [Michal Kučera](mailto:kucerami@gmail.com) www.n0lim.it)
 * Dutch (nl_NL) (thanks to [J Goessens](mailto:j.goessens@gmail.com))
 * French (fr_FR) (thanks to Didier, [L Capronnier](mailto:lcapronnier@yahoo.com))
 * German (de_DE) (thanks to Thomas Bludau, [Jonas Seemann](mailto:info@ahoidesign.de))
+* Indonesian (id_ID) (thanks to [Jordan Silaen](mailto:jordan.silaen@chameleonjohn.com) www.chameleonjohn.com)
 * Russian (ru_RU)
 * Serbian (sr_RS) (thanks to [Andrijana Nikolic](mailto:andrijanan@webhostinggeeks.com) www.webhostinggeeks.com )
 * Slovak (sk_SK) (thanks to [Michal Kralik](mailto:ja@michalkralik.sk))
@@ -129,7 +130,7 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 * Turkish (tr) (thanks to [Ismail Demirbilek](mailto:ce.demirbilek@gmail.com))
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](https://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](https://www.poedit.net/download.php).
 
 = Recommended Plugins =
 
@@ -220,6 +221,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 6. Gallery Global Settings page.
 
 == Changelog ==
+
+= V4.5.0 - 06.04.2017 =
+* NEW : The Indonesian language file is added.
+* Update : The French language file is updated.
+* Update : The Czech language file is updated.
 
 = V4.4.9 - 13.02.2017 =
 * NEW : Cover settings were added.
@@ -610,6 +616,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.5.0 =
+* Languages updated.
 
 = V4.4.9 =
 * New features added.

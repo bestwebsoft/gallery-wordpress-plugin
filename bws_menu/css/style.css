@@ -46,10 +46,11 @@ body[class*="-bws-panel"] .update-nag {
     text-decoration: none;
     box-shadow: none;
 }
-.bws-logo {
-    max-height: 26px;
-    vertical-align: middle;
+.bws-logo.bwsicons {
+    font-size: 25px;
+    color: #fff;
     margin: 0 3px;
+    vertical-align: middle;
 }
 .bws-title span {
     color: #8bbed2;

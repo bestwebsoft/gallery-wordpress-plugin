@@ -34,7 +34,7 @@ if ( ! function_exists( 'gllr_check_old_options' ) ) {
  */
 if ( ! function_exists( 'gllr_old_template_options' ) ) {
 	function gllr_old_template_options() {
-		global $gllr_options, $gllr_plugin_info;
+		global $gllr_options, $gllr_plugin_info, $wpdb;
 		if ( isset( $gllr_options['plugin_option_version'] ) && $gllr_plugin_info["Version"] <= '4.4.7' ) {
 			/* get template attribute 'gallery-template.php' for pages */
 			$template_pages = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND ( post_status = 'publish' OR post_status = 'private' ) AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );

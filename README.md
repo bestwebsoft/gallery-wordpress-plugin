@@ -134,7 +134,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li><a href="https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/">[Doc] How to Receive Trial License</a></li>
 <li><a href="https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/">[Doc] Installation</a></li>
 <li><a href="https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/">[Doc] Purchase</a></li>
-<li><a href="http://www.youtube.com/watch?v=-P9o6-APlv0">[Video] How to Add</a></li>
+<li><a href="https://www.youtube.com/watch?v=-P9o6-APlv0">[Video] How to Add</a></li>
 <li><a href="https://www.youtube.com/watch?v=3u-Ov-HxZ7U">[Video] Installation Instruction</a></li>
 <li><a href="https://www.youtube.com/watch?v=KAbiac-iORw">[Video] Purchase, Installation, Configuration Tutorial</a></li>
 </ul>
@@ -149,10 +149,11 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>Brazilian Portuguese (pt_BR) (thanks to DJIO, <a href="http://www.djio.com.br" rel="nofollow">http://www.djio.com.br</a>)</li>
 <li>Bulgarian (bg_BG) (thanks to Petya)</li>
 <li>Chinese (zh_CN) (thanks to <a href="mailto:mibcxb@gmail.com">Xiaobo Chen</a>)</li>
-<li>Czech (cs_CZ) (thanks to <a href="mailto:lagya@me.com">Lagya</a>)</li>
+<li>Czech (cs_CZ) (thanks to <a href="mailto:kucerami@gmail.com">Michal Kučera</a> <a href="http://www.n0lim.it" rel="nofollow">http://www.n0lim.it</a>)</li>
 <li>Dutch (nl_NL) (thanks to <a href="mailto:j.goessens@gmail.com">J Goessens</a>)</li>
 <li>French (fr_FR) (thanks to Didier, <a href="mailto:lcapronnier@yahoo.com">L Capronnier</a>)</li>
 <li>German (de_DE) (thanks to Thomas Bludau, <a href="mailto:info@ahoidesign.de">Jonas Seemann</a>)</li>
+<li>Indonesian (id_ID) (thanks to <a href="mailto:jordan.silaen@chameleonjohn.com">Jordan Silaen</a> <a href="http://www.chameleonjohn.com" rel="nofollow">http://www.chameleonjohn.com</a>)</li>
 <li>Russian (ru_RU)</li>
 <li>Serbian (sr_RS) (thanks to <a href="mailto:andrijanan@webhostinggeeks.com">Andrijana Nikolic</a> <a href="http://www.webhostinggeeks.com" rel="nofollow">http://www.webhostinggeeks.com</a> )</li>
 <li>Slovak (sk_SK) (thanks to <a href="mailto:ja@michalkralik.sk">Michal Kralik</a>)</li>
@@ -162,7 +163,7 @@ Add beautiful galleries, albums &#38; images to your Wordpress website in few cl
 <li>Ukrainian (uk)</li>
 </ul>
 
-<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="https://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php">files Poedit</a>.</p>
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="https://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="https://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="https://www.poedit.net/download.php">files Poedit</a>.</p>
 
 <h4>Recommended Plugins</h4>
 
