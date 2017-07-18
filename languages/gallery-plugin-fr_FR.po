@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: gallery-plugin\n"
+"Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-06 11:20+0300\n"
-"PO-Revision-Date: 2017-04-06 11:21+0300\n"
+"POT-Creation-Date: 2017-06-26 13:05+0300\n"
+"PO-Revision-Date: 2017-06-26 13:05+0300\n"
 "Last-Translator: Luc Capronnier <lcapronnier@yahoo.com>\n"
 "Language-Team: Didier, L Capronnier <lcapronnier@yahoo.com>\n"
 "Language: fr_FR\n"
@@ -18,72 +18,122 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gallery-plugin.php:39 gallery-plugin.php:1389
-#: inc/class-gllr-settings.php:308
+#: gallery-plugin.php:39 gallery-plugin.php:1599
+#: inc/class-gllr-settings.php:309
 msgid "Gallery Settings"
 msgstr "Paramètres de la galerie"
 
-#: gallery-plugin.php:39 inc/class-gllr-settings.php:319
+#: gallery-plugin.php:39 inc/class-gllr-settings.php:320
 msgid "Global Settings"
 msgstr "Paramètres généraux"
 
-#: gallery-plugin.php:45 gallery-plugin.php:2495
+#: gallery-plugin.php:45 gallery-plugin.php:2661
 msgid "Upgrade to Pro"
 msgstr "Passer à la version PRO"
 
-#: gallery-plugin.php:232
+#: gallery-plugin.php:244
 msgid "Return to all albums"
 msgstr "Revenir à tous les albums"
 
-#: gallery-plugin.php:242
+#: gallery-plugin.php:254
 msgid "See images &raquo;"
 msgstr "Voir les images &raquo;"
 
-#: gallery-plugin.php:248
+#: gallery-plugin.php:260
 msgid "Download high resolution image"
 msgstr "Télécharger l'image en haute résolution"
 
-#: gallery-plugin.php:328 gallery-plugin.php:337
+#: gallery-plugin.php:342 gallery-plugin.php:351
 msgid "Galleries"
 msgstr "Galeries"
 
-#: gallery-plugin.php:329 gallery-plugin.php:2788
+#: gallery-plugin.php:343 gallery-plugin.php:3077
 msgid "Gallery"
 msgstr "Galerie"
 
-#: gallery-plugin.php:330
+#: gallery-plugin.php:344
 msgid "Add New Gallery"
 msgstr "Ajouter une nouvelle galerie"
 
-#: gallery-plugin.php:331
+#: gallery-plugin.php:345
 msgid "Edit Gallery"
 msgstr "Modifier la galerie"
 
-#: gallery-plugin.php:332
+#: gallery-plugin.php:346
 msgid "New Gallery"
 msgstr "Nouvelle galerie"
 
-#: gallery-plugin.php:333
+#: gallery-plugin.php:347
 msgid "View Gallery"
 msgstr "Voir la galerie"
 
-#: gallery-plugin.php:334 inc/class-gllr-settings.php:943
+#: gallery-plugin.php:348 inc/class-gllr-settings.php:944
 msgid "Search Galleries"
 msgstr "Rechercher une galerie"
 
-#: gallery-plugin.php:335
+#: gallery-plugin.php:349
 msgid "No Gallery found"
 msgstr "Pas de galeries trouvées"
 
-#: gallery-plugin.php:364
-msgid "Gallery Shortcode"
-msgstr "Code court de la galerie"
-
-#: gallery-plugin.php:366 gallery-plugin.php:395 gallery-plugin.php:2771
+#: gallery-plugin.php:371 gallery-plugin.php:1511 gallery-plugin.php:2807
+#: gallery-plugin.php:2815 gallery-plugin.php:2853 gallery-plugin.php:2876
+#: gallery-plugin.php:3061
 msgid "Gallery Categories"
 msgstr "Catégories de galeries"
 
-#: gallery-plugin.php:376
+#: gallery-plugin.php:372 gallery-plugin.php:743
+msgid "Gallery Category"
+msgstr "Catégories de galeries"
+
+#: gallery-plugin.php:373
+msgid "Add Gallery Category"
+msgstr ""
+
+#: gallery-plugin.php:374
+msgid "Add New Gallery Category"
+msgstr "Ajouter une nouvelle catégorie de galerie"
+
+#: gallery-plugin.php:375 gallery-plugin.php:376
+msgid "Edit Gallery Category"
+msgstr ""
+
+#: gallery-plugin.php:377
+msgid "New Gallery Category"
+msgstr ""
+
+#: gallery-plugin.php:378 gallery-plugin.php:379
+msgid "View Gallery Category"
+msgstr ""
+
+#: gallery-plugin.php:380
+msgid "Find Gallery Category"
+msgstr ""
+
+#: gallery-plugin.php:381
+msgid "No Gallery Categories found"
+msgstr ""
+
+#: gallery-plugin.php:382
+msgid "No Gallery Categories found in Trash"
+msgstr ""
+
+#: gallery-plugin.php:383
+msgid "Parent Gallery Category"
+msgstr ""
+
+#: gallery-plugin.php:384
+msgid "Gallery Categories list navigation"
+msgstr ""
+
+#: gallery-plugin.php:385
+msgid "Gallery Categories list"
+msgstr ""
+
+#: gallery-plugin.php:406
+msgid "Gallery Shortcode"
+msgstr "Code court de la galerie"
+
+#: gallery-plugin.php:415
 msgid ""
 "Add a single gallery with images to your posts, pages, custom post types or "
 "widgets by using the following shortcode:"
@@ -91,7 +141,7 @@ msgstr ""
 "Ajouter une galerie avec des images dans vos articles, pages, type d'article "
 "personnalisé ou widgets en utilisant le code court&nbsp;:"
 
-#: gallery-plugin.php:380
+#: gallery-plugin.php:419
 msgid ""
 "Add a gallery cover including featured image, description, and a link to "
 "your single gallery using the following shortcode:"
@@ -99,87 +149,85 @@ msgstr ""
 "Ajouter une présentation de votre galerie avec une image à la une, une "
 "description et un lien vers votre galerie en utilisant le code court&nbsp;:"
 
-#: gallery-plugin.php:396
-msgid "Most Used"
-msgstr "Les plus utiliser"
+#: gallery-plugin.php:532
+msgid "Note"
+msgstr ""
 
-#: gallery-plugin.php:401
-msgid "Default"
-msgstr "Défaut"
-
-#: gallery-plugin.php:406
-msgid "Add New Gallery Category"
-msgstr "Ajouter une nouvelle catégorie de galerie"
-
-#: gallery-plugin.php:410
+#: gallery-plugin.php:532
 #, php-format
-msgid "Install %s"
-msgstr "Installation %s"
+msgid ""
+"When deleting a category, the galleries that belong to this category will "
+"not be deleted. Instead, these galleries will be moved to the category %s."
+msgstr ""
 
-#: gallery-plugin.php:554
-msgid "Gallery Category"
-msgstr "Catégories de galeries"
-
-#: gallery-plugin.php:813 gallery-plugin.php:920 gallery-plugin.php:1848
-msgid "Sorry, nothing found."
-msgstr "Désolé, rien n'a été trouvé"
-
-#: gallery-plugin.php:1318
-msgid "Featured Image"
-msgstr "Image à la une"
-
-#: gallery-plugin.php:1319 gallery-plugin.php:2352 gallery-plugin.php:2456
-#: gallery-plugin.php:2567 inc/class-gllr-settings.php:656
-msgid "Title"
-msgstr "Titre"
-
-#: gallery-plugin.php:1320 inc/class-gllr-settings.php:41
-msgid "Images"
-msgstr "Images"
-
-#: gallery-plugin.php:1321
+#: gallery-plugin.php:545 gallery-plugin.php:1510
 msgid "Shortcode"
 msgstr "Code court"
 
-#: gallery-plugin.php:1322 inc/class-gllr-settings.php:661
+#: gallery-plugin.php:591
+msgid "All Gallery Categories"
+msgstr ""
+
+#: gallery-plugin.php:668
+msgid "You can't delete default gallery category."
+msgstr ""
+
+#: gallery-plugin.php:1002 gallery-plugin.php:1109 gallery-plugin.php:2014
+msgid "Sorry, nothing found."
+msgstr "Désolé, rien n'a été trouvé"
+
+#: gallery-plugin.php:1507
+msgid "Featured Image"
+msgstr "Image à la une"
+
+#: gallery-plugin.php:1508 gallery-plugin.php:2518 gallery-plugin.php:2622
+#: gallery-plugin.php:2733 inc/class-gllr-settings.php:657
+msgid "Title"
+msgstr "Titre"
+
+#: gallery-plugin.php:1509 inc/class-gllr-settings.php:41
+msgid "Images"
+msgstr "Images"
+
+#: gallery-plugin.php:1512 inc/class-gllr-settings.php:662
 msgid "Author"
 msgstr "Auteur"
 
-#: gallery-plugin.php:1323 inc/class-gllr-settings.php:511
-#: inc/class-gllr-settings.php:657
+#: gallery-plugin.php:1513 inc/class-gllr-settings.php:512
+#: inc/class-gllr-settings.php:658
 msgid "Date"
 msgstr "Date"
 
-#: gallery-plugin.php:1415 gallery-plugin.php:1432
+#: gallery-plugin.php:1625 gallery-plugin.php:1642
 #: inc/class-gllr-settings.php:30 inc/class-gllr-settings.php:42
 msgid "Settings"
 msgstr "Paramètres"
 
-#: gallery-plugin.php:1416
+#: gallery-plugin.php:1626
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:1417
+#: gallery-plugin.php:1627
 msgid "Support"
 msgstr "Soutien"
 
-#: gallery-plugin.php:1455
+#: gallery-plugin.php:1665
 msgid "Updating images..."
 msgstr "Mise à jour des images..."
 
-#: gallery-plugin.php:1456
+#: gallery-plugin.php:1666
 msgid "No images found."
 msgstr "Pas d'image trouvée."
 
-#: gallery-plugin.php:1457
+#: gallery-plugin.php:1667
 msgid "All images were updated."
 msgstr "Toutes les images ont été mises à jour."
 
-#: gallery-plugin.php:1458
+#: gallery-plugin.php:1668
 msgid "Error."
 msgstr "Erreur."
 
-#: gallery-plugin.php:1470
+#: gallery-plugin.php:1680
 msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -187,7 +235,7 @@ msgstr ""
 "Vous allez supprimer ces éléments de la galerie.\n"
 "'Annuler' pour arrêter, 'Ok' pour supprimer"
 
-#: gallery-plugin.php:1471
+#: gallery-plugin.php:1681
 msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -195,7 +243,7 @@ msgstr ""
 "Vous allez supprimer ces éléments de la galerie.\n"
 "'Annuler' pour arrêter, 'Ok' pour supprimer"
 
-#: gallery-plugin.php:1472
+#: gallery-plugin.php:1682
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
@@ -203,54 +251,23 @@ msgstr ""
 "ou plus! Nous ne garantissons pas que notre extension fonctionne "
 "correctement. Merci de mettre à jour votre version de WordPress."
 
-#: gallery-plugin.php:1473
+#: gallery-plugin.php:1683
 msgid "Insert Media"
 msgstr "Insérer un média"
 
-#: gallery-plugin.php:1474
+#: gallery-plugin.php:1684
 msgid "Insert"
 msgstr "Insérer"
 
-#: gallery-plugin.php:1486
-msgid "Learn more"
-msgstr "En savoir plus"
-
-#: gallery-plugin.php:1491
-msgid "Activate"
-msgstr "Activer"
-
-#: gallery-plugin.php:1494 inc/class-gllr-settings.php:964
-msgid "Install Now"
-msgstr "Installer maintenant"
-
-#: gallery-plugin.php:1504
-msgid "Add multiple gallery categories"
-msgstr "Ajouter des catégories de galeries"
-
-#: gallery-plugin.php:1504
-msgid ""
-"Install Gallery Categories plugin to add unlimited number of categories."
-msgstr ""
-"Installer l'extension 'Gallery Categories' pour ajouter un nombre infini de "
-"catégories."
-
-#: gallery-plugin.php:1513 inc/class-gllr-settings.php:330
-#: inc/class-gllr-settings.php:387 inc/class-gllr-settings.php:431
-#: inc/class-gllr-settings.php:481 inc/class-gllr-settings.php:598
-#: inc/class-gllr-settings.php:686 inc/class-gllr-settings.php:722
-#: inc/class-gllr-settings.php:772 inc/class-gllr-settings.php:925
-msgid "Close"
-msgstr "Fermer"
-
-#: gallery-plugin.php:1876
+#: gallery-plugin.php:2042
 msgid "Image"
 msgstr "Image "
 
-#: gallery-plugin.php:2024
+#: gallery-plugin.php:2190
 msgid "Image size not defined"
 msgstr "Taille de l'image non définie"
 
-#: gallery-plugin.php:2039
+#: gallery-plugin.php:2205
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
@@ -258,79 +275,79 @@ msgstr ""
 "Il n'est possible de mettre à jour que les images de type PNG, JPEG, GIF, "
 "WPMP or XBM. Pour les autres, merci de faire une mise à jour manuelle."
 
-#: gallery-plugin.php:2050
+#: gallery-plugin.php:2216
 msgid "Image size changes not defined"
 msgstr "La modification de la taille n'est pas définie"
 
-#: gallery-plugin.php:2079 gallery-plugin.php:2082 gallery-plugin.php:2087
+#: gallery-plugin.php:2245 gallery-plugin.php:2248 gallery-plugin.php:2253
 msgid "Invalid path"
 msgstr "Chemin invalide"
 
-#: gallery-plugin.php:2176
+#: gallery-plugin.php:2342
 msgid "List View"
 msgstr "Vue en mode liste"
 
-#: gallery-plugin.php:2177
+#: gallery-plugin.php:2343
 msgid "Grid View"
 msgstr "Vue en mode grille"
 
-#: gallery-plugin.php:2232
+#: gallery-plugin.php:2398
 msgid "Filter"
 msgstr "Filtrer"
 
-#: gallery-plugin.php:2236
+#: gallery-plugin.php:2402
 msgid "Empty Trash"
 msgstr "Vider la corbeille"
 
-#: gallery-plugin.php:2257
+#: gallery-plugin.php:2423
 msgid "No images found"
 msgstr "Pas d'image trouvée"
 
-#: gallery-plugin.php:2309
+#: gallery-plugin.php:2475
 msgid "Select bulk action"
 msgstr "Sélectionne l'action en masse"
 
-#: gallery-plugin.php:2311
+#: gallery-plugin.php:2477
 msgid "Bulk Actions"
 msgstr "Actions en masse"
 
-#: gallery-plugin.php:2321
+#: gallery-plugin.php:2487
 msgid "Apply"
 msgstr "Appliquer"
 
-#: gallery-plugin.php:2328
+#: gallery-plugin.php:2494
 msgid "Delete from Gallery"
 msgstr "Supprimer de la galerie"
 
-#: gallery-plugin.php:2337
+#: gallery-plugin.php:2503
 msgid "Bulk Select"
 msgstr "Sélection en masse"
 
-#: gallery-plugin.php:2338
+#: gallery-plugin.php:2504
 msgid "Cancel Selection"
 msgstr "Annuler la sélection"
 
-#: gallery-plugin.php:2339
+#: gallery-plugin.php:2505
 msgid "Delete Selected"
 msgstr "Supprimer la sélection"
 
-#: gallery-plugin.php:2350
+#: gallery-plugin.php:2516
 msgid "File"
 msgstr "Fichier"
 
-#: gallery-plugin.php:2351 gallery-plugin.php:2451 gallery-plugin.php:2562
+#: gallery-plugin.php:2517 gallery-plugin.php:2617 gallery-plugin.php:2728
 msgid "Dimensions"
 msgstr "Dimensions"
 
-#: gallery-plugin.php:2353 gallery-plugin.php:2462 gallery-plugin.php:2572
+#: gallery-plugin.php:2519 gallery-plugin.php:2628 gallery-plugin.php:2738
 msgid "Alt Text"
 msgstr "Alt Texte"
 
-#: gallery-plugin.php:2354 gallery-plugin.php:2466 gallery-plugin.php:2577
+#: gallery-plugin.php:2520 gallery-plugin.php:2632 gallery-plugin.php:2743
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:2354 gallery-plugin.php:2468
+#: gallery-plugin.php:2520 gallery-plugin.php:2634
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
@@ -338,118 +355,142 @@ msgstr ""
 "Saisir votre URL personnalisée pour faire un lien de cette image vers une "
 "page ou un article. Laisser vide pour ouvrir l'image en plein écran."
 
-#: gallery-plugin.php:2433
+#: gallery-plugin.php:2599
 msgid "Remove Image from Gallery"
 msgstr "Supprimer les images de la galerie"
 
-#: gallery-plugin.php:2436
+#: gallery-plugin.php:2602
 msgid "Edit Image Info"
 msgstr "Modifier les informations de l'image"
 
-#: gallery-plugin.php:2437
+#: gallery-plugin.php:2603
 msgid "Deselect"
 msgstr "Désélectionner"
 
-#: gallery-plugin.php:2449
+#: gallery-plugin.php:2615
 msgid "File name"
 msgstr "Nom du fichier"
 
-#: gallery-plugin.php:2450
+#: gallery-plugin.php:2616
 msgid "File type"
 msgstr "Type de fichier"
 
-#: gallery-plugin.php:2475
+#: gallery-plugin.php:2641
 msgid "Description"
 msgstr "Description"
 
-#: gallery-plugin.php:2481
+#: gallery-plugin.php:2647
 msgid "Lightbox Button URL"
 msgstr "URL du bouton pour Lightbox"
 
-#: gallery-plugin.php:2488
+#: gallery-plugin.php:2654
 msgid "New Tab"
 msgstr "Nouvel onglet"
 
-#: gallery-plugin.php:2490
+#: gallery-plugin.php:2656
 msgid "Enable to open URLs above in a new tab."
 msgstr "Activer pour ouvrir l'URL dans un nouvel onglet."
 
-#: gallery-plugin.php:2495
+#: gallery-plugin.php:2661
 msgid "Go Pro"
 msgstr "Passer à la version PRO"
 
-#: gallery-plugin.php:2501
+#: gallery-plugin.php:2667
 msgid "Edit more details"
 msgstr "Modifier plus de détails"
 
-#: gallery-plugin.php:2503
+#: gallery-plugin.php:2669
 msgid "Remove from Gallery"
 msgstr "Supprimer de la galerie"
 
-#: gallery-plugin.php:2537
+#: gallery-plugin.php:2703
 #, php-format
 msgid "Select %s"
 msgstr "Sélectionner %s"
 
-#: gallery-plugin.php:2550
+#: gallery-plugin.php:2716
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Pré-visualiser &#8220;%s&#8221;"
 
-#: gallery-plugin.php:2558
+#: gallery-plugin.php:2724
 msgid "Edit Attachment Info"
 msgstr "Modifier les informations du document"
 
-#: gallery-plugin.php:2595 gallery-plugin.php:2608
+#: gallery-plugin.php:2761 gallery-plugin.php:2774
 msgid "Edit"
 msgstr "Modifier"
 
-#: gallery-plugin.php:2598 gallery-plugin.php:2613
+#: gallery-plugin.php:2764 gallery-plugin.php:2779
 msgid "Trash"
 msgstr "Poubelle"
 
-#: gallery-plugin.php:2601 gallery-plugin.php:2616
+#: gallery-plugin.php:2767 gallery-plugin.php:2782
 msgid "Delete Permanently"
 msgstr "Supprimer de manière définitive"
 
-#: gallery-plugin.php:2603 gallery-plugin.php:2622
+#: gallery-plugin.php:2769 gallery-plugin.php:2788
 #, php-format
 msgid "View &#8220;%s&#8221;"
 msgstr "Pré-visualiser &#8220;%s&#8221;"
 
-#: gallery-plugin.php:2603 gallery-plugin.php:2622
+#: gallery-plugin.php:2769 gallery-plugin.php:2788 gallery-plugin.php:2871
 msgid "View"
 msgstr "Voir"
 
-#: gallery-plugin.php:2605
+#: gallery-plugin.php:2771
 msgid "Attach"
 msgstr "Attacher"
 
-#: gallery-plugin.php:2611
+#: gallery-plugin.php:2777
 msgid "Restore"
 msgstr "Remettre"
 
-#: gallery-plugin.php:2741
+#: gallery-plugin.php:2806
+msgid "A list or dropdown of Gallery categories."
+msgstr ""
+
+#: gallery-plugin.php:2851
+msgid "Select Gallery Category"
+msgstr ""
+
+#: gallery-plugin.php:2909
+msgid "Title:"
+msgstr ""
+
+#: gallery-plugin.php:2912
+msgid "Display as dropdown"
+msgstr ""
+
+#: gallery-plugin.php:2914
+msgid "Show gallery counts"
+msgstr ""
+
+#: gallery-plugin.php:2916
+msgid "Show hierarchy"
+msgstr ""
+
+#: gallery-plugin.php:3032
 msgid "Warning"
 msgstr "Avertissement"
 
-#: gallery-plugin.php:2741
+#: gallery-plugin.php:3032
 msgid "You can add only images to the gallery"
 msgstr "Vous ne pouvez ajouter que des images dans la galerie"
 
-#: gallery-plugin.php:2773
+#: gallery-plugin.php:3063
 msgid "or"
 msgstr "ou"
 
-#: gallery-plugin.php:2782
+#: gallery-plugin.php:3071
 msgid "no title"
 msgstr "Pas de titre"
 
-#: gallery-plugin.php:2790
+#: gallery-plugin.php:3079
 msgid "Sorry, no gallery found."
 msgstr "Désolé, rien n'a été trouvé."
 
-#: gallery-plugin.php:2796
+#: gallery-plugin.php:3085
 msgid ""
 "Display an album image with the description and the link to a single gallery "
 "page"
@@ -485,106 +526,114 @@ msgstr "Importer / Exporter"
 msgid "License Key"
 msgstr "Clé de licence"
 
-#: inc/class-gllr-settings.php:208
+#: inc/class-gllr-settings.php:209
 msgid "Custom image size was changed. You need to update gallery images."
 msgstr ""
 "La taille personnalisée des images a été modifiée. Vous devez mettre à jour "
 "les images dans les galeries."
 
-#: inc/class-gllr-settings.php:245
+#: inc/class-gllr-settings.php:246
 msgid "Settings saved"
 msgstr "Paramètres enregistrés."
 
-#: inc/class-gllr-settings.php:257
+#: inc/class-gllr-settings.php:258
 msgid "Please, enable JavaScript in Your browser."
 msgstr "Merci d'activer JavaScript dans votre navigateur."
 
-#: inc/class-gllr-settings.php:262
+#: inc/class-gllr-settings.php:263
 msgid "Update Images"
 msgstr "Mise à jour des images"
 
-#: inc/class-gllr-settings.php:277
+#: inc/class-gllr-settings.php:278
 msgid "Gallery Images"
 msgstr "Galerie d'images"
 
-#: inc/class-gllr-settings.php:282
+#: inc/class-gllr-settings.php:283
 msgid "Adding images requires JavaScript."
 msgstr "Ajouter des images nécessite Java-script."
 
-#: inc/class-gllr-settings.php:285
+#: inc/class-gllr-settings.php:286
 msgid "Add Media"
 msgstr "Ajouter un média"
 
-#: inc/class-gllr-settings.php:294
+#: inc/class-gllr-settings.php:295
 msgid "The grid view for the Gallery images requires JavaScript."
 msgstr ""
 "La vue en mode grille pour les images des galeries nécessite Java-script."
 
-#: inc/class-gllr-settings.php:294
+#: inc/class-gllr-settings.php:295
 msgid "Switch to the list view"
 msgstr "Basculer vers une vue en mode liste"
 
-#: inc/class-gllr-settings.php:317
+#: inc/class-gllr-settings.php:318
 msgid "Single Gallery Settings"
 msgstr "Paramètres de la galerie"
 
-#: inc/class-gllr-settings.php:319
+#: inc/class-gllr-settings.php:320
 #, php-format
 msgid "Enable to configure single gallery settings and disable %s."
 msgstr ""
 "Activer pour pouvoir définir les paramètres par galerie et désactiver %s."
 
-#: inc/class-gllr-settings.php:334
+#: inc/class-gllr-settings.php:331 inc/class-gllr-settings.php:388
+#: inc/class-gllr-settings.php:432 inc/class-gllr-settings.php:482
+#: inc/class-gllr-settings.php:599 inc/class-gllr-settings.php:687
+#: inc/class-gllr-settings.php:723 inc/class-gllr-settings.php:773
+#: inc/class-gllr-settings.php:926
+msgid "Close"
+msgstr "Fermer"
+
+#: inc/class-gllr-settings.php:335
 msgid "Gallery Layout"
 msgstr "Mise en page de la galerie"
 
-#: inc/class-gllr-settings.php:339
+#: inc/class-gllr-settings.php:340
 msgid "Grid"
 msgstr "Grille"
 
-#: inc/class-gllr-settings.php:345
+#: inc/class-gllr-settings.php:346
 msgid "Masonry"
 msgstr "Mur"
 
-#: inc/class-gllr-settings.php:358
+#: inc/class-gllr-settings.php:359
 msgid "Number of Columns"
 msgstr "Nombre de colonnes"
 
-#: inc/class-gllr-settings.php:360
+#: inc/class-gllr-settings.php:361
 msgid "columns"
 msgstr "colonnes"
 
-#: inc/class-gllr-settings.php:361
+#: inc/class-gllr-settings.php:362
 #, php-format
 msgid "Number of gallery columns (default is %s)."
 msgstr "Nombre de colonnes pour la galerie (par défaut %s)."
 
-#: inc/class-gllr-settings.php:365 inc/class-gllr-settings.php:726
+#: inc/class-gllr-settings.php:366 inc/class-gllr-settings.php:727
 msgid "Image Size"
 msgstr "Taille de l'image"
 
-#: inc/class-gllr-settings.php:371 inc/class-gllr-settings.php:583
+#: inc/class-gllr-settings.php:372 inc/class-gllr-settings.php:584
 msgid "Custom"
 msgstr "Personnalisé"
 
-#: inc/class-gllr-settings.php:373
+#: inc/class-gllr-settings.php:374
 msgid ""
 "Maximum gallery image size. \"Custom\" uses the Image Dimensions values."
 msgstr ""
 "Taille maximum d'une image dans la galerie. \"Personnalisé\" utilise les "
 "valeurs définies pour les images."
 
-#: inc/class-gllr-settings.php:377
+#: inc/class-gllr-settings.php:378
 msgid "Custom Image Size"
 msgstr "Taille de l'image personalisée"
 
-#: inc/class-gllr-settings.php:379 inc/class-gllr-settings.php:467
-#: inc/class-gllr-settings.php:591 inc/class-gllr-settings.php:641
-#: inc/class-gllr-settings.php:793
+#: inc/class-gllr-settings.php:380 inc/class-gllr-settings.php:468
+#: inc/class-gllr-settings.php:592 inc/class-gllr-settings.php:642
+#: inc/class-gllr-settings.php:794
 msgid "px"
 msgstr "px"
 
-#: inc/class-gllr-settings.php:380
+#: inc/class-gllr-settings.php:381
 msgid ""
 "Adjust these values based on the number of columns in your gallery. This "
 "won't effect the full size of your images in the lightbox."
@@ -592,11 +641,11 @@ msgstr ""
 "Ajuster ces valeurs sur la base du nombre de colonnes dans votre galerie. "
 "Cela ne changera pas la taille maximum de vos images dans la lightbox."
 
-#: inc/class-gllr-settings.php:391
+#: inc/class-gllr-settings.php:392
 msgid "Crop Images"
 msgstr "Réduire les images"
 
-#: inc/class-gllr-settings.php:393
+#: inc/class-gllr-settings.php:394
 msgid ""
 "Enable to crop images using the sizes defined for Custom Image Size. Disable "
 "to resize images automatically using their aspect ratio."
@@ -605,40 +654,40 @@ msgstr ""
 "paramètres de personnalisation. Désactiver pour restaurer les images "
 "automatiquement en utilisant leur aspect d'origine."
 
-#: inc/class-gllr-settings.php:397 inc/class-gllr-settings.php:608
+#: inc/class-gllr-settings.php:398 inc/class-gllr-settings.php:609
 msgid "Crop Position"
 msgstr "Position pour la réduction"
 
-#: inc/class-gllr-settings.php:412 inc/class-gllr-settings.php:623
+#: inc/class-gllr-settings.php:413 inc/class-gllr-settings.php:624
 msgid "Select crop position base (by default: center)."
 msgstr ""
 "Sélectionner la position de base pour la réduction (par défaut le centre)."
 
-#: inc/class-gllr-settings.php:422
+#: inc/class-gllr-settings.php:423
 msgid "Image Title"
 msgstr "Titre de l'image"
 
-#: inc/class-gllr-settings.php:424
+#: inc/class-gllr-settings.php:425
 msgid "Enable to display image title along with the gallery image."
 msgstr "Activer pour afficher le titre avec l'image dans la galerie."
 
-#: inc/class-gllr-settings.php:435
+#: inc/class-gllr-settings.php:436
 msgid "Image Title Position"
 msgstr "Position du titre de l'image"
 
-#: inc/class-gllr-settings.php:440
+#: inc/class-gllr-settings.php:441
 msgid "Under image"
 msgstr "Sous l'image"
 
-#: inc/class-gllr-settings.php:446
+#: inc/class-gllr-settings.php:447
 msgid "On mouse hover"
 msgstr "Par survol de la souris"
 
-#: inc/class-gllr-settings.php:459
+#: inc/class-gllr-settings.php:460
 msgid "Image Border"
 msgstr "Image avec bordure"
 
-#: inc/class-gllr-settings.php:461
+#: inc/class-gllr-settings.php:462
 msgid ""
 "Enable images border using the styles defined for Image Border Size and "
 "Color."
@@ -646,24 +695,24 @@ msgstr ""
 "Activer les bordures autour des images en utilisant le style et la couleur "
 "définie."
 
-#: inc/class-gllr-settings.php:465
+#: inc/class-gllr-settings.php:466
 msgid "Image Border Size"
 msgstr "Taille de la bordure de l'image"
 
-#: inc/class-gllr-settings.php:468
+#: inc/class-gllr-settings.php:469
 #, php-format
 msgid "Gallery image border width (default is %s)"
 msgstr "Largeur de la bordure pour les images (par défaut %s)"
 
-#: inc/class-gllr-settings.php:472
+#: inc/class-gllr-settings.php:473
 msgid "Image Border Color"
 msgstr "Choisir une couleur pour la bordure"
 
-#: inc/class-gllr-settings.php:485
+#: inc/class-gllr-settings.php:486
 msgid "Pagination"
 msgstr "Pagination"
 
-#: inc/class-gllr-settings.php:488
+#: inc/class-gllr-settings.php:489
 msgid ""
 "Enable pagination for images to limit number of images displayed on a single "
 "gallery page."
@@ -671,36 +720,36 @@ msgstr ""
 "Activer la pagination pour les images afin de limiter le nombre d'images "
 "affichées sur une seule page dans la galerie."
 
-#: inc/class-gllr-settings.php:492
+#: inc/class-gllr-settings.php:493
 msgid "Number of Images"
 msgstr "Nombre d'images"
 
-#: inc/class-gllr-settings.php:495
+#: inc/class-gllr-settings.php:496
 #, php-format
 msgid "Number of images displayed per page (default is %d)."
 msgstr "Nombre d'images affichées par page (par défaut %d)."
 
-#: inc/class-gllr-settings.php:505
+#: inc/class-gllr-settings.php:506
 msgid "Sort Images by"
 msgstr "Trier les images par"
 
-#: inc/class-gllr-settings.php:508
+#: inc/class-gllr-settings.php:509
 msgid "Manually (default)"
 msgstr "Manuel (défaut)"
 
-#: inc/class-gllr-settings.php:509
+#: inc/class-gllr-settings.php:510
 msgid "Image ID"
 msgstr "Image ID"
 
-#: inc/class-gllr-settings.php:510
+#: inc/class-gllr-settings.php:511
 msgid "Name"
 msgstr "Nom"
 
-#: inc/class-gllr-settings.php:512 inc/class-gllr-settings.php:662
+#: inc/class-gllr-settings.php:513 inc/class-gllr-settings.php:663
 msgid "Random"
 msgstr "Aléatoire"
 
-#: inc/class-gllr-settings.php:514
+#: inc/class-gllr-settings.php:515
 msgid ""
 "Select images sorting order in your gallery. By default, you can sort images "
 "manually in the images tab."
@@ -708,23 +757,23 @@ msgstr ""
 "Choisir l'ordre de tri des images dans votre galerie. Par défaut, vous "
 "pouvez trier les images manuellement dans l'onglet des images. "
 
-#: inc/class-gllr-settings.php:518
+#: inc/class-gllr-settings.php:519
 msgid "Arrange Images by"
 msgstr "Trier les images par"
 
-#: inc/class-gllr-settings.php:521 inc/class-gllr-settings.php:671
+#: inc/class-gllr-settings.php:522 inc/class-gllr-settings.php:672
 msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
 msgstr "Ascendant  (par ex 1, 2, 3; a, b, c)"
 
-#: inc/class-gllr-settings.php:522 inc/class-gllr-settings.php:672
+#: inc/class-gllr-settings.php:523 inc/class-gllr-settings.php:673
 msgid "Descending (e.g. 3, 2, 1; c, b, a)"
 msgstr "Descendant (par ex 1, 2, 3; a, b, c)"
 
-#: inc/class-gllr-settings.php:527
+#: inc/class-gllr-settings.php:528
 msgid "Back Link"
 msgstr "Lien de retour"
 
-#: inc/class-gllr-settings.php:529
+#: inc/class-gllr-settings.php:530
 msgid ""
 "Enable to show a back link in a single gallery page which navigate to a "
 "previous page."
@@ -732,61 +781,61 @@ msgstr ""
 "Activer pour afficher un lien de retour dans la page d'une galerie vers la "
 "page précédente."
 
-#: inc/class-gllr-settings.php:533
+#: inc/class-gllr-settings.php:534
 msgid "Back Link URL"
 msgstr "L'URL pour le lien de retour"
 
-#: inc/class-gllr-settings.php:536
+#: inc/class-gllr-settings.php:537
 msgid "Back link custom page URL. Leave blank to use Gallery page template."
 msgstr ""
 "Lien de retour personnalisé vers une page. Laisser vide pour utiliser le "
 "modèle de page de galerie."
 
-#: inc/class-gllr-settings.php:540
+#: inc/class-gllr-settings.php:541
 msgid "Back Link Label"
 msgstr "Libellé pour le lien de retour"
 
-#: inc/class-gllr-settings.php:546
+#: inc/class-gllr-settings.php:547
 msgid "Back Link with Shortcode"
 msgstr "Lien de retour dans le code court"
 
-#: inc/class-gllr-settings.php:549
+#: inc/class-gllr-settings.php:550
 msgid "Enable to display a back link on a page where shortcode is used."
 msgstr ""
 "Activer pour afficher le lien de retour vers la page où le code court est "
 "utilisé."
 
-#: inc/class-gllr-settings.php:560
+#: inc/class-gllr-settings.php:561
 msgid "Cover Settings"
 msgstr "Paramètres de couverture"
 
-#: inc/class-gllr-settings.php:565
+#: inc/class-gllr-settings.php:566
 msgid "Galleries Page"
 msgstr "Page des galeries"
 
-#: inc/class-gllr-settings.php:573
+#: inc/class-gllr-settings.php:574
 msgid "Base page where all existing galleries will be displayed."
 msgstr "Page de base où toutes les galeries existantes seront affichées."
 
-#: inc/class-gllr-settings.php:577
+#: inc/class-gllr-settings.php:578
 msgid "Cover Image Size"
 msgstr "Taille de l'image de couverture"
 
-#: inc/class-gllr-settings.php:585
+#: inc/class-gllr-settings.php:586
 msgid "Maximum cover image size. Custom uses the Image Dimensions values."
 msgstr ""
 "Taille maximum de l'image de couverture. Utiliser les dimensions "
 "personnalisées de l'image."
 
-#: inc/class-gllr-settings.php:589
+#: inc/class-gllr-settings.php:590
 msgid "Custom Cover Image Size"
 msgstr "Taille personnalisée de l'image de couverture"
 
-#: inc/class-gllr-settings.php:602
+#: inc/class-gllr-settings.php:603
 msgid "Crop Cover Images"
 msgstr "Réduire les images de couverture"
 
-#: inc/class-gllr-settings.php:604
+#: inc/class-gllr-settings.php:605
 msgid ""
 "Enable to crop images using the sizes defined for Custom Cover Image Size. "
 "Disable to resize images automatically using their aspect ratio."
@@ -795,11 +844,11 @@ msgstr ""
 "dans le champ de personnalisation. Désactiver pour restaurer les images "
 "automatiquement en utilisant leur aspect d'origine."
 
-#: inc/class-gllr-settings.php:633
+#: inc/class-gllr-settings.php:634
 msgid "Cover Image Border"
 msgstr "Bordure de l'image de couverture"
 
-#: inc/class-gllr-settings.php:635
+#: inc/class-gllr-settings.php:636
 msgid ""
 "Enable cover images border using the styles defined for Image Border Size "
 "and Color."
@@ -807,56 +856,56 @@ msgstr ""
 "Activer les bordures de l'image de couverture avec la taille et la couleur "
 "définies."
 
-#: inc/class-gllr-settings.php:639
+#: inc/class-gllr-settings.php:640
 msgid "Cover Image Border Size"
 msgstr "Taille de la bordure de l'image de couverture"
 
-#: inc/class-gllr-settings.php:642
+#: inc/class-gllr-settings.php:643
 #, php-format
 msgid "Cover image border width (default is %s)"
 msgstr "Taille de la bordure de l'image de couverture (par défaut %s)"
 
-#: inc/class-gllr-settings.php:646
+#: inc/class-gllr-settings.php:647
 msgid "Cover Image Border Color"
 msgstr "Couleur de la bordure de l'image de couverture"
 
-#: inc/class-gllr-settings.php:652
+#: inc/class-gllr-settings.php:653
 msgid "Sort Albums by"
 msgstr "Trier les albums par"
 
-#: inc/class-gllr-settings.php:655
+#: inc/class-gllr-settings.php:656
 msgid "Gallery ID"
 msgstr "Galerie ID"
 
-#: inc/class-gllr-settings.php:658
+#: inc/class-gllr-settings.php:659
 msgid "Last modified date"
 msgstr "Date de dernière modification"
 
-#: inc/class-gllr-settings.php:659
+#: inc/class-gllr-settings.php:660
 msgid "Comment count"
 msgstr "Nombre de commentaires"
 
-#: inc/class-gllr-settings.php:660
+#: inc/class-gllr-settings.php:661
 msgid "Sorting order (the input field for sorting order)"
 msgstr "Ordre de tri (le champ pour définir le critère de tri)"
 
-#: inc/class-gllr-settings.php:664
+#: inc/class-gllr-settings.php:665
 msgid "Select galleries sorting order in your galleries page."
 msgstr "Choisissez l'ordre de tri de vos galeries dans la page des albums."
 
-#: inc/class-gllr-settings.php:668
+#: inc/class-gllr-settings.php:669
 msgid "Arrange Albums by"
 msgstr "Tirer les albums par"
 
-#: inc/class-gllr-settings.php:677
+#: inc/class-gllr-settings.php:678
 msgid "Read More Link Label"
 msgstr "Texte pour le lien \"En savoir plus\""
 
-#: inc/class-gllr-settings.php:690
+#: inc/class-gllr-settings.php:691
 msgid "Instant Lightbox"
 msgstr "Lightbox rapide"
 
-#: inc/class-gllr-settings.php:693
+#: inc/class-gllr-settings.php:694
 msgid ""
 "Enable to display all images in the lightbox after clicking cover image or "
 "URL instead of going to a single gallery page."
@@ -865,21 +914,21 @@ msgstr ""
 "cliquer sur l'image de couverture ou le lien au lieu d'une page avec la "
 "galerie"
 
-#: inc/class-gllr-settings.php:707
+#: inc/class-gllr-settings.php:708
 msgid "Lightbox Settings"
 msgstr "Paramètres lightbox"
 
-#: inc/class-gllr-settings.php:712
+#: inc/class-gllr-settings.php:713
 msgid "Enable Lightbox"
 msgstr "Activer Lightbox"
 
-#: inc/class-gllr-settings.php:715
+#: inc/class-gllr-settings.php:716
 msgid "Enable to show the lightbox when clicking on gallery images."
 msgstr ""
 "Activer pour voir la lightbox lorsque l'on clique sur une image de la "
 "galerie."
 
-#: inc/class-gllr-settings.php:733
+#: inc/class-gllr-settings.php:734
 msgid ""
 "Select the maximum gallery image size for the lightbox view. \"Default\" "
 "will display the original, full size image."
@@ -887,15 +936,15 @@ msgstr ""
 "Choisissez la taille maximum de l'image pour la lightbox. \"Défaut\" "
 "affichera l'image d'origine dans sa taille d'origine."
 
-#: inc/class-gllr-settings.php:737
+#: inc/class-gllr-settings.php:738
 msgid "Overlay Color"
 msgstr "Couleur de superposition"
 
-#: inc/class-gllr-settings.php:743
+#: inc/class-gllr-settings.php:744
 msgid "Overlay Opacity"
 msgstr "Opacité de la superposition"
 
-#: inc/class-gllr-settings.php:746
+#: inc/class-gllr-settings.php:747
 #, php-format
 msgid ""
 "Lightbox overlay opacity. Leave blank to disable opacity (default is %d, max "
@@ -904,89 +953,89 @@ msgstr ""
 "Opacité pour la superposition de Lightbox. Laisser vide pour ne pas utiliser "
 "l''opacité (par défaut %d, max %d)."
 
-#: inc/class-gllr-settings.php:756
+#: inc/class-gllr-settings.php:757
 msgid "Slideshow"
 msgstr "Diaporama"
 
-#: inc/class-gllr-settings.php:758
+#: inc/class-gllr-settings.php:759
 msgid "Enable to start the slideshow automatically when the lightbox is used."
 msgstr ""
 "Activer pour lancer le diaporama automatiquement quand la lightbox est "
 "utilisée."
 
-#: inc/class-gllr-settings.php:762
+#: inc/class-gllr-settings.php:763
 msgid "Slideshow Duration"
 msgstr "Durée du diaporama"
 
-#: inc/class-gllr-settings.php:764
+#: inc/class-gllr-settings.php:765
 msgid "ms"
 msgstr "ms"
 
-#: inc/class-gllr-settings.php:765
+#: inc/class-gllr-settings.php:766
 msgid "Slideshow interval duration between two images."
 msgstr "Durée entre deux images dans le diaporama."
 
-#: inc/class-gllr-settings.php:776
+#: inc/class-gllr-settings.php:777
 msgid "Lightbox Helper"
 msgstr "Lightbox helper"
 
-#: inc/class-gllr-settings.php:778
+#: inc/class-gllr-settings.php:779
 msgid "Enable to use a lightbox helper navigation between images."
 msgstr ""
 "Activer pour utiliser un helper de navigation dans lightbox entre les images."
 
-#: inc/class-gllr-settings.php:782
+#: inc/class-gllr-settings.php:783
 msgid "Lightbox Helper Type"
 msgstr "Lightbox Helper Type"
 
-#: inc/class-gllr-settings.php:785
+#: inc/class-gllr-settings.php:786
 msgid "Thumbnails"
 msgstr "Vignettes"
 
-#: inc/class-gllr-settings.php:786
+#: inc/class-gllr-settings.php:787
 msgid "Buttons"
 msgstr "Boutons"
 
-#: inc/class-gllr-settings.php:791
+#: inc/class-gllr-settings.php:792
 msgid "Lightbox Helper Thumbnail Size"
 msgstr "Taille des vignettes du helper Lightbox"
 
-#: inc/class-gllr-settings.php:797
+#: inc/class-gllr-settings.php:798
 msgid "Lightbox Helper Thumbnail Position"
 msgstr "Position du helper des vignettes lightbox"
 
-#: inc/class-gllr-settings.php:800
+#: inc/class-gllr-settings.php:801
 msgid "Top"
 msgstr "Haut"
 
-#: inc/class-gllr-settings.php:801
+#: inc/class-gllr-settings.php:802
 msgid "Bottom"
 msgstr "Bas"
 
-#: inc/class-gllr-settings.php:806
+#: inc/class-gllr-settings.php:807
 msgid "Lightbox Button Label"
 msgstr "Label du bouton pour Lightbox"
 
-#: inc/class-gllr-settings.php:818
+#: inc/class-gllr-settings.php:819
 msgid "Download Original File"
 msgstr "Télécharger l'image originale"
 
-#: inc/class-gllr-settings.php:820
+#: inc/class-gllr-settings.php:821
 msgid ""
 "Enable to display link to the original file under each image in the lightbox."
 msgstr ""
 "Activer pour afficher un lien vers l'image d'origine sous chaque image dans "
 "la lightbox."
 
-#: inc/class-gllr-settings.php:824
+#: inc/class-gllr-settings.php:825
 msgid "Download Link Label"
 msgstr "Titre pour le lien de téléchargement"
 
-#: inc/class-gllr-settings.php:830
+#: inc/class-gllr-settings.php:831
 msgid "Single Lightbox"
 msgstr "Lightbox simple"
 
-#: inc/class-gllr-settings.php:832
+#: inc/class-gllr-settings.php:833
 msgid ""
 "Enable to use a single lightbox for multiple galleries located on a single "
 "page."
@@ -994,50 +1043,49 @@ msgstr ""
 "Activer pour utiliser un seul diaporama pour plusieurs galeries se trouvant "
 "sur la même page."
 
-#: inc/class-gllr-settings.php:842
+#: inc/class-gllr-settings.php:843
 msgid "Social Sharing Buttons Settings"
 msgstr "Paramètres des boutons des réseaux sociaux"
 
-#: inc/class-gllr-settings.php:850
+#: inc/class-gllr-settings.php:851
 msgid "Enable Social Buttons"
 msgstr "Activer les boutons pour les réseaux sociaux"
 
-#: inc/class-gllr-settings.php:852
-msgid "Enable social sharing buttons in the Lightbox."
+#: inc/class-gllr-settings.php:853
+msgid "Enable social sharing buttons in the lightbox."
 msgstr ""
-"Afficher les boutons de partage sur les réseaux sociaux dans la lightbox"
 
-#: inc/class-gllr-settings.php:856
+#: inc/class-gllr-settings.php:857
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: inc/class-gllr-settings.php:867
+#: inc/class-gllr-settings.php:868
 msgid "Social Buttons Position"
 msgstr "Position des boutons sociaux"
 
-#: inc/class-gllr-settings.php:870
+#: inc/class-gllr-settings.php:871
 msgid "Left"
 msgstr "Gauche"
 
-#: inc/class-gllr-settings.php:872
-msgid "Select social buttons position in a lightbox."
-msgstr "Choisir la position des boutons des réseaux sociaux dans la lightbox."
+#: inc/class-gllr-settings.php:873
+msgid "Select social buttons position in the lightbox."
+msgstr ""
 
-#: inc/class-gllr-settings.php:876
+#: inc/class-gllr-settings.php:877
 msgid "Counter"
 msgstr "Compteur"
 
-#: inc/class-gllr-settings.php:879
+#: inc/class-gllr-settings.php:880
 msgid "Enable to show likes counter for each social button."
 msgstr ""
 "Activer pour voir le nombre de \"J'aime\" sur chaque bouton des réseaux "
 "sociaux."
 
-#: inc/class-gllr-settings.php:894
+#: inc/class-gllr-settings.php:895
 msgid "Demo Data"
 msgstr "Données de démonstration"
 
-#: inc/class-gllr-settings.php:896
+#: inc/class-gllr-settings.php:897
 msgid ""
 "Install demo data to create galleries with images, post with shortcodes and "
 "page with a list of all galleries."
@@ -1046,11 +1094,11 @@ msgstr ""
 "images, des articles avec les différents codes courts, des pages avec des "
 "listes de galeries seront créés."
 
-#: inc/class-gllr-settings.php:915
+#: inc/class-gllr-settings.php:916
 msgid "Gallery Post Type"
 msgstr "Type d'article de Galerie"
 
-#: inc/class-gllr-settings.php:917
+#: inc/class-gllr-settings.php:918
 msgid ""
 "Enable to avoid conflicts with other gallery plugins installed. All "
 "galleries created earlier will stay unchanged. However, after enabling we "
@@ -1062,23 +1110,27 @@ msgstr ""
 "cependant, après la modification, merci de vérifier le paramétrage de vos "
 "autres extensions où le type d'article 'galerie' est utilisé."
 
-#: inc/class-gllr-settings.php:929
+#: inc/class-gllr-settings.php:930
 msgid "Gallery Slug"
 msgstr "Identifiant de la galerie"
 
-#: inc/class-gllr-settings.php:933
+#: inc/class-gllr-settings.php:934
 msgid "Enter the unique gallery slug."
 msgstr "Saisir le slug unique pour la galerie."
 
-#: inc/class-gllr-settings.php:949
+#: inc/class-gllr-settings.php:950
 msgid "Activate Now"
 msgstr "Activer maintenant"
 
-#: inc/class-gllr-settings.php:967
+#: inc/class-gllr-settings.php:965
+msgid "Install Now"
+msgstr "Installer maintenant"
+
+#: inc/class-gllr-settings.php:968
 msgid "Enable to include galleries to your website search."
 msgstr "Activer pour inclure les galeries dans la recherche de votre site."
 
-#: inc/class-gllr-settings.php:967
+#: inc/class-gllr-settings.php:968
 #, php-format
 msgid "%s is required."
 msgstr "%s est requis"
@@ -1177,176 +1229,229 @@ msgstr ""
 msgid "Yes, install demo now"
 msgstr "Oui, installer les données de démonstration"
 
-#~ msgid "Information"
-#~ msgstr "Information"
+#~ msgid "Most Used"
+#~ msgstr "Les plus utiliser"
 
-#~ msgid "Inactive"
-#~ msgstr "Inactif"
+#~ msgid "Default"
+#~ msgstr "Défaut"
+
+#~ msgid "Install %s"
+#~ msgstr "Installation %s"
+
+#~ msgid "Learn more"
+#~ msgstr "En savoir plus"
+
+#~ msgid "Activate"
+#~ msgstr "Activer"
+
+#~ msgid "Add multiple gallery categories"
+#~ msgstr "Ajouter des catégories de galeries"
+
+#~ msgid ""
+#~ "Install Gallery Categories plugin to add unlimited number of categories."
+#~ msgstr ""
+#~ "Installer l'extension 'Gallery Categories' pour ajouter un nombre infini "
+#~ "de catégories."
+
+#~ msgid "requires"
+#~ msgstr "requis"
+
+#~ msgid ""
+#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
+#~ "and try again."
+#~ msgstr ""
+#~ "ou supérieure, c'est pourquoi il a été désactive! Merci de faire la mise "
+#~ "à jour de WordPress et de ré-essayer!"
+
+#~ msgid "Back to the WordPress"
+#~ msgstr "Retour à WordPress"
+
+#~ msgid "Plugins page"
+#~ msgstr "Page des extensions"
+
+#~ msgid "Like the plugin?"
+#~ msgstr "Vous aimez cette extension?"
+
+#~ msgid "Rate it"
+#~ msgstr "Noter la"
+
+#~ msgid "Need help?"
+#~ msgstr "Besoin d'aide ?"
+
+#~ msgid "Visit Help Center"
+#~ msgstr "Visite le centre de support"
+
+#~ msgid "Want to support the plugin?"
+#~ msgstr "Vous voulez aider cette extension?"
+
+#~ msgid "Donate"
+#~ msgstr "Don"
+
+#~ msgid "WARNING: Illegal use notification"
+#~ msgstr "AVERTISSEMENT : Notification d'utilisation abusive"
+
+#~ msgid ""
+#~ "You can use one license of the Pro plugin for one domain only. Please "
+#~ "check and edit your license or domain if necessary using you personal "
+#~ "Client Area. We strongly recommend you to solve the problem within 24 "
+#~ "hours, otherwise the Pro plugin will be deactivated."
+#~ msgstr ""
+#~ "Vous ne pouvez utiliser qu'une licence pour un domaine de la version PRO "
+#~ "de l'extension. Vérifiez et modifiez votre licence ou domaine si "
+#~ "nécessaire dans votre zone client. Nous vous recommandons de résoudre ce "
+#~ "problème dans les 24 heures, sinon l'extension sera rendue inactive. "
 
 #~ msgid "Learn More"
 #~ msgstr "En savoir plus"
 
-#~ msgid "Expired"
-#~ msgstr "Expiré"
-
-#~ msgid "%s day(-s) left"
-#~ msgstr "%s jour(s) restant"
-
-#~ msgid "Expired on %s"
-#~ msgstr "Se termine le %s"
-
-#~ msgid "Renew Now"
-#~ msgstr "Renouveler maintenant"
-
-#~ msgid "Active"
-#~ msgstr "Activer"
-
-#~ msgid "License"
-#~ msgstr "Licence"
-
-#~ msgid "Status"
-#~ msgstr "Etat"
-
-#~ msgid "Version"
-#~ msgstr "Version"
-
-#~ msgid "Save Changes"
-#~ msgstr "Enregistrer les modifications"
-
-#~ msgid "All plugin settings were restored."
+#~ msgid ""
+#~ "Notice: Your Pro Trial license has expired. To continue using the plugin, "
+#~ "you should buy a Pro license"
 #~ msgstr ""
-#~ "Toutes les valeurs par défaut des paramètres de l'extension ont été "
-#~ "remises."
+#~ "Information : Votre licence d'évaluation est terminée. Pour continuer à "
+#~ "utiliser cette extension vous devez acheter une licence PRO"
 
 #~ msgid ""
-#~ "You do not have sufficient permissions to edit plugins for this site."
+#~ "Your license has expired. To continue getting top-priority support and "
+#~ "plugin updates, you should extend it."
 #~ msgstr ""
-#~ "Vous n'avez pas assez de droits pour modifier l'extension pour ce site."
+#~ "Votre licence est terminée. Pour continuer à disposer du support rapide "
+#~ "et des mises à jour de l'extension vous devez la renouveler."
 
-#~ msgid "These styles will be added to the header on all pages of your site."
+#~ msgid "Notice: You are using the Pro Trial license of %s plugin."
 #~ msgstr ""
-#~ "Ces styles seront ajoutés aux entêtes sur tous les pages de votre site."
+#~ "Avertissement : vous utilisez la version d'évaluation de l'extension %s."
+
+#~ msgid "Notice: You are using the Pro Trial license of plugin."
+#~ msgstr ""
+#~ "Avertissement : vous utilisez la version d'évaluation de l'extension."
+
+#~ msgid "The Pro Trial license will expire on"
+#~ msgstr "Votre licence se termine le "
 
 #~ msgid ""
-#~ "This PHP code will be hooked to the %s action and will be printed on "
-#~ "front end only."
+#~ "or higher! We do not guarantee that our plugin will work correctly. "
+#~ "Please upgrade to WordPress latest version."
 #~ msgstr ""
-#~ "Ce code PHP sera rattaché à l'action %s et sera affiché uniquement sur la "
-#~ "partie publique."
+#~ "ou plus! Nous ne garantissons pas que notre extension fonctionne "
+#~ "correctement. Merci de mettre à jour votre version de WordPress."
 
-#~ msgid "These code will be added to the header on all pages of your site."
-#~ msgstr "Ce code sera ajouté aux entêtes sur toutes les pages de votre site."
+#~ msgid "Thank you for installing %s plugin!"
+#~ msgstr "Merci d'avoir installer l'extension %s !"
+
+#~ msgid "Let's get started"
+#~ msgstr "C'est parti"
+
+#~ msgid "Add New"
+#~ msgstr "Ajouter"
+
+#~ msgid "Thank you for installing plugins by BestWebSoft!"
+#~ msgstr "Merci d'avoir installé des extensions de BestWebSoft!"
+
+#~ msgid "More Details"
+#~ msgstr "Plus de détails"
+
+#~ msgid "Less Details"
+#~ msgstr "Moins de détails"
+
+#~ msgid "Deprecated function(-s) is used on the site here:"
+#~ msgstr "Des fonctions obsolètes sont utilisées sur ce site ici&nbsp;:"
 
 #~ msgid ""
-#~ "You need to make this files writable before you can save your changes. "
-#~ "See %s the Codex %s for more information."
+#~ "This function(-s) will be removed over time. Please update the product(-"
+#~ "s)."
 #~ msgstr ""
-#~ "Vous devez rendre ce fichier modifiable avant de pouvoir enregistrer vos "
-#~ "modifications. Regarder %s du Codex %s pour plus d'informations."
+#~ "Ces fonctions seront supprimées dans une prochaine version. Merci de "
+#~ "mettre à jour vos produits."
 
-#~ msgid "Browsing"
-#~ msgstr "Parcourir"
+#~ msgid "It’s time to upgrade your"
+#~ msgstr "C'est le moment de mettre à jour votre "
 
-#~ msgid "Activate custom %s code."
-#~ msgstr "Activer le code personnalisé %s."
+#~ msgid "to"
+#~ msgstr "à"
 
-#~ msgid "Learn more about %s"
-#~ msgstr "En savoir plus sur %s"
+#~ msgid "version!"
+#~ msgstr "version"
 
-#~ msgid "Miscellaneous Settings"
-#~ msgstr "Paramètres divers"
+#~ msgid "Extend standard plugin functionality with new great options."
+#~ msgstr ""
+#~ "Étend les fonctionnalités classiques de l'extension avec des nouvelles "
+#~ "options."
+
+#~ msgid ""
+#~ "Your license key for %s expires on %s and you won't be granted TOP-"
+#~ "PRIORITY SUPPORT or UPDATES."
+#~ msgstr ""
+#~ "Votre clé de licence pour %s est terminée le %s et vous ne disposerez "
+#~ "plus du support rapide et des mises à jour."
+
+#~ msgid "Thank you for choosing %s plugin!"
+#~ msgstr "Merci d'avoir choisi l'extension %s !"
+
+#~ msgid ""
+#~ "If you have a feature, suggestion or idea you'd like to see in the "
+#~ "plugin, we'd love to hear about it!"
+#~ msgstr ""
+#~ "Si vous avez une fonctionnalité, une suggestion ou une idée que vous "
+#~ "souhaitez pour cette extension, nous serons ravis d'en parler avec vous !"
+
+#~ msgid "Suggest a Feature"
+#~ msgstr "Proposer une fonctionnalité"
 
 #~ msgid "Notice"
 #~ msgstr "Avertissement"
 
-#~ msgid ""
-#~ "It is prohibited to change %s settings on this site in the %s network "
-#~ "settings."
-#~ msgstr ""
-#~ "Il est interdit de modifier les paramètres %s sur ce site dans les "
-#~ "paramètres réseau %s."
+#~ msgid "The plugin's settings have been changed."
+#~ msgstr "Les paramètres de l'extension ont été modifiés."
+
+#~ msgid "Save Changes"
+#~ msgstr "Enregistrer les modifications"
 
 #~ msgid ""
-#~ "It is prohibited to view %s settings on this site in the %s network "
-#~ "settings."
+#~ "You can always look at premium options by checking the \"Pro Options\" in "
+#~ "the \"Misc\" tab."
 #~ msgstr ""
-#~ "Il est interdit de voir les paramètres %s sur ce site dans les paramètres "
-#~ "réseau %s."
+#~ "Vous pouvez toujours consulter les options premium en cliquant sur \"Voir "
+#~ "les fonctionnalités PRO\" dans l'onglet \"Divers\""
 
-#~ msgid "Pro Options"
-#~ msgstr "Options Pro"
+#~ msgid "Add BWS Shortcode"
+#~ msgstr "Ajouter le code court de l'extension BWS"
 
-#~ msgid "Enable to display plugin Pro options."
-#~ msgstr "Activer pour voir les options PRO de cette extension."
+#~ msgid "Add BWS Plugins Shortcode"
+#~ msgstr "Ajouter le code court de l'extension BWS"
 
-#~ msgid "Track Usage"
-#~ msgstr "Suivre l'utilisation"
+#~ msgid "Add shortcode"
+#~ msgstr "Ajouter le code court"
 
-#~ msgid ""
-#~ "Enable to allow tracking plugin usage anonymously in order to make it "
-#~ "better."
-#~ msgstr ""
-#~ "Activer pour autoriser le suivi de l'utilisation de cette extension de "
-#~ "manière anonyme afin de la rendre meilleur."
+#~ msgid "Add BestWebSoft plugins' shortcodes using this button."
+#~ msgstr "Ajouter le code court de l'extension BWS avec ce bouton."
 
-#~ msgid "Default Settings"
-#~ msgstr "Paramètres par défaut"
+#~ msgid "Are you sure you want to restore default settings?"
+#~ msgstr "Êtes vous sûr de vouloir remettre toutes les valeurs par défaut ?"
 
-#~ msgid "Restore Settings"
-#~ msgstr "Remettre les paramètres"
+#~ msgid "Yes, restore all settings"
+#~ msgstr "Oui, remettre les valeurs par défaut"
 
-#~ msgid "This will restore plugin settings to defaults."
-#~ msgstr "Remettre les valeurs par défaut des paramètres de l'extension"
+#~ msgid "Plugin"
+#~ msgstr "Extension"
 
-#~ msgid "Congratulations! Pro license is activated successfully."
-#~ msgstr ""
-#~ "Félicitations! La version PRO de cette extension a été téléchargée et "
-#~ "activée avec succès."
+#~ msgid "Shortcode settings"
+#~ msgstr "Paramètres du code court"
 
-#~ msgid "You will be automatically redirected to the %s in 7 seconds."
-#~ msgstr "Vous allez être redirigé automatiquement vers %s dans 7 secondes"
+#~ msgid "The shortcode will be inserted"
+#~ msgstr "Le code court sera inséré"
 
-#~ msgid "Settings page"
-#~ msgstr "Page des paramètres"
+#~ msgid "For more information:"
+#~ msgstr "Pour plus d'information&nbsp;:"
 
-#~ msgid ""
-#~ "Enter your license key to activate %s and get premium plugin features."
-#~ msgstr ""
-#~ "Saisir votre clé de licence pour activer %s et obtenir les fonctions "
-#~ "premium."
+#~ msgid "Documentation"
+#~ msgstr "Documentation"
 
-#~ msgid ""
-#~ "Unfortunately, you have exceeded the number of available tries per day. "
-#~ "Please, upload the plugin manually."
-#~ msgstr ""
-#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
-#~ "télécharger l'extension manuellement."
+#~ msgid "Video Instructions"
+#~ msgstr "Instruction vidéo"
 
-#~ msgid "Start Your Free %s-Day Trial Now"
-#~ msgstr "Débuter votre licence d'évaluation gratuite de %s jours"
-
-#~ msgid "Check license key"
-#~ msgstr "Vérifier la clé de licence"
-
-#~ msgid ""
-#~ "If necessary, you can check if the license key is correct or reenter it "
-#~ "in the field below."
-#~ msgstr ""
-#~ "Si nécessaire vous pouvez vérifier que la clé de licence est correcte ou "
-#~ "la saisir de nouveau dans le champ ci-dessous."
-
-#~ msgid "Manage License Settings"
-#~ msgstr "Paramètres de gestion des licences"
-
-#~ msgid "Login to Client Area"
-#~ msgstr "Connexion à l'espace client"
-
-#~ msgid ""
-#~ "Manage active licenses, download BWS products, and view your payment "
-#~ "history using BestWebSoft Client Area."
-#~ msgstr ""
-#~ "Gérer les licences actives, télécharger les produits BWS, et voir "
-#~ "l'historique de vos paiements dans la zone client BestWebSoft."
+#~ msgid "Submit a Request"
+#~ msgstr "Soumettre une requête"
 
 #~ msgid "Wrong license key"
 #~ msgstr "Clé de licence incorrecte"
@@ -1365,128 +1470,6 @@ msgstr "Oui, installer les données de démonstration"
 #~ msgid "Wrong license key."
 #~ msgstr "Clé de licence incorrecte."
 
-#~ msgid "This license key is bound to another site."
-#~ msgstr "La clé de licence correspond à un autre site."
-
-#~ msgid ""
-#~ "This license key is valid, but Your license has expired. If you want to "
-#~ "update our plugin in future, you should extend the license."
-#~ msgstr ""
-#~ "La clé de licence est valide mais votre durée de validité est passée. "
-#~ "Pour continuer à disposer du support rapide et des mises à jour de "
-#~ "l'extension vous devez la renouveler."
-
-#~ msgid "Unfortunately, you have exceeded the number of available tries."
-#~ msgstr ""
-#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
-#~ "télécharger l'extension manuellement."
-
-#~ msgid ""
-#~ "Unfortunately, the Pro Trial licence was already installed to this "
-#~ "domain. The Pro Trial license can be installed only once."
-#~ msgstr ""
-#~ "Malheureusement la licence PRO a déjà été installée sur ce domaine. La "
-#~ "licence PRO d'évaluation peut être installée une seule fois."
-
-#~ msgid "The Pro Trial license key is valid."
-#~ msgstr "La clé de licence d'évaluation est valide."
-
-#~ msgid "The license key is valid."
-#~ msgstr "La clé de licence est valide."
-
-#~ msgid "Your license will expire on"
-#~ msgstr "Votre licence se termine le "
-
-#~ msgid ""
-#~ "In order to continue using the plugin it is necessary to buy a %s license."
-#~ msgstr ""
-#~ "Afin de pouvoir continuer à utiliser cette extension il est nécessaire "
-#~ "d'acheter une licence %s."
-
-#~ msgid ""
-#~ "Unfortunately, Your license has expired. To continue getting top-priority "
-#~ "support and plugin updates, you should extend it in your %s"
-#~ msgstr ""
-#~ "Désoler, votre licence est terminée. Pour continuer à disposer du support "
-#~ "rapide et des mises à jour de l'extension vous devez la renouveler dans "
-#~ "votre %s"
-
-#~ msgid ""
-#~ "Unfortunately, the Pro licence was already installed to this domain. The "
-#~ "Pro Trial license can be installed only once."
-#~ msgstr ""
-#~ "Malheureusement la licence PRO a déjà été installée sur ce domaine. La "
-#~ "licence PRO d'évaluation peut être installée une seule fois."
-
-#~ msgid ""
-#~ "Failed to download the zip archive. Please, upload the plugin manually"
-#~ msgstr ""
-#~ "Erreur de téléchargement de l'archive ZIP. Merci de télécharger "
-#~ "l'extension manuellement."
-
-#~ msgid "Failed to open the zip archive. Please, upload the plugin manually"
-#~ msgstr ""
-#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
-#~ "manuellement."
-
-#~ msgid ""
-#~ "Your server does not support either ZipArchive or Phar. Please, upload "
-#~ "the plugin manually"
-#~ msgstr ""
-#~ "Votre serveur n'a pas le support du format des archives ZIP ou Phar. "
-#~ "Merci de télécharger l'extension manuellement."
-
-#~ msgid "UploadDir is not writable. Please, upload the plugin manually"
-#~ msgstr ""
-#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
-#~ "manuellement."
-
-#~ msgid ""
-#~ "Something went wrong. Try again later or upload the plugin manually. We "
-#~ "are sorry for inconvenience."
-#~ msgstr ""
-#~ "Il est survenu une erreur. Essayer de nouveau ou bien télécharger "
-#~ "l'extension manuellement.Nous sommes désolés pour le désagrément."
-
-#~ msgid "Please, enter Your license key"
-#~ msgstr "Merci de saisir votre clé de licence"
-
-#~ msgid "Need Help?"
-#~ msgstr "Besoin d'aide ?"
-
-#~ msgid "Read the Instruction"
-#~ msgstr "Lire les instructions"
-
-#~ msgid "Watch the Video"
-#~ msgstr "Regarder la vidéo"
-
-#~ msgid "Start Your Free Trial"
-#~ msgstr "Débuter votre essai gratuit"
-
-#~ msgid "Advertisement"
-#~ msgstr "Publicité"
-
-#~ msgid "Content & Media"
-#~ msgstr "Contenu & média"
-
-#~ msgid "Management"
-#~ msgstr "Administration"
-
-#~ msgid "Recommended"
-#~ msgstr "Recommandé"
-
-#~ msgid "Security"
-#~ msgstr "Sécurité"
-
-#~ msgid "Site Stats"
-#~ msgstr "Statistiques"
-
-#~ msgid "Utilities"
-#~ msgstr "Utilitaires"
-
-#~ msgid "Other"
-#~ msgstr "Autre"
-
 #~ msgid ""
 #~ "This license key is bound to another site. Change it via personal Client "
 #~ "Area."
@@ -1503,10 +1486,38 @@ msgstr "Oui, installer les données de démonstration"
 #~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
 #~ "télécharger l'extension manuellement."
 
+#~ msgid ""
+#~ "Unfortunately, Your license has expired. To continue getting top-priority "
+#~ "support and plugin updates, you should extend it in your %s"
+#~ msgstr ""
+#~ "Désoler, votre licence est terminée. Pour continuer à disposer du support "
+#~ "rapide et des mises à jour de l'extension vous devez la renouveler dans "
+#~ "votre %s"
+
+#~ msgid ""
+#~ "Unfortunately, the Pro licence was already installed to this domain. The "
+#~ "Pro Trial license can be installed only once."
+#~ msgstr ""
+#~ "Malheureusement la licence PRO a déjà été installée sur ce domaine. La "
+#~ "licence PRO d'évaluation peut être installée une seule fois."
+
+#~ msgid "The license key is valid."
+#~ msgstr "La clé de licence est valide."
+
+#~ msgid "Your license will expire on"
+#~ msgstr "Votre licence se termine le "
+
 #~ msgid "Congratulations! Pro Membership license is  activated successfully."
 #~ msgstr ""
 #~ "Félicitations! La version PRO de cette extension a été activée avec "
 #~ "succès."
+
+#~ msgid ""
+#~ "Something went wrong. Try again later or upload the plugin manually. We "
+#~ "are sorry for inconvenience."
+#~ msgstr ""
+#~ "Il est survenu une erreur. Essayer de nouveau ou bien télécharger "
+#~ "l'extension manuellement.Nous sommes désolés pour le désagrément."
 
 #~ msgid "Please enter your license key."
 #~ msgstr "Merci de saisir votre clé de licence."
@@ -1567,9 +1578,6 @@ msgstr "Oui, installer les données de démonstration"
 
 #~ msgid "PHP Version"
 #~ msgstr "PHP Version"
-
-#~ msgid "PHP Safe Mode"
-#~ msgstr "PHP Safe Mode"
 
 #~ msgid "PHP Allow URL fopen"
 #~ msgstr "PHP Allow URL fopen"
@@ -1646,6 +1654,9 @@ msgstr "Oui, installer les données de démonstration"
 #~ msgid "Subscribe to Pro Membership"
 #~ msgstr "Souscrire une adhésion PRO"
 
+#~ msgid "Check license key"
+#~ msgstr "Vérifier la clé de licence"
+
 #~ msgid "Enter your license key"
 #~ msgstr "Merci de saisir votre clé de licence"
 
@@ -1679,14 +1690,37 @@ msgstr "Oui, installer les données de démonstration"
 #~ msgid "Downloading install package from"
 #~ msgstr "Télécharger le paquet d'installation depuis"
 
+#~ msgid ""
+#~ "Failed to download the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur de téléchargement de l'archive ZIP. Merci de télécharger "
+#~ "l'extension manuellement."
+
 #~ msgid "Unpacking the package"
 #~ msgstr "Décompresser le paquet"
 
 #~ msgid "Installing the plugin"
 #~ msgstr "Installer l'extension"
 
+#~ msgid "Failed to open the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
+#~ "manuellement."
+
+#~ msgid ""
+#~ "Your server does not support either ZipArchive or Phar. Please, upload "
+#~ "the plugin manually"
+#~ msgstr ""
+#~ "Votre serveur n'a pas le support du format des archives ZIP ou Phar. "
+#~ "Merci de télécharger l'extension manuellement."
+
 #~ msgid "The plugin %s is successfully installed."
 #~ msgstr "L'extension %s a été installée avec succès."
+
+#~ msgid "UploadDir is not writable. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension "
+#~ "manuellement."
 
 #~ msgid "Activate Plugin"
 #~ msgstr "Activer l'extension"
@@ -1718,9 +1752,6 @@ msgstr "Oui, installer les données de démonstration"
 #~ msgid "Update to v %s"
 #~ msgstr "Mettre à jour avec la version %s"
 
-#~ msgid "Donate"
-#~ msgstr "Don"
-
 #~ msgid "Activate this plugin"
 #~ msgstr "Activer cette extension"
 
@@ -1748,193 +1779,211 @@ msgstr "Oui, installer les données de démonstration"
 #~ msgid "Send to custom email &#187;"
 #~ msgstr "Envoyer un e-mail spécifique &#187;"
 
-#~ msgid "requires"
-#~ msgstr "requis"
+#~ msgid "Information"
+#~ msgstr "Information"
+
+#~ msgid "Inactive"
+#~ msgstr "Inactif"
+
+#~ msgid "Expired"
+#~ msgstr "Expiré"
+
+#~ msgid "%s day(-s) left"
+#~ msgstr "%s jour(s) restant"
+
+#~ msgid "Expired on %s"
+#~ msgstr "Se termine le %s"
+
+#~ msgid "Renew Now"
+#~ msgstr "Renouveler maintenant"
+
+#~ msgid "Active"
+#~ msgstr "Activer"
+
+#~ msgid "License"
+#~ msgstr "Licence"
+
+#~ msgid "Status"
+#~ msgstr "Etat"
+
+#~ msgid "Version"
+#~ msgstr "Version"
+
+#~ msgid "All plugin settings were restored."
+#~ msgstr ""
+#~ "Toutes les valeurs par défaut des paramètres de l'extension ont été "
+#~ "remises."
 
 #~ msgid ""
-#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
-#~ "and try again."
+#~ "You do not have sufficient permissions to edit plugins for this site."
 #~ msgstr ""
-#~ "ou supérieure, c'est pourquoi il a été désactive! Merci de faire la mise "
-#~ "à jour de WordPress et de ré-essayer!"
+#~ "Vous n'avez pas assez de droits pour modifier l'extension pour ce site."
 
-#~ msgid "Back to the WordPress"
-#~ msgstr "Retour à WordPress"
+#~ msgid "These styles will be added to the header on all pages of your site."
+#~ msgstr ""
+#~ "Ces styles seront ajoutés aux entêtes sur tous les pages de votre site."
 
-#~ msgid "Plugins page"
-#~ msgstr "Page des extensions"
+#~ msgid ""
+#~ "This PHP code will be hooked to the %s action and will be printed on "
+#~ "front end only."
+#~ msgstr ""
+#~ "Ce code PHP sera rattaché à l'action %s et sera affiché uniquement sur la "
+#~ "partie publique."
 
-#~ msgid "Like the plugin?"
-#~ msgstr "Vous aimez cette extension?"
+#~ msgid "These code will be added to the header on all pages of your site."
+#~ msgstr "Ce code sera ajouté aux entêtes sur toutes les pages de votre site."
 
-#~ msgid "Rate it"
-#~ msgstr "Noter la"
+#~ msgid ""
+#~ "You need to make this files writable before you can save your changes. "
+#~ "See %s the Codex %s for more information."
+#~ msgstr ""
+#~ "Vous devez rendre ce fichier modifiable avant de pouvoir enregistrer vos "
+#~ "modifications. Regarder %s du Codex %s pour plus d'informations."
 
-#~ msgid "Need help?"
+#~ msgid "Browsing"
+#~ msgstr "Parcourir"
+
+#~ msgid "Activate custom %s code."
+#~ msgstr "Activer le code personnalisé %s."
+
+#~ msgid "Learn more about %s"
+#~ msgstr "En savoir plus sur %s"
+
+#~ msgid "Miscellaneous Settings"
+#~ msgstr "Paramètres divers"
+
+#~ msgid ""
+#~ "It is prohibited to change %s settings on this site in the %s network "
+#~ "settings."
+#~ msgstr ""
+#~ "Il est interdit de modifier les paramètres %s sur ce site dans les "
+#~ "paramètres réseau %s."
+
+#~ msgid ""
+#~ "It is prohibited to view %s settings on this site in the %s network "
+#~ "settings."
+#~ msgstr ""
+#~ "Il est interdit de voir les paramètres %s sur ce site dans les paramètres "
+#~ "réseau %s."
+
+#~ msgid "Pro Options"
+#~ msgstr "Options Pro"
+
+#~ msgid "Enable to display plugin Pro options."
+#~ msgstr "Activer pour voir les options PRO de cette extension."
+
+#~ msgid "Track Usage"
+#~ msgstr "Suivre l'utilisation"
+
+#~ msgid ""
+#~ "Enable to allow tracking plugin usage anonymously in order to make it "
+#~ "better."
+#~ msgstr ""
+#~ "Activer pour autoriser le suivi de l'utilisation de cette extension de "
+#~ "manière anonyme afin de la rendre meilleur."
+
+#~ msgid "Default Settings"
+#~ msgstr "Paramètres par défaut"
+
+#~ msgid "Restore Settings"
+#~ msgstr "Remettre les paramètres"
+
+#~ msgid "This will restore plugin settings to defaults."
+#~ msgstr "Remettre les valeurs par défaut des paramètres de l'extension"
+
+#~ msgid "Congratulations! Pro license is activated successfully."
+#~ msgstr ""
+#~ "Félicitations! La version PRO de cette extension a été téléchargée et "
+#~ "activée avec succès."
+
+#~ msgid "You will be automatically redirected to the %s in %s seconds."
+#~ msgstr "Vous allez être redirigé automatiquement vers %s dans %s secondes."
+
+#~ msgid "Settings page"
+#~ msgstr "Page des paramètres"
+
+#~ msgid ""
+#~ "Enter your license key to activate %s and get premium plugin features."
+#~ msgstr ""
+#~ "Saisir votre clé de licence pour activer %s et obtenir les fonctions "
+#~ "premium."
+
+#~ msgid ""
+#~ "Unfortunately, you have exceeded the number of available tries per day. "
+#~ "Please, upload the plugin manually."
+#~ msgstr ""
+#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
+#~ "télécharger l'extension manuellement."
+
+#~ msgid "Start Your Free %s-Day Trial Now"
+#~ msgstr "Débuter votre licence d'évaluation gratuite de %s jours"
+
+#~ msgid ""
+#~ "If necessary, you can check if the license key is correct or reenter it "
+#~ "in the field below."
+#~ msgstr ""
+#~ "Si nécessaire vous pouvez vérifier que la clé de licence est correcte ou "
+#~ "la saisir de nouveau dans le champ ci-dessous."
+
+#~ msgid "Manage License Settings"
+#~ msgstr "Paramètres de gestion des licences"
+
+#~ msgid "Login to Client Area"
+#~ msgstr "Connexion à l'espace client"
+
+#~ msgid ""
+#~ "Manage active licenses, download BWS products, and view your payment "
+#~ "history using BestWebSoft Client Area."
+#~ msgstr ""
+#~ "Gérer les licences actives, télécharger les produits BWS, et voir "
+#~ "l'historique de vos paiements dans la zone client BestWebSoft."
+
+#~ msgid "This license key is bound to another site."
+#~ msgstr "La clé de licence correspond à un autre site."
+
+#~ msgid ""
+#~ "This license key is valid, but Your license has expired. If you want to "
+#~ "update our plugin in future, you should extend the license."
+#~ msgstr ""
+#~ "La clé de licence est valide mais votre durée de validité est passée. "
+#~ "Pour continuer à disposer du support rapide et des mises à jour de "
+#~ "l'extension vous devez la renouveler."
+
+#~ msgid "Unfortunately, you have exceeded the number of available tries."
+#~ msgstr ""
+#~ "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de "
+#~ "télécharger l'extension manuellement."
+
+#~ msgid ""
+#~ "Unfortunately, the Pro Trial licence was already installed to this "
+#~ "domain. The Pro Trial license can be installed only once."
+#~ msgstr ""
+#~ "Malheureusement la licence PRO a déjà été installée sur ce domaine. La "
+#~ "licence PRO d'évaluation peut être installée une seule fois."
+
+#~ msgid "The Pro Trial license key is valid."
+#~ msgstr "La clé de licence d'évaluation est valide."
+
+#~ msgid ""
+#~ "In order to continue using the plugin it is necessary to buy a %s license."
+#~ msgstr ""
+#~ "Afin de pouvoir continuer à utiliser cette extension il est nécessaire "
+#~ "d'acheter une licence %s."
+
+#~ msgid "Please, enter Your license key"
+#~ msgstr "Merci de saisir votre clé de licence"
+
+#~ msgid "Need Help?"
 #~ msgstr "Besoin d'aide ?"
 
-#~ msgid "Visit Help Center"
-#~ msgstr "Visite le centre de support"
+#~ msgid "Read the Instruction"
+#~ msgstr "Lire les instructions"
 
-#~ msgid "Want to support the plugin?"
-#~ msgstr "Vous voulez aider cette extension?"
+#~ msgid "Watch the Video"
+#~ msgstr "Regarder la vidéo"
 
-#~ msgid "WARNING: Illegal use notification"
-#~ msgstr "AVERTISSEMENT : Notification d'utilisation abusive"
-
-#~ msgid ""
-#~ "You can use one license of the Pro plugin for one domain only. Please "
-#~ "check and edit your license or domain if necessary using you personal "
-#~ "Client Area. We strongly recommend you to solve the problem within 24 "
-#~ "hours, otherwise the Pro plugin will be deactivated."
-#~ msgstr ""
-#~ "Vous ne pouvez utiliser qu'une licence pour un domaine de la version PRO "
-#~ "de l'extension. Vérifiez et modifiez votre licence ou domaine si "
-#~ "nécessaire dans votre zone client. Nous vous recommandons de résoudre ce "
-#~ "problème dans les 24 heures, sinon l'extension sera rendue inactive. "
-
-#~ msgid ""
-#~ "Notice: Your Pro Trial license has expired. To continue using the plugin, "
-#~ "you should buy a Pro license"
-#~ msgstr ""
-#~ "Information : Votre licence d'évaluation est terminée. Pour continuer à "
-#~ "utiliser cette extension vous devez acheter une licence PRO"
-
-#~ msgid ""
-#~ "Your license has expired. To continue getting top-priority support and "
-#~ "plugin updates, you should extend it."
-#~ msgstr ""
-#~ "Votre licence est terminée. Pour continuer à disposer du support rapide "
-#~ "et des mises à jour de l'extension vous devez la renouveler."
-
-#~ msgid "Notice: You are using the Pro Trial license of %s plugin."
-#~ msgstr ""
-#~ "Avertissement : vous utilisez la version d'évaluation de l'extension %s."
-
-#~ msgid "Notice: You are using the Pro Trial license of plugin."
-#~ msgstr ""
-#~ "Avertissement : vous utilisez la version d'évaluation de l'extension."
-
-#~ msgid "The Pro Trial license will expire on"
-#~ msgstr "Votre licence se termine le "
-
-#~ msgid ""
-#~ "or higher! We do not guarantee that our plugin will work correctly. "
-#~ "Please upgrade to WordPress latest version."
-#~ msgstr ""
-#~ "ou plus! Nous ne garantissons pas que notre extension fonctionne "
-#~ "correctement. Merci de mettre à jour votre version de WordPress."
-
-#~ msgid "Thank you for installing"
-#~ msgstr "Merci d'avoir installer"
-
-#~ msgid "Let's get started"
-#~ msgstr "C'est parti"
-
-#~ msgid "Add New"
-#~ msgstr "Ajouter"
-
-#~ msgid "Thank you for installing plugins by BestWebSoft!"
-#~ msgstr "Merci d'avoir installé des extensions de BestWebSoft!"
-
-#~ msgid "More Details"
-#~ msgstr "Plus de détails"
-
-#~ msgid "Less Details"
-#~ msgstr "Moins de détails"
-
-#~ msgid "Deprecated function(-s) is used on the site here:"
-#~ msgstr "Des fonctions obsolètes sont utilisées sur ce site ici&nbsp;:"
-
-#~ msgid ""
-#~ "This function(-s) will be removed over time. Please update the product(-"
-#~ "s)."
-#~ msgstr ""
-#~ "Ces fonctions seront supprimées dans une prochaine version. Merci de "
-#~ "mettre à jour vos produits."
-
-#~ msgid "It’s time to upgrade your"
-#~ msgstr "C'est le moment de mettre à jour votre "
-
-#~ msgid "to"
-#~ msgstr "à"
-
-#~ msgid "version!"
-#~ msgstr "version"
-
-#~ msgid "Extend standard plugin functionality with new great options."
-#~ msgstr ""
-#~ "Étend les fonctionnalités classiques de l'extension avec des nouvelles "
-#~ "options."
-
-#~ msgid ""
-#~ "Your license key for %s expires on %s and you won't be granted TOP-"
-#~ "PRIORITY SUPPORT or UPDATES."
-#~ msgstr ""
-#~ "Votre clé de licence pour %s est terminée le %s et vous ne disposerez "
-#~ "plus du support rapide et des mises à jour."
-
-#~ msgid "Thank you for choosing"
-#~ msgstr "Merci d'avoir choisi"
-
-#~ msgid ""
-#~ "If you have a feature, suggestion or idea you'd like to see in the "
-#~ "plugin, we'd love to hear about it!"
-#~ msgstr ""
-#~ "Si vous avez une fonctionnalité, une suggestion ou une idée que vous "
-#~ "souhaitez pour cette extension, nous serons ravis d'en parler avec vous !"
-
-#~ msgid "Suggest a Feature"
-#~ msgstr "Proposer une fonctionnalité"
-
-#~ msgid "The plugin's settings have been changed."
-#~ msgstr "Les paramètres de l'extension ont été modifiés."
-
-#~ msgid ""
-#~ "You can always look at premium options by checking the \"Pro Options\" in "
-#~ "the \"Misc\" tab."
-#~ msgstr ""
-#~ "Vous pouvez toujours consulter les options premium en cliquant sur \"Voir "
-#~ "les fonctionnalités PRO\" dans l'onglet \"Divers\""
-
-#~ msgid "Add BWS Shortcode"
-#~ msgstr "Ajouter le code court de l'extension BWS"
-
-#~ msgid "Add BWS Plugins Shortcode"
-#~ msgstr "Ajouter le code court de l'extension BWS"
-
-#~ msgid "Add shortcode"
-#~ msgstr "Ajouter le code court"
-
-#~ msgid "Add BestWebSoft plugins' shortcodes using this button."
-#~ msgstr "Ajouter le code court de l'extension BWS avec ce bouton."
-
-#~ msgid "Are you sure you want to restore default settings?"
-#~ msgstr "Êtes vous sûr de vouloir remettre toutes les valeurs par défaut ?"
-
-#~ msgid "Yes, restore all settings"
-#~ msgstr "Oui, remettre les valeurs par défaut"
-
-#~ msgid "Plugin"
-#~ msgstr "Extension"
-
-#~ msgid "Shortcode settings"
-#~ msgstr "Paramètres du code court"
-
-#~ msgid "The shortcode will be inserted"
-#~ msgstr "Le code court sera inséré"
-
-#~ msgid "For more information:"
-#~ msgstr "Pour plus d'information&nbsp;:"
-
-#~ msgid "Documentation"
-#~ msgstr "Documentation"
-
-#~ msgid "Video Instructions"
-#~ msgstr "Instruction vidéo"
-
-#~ msgid "Submit a Request"
-#~ msgstr "Soumettre une requête"
+#~ msgid "Start Your Free Trial"
+#~ msgstr "Débuter votre essai gratuit"
 
 #~ msgid "System Status"
 #~ msgstr "Etat du système"
@@ -2024,6 +2073,41 @@ msgstr "Oui, installer les données de démonstration"
 
 #~ msgid "version of the plugin."
 #~ msgstr "version de l'extension."
+
+#~ msgid "Advertisement"
+#~ msgstr "Publicité"
+
+#~ msgid "Content & Media"
+#~ msgstr "Contenu & média"
+
+#~ msgid "Management"
+#~ msgstr "Administration"
+
+#~ msgid "Recommended"
+#~ msgstr "Recommandé"
+
+#~ msgid "Security"
+#~ msgstr "Sécurité"
+
+#~ msgid "Site Stats"
+#~ msgstr "Statistiques"
+
+#~ msgid "Utilities"
+#~ msgstr "Utilitaires"
+
+#~ msgid "Other"
+#~ msgstr "Autre"
+
+#~ msgid "Enable social sharing buttons in the Lightbox."
+#~ msgstr ""
+#~ "Afficher les boutons de partage sur les réseaux sociaux dans la lightbox"
+
+#~ msgid "Select social buttons position in a lightbox."
+#~ msgstr ""
+#~ "Choisir la position des boutons des réseaux sociaux dans la lightbox."
+
+#~ msgid "PHP Safe Mode"
+#~ msgstr "PHP Safe Mode"
 
 #~ msgid ""
 #~ "The following files '%s' and '%s' were not found in the directory of your "

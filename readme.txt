@@ -3,16 +3,16 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 4.0
-Tested up to: 4.7.3
-Stable tag: 4.5.0
+Tested up to: 4.8
+Stable tag: 4.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add beautiful galleries, albums & images to your Wordpress website in few clicks.
+Add beautiful galleries, albums, images and categories to your Wordpress website just in a few clicks.
 
 == Description ==
 
-The best responsive gallery plugin for your Wordpress website. Create amazing galleries in few clicks. Add an unlimited number of images to your gallery, create albums, add comments, change appearance and much more.
+The best responsive gallery plugin for your Wordpress website which will help you to create amazing galleries in a few clicks. Add an unlimited number of images to your gallery, create albums and categories, add comments, change appearance and much more.
 
 Showcase portfolio or just to show off useful images easily with gallery plugin to power up communication with your visitors, spark up your brand, and increase sales!
 
@@ -23,9 +23,10 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 = Free Features =
 
 * Fully Responsive
-* Add unlimited:
+* Add unlimited number of:
 	* Albums to gallery
 	* Images to album
+	* Gallery categories [NEW]
 * Change image for album cover and its dimensions
 * Set default sorting order for images by:
 	* Attachment ID
@@ -46,6 +47,10 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 	* Random
 	* ASC (ascending order from lowest to highest values)
 	* DESC (descending order from highest to lowest values)
+* Add gallery categories widget and select the additional info [NEW]:
+	* Display as dropdown
+	* Show galleries count
+	* Show hierarchy
 * Install/delete demo data
 * Slideshow and full-size image displaying
 * Change border width and color
@@ -54,7 +59,6 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 	* Comments to galleries
 	* Images from WordPress media library
 	* Descriptions to each album
-* Install [Gallery Categories](https://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) to organize your content
 * Add custom code via plugin settings page
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
@@ -100,7 +104,7 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Documentation & Videos =
 
-* [[Doc] How to Add](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
+* [[Doc] How to Add a Gallery](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
 * [[Doc] How to Receive Trial License](https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/)
 * [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 * [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
@@ -134,23 +138,15 @@ Some of these translations are not complete. We are constantly adding new featur
 
 = Recommended Plugins =
 
-* [Gallery Categories](https://bestwebsoft.com/products/wordpress/plugins/gallery-categories/) - Add unlimited gallery categories. Organize images to make the navigation through content easier.
 * [Custom Search](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743) - Add custom post types to WordPress website search results.
-* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
-* [Re-attacher](https://bestwebsoft.com/products/wordpress/plugins/re-attacher/) - Attach, unattach and re-attach media files quickly to WordPress posts and pages.
-
-= Donate =
-
-Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
-
-[Donate Now](https://bestwebsoft.com/donate/)
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
 
 == Installation ==
 
 1. Upload the `gallery-plugin` folder to the directory `/wp-content/plugins/`.
 2. Activate the plugin using the 'Plugins' menu in WordPress.
 3. Click 'Add New' in the 'Galleries' menu and fill out your page.
-4. You can adjust the necessary settings using your WordPress admin panel in "BWS Panel" > "Gallery".
+4. You can adjust the necessary settings using your WordPress admin panel in "Gallery" > "Global Settings".
 
 == Frequently Asked Questions ==
 
@@ -209,18 +205,27 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/)
 
 == Screenshots ==
 
 1. Gallery albums page in the front-end.
 2. Single Gallery page in the front-end.
 3. The pop-up window containing the album images.
-4. Edit Gallery page.
-5. Edit Gallery Image Info.
-6. Gallery Global Settings page.
+4. Displaying Gallery Categories Widget in the Sidebar on your WordPress website.
+5. Edit Gallery page.
+6. Edit Gallery Image Info.
+7. Gallery Categories page.
+8. Gallery Global Settings page.
+9. Adding Gallery Categories Widget.
 
 == Changelog ==
+
+= V4.5.1 - 18.07.2017 =
+* NEW : Gallery Categories have been added.
+* Update : The French language file is updated.
+* Bugfix : The bug with restoring default plugin settings has been fixed.
+* Bugfix : The bug with image feed link was fixed.
 
 = V4.5.0 - 06.04.2017 =
 * NEW : The Indonesian language file is added.
@@ -616,6 +621,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.5.1 =
+* New features added.
+* Bugs fixed.
 
 = V4.5.0 =
 * Languages updated.

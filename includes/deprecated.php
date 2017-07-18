@@ -4,7 +4,7 @@
  */
 
 /**
- * Renaming old version option keys 
+ * Renaming old version option keys
  * @deprecated since 4.4.4
  * @todo remove after 01.04.2017
  */
@@ -40,9 +40,9 @@ if ( ! function_exists( 'gllr_old_template_options' ) ) {
 			$template_pages = $wpdb->get_var( "SELECT $wpdb->posts.ID FROM $wpdb->posts, $wpdb->postmeta WHERE meta_key = '_wp_page_template' AND meta_value = 'gallery-template.php' AND ( post_status = 'publish' OR post_status = 'private' ) AND $wpdb->posts.ID = $wpdb->postmeta.post_id" );
 			if ( ! empty( $template_pages ) ) {
 				$gllr_options['page_id_gallery_template'] = $template_pages;
-			}						
+			}
 		}
-		if ( isset( $gllr_options['rewrite_template'] ) ) {				
+		if ( isset( $gllr_options['rewrite_template'] ) ) {
 			$themepath = get_stylesheet_directory() . '/';
 			foreach ( array( 'gallery-single-template.php', 'gallery-template.php' ) as $filename ) {
 				if ( file_exists( $themepath . $filename ) ) {
@@ -71,7 +71,7 @@ if ( ! function_exists( 'gllr_update_options_after_redesign' ) ) {
 		global $gllr_options, $wpdb;
 
 		delete_metadata( 'user', null, 'wp_gllr_media_library_mode', '', true );
-		
+
 		if ( ! isset( $gllr_options['lightbox_download_link'] ) ) {
 			$any_meta = $wpdb->get_var( "SELECT `meta_value` FROM $wpdb->postmeta WHERE `meta_key` = 'gllr_download_link'" );
 			if ( ! empty( $any_meta ) ) {
@@ -96,7 +96,7 @@ if ( ! function_exists( 'gllr_update_options_after_redesign' ) ) {
 
 			unset( $gllr_options['return_link_page'] );
 		}
-		
+
 		if ( ! isset( $gllr_options['cover_border_images'] ) && isset( $gllr_options['border_images'] ) ) {
 			$gllr_options['cover_border_images'] = $gllr_options['border_images'];
 			$gllr_options['cover_border_images_width'] = $gllr_options['border_images_width'];
