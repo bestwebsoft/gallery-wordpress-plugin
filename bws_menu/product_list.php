@@ -16,15 +16,18 @@ $bws_plugins_category = array(
 );
 
 $bws_plugins = array(
-	'captcha/captcha.php' => array(
+	/* captcha has pro version only */
+	'captcha-pro/captcha-pro.php' => array(
 		'category'		=> array( 'security', 'recommended' ),
 		'name'			=> 'Captcha',
 		'description'	=> __( 'Protect WordPress website forms from spam entries by means of math logic.', 'bestwebsoft' ),
-		'link'			=> 'https://bestwebsoft.com/products/wordpress/plugins/captcha/?k=d678516c0990e781edfb6a6c874f0b8a&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
-		'settings'		=> 'admin.php?page=captcha.php',
+		/*'link'			=> 'https://bestwebsoft.com/products/wordpress/plugins/captcha/?k=d678516c0990e781edfb6a6c874f0b8a&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version, */
+		'settings'		=> 'admin.php?page=captcha_pro.php',
+		'install_url'	=> 'https://bestwebsoft.com/products/wordpress/plugins/captcha/buy/?k=ff7d65e55e5e7f98f219be9ed711094e&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 		'pro_version'	=> 'captcha-pro/captcha_pro.php',
 		'purchase'		=> 'https://bestwebsoft.com/products/wordpress/plugins/captcha/buy/?k=ff7d65e55e5e7f98f219be9ed711094e&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
-		'pro_settings'	=> 'admin.php?page=captcha_pro.php'
+		'pro_settings'	=> 'admin.php?page=captcha_pro.php',
+		'icon'			=> bws_menu_url( 'icons/plugins/' ) . 'captcha.png'
 	),
 	'car-rental/car-rental.php' => array(
 		'category'		=> array( 'ecommerce' ),

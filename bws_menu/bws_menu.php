@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 2.1.1
+* Version: 2.1.3
 */
 
 if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) )
@@ -536,8 +536,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 										</div>
 										<div class="bws_product_links">
 											<?php if ( $is_active || $is_pro_active ) {
-												if ( $is_pro_isset ) {
-													if (  ! $is_pro_installed ) {
+												if ( $is_pro_isset ) {													
+													if ( ! $is_pro_installed ) {
 														if ( ! empty( $plugins_array ) && array_key_exists( $value_plugin['pro_version'], $plugins_array ) ) { ?>
 															<form method="post" action="">
 																<input type="submit" class="button button-secondary" value="<?php _e( 'Install Now', 'bestwebsoft' ); ?>" />
@@ -610,52 +610,31 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 					require( dirname( __FILE__ ) . '/product_list.php' ); ?>
 					<h1><?php _e( 'Themes', 'bestwebsoft' ); ?></h1>
 					<div id="availablethemes" class="bws-availablethemes">
-						<?php if ( $wp_version < '3.9' ) {
-							foreach ( $themes as $theme ) { ?>
-								<div class="available-theme installable-theme"><?php
+						<div class="theme-browser content-filterable rendered">
+							<div class="themes wp-clearfix">
+								<?php foreach ( $themes as $key => $theme ) {
 									$installed_theme = wp_get_theme( $theme->slug ); ?>
-									<a class="screenshot" href="<?php echo esc_url( $theme->href ); ?>">
-										<img src="<?php echo bws_menu_url( "icons/themes/" ) . $theme->slug . '.png'; ?>" width='150' />
-									</a>
-									<h3><?php echo $theme->name; ?></h3>
-									<div class="theme-author"><?php printf( __( 'By %s', 'bestwebsoft' ), 'BestWebSoft' ); ?></div>
-									<div class="action-links">
-										<ul>
-											<?php if ( $installed_theme->exists() ) { ?>
-												<li><span class="install-now" title="'<?php esc_attr__( 'This theme is already installed and is up to date' ); ?>"><?php echo _x( 'Installed', 'theme', 'bestwebsoft' ); ?></span></li>
-											<?php } ?>
-											<li><a class="theme-detail" href="<?php echo esc_url( $theme->href ); ?>" target="_blank"><?php _e( 'Learn More', 'bestwebsoft' ); ?></a></li>
-										</ul>
-									</div>
-								</div>
-							<?php }
-						} else { ?>
-							<div class="theme-browser content-filterable rendered">
-								<div class="themes wp-clearfix">
-									<?php foreach ( $themes as $key => $theme ) {
-										$installed_theme = wp_get_theme( $theme->slug ); ?>
-										<div class="theme" tabindex="0">
-											<div class="theme-screenshot">
-												<img src="<?php echo bws_menu_url( "icons/themes/" ) . $theme->slug . '.png'; ?>" alt="" />
-											</div>
-											<div class="theme-author"><?php printf( __( 'By %s', 'bestwebsoft' ), 'BestWebSoft' ); ?></div>
-											<h3 class="theme-name"><?php echo $theme->name; ?></h3>
-											<div class="theme-actions">
-												<a class="button button-secondary preview install-theme-preview" href="<?php echo $theme->href; ?>" target="_blank"><?php esc_html_e( 'Learn More', 'bestwebsoft' ); ?></a>
-											</div>
-											<?php if ( $installed_theme->exists() ) {
-												if ( $wp_version < '4.6' ) { ?>
-													<div class="theme-installed"><?php _e( 'Already Installed', 'bestwebsoft' ); ?></div>
-												<?php } else { ?>
-													<div class="notice notice-success notice-alt inline"><p><?php _e( 'Installed', 'bestwebsoft' ); ?></p></div>
-												<?php }
-											} ?>
+									<div class="theme" tabindex="0">
+										<div class="theme-screenshot">
+											<img src="<?php echo bws_menu_url( "icons/themes/" ) . $theme->slug . '.png'; ?>" alt="" />
 										</div>
-									<?php } ?>
-									<br class="clear" />
-								</div>
+										<div class="theme-author"><?php printf( __( 'By %s', 'bestwebsoft' ), 'BestWebSoft' ); ?></div>
+										<h3 class="theme-name"><?php echo $theme->name; ?></h3>
+										<div class="theme-actions">
+											<a class="button button-secondary preview install-theme-preview" href="<?php echo $theme->href; ?>" target="_blank"><?php esc_html_e( 'Learn More', 'bestwebsoft' ); ?></a>
+										</div>
+										<?php if ( $installed_theme->exists() ) {
+											if ( $wp_version < '4.6' ) { ?>
+												<div class="theme-installed"><?php _e( 'Already Installed', 'bestwebsoft' ); ?></div>
+											<?php } else { ?>
+												<div class="notice notice-success notice-alt inline"><p><?php _e( 'Installed', 'bestwebsoft' ); ?></p></div>
+											<?php }
+										} ?>
+									</div>
+								<?php } ?>
+								<br class="clear" />
 							</div>
-						<?php } ?>
+						</div>
 						<p><a class="bws_browse_link" href="http://bestweblayout.com/categories/themes/" target="_blank"><?php _e( 'Browse Free WordPress Themes', 'bestwebsoft' ); ?> <span class="dashicons dashicons-arrow-right-alt2"></span></a></p>
 					</div>
 				<?php } elseif ( 'bws_system_status' == $page || 'system-status' == $tab ) { ?>

@@ -76,7 +76,7 @@ ul.gallery {
 	-moz-box-sizing: content-box; /*Firefox 1-3*/
 	-webkit-box-sizing: content-box; /* Safari */
 	box-shadow: none;
-	-webkit-box-shadow: none;	
+	-webkit-box-shadow: none;
 }
 #content .gallery_box_single,
 .gallery_box_single,
@@ -112,16 +112,6 @@ ul.gallery {
 }
 .gallery .gllr_image_container {
 	border: 1px solid #BDBDBD;
-}
-#fancybox-wrap {
-	box-sizing: content-box;
-	-moz-box-sizing: content-box; /*Firefox 1-3*/
-	-webkit-box-sizing: content-box; /* Safari */
-}
-#fancybox-wrap * {
-	box-sizing: content-box;
-	-moz-box-sizing: content-box; /*Firefox 1-3*/
-	-webkit-box-sizing: content-box; /* Safari */
 }
 .gllr_image_block img {
 	border-style: solid;
@@ -160,6 +150,44 @@ ul.gallery {
 .gllr_twentysixteen.single-gallery .hentry,
 .gllr_twentysixteen.single-bws-gallery .hentry {
 	margin-bottom: 3.5em;
+}
+
+/*
+ * Fancybox styles
+ */
+.fancybox-container,
+.fancybox-container * {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+.fancybox-container.fancybox-is-open {
+	z-index: 100000;
+}
+.fancybox-arrow:hover,
+.fancybox-arrow:focus,
+.fancybox-arrow:active {
+	background: transparent;
+}
+.fancybox-button:hover,
+.fancybox-button:focus,
+.fancybox-button:active,
+.fancybox-button.dashicons-download:hover,
+.fancybox-button.dashicons-download:focus,
+.fancybox-button.dashicons-download:active {
+	color: #fff;
+	background: rgba(0,0,0,.8);
+}
+.fancybox-button.dashicons-download:before {
+	content: "\f316";
+	background-color: transparent;
+	color: inherit;
+	left: 11px;
+	top: 2px;
+}
+.fancybox-container.fancybox-show-thumbs .fancybox-thumbs {
+	background: rgba(0, 0, 0, 0.3);
+	box-sizing: border-box;
 }
 @media screen and (min-width: 61.5625em) {
 	.gllr_twentysixteen.single-gallery .hentry,

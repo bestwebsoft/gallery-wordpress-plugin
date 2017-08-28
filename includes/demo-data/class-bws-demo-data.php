@@ -16,7 +16,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 			$this->bws_plugin_page			= $args['plugin_page'];
 			$this->bws_demo_folder			= $args['demo_folder'];
 			$this->install_callback 		= isset( $args['install_callback'] ) ? $args['install_callback'] : false;
-			$this->remove_callback 			= isset( $args['remove_callback'] ) ? $args['remove_callback'] : false;			
+			$this->remove_callback 			= isset( $args['remove_callback'] ) ? $args['remove_callback'] : false;
 			$this->bws_plugin_text_domain 	= $plugin_dir_array[0];
 			$this->bws_demo_options 		= get_option( $this->bws_plugin_prefix . 'demo_options' );
 			$this->bws_plugin_options		= get_option( $this->bws_plugin_prefix . 'options' );
@@ -177,6 +177,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 					/*
 					 * load demo posts
 					 */
+					$default_category = absint( $this->bws_plugin_options['default_gallery_category'] );
 					foreach ( $demo_data['posts'] as $post ) {
 						if ( preg_match( '/{last_post_id}/', $post['post_content'] ) && ! empty( $post_id ) ) {
 							$post['post_content'] = preg_replace( '/{last_post_id}/', $post_id, $post['post_content'] );
@@ -191,6 +192,9 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 						$post_id = wp_insert_post( $post );
 						if ( 'post' == $post['post_type'] )
 							$posttype_post_id = $post_id;
+
+						if ( $this->bws_plugin_options['post_type_name'] == $post['post_type'] && $default_category )
+							wp_set_object_terms( $post_id, $default_category, 'gallery_categories' );
 
 						/* add taxonomy for posttype */
 						if ( 'post' != $post['post_type'] && 'page' != $post['post_type'] && ! empty( $term_IDs ) ) {

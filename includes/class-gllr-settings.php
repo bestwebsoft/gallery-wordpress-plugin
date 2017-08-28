@@ -184,12 +184,11 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			$this->options["start_slideshow"]		= ( isset( $_POST['gllr_start_slideshow'] ) ) ? 1 : 0;
 			$this->options["slideshow_interval"]	= empty( $_POST['gllr_slideshow_interval'] ) ? 2000 : intval( $_POST['gllr_slideshow_interval'] );
 			$this->options["lightbox_download_link"] = ( isset( $_POST['gllr_lightbox_download_link'] ) ) ? 1 : 0;
-			$this->options["lightbox_download_link_label"] = stripslashes( esc_html( $_POST['gllr_lightbox_download_link_label'] ) );
 			$this->options["single_lightbox_for_multiple_galleries"] = ( isset( $_POST['gllr_single_lightbox_for_multiple_galleries'] ) ) ? 1 : 0;
 
 			/**
 			 * rewriting post types name with unique one from default options
-			 * since 4.4.4
+			 * @since 4.4.4
 			 */
 			if ( ! empty( $_POST['gllr_rename_post_type'] ) ) {
 				global $wpdb;
@@ -774,39 +773,29 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<div class="bws_table_bg"></div>
 						<table class="form-table bws_pro_version">
 							<tr valign="top">
-								<th scope="row"><?php _e( 'Lightbox Helper', 'gallery-plugin' ); ?></th>
+								<th scope="row"><?php _e( 'Lightbox Helpers', 'gallery-plugin' ); ?></th>
 								<td>
-									<input disabled type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to use a lightbox helper navigation between images.', 'gallery-plugin' ); ?></span>
+									<input disabled type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to display the lightbox toolbar and arrows.', 'gallery-plugin' ); ?></span>
 								</td>
 							</tr>
 							<tr valign="top">
-								<th scope="row"><?php _e( 'Lightbox Helper Type', 'gallery-plugin' ); ?></th>
+								<th scope="row"><?php _e( 'Lightbox Thumbnails', 'gallery-plugin' ); ?></th>
 								<td>
-									<select disabled name="">
-										<option><?php _e( 'Thumbnails', 'gallery-plugin' ); ?></option>
-										<option><?php _e( 'Buttons', 'gallery-plugin' ); ?></option>
-									</select>
+									<input disabled type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to use a lightbox helper navigation between images..', 'gallery-plugin' ); ?></span>
 								</td>
 							</tr>
 							<tr valign="top">
-								<th scope="row"><?php _e( 'Lightbox Helper Thumbnail Size', 'gallery-plugin' ); ?></th>
-								<td>
-									<input disabled type="number" name="" value="70" /> x <input disabled type="number" name="" value="70" /> <?php _e( 'px', 'gallery-plugin' ); ?>
-								</td>
-							</tr>
-							<tr valign="top">
-								<th scope="row"><?php _e( 'Lightbox Helper Thumbnail Position', 'gallery-plugin' ); ?></th>
+								<th scope="row"><?php _e( 'Lightbox Thumbnails Position', 'gallery-plugin' ); ?></th>
 								<td>
 									<select disabled name="">
 										<option><?php _e( 'Top', 'gallery-plugin' ); ?></option>
-										<option><?php _e( 'Bottom', 'gallery-plugin' ); ?></option>
 									</select>
 								</td>
 							</tr>
 							<tr valign="top">
 								<th scope="row"><?php _e( 'Lightbox Button Label', 'gallery-plugin' ); ?></th>
 								<td>
-									<input type="text" disabled value="" />
+									<input type="text" disabled value="<?php _e( 'Read More', 'gallery-plugin' ); ?>" />
 								</td>
 							</tr>
 						</table>
@@ -816,15 +805,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<?php } ?>
 			<table class="form-table gllr_for_enable_lightbox">
 				<tr valign="top">
-					<th scope="row"><?php _e( 'Download Original File', 'gallery-plugin' ); ?></th>
+					<th scope="row"><?php _e( 'Download Button', 'gallery-plugin' ); ?></th>
 					<td>
-						<input type="checkbox" name="gllr_lightbox_download_link" value="1" <?php if ( 1 == $this->options["lightbox_download_link"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_lightbox_download_link" /> <span class="bws_info"><?php _e( 'Enable to display link to the original file under each image in the lightbox.', 'gallery-plugin' ); ?></span>
-					</td>
-				</tr>
-				<tr valign="top" class="gllr_for_lightbox_download_link">
-					<th scope="row"><?php _e( 'Download Link Label', 'gallery-plugin' ); ?></th>
-					<td>
-						<input type="text" name="gllr_lightbox_download_link_label" value="<?php echo $this->options["lightbox_download_link_label"]; ?>" />
+						<input type="checkbox" name="gllr_lightbox_download_link" value="1" <?php if ( 1 == $this->options["lightbox_download_link"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_lightbox_download_link" /> <span class="bws_info"><?php _e( 'Enable to display download button.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
 				<tr valign="top">
