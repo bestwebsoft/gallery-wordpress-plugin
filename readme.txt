@@ -3,20 +3,20 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 4.0
-Tested up to: 4.8.1
-Stable tag: 4.5.2
+Tested up to: 4.9.1
+Stable tag: 4.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add beautiful galleries, albums, images and categories to your Wordpress website just in a few clicks.
+Add beautiful galleries, albums, images and categories to your WordPress website just in a few clicks.
 
 == Description ==
 
-The best responsive gallery plugin for your Wordpress website which will help you to create amazing galleries in a few clicks. Add an unlimited number of images to your gallery, create albums and categories, add comments, change appearance and much more.
+The best responsive gallery plugin for your WordPress website which will help you to create amazing galleries in a few clicks. Add an unlimited number of images to your gallery, create albums and categories, add comments, change appearance and much more.
 
 Showcase portfolio or just to show off useful images easily with gallery plugin to power up communication with your visitors, spark up your brand, and increase sales!
 
-[View Demo](https://bestwebsoft.com/demo-for-gallery-pro/)
+[View Demo](https://bestwebsoft.com/demo-for-gallery-pro/?ref=readme)
 
 https://www.youtube.com/watch?v=aydaTdOpaRM
 
@@ -26,7 +26,10 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 * Add unlimited number of:
 	* Albums to gallery
 	* Images to album
-	* Gallery categories [NEW]
+	* Gallery categories
+* Choose albums layout: [NEW]
+	* Column
+	* Rows
 * Change image for album cover and its dimensions
 * Set default sorting order for images by:
 	* Attachment ID
@@ -47,7 +50,7 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 	* Random
 	* ASC (ascending order from lowest to highest values)
 	* DESC (descending order from highest to lowest values)
-* Add gallery categories widget and select the additional info [NEW]:
+* Add gallery categories widget and select the additional info:
 	* Display as dropdown
 	* Show galleries count
 	* Show hierarchy
@@ -156,7 +159,7 @@ Some of these translations are not complete. We are constantly adding new featur
 2. Add or Upload pictures via 'Add Media' button.
 3. Save the page.
 
-[View a Step-by-step Instruction "How to add a Gallery"](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
+[View a Step-by-step Instruction "How to Use"](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
 
 = How to change or override plugin templates? =
 
@@ -220,6 +223,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 9. Adding Gallery Categories Widget.
 
 == Changelog ==
+
+= V4.5.3 - 05.12.2017 =
+* NEW : Ability to select albums displaying and column alignment has been added.
+* Update : The French language file has been updated.
+* Update : The Czech language file has been updated.
+* Bugfix: Bugs related to the compatibility with third-party products has been fixed.
 
 = V4.5.2 - 28.08.2017 =
 * Update : The Fancybox library has been updated up to v3.1.20.
@@ -343,7 +352,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 = V4.2.5 - 06.11.2014 =
 * Update : The French language file is updated.
-* Bugfix : Image hidden title style should be corrected.
+* Bugfix : Image hidden title style has been corrected.
 * Update: Changes were made to  gallery templates to have 'password protected' functionality.
 
 = V4.2.4 - 15.10.2014 =
@@ -626,6 +635,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.5.3 =
+* New features added.
+* Languages updated.
+* Bugs fixed.
 
 = V4.5.2 =
 * Appearance improved.

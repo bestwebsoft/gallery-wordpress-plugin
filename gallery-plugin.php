@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.5.2
+Version: 4.5.3
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -238,6 +238,8 @@ if ( ! function_exists( 'gllr_get_options_default' ) ) {
 			'return_link_shortcode'						=> 0,
 			/* cover */
 			'page_id_gallery_template'					=> '',
+			'galleries_layout'							=> 'column',
+			'galleries_column_alignment'				=> 'left',
 			'image_size_album'							=> 'medium',
 			'cover_border_images'						=> 1,
 			'cover_border_images_width'					=> 10,
@@ -576,7 +578,7 @@ if ( ! function_exists( 'gllr_add_notice_below_table' ) ) {
 			if ( ! empty( $def_term ) ) {
 				$def_term_name = $def_term->name;
 				if ( ! empty( $def_term_name ) ) {
-					echo '<div class="form-wrap"><p><i><strong>' . __( 'Note', 'gallery-plugin') . ':</strong> ' . sprintf( __( 'When deleting a category, the galleries that belong to this category will not be deleted. Instead, these galleries will be moved to the category %s.', 'gallery-plugin' ), '<strong>' . $def_term_name . '</strong>' ) . '</i></p></div>';
+					echo '<div class="form-wrap"><p><i><strong>' . __( 'Note', 'gallery-plugin') . ':</strong> ' . sprintf( __( 'When deleting a category, the galleries that belong to this category will not be deleted. These galleries will be moved to the category %s.', 'gallery-plugin' ), '<strong>' . $def_term_name . '</strong>' ) . '</i></p></div>';
 				}
 			}
 		}
@@ -811,6 +813,7 @@ if ( ! function_exists( 'gllr_template_title' ) ) {
 if ( ! function_exists( 'gllr_template_content' ) ) {
 	function gllr_template_content() {
 		global $post, $wp_query, $request, $gllr_options;
+		wp_register_script( 'gllr_js', plugins_url( 'js/frontend_script.js', __FILE__ ), array( 'jquery' ) );
 
 		if ( get_query_var( 'paged' ) ) {
 			$paged = get_query_var( 'paged' );
@@ -851,9 +854,12 @@ if ( ! function_exists( 'gllr_template_content' ) ) {
 		}
 
 		$second_query = new WP_Query( $args );
-		$request = $second_query->request; ?>
-		<ul>
-			<?php if ( $second_query->have_posts() ) {
+		$request = $second_query->request;
+		printf(
+			'<ul%s>',
+			( 'column' == $gllr_options['galleries_layout'] && in_array( $gllr_options['galleries_column_alignment'], array( 'left', 'right', 'center' ) ) ) ? ' class="gllr-column-align-' . $gllr_options['galleries_column_alignment'] . '"' : ''
+		);
+		if ( $second_query->have_posts() ) {
 				/* get width and height for image_size_album */
 				if ( 'album-thumb' != $gllr_options['image_size_album'] ) {
 					$width  = absint( get_option( $gllr_options['image_size_album'] . '_size_w' ) );
@@ -897,11 +903,29 @@ if ( ! function_exists( 'gllr_template_content' ) ) {
 						$border_images = 0;
 					}
 					$featured_image = ( false == $featured_image ) ? $image_attributes : $featured_image;
-					$count++; ?>
-					<li>
-						<?php if ( ! empty( $featured_image[0] ) ) { ?>
+					$count++;
+
+					printf(
+						'<li class="%s" style="%s">',
+						( $gllr_options['galleries_layout'] == 'rows' ? 'gllr-display-inline' : 'gllr-display-column' ),
+						( $width && $gllr_options['galleries_layout'] == 'rows' ? "width:" . $width . 'px;' : '' )
+					);
+						if ( ! empty( $featured_image[0] ) ) {
+							$title = get_the_title(); ?>
 							<a rel="bookmark" href="<?php echo get_permalink(); ?>" title="<?php the_title(); ?>">
-								<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $featured_image[0]; ?>" />
+								<?php printf(
+									'<img class="gllr_template" %s %s style="%s %s %s" alt="%s" title="%s" src="%s" data-gllr-borders-width="%s"/>',
+									! empty( $width ) ? 'width="' . $width . '"' : '',
+									! empty( $height ) ? 'height="' . $height . '"' : '',
+									! empty( $width ) ? 'width:' . $width . 'px;' : '',
+									! empty( $height ) ? 'height:' . $height . 'px;' : '',
+									$border,
+									$title,
+									$title,
+									$featured_image[0],
+									$gllr_options['cover_border_images_width'] * 2
+								); ?>
+								<div class="clear"></div>
 							</a>
 						<?php } ?>
 						<div class="gallery_detail_box">
@@ -994,7 +1018,7 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 						));
 						if ( count( $posts ) > 0 ) {
 							$count_image_block = 0; ?>
-							<div class="gallery clearfix gllr_grid" data-columns="<?php echo $gllr_options["custom_image_row_count"]; ?>" data-border-width="<?php echo $gllr_options['border_images_width']; ?>">
+							<div class="gallery clearfix gllr_grid" data-gllr-columns="<?php echo $gllr_options["custom_image_row_count"]; ?>" data-gllr-border-width="<?php echo $gllr_options['border_images_width']; ?>">
 								<?php foreach ( $posts as $attachment ) {
 									$image_attributes = wp_get_attachment_image_src( $attachment->ID, $gllr_options['image_size_photo'] );
 									$image_attributes_large = wp_get_attachment_image_src( $attachment->ID, 'large' );
@@ -1014,19 +1038,19 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 										<div class="gllr_image_row">
 									<?php } ?>
 										<div class="gllr_image_block">
-											<p style="<?php if ( $width ) echo 'width:' . ( $width + $border_images ) . 'px;'; if ( $height ) echo 'height:' . ( $height + $border_images ) . 'px;'; ?>">
+											<p class="gllr_img" style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; ?>">
 												<?php if ( ! empty( $url_for_link ) ) { ?>
 													<a href="<?php echo $url_for_link; ?>" title="<?php echo $image_text; ?>" target="_blank">
-														<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" />
+														<img class="gllr_img" <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" />
 													</a>
 												<?php } else { ?>
 													<a data-fancybox="gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>" href="<?php echo $image_attributes_large[0]; ?>" title="<?php echo $image_text; ?>" >
-														<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" rel="<?php echo $image_attributes_full[0]; ?>" />
+														<img class="gllr_img" <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" rel="<?php echo $image_attributes_full[0]; ?>" />
 													</a>
 												<?php } ?>
 											</p>
 											<?php if ( 1 == $gllr_options["image_text"] ) { ?>
-												<div <?php if ( $width ) echo 'style="width:' . ( $width + $border_images ) . 'px;"'; ?> class="gllr_single_image_text"><?php echo $image_text; ?>&nbsp;</div>
+												<div <?php if ( $width ) echo 'style="width:' . $width . 'px;"'; ?> class="gllr_single_image_text gllr_img"><?php echo $image_text; ?>&nbsp;</div>
 											<?php } ?>
 										</div><!-- .gllr_image_block -->
 									<?php if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) { ?>
@@ -1149,9 +1173,9 @@ if ( ! function_exists( 'gllr_add_pdf_print_content' ) ) {
 											<img src="' . $image_attributes[0] . '" style="' . $image_style . '" />
 										</div>';
 										if ( 1 == $gllr_options["image_text"] ) {
-											$custom_content .= '<div class="gllr_single_image_text">' . get_post_meta( $attachment->ID, 'gllr_image_text', true ) . '</div>';
+											$custom_content .= '<div class="gllr_single_image_text gllr_img">' . get_post_meta( $attachment->ID, 'gllr_image_text', true ) . '</div>';
 										}
-										$custom_content .= "</td><!-- .gllr_image_block -->\n";
+										$custom_content .= "</td>\n"; /* gllr_image_block */
 										if ( $count_image_block % $gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) {
 											$custom_content .= "</tr>\n";
 										}
@@ -1525,7 +1549,7 @@ if ( ! function_exists( 'gllr_add_pdf_print_content' ) ) {
 									}
 									$image_style .= "margin: 0;";
 
-									$custom_content .= '<table class="gallery clearfix gllr_table" data-columns="' . $gllr_options["custom_image_row_count"] . '" data-border-width="' . $border_images_width . '"' . ( ( 1 == $gllr_options["image_text"] ) ? 'data-image-text-position="' . $gllr_options["image_text_position"] . '"' : '' ) . '>';
+									$custom_content .= '<table class="gallery clearfix gllr_table" data-gllr-columns="' . $gllr_options["custom_image_row_count"] . '" data-gllr-border-width="' . $border_images_width . '">';
 
 										foreach ( $posts as $attachment ) {
 											$image_attributes = wp_get_attachment_image_src( $attachment->ID, $gllr_options['image_size_photo'] );
@@ -1538,7 +1562,7 @@ if ( ! function_exists( 'gllr_add_pdf_print_content' ) ) {
 												$custom_content .= '<img src="' . $image_attributes[0] . '" style="' . $image_style . '" />';
 											$custom_content .= '</div>';
 											if ( 1 == $gllr_options["image_text"] && $title != '' ) {
-												$custom_content .= '<div style="width:' . ( $width + $border_images ) . 'px;" class="gllr_single_image_text">' . $title . '</div>';
+												$custom_content .= '<div style="width:' . $width . 'px;" class="gllr_single_image_text gllr_img">' . $title . '</div>';
 											}
 											$custom_content .= '</td>';
 											if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) {
@@ -1663,7 +1687,7 @@ if ( ! function_exists( 'gllr_settings_page' ) ) {
 		require_once( dirname( __FILE__ ) . '/includes/class-gllr-settings.php' );
 		$page = new Gllr_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
 		<div class="wrap">
-			<h1><?php _e( 'Gallery Settings', 'gallery-plugin' ); ?></h1>
+			<h1><?php printf( __( '%s Settings', 'gallery-plugin' ), 'Gallery' ); ?></h1>
 			<?php $page->display_content(); ?>
 		</div>
 	<?php }
@@ -1900,7 +1924,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 								} ?>
 								<li>
 									<a rel="bookmark" href="<?php echo get_permalink(); ?>" title="<?php the_title(); ?>">
-										<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
+										<img class="gllr_img" <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
 									</a>
 									<div class="gallery_detail_box">
 										<div><?php the_title(); ?></div>
@@ -1971,7 +1995,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 							} ?>
 							<li>
 								<a rel="bookmark" href="<?php echo get_permalink(); ?>" title="<?php the_title(); ?>">
-									<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
+									<img class="gllr_img" <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" src="<?php echo $image_attributes[0]; ?>" />
 								</a>
 								<div class="gallery_detail_box">
 									<div><?php the_title(); ?></div>
@@ -2021,7 +2045,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 
 							if ( 0 < count( $posts ) ) {
 								$count_image_block = 0; ?>
-								<div class="gallery clearfix gllr_grid" data-columns="<?php echo $gllr_options["custom_image_row_count"]; ?>" data-border-width="<?php echo $gllr_options['border_images_width']; ?>">
+								<div class="gallery clearfix gllr_grid" data-gllr-columns="<?php echo $gllr_options["custom_image_row_count"]; ?>" data-gllr-border-width="<?php echo $gllr_options['border_images_width']; ?>">
 									<?php foreach ( $posts as $attachment ) {
 										$image_attributes		= 	wp_get_attachment_image_src( $attachment->ID, $gllr_options['image_size_photo'] );
 										$image_attributes_large	=	wp_get_attachment_image_src( $attachment->ID, 'large' );
@@ -2034,19 +2058,19 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 											<div class="gllr_image_row">
 										<?php } ?>
 											<div class="gllr_image_block">
-												<p style="<?php if ( $width ) echo 'width:' . ( $width + $border_images ) . 'px;'; if ( $height ) echo 'height:' . ( $height + $border_images ) . 'px;'; ?>">
+												<p class="gllr_img" style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; ?>">
 													<?php if ( ! empty( $url_for_link ) ) { ?>
 														<a href="<?php echo $url_for_link; ?>" title="<?php echo $image_text; ?>" target="_blank">
-															<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" />
+															<img class="gllr_img" <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" />
 														</a>
 													<?php } else { ?>
 														<a data-fancybox="gallery_fancybox<?php if ( 0 == $gllr_options['single_lightbox_for_multiple_galleries'] ) echo '_' . $post->ID; ?>" href="<?php echo $image_attributes_large[0]; ?>" title="<?php echo $image_text; ?>">
-															<img <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" rel="<?php echo $image_attributes_full[0]; ?>" />
+															<img class="gllr_img" <?php if ( $width ) echo 'width="' . $width . '"'; if ( $height ) echo 'height="' . $height . '"'; ?> style="<?php if ( $width ) echo 'width:' . $width . 'px;'; if ( $height ) echo 'height:' . $height . 'px;'; echo $border; ?>" alt="<?php echo $image_alt_tag; ?>" title="<?php echo $image_text; ?>" src="<?php echo $image_attributes[0]; ?>" rel="<?php echo $image_attributes_full[0]; ?>" />
 														</a>
 													<?php } ?>
 												</p>
 												<?php if ( 1 == $gllr_options["image_text"] ) { ?>
-													<div <?php if ( $width ) echo 'style="width:' . ( $width + $border_images ) . 'px;"'; ?> class="gllr_single_image_text"><?php echo $image_text; ?>&nbsp;</div>
+													<div <?php if ( $width ) echo 'style="width:' . $width . 'px;"'; ?> class="gllr_single_image_text gllr_img"><?php echo $image_text; ?>&nbsp;</div>
 												<?php } ?>
 											</div><!-- .gllr_image_block -->
 										<?php if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) { ?>
@@ -2300,7 +2324,7 @@ if ( ! function_exists ( 'gllr_image_resize' ) ) {
 		$dims = gllr_image_resize_dimensions($orig_w, $orig_h, $max_w, $max_h, $crop);
 
 		if ( ! $dims )
-			return new WP_Error( 'error_getting_dimensions', __( 'Image size changes not defined', 'gallery-plugin' ) );
+			return new WP_Error( 'error_getting_dimensions', __( 'Image size not defined', 'gallery-plugin' ) );
 		list( $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h ) = $dims;
 
 		$newimage = wp_imagecreatetruecolor( $dst_w, $dst_h );
@@ -2812,22 +2836,22 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 								</td>
 								<?php break;
 							case 'dimensions': ?>
-								<td <?php echo $attributes; ?> data-colname="<?php _e( 'Dimensions', 'gallery-plugin' ); ?>">
+								<td <?php echo $attributes; ?> data-gllr-colname="<?php _e( 'Dimensions', 'gallery-plugin' ); ?>">
 									<?php echo $attachment_metadata['width']; ?> &times; <?php echo $attachment_metadata['height']; ?>
 								</td>
 								<?php break;
 							case 'gllr_image_text': ?>
-								<td <?php echo $attributes; ?> data-colname="<?php _e( 'Title', 'gallery-plugin' ); ?>">
+								<td <?php echo $attributes; ?> data-gllr-colname="<?php _e( 'Title', 'gallery-plugin' ); ?>">
 									<input type="text" name="<?php echo $column_name; ?>[<?php echo $post->ID; ?>]" value="<?php echo get_post_meta( $post->ID, $column_name, true ); ?>" />
 								</td>
 								<?php break;
 							case 'gllr_image_alt_tag': ?>
-								<td <?php echo $attributes; ?> data-colname="<?php _e( 'Alt Text', 'gallery-plugin' ); ?>">
+								<td <?php echo $attributes; ?> data-gllr-colname="<?php _e( 'Alt Text', 'gallery-plugin' ); ?>">
 									<input type="text" name="<?php echo $column_name; ?>[<?php echo $post->ID; ?>]" value="<?php echo get_post_meta( $post->ID, $column_name, true ); ?>" />
 								</td>
 								<?php break;
 							case 'gllr_link_url': ?>
-								<td <?php echo $attributes; ?> data-colname="<?php _e( 'URL', 'gallery-plugin' ); ?>">
+								<td <?php echo $attributes; ?> data-gllr-colname="<?php _e( 'URL', 'gallery-plugin' ); ?>">
 									<input type="text" name="<?php echo $column_name; ?>[<?php echo $post->ID; ?>]" value="<?php echo get_post_meta( $post->ID, $column_name, true ); ?>" />
 								</td>
 								<?php break;
@@ -3264,6 +3288,9 @@ if ( ! function_exists( 'gllr_plugin_uninstall' ) ) {
 
 					delete_option( 'gllr_options' );
 					delete_option( 'widget_gallery_categories_widget' );
+					delete_metadata( 'post', null, 'gllr_options', '', true );
+					delete_metadata( 'post', null, 'gllr_image_description', '', true );
+					delete_metadata( 'post', null, 'gllr_lightbox_button_url', '', true );
 				}
 				switch_to_blog( $old_blog );
 			} else {
@@ -3272,9 +3299,15 @@ if ( ! function_exists( 'gllr_plugin_uninstall' ) ) {
 
 				delete_option( 'gllr_options' );
 				delete_option( 'widget_gallery_categories_widget' );
+				delete_metadata( 'post', null, 'gllr_options', '', true );
+				delete_metadata( 'post', null, 'gllr_image_description', '', true );
+				delete_metadata( 'post', null, 'gllr_lightbox_button_url', '', true );
 			}
 			delete_metadata( 'user', null, 'wp_gllr_media_library_mode', '', true );
 		}
+
+		if ( is_multisite() )
+			delete_site_option( 'gllr_options' );
 
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
 		bws_include_init( plugin_basename( __FILE__ ) );

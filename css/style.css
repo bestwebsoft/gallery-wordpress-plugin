@@ -185,7 +185,7 @@
 .gllr-media-actions-delete.dashicons:hover {
     position: absolute;
     display: block;
-    top: 5px;    
+    top: 5px;
     width: 25px;
     height: 25px;
     line-height: 25px;
@@ -202,7 +202,7 @@
 .gllr-media-actions-delete.dashicons {
 	background: #e02626;
 	box-shadow: 0 0 0 1px #fff, 0 0 0 2px #e02626;
-	left: 5px; 
+	left: 5px;
 }
 .gllr-media-attachment-details {
 	background-color: #eee;
@@ -263,7 +263,7 @@
 .gllr-media-attachment-details-box-right {
 	width:44%;
 	height: 100%;
-	float:right;	
+	float:right;
 	box-sizing: border-box;
 }
 .post-type-gallery .ui-tooltip,
@@ -271,7 +271,7 @@
     z-index: 1000000 !important;
 }
 .rtl .gllr-media-attachment-details-box-right {
-	float: left;	
+	float: left;
 }
 .gllr-media-attachment-details-box-right .attachment-details {
 	border-left: 1px solid #ddd;
@@ -309,6 +309,7 @@
 .post-type-bws-gallery #the-list .success .check-column {
 	border-left: 4px solid #179458;
 }
+
 @media screen and (max-width: 1600px) {
 	.gllr-media-attachment {
 		width: calc( 20% - 23px );
@@ -322,6 +323,11 @@
 @media screen and (max-width: 1300px) {
 	.gllr-media-attachment {
 		width: calc( 33.3% - 23px );
+	}
+	#gllr_settings_tab select,
+	#gllr_cover_tab select,
+	#gllr_lightbox_tab select {
+		width: 100% !important;
 	}
 }
 @media screen and (max-width: 1150px) and (min-width: 851px) {

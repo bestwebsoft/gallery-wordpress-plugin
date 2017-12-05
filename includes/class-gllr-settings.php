@@ -177,6 +177,8 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				$this->options["cover_border_images_color"] = $this->default_options["cover_border_images_color"];
 			$this->options["album_order_by"]		= esc_attr( $_POST['gllr_album_order_by'] );
 			$this->options["album_order"]			= esc_attr( $_POST['gllr_album_order'] );
+			$this->options["galleries_layout"]			= esc_attr( $_POST['gllr_layout'] );
+			$this->options["galleries_column_alignment"]	= esc_attr( $_POST['gllr_column_align'] );
 			$this->options["read_more_link_text"]	= stripslashes( esc_html( $_POST['gllr_read_more_link_text'] ) );
 
 			/* Lightbox Tab */
@@ -279,7 +281,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<hr>
 			<div>
 				<div class="error hide-if-js">
-					<p><?php _e( 'Adding images requires JavaScript.', 'gallery-plugin' ); ?></p>
+					<p><?php _e( 'Images adding requires JavaScript.', 'gallery-plugin' ); ?></p>
 				</div>
 				<div class="wp-media-buttons">
 					<a href="#" id="gllr-media-insert" class="button insert-media add_media hide-if-no-js"><span class="wp-media-buttons-icon"></span> <?php _e( 'Add Media', 'gallery-plugin' ); ?></a>
@@ -357,7 +359,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Number of Columns', 'gallery-plugin' ); ?> </th>
 						<td>
-							<input type="number" name="gllr_custom_image_row_count" min="1" max="10000" value="<?php echo $this->options["custom_image_row_count"]; ?>" /> <?php _e( 'columns', 'gallery-plugin' ); ?>
+							<input type="number" name="gllr_custom_image_row_count" min="1" max="10000" value="<?php echo $this->options["custom_image_row_count"]; ?>" />
 							 <div class="bws_info"><?php printf( __( 'Number of gallery columns (default is %s).', 'gallery-plugin' ), '3' ); ?></div>
 						</td>
 					</tr>
@@ -458,7 +460,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Image Border', 'gallery-plugin' ); ?></th>
 						<td>
-							<input type="checkbox" name="gllr_border_images" value="1" <?php if ( 1 == $this->options["border_images"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_border_images" /> <span class="bws_info"><?php _e( 'Enable images border using the styles defined for Image Border Size and Color.', 'gallery-plugin' ); ?></span>
+							<input type="checkbox" name="gllr_border_images" value="1" <?php if ( 1 == $this->options["border_images"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_border_images" /> <span class="bws_info"><?php _e( 'Enable images border using the styles defined for Image Border Size and Color options.', 'gallery-plugin' ); ?></span>
 						</td>
 					</tr>
 					<tr valign="top" class="gllr_for_border_images">
@@ -566,11 +568,32 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					<td>
 						<?php wp_dropdown_pages( array(
 							'depth'                 => 0,
-							'selected'              => $this->options['page_id_gallery_template'],
+							'selected'              => isset( $this->options['page_id_gallery_template'] ) ? $this->options['page_id_gallery_template'] : false,
 							'name'                  => 'gllr_page_id_gallery_template',
 							'show_option_none'		=> '...'
 						) ); ?>
 						<div class="bws_info"><?php _e( 'Base page where all existing galleries will be displayed.' , 'gallery-plugin'); ?></div>
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><?php _e( 'Albums Displaying', 'gallery-plugin' ); ?></th>
+					<td>
+						<fieldset>
+							<label><input type="radio" name="gllr_layout" value="column" id="gllr_column" <?php checked( 'column' == $this->options["galleries_layout"] ); ?> /> <?php _e( 'Column', 'gallery-plugin' ); ?></label><br/>
+							<label><input type="radio" name="gllr_layout" value="rows" id="gllr_rows" <?php checked( 'rows' == $this->options["galleries_layout"] ); ?> /> <?php _e( 'Rows', 'gallery-plugin' ); ?></label>
+						</fieldset>
+						<div class="bws_info"><?php _e( 'Select the way galleries will be displayed on the Galleries Page.' , 'gallery-plugin'); ?></div>
+					</td>
+				</tr>
+				<tr valign="top" class="gllr_column_alignment">
+					<th scope="row"><?php _e( 'Column Alignment', 'gallery-plugin' ); ?></th>
+					<td>
+						<fieldset>
+							<label><input type="radio" name="gllr_column_align" value="left" <?php checked( 'left' == $this->options["galleries_column_alignment"] ); ?> /> <?php _e( 'Left', 'gallery-plugin' ); ?></label><br/>
+							<label><input type="radio" name="gllr_column_align" value="right" <?php checked( 'right' == $this->options["galleries_column_alignment"] ); ?> /> <?php _e( 'Right', 'gallery-plugin' ); ?></label><br/>
+							<label><input type="radio" name="gllr_column_align" value="center" <?php checked( 'center' == $this->options["galleries_column_alignment"] ); ?> /> <?php _e( 'Center', 'gallery-plugin' ); ?></label>
+						</fieldset>
+						<div class="bws_info"><?php _e( 'Select the column alignment.' , 'gallery-plugin'); ?></div>
 					</td>
 				</tr>
 				<tr valign="top">
@@ -743,7 +766,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 								<th scope="row"><?php _e( 'Overlay Opacity', 'gallery-plugin' ); ?> </th>
 								<td>
 									<input disabled type="text" size="8" value="0.7" />
-									<div class="bws_info"><?php printf( __( 'Lightbox overlay opacity. Leave blank to disable opacity (default is %d, max is %d).', 'gallery-plugin' ), '0.7', '1' ); ?></div>
+									<div class="bws_info"><?php printf( __( 'Lightbox overlay opacity. Leave blank to disable opacity (default is %s, max is %s).', 'gallery-plugin' ), '0.7', '1' ); ?></div>
 								</td>
 							</tr>
 						</table>
@@ -781,7 +804,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<tr valign="top">
 								<th scope="row"><?php _e( 'Lightbox Thumbnails', 'gallery-plugin' ); ?></th>
 								<td>
-									<input disabled type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to use a lightbox helper navigation between images..', 'gallery-plugin' ); ?></span>
+									<input disabled type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to use a lightbox helper navigation between images.', 'gallery-plugin' ); ?></span>
 								</td>
 							</tr>
 							<tr valign="top">
@@ -831,9 +854,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					<div class="bws_table_bg"></div>
 					<table class="form-table bws_pro_version">
 						<tr valign="top">
-							<th scope="row"><?php _e( 'Enable Social Buttons', 'gallery-plugin' ); ?></th>
+							<th scope="row"><?php _e( 'Social Buttons', 'gallery-plugin' ); ?></th>
 							<td>
-								<input disabled type="checkbox" value="1" /> <span class="bws_info"><?php _e( 'Enable social sharing buttons in the lightbox.', 'gallery-plugin' ); ?></span>
+								<input type="checkbox" value="1" checked="checked" /> <span class="bws_info"><?php _e( 'Enable social sharing buttons in the lightbox.', 'gallery-plugin' ); ?></span>
 							</td>
 						</tr>
 						<tr valign="top">
@@ -848,19 +871,10 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							</td>
 						</tr>
 						<tr valign="top">
-							<th scope="row"><?php _e( 'Social Buttons Position', 'gallery-plugin' ); ?></th>
-							<td>
-								<select disabled>
-									<option value="left" selected="selected"><?php _e( 'Left', 'gallery-plugin' ); ?></option>
-								</select>
-								<span class="bws_info"><?php _e( 'Select social buttons position in the lightbox.', 'gallery-plugin' ); ?></span>
-							</td>
-						</tr>
-						<tr valign="top">
 							<th scope="row"><?php _e( 'Counter', 'gallery-plugin' ); ?></th>
 							<td>
-								<input disabled type="checkbox" value="1" />
-								<span class="bws_info"><?php _e( 'Enable to show likes counter for each social button.', 'gallery-plugin' ); ?></span>
+								<input disabled type="checkbox" value="1" checked="checked" />
+								<span class="bws_info"><?php _e( 'Enable to show likes counter for each social button (not available for Google +1).', 'gallery-plugin' ); ?></span>
 							</td>
 						</tr>
 					</table>
