@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-05 16:21+0200\n"
-"PO-Revision-Date: 2017-12-05 16:21+0200\n"
+"POT-Creation-Date: 2017-12-15 15:15+0200\n"
+"PO-Revision-Date: 2017-12-15 15:15+0200\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: Jonas Seemann <info@ahoidesign.de>\n"
-"Language: uk_UA\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,6 +14,7 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.8.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: gallery-plugin.php:37 includes/class-gllr-settings.php:310
@@ -25,7 +26,7 @@ msgstr "Galerie Einstellungen"
 msgid "Global Settings"
 msgstr "Galerie Einstellungen"
 
-#: gallery-plugin.php:43 gallery-plugin.php:2772
+#: gallery-plugin.php:43 gallery-plugin.php:2771
 #, fuzzy
 msgid "Upgrade to Pro"
 msgstr "Оновити до Pro"
@@ -42,7 +43,7 @@ msgstr "Fotos anzeigen &raquo;"
 msgid "Galleries"
 msgstr "Galerien"
 
-#: gallery-plugin.php:337 gallery-plugin.php:3188
+#: gallery-plugin.php:337 gallery-plugin.php:3187
 msgid "Gallery"
 msgstr "Galerie"
 
@@ -71,9 +72,9 @@ msgstr "Galerien"
 msgid "No Gallery found"
 msgstr "Keine Galerien gefunden"
 
-#: gallery-plugin.php:365 gallery-plugin.php:1602 gallery-plugin.php:2918
-#: gallery-plugin.php:2926 gallery-plugin.php:2964 gallery-plugin.php:2987
-#: gallery-plugin.php:3172
+#: gallery-plugin.php:365 gallery-plugin.php:1600 gallery-plugin.php:2917
+#: gallery-plugin.php:2925 gallery-plugin.php:2963 gallery-plugin.php:2986
+#: gallery-plugin.php:3171
 #, fuzzy
 msgid "Gallery Categories"
 msgstr "Bildgröße für Galerie"
@@ -147,7 +148,7 @@ msgstr ""
 #: gallery-plugin.php:581
 #, fuzzy
 msgid "Note"
-msgstr "Примітка"
+msgstr "Notitz"
 
 #: gallery-plugin.php:581
 #, php-format
@@ -156,7 +157,7 @@ msgid ""
 "not be deleted. These galleries will be moved to the category %s."
 msgstr ""
 
-#: gallery-plugin.php:594 gallery-plugin.php:1601
+#: gallery-plugin.php:594 gallery-plugin.php:1599
 #, fuzzy
 msgid "Shortcode"
 msgstr "Galerie Einstellungen"
@@ -169,337 +170,336 @@ msgstr ""
 msgid "You can't delete default gallery category."
 msgstr ""
 
-#: gallery-plugin.php:1091 gallery-plugin.php:1198 gallery-plugin.php:2109
+#: gallery-plugin.php:1089 gallery-plugin.php:1196 gallery-plugin.php:2108
 msgid "Sorry, nothing found."
 msgstr "Leider nichts gefunden."
 
-#: gallery-plugin.php:1598
-#, fuzzy
+#: gallery-plugin.php:1596
 msgid "Featured Image"
-msgstr "Мініатюра"
+msgstr ""
 
-#: gallery-plugin.php:1599 gallery-plugin.php:2629 gallery-plugin.php:2733
-#: gallery-plugin.php:2844 includes/class-gllr-settings.php:679
+#: gallery-plugin.php:1597 gallery-plugin.php:2628 gallery-plugin.php:2732
+#: gallery-plugin.php:2843 includes/class-gllr-settings.php:679
 msgid "Title"
 msgstr "Titel"
 
-#: gallery-plugin.php:1600 includes/class-gllr-settings.php:41
+#: gallery-plugin.php:1598 includes/class-gllr-settings.php:41
 #, fuzzy
 msgid "Images"
 msgstr "Bild"
 
-#: gallery-plugin.php:1603 includes/class-gllr-settings.php:684
+#: gallery-plugin.php:1601 includes/class-gllr-settings.php:684
 msgid "Author"
 msgstr "Author"
 
-#: gallery-plugin.php:1604 includes/class-gllr-settings.php:513
+#: gallery-plugin.php:1602 includes/class-gllr-settings.php:513
 #: includes/class-gllr-settings.php:680
 msgid "Date"
 msgstr "Datum"
 
-#: gallery-plugin.php:1690
+#: gallery-plugin.php:1688
 #, fuzzy, php-format
 msgid "%s Settings"
 msgstr "Перейти до Налаштувань %s"
 
-#: gallery-plugin.php:1717 gallery-plugin.php:1735
+#: gallery-plugin.php:1715 gallery-plugin.php:1733
 #: includes/class-gllr-settings.php:30 includes/class-gllr-settings.php:42
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: gallery-plugin.php:1718
+#: gallery-plugin.php:1716
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:1719
+#: gallery-plugin.php:1717
 msgid "Support"
 msgstr "Support"
 
-#: gallery-plugin.php:1758
+#: gallery-plugin.php:1756
 msgid "Updating images..."
 msgstr ""
 
-#: gallery-plugin.php:1759
+#: gallery-plugin.php:1757
 #, fuzzy
 msgid "No images found."
 msgstr "Keine Galerien gefunden"
 
-#: gallery-plugin.php:1760
+#: gallery-plugin.php:1758
 msgid "All images were updated."
 msgstr ""
 
-#: gallery-plugin.php:1761
+#: gallery-plugin.php:1759
 #, fuzzy
 msgid "Error."
-msgstr "ПОМИЛКА:"
+msgstr "Ein Fehler ist während der Aktualisierung der Statusliste aufgetreten."
 
-#: gallery-plugin.php:1773
+#: gallery-plugin.php:1771
 msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
 
-#: gallery-plugin.php:1774
+#: gallery-plugin.php:1772
 msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
 
-#: gallery-plugin.php:1775
+#: gallery-plugin.php:1773
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
 msgstr ""
 
-#: gallery-plugin.php:1776
+#: gallery-plugin.php:1774
 msgid "Insert Media"
 msgstr ""
 
-#: gallery-plugin.php:1777
+#: gallery-plugin.php:1775
 msgid "Insert"
 msgstr ""
 
-#: gallery-plugin.php:2301 gallery-plugin.php:2327
+#: gallery-plugin.php:2300 gallery-plugin.php:2326
 #, fuzzy
 msgid "Image size not defined"
 msgstr "Name der Bilder"
 
-#: gallery-plugin.php:2316
+#: gallery-plugin.php:2315
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
 msgstr ""
 
-#: gallery-plugin.php:2356 gallery-plugin.php:2359 gallery-plugin.php:2364
+#: gallery-plugin.php:2355 gallery-plugin.php:2358 gallery-plugin.php:2363
 msgid "Invalid path"
 msgstr ""
 
-#: gallery-plugin.php:2453
+#: gallery-plugin.php:2452
 msgid "List View"
 msgstr ""
 
-#: gallery-plugin.php:2454
+#: gallery-plugin.php:2453
 msgid "Grid View"
 msgstr ""
 
-#: gallery-plugin.php:2509
+#: gallery-plugin.php:2508
 #, fuzzy
 msgid "Filter"
-msgstr "Фільтр"
+msgstr "Filter"
 
-#: gallery-plugin.php:2513
+#: gallery-plugin.php:2512
 msgid "Empty Trash"
 msgstr ""
 
-#: gallery-plugin.php:2534
+#: gallery-plugin.php:2533
 #, fuzzy
 msgid "No images found"
 msgstr "Keine Galerien gefunden"
 
-#: gallery-plugin.php:2586
+#: gallery-plugin.php:2585
 msgid "Select bulk action"
 msgstr ""
 
-#: gallery-plugin.php:2588
+#: gallery-plugin.php:2587
 msgid "Bulk Actions"
 msgstr ""
 
-#: gallery-plugin.php:2598
-#, fuzzy
+#: gallery-plugin.php:2597
 msgid "Apply"
-msgstr "Застосувати фільтр"
+msgstr ""
 
-#: gallery-plugin.php:2605
+#: gallery-plugin.php:2604
 #, fuzzy
 msgid "Delete from Gallery"
 msgstr "Neue Galerie"
 
-#: gallery-plugin.php:2614
+#: gallery-plugin.php:2613
 msgid "Bulk Select"
 msgstr ""
 
-#: gallery-plugin.php:2615
+#: gallery-plugin.php:2614
 msgid "Cancel Selection"
 msgstr ""
 
-#: gallery-plugin.php:2616
+#: gallery-plugin.php:2615
 msgid "Delete Selected"
 msgstr ""
 
-#: gallery-plugin.php:2627
-#, fuzzy
+#: gallery-plugin.php:2626
 msgid "File"
-msgstr "Імпорт пройшов успішно, але файл %s видалити не вдалося"
+msgstr ""
 
-#: gallery-plugin.php:2628 gallery-plugin.php:2728 gallery-plugin.php:2839
+#: gallery-plugin.php:2627 gallery-plugin.php:2727 gallery-plugin.php:2838
 msgid "Dimensions"
 msgstr ""
 
-#: gallery-plugin.php:2630 gallery-plugin.php:2739 gallery-plugin.php:2849
+#: gallery-plugin.php:2629 gallery-plugin.php:2738 gallery-plugin.php:2848
 msgid "Alt Text"
 msgstr ""
 
-#: gallery-plugin.php:2631 gallery-plugin.php:2743 gallery-plugin.php:2854
+#: gallery-plugin.php:2630 gallery-plugin.php:2742 gallery-plugin.php:2853
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:2631 gallery-plugin.php:2745
+#: gallery-plugin.php:2630 gallery-plugin.php:2744
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
 msgstr ""
 
-#: gallery-plugin.php:2710
+#: gallery-plugin.php:2709
 #, fuzzy
 msgid "Remove Image from Gallery"
 msgstr "Neue Galerie"
 
-#: gallery-plugin.php:2713
+#: gallery-plugin.php:2712
 #, fuzzy
 msgid "Edit Image Info"
 msgstr "Anhang ID"
 
-#: gallery-plugin.php:2714
+#: gallery-plugin.php:2713
 msgid "Deselect"
 msgstr ""
 
-#: gallery-plugin.php:2726
+#: gallery-plugin.php:2725
 msgid "File name"
 msgstr ""
 
-#: gallery-plugin.php:2727
+#: gallery-plugin.php:2726
 msgid "File type"
 msgstr ""
 
-#: gallery-plugin.php:2752
+#: gallery-plugin.php:2751
 #, fuzzy
 msgid "Description"
-msgstr "Опис слайда"
+msgstr "Slide beschreibung"
 
-#: gallery-plugin.php:2758
+#: gallery-plugin.php:2757
 #, fuzzy
 msgid "Lightbox Button URL"
 msgstr "Lightbox Hintergrund"
 
-#: gallery-plugin.php:2765
+#: gallery-plugin.php:2764
 msgid "New Tab"
 msgstr ""
 
-#: gallery-plugin.php:2767
+#: gallery-plugin.php:2766
 msgid "Enable to open URLs above in a new tab."
 msgstr ""
 
-#: gallery-plugin.php:2772
+#: gallery-plugin.php:2771
 msgid "Go Pro"
 msgstr ""
 
-#: gallery-plugin.php:2778
+#: gallery-plugin.php:2777
 msgid "Edit more details"
 msgstr ""
 
-#: gallery-plugin.php:2780
+#: gallery-plugin.php:2779
 #, fuzzy
 msgid "Remove from Gallery"
 msgstr "Neue Galerie"
 
-#: gallery-plugin.php:2814
+#: gallery-plugin.php:2813
 #, php-format
 msgid "Select %s"
 msgstr ""
 
-#: gallery-plugin.php:2827
+#: gallery-plugin.php:2826
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
 msgstr ""
 
-#: gallery-plugin.php:2835
+#: gallery-plugin.php:2834
 #, fuzzy
 msgid "Edit Attachment Info"
 msgstr "Anhang ID"
 
-#: gallery-plugin.php:2872 gallery-plugin.php:2885
+#: gallery-plugin.php:2871 gallery-plugin.php:2884
 #, fuzzy
 msgid "Edit"
-msgstr "Змінити"
+msgstr "Bearbeiten"
 
-#: gallery-plugin.php:2875 gallery-plugin.php:2890
+#: gallery-plugin.php:2874 gallery-plugin.php:2889
 msgid "Trash"
 msgstr ""
 
-#: gallery-plugin.php:2878 gallery-plugin.php:2893
+#: gallery-plugin.php:2877 gallery-plugin.php:2892
 msgid "Delete Permanently"
 msgstr ""
 
-#: gallery-plugin.php:2880 gallery-plugin.php:2899
+#: gallery-plugin.php:2879 gallery-plugin.php:2898
 #, php-format
 msgid "View &#8220;%s&#8221;"
 msgstr ""
 
-#: gallery-plugin.php:2880 gallery-plugin.php:2899 gallery-plugin.php:2982
+#: gallery-plugin.php:2879 gallery-plugin.php:2898 gallery-plugin.php:2981
 #, fuzzy
 msgid "View"
-msgstr "Voir type de voiture"
+msgstr "Fahrzeugtyp ansehen"
 
-#: gallery-plugin.php:2882
+#: gallery-plugin.php:2881
 #, fuzzy
 msgid "Attach"
 msgstr "Anhang ID"
 
-#: gallery-plugin.php:2888
+#: gallery-plugin.php:2887
 msgid "Restore"
 msgstr ""
 
-#: gallery-plugin.php:2917
+#: gallery-plugin.php:2916
 msgid "A list or dropdown of Gallery categories."
 msgstr ""
 
-#: gallery-plugin.php:2962
+#: gallery-plugin.php:2961
 msgid "Select Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:3020
+#: gallery-plugin.php:3019
 #, fuzzy
 msgid "Title:"
-msgstr "Назва:"
+msgstr "Titel"
 
-#: gallery-plugin.php:3023
+#: gallery-plugin.php:3022
 msgid "Display as dropdown"
 msgstr ""
 
-#: gallery-plugin.php:3025
+#: gallery-plugin.php:3024
 msgid "Show gallery counts"
 msgstr ""
 
-#: gallery-plugin.php:3027
+#: gallery-plugin.php:3026
 msgid "Show hierarchy"
 msgstr ""
 
-#: gallery-plugin.php:3143
+#: gallery-plugin.php:3142
 #, fuzzy
 msgid "Warning"
-msgstr "Увага"
+msgstr ""
+"Warnung! Der Status \"%1$s\" kann nicht entfernt werden, da er in der "
+"Bestellung %2$s verwendet wird."
 
-#: gallery-plugin.php:3143
+#: gallery-plugin.php:3142
 msgid "You can add only images to the gallery"
 msgstr ""
 
-#: gallery-plugin.php:3174
+#: gallery-plugin.php:3173
 msgid "or"
 msgstr ""
 
-#: gallery-plugin.php:3182
+#: gallery-plugin.php:3181
 #, fuzzy
 msgid "no title"
-msgstr "Назва:"
+msgstr "Titel"
 
-#: gallery-plugin.php:3193
+#: gallery-plugin.php:3192
 #, fuzzy
 msgid ""
 "Display an album image with the description and the link to a single gallery "
 "page"
 msgstr "Shortcode zum Anzeigen einer Kurzbeschreibung, Link und Bild"
 
-#: gallery-plugin.php:3197
+#: gallery-plugin.php:3196
 #, fuzzy
 msgid "Sorry, no gallery found."
 msgstr "Leider nichts gefunden."
@@ -518,24 +518,20 @@ msgid "Social"
 msgstr ""
 
 #: includes/class-gllr-settings.php:34
-#, fuzzy
 msgid "Misc"
-msgstr "Різне"
+msgstr ""
 
 #: includes/class-gllr-settings.php:35
-#, fuzzy
 msgid "Custom Code"
-msgstr "Користувацький код"
+msgstr ""
 
 #: includes/class-gllr-settings.php:36
-#, fuzzy
 msgid "Import / Export"
-msgstr "Імпорт / Експорт"
+msgstr ""
 
 #: includes/class-gllr-settings.php:37
-#, fuzzy
 msgid "License Key"
-msgstr "Ліцензійний ключ"
+msgstr ""
 
 #: includes/class-gllr-settings.php:210
 msgid "Custom image size was changed. You need to update gallery images."
@@ -544,7 +540,7 @@ msgstr ""
 #: includes/class-gllr-settings.php:247
 #, fuzzy
 msgid "Settings saved"
-msgstr "Налаштування збережено."
+msgstr "Slider Einstellung gespeichert"
 
 #: includes/class-gllr-settings.php:259
 #, fuzzy
@@ -594,7 +590,7 @@ msgstr ""
 #: includes/class-gllr-settings.php:923
 #, fuzzy
 msgid "Close"
-msgstr "Закрити"
+msgstr "Details ausblenden"
 
 #: includes/class-gllr-settings.php:336
 #, fuzzy
@@ -624,9 +620,8 @@ msgid "Image Size"
 msgstr "Name der Bilder"
 
 #: includes/class-gllr-settings.php:373 includes/class-gllr-settings.php:606
-#, fuzzy
 msgid "Custom"
-msgstr "Користувацьке"
+msgstr ""
 
 #: includes/class-gllr-settings.php:375
 msgid ""
@@ -755,7 +750,7 @@ msgstr "Bild"
 #: includes/class-gllr-settings.php:512
 #, fuzzy
 msgid "Name"
-msgstr "Им'я"
+msgstr "Name"
 
 #: includes/class-gllr-settings.php:514 includes/class-gllr-settings.php:685
 msgid "Random"
@@ -932,11 +927,8 @@ msgid "Comment count"
 msgstr ""
 
 #: includes/class-gllr-settings.php:683
-#, fuzzy
-msgid "Sorting order (the input field for sorting order)"
+msgid "\"Order\" field on the gallery edit page"
 msgstr ""
-"Reihenfolge (the input field for sorting order in the Insert / Upload Media "
-"Gallery dialog)"
 
 #: includes/class-gllr-settings.php:687
 msgid "Select galleries sorting order in your galleries page."
@@ -1102,7 +1094,7 @@ msgstr ""
 #: includes/class-gllr-settings.php:892
 #, fuzzy
 msgid "Demo Data"
-msgstr "Демо дані"
+msgstr "Sind Sie sicher, dass Sie Demo-Daten installieren möchten?"
 
 #: includes/class-gllr-settings.php:894
 msgid ""
@@ -1138,9 +1130,8 @@ msgid "Activate Now"
 msgstr "Aktivierte Plugins"
 
 #: includes/class-gllr-settings.php:962
-#, fuzzy
 msgid "Install Now"
-msgstr "Встановити Зараз"
+msgstr ""
 
 #: includes/class-gllr-settings.php:965
 msgid "Enable to include galleries to your website search."
@@ -1154,12 +1145,12 @@ msgstr ""
 #: includes/demo-data/class-bws-demo-data.php:33
 #, fuzzy
 msgid "Install Demo Data"
-msgstr "Встановити Демо Дані"
+msgstr "Demo Daten installieren"
 
 #: includes/demo-data/class-bws-demo-data.php:36
 #, fuzzy
 msgid "Remove Demo Data"
-msgstr "Видалити Демо Дані"
+msgstr "Demo Daten löschen"
 
 #: includes/demo-data/class-bws-demo-data.php:37
 #, fuzzy
@@ -1169,32 +1160,32 @@ msgstr "Видалити демо дані і відновити поперед�
 #: includes/demo-data/class-bws-demo-data.php:50
 #, fuzzy
 msgid "Yes, install demo data"
-msgstr "Так, встановити демо дані"
+msgstr "Ja, Demo-Daten installieren"
 
 #: includes/demo-data/class-bws-demo-data.php:51
 #, fuzzy
 msgid "Are you sure you want to install demo data?"
-msgstr "Ви впевнені, що хочете встановити демо дані?"
+msgstr "Sind Sie sicher, dass Sie Demo-Daten installieren möchten?"
 
 #: includes/demo-data/class-bws-demo-data.php:53
 #, fuzzy
 msgid "Yes, remove demo data"
-msgstr "Так, видалити демо дані"
+msgstr "Ja, entfernen Demo-Daten"
 
 #: includes/demo-data/class-bws-demo-data.php:54
 #, fuzzy
 msgid "Are you sure you want to remove demo data?"
-msgstr "Ви впевнені, що хочете видалити демо дані?"
+msgstr "Sind Sie sicher, dass Sie Demo-Daten entfernen möchten?"
 
 #: includes/demo-data/class-bws-demo-data.php:61
 #, fuzzy
 msgid "No, go back to the settings page"
-msgstr "Ні, повернутися на сторінку налаштувань"
+msgstr "Nein, zurück zu den Einstellungen"
 
 #: includes/demo-data/class-bws-demo-data.php:111
 #, fuzzy
 msgid "Can not get demo data."
-msgstr "Неможливо отримати демо дані"
+msgstr "Kann keine Demodaten empfangen"
 
 #: includes/demo-data/class-bws-demo-data.php:118
 msgid "Demo settings already installed."
@@ -1207,32 +1198,32 @@ msgstr ""
 #: includes/demo-data/class-bws-demo-data.php:369
 #, fuzzy
 msgid "View post with shortcodes"
-msgstr "Переглянути запис з шорткодами"
+msgstr "Beitrag mit Shortcodes anzeigen"
 
 #: includes/demo-data/class-bws-demo-data.php:372
 #, fuzzy
 msgid "View page with examples"
-msgstr "Переглянути сторінку з прикладами"
+msgstr "Beispielseite anzeigen"
 
 #: includes/demo-data/class-bws-demo-data.php:383
 #, fuzzy
 msgid "Installation of demo data with some errors occurred."
-msgstr "Установка демо даних пройшла з помилками."
+msgstr "Bei der Installation der Demo Daten sind Fehler aufgetreten."
 
 #: includes/demo-data/class-bws-demo-data.php:386
 #, fuzzy
 msgid "Posts data is missing."
-msgstr "Дані записів відсутні."
+msgstr "Daten des Posts fehlen"
 
 #: includes/demo-data/class-bws-demo-data.php:458
 #, fuzzy
 msgid "Demo data have already been removed."
-msgstr "Демо дані вже були видалені"
+msgstr "Demo Daten wurden bereits entfernt"
 
 #: includes/demo-data/class-bws-demo-data.php:515
 #, fuzzy
 msgid "Demo data successfully removed."
-msgstr "Демо дані успішно видалені."
+msgstr "Demo Daten wurden erfolgreich entfernt"
 
 #: includes/demo-data/class-bws-demo-data.php:519
 #, fuzzy
@@ -1242,19 +1233,25 @@ msgstr "Видалення демо даних пройшло з помилка�
 #: includes/demo-data/class-bws-demo-data.php:587
 #, fuzzy
 msgid "Close notice"
-msgstr "Закрити повідомлення"
+msgstr "Schließen Ankündigung"
 
-#: includes/demo-data/class-bws-demo-data.php:591
+#: includes/demo-data/class-bws-demo-data.php:593
 #, php-format
 msgid ""
-"Do you want to install demo content and settings for %s (You can do this "
-"later using Import / Export settings)?"
+"Do you want to install demo content and settings for %s? (You can do this "
+"later using Import / Export settings)"
 msgstr ""
 
-#: includes/demo-data/class-bws-demo-data.php:591
+#: includes/demo-data/class-bws-demo-data.php:595
 #, fuzzy
 msgid "Yes, install demo now"
 msgstr "Installiere %s"
+
+#, fuzzy
+#~ msgid "Sorting order (the input field for sorting order)"
+#~ msgstr ""
+#~ "Reihenfolge (the input field for sorting order in the Insert / Upload "
+#~ "Media Gallery dialog)"
 
 #, fuzzy
 #~ msgid ""

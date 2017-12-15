@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-05 16:21+0200\n"
-"PO-Revision-Date: 2017-12-05 16:21+0200\n"
+"POT-Creation-Date: 2017-12-15 15:14+0200\n"
+"PO-Revision-Date: 2017-12-15 15:14+0200\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: chameleonjohn.com <jordan.silaen@chameleonjohn.com>\n"
 "Language: id_ID\n"
@@ -24,7 +24,7 @@ msgstr "Pengaturan Gallery"
 msgid "Global Settings"
 msgstr "Pengaturan global"
 
-#: gallery-plugin.php:43 gallery-plugin.php:2772
+#: gallery-plugin.php:43 gallery-plugin.php:2771
 msgid "Upgrade to Pro"
 msgstr "Upgrade ke yang lebih baik"
 
@@ -40,7 +40,7 @@ msgstr "Lihat gambar & raquo;"
 msgid "Galleries"
 msgstr "Galeri"
 
-#: gallery-plugin.php:337 gallery-plugin.php:3188
+#: gallery-plugin.php:337 gallery-plugin.php:3187
 msgid "Gallery"
 msgstr "Galeri"
 
@@ -68,9 +68,9 @@ msgstr "Cari Galeri"
 msgid "No Gallery found"
 msgstr "Tidak ada Galeri ditemukan"
 
-#: gallery-plugin.php:365 gallery-plugin.php:1602 gallery-plugin.php:2918
-#: gallery-plugin.php:2926 gallery-plugin.php:2964 gallery-plugin.php:2987
-#: gallery-plugin.php:3172
+#: gallery-plugin.php:365 gallery-plugin.php:1600 gallery-plugin.php:2917
+#: gallery-plugin.php:2925 gallery-plugin.php:2963 gallery-plugin.php:2986
+#: gallery-plugin.php:3171
 msgid "Gallery Categories"
 msgstr "Galeri Kategori"
 
@@ -91,8 +91,9 @@ msgid "Edit Gallery Category"
 msgstr ""
 
 #: gallery-plugin.php:371
+#, fuzzy
 msgid "New Gallery Category"
-msgstr ""
+msgstr "Tambahkan Baru Galeri Kategori"
 
 #: gallery-plugin.php:372 gallery-plugin.php:373
 msgid "View Gallery Category"
@@ -153,7 +154,7 @@ msgid ""
 "not be deleted. These galleries will be moved to the category %s."
 msgstr ""
 
-#: gallery-plugin.php:594 gallery-plugin.php:1601
+#: gallery-plugin.php:594 gallery-plugin.php:1599
 msgid "Shortcode"
 msgstr "Kode pendek"
 
@@ -165,67 +166,67 @@ msgstr ""
 msgid "You can't delete default gallery category."
 msgstr ""
 
-#: gallery-plugin.php:1091 gallery-plugin.php:1198 gallery-plugin.php:2109
+#: gallery-plugin.php:1089 gallery-plugin.php:1196 gallery-plugin.php:2108
 msgid "Sorry, nothing found."
 msgstr "Maaf, tidak ditemukan."
 
-#: gallery-plugin.php:1598
+#: gallery-plugin.php:1596
 msgid "Featured Image"
 msgstr "Gambar Pilihan"
 
-#: gallery-plugin.php:1599 gallery-plugin.php:2629 gallery-plugin.php:2733
-#: gallery-plugin.php:2844 includes/class-gllr-settings.php:679
+#: gallery-plugin.php:1597 gallery-plugin.php:2628 gallery-plugin.php:2732
+#: gallery-plugin.php:2843 includes/class-gllr-settings.php:679
 msgid "Title"
 msgstr "Judul"
 
-#: gallery-plugin.php:1600 includes/class-gllr-settings.php:41
+#: gallery-plugin.php:1598 includes/class-gllr-settings.php:41
 msgid "Images"
 msgstr "gambar"
 
-#: gallery-plugin.php:1603 includes/class-gllr-settings.php:684
+#: gallery-plugin.php:1601 includes/class-gllr-settings.php:684
 msgid "Author"
 msgstr "Penulis"
 
-#: gallery-plugin.php:1604 includes/class-gllr-settings.php:513
+#: gallery-plugin.php:1602 includes/class-gllr-settings.php:513
 #: includes/class-gllr-settings.php:680
 msgid "Date"
 msgstr "Tanggal"
 
-#: gallery-plugin.php:1690
+#: gallery-plugin.php:1688
 #, php-format
 msgid "%s Settings"
 msgstr ""
 
-#: gallery-plugin.php:1717 gallery-plugin.php:1735
+#: gallery-plugin.php:1715 gallery-plugin.php:1733
 #: includes/class-gllr-settings.php:30 includes/class-gllr-settings.php:42
 msgid "Settings"
 msgstr "pengaturan"
 
-#: gallery-plugin.php:1718
+#: gallery-plugin.php:1716
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:1719
+#: gallery-plugin.php:1717
 msgid "Support"
 msgstr "Mendukung"
 
-#: gallery-plugin.php:1758
+#: gallery-plugin.php:1756
 msgid "Updating images..."
 msgstr "Memperbarui gambar ..."
 
-#: gallery-plugin.php:1759
+#: gallery-plugin.php:1757
 msgid "No images found."
 msgstr "Tidak ada gambar yang ditemukan."
 
-#: gallery-plugin.php:1760
+#: gallery-plugin.php:1758
 msgid "All images were updated."
 msgstr "Semua gambar yang diperbarui."
 
-#: gallery-plugin.php:1761
+#: gallery-plugin.php:1759
 msgid "Error."
 msgstr "Kesalahan."
 
-#: gallery-plugin.php:1773
+#: gallery-plugin.php:1771
 msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -233,7 +234,7 @@ msgstr ""
 "Anda akan menghapus item dari galeri ini. \\ N 'Batal' untuk menghentikan, "
 "'OK' untuk menghapus."
 
-#: gallery-plugin.php:1774
+#: gallery-plugin.php:1772
 msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -241,7 +242,7 @@ msgstr ""
 "Anda akan menghapus gambar ini dari galeri. \\ N 'Batal' untuk menghentikan, "
 "'OK' untuk menghapus."
 
-#: gallery-plugin.php:1775
+#: gallery-plugin.php:1773
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
@@ -249,19 +250,19 @@ msgstr ""
 "Beralih ke mode lain, semua data yang belum disimpan akan hilang. Menyimpan "
 "data sebelum beralih?"
 
-#: gallery-plugin.php:1776
+#: gallery-plugin.php:1774
 msgid "Insert Media"
 msgstr "Insert Media"
 
-#: gallery-plugin.php:1777
+#: gallery-plugin.php:1775
 msgid "Insert"
 msgstr "Memasukkan"
 
-#: gallery-plugin.php:2301 gallery-plugin.php:2327
+#: gallery-plugin.php:2300 gallery-plugin.php:2326
 msgid "Image size not defined"
 msgstr "ukuran gambar tidak didefinisikan"
 
-#: gallery-plugin.php:2316
+#: gallery-plugin.php:2315
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
@@ -269,75 +270,75 @@ msgstr ""
 "update Plugin hanya PNG, JPEG, GIF, WPMP atau XBM filetype. Untuk lainnya, "
 "silakan ulang gambar secara manual."
 
-#: gallery-plugin.php:2356 gallery-plugin.php:2359 gallery-plugin.php:2364
+#: gallery-plugin.php:2355 gallery-plugin.php:2358 gallery-plugin.php:2363
 msgid "Invalid path"
 msgstr "Jalan yang salah"
 
-#: gallery-plugin.php:2453
+#: gallery-plugin.php:2452
 msgid "List View"
 msgstr "Daftar View"
 
-#: gallery-plugin.php:2454
+#: gallery-plugin.php:2453
 msgid "Grid View"
 msgstr "Tampilan bergaris"
 
-#: gallery-plugin.php:2509
+#: gallery-plugin.php:2508
 msgid "Filter"
 msgstr "Menyaring"
 
-#: gallery-plugin.php:2513
+#: gallery-plugin.php:2512
 msgid "Empty Trash"
 msgstr "Sampah kosong"
 
-#: gallery-plugin.php:2534
+#: gallery-plugin.php:2533
 msgid "No images found"
 msgstr "Tidak ada gambar yang ditemukan"
 
-#: gallery-plugin.php:2586
+#: gallery-plugin.php:2585
 msgid "Select bulk action"
 msgstr "tindakan massal pilih"
 
-#: gallery-plugin.php:2588
+#: gallery-plugin.php:2587
 msgid "Bulk Actions"
 msgstr "Aksi besar"
 
-#: gallery-plugin.php:2598
+#: gallery-plugin.php:2597
 msgid "Apply"
 msgstr "Menerapkan"
 
-#: gallery-plugin.php:2605
+#: gallery-plugin.php:2604
 msgid "Delete from Gallery"
 msgstr "Hapus dari Galeri"
 
-#: gallery-plugin.php:2614
+#: gallery-plugin.php:2613
 msgid "Bulk Select"
 msgstr "massal Pilih"
 
-#: gallery-plugin.php:2615
+#: gallery-plugin.php:2614
 msgid "Cancel Selection"
 msgstr "Batal Seleksi"
 
-#: gallery-plugin.php:2616
+#: gallery-plugin.php:2615
 msgid "Delete Selected"
 msgstr "Hapus yang Dipilih"
 
-#: gallery-plugin.php:2627
+#: gallery-plugin.php:2626
 msgid "File"
 msgstr "Mengajukan"
 
-#: gallery-plugin.php:2628 gallery-plugin.php:2728 gallery-plugin.php:2839
+#: gallery-plugin.php:2627 gallery-plugin.php:2727 gallery-plugin.php:2838
 msgid "Dimensions"
 msgstr "Ukuran"
 
-#: gallery-plugin.php:2630 gallery-plugin.php:2739 gallery-plugin.php:2849
+#: gallery-plugin.php:2629 gallery-plugin.php:2738 gallery-plugin.php:2848
 msgid "Alt Text"
 msgstr "Alt Teks"
 
-#: gallery-plugin.php:2631 gallery-plugin.php:2743 gallery-plugin.php:2854
+#: gallery-plugin.php:2630 gallery-plugin.php:2742 gallery-plugin.php:2853
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:2631 gallery-plugin.php:2745
+#: gallery-plugin.php:2630 gallery-plugin.php:2744
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
@@ -345,145 +346,146 @@ msgstr ""
 "Masukkan URL kustom Anda untuk menghubungkan gambar ini ke halaman lain atau "
 "file. Biarkan kosong untuk membuka gambar ukuran penuh."
 
-#: gallery-plugin.php:2710
+#: gallery-plugin.php:2709
 msgid "Remove Image from Gallery"
 msgstr "Hapus Gambar dari Galeri"
 
-#: gallery-plugin.php:2713
+#: gallery-plugin.php:2712
 msgid "Edit Image Info"
 msgstr "Info mengedit Gambar"
 
-#: gallery-plugin.php:2714
+#: gallery-plugin.php:2713
 msgid "Deselect"
 msgstr "hapus"
 
-#: gallery-plugin.php:2726
+#: gallery-plugin.php:2725
 msgid "File name"
 msgstr "Nama file"
 
-#: gallery-plugin.php:2727
+#: gallery-plugin.php:2726
 msgid "File type"
 msgstr "jenis file"
 
-#: gallery-plugin.php:2752
+#: gallery-plugin.php:2751
 msgid "Description"
 msgstr "Deskripsi"
 
-#: gallery-plugin.php:2758
+#: gallery-plugin.php:2757
 msgid "Lightbox Button URL"
 msgstr "URL Tombol Lightbox"
 
-#: gallery-plugin.php:2765
+#: gallery-plugin.php:2764
 msgid "New Tab"
 msgstr "Tab baru"
 
-#: gallery-plugin.php:2767
+#: gallery-plugin.php:2766
 msgid "Enable to open URLs above in a new tab."
 msgstr "Memungkinkan untuk membuka URL di atas di tab baru."
 
-#: gallery-plugin.php:2772
+#: gallery-plugin.php:2771
 msgid "Go Pro"
 msgstr "Go Pro"
 
-#: gallery-plugin.php:2778
+#: gallery-plugin.php:2777
 msgid "Edit more details"
 msgstr "Mengedit rincian lebih lanjut"
 
-#: gallery-plugin.php:2780
+#: gallery-plugin.php:2779
 msgid "Remove from Gallery"
 msgstr "Hapus dari Galeri"
 
-#: gallery-plugin.php:2814
+#: gallery-plugin.php:2813
 #, php-format
 msgid "Select %s"
 msgstr "Pilih %s"
 
-#: gallery-plugin.php:2827
+#: gallery-plugin.php:2826
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Mengedit & # 8220; %s & # 8221;"
 
-#: gallery-plugin.php:2835
+#: gallery-plugin.php:2834
 msgid "Edit Attachment Info"
 msgstr "Info mengedit Lampiran"
 
-#: gallery-plugin.php:2872 gallery-plugin.php:2885
+#: gallery-plugin.php:2871 gallery-plugin.php:2884
 msgid "Edit"
 msgstr "mengedit"
 
-#: gallery-plugin.php:2875 gallery-plugin.php:2890
+#: gallery-plugin.php:2874 gallery-plugin.php:2889
 msgid "Trash"
 msgstr "Sampah"
 
-#: gallery-plugin.php:2878 gallery-plugin.php:2893
+#: gallery-plugin.php:2877 gallery-plugin.php:2892
 msgid "Delete Permanently"
 msgstr "Hapus secara permanen"
 
-#: gallery-plugin.php:2880 gallery-plugin.php:2899
+#: gallery-plugin.php:2879 gallery-plugin.php:2898
 #, php-format
 msgid "View &#8220;%s&#8221;"
 msgstr "Lihat & # 8220; %s & # 8221;"
 
-#: gallery-plugin.php:2880 gallery-plugin.php:2899 gallery-plugin.php:2982
+#: gallery-plugin.php:2879 gallery-plugin.php:2898 gallery-plugin.php:2981
 msgid "View"
 msgstr "Melihat"
 
-#: gallery-plugin.php:2882
+#: gallery-plugin.php:2881
 msgid "Attach"
 msgstr "Melampirkan"
 
-#: gallery-plugin.php:2888
+#: gallery-plugin.php:2887
 msgid "Restore"
 msgstr "Mengembalikan"
 
-#: gallery-plugin.php:2917
+#: gallery-plugin.php:2916
 msgid "A list or dropdown of Gallery categories."
 msgstr ""
 
-#: gallery-plugin.php:2962
+#: gallery-plugin.php:2961
 msgid "Select Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:3020
+#: gallery-plugin.php:3019
+#, fuzzy
 msgid "Title:"
-msgstr ""
+msgstr "Judul"
 
-#: gallery-plugin.php:3023
+#: gallery-plugin.php:3022
 msgid "Display as dropdown"
 msgstr ""
 
-#: gallery-plugin.php:3025
+#: gallery-plugin.php:3024
 msgid "Show gallery counts"
 msgstr ""
 
-#: gallery-plugin.php:3027
+#: gallery-plugin.php:3026
 msgid "Show hierarchy"
 msgstr ""
 
-#: gallery-plugin.php:3143
+#: gallery-plugin.php:3142
 msgid "Warning"
 msgstr "PERINGATAN"
 
-#: gallery-plugin.php:3143
+#: gallery-plugin.php:3142
 msgid "You can add only images to the gallery"
 msgstr "Anda dapat menambahkan hanya gambar ke galeri"
 
-#: gallery-plugin.php:3174
+#: gallery-plugin.php:3173
 msgid "or"
 msgstr "atau"
 
-#: gallery-plugin.php:3182
+#: gallery-plugin.php:3181
 msgid "no title"
 msgstr "tanpa judul"
 
-#: gallery-plugin.php:3193
+#: gallery-plugin.php:3192
 msgid ""
 "Display an album image with the description and the link to a single gallery "
 "page"
 msgstr ""
 "Menampilkan gambar album dengan deskripsi dan link ke halaman galeri tunggal"
 
-#: gallery-plugin.php:3197
+#: gallery-plugin.php:3196
 msgid "Sorry, no gallery found."
 msgstr "Maaf, tidak ada galeri ditemukan."
 
@@ -900,8 +902,8 @@ msgid "Comment count"
 msgstr "jumlah komentar"
 
 #: includes/class-gllr-settings.php:683
-msgid "Sorting order (the input field for sorting order)"
-msgstr "Menyortir order (kolom input untuk menyortir order)"
+msgid "\"Order\" field on the gallery edit page"
+msgstr ""
 
 #: includes/class-gllr-settings.php:687
 msgid "Select galleries sorting order in your galleries page."
@@ -1018,7 +1020,7 @@ msgstr "Lightbox Tombol Label"
 #: includes/class-gllr-settings.php:821
 #, fuzzy
 msgid "Read More"
-msgstr "Read More link Label"
+msgstr "Baca lebih banyak"
 
 #: includes/class-gllr-settings.php:831
 #, fuzzy
@@ -1199,16 +1201,21 @@ msgstr "Menghapus Data demo dengan beberapa kesalahan terjadi."
 msgid "Close notice"
 msgstr "Tutup pemberitahuan"
 
-#: includes/demo-data/class-bws-demo-data.php:591
-#, php-format
+#: includes/demo-data/class-bws-demo-data.php:593
+#, fuzzy, php-format
 msgid ""
-"Do you want to install demo content and settings for %s (You can do this "
-"later using Import / Export settings)?"
+"Do you want to install demo content and settings for %s? (You can do this "
+"later using Import / Export settings)"
 msgstr ""
+"Apakah Anda ingin menginstal konten demo dan pengaturan (Anda dapat "
+"melakukannya nanti menggunakan pengaturan Impor / Ekspor)?"
 
-#: includes/demo-data/class-bws-demo-data.php:591
+#: includes/demo-data/class-bws-demo-data.php:595
 msgid "Yes, install demo now"
 msgstr "Ya, instal demo sekarang"
+
+#~ msgid "Sorting order (the input field for sorting order)"
+#~ msgstr "Menyortir order (kolom input untuk menyortir order)"
 
 #~ msgid "columns"
 #~ msgstr "kolom"
@@ -1255,13 +1262,6 @@ msgstr "Ya, instal demo sekarang"
 
 #~ msgid "Enable Social Buttons"
 #~ msgstr "Aktifkan Tombol Sosial"
-
-#~ msgid ""
-#~ "Do you want to install demo content and settings (You can do this later "
-#~ "using Import / Export settings)?"
-#~ msgstr ""
-#~ "Apakah Anda ingin menginstal konten demo dan pengaturan (Anda dapat "
-#~ "melakukannya nanti menggunakan pengaturan Impor / Ekspor)?"
 
 #~ msgid "Download high resolution image"
 #~ msgstr "Download gambar resolusi tinggi"

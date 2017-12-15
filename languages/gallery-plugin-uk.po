@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-24 12:41+0200\n"
-"PO-Revision-Date: 2017-11-24 12:42+0200\n"
+"POT-Creation-Date: 2017-12-15 15:08+0200\n"
+"PO-Revision-Date: 2017-12-15 15:10+0200\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft <https://support.bestwebsoft.com>\n"
 "Language: uk_UA\n"
@@ -24,7 +24,7 @@ msgstr "Налаштування Галерей"
 msgid "Global Settings"
 msgstr "Загальні налаштування"
 
-#: gallery-plugin.php:43 gallery-plugin.php:2770
+#: gallery-plugin.php:43 gallery-plugin.php:2771
 msgid "Upgrade to Pro"
 msgstr "Оновитися до Pro"
 
@@ -40,7 +40,7 @@ msgstr "Переглянути фото &raquo;"
 msgid "Galleries"
 msgstr "Галереї"
 
-#: gallery-plugin.php:337 gallery-plugin.php:3186
+#: gallery-plugin.php:337 gallery-plugin.php:3187
 msgid "Gallery"
 msgstr "Галерея"
 
@@ -68,9 +68,9 @@ msgstr "Шукати галереї"
 msgid "No Gallery found"
 msgstr "Жодної галереї не знайдено"
 
-#: gallery-plugin.php:365 gallery-plugin.php:1600 gallery-plugin.php:2916
-#: gallery-plugin.php:2924 gallery-plugin.php:2962 gallery-plugin.php:2985
-#: gallery-plugin.php:3170
+#: gallery-plugin.php:365 gallery-plugin.php:1600 gallery-plugin.php:2917
+#: gallery-plugin.php:2925 gallery-plugin.php:2963 gallery-plugin.php:2986
+#: gallery-plugin.php:3171
 msgid "Gallery Categories"
 msgstr "Категорії галерей"
 
@@ -167,7 +167,7 @@ msgstr "Усі категорії галерей"
 msgid "You can't delete default gallery category."
 msgstr "Ви не можете видалити стандартну категорію галереї."
 
-#: gallery-plugin.php:1089 gallery-plugin.php:1196 gallery-plugin.php:2107
+#: gallery-plugin.php:1089 gallery-plugin.php:1196 gallery-plugin.php:2108
 msgid "Sorry, nothing found."
 msgstr "Вибачте, нічого не знайдено."
 
@@ -175,8 +175,8 @@ msgstr "Вибачте, нічого не знайдено."
 msgid "Featured Image"
 msgstr "Зображення альбому"
 
-#: gallery-plugin.php:1597 gallery-plugin.php:2627 gallery-plugin.php:2731
-#: gallery-plugin.php:2842 includes/class-gllr-settings.php:679
+#: gallery-plugin.php:1597 gallery-plugin.php:2628 gallery-plugin.php:2732
+#: gallery-plugin.php:2843 includes/class-gllr-settings.php:679
 msgid "Title"
 msgstr "Назва"
 
@@ -259,11 +259,11 @@ msgstr "Додати медіафайл"
 msgid "Insert"
 msgstr "Додати"
 
-#: gallery-plugin.php:2299 gallery-plugin.php:2325
+#: gallery-plugin.php:2300 gallery-plugin.php:2326
 msgid "Image size not defined"
 msgstr "Неможливо визначити розмір зображення"
 
-#: gallery-plugin.php:2314
+#: gallery-plugin.php:2315
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
@@ -271,75 +271,75 @@ msgstr ""
 "Плагін може оновити тільки такі типи файлів: PNG, JPEG, GIF, XBM або WPMP. "
 "Для інших типів, будь ласка, перезавантажте зображення вручну."
 
-#: gallery-plugin.php:2354 gallery-plugin.php:2357 gallery-plugin.php:2362
+#: gallery-plugin.php:2355 gallery-plugin.php:2358 gallery-plugin.php:2363
 msgid "Invalid path"
 msgstr "Невірний шлях до зображення"
 
-#: gallery-plugin.php:2451
+#: gallery-plugin.php:2452
 msgid "List View"
 msgstr "У вигляді списку"
 
-#: gallery-plugin.php:2452
+#: gallery-plugin.php:2453
 msgid "Grid View"
 msgstr "У вигляді сітки"
 
-#: gallery-plugin.php:2507
+#: gallery-plugin.php:2508
 msgid "Filter"
 msgstr "Фільтр"
 
-#: gallery-plugin.php:2511
+#: gallery-plugin.php:2512
 msgid "Empty Trash"
 msgstr "Очистити кошик"
 
-#: gallery-plugin.php:2532
+#: gallery-plugin.php:2533
 msgid "No images found"
 msgstr "Жодного зображення не знайдено"
 
-#: gallery-plugin.php:2584
+#: gallery-plugin.php:2585
 msgid "Select bulk action"
 msgstr "Вибрати групову дію"
 
-#: gallery-plugin.php:2586
+#: gallery-plugin.php:2587
 msgid "Bulk Actions"
 msgstr "Групові дії"
 
-#: gallery-plugin.php:2596
+#: gallery-plugin.php:2597
 msgid "Apply"
 msgstr "Застосувати"
 
-#: gallery-plugin.php:2603
+#: gallery-plugin.php:2604
 msgid "Delete from Gallery"
 msgstr "Видалити з галереї"
 
-#: gallery-plugin.php:2612
+#: gallery-plugin.php:2613
 msgid "Bulk Select"
 msgstr "Вибір"
 
-#: gallery-plugin.php:2613
+#: gallery-plugin.php:2614
 msgid "Cancel Selection"
 msgstr "Скасувати вибір"
 
-#: gallery-plugin.php:2614
+#: gallery-plugin.php:2615
 msgid "Delete Selected"
 msgstr "Видалити вибране"
 
-#: gallery-plugin.php:2625
+#: gallery-plugin.php:2626
 msgid "File"
 msgstr "Файл"
 
-#: gallery-plugin.php:2626 gallery-plugin.php:2726 gallery-plugin.php:2837
+#: gallery-plugin.php:2627 gallery-plugin.php:2727 gallery-plugin.php:2838
 msgid "Dimensions"
 msgstr "Розміри"
 
-#: gallery-plugin.php:2628 gallery-plugin.php:2737 gallery-plugin.php:2847
+#: gallery-plugin.php:2629 gallery-plugin.php:2738 gallery-plugin.php:2848
 msgid "Alt Text"
 msgstr "Альтернативний текст"
 
-#: gallery-plugin.php:2629 gallery-plugin.php:2741 gallery-plugin.php:2852
+#: gallery-plugin.php:2630 gallery-plugin.php:2742 gallery-plugin.php:2853
 msgid "URL"
 msgstr "Посилання"
 
-#: gallery-plugin.php:2629 gallery-plugin.php:2743
+#: gallery-plugin.php:2630 gallery-plugin.php:2744
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
@@ -347,138 +347,138 @@ msgstr ""
 "Введіть свій власний URL, щоб зв'язати це зображення з іншою сторінкою або "
 "файлом. Залиште порожнім, щоб відкрити повнорозмірне зображення."
 
-#: gallery-plugin.php:2708
+#: gallery-plugin.php:2709
 msgid "Remove Image from Gallery"
 msgstr "Видалити зображення з галереї"
 
-#: gallery-plugin.php:2711
+#: gallery-plugin.php:2712
 msgid "Edit Image Info"
 msgstr "Редагувати інформацію зображення"
 
-#: gallery-plugin.php:2712
+#: gallery-plugin.php:2713
 msgid "Deselect"
 msgstr "Скасувати вибір"
 
-#: gallery-plugin.php:2724
+#: gallery-plugin.php:2725
 msgid "File name"
 msgstr "Назва файлу"
 
-#: gallery-plugin.php:2725
+#: gallery-plugin.php:2726
 msgid "File type"
 msgstr "Тип файлу"
 
-#: gallery-plugin.php:2750
+#: gallery-plugin.php:2751
 msgid "Description"
 msgstr "Опис"
 
-#: gallery-plugin.php:2756
+#: gallery-plugin.php:2757
 msgid "Lightbox Button URL"
 msgstr "Посилання для кнопки в лайтбоксі"
 
-#: gallery-plugin.php:2763
+#: gallery-plugin.php:2764
 msgid "New Tab"
 msgstr "Нова вкладка"
 
-#: gallery-plugin.php:2765
+#: gallery-plugin.php:2766
 msgid "Enable to open URLs above in a new tab."
 msgstr "Увімкніть, щоб відкрити вказаний вище URL в новій вкладці."
 
-#: gallery-plugin.php:2770
+#: gallery-plugin.php:2771
 msgid "Go Pro"
 msgstr "Оновитися до Pro"
 
-#: gallery-plugin.php:2776
+#: gallery-plugin.php:2777
 msgid "Edit more details"
 msgstr "Змінити деталі"
 
-#: gallery-plugin.php:2778
+#: gallery-plugin.php:2779
 msgid "Remove from Gallery"
 msgstr "Видалити з галереї"
 
-#: gallery-plugin.php:2812
+#: gallery-plugin.php:2813
 #, php-format
 msgid "Select %s"
 msgstr "Вибрати %s"
 
-#: gallery-plugin.php:2825
+#: gallery-plugin.php:2826
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Редагувати &#8220;%s&#8221;"
 
-#: gallery-plugin.php:2833
+#: gallery-plugin.php:2834
 msgid "Edit Attachment Info"
 msgstr "Змінити інформацію зображення"
 
-#: gallery-plugin.php:2870 gallery-plugin.php:2883
+#: gallery-plugin.php:2871 gallery-plugin.php:2884
 msgid "Edit"
 msgstr "Змінити"
 
-#: gallery-plugin.php:2873 gallery-plugin.php:2888
+#: gallery-plugin.php:2874 gallery-plugin.php:2889
 msgid "Trash"
 msgstr "Кошик"
 
-#: gallery-plugin.php:2876 gallery-plugin.php:2891
+#: gallery-plugin.php:2877 gallery-plugin.php:2892
 msgid "Delete Permanently"
 msgstr "Видалити назавжди"
 
-#: gallery-plugin.php:2878 gallery-plugin.php:2897
+#: gallery-plugin.php:2879 gallery-plugin.php:2898
 #, php-format
 msgid "View &#8220;%s&#8221;"
 msgstr "Перегляд &#8220;%s&#8221;"
 
-#: gallery-plugin.php:2878 gallery-plugin.php:2897 gallery-plugin.php:2980
+#: gallery-plugin.php:2879 gallery-plugin.php:2898 gallery-plugin.php:2981
 msgid "View"
 msgstr "Перегляд"
 
-#: gallery-plugin.php:2880
+#: gallery-plugin.php:2881
 msgid "Attach"
 msgstr "Прикріпити"
 
-#: gallery-plugin.php:2886
+#: gallery-plugin.php:2887
 msgid "Restore"
 msgstr "Відновити"
 
-#: gallery-plugin.php:2915
+#: gallery-plugin.php:2916
 msgid "A list or dropdown of Gallery categories."
 msgstr "Список чи випадаюче меню категорій галерей."
 
-#: gallery-plugin.php:2960
+#: gallery-plugin.php:2961
 msgid "Select Gallery Category"
 msgstr "Оберіть категорію галерей"
 
-#: gallery-plugin.php:3018
+#: gallery-plugin.php:3019
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: gallery-plugin.php:3021
+#: gallery-plugin.php:3022
 msgid "Display as dropdown"
 msgstr "У вигляді випадаючого меню"
 
-#: gallery-plugin.php:3023
+#: gallery-plugin.php:3024
 msgid "Show gallery counts"
 msgstr "Показати кількість галерей"
 
-#: gallery-plugin.php:3025
+#: gallery-plugin.php:3026
 msgid "Show hierarchy"
 msgstr "Показати ієрархію"
 
-#: gallery-plugin.php:3141
+#: gallery-plugin.php:3142
 msgid "Warning"
 msgstr "Увага"
 
-#: gallery-plugin.php:3141
+#: gallery-plugin.php:3142
 msgid "You can add only images to the gallery"
 msgstr "В галерею можна додати лише зображення"
 
-#: gallery-plugin.php:3172
+#: gallery-plugin.php:3173
 msgid "or"
 msgstr "або"
 
-#: gallery-plugin.php:3180
+#: gallery-plugin.php:3181
 msgid "no title"
 msgstr "без назви"
 
-#: gallery-plugin.php:3191
+#: gallery-plugin.php:3192
 msgid ""
 "Display an album image with the description and the link to a single gallery "
 "page"
@@ -486,7 +486,7 @@ msgstr ""
 "Відобразити зображення альбому з описом і посиланням на окрему сторінку "
 "галереї"
 
-#: gallery-plugin.php:3195
+#: gallery-plugin.php:3196
 msgid "Sorry, no gallery found."
 msgstr "Вибачте, жодної галереї не знайдено."
 
@@ -909,8 +909,8 @@ msgid "Comment count"
 msgstr "Кількість коментарів"
 
 #: includes/class-gllr-settings.php:683
-msgid "Sorting order (the input field for sorting order)"
-msgstr "Порядок сортування (поле введення для сортування)"
+msgid "\"Order\" field on the gallery edit page"
+msgstr "Поле \"Порядок розміщення\" на сторінці редагування"
 
 #: includes/class-gllr-settings.php:687
 msgid "Select galleries sorting order in your galleries page."
@@ -1207,18 +1207,21 @@ msgstr "Видалення демо-даних пройшло із помилк�
 msgid "Close notice"
 msgstr "Закрити повідомлення"
 
-#: includes/demo-data/class-bws-demo-data.php:591
+#: includes/demo-data/class-bws-demo-data.php:593
 #, php-format
 msgid ""
-"Do you want to install demo content and settings for %s (You can do this "
-"later using Import / Export settings)?"
+"Do you want to install demo content and settings for %s? (You can do this "
+"later using Import / Export settings)"
 msgstr ""
-"Ви хочете встановити демо-контент і налаштування для %s (Ви можете зробити "
-"це пізніше, використовуючи налаштування Імпорту / Експорту) ?"
+"Ви хочете встановити демо-контент і налаштування для %s? (Ви можете зробити "
+"це пізніше, використовуючи налаштування Імпорту / Експорту)"
 
-#: includes/demo-data/class-bws-demo-data.php:591
+#: includes/demo-data/class-bws-demo-data.php:595
 msgid "Yes, install demo now"
 msgstr "Так, встановити демо-дані зараз"
+
+#~ msgid "Sorting order (the input field for sorting order)"
+#~ msgstr "Порядок сортування (поле введення для сортування)"
 
 #~ msgid "Enable to show likes counter for each social button."
 #~ msgstr "Увімкніть, щоб показати лічильник для кожної соціальної кнопки."

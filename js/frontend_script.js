@@ -30,18 +30,47 @@
 						$gallery.append( $new_row );
 					}
 				}
-				$( ".gllr_img" ).css( "max-width", gallery_wrap_width );
 			} );
 
-			var gallery_wrap_width = $( '.gallery_box' ).parent().width(),
-			gllr_template = $( '.gllr_template' ),
-			gllr_template_borders = gllr_template.data( 'gllr-borders-width' );
+			/* Set equal sizes for every list item in the row when galleries are set to be displayed inline */
+			var $inline_list_items = $( '.gllr-display-inline li' );
+			if ( $inline_list_items.length ) {
+				$inline_list_items.css( { 'width' : '', 'height' : '' } );
+				var	$chunk = $( [] ),
+					item_count = 0,
+					col_margins = $inline_list_items.outerWidth( true ) - $inline_list_items.outerWidth(),
+					/* initial item width */
+					init_width = $inline_list_items.data( 'gllr-width' ),
+					parent_width = $( '.gllr-display-inline' ).innerWidth(),
+					cols = Math.floor( parent_width/(init_width + col_margins ) ),
+					/* recalculate column width so the columns take all the available width */
+					calc_width =  Math.floor( parent_width / cols ) - col_margins;
 
-			/* height fix for large cover images */
-			if ( gllr_template.width() + gllr_template_borders >= gallery_wrap_width ) {
-				gllr_template.css( "height", "auto" );
+				/* set items width to calculated value */
+				$inline_list_items.css( { 'width' : calc_width } );
+
+				/* divide items collection into chunks by the calculated columns number */
+				$inline_list_items.each( function() {
+					/* add each list item to chunk */
+					$chunk = $chunk.add( $( this ) );
+
+					item_count++;
+
+					/* when the last element in the row is reached */
+					if ( item_count == cols ) {
+						/* calculate max item height in the row */
+						var chunk_max_height = Math.max.apply( null, $chunk.map( function () {
+							return $( this ).outerHeight();
+						} ) );
+
+						/* set equal height for all items in the row */
+						$chunk.css( { 'height' : chunk_max_height } );
+						/* clear chunk, start new */
+						item_count = 0;
+						$chunk = $( [] );
+					}
+				} );
 			}
-
 		} ).trigger( 'resize' );
 	} );
 } )( jQuery );

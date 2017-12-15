@@ -14,7 +14,7 @@ ul.gallery {
 	padding: 0;
 }
 .gallery_box ul li {
-	margin: 0 0 30px;
+	margin: 0 0 20px;
 }
 .gallery_box li img {
 	margin: 0 10px 10px 0;
@@ -35,10 +35,6 @@ ul.gallery {
 	float: left;
 	clear: both;
 }
-.gallery_detail_box div,
-.gallery_detail_box a {
-	text-align: initial;
-}
 .rtl .gallery_detail_box {
 	float: right;
 }
@@ -48,10 +44,24 @@ ul.gallery {
 	margin: 0 0 10px;
 	font-weight: bold;
 }
-.gallery_box ul li.gllr-display-inline {
+.gllr-list.gllr-display-column .gallery_detail_box {
+	width: 100%;
+}
+.gallery_box ul.gllr-list li,
+.gallery_box ul.gllr-list li > a > img {
+	max-width: 100%;
+}
+.gallery_box ul.gllr-list li > a > img {
+	box-sizing: border-box;
+}
+.gallery_box ul.gllr-display-inline > li {
 	display: inline-block;
 	float: left;
 	margin-right: 10px;
+	margin-left: 10px;
+}
+.rtl .gallery_box ul.gllr-display-inline > li {
+	float: right;
 }
 .gallery_box ul.gllr-column-align-left {
 	text-align: left;
@@ -70,10 +80,18 @@ ul.gallery {
 .gallery_box ul.gllr-column-align-center {
 	text-align: center;
 }
+.gallery_box ul .gllr_detail_title,
+.gallery_box ul .gllr_detail_excerpt {
+	text-align: initial;
+}
 .gallery_box ul.gllr-column-align-center > li > a {
 	display: block;
 	transition: none;
 	box-shadow: none;
+}
+.gallery_box ul.gllr-column-align-center .gallery_detail_box div,
+.gallery_box ul.gllr-column-align-center .gallery_detail_box a {
+	text-align: center;
 }
 .gallery_box ul.gllr-column-align-center img {
 	float: none;
@@ -107,9 +125,9 @@ ul.gallery {
 	display: block;
 	border-style: solid;
 	margin-top: 0;
-	box-sizing: border-box !important;
-	-moz-box-sizing: border-box !important; /*Firefox 1-3*/
-	-webkit-box-sizing: border-box !important; /* Safari */
+	box-sizing: content-box;
+	-moz-box-sizing: content-box; /*Firefox 1-3*/
+	-webkit-box-sizing: content-box; /* Safari */
 	box-shadow: none;
 	-webkit-box-shadow: none;
 }
@@ -133,7 +151,6 @@ ul.gallery {
 }
 .gllr_single_image_text {
 	font-size: 12px;
-	padding: 5px 0 15px;
 	line-height: normal;
 	word-break: break-word;
 	word-wrap: break-word;

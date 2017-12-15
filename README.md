@@ -15,7 +15,7 @@
 <li>Gallery categories</li>
 </ul>
 </li>
-<li>Choose albums layout: [NEW]
+<li>Choose albums layout:
 <ul>
 <li>Column</li>
 <li>Rows</li>

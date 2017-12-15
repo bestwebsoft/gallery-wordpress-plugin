@@ -588,7 +588,12 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 							<input type="hidden" name="bws_hide_demo_notice" value="hide" />
 							<?php wp_nonce_field( $this->bws_plugin_basename, 'bws_demo_nonce_name' ); ?>
 						</form>
-						<div style="margin: 0 20px;"><?php printf( __( 'Do you want to install demo content and settings for %s (You can do this later using Import / Export settings)?', $this->bws_plugin_text_domain ), '<a href="edit.php?post_type=bws-gallery&page=gallery-plugin.php">Gallery by BestWebSoft</a>' ); ?>&nbsp;<a href="<?php echo admin_url( 'admin.php?page=' . $this->bws_plugin_page ); ?>"><?php _e( 'Yes, install demo now', $this->bws_plugin_text_domain ); ?></a></div>
+						<div style="margin: 0 20px;">
+							<?php printf(
+								__( 'Do you want to install demo content and settings for %s? (You can do this later using Import / Export settings)', $this->bws_plugin_text_domain ),
+								$this->bws_plugin_name . ' by BestWebSoft'
+							); ?>&nbsp;<a href="<?php echo admin_url( 'admin.php?page=' . $this->bws_plugin_page ); ?>"><?php _e( 'Yes, install demo now', $this->bws_plugin_text_domain ); ?></a>
+						</div>
 					</div>
 				<?php }
 			}

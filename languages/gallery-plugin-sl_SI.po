@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-05 16:20+0200\n"
-"PO-Revision-Date: 2017-12-05 16:20+0200\n"
+"POT-Creation-Date: 2017-12-15 15:12+0200\n"
+"PO-Revision-Date: 2017-12-15 15:12+0200\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: Tilen <tilen@divided.si>\n"
 "Language: sl_SI\n"
@@ -26,7 +26,7 @@ msgstr "Nastavitve galerije"
 msgid "Global Settings"
 msgstr "Nastavitve galerije"
 
-#: gallery-plugin.php:43 gallery-plugin.php:2772
+#: gallery-plugin.php:43 gallery-plugin.php:2771
 msgid "Upgrade to Pro"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgstr "Poglej slike &raquo;"
 msgid "Galleries"
 msgstr "Galerije"
 
-#: gallery-plugin.php:337 gallery-plugin.php:3188
+#: gallery-plugin.php:337 gallery-plugin.php:3187
 msgid "Gallery"
 msgstr "Galerija"
 
@@ -71,9 +71,9 @@ msgstr "Galerije"
 msgid "No Gallery found"
 msgstr "Galerija ni bila najdena"
 
-#: gallery-plugin.php:365 gallery-plugin.php:1602 gallery-plugin.php:2918
-#: gallery-plugin.php:2926 gallery-plugin.php:2964 gallery-plugin.php:2987
-#: gallery-plugin.php:3172
+#: gallery-plugin.php:365 gallery-plugin.php:1600 gallery-plugin.php:2917
+#: gallery-plugin.php:2925 gallery-plugin.php:2963 gallery-plugin.php:2986
+#: gallery-plugin.php:3171
 #, fuzzy
 msgid "Gallery Categories"
 msgstr "Velikost slike v galeriji"
@@ -155,7 +155,7 @@ msgid ""
 "not be deleted. These galleries will be moved to the category %s."
 msgstr ""
 
-#: gallery-plugin.php:594 gallery-plugin.php:1601
+#: gallery-plugin.php:594 gallery-plugin.php:1599
 #, fuzzy
 msgid "Shortcode"
 msgstr "Kratka koda do galerije"
@@ -168,100 +168,100 @@ msgstr ""
 msgid "You can't delete default gallery category."
 msgstr ""
 
-#: gallery-plugin.php:1091 gallery-plugin.php:1198 gallery-plugin.php:2109
+#: gallery-plugin.php:1089 gallery-plugin.php:1196 gallery-plugin.php:2108
 msgid "Sorry, nothing found."
 msgstr "Žal ni zadetkov"
 
-#: gallery-plugin.php:1598
+#: gallery-plugin.php:1596
 msgid "Featured Image"
 msgstr ""
 
-#: gallery-plugin.php:1599 gallery-plugin.php:2629 gallery-plugin.php:2733
-#: gallery-plugin.php:2844 includes/class-gllr-settings.php:679
+#: gallery-plugin.php:1597 gallery-plugin.php:2628 gallery-plugin.php:2732
+#: gallery-plugin.php:2843 includes/class-gllr-settings.php:679
 msgid "Title"
 msgstr "Naslov"
 
-#: gallery-plugin.php:1600 includes/class-gllr-settings.php:41
+#: gallery-plugin.php:1598 includes/class-gllr-settings.php:41
 #, fuzzy
 msgid "Images"
-msgstr "Slika"
+msgstr "Poglej slike &raquo;"
 
-#: gallery-plugin.php:1603 includes/class-gllr-settings.php:684
+#: gallery-plugin.php:1601 includes/class-gllr-settings.php:684
 msgid "Author"
 msgstr "Avtor"
 
-#: gallery-plugin.php:1604 includes/class-gllr-settings.php:513
+#: gallery-plugin.php:1602 includes/class-gllr-settings.php:513
 #: includes/class-gllr-settings.php:680
 msgid "Date"
 msgstr "Datum"
 
-#: gallery-plugin.php:1690
+#: gallery-plugin.php:1688
 #, php-format
 msgid "%s Settings"
 msgstr ""
 
-#: gallery-plugin.php:1717 gallery-plugin.php:1735
+#: gallery-plugin.php:1715 gallery-plugin.php:1733
 #: includes/class-gllr-settings.php:30 includes/class-gllr-settings.php:42
 msgid "Settings"
 msgstr "Nastavitve"
 
-#: gallery-plugin.php:1718
+#: gallery-plugin.php:1716
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:1719
+#: gallery-plugin.php:1717
 msgid "Support"
 msgstr "Podpora"
 
-#: gallery-plugin.php:1758
+#: gallery-plugin.php:1756
 msgid "Updating images..."
 msgstr "Posodabljam slike..."
 
-#: gallery-plugin.php:1759
+#: gallery-plugin.php:1757
 #, fuzzy
 msgid "No images found."
 msgstr "Slike niso bile najdene"
 
-#: gallery-plugin.php:1760
+#: gallery-plugin.php:1758
 #, fuzzy
 msgid "All images were updated."
 msgstr "Vse slike so posodobljene"
 
-#: gallery-plugin.php:1761
+#: gallery-plugin.php:1759
 msgid "Error."
 msgstr "Napaka."
 
-#: gallery-plugin.php:1773
+#: gallery-plugin.php:1771
 msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
 
-#: gallery-plugin.php:1774
+#: gallery-plugin.php:1772
 msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
 
-#: gallery-plugin.php:1775
+#: gallery-plugin.php:1773
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
 msgstr ""
 
-#: gallery-plugin.php:1776
+#: gallery-plugin.php:1774
 msgid "Insert Media"
 msgstr ""
 
-#: gallery-plugin.php:1777
+#: gallery-plugin.php:1775
 msgid "Insert"
 msgstr ""
 
-#: gallery-plugin.php:2301 gallery-plugin.php:2327
+#: gallery-plugin.php:2300 gallery-plugin.php:2326
 msgid "Image size not defined"
 msgstr "Velikost slike ni podana"
 
-#: gallery-plugin.php:2316
+#: gallery-plugin.php:2315
 #, fuzzy
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
@@ -270,223 +270,224 @@ msgstr ""
 "Posodobiti je možno le PNG, JPEG, GIF, WPMP ali XBM tipe datotek. Za vse "
 "ostale prosimo, da posodobiš slike ročno."
 
-#: gallery-plugin.php:2356 gallery-plugin.php:2359 gallery-plugin.php:2364
+#: gallery-plugin.php:2355 gallery-plugin.php:2358 gallery-plugin.php:2363
 msgid "Invalid path"
 msgstr "Napačna pot"
 
-#: gallery-plugin.php:2453
+#: gallery-plugin.php:2452
 msgid "List View"
 msgstr ""
 
-#: gallery-plugin.php:2454
+#: gallery-plugin.php:2453
 msgid "Grid View"
 msgstr ""
 
-#: gallery-plugin.php:2509
+#: gallery-plugin.php:2508
 msgid "Filter"
 msgstr ""
 
-#: gallery-plugin.php:2513
+#: gallery-plugin.php:2512
 msgid "Empty Trash"
 msgstr ""
 
-#: gallery-plugin.php:2534
+#: gallery-plugin.php:2533
 #, fuzzy
 msgid "No images found"
 msgstr "Slike niso bile najdene"
 
-#: gallery-plugin.php:2586
+#: gallery-plugin.php:2585
 msgid "Select bulk action"
 msgstr ""
 
-#: gallery-plugin.php:2588
+#: gallery-plugin.php:2587
 msgid "Bulk Actions"
 msgstr ""
 
-#: gallery-plugin.php:2598
+#: gallery-plugin.php:2597
 msgid "Apply"
 msgstr ""
 
-#: gallery-plugin.php:2605
+#: gallery-plugin.php:2604
 #, fuzzy
 msgid "Delete from Gallery"
 msgstr "Nova Galerija"
 
-#: gallery-plugin.php:2614
+#: gallery-plugin.php:2613
 msgid "Bulk Select"
 msgstr ""
 
-#: gallery-plugin.php:2615
+#: gallery-plugin.php:2614
 msgid "Cancel Selection"
 msgstr ""
 
-#: gallery-plugin.php:2616
+#: gallery-plugin.php:2615
 msgid "Delete Selected"
 msgstr ""
 
-#: gallery-plugin.php:2627
+#: gallery-plugin.php:2626
 msgid "File"
 msgstr ""
 
-#: gallery-plugin.php:2628 gallery-plugin.php:2728 gallery-plugin.php:2839
+#: gallery-plugin.php:2627 gallery-plugin.php:2727 gallery-plugin.php:2838
 msgid "Dimensions"
 msgstr ""
 
-#: gallery-plugin.php:2630 gallery-plugin.php:2739 gallery-plugin.php:2849
+#: gallery-plugin.php:2629 gallery-plugin.php:2738 gallery-plugin.php:2848
 #, fuzzy
 msgid "Alt Text"
 msgstr "Alt oznaka"
 
-#: gallery-plugin.php:2631 gallery-plugin.php:2743 gallery-plugin.php:2854
+#: gallery-plugin.php:2630 gallery-plugin.php:2742 gallery-plugin.php:2853
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:2631 gallery-plugin.php:2745
+#: gallery-plugin.php:2630 gallery-plugin.php:2744
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
 msgstr ""
 
-#: gallery-plugin.php:2710
+#: gallery-plugin.php:2709
 #, fuzzy
 msgid "Remove Image from Gallery"
 msgstr "Nova Galerija"
 
-#: gallery-plugin.php:2713
+#: gallery-plugin.php:2712
 #, fuzzy
 msgid "Edit Image Info"
 msgstr "ID priloge"
 
-#: gallery-plugin.php:2714
+#: gallery-plugin.php:2713
 msgid "Deselect"
 msgstr ""
 
-#: gallery-plugin.php:2726
+#: gallery-plugin.php:2725
 msgid "File name"
 msgstr ""
 
-#: gallery-plugin.php:2727
+#: gallery-plugin.php:2726
 msgid "File type"
 msgstr ""
 
-#: gallery-plugin.php:2752
+#: gallery-plugin.php:2751
 msgid "Description"
 msgstr "Opis"
 
-#: gallery-plugin.php:2758
+#: gallery-plugin.php:2757
 #, fuzzy
 msgid "Lightbox Button URL"
 msgstr "Lightbox povezava"
 
-#: gallery-plugin.php:2765
+#: gallery-plugin.php:2764
 msgid "New Tab"
 msgstr ""
 
-#: gallery-plugin.php:2767
+#: gallery-plugin.php:2766
 msgid "Enable to open URLs above in a new tab."
 msgstr ""
 
-#: gallery-plugin.php:2772
+#: gallery-plugin.php:2771
 #, fuzzy
 msgid "Go Pro"
 msgstr "Pojdi na PRO"
 
-#: gallery-plugin.php:2778
+#: gallery-plugin.php:2777
 msgid "Edit more details"
 msgstr ""
 
-#: gallery-plugin.php:2780
+#: gallery-plugin.php:2779
 #, fuzzy
 msgid "Remove from Gallery"
 msgstr "Nova Galerija"
 
-#: gallery-plugin.php:2814
+#: gallery-plugin.php:2813
 #, php-format
 msgid "Select %s"
 msgstr ""
 
-#: gallery-plugin.php:2827
+#: gallery-plugin.php:2826
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
 msgstr ""
 
-#: gallery-plugin.php:2835
+#: gallery-plugin.php:2834
 #, fuzzy
 msgid "Edit Attachment Info"
 msgstr "ID priloge"
 
-#: gallery-plugin.php:2872 gallery-plugin.php:2885
+#: gallery-plugin.php:2871 gallery-plugin.php:2884
 msgid "Edit"
 msgstr ""
 
-#: gallery-plugin.php:2875 gallery-plugin.php:2890
+#: gallery-plugin.php:2874 gallery-plugin.php:2889
 msgid "Trash"
 msgstr ""
 
-#: gallery-plugin.php:2878 gallery-plugin.php:2893
+#: gallery-plugin.php:2877 gallery-plugin.php:2892
 msgid "Delete Permanently"
 msgstr ""
 
-#: gallery-plugin.php:2880 gallery-plugin.php:2899
+#: gallery-plugin.php:2879 gallery-plugin.php:2898
 #, php-format
 msgid "View &#8220;%s&#8221;"
 msgstr ""
 
-#: gallery-plugin.php:2880 gallery-plugin.php:2899 gallery-plugin.php:2982
+#: gallery-plugin.php:2879 gallery-plugin.php:2898 gallery-plugin.php:2981
 msgid "View"
 msgstr ""
 
-#: gallery-plugin.php:2882
+#: gallery-plugin.php:2881
 #, fuzzy
 msgid "Attach"
 msgstr "ID priloge"
 
-#: gallery-plugin.php:2888
+#: gallery-plugin.php:2887
 msgid "Restore"
 msgstr ""
 
-#: gallery-plugin.php:2917
+#: gallery-plugin.php:2916
 msgid "A list or dropdown of Gallery categories."
 msgstr ""
 
-#: gallery-plugin.php:2962
+#: gallery-plugin.php:2961
 msgid "Select Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:3020
+#: gallery-plugin.php:3019
+#, fuzzy
 msgid "Title:"
-msgstr ""
+msgstr "Naslov"
 
-#: gallery-plugin.php:3023
+#: gallery-plugin.php:3022
 msgid "Display as dropdown"
 msgstr ""
 
-#: gallery-plugin.php:3025
+#: gallery-plugin.php:3024
 msgid "Show gallery counts"
 msgstr ""
 
-#: gallery-plugin.php:3027
+#: gallery-plugin.php:3026
 msgid "Show hierarchy"
 msgstr ""
 
-#: gallery-plugin.php:3143
+#: gallery-plugin.php:3142
 msgid "Warning"
 msgstr ""
 
-#: gallery-plugin.php:3143
+#: gallery-plugin.php:3142
 msgid "You can add only images to the gallery"
 msgstr ""
 
-#: gallery-plugin.php:3174
+#: gallery-plugin.php:3173
 msgid "or"
 msgstr "ali"
 
-#: gallery-plugin.php:3182
+#: gallery-plugin.php:3181
 #, fuzzy
 msgid "no title"
 msgstr "Naslov"
 
-#: gallery-plugin.php:3193
+#: gallery-plugin.php:3192
 #, fuzzy
 msgid ""
 "Display an album image with the description and the link to a single gallery "
@@ -495,7 +496,7 @@ msgstr ""
 "Če želiš prikazati kratek opis s predogledno sliko in povezavo do posamezne "
 "galerije kopiraj spodnjo povezavo."
 
-#: gallery-plugin.php:3197
+#: gallery-plugin.php:3196
 #, fuzzy
 msgid "Sorry, no gallery found."
 msgstr "Žal ni zadetkov"
@@ -924,9 +925,8 @@ msgid "Comment count"
 msgstr ""
 
 #: includes/class-gllr-settings.php:683
-#, fuzzy
-msgid "Sorting order (the input field for sorting order)"
-msgstr "Razporejanje glede na razporeditev v predstavnostni knjižici"
+msgid "\"Order\" field on the gallery edit page"
+msgstr ""
 
 #: includes/class-gllr-settings.php:687
 msgid "Select galleries sorting order in your galleries page."
@@ -1221,17 +1221,21 @@ msgstr ""
 msgid "Close notice"
 msgstr ""
 
-#: includes/demo-data/class-bws-demo-data.php:591
+#: includes/demo-data/class-bws-demo-data.php:593
 #, php-format
 msgid ""
-"Do you want to install demo content and settings for %s (You can do this "
-"later using Import / Export settings)?"
+"Do you want to install demo content and settings for %s? (You can do this "
+"later using Import / Export settings)"
 msgstr ""
 
-#: includes/demo-data/class-bws-demo-data.php:591
+#: includes/demo-data/class-bws-demo-data.php:595
 #, fuzzy
 msgid "Yes, install demo now"
 msgstr "Instalacija %s"
+
+#, fuzzy
+#~ msgid "Sorting order (the input field for sorting order)"
+#~ msgstr "Razporejanje glede na razporeditev v predstavnostni knjižici"
 
 #, fuzzy
 #~ msgid "Enable to use a lightbox helper navigation between images.."

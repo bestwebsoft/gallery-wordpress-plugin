@@ -9,7 +9,7 @@
 	position: relative;
 	display: none;
 	margin: 0 5px;
-    vertical-align: sub;
+	vertical-align: sub;
 }
 .rtl .gllr_settings_table label {
 	float: right;
@@ -74,11 +74,11 @@
 }
 .post-type-gallery table.fixed .column-images,
 .post-type-bws-gallery table.fixed .column-images {
-    width: 10%;
+	width: 10%;
 }
 .post-type-gallery table.fixed .column-featured-image,
 .post-type-bws-gallery table.fixed .column-featured-image {
-    width: 13%;
+	width: 13%;
 }
 .gllr-wp-filter {
 	margin-top: 15px;
@@ -183,16 +183,16 @@
 .gllr-media-actions-edit.dashicons:hover,
 .gllr-media-actions-delete.dashicons,
 .gllr-media-actions-delete.dashicons:hover {
-    position: absolute;
-    display: block;
-    top: 5px;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 18px;
-    outline: none;
-    z-index: 20;
-    color: #fff;
+	position: absolute;
+	display: block;
+	top: 5px;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 18px;
+	outline: none;
+	z-index: 20;
+	color: #fff;
 }
 .gllr-media-actions-edit {
 	background: #555;
@@ -209,11 +209,11 @@
 	padding: 4px;
 	text-align: left;
 	height: 18px;
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    width: calc(100% - 8px);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 8px);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
 }
 /* Media TB_inline*/
 .post-type-gallery #TB_window,
@@ -268,7 +268,7 @@
 }
 .post-type-gallery .ui-tooltip,
 .post-type-bws-gallery .ui-tooltip {
-    z-index: 1000000 !important;
+	z-index: 1000000 !important;
 }
 .rtl .gllr-media-attachment-details-box-right {
 	float: left;
@@ -277,9 +277,11 @@
 	border-left: 1px solid #ddd;
 	background: #f3f3f3 none repeat scroll 0 0;
 	padding:10px;
+	height: 100%;
+	box-sizing: border-box;
 }
 .gllr-media-attachment-details-box-right .setting .name {
-    max-width: 80px;
+	max-width: 80px;
 }
 .gllr-media-attachment-details-box-right .setting span.bws_info {
 	float: none;
@@ -309,7 +311,6 @@
 .post-type-bws-gallery #the-list .success .check-column {
 	border-left: 4px solid #179458;
 }
-
 @media screen and (max-width: 1600px) {
 	.gllr-media-attachment {
 		width: calc( 20% - 23px );

@@ -318,7 +318,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<tr valign="top">
 								<th scope="row"><?php _e( 'Single Gallery Settings', 'gallery-plugin' ); ?> </th>
 								<td>
-									<input disabled="disabled" type="checkbox" value="1" /> <span class="bws_info"><?php printf( __( 'Enable to configure single gallery settings and disable %s.', 'gallery-plugin' ), '<a style="z-index: 2;position: relative;" href="edit.php?post_type=' . $this->options['post_type_name'] . '&page=gallery-plugin.php" target="_blank">' . __( 'Global Settings', 'gallery-plugin' ) . '</a>' ); ?></span>
+									<input disabled="disabled" type="checkbox" /> <span class="bws_info"><?php printf( __( 'Enable to configure single gallery settings and disable %s.', 'gallery-plugin' ), '<a style="z-index: 2;position: relative;" href="edit.php?post_type=' . $this->options['post_type_name'] . '&page=gallery-plugin.php" target="_blank">' . __( 'Global Settings', 'gallery-plugin' ) . '</a>' ); ?></span>
 								</td>
 							</tr>
 						</table>
@@ -337,13 +337,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 									<td>
 										<fieldset>
 											<label>
-												<input disabled="disabled" type="radio" value="grid" checked="checked" />
+												<input disabled="disabled" type="radio" checked="checked" />
 												<?php _e( 'Grid', 'gallery-plugin' ); ?>
 												<?php echo bws_add_help_box( '<img src="' . plugins_url( 'images/view_grid.jpg', dirname( __FILE__ ) ) . '" />', 'bws-hide-for-mobile bws-auto-width' ); ?>
 											</label>
 											<br />
 											<label>
-												<input disabled="disabled" type="radio" value="masonry" />
+												<input disabled="disabled" type="radio" />
 												<?php _e( 'Masonry', 'gallery-plugin' ); ?>
 												<?php echo bws_add_help_box( '<img src="' . plugins_url( 'images/view_masonry.jpg', dirname( __FILE__ ) ) . '" />', 'bws-hide-for-mobile bws-auto-width' ); ?>
 											</label>
@@ -392,24 +392,24 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 								<tr valign="top">
 									<th scope="row"><?php _e( 'Crop Images', 'gallery-plugin' ); ?></th>
 									<td>
-										<input disabled checked type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to crop images using the sizes defined for Custom Image Size. Disable to resize images automatically using their aspect ratio.', 'gallery-plugin' ); ?></span>
+										<input disabled checked type="checkbox" /> <span class="bws_info"><?php _e( 'Enable to crop images using the sizes defined for Custom Image Size. Disable to resize images automatically using their aspect ratio.', 'gallery-plugin' ); ?></span>
 									</td>
 								</tr>
 								<tr valign="top">
 									<th scope="row"><?php _e( 'Crop Position', 'gallery-plugin' ); ?></th>
 									<td>
 										<div>
-											<input disabled type="radio" name="" />
-											<input disabled type="radio" name="" />
-											<input disabled type="radio" name="" />
+											<input disabled type="radio" />
+											<input disabled type="radio" />
+											<input disabled type="radio" />
 											<br>
-											<input disabled type="radio" name="" />
-											<input disabled checked type="radio" name="" />
-											<input disabled type="radio" name="" />
+											<input disabled type="radio" />
+											<input disabled checked type="radio" />
+											<input disabled type="radio" />
 											<br>
-											<input disabled type="radio" name="" />
-											<input disabled type="radio" name="" />
-											<input disabled type="radio" name="" />
+											<input disabled type="radio" />
+											<input disabled type="radio" />
+											<input disabled type="radio" />
 										</div>
 										<div class="bws_info"><?php _e( 'Select crop position base (by default: center).', 'gallery-plugin' ); ?></div>
 									</td>
@@ -579,8 +579,8 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					<th scope="row"><?php _e( 'Albums Displaying', 'gallery-plugin' ); ?></th>
 					<td>
 						<fieldset>
-							<label><input type="radio" name="gllr_layout" value="column" id="gllr_column" <?php checked( 'column' == $this->options["galleries_layout"] ); ?> /> <?php _e( 'Column', 'gallery-plugin' ); ?></label><br/>
-							<label><input type="radio" name="gllr_layout" value="rows" id="gllr_rows" <?php checked( 'rows' == $this->options["galleries_layout"] ); ?> /> <?php _e( 'Rows', 'gallery-plugin' ); ?></label>
+							<label><input type="radio" name="gllr_layout" value="column" id="gllr_column" <?php checked( 'column' == $this->options["galleries_layout"] ); ?> class="bws_option_affect" data-affect-show=".gllr_column_alignment" /> <?php _e( 'Column', 'gallery-plugin' ); ?></label><br/>
+							<label><input type="radio" name="gllr_layout" value="rows" id="gllr_rows" <?php checked( 'rows' == $this->options["galleries_layout"] ); ?> class="bws_option_affect" data-affect-hide=".gllr_column_alignment" /> <?php _e( 'Rows', 'gallery-plugin' ); ?></label>
 						</fieldset>
 						<div class="bws_info"><?php _e( 'Select the way galleries will be displayed on the Galleries Page.' , 'gallery-plugin'); ?></div>
 					</td>
@@ -680,7 +680,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<option value="date" <?php selected( 'date', $this->options["album_order_by"] ); ?>><?php _e( 'Date', 'gallery-plugin' ); ?></option>
 							<option value="modified" <?php selected( 'modified', $this->options["album_order_by"] ); ?>><?php _e( 'Last modified date', 'gallery-plugin' ); ?></option>
 							<option value="comment_count" <?php selected( 'comment_count', $this->options["album_order_by"] ); ?>><?php _e( 'Comment count', 'gallery-plugin' ); ?></option>
-							<option value="menu_order" <?php selected( 'menu_order', $this->options["album_order_by"] ); ?>><?php _e( 'Sorting order (the input field for sorting order)', 'gallery-plugin' ); ?></option>
+							<option value="menu_order" <?php selected( 'menu_order', $this->options["album_order_by"] ); ?>><?php _e( '"Order" field on the gallery edit page', 'gallery-plugin' ); ?></option>
 							<option value="author" <?php selected( 'author', $this->options["album_order_by"] ); ?>><?php _e( 'Author', 'gallery-plugin' ); ?></option>
 							<option value="rand" <?php selected( 'rand', $this->options["album_order_by"] ); ?> class="bws_option_affect" data-affect-hide=".gllr_album_order"><?php _e( 'Random', 'gallery-plugin' ); ?></option>
 						</select>
@@ -856,24 +856,24 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<tr valign="top">
 							<th scope="row"><?php _e( 'Social Buttons', 'gallery-plugin' ); ?></th>
 							<td>
-								<input type="checkbox" value="1" checked="checked" /> <span class="bws_info"><?php _e( 'Enable social sharing buttons in the lightbox.', 'gallery-plugin' ); ?></span>
+								<input type="checkbox" disabled="disabled" checked="checked" /> <span class="bws_info"><?php _e( 'Enable social sharing buttons in the lightbox.', 'gallery-plugin' ); ?></span>
 							</td>
 						</tr>
 						<tr valign="top">
 							<th scope="row"><?php _e( 'Social Networks', 'gallery-plugin' ); ?></th>
 							<td>
 								<fieldset>
-									<label><input disabled type="checkbox" value="1" /> Facebook</label><br>
-									<label><input disabled type="checkbox" value="1" /> Twitter</label><br>
-									<label><input disabled type="checkbox" value="1" /> Pinterest</label><br>
-									<label><input disabled type="checkbox" value="1" /> Google +1</label>
+									<label><input disabled="disabled" type="checkbox" /> Facebook</label><br>
+									<label><input disabled="disabled" type="checkbox" /> Twitter</label><br>
+									<label><input disabled="disabled" type="checkbox" /> Pinterest</label><br>
+									<label><input disabled="disabled" type="checkbox" /> Google +1</label>
 								</fieldset>
 							</td>
 						</tr>
 						<tr valign="top">
 							<th scope="row"><?php _e( 'Counter', 'gallery-plugin' ); ?></th>
 							<td>
-								<input disabled type="checkbox" value="1" checked="checked" />
+								<input disabled type="checkbox" value="1" />
 								<span class="bws_info"><?php _e( 'Enable to show likes counter for each social button (not available for Google +1).', 'gallery-plugin' ); ?></span>
 							</td>
 						</tr>
