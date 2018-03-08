@@ -208,12 +208,11 @@
 	background-color: #eee;
 	padding: 4px;
 	text-align: left;
-	height: 18px;
-	overflow: hidden;
-	position: absolute;
-	bottom: 0;
-	width: calc(100% - 8px);
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 8px);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
 }
 /* Media TB_inline*/
 .post-type-gallery #TB_window,

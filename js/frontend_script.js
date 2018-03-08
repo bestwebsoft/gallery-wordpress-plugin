@@ -24,7 +24,7 @@
 					for( var i = 1; i <= count_rows; i++ ) {
 						var $new_row = $( '<div/>', {
 							'class' : 'gllr_image_row'
-						}),
+						} ),
 						$new_images_in_row = $images.splice( 0, count_images_in_row );
 						$new_row.append( $new_images_in_row );
 						$gallery.append( $new_row );
@@ -42,7 +42,7 @@
 					/* initial item width */
 					init_width = $inline_list_items.data( 'gllr-width' ),
 					parent_width = $( '.gllr-display-inline' ).innerWidth(),
-					cols = Math.floor( parent_width/(init_width + col_margins ) ),
+					cols = Math.floor( parent_width/( init_width + col_margins ) ),
 					/* recalculate column width so the columns take all the available width */
 					calc_width =  Math.floor( parent_width / cols ) - col_margins;
 

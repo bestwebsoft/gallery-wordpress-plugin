@@ -22,7 +22,8 @@
 </ul>
 </li>
 <li>Change image for album cover and its dimensions</li>
-<li>Set default sorting order for images by:
+<li>Disable image opening from the thumbnail in a single gallery [NEW]</li>
+<li>Set default sorting order for images by: [NEW]
 <ul>
 <li>Attachment ID</li>
 <li>Image Name</li>
@@ -33,7 +34,7 @@
 <li>DESC (descending order from highest to lowest values)</li>
 </ul>
 </li>
-<li>Set default gallery projects sorting order by:
+<li>Set default gallery projects sorting order by: [NEW]
 <ul>
 <li>Gallery ID</li>
 <li>Title</li>
@@ -47,6 +48,7 @@
 <li>DESC (descending order from highest to lowest values)</li>
 </ul>
 </li>
+<li>Sort galleries in a category</li>
 <li>Add gallery categories widget and select the additional info:
 <ul>
 <li>Display as dropdown</li>

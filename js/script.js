@@ -1,28 +1,38 @@
 function gllr_setMessage( msg ) {
-	(function($) {
+	( function( $ ) {
 		$( ".error" ).hide();
 		$( ".gllr_image_update_message" ).html( msg ).show();
-	})(jQuery);
+	} )( jQuery );
 }
 
 function gllr_setError( msg ) {
-	(function($) {
+	( function( $ ) {
 		$( ".gllr_image_update_message" ).hide();
 		$( ".error" ).html( msg ).show();
-	})(jQuery);
+	} )( jQuery );
 }
 
-(function($) {
-	$(document).ready( function() {
+( function( $ ) {
+	$( document ).ready( function() {
 		/* include color-picker */
 		if ( $.fn.wpColorPicker ) {
 			$( '.gllr_color_field' ).wpColorPicker();
 		}
+		
+		$( 'input[name="gllr_enable_image_opening"]' ).on( 'change', function() {
+			if( $( 'input[name="gllr_enable_image_opening"]' ).prop( 'checked' ) ) {
+				$( 'input[name="gllr_enable_lightbox"]' ).prop( 'checked', false );
+				$( 'input[name="gllr_enable_lightbox"]' ).attr( 'disabled', true );
+				$( 'input[name="gllr_enable_lightbox"]' ).trigger( 'change' );
+			} else {
+				$('input[name="gllr_enable_lightbox"]').removeAttr("disabled");
+			}
+		} ).trigger( 'change' );
 
 		$( '#gllr_ajax_update_images' ).click( function() {
 			gllr_setMessage( "<p>" + gllr_vars.update_img_message + "</p>" );
 			var curr = 0;
-			$.ajax({
+			$.ajax( {
 				/* update_img_url */
 				url: '../wp-admin/admin-ajax.php?action=gllr_update_image',
 				type: "POST",
@@ -38,30 +48,30 @@ function gllr_setError( msg ) {
 					var curr = 0,
 						all_count = Object.keys( list ).length;
 					$.each( list, function( index, value ) {
-						$.ajax({
+						$.ajax( {
 							url: '../wp-admin/admin-ajax.php?action=gllr_update_image',
 							type: "POST",
 							data: "action1=update_image&id=" + value + '&gllr_ajax_nonce_field=' + gllr_vars.gllr_nonce,
 							success: function( result ) {
 								curr = curr + 1;
 								if ( curr >= all_count ) {
-									$.ajax({
+									$.ajax( {
 										url: '../wp-admin/admin-ajax.php?action=gllr_update_image',
 										type: "POST",
 										data: "action1=update_options&gllr_ajax_nonce_field=" + gllr_vars.gllr_nonce,
-									});
+									} );
 									gllr_setMessage( "<p>" + gllr_vars.img_success + "</p>" );
 									$( '.gllr_loader' ).hide();
 								}
 							}
-						});	
-					});
+						} );	
+					} );
 				},
 				error: function( request, status, error ) {
 					gllr_setError( "<p>" + gllr_vars.img_error + request.status + "</p>" );
 				}
-			});
-		});
+			} );
+		} );
 
 		if ( $( window ).width() < 800 ) {
 			$.each(	$( '.gllr_add_responsive_column' ), function() {
@@ -69,11 +79,11 @@ function gllr_setError( msg ) {
 				$.each(	$( this ).find( 'td:hidden' ).not( '.column-order' ), function() {
 					content = content + '<label>' + $( this ).attr( 'data-colname' ) + '</label><br/>' + $( this ).html() + '<br/>';
 					$( this ).html( '' );
-				});
+				} );
 				content = content + '</div>';
 				$( this ).find( '.column-title' ).append( content );
 				$( this ).find( '.gllr_info_show' ).show();
-			});
+			} );
 			$( '.gllr_info_show' ).on( 'click', function( event ) {
 				event.preventDefault();
 				if ( $( this ).next( '.gllr_info' ).is( ':hidden' ) ) {
@@ -81,7 +91,7 @@ function gllr_setError( msg ) {
 				} else {
 					$( this ).next( '.gllr_info' ).hide();
 				}
-			});
+			} );
 		}
 
 		if ( ! $( '#post-body-content .attachments li' ).length )
@@ -89,12 +99,12 @@ function gllr_setError( msg ) {
 
 		$( '#gllr-media-insert' ).click( function open_media_window() {
 			if ( this.window === undefined ) {
-				this.window = wp.media({
+				this.window = wp.media( {
 					title: gllr_vars.wp_media_title,
 					library: { type: 'image' },
 					multiple: true,
 					button: { text: gllr_vars.wp_media_button }
-				});
+				} );
 
 				var self = this; /* Needed to retrieve our variable in the anonymous function below */
 				this.window.on( 'select', function() {
@@ -114,9 +124,9 @@ function gllr_setError( msg ) {
 										gllr_add_sortable();
 									}
 								}
-							});
-							$('<input type="hidden" name="gllr_new_image[]" id="gllr_new_image" value="' + item.id + '" />').appendTo( '#hidden' );
-						});
+							} );
+							$( '<input type="hidden" name="gllr_new_image[]" id="gllr_new_image" value="' + item.id + '" />' ).appendTo( '#hidden' );
+						} );
 					} else {
 						var all = self.window.state().get( 'selection' ).toJSON();
 						all.forEach( function( item, i, arr ) {
@@ -132,16 +142,16 @@ function gllr_setError( msg ) {
 										gllr_add_sortable();
 									}
 								}
-							});
-							$('<input type="hidden" name="gllr_new_image[]" id="gllr_new_image" value="' + item.id + '" />').appendTo( '#hidden' );
-						});
+							} );
+							$( '<input type="hidden" name="gllr_new_image[]" id="gllr_new_image" value="' + item.id + '" />' ).appendTo( '#hidden' );
+						} );
 					}
-				});
+				} );
 			}
 
 			this.window.open();
 			return false;
-		});
+		} );
 
 		function gllr_add_sortable() {			
 			if ( $.fn.sortable ) {
@@ -156,10 +166,10 @@ function gllr_setError( msg ) {
 								}
 							)
 						}
-					});
-					$( "#the-list input" ).on( 'click', function() { $(this).focus(); });
+					} );
+					$( "#the-list input" ).on( 'click', function() { $( this ).focus(); } );
 				} else if ( $( ".attachments li" ).length > 1 ) {
-					$( '.attachments' ).sortable({
+					$( '.attachments' ).sortable( {
 						stop: function( event, ui ) {
 							var g = $( '.attachments' ).sortable( 'toArray' );
 							var f = g.length;
@@ -169,7 +179,7 @@ function gllr_setError( msg ) {
 								}
 							)
 						}
-					});
+					} );
 				}
 			}
 		}
@@ -187,7 +197,7 @@ function gllr_setError( msg ) {
 					$( '.gllr-media-bulk-delete-selected-button' ).removeAttr( 'disabled' );
 				else
 					$( '.gllr-media-bulk-delete-selected-button' ).attr( 'disabled', 'disabled' );
-			});
+			} );
 			$( '.gllr-media-check' ).on( 'click', function(){
 				if ( $( this ).parent().hasClass( 'details' ) )
 					$( this ).parent().removeClass( 'details' ).removeClass( 'selected' );
@@ -198,9 +208,9 @@ function gllr_setError( msg ) {
 				else
 					$( '.gllr-media-bulk-delete-selected-button' ).attr( 'disabled', 'disabled' );
 				return false;
-			});
+			} );
 			return false;
-		});
+		} );
 
 		$( '.gllr-media-bulk-cansel-select-button' ).on( 'click', function() {
 			$( '.attachments' ).sortable().removeClass( 'bulk-selected' );
@@ -210,19 +220,19 @@ function gllr_setError( msg ) {
 			$( '.gllr-media-attachment' ).off( 'click' );
 			$( '.gllr-media-check' ).off( 'click' );
 			return false;
-		});
+		} );
 
 		$( document ).on( 'click', '.gllr-media-actions-delete', function() {
 			if ( window.confirm( gllr_vars.warnSingleDelete ) ) {			
 				var gllr_attachment_id = $( this ).parent().find( '.gllr_attachment_id' ).val();
 				var gllr_post_id = $( this ).parent().find( '.gllr_post_id' ).val();
 
-				$.ajax({
+				$.ajax( {
 					url: '../wp-admin/admin-ajax.php',
 					type: "POST",
 					data: "action=gllr_delete_image&delete_id_array=" + gllr_attachment_id + "&post_id=" + gllr_post_id + "&gllr_ajax_nonce_field=" + gllr_vars.gllr_nonce,
 					success: function( result ) {
-						if ( result == 'updated' ) {
+						if ( 'updated' == result ) {
 							$( '#post-' + gllr_attachment_id ).remove();
 							tb_remove();
 							if ( ! $( '#post-body-content .attachments li' ).length ) {
@@ -230,9 +240,9 @@ function gllr_setError( msg ) {
 							}
 						}
 					}
-				});
+				} );
 			}
-		});
+		} );
 
 		$( '.gllr-media-bulk-delete-selected-button' ).on( 'click', function() {
 			if ( 'disabled' != $( this ).attr( 'disabled' ) ) {
@@ -240,15 +250,15 @@ function gllr_setError( msg ) {
 					var delete_id_array = '';
 					$( '.attachments li.selected' ).each( function() {
 						delete_id_array += $( this ).attr( 'id' ).replace( 'post-', '' ) + ',';
-					});
+					} );
 					$( '.gllr-media-spinner' ).css( 'display', 'inline-block' );
 					$( '.attachments' ).attr( 'disabled', 'disabled' );
-					$.ajax({
+					$.ajax( {
 						url: '../wp-admin/admin-ajax.php',
 						type: "POST",
 						data: "action=gllr_delete_image&delete_id_array=" + delete_id_array + "&post_id=" + $( '#post_ID' ).val() + "&gllr_ajax_nonce_field=" + gllr_vars.gllr_nonce,
 						success: function( result ) {
-							if ( result == 'updated' ) {
+							if ( 'updated' == result ) {
 								$( '.gllr-media-attachment.selected' ).remove();
 								$( '.gllr-media-bulk-delete-selected-button' ).attr( 'disabled', 'disabled' );
 								if ( ! $( '#post-body-content .attachments li' ).length ) {
@@ -259,36 +269,36 @@ function gllr_setError( msg ) {
 							$( '.gllr-media-spinner' ).css( 'display', 'none' );
 							$( '.attachments' ).removeAttr( 'disabled' );							
 						}
-					});
+					} );
 				}
 			}
 			return false;
-		});
+		} );
 
 		$( '.post-type-gallery .view-switch a' ).on( 'click', function( event ) {
 			if ( window.confirm( gllr_vars.confirm_update_gallery ) ) {
 				event.preventDefault();
 				var mode = $( 'input[name="gllr_mode"]' ).val();
 				/* change view mode */
-				$.ajax({
+				$.ajax( {
 					url: "../wp-admin/admin-ajax.php",
 					type: "POST",
 					data: "action=gllr_change_view_mode&mode=" + mode + "&gllr_ajax_nonce_field=" + gllr_vars.gllr_nonce,
 					success: function( result ) {
 						$( '#publishing-action .button-primary' ).click();
 					}
-				});
+				} );
 			}
-		});
-	});
-})(jQuery);
+		} );
+	} );
+} )( jQuery );
 
 /* Create notice on a gallery page */
 function gllr_notice_wiev( data_id ) {
-	(function( $ ) {
+	( function( $ ) {
 		/*	function to send Ajax request to gallery notice */
 		gllr_notice_media_attach = function( post_id, thumb_id, typenow ) {
-			$.ajax({
+			$.ajax( {
 				url: "../wp-admin/admin-ajax.php",
 				type: "POST",
 				data: "action=gllr_media_check&thumbnail_id=" + thumb_id + "&gllr_ajax_nonce_field=" + gllr_vars.gllr_nonce + "&post_type=" + typenow,
@@ -300,8 +310,8 @@ function gllr_notice_wiev( data_id ) {
 						$( '.button.media-button-select' ).removeAttr( 'disabled' );
 					}
 				}
-			});
+			} );
 		}
 		gllr_notice_media_attach( wp.media.view.settings.post.id, data_id, typenow );
-	})( jQuery );
+	} )( jQuery );
 }

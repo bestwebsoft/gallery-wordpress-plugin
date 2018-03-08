@@ -63,7 +63,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 
 			$wp_sizes = get_intermediate_image_sizes();
 
-			foreach ( (array) $wp_sizes as $size ) {
+			foreach ( ( array ) $wp_sizes as $size ) {
 				if ( ! array_key_exists( $size, $gllr_options['custom_size_px'] ) ) {
 					if ( isset( $_wp_additional_image_sizes[ $size ] ) ) {
 						$width  = absint( $_wp_additional_image_sizes[ $size ]['width'] );
@@ -90,7 +90,6 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			}
 
 			$this->cstmsrch_options = get_option( 'cstmsrch_options' );
-
 
 			add_action( get_parent_class( $this ) . '_display_custom_messages', array( $this, 'display_custom_messages' ) );
 			add_action( get_parent_class( $this ) . '_additional_misc_options_affected', array( $this, 'additional_misc_options_affected' ) );
@@ -183,6 +182,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 
 			/* Lightbox Tab */
 			$this->options["enable_lightbox"]		= ( isset( $_POST['gllr_enable_lightbox'] ) ) ? 1 : 0;
+			$this->options["enable_image_opening"]	= ( isset( $_POST['gllr_enable_image_opening'] ) ) ? 1 : 0;
 			$this->options["start_slideshow"]		= ( isset( $_POST['gllr_start_slideshow'] ) ) ? 1 : 0;
 			$this->options["slideshow_interval"]	= empty( $_POST['gllr_slideshow_interval'] ) ? 2000 : intval( $_POST['gllr_slideshow_interval'] );
 			$this->options["lightbox_download_link"] = ( isset( $_POST['gllr_lightbox_download_link'] ) ) ? 1 : 0;
@@ -214,7 +214,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					$is_enabled = isset( $_POST['gllr_add_to_search'] ) ? 1 : 0;
 					$post_type_exist = false;
 					foreach ( $this->cstmsrch_options['output_order'] as $key => $item ) {
-						if ( $item['name'] == $this->options['post_type_name'] && $item['type'] == 'post_type' ) {
+						if ( $item['name'] == $this->options['post_type_name'] && 'post_type' == $item['type'] ) {
 							$post_type_exist = true;
 							if ( $item['enabled'] != $is_enabled ) {
 								$this->cstmsrch_options['output_order'][ $key ]['enabled'] = $is_enabled;
@@ -289,7 +289,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				<?php $wp_gallery_media_table->views(); ?>
 			</div>
 			<div class="clear"></div>
-			<?php if ( $gllr_mode == 'list' ) {
+			<?php if ( 'list' == $gllr_mode ) {
 				$wp_gallery_media_table->display();
 			} else { ?>
 				<div class="error hide-if-js">
@@ -528,14 +528,14 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Back Link', 'gallery-plugin' ); ?></th>
 						<td>
-							<input type="checkbox" name="gllr_return_link" value="1" <?php if ( 1 == $this->options["return_link"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_return_link" /> <span class="bws_info"><?php _e( 'Enable to show a back link in a single gallery page which navigate to a previous page.' , 'gallery-plugin'); ?></span>
+							<input type="checkbox" name="gllr_return_link" value="1" <?php if ( 1 == $this->options["return_link"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_return_link" /> <span class="bws_info"><?php _e( 'Enable to show a back link in a single gallery page which navigate to a previous page.' , 'gallery-plugin' ); ?></span>
 						</td>
 					</tr>
 					<tr valign="top" class="gllr_for_return_link">
 						<th scope="row"><?php _e( 'Back Link URL', 'gallery-plugin' ); ?></th>
 						<td>
 							<input type="text" value="<?php echo $this->options["return_link_url"]; ?>" name="gllr_return_link_url" maxlength="250" />
-							<div class="bws_info"><?php _e( 'Back link custom page URL. Leave blank to use Gallery page template.' , 'gallery-plugin'); ?></div>
+							<div class="bws_info"><?php _e( 'Back link custom page URL. Leave blank to use Gallery page template.' , 'gallery-plugin' ); ?></div>
 						</td>
 					</tr>
 					<tr valign="top" class="gllr_for_return_link">
@@ -548,7 +548,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<th scope="row"><?php _e( 'Back Link with Shortcode', 'gallery-plugin' ); ?> </th>
 						<td>
 							<input type="checkbox" name="gllr_return_link_shortcode" value="1" <?php if ( 1 == $this->options["return_link_shortcode"] ) echo 'checked="checked"'; ?> />
-							<span class="bws_info"><?php _e( 'Enable to display a back link on a page where shortcode is used.' , 'gallery-plugin'); ?></span>
+							<span class="bws_info"><?php _e( 'Enable to display a back link on a page where shortcode is used.' , 'gallery-plugin' ); ?></span>
 						</td>
 					</tr>
 				</table>
@@ -572,7 +572,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							'name'                  => 'gllr_page_id_gallery_template',
 							'show_option_none'		=> '...'
 						) ); ?>
-						<div class="bws_info"><?php _e( 'Base page where all existing galleries will be displayed.' , 'gallery-plugin'); ?></div>
+						<div class="bws_info"><?php _e( 'Base page where all existing galleries will be displayed.' , 'gallery-plugin' ); ?></div>
 					</td>
 				</tr>
 				<tr valign="top">
@@ -582,7 +582,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<label><input type="radio" name="gllr_layout" value="column" id="gllr_column" <?php checked( 'column' == $this->options["galleries_layout"] ); ?> class="bws_option_affect" data-affect-show=".gllr_column_alignment" /> <?php _e( 'Column', 'gallery-plugin' ); ?></label><br/>
 							<label><input type="radio" name="gllr_layout" value="rows" id="gllr_rows" <?php checked( 'rows' == $this->options["galleries_layout"] ); ?> class="bws_option_affect" data-affect-hide=".gllr_column_alignment" /> <?php _e( 'Rows', 'gallery-plugin' ); ?></label>
 						</fieldset>
-						<div class="bws_info"><?php _e( 'Select the way galleries will be displayed on the Galleries Page.' , 'gallery-plugin'); ?></div>
+						<div class="bws_info"><?php _e( 'Select the way galleries will be displayed on the Galleries Page.' , 'gallery-plugin' ); ?></div>
 					</td>
 				</tr>
 				<tr valign="top" class="gllr_column_alignment">
@@ -593,7 +593,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<label><input type="radio" name="gllr_column_align" value="right" <?php checked( 'right' == $this->options["galleries_column_alignment"] ); ?> /> <?php _e( 'Right', 'gallery-plugin' ); ?></label><br/>
 							<label><input type="radio" name="gllr_column_align" value="center" <?php checked( 'center' == $this->options["galleries_column_alignment"] ); ?> /> <?php _e( 'Center', 'gallery-plugin' ); ?></label>
 						</fieldset>
-						<div class="bws_info"><?php _e( 'Select the column alignment.' , 'gallery-plugin'); ?></div>
+						<div class="bws_info"><?php _e( 'Select the column alignment.' , 'gallery-plugin' ); ?></div>
 					</td>
 				</tr>
 				<tr valign="top">
@@ -732,6 +732,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<hr>
 			<table class="form-table">
 				<tr valign="top">
+					<th scope="row"><?php _e( 'Unclickable Thumbnail Images', 'gallery-plugin' ); ?> </th>
+					<td>
+						<input type="checkbox" name="gllr_enable_image_opening" <?php if ( 1 == $this->options["enable_image_opening"] ) echo 'checked="checked"'; ?> />
+						<span class="bws_info"><?php _e( 'Enable to make the images in a single gallery unclickable and hide their URLs. This option also disables Lightbox.', 'gallery-plugin' ); ?></span>
+					</td>
+				</tr>
+				<tr valign="top" class="gllr_for_enable_opening_images">
 					<th scope="row"><?php _e( 'Enable Lightbox', 'gallery-plugin' ); ?> </th>
 					<td>
 						<input type="checkbox" name="gllr_enable_lightbox" <?php if ( 1 == $this->options["enable_lightbox"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_enable_lightbox" />
