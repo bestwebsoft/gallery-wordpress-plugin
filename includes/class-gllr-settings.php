@@ -81,7 +81,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					} else {
 						$this->wp_image_sizes[] = array(
 							'value'  => $size,
-							'name'   => ucwords( str_replace( array( '-', '_' ), ' ', $size ) ) . ' (' . $width . ' &#215; ' . $height . ')',
+							'name'   => ucwords( str_replace( array( '-', '_' ), ' ', $size ) ) . ' ( ' . $width . ' &#215; ' . $height . ' ) ',
 							'width'  => $width,
 							'height' => $height
 						);

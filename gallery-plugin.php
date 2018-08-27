@@ -6,12 +6,12 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.5.5
+Version: 4.5.6
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2017  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  © Copyright 2018  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -38,11 +38,12 @@ if ( ! function_exists( 'add_gllr_admin_menu' ) ) {
 
 		add_submenu_page( 'edit.php?post_type=' . $gllr_options['post_type_name'], 'BWS Panel', 'BWS Panel', 'manage_options', 'gllr-bws-panel', 'bws_add_menu_render' );
 
-		if ( isset( $submenu['edit.php?post_type=' . $gllr_options['post_type_name'] ] ) )
+		if ( isset( $submenu['edit.php?post_type=' . $gllr_options['post_type_name'] ] ) ) {
 			$submenu['edit.php?post_type=' . $gllr_options['post_type_name'] ][] = array(
 				'<span style="color:#d86463"> ' . __( 'Upgrade to Pro', 'gallery-plugin' ) . '</span>',
 				'manage_options',
 				'https://bestwebsoft.com/products/wordpress/plugins/gallery/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=' . $gllr_plugin_info["Version"] . '&wp_v=' . $wp_version );
+		}
 
 		add_action( 'load-' . $settings, 'gllr_add_tabs' );
 		add_action( 'load-post-new.php', 'gllr_add_tabs' );
@@ -84,8 +85,9 @@ if ( ! function_exists( 'gllr_init' ) ) {
 		bws_include_init( plugin_basename( __FILE__ ) );
 
 		if ( ! $gllr_plugin_info ) {
-			if ( ! function_exists( 'get_plugin_data' ) )
+			if ( ! function_exists( 'get_plugin_data' ) ) {
 				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			}
 			$gllr_plugin_info = get_plugin_data( __FILE__ );
 		}
 
@@ -122,12 +124,13 @@ if ( ! function_exists( 'gllr_admin_init' ) ) {
 	function gllr_admin_init() {
 		global $bws_plugin_info, $gllr_plugin_info, $bws_shortcode_list, $gllr_options;
 		/* Add variable for bws_menu */
-		if ( empty( $bws_plugin_info ) )
+		if ( empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '79', 'version' => $gllr_plugin_info["Version"] );
+		}
 
 		/* add gallery to global $bws_shortcode_list */
 		$bws_shortcode_list['gllr'] = array( 'name' => 'Gallery', 'js_function' => 'gllr_shortcode_init' );
-
+		
 		add_filter( 'manage_' . $gllr_options['post_type_name'] . '_posts_columns', 'gllr_change_columns' );
 		add_action( 'manage_' . $gllr_options['post_type_name'] . '_posts_custom_column', 'gllr_custom_columns', 10, 2 );
 	}
@@ -274,7 +277,6 @@ if ( ! function_exists( 'gllr_include_demo_data' ) ) {
 		add_filter( 'wp_update_attachment_metadata',array( $gllr_BWS_demo_data, 'bws_wp_update_attachment_metadata' ), 10, 2 );
 	}
 }
-
 /**
  * Function for update all gallery images to new version ( Stable tag: 4.3.6 )
  */
@@ -308,8 +310,9 @@ if ( ! function_exists( 'gllr_plugin_upgrade' ) ) {
 				update_post_meta( $key, '_gallery_images', implode( ',', $value ) );
 			}
 			/* set gallery category for demo data */
-			if ( function_exists( 'gllrctgrs_add_default_term_all_gallery' ) )
+			if ( function_exists( 'gllrctgrs_add_default_term_all_gallery' ) ) {
 				gllrctgrs_add_default_term_all_gallery();
+			}
 		}
 	}
 }
@@ -364,7 +367,7 @@ if ( ! function_exists( 'gllr_post_type_images' ) ) {
 					'not_found_in_trash' 		=> __( 'No Gallery Categories found in Trash', 'gallery-plugin' ),
 					'parent' 					=> __( 'Parent Gallery Category', 'gallery-plugin' ),
 					'items_list_navigation' 	=> __( 'Gallery Categories list navigation', 'gallery-plugin' ),
-					'items_list'            	=> __( 'Gallery Categories list', 'gallery-plugin' )
+					'items_list'				=> __( 'Gallery Categories list', 'gallery-plugin' )
 				),
 				'rewrite' 			=> true,
 				'show_ui'			=> true,
@@ -374,22 +377,13 @@ if ( ! function_exists( 'gllr_post_type_images' ) ) {
 			)
 		);
 
-		if ( empty( $gllr_options['default_gallery_category'] ) ) {
-			/**
-			 * @deprecated since 4.5.1
-			 * @todo UPDATE after 18.01.2018 - leave only Default term creation.
-			 */
-			$gllrctgrs_options = get_option( 'gllrctgrs_options' );
-			if ( ! empty( $gllrctgrs_options ) ) {
-				$gllr_options['default_gallery_category'] = $gllrctgrs_options['default_gallery_category'];
-				delete_option( 'gllrctgrs_options' );
-			}
 
+		if ( empty( $gllr_options['default_gallery_category'] ) ) {
 			$terms = get_terms(
 				'gallery_categories',
 				array(
 					'hide_empty'	=> false,
-					'fields'		=> 'ids'
+					'fields'	=> 'ids'
 				)
 			);
 
@@ -401,39 +395,20 @@ if ( ! function_exists( 'gllr_post_type_images' ) ) {
 					$def_term_info = wp_insert_term( $def_term, 'gallery_categories',
 						array(
 							'description'	=> '',
-							'slug'			=> 'default'
+							'slug'	=> 'default'
 						)
 					);
 				}
 				if ( is_array( $def_term_info ) )
 					$def_term_id = ( array_shift( $def_term_info ) );
-			}
-
-			if ( empty( $gllr_options['default_gallery_category'] ) )
-				$gllr_options['default_gallery_category'] = intval( $def_term_id );
-
-			/* assignment of default term for all gallery */
-			$posts = get_posts( array(
-				'posts_per_page'=>	-1,
-				'post_type'		=> $gllr_options['post_type_name']
-			) );
-			if ( ! empty( $posts ) ) {
-				foreach ( $posts as $post ) {
-					if ( ! has_term( '', 'gallery_categories', $post ) ) { /* Checked and updated if necessary term */
-						wp_set_object_terms( $post->ID, $gllr_options['default_gallery_category'], 'gallery_categories' );
-					}
-				}
-			}
-			/**
-			 * @end todo
-			*/
+			}	
 		}
 
-		if ( $force_flush_rules || ( isset( $gllr_options["flush_rewrite_rules"] ) && $gllr_options["flush_rewrite_rules"] == 1 ) ) {
+		 if ( ! in_array( 'bws-gallery', get_option( 'rewrite_rules' ) ) || $force_flush_rules || ( isset( $gllr_options["flush_rewrite_rules"] ) && 1 == $gllr_options["flush_rewrite_rules"] ) ) {
 			flush_rewrite_rules();
-			$gllr_options["flush_rewrite_rules"] = 0;
+			$gllr_options["flush_rewrite_rules"] = 0; 
 			update_option( 'gllr_options', $gllr_options );
-		}
+		} 
 	}
 }
 
@@ -548,7 +523,7 @@ if ( ! class_exists( 'Gllr_CategoryDropdown' ) ) {
 			$output .= '>';
 			$output .= str_repeat( '&nbsp;', $depth * 3 ) . $term_name;
 			if ( $args['show_count'] )
-			    $output .= '&nbsp;(' . $term->count .')';
+			    $output .= '&nbsp;( ' . $term->count .' )';
 			$output .= '</option>';
 		}
 	}
@@ -566,7 +541,7 @@ if ( ! function_exists( 'gllr_add_notice_below_table' ) ) {
 			if ( ! empty( $def_term ) ) {
 				$def_term_name = $def_term->name;
 				if ( ! empty( $def_term_name ) ) {
-					echo '<div class="form-wrap"><p><i><strong>' . __( 'Note', 'gallery-plugin') . ':</strong> ' . sprintf( __( 'When deleting a category, the galleries that belong to this category will not be deleted. These galleries will be moved to the category %s.', 'gallery-plugin' ), '<strong>' . $def_term_name . '</strong>' ) . '</i></p></div>';
+					echo '<div class="form-wrap"><p><i><strong>' . __( 'Note', 'gallery-plugin' ) . ':</strong> ' . sprintf( __( 'When deleting a category, the galleries that belong to this category will not be deleted. These galleries will be moved to the category %s.', 'gallery-plugin' ), '<strong>' . $def_term_name . '</strong>' ) . '</i></p></div>';
 				}
 			}
 		}
@@ -673,8 +648,9 @@ if ( ! function_exists( 'gllr_taxonomy_filter' ) ) {
 if ( ! function_exists( 'gllr_hide_delete_link' ) ) {
 	function gllr_hide_delete_link( $actions, $tag ) {
 		global $gllr_options;
-		if ( $tag->term_id == $gllr_options['default_gallery_category'] )
+		if ( $tag->term_id == $gllr_options['default_gallery_category'] ) {
 			unset( $actions['delete'] );
+		}
 		return $actions;
 	}
 }
@@ -791,8 +767,9 @@ if ( ! function_exists( 'gllr_template_include' ) ) {
 	function gllr_template_include( $template ) {
 		global $gllr_options, $wp_query;
 
-		if ( function_exists( 'is_embed' ) && is_embed() )
+		if ( function_exists( 'is_embed' ) && is_embed() ) {
 			return $template;
+		}
 
 		$post_type = get_post_type();
 		if ( is_single() && $gllr_options['post_type_name'] == $post_type ) {
@@ -807,8 +784,9 @@ if ( ! function_exists( 'gllr_template_include' ) ) {
 			$find = array( $file, 'bws-templates/' . $file );
 			$template = locate_template( $find );
 
-			if ( ! $template )
+			if ( ! $template ) {
 				$template = untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/templates/' . $file;
+			}
 		}
 
 		return $template;
@@ -959,8 +937,9 @@ if ( ! function_exists( 'gllr_template_content' ) ) {
 		wp_reset_query();
 		$request = $wp_query->request;
 		$pages = intval( $count_all_albums / $per_page );
-		if ( $count_all_albums % $per_page > 0 )
+		if ( $count_all_albums % $per_page > 0 ) {
 			$pages += 1;
+		}
 		$range = 100;
 		if ( ! $pages ) {
 			$pages = 1;
@@ -1152,10 +1131,11 @@ if ( ! function_exists( 'gllr_add_pdf_print_content' ) ) {
 					}
 				</style>\n";
 
-			if ( 1 == $gllr_options['border_images'] )
+			if ( 1 == $gllr_options['border_images'] ) {
 				$image_style = "border: {$gllr_options['border_images_width']}px solid {$gllr_options['border_images_color']};";
-			else
+			} else {
 				$image_style = "border: none;";
+			}
 			$image_style .= "margin: 0;";
 
 			$args = array(
@@ -1645,10 +1625,11 @@ if ( ! function_exists( 'gllr_custom_columns' ) ) {
 				break;
 			case "images":
 				$images_id = get_post_meta( $post->ID, '_gallery_images', true );
-				if ( empty( $images_id  ) )
+				if ( empty( $images_id ) ) {
 					echo 0;
-				else
+				} else {
 					echo $wpdb->get_var( "SELECT COUNT(*) FROM " . $wpdb->posts . " WHERE ID IN( " . $images_id . " )" );
+				}
 				break;
 			case 'gallery_categories':
 				$terms = get_the_terms( $post->ID, 'gallery_categories' );
@@ -1783,7 +1764,7 @@ if ( ! function_exists ( 'gllr_admin_head' ) ) {
 					'img_success' 			=> __( 'All images were updated.', 'gallery-plugin' ),
 					'img_error'				=> __( 'Error.', 'gallery-plugin' )
 				) );
-		} else if (
+		} elseif (
 			( 'post.php' == $pagenow && isset( $_GET['action'] ) && 'edit' == $_GET['action'] && get_post_type( get_the_ID() ) == $gllr_options['post_type_name'] ) ||
 			( 'post-new.php' == $pagenow && isset( $_GET['post_type'] ) && $_GET['post_type'] == $gllr_options['post_type_name'] ) ) {
 			wp_enqueue_script( 'jquery-ui-sortable' );
@@ -2223,7 +2204,7 @@ if ( ! function_exists ( 'gllr_update_image' ) ) {
 
 					$string_parent_id = implode( ",", $array_parent_id );
 
-					$metas = $wpdb->get_results( "SELECT `meta_value` FROM $wpdb->postmeta WHERE `meta_key` = '_gallery_images' AND `post_id` IN (" . $string_parent_id . ")", ARRAY_A );
+					$metas = $wpdb->get_results( "SELECT `meta_value` FROM $wpdb->postmeta WHERE `meta_key` = '_gallery_images' AND `post_id` IN ( " . $string_parent_id . " )", ARRAY_A );
 
 					$result_attachment_id = '';
 					foreach ( $metas as $value ) {
@@ -2331,34 +2312,42 @@ if ( ! function_exists ( 'gllr_image_make_intermediate_size' ) ) {
 if ( ! function_exists ( 'gllr_image_resize' ) ) {
 	function gllr_image_resize( $file, $max_w, $max_h, $crop = false, $suffix = null, $dest_path = null, $jpeg_quality = 90 ) {
 		$size = @getimagesize( $file );
-		if ( ! $size )
+		if ( ! $size ) {
 			return new WP_Error( 'invalid_image', __( 'Image size not defined', 'gallery-plugin' ), $file );
+		}
 
 		$type = $size[2];
 
-		if ( 3 == $type )
+		if ( 3 == $type ) {
 			$image = imagecreatefrompng( $file );
-		else if ( 2 == $type )
+		}
+		elseif ( 2 == $type ) {
 			$image = imagecreatefromjpeg( $file );
-		else if ( 1 == $type )
+		}
+		elseif ( 1 == $type ) {
 			$image = imagecreatefromgif( $file );
-		else if ( 15 == $type )
+		}
+		elseif ( 15 == $type ) {
 			$image = imagecreatefromwbmp( $file );
-		else if ( 16 == $type )
+		}
+		elseif ( 16 == $type ) {
 			$image = imagecreatefromxbm( $file );
-		else
+		} else {
 			return new WP_Error( 'invalid_image', __( 'Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please reload images manually.', 'gallery-plugin' ), $file );
+		}
 
-		if ( ! is_resource( $image ) )
+		if ( ! is_resource( $image ) ) {
 			return new WP_Error( 'error_loading_image', $image, $file );
+		}
 
 		/*$size = @getimagesize( $file );*/
 		list( $orig_w, $orig_h, $orig_type ) = $size;
 
 		$dims = gllr_image_resize_dimensions( $orig_w, $orig_h, $max_w, $max_h, $crop );
 
-		if ( ! $dims )
+		if ( ! $dims ) {
 			return new WP_Error( 'error_getting_dimensions', __( 'Image size not defined', 'gallery-plugin' ) );
+		}
 		list( $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h ) = $dims;
 
 		$newimage = wp_imagecreatetruecolor( $dst_w, $dst_h );
@@ -2366,36 +2355,42 @@ if ( ! function_exists ( 'gllr_image_resize' ) ) {
 		imagecopyresampled( $newimage, $image, $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h );
 
 		/* Convert from full colors to index colors, like original PNG. */
-		if ( IMAGETYPE_PNG == $orig_type && function_exists( 'imageistruecolor' ) && !imageistruecolor( $image ) )
+		if ( IMAGETYPE_PNG == $orig_type && function_exists( 'imageistruecolor' ) && !imageistruecolor( $image ) ) {
 			imagetruecolortopalette( $newimage, false, imagecolorstotal( $image ) );
+		}
 
 		/* We don't need the original in memory anymore */
 		imagedestroy( $image );
 
 		/* $suffix will be appended to the destination filename, just before the extension */
-		if ( ! $suffix )
+		if ( ! $suffix ) {
 			$suffix = "{$dst_w}x{$dst_h}";
+		}
 
 		$info	=	pathinfo( $file );
 		$dir	=	$info['dirname'];
 		$ext	=	$info['extension'];
 		$name	=	wp_basename( $file, ".$ext" );
 
-		if ( ! is_null( $dest_path ) and $_dest_path = realpath( $dest_path ) )
+		if ( ! is_null( $dest_path ) and $_dest_path = realpath( $dest_path ) ) {
 			$dir = $_dest_path;
+		}	
 		$destfilename = "{$dir}/{$name}-{$suffix}.{$ext}";
 
 		if ( IMAGETYPE_GIF == $orig_type ) {
-			if ( !imagegif( $newimage, $destfilename ) )
+			if ( !imagegif( $newimage, $destfilename ) ) {
 				return new WP_Error( 'resize_path_invalid', __( 'Invalid path', 'gallery-plugin' ) );
+			}
 		} elseif ( IMAGETYPE_PNG == $orig_type ) {
-			if ( !imagepng( $newimage, $destfilename ) )
+			if ( !imagepng( $newimage, $destfilename ) ) {
 				return new WP_Error( 'resize_path_invalid', __( 'Invalid path', 'gallery-plugin' ) );
+			}
 		} else {
 			/* All other formats are converted to jpg */
 			$destfilename = "{$dir}/{$name}-{$suffix}.jpg";
-			if ( !imagejpeg( $newimage, $destfilename, apply_filters( 'jpeg_quality', $jpeg_quality, 'image_resize' ) ) )
+			if ( !imagejpeg( $newimage, $destfilename, apply_filters( 'jpeg_quality', $jpeg_quality, 'image_resize' ) ) ) {
 				return new WP_Error( 'resize_path_invalid', __( 'Invalid path', 'gallery-plugin' ) );
+			}
 		}
 		imagedestroy( $newimage );
 
@@ -2409,11 +2404,13 @@ if ( ! function_exists ( 'gllr_image_resize' ) ) {
 
 if ( ! function_exists ( 'gllr_image_resize_dimensions' ) ) {
 	function gllr_image_resize_dimensions( $orig_w, $orig_h, $dest_w, $dest_h, $crop = false ) {
-		if ( 0 >= $orig_w || 0 >= $orig_h )
+		if ( 0 >= $orig_w || 0 >= $orig_h ) {
 			return false;
+		}
 		/* At least one of dest_w or dest_h must be specific */
-		if ( 0 >= $dest_w && 0 >= $dest_h )
+		if ( 0 >= $dest_w && 0 >= $dest_h ) {
 			return false;
+		}
 
 		if ( $crop ) {
 			/* Crop the largest possible portion of the original image that we can size to $dest_w x $dest_h */
@@ -2421,11 +2418,13 @@ if ( ! function_exists ( 'gllr_image_resize_dimensions' ) ) {
 			$new_w = min( $dest_w, $orig_w );
 			$new_h = min( $dest_h, $orig_h );
 
-			if ( ! $new_w )
+			if ( ! $new_w ) {
 				$new_w = intval( $new_h * $aspect_ratio );
+			}
 
-			if ( ! $new_h )
+			if ( ! $new_h ) {
 				$new_h = intval( $new_w / $aspect_ratio );
+			}
 
 			$size_ratio = max( $new_w / $orig_w, $new_h / $orig_h );
 
@@ -2443,8 +2442,9 @@ if ( ! function_exists ( 'gllr_image_resize_dimensions' ) ) {
 			list( $new_w, $new_h ) = wp_constrain_dimensions( $orig_w, $orig_h, $dest_w, $dest_h );
 		}
 		/* If the resulting image would be the same size or larger we don't want to resize it */
-		if ( $new_w >= $orig_w && $new_h >= $orig_h )
+		if ( $new_w >= $orig_w && $new_h >= $orig_h ) {
 			return false;
+		}
 		/* The return array matches the parameters to imagecopyresampled() */
 		/* Int dst_x, int dst_y, int src_x, int src_y, int dst_w, int dst_h, int src_w, int src_h */
 		return array( 0, 0, ( int ) $s_x, ( int ) $s_y, ( int ) $new_w, ( int ) $new_h, ( int ) $crop_w, ( int ) $crop_h );
@@ -2474,10 +2474,12 @@ if ( ! function_exists( 'gllr_media_custom_box' ) ) {
 }
 
 if ( ! class_exists( 'Gllr_Media_Table' ) ) {
-	if ( ! class_exists( 'WP_List_Table' ) )
+	if ( ! class_exists( 'WP_List_Table' ) ) {
 		require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
-	if ( ! class_exists( 'WP_Media_List_Table' ) )
+	}
+	if ( ! class_exists( 'WP_Media_List_Table' ) ) {
 		require_once( ABSPATH . 'wp-admin/includes/class-wp-media-list-table.php' );
+	}
 
 	class Gllr_Media_Table extends WP_Media_List_Table {
 		public function __construct( $args = array() ) {
@@ -2502,10 +2504,11 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			$current_page = $this->get_pagenum();
 			$this->_column_headers = array( $columns, $hidden, $sortable );
 			$images_id = get_post_meta( $original_post->ID, '_gallery_images', true );
-			if ( empty( $images_id  ) )
+			if ( empty( $images_id  ) ) {
 				$total_items = 0;
-			else
+			} else {
 				$total_items = $wpdb->get_var( "SELECT COUNT(*) FROM " . $wpdb->posts . " WHERE ID IN( " . $images_id . " )" );
+			}
 
 	 		$per_page = -1;
 
@@ -2523,8 +2526,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 				'per_page' 		=> $per_page
 			) );
 
-			if ( $wp_version < '4.2' )
+			if ( $wp_version < '4.2' ) {
 				$this->is_trash = isset( $_REQUEST['attachment-filter'] ) && 'trash' == $_REQUEST['attachment-filter'];
+			}
 		}
 
 		function extra_tablenav( $which ) {
@@ -2552,15 +2556,17 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			global $wpdb, $post, $original_post;
 
 			$images_id = get_post_meta( $original_post->ID, '_gallery_images', true );
-			if ( empty( $images_id  ) )
+			if ( empty( $images_id  ) ) {
 				$total_items = 0;
-			else
+			} else {
 				$total_items = $wpdb->get_var( "SELECT COUNT(*) FROM " . $wpdb->posts . " WHERE ID IN( " . $images_id . " )" );
+			}
 
-			if ( $total_items > 0 )
+			if ( $total_items > 0 ) {
 				return true;
-			else
+			} else {
 				return false;
+			}
 		}
 
 		function no_items() {
@@ -2589,7 +2595,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 		 * @access protected
 		 *
 		 * @param string $which The location of the bulk actions: 'top' or 'bottom'.
-		 *                      This is designated as optional for backwards-compatibility.
+		 * This is designated as optional for backwards-compatibility.
 		 */
 		function bulk_actions( $which = '' ) {
 			if ( is_null( $this->_actions ) ) {
@@ -2613,8 +2619,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 				$two = '2';
 			}
 
-			if ( empty( $this->_actions ) )
+			if ( empty( $this->_actions ) ) {
 				return;
+			}
 
 			echo "<label for='bulk-action-selector-" . esc_attr( $which ) . "' class='screen-reader-text'>" . __( 'Select bulk action', 'gallery-plugin' ) . "</label>";
 			echo "<select name='action-" . esc_attr( $which ) . "' id='bulk-action-selector-" . esc_attr( $which ) . "'>\n";
@@ -2656,7 +2663,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 
 		function get_columns() {
 			$lists_columns = array(
-				'cb'            		=> '<input type="checkbox" />',
+				'cb'					=> '<input type="checkbox" />',
 				'title'					=> __( 'File', 'gallery-plugin' ),
 				'dimensions'			=> __( 'Dimensions', 'gallery-plugin' ),
 				'gllr_image_text'		=> __( 'Title', 'gallery-plugin' ) . bws_add_help_box( '<img src="' . plugins_url( 'images/image-title-example.png', __FILE__ ) . '" />' ),
@@ -2722,8 +2729,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 		function single_row( $gllr_mode ) {
 			global $post, $original_post, $gllr_options, $gllr_plugin_info, $wp_version;
 
-			if ( empty( $gllr_options ) )
+			if ( empty( $gllr_options ) ) {
 				gllr_settings();
+			}
 
 			$attachment_metadata = wp_get_attachment_metadata( $post->ID );
 			if ( 'grid' == $gllr_mode ) {
@@ -2830,11 +2838,13 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 					foreach ( $columns as $column_name => $column_display_name ) {
 
 						$classes = "$column_name column-$column_name";
-						if ( in_array( $column_name, $hidden ) )
+						if ( in_array( $column_name, $hidden ) ) {
 							$classes .= ' hidden';
+						}
 
-						if ( 'title' == $column_name )
+						if ( 'title' == $column_name ) {
 							$classes .= ' column-primary has-row-actions';
+						}
 
 						$attributes = "class='$classes'";
 						switch ( $column_name ) {
@@ -2903,26 +2913,31 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			$actions = array();
 
 			if ( $this->detached ) {
-				if ( current_user_can( 'edit_post', $post->ID ) )
+				if ( current_user_can( 'edit_post', $post->ID ) ) { 
 					$actions['edit'] = '<a href="' . get_edit_post_link( $post->ID ) . '">' . __( 'Edit', 'gallery-plugin' ) . '</a>';
-				if ( current_user_can( 'delete_post', $post->ID ) )
+				}
+				if ( current_user_can( 'delete_post', $post->ID ) ) {
 					if ( EMPTY_TRASH_DAYS && MEDIA_TRASH ) {
 						$actions['trash'] = "<a class='submitdelete' href='" . wp_nonce_url( "post.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ) . "'>" . __( 'Trash', 'gallery-plugin' ) . "</a>";
 					} else {
 						$delete_ays = !MEDIA_TRASH ? " onclick='return showNotice.warn();'" : '';
 						$actions['delete'] = "<a class='submitdelete'$delete_ays href='" . wp_nonce_url( "post.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ) . "'>" . __( 'Delete Permanently', 'gallery-plugin' ) . "</a>";
 					}
+				}
 				$actions['view'] = '<a href="' . get_permalink( $post->ID ) . '" title="' . esc_attr( sprintf( __( 'View &#8220;%s&#8221;', 'gallery-plugin' ), $att_title ) ) . '" rel="permalink">' . __( 'View', 'gallery-plugin' ) . '</a>';
-				if ( current_user_can( 'edit_post', $post->ID ) )
+				if ( current_user_can( 'edit_post', $post->ID ) ) {
 					$actions['attach'] = '<a href="#the-list" onclick="findPosts.open( \'media[]\',\''.$post->ID.'\' );return false;" class="hide-if-no-js">' . __( 'Attach', 'gallery-plugin' ) . '</a>';
+				}
 			} else {
-				if ( current_user_can( 'edit_post', $post->ID ) && !$this->is_trash )
+				if ( current_user_can( 'edit_post', $post->ID ) && !$this->is_trash ) {
 					$actions['edit'] = '<a href="' . get_edit_post_link( $post->ID ) . '">' . __( 'Edit', 'gallery-plugin' ) . '</a>';
+				}
 				if ( current_user_can( 'delete_post', $post->ID ) ) {
-					if ( $this->is_trash )
+					if ( $this->is_trash ) {
 						$actions['untrash'] = "<a class='submitdelete' href='" . wp_nonce_url( "post.php?action=untrash&amp;post=$post->ID", 'untrash-post_' . $post->ID ) . "'>" . __( 'Restore', 'gallery-plugin' ) . "</a>";
-					elseif ( EMPTY_TRASH_DAYS && MEDIA_TRASH )
+					} elseif ( EMPTY_TRASH_DAYS && MEDIA_TRASH ) {
 						$actions['trash'] = "<a class='submitdelete' href='" . wp_nonce_url( "post.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ) . "'>" . __( 'Trash', 'gallery-plugin' ) . "</a>";
+					}
 					if ( $this->is_trash || !EMPTY_TRASH_DAYS || !MEDIA_TRASH ) {
 						$delete_ays = ( !$this->is_trash && !MEDIA_TRASH ) ? " onclick='return showNotice.warn();'" : '';
 						$actions['delete'] = "<a class='submitdelete'$delete_ays href='" . wp_nonce_url( "post.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ) . "'>" . __( 'Delete Permanently', 'gallery-plugin' ) . "</a>";
@@ -3230,8 +3245,8 @@ if ( ! function_exists( 'gllr_shortcode_button_content' ) ) {
 						if ( ! isset( $gllr_first ) ) $gllr_first = get_the_ID();
 						$title = get_the_title( $post->ID );
 						if ( empty( $title ) )
-							$title = '(' . __( 'no title', 'gallery-plugin' ) . ')'; ?>
-						<option value="<?php the_ID(); ?>"><?php echo $title; ?> (<?php echo get_the_date( 'Y-m-d' ); ?>)</option>
+							$title = ' ( ' . __( 'no title', 'gallery-plugin' ) . ' ) '; ?>
+						<option value="<?php the_ID(); ?>"><?php echo $title; ?> ( <?php echo get_the_date( 'Y-m-d' ); ?> )</option>
 					<?php }
 					wp_reset_postdata();
 					$post = $old_post; ?>
