@@ -200,7 +200,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						'post_type'	=> $this->default_options['post_type_name']
 					),
 					array(
-						'post_type'	=> $this->options['post_type_name']
+						'post_type'	=> 'gallery'
 					)
 				);
 				$this->options['post_type_name'] = $this->default_options['post_type_name'];
@@ -909,13 +909,15 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		 * @access public
 		 */
 		public function additional_misc_options_affected() {
-			global $wp_version;
+			global $wp_version, $wpdb;
 			if ( ! $this->all_plugins ) {
 				if ( ! function_exists( 'get_plugins' ) )
 					require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 				$this->all_plugins = get_plugins();
 			}
-			if ( $this->options['post_type_name'] != $this->default_options['post_type_name'] ) { ?>
+			$old_post_type_gallery = $wpdb->get_col( "SELECT ID FROM $wpdb->posts WHERE post_type = 'gallery'" );
+
+			if ( ! empty( $old_post_type_gallery ) ) { ?>
 				<tr valign="top">
 					<th scope="row"><?php _e( 'Gallery Post Type', 'gallery-plugin' ); ?></th>
 					<td>

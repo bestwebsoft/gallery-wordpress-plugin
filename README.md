@@ -22,8 +22,8 @@
 </ul>
 </li>
 <li>Change image for album cover and its dimensions</li>
-<li>Disable image opening from the thumbnail in a single gallery [NEW]</li>
-<li>Set default sorting order for images by: [NEW]
+<li>Disable image opening from the thumbnail in a single gallery</li>
+<li>Set default sorting order for images by:
 <ul>
 <li>Attachment ID</li>
 <li>Image Name</li>
@@ -34,7 +34,7 @@
 <li>DESC (descending order from highest to lowest values)</li>
 </ul>
 </li>
-<li>Set default gallery projects sorting order by: [NEW]
+<li>Set default gallery projects sorting order by:
 <ul>
 <li>Gallery ID</li>
 <li>Title</li>
