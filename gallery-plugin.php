@@ -6,12 +6,12 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.5.8
+Version: 4.5.9
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2018  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  © Copyright 2019  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -42,7 +42,8 @@ if ( ! function_exists( 'add_gllr_admin_menu' ) ) {
 			$submenu['edit.php?post_type=' . $gllr_options['post_type_name'] ][] = array(
 				'<span style="color:#d86463"> ' . __( 'Upgrade to Pro', 'gallery-plugin' ) . '</span>',
 				'manage_options',
-				'https://bestwebsoft.com/products/wordpress/plugins/gallery/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=' . $gllr_plugin_info["Version"] . '&wp_v=' . $wp_version );
+				'https://bestwebsoft.com/products/wordpress/plugins/gallery/?k=63a36f6bf5de0726ad6a43a165f38fe5&pn=79&v=' . $gllr_plugin_info["Version"] . '&wp_v=' . $wp_version
+            );
 		}
 
 		add_action( 'load-' . $settings, 'gllr_add_tabs' );
@@ -976,7 +977,8 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 			'post_type'				=> $gllr_options['post_type_name'],
 			'post_status'			=> 'publish',
 			'name'					=> $wp_query->query_vars['name'],
-			'posts_per_page'		=> 1
+			'posts_per_page'		=> 1,
+            'p'                     => $wp_query->query_vars['p']
 		);
 		$second_query = new WP_Query( $args );
 
@@ -2504,7 +2506,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			$current_page = $this->get_pagenum();
 			$this->_column_headers = array( $columns, $hidden, $sortable );
 			$images_id = get_post_meta( $original_post->ID, '_gallery_images', true );
-			if ( empty( $images_id  ) ) {
+			if ( empty( $images_id ) ) {
 				$total_items = 0;
 			} else {
 				$total_items = $wpdb->get_var( "SELECT COUNT(*) FROM " . $wpdb->posts . " WHERE ID IN( " . $images_id . " )" );
@@ -2556,7 +2558,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			global $wpdb, $post, $original_post;
 
 			$images_id = get_post_meta( $original_post->ID, '_gallery_images', true );
-			if ( empty( $images_id  ) ) {
+			if ( empty( $images_id ) ) {
 				$total_items = 0;
 			} else {
 				$total_items = $wpdb->get_var( "SELECT COUNT(*) FROM " . $wpdb->posts . " WHERE ID IN( " . $images_id . " )" );

@@ -206,9 +206,6 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				$this->options['post_type_name'] = $this->default_options['post_type_name'];
 			}
 
-			if ( ! empty( $need_image_update ) )
-				$this->options['need_image_update'] = __( 'Custom image size was changed. You need to update gallery images.', 'gallery-plugin' );
-
 			if ( ! empty( $this->cstmsrch_options ) ) {
 				if ( isset( $this->cstmsrch_options['output_order'] ) ) {
 					$is_enabled = isset( $_POST['gllr_add_to_search'] ) ? 1 : 0;
@@ -260,7 +257,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<?php if ( ! empty( $this->options['need_image_update'] ) ) { ?>
 				<div class="updated bws-notice inline gllr_image_update_message">
 					<p>
-						<?php echo $this->options['need_image_update']; ?>
+						<?php _e( 'Custom image size was changed. You need to update gallery images.', 'gallery-plugin' ); ?>
 						<input type="button" value="<?php _e( 'Update Images', 'gallery-plugin' ); ?>" id="gllr_ajax_update_images" name="ajax_update_images" class="button" />
 					</p>
 				</div>
@@ -853,42 +850,43 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		 *
 		 */
 		public function tab_social() { ?>
-			<h3 class="bws_tab_label"><?php _e( 'Social Sharing Buttons Settings', 'gallery-plugin' ); ?></h3>
-			<?php $this->help_phrase(); ?>
-			<hr>
-			<div class="bws_pro_version_bloc">
-				<div class="bws_pro_version_table_bloc">
-					<div class="bws_table_bg"></div>
-					<table class="form-table bws_pro_version">
-						<tr valign="top">
-							<th scope="row"><?php _e( 'Social Buttons', 'gallery-plugin' ); ?></th>
-							<td>
-								<input type="checkbox" disabled="disabled" checked="checked" /> <span class="bws_info"><?php _e( 'Enable social sharing buttons in the lightbox.', 'gallery-plugin' ); ?></span>
-							</td>
-						</tr>
-						<tr valign="top">
-							<th scope="row"><?php _e( 'Social Networks', 'gallery-plugin' ); ?></th>
-							<td>
-								<fieldset>
-									<label><input disabled="disabled" type="checkbox" /> Facebook</label><br>
-									<label><input disabled="disabled" type="checkbox" /> Twitter</label><br>
-									<label><input disabled="disabled" type="checkbox" /> Pinterest</label><br>
-									<label><input disabled="disabled" type="checkbox" /> Google +1</label>
-								</fieldset>
-							</td>
-						</tr>
-						<tr valign="top">
-							<th scope="row"><?php _e( 'Counter', 'gallery-plugin' ); ?></th>
-							<td>
-								<input disabled type="checkbox" value="1" />
-								<span class="bws_info"><?php _e( 'Enable to show likes counter for each social button (not available for Google +1).', 'gallery-plugin' ); ?></span>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<?php $this->bws_pro_block_links(); ?>
-			</div>
-		<?php }
+            <h3 class="bws_tab_label"><?php _e( 'Social Sharing Buttons Settings', 'gallery-plugin' ); ?></h3>
+            <?php $this->help_phrase(); ?>
+            <hr>
+            <div class="bws_pro_version_bloc">
+                <div class="bws_pro_version_table_bloc">
+                    <button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
+                    <div class="bws_table_bg"></div>
+                    <table class="form-table bws_pro_version">
+                        <tr valign="top">
+                            <th scope="row"><?php _e( 'Social Buttons', 'gallery-plugin' ); ?></th>
+                            <td>
+                                <input type="checkbox" disabled="disabled" checked="checked" /> <span class="bws_info"><?php _e( 'Enable social sharing buttons in the lightbox.', 'gallery-plugin' ); ?></span>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row"><?php _e( 'Social Networks', 'gallery-plugin' ); ?></th>
+                            <td>
+                                <fieldset>
+                                    <label><input disabled="disabled" type="checkbox" /> Facebook</label><br>
+                                    <label><input disabled="disabled" type="checkbox" /> Twitter</label><br>
+                                    <label><input disabled="disabled" type="checkbox" /> Pinterest</label><br>
+                                    <label><input disabled="disabled" type="checkbox" /> Google +1</label>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row"><?php _e( 'Counter', 'gallery-plugin' ); ?></th>
+                            <td>
+                                <input disabled type="checkbox" value="1" />
+                                <span class="bws_info"><?php _e( 'Enable to show likes counter for each social button (not available for Google +1).', 'gallery-plugin' ); ?></span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <?php $this->bws_pro_block_links(); ?>
+            </div>
+        <?php }
 
 		/**
 		 *
@@ -910,11 +908,28 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		 */
 		public function additional_misc_options_affected() {
 			global $wp_version, $wpdb;
+
+			//rename post_type via $_GET if checkbox doesn't shows
+			if ( isset( $_GET['bws_rename_post_type_gallery'] ) ) {
+				global $wpdb;
+				$wpdb->update(
+					$wpdb->prefix . 'posts',
+					array(
+						'post_type'  => 'bws-gallery'
+					),
+					array(
+						'post_type'  => 'gallery'
+					)
+				);
+				gllr_plugin_upgrade(false);
+			}
+
 			if ( ! $this->all_plugins ) {
 				if ( ! function_exists( 'get_plugins' ) )
 					require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 				$this->all_plugins = get_plugins();
 			}
+
 			$old_post_type_gallery = $wpdb->get_col( "SELECT ID FROM $wpdb->posts WHERE post_type = 'gallery'" );
 
 			if ( ! empty( $old_post_type_gallery ) ) { ?>
