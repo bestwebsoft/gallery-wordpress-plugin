@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-15 15:14+0200\n"
-"PO-Revision-Date: 2017-12-15 15:14+0200\n"
+"POT-Creation-Date: 2019-03-26 12:52+0200\n"
+"PO-Revision-Date: 2019-03-26 12:53+0200\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: chameleonjohn.com <jordan.silaen@chameleonjohn.com>\n"
 "Language: id_ID\n"
@@ -13,121 +13,121 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gallery-plugin.php:37 includes/class-gllr-settings.php:310
+#: gallery-plugin.php:37 includes/class-gllr-settings.php:314
 msgid "Gallery Settings"
 msgstr "Pengaturan Gallery"
 
-#: gallery-plugin.php:37 includes/class-gllr-settings.php:321
+#: gallery-plugin.php:37 includes/class-gllr-settings.php:353
 msgid "Global Settings"
 msgstr "Pengaturan global"
 
-#: gallery-plugin.php:43 gallery-plugin.php:2771
+#: gallery-plugin.php:43 gallery-plugin.php:2934
 msgid "Upgrade to Pro"
 msgstr "Upgrade ke yang lebih baik"
 
-#: gallery-plugin.php:237
+#: gallery-plugin.php:340
 msgid "Return to all albums"
 msgstr "Kembali ke semua album"
 
-#: gallery-plugin.php:249
+#: gallery-plugin.php:354
 msgid "See images &raquo;"
 msgstr "Lihat gambar & raquo;"
 
-#: gallery-plugin.php:336 gallery-plugin.php:345
+#: gallery-plugin.php:442 gallery-plugin.php:451
 msgid "Galleries"
 msgstr "Galeri"
 
-#: gallery-plugin.php:337 gallery-plugin.php:3187
+#: gallery-plugin.php:443 gallery-plugin.php:3360
 msgid "Gallery"
 msgstr "Galeri"
 
-#: gallery-plugin.php:338
+#: gallery-plugin.php:444
 msgid "Add New Gallery"
 msgstr "Tambahkan Galeri Baru"
 
-#: gallery-plugin.php:339
+#: gallery-plugin.php:445
 msgid "Edit Gallery"
 msgstr "Mengedit Galeri"
 
-#: gallery-plugin.php:340
+#: gallery-plugin.php:446
 msgid "New Gallery"
 msgstr "Galeri baru"
 
-#: gallery-plugin.php:341
+#: gallery-plugin.php:447
 msgid "View Gallery"
 msgstr "Lihat Galeri"
 
-#: gallery-plugin.php:342 includes/class-gllr-settings.php:941
+#: gallery-plugin.php:448 includes/class-gllr-settings.php:1001
 msgid "Search Galleries"
 msgstr "Cari Galeri"
 
-#: gallery-plugin.php:343
+#: gallery-plugin.php:449
 msgid "No Gallery found"
 msgstr "Tidak ada Galeri ditemukan"
 
-#: gallery-plugin.php:365 gallery-plugin.php:1600 gallery-plugin.php:2917
-#: gallery-plugin.php:2925 gallery-plugin.php:2963 gallery-plugin.php:2986
-#: gallery-plugin.php:3171
+#: gallery-plugin.php:471 gallery-plugin.php:1721 gallery-plugin.php:3087
+#: gallery-plugin.php:3095 gallery-plugin.php:3133 gallery-plugin.php:3156
+#: gallery-plugin.php:3332
 msgid "Gallery Categories"
 msgstr "Galeri Kategori"
 
-#: gallery-plugin.php:366 gallery-plugin.php:805
+#: gallery-plugin.php:472 gallery-plugin.php:917
 msgid "Gallery Category"
 msgstr "Galeri Kategori"
 
-#: gallery-plugin.php:367
+#: gallery-plugin.php:473
 msgid "Add Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:368
+#: gallery-plugin.php:474
 msgid "Add New Gallery Category"
 msgstr "Tambahkan Baru Galeri Kategori"
 
-#: gallery-plugin.php:369 gallery-plugin.php:370
+#: gallery-plugin.php:475 gallery-plugin.php:476
 msgid "Edit Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:371
+#: gallery-plugin.php:477
 #, fuzzy
 msgid "New Gallery Category"
 msgstr "Tambahkan Baru Galeri Kategori"
 
-#: gallery-plugin.php:372 gallery-plugin.php:373
+#: gallery-plugin.php:478 gallery-plugin.php:479
 msgid "View Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:374
+#: gallery-plugin.php:480
 msgid "Find Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:375
+#: gallery-plugin.php:481
 msgid "No Gallery Categories found"
 msgstr ""
 
-#: gallery-plugin.php:376
+#: gallery-plugin.php:482
 msgid "No Gallery Categories found in Trash"
 msgstr ""
 
-#: gallery-plugin.php:377
+#: gallery-plugin.php:483
 msgid "Parent Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:378
+#: gallery-plugin.php:484
 msgid "Gallery Categories list navigation"
 msgstr ""
 
-#: gallery-plugin.php:379
+#: gallery-plugin.php:485
 msgid "Gallery Categories list"
 msgstr ""
 
-#: gallery-plugin.php:455
+#: gallery-plugin.php:533
 msgid "Gallery Shortcode"
 msgstr "galeri pendek"
 
-#: gallery-plugin.php:464
+#: gallery-plugin.php:542
 msgid ""
 "Add a single gallery with images to your posts, pages, custom post types or "
 "widgets by using the following shortcode:"
@@ -135,7 +135,7 @@ msgstr ""
 "Menambahkan sebuah galeri tunggal dengan gambar untuk posting, halaman, "
 "jenis posting kustom atau widget dengan menggunakan shortcode berikut:"
 
-#: gallery-plugin.php:468
+#: gallery-plugin.php:546
 msgid ""
 "Add a gallery cover including featured image, description, and a link to "
 "your single gallery using the following shortcode:"
@@ -143,90 +143,135 @@ msgstr ""
 "Menambahkan penutup galeri termasuk gambar fitur, deskripsi, dan link ke "
 "galeri tunggal Anda menggunakan shortcode berikut:"
 
-#: gallery-plugin.php:581
+#: gallery-plugin.php:659
 msgid "Note"
 msgstr ""
 
-#: gallery-plugin.php:581
+#: gallery-plugin.php:659
 #, php-format
 msgid ""
 "When deleting a category, the galleries that belong to this category will "
 "not be deleted. These galleries will be moved to the category %s."
 msgstr ""
 
-#: gallery-plugin.php:594 gallery-plugin.php:1599
-msgid "Shortcode"
-msgstr "Kode pendek"
+#: gallery-plugin.php:670
+#, fuzzy
+#| msgid "Sort galleries by"
+msgid "Sort Galleries in Category by"
+msgstr "Сортувати галереї за"
 
-#: gallery-plugin.php:640
-msgid "All Gallery Categories"
-msgstr ""
+#: gallery-plugin.php:673 gallery-plugin.php:3346
+#: includes/class-gllr-settings.php:711
+msgid "Gallery ID"
+msgstr "galeri ID"
 
-#: gallery-plugin.php:717
-msgid "You can't delete default gallery category."
-msgstr ""
-
-#: gallery-plugin.php:1089 gallery-plugin.php:1196 gallery-plugin.php:2108
-msgid "Sorry, nothing found."
-msgstr "Maaf, tidak ditemukan."
-
-#: gallery-plugin.php:1596
-msgid "Featured Image"
-msgstr "Gambar Pilihan"
-
-#: gallery-plugin.php:1597 gallery-plugin.php:2628 gallery-plugin.php:2732
-#: gallery-plugin.php:2843 includes/class-gllr-settings.php:679
+#: gallery-plugin.php:674 gallery-plugin.php:1718 gallery-plugin.php:2788
+#: gallery-plugin.php:2895 gallery-plugin.php:3008 gallery-plugin.php:3347
+#: includes/class-gllr-settings.php:712
 msgid "Title"
 msgstr "Judul"
 
-#: gallery-plugin.php:1598 includes/class-gllr-settings.php:41
-msgid "Images"
-msgstr "gambar"
-
-#: gallery-plugin.php:1601 includes/class-gllr-settings.php:684
-msgid "Author"
-msgstr "Penulis"
-
-#: gallery-plugin.php:1602 includes/class-gllr-settings.php:513
-#: includes/class-gllr-settings.php:680
+#: gallery-plugin.php:675 gallery-plugin.php:1723 gallery-plugin.php:3348
+#: includes/class-gllr-settings.php:546 includes/class-gllr-settings.php:713
 msgid "Date"
 msgstr "Tanggal"
 
-#: gallery-plugin.php:1688
+#: gallery-plugin.php:676 gallery-plugin.php:3349
+#: includes/class-gllr-settings.php:714
+msgid "Last modified date"
+msgstr "tanggal diubah terakhir"
+
+#: gallery-plugin.php:677 gallery-plugin.php:3350
+#: includes/class-gllr-settings.php:715
+msgid "Comment count"
+msgstr "jumlah komentar"
+
+#: gallery-plugin.php:678 gallery-plugin.php:3351
+#: includes/class-gllr-settings.php:716
+msgid "\"Order\" field on the gallery edit page"
+msgstr ""
+
+#: gallery-plugin.php:679 gallery-plugin.php:1722 gallery-plugin.php:3352
+#: includes/class-gllr-settings.php:717
+msgid "Author"
+msgstr "Penulis"
+
+#: gallery-plugin.php:680 gallery-plugin.php:3353
+#: includes/class-gllr-settings.php:547 includes/class-gllr-settings.php:718
+msgid "Random"
+msgstr "Acak"
+
+#: gallery-plugin.php:681 gallery-plugin.php:3354
+#, fuzzy
+#| msgid "Settings"
+msgid "Plugin Settings"
+msgstr "pengaturan"
+
+#: gallery-plugin.php:683 gallery-plugin.php:3356
+#, fuzzy
+#| msgid "Select galleries sorting order in your galleries page."
+msgid "Select galleries sorting order in your category."
+msgstr "Pilih galeri menyortir urutan halaman galeri Anda."
+
+#: gallery-plugin.php:703 gallery-plugin.php:1720
+msgid "Shortcode"
+msgstr "Kode pendek"
+
+#: gallery-plugin.php:749
+msgid "All Gallery Categories"
+msgstr ""
+
+#: gallery-plugin.php:827
+msgid "You can't delete default gallery category."
+msgstr ""
+
+#: gallery-plugin.php:1209 gallery-plugin.php:1317 gallery-plugin.php:2243
+msgid "Sorry, nothing found."
+msgstr "Maaf, tidak ditemukan."
+
+#: gallery-plugin.php:1717
+msgid "Featured Image"
+msgstr "Gambar Pilihan"
+
+#: gallery-plugin.php:1719 includes/class-gllr-settings.php:41
+msgid "Images"
+msgstr "gambar"
+
+#: gallery-plugin.php:1810
 #, php-format
 msgid "%s Settings"
 msgstr ""
 
-#: gallery-plugin.php:1715 gallery-plugin.php:1733
+#: gallery-plugin.php:1837 gallery-plugin.php:1855
 #: includes/class-gllr-settings.php:30 includes/class-gllr-settings.php:42
 msgid "Settings"
 msgstr "pengaturan"
 
-#: gallery-plugin.php:1716
+#: gallery-plugin.php:1838
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:1717
+#: gallery-plugin.php:1839
 msgid "Support"
 msgstr "Mendukung"
 
-#: gallery-plugin.php:1756
+#: gallery-plugin.php:1878
 msgid "Updating images..."
 msgstr "Memperbarui gambar ..."
 
-#: gallery-plugin.php:1757
+#: gallery-plugin.php:1879
 msgid "No images found."
 msgstr "Tidak ada gambar yang ditemukan."
 
-#: gallery-plugin.php:1758
+#: gallery-plugin.php:1880
 msgid "All images were updated."
 msgstr "Semua gambar yang diperbarui."
 
-#: gallery-plugin.php:1759
+#: gallery-plugin.php:1881
 msgid "Error."
 msgstr "Kesalahan."
 
-#: gallery-plugin.php:1771
+#: gallery-plugin.php:1893
 msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -234,7 +279,7 @@ msgstr ""
 "Anda akan menghapus item dari galeri ini. \\ N 'Batal' untuk menghentikan, "
 "'OK' untuk menghapus."
 
-#: gallery-plugin.php:1772
+#: gallery-plugin.php:1894
 msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -242,7 +287,7 @@ msgstr ""
 "Anda akan menghapus gambar ini dari galeri. \\ N 'Batal' untuk menghentikan, "
 "'OK' untuk menghapus."
 
-#: gallery-plugin.php:1773
+#: gallery-plugin.php:1895
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
@@ -250,19 +295,23 @@ msgstr ""
 "Beralih ke mode lain, semua data yang belum disimpan akan hilang. Menyimpan "
 "data sebelum beralih?"
 
-#: gallery-plugin.php:1774
+#: gallery-plugin.php:1896
 msgid "Insert Media"
 msgstr "Insert Media"
 
-#: gallery-plugin.php:1775
+#: gallery-plugin.php:1897
 msgid "Insert"
 msgstr "Memasukkan"
 
-#: gallery-plugin.php:2300 gallery-plugin.php:2326
+#: gallery-plugin.php:1898
+msgid "Gallery has been successfully added!"
+msgstr ""
+
+#: gallery-plugin.php:2435 gallery-plugin.php:2468
 msgid "Image size not defined"
 msgstr "ukuran gambar tidak didefinisikan"
 
-#: gallery-plugin.php:2315
+#: gallery-plugin.php:2455
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
@@ -270,75 +319,75 @@ msgstr ""
 "update Plugin hanya PNG, JPEG, GIF, WPMP atau XBM filetype. Untuk lainnya, "
 "silakan ulang gambar secara manual."
 
-#: gallery-plugin.php:2355 gallery-plugin.php:2358 gallery-plugin.php:2363
+#: gallery-plugin.php:2501 gallery-plugin.php:2505 gallery-plugin.php:2511
 msgid "Invalid path"
 msgstr "Jalan yang salah"
 
-#: gallery-plugin.php:2452
+#: gallery-plugin.php:2607
 msgid "List View"
 msgstr "Daftar View"
 
-#: gallery-plugin.php:2453
+#: gallery-plugin.php:2608
 msgid "Grid View"
 msgstr "Tampilan bergaris"
 
-#: gallery-plugin.php:2508
+#: gallery-plugin.php:2665
 msgid "Filter"
 msgstr "Menyaring"
 
-#: gallery-plugin.php:2512
+#: gallery-plugin.php:2669
 msgid "Empty Trash"
 msgstr "Sampah kosong"
 
-#: gallery-plugin.php:2533
+#: gallery-plugin.php:2692
 msgid "No images found"
 msgstr "Tidak ada gambar yang ditemukan"
 
-#: gallery-plugin.php:2585
+#: gallery-plugin.php:2745
 msgid "Select bulk action"
 msgstr "tindakan massal pilih"
 
-#: gallery-plugin.php:2587
+#: gallery-plugin.php:2747
 msgid "Bulk Actions"
 msgstr "Aksi besar"
 
-#: gallery-plugin.php:2597
+#: gallery-plugin.php:2757
 msgid "Apply"
 msgstr "Menerapkan"
 
-#: gallery-plugin.php:2604
+#: gallery-plugin.php:2764
 msgid "Delete from Gallery"
 msgstr "Hapus dari Galeri"
 
-#: gallery-plugin.php:2613
+#: gallery-plugin.php:2773
 msgid "Bulk Select"
 msgstr "massal Pilih"
 
-#: gallery-plugin.php:2614
+#: gallery-plugin.php:2774
 msgid "Cancel Selection"
 msgstr "Batal Seleksi"
 
-#: gallery-plugin.php:2615
+#: gallery-plugin.php:2775
 msgid "Delete Selected"
 msgstr "Hapus yang Dipilih"
 
-#: gallery-plugin.php:2626
+#: gallery-plugin.php:2786
 msgid "File"
 msgstr "Mengajukan"
 
-#: gallery-plugin.php:2627 gallery-plugin.php:2727 gallery-plugin.php:2838
+#: gallery-plugin.php:2787 gallery-plugin.php:2890 gallery-plugin.php:3003
 msgid "Dimensions"
 msgstr "Ukuran"
 
-#: gallery-plugin.php:2629 gallery-plugin.php:2738 gallery-plugin.php:2848
+#: gallery-plugin.php:2789 gallery-plugin.php:2901 gallery-plugin.php:3013
 msgid "Alt Text"
 msgstr "Alt Teks"
 
-#: gallery-plugin.php:2630 gallery-plugin.php:2742 gallery-plugin.php:2853
+#: gallery-plugin.php:2790 gallery-plugin.php:2905 gallery-plugin.php:3018
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:2630 gallery-plugin.php:2744
+#: gallery-plugin.php:2790 gallery-plugin.php:2907
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
@@ -346,146 +395,142 @@ msgstr ""
 "Masukkan URL kustom Anda untuk menghubungkan gambar ini ke halaman lain atau "
 "file. Biarkan kosong untuk membuka gambar ukuran penuh."
 
-#: gallery-plugin.php:2709
+#: gallery-plugin.php:2872
 msgid "Remove Image from Gallery"
 msgstr "Hapus Gambar dari Galeri"
 
-#: gallery-plugin.php:2712
+#: gallery-plugin.php:2875
 msgid "Edit Image Info"
 msgstr "Info mengedit Gambar"
 
-#: gallery-plugin.php:2713
+#: gallery-plugin.php:2876
 msgid "Deselect"
 msgstr "hapus"
 
-#: gallery-plugin.php:2725
+#: gallery-plugin.php:2888
 msgid "File name"
 msgstr "Nama file"
 
-#: gallery-plugin.php:2726
+#: gallery-plugin.php:2889
 msgid "File type"
 msgstr "jenis file"
 
-#: gallery-plugin.php:2751
+#: gallery-plugin.php:2914
 msgid "Description"
 msgstr "Deskripsi"
 
-#: gallery-plugin.php:2757
+#: gallery-plugin.php:2920
 msgid "Lightbox Button URL"
 msgstr "URL Tombol Lightbox"
 
-#: gallery-plugin.php:2764
+#: gallery-plugin.php:2927
 msgid "New Tab"
 msgstr "Tab baru"
 
-#: gallery-plugin.php:2766
+#: gallery-plugin.php:2929
 msgid "Enable to open URLs above in a new tab."
 msgstr "Memungkinkan untuk membuka URL di atas di tab baru."
 
-#: gallery-plugin.php:2771
+#: gallery-plugin.php:2934
 msgid "Go Pro"
 msgstr "Go Pro"
 
-#: gallery-plugin.php:2777
+#: gallery-plugin.php:2940
 msgid "Edit more details"
 msgstr "Mengedit rincian lebih lanjut"
 
-#: gallery-plugin.php:2779
+#: gallery-plugin.php:2942
 msgid "Remove from Gallery"
 msgstr "Hapus dari Galeri"
 
-#: gallery-plugin.php:2813
+#: gallery-plugin.php:2978
 #, php-format
 msgid "Select %s"
 msgstr "Pilih %s"
 
-#: gallery-plugin.php:2826
+#: gallery-plugin.php:2991
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Mengedit & # 8220; %s & # 8221;"
 
-#: gallery-plugin.php:2834
+#: gallery-plugin.php:2999
 msgid "Edit Attachment Info"
 msgstr "Info mengedit Lampiran"
 
-#: gallery-plugin.php:2871 gallery-plugin.php:2884
+#: gallery-plugin.php:3036 gallery-plugin.php:3052
 msgid "Edit"
 msgstr "mengedit"
 
-#: gallery-plugin.php:2874 gallery-plugin.php:2889
+#: gallery-plugin.php:3040 gallery-plugin.php:3058
 msgid "Trash"
 msgstr "Sampah"
 
-#: gallery-plugin.php:2877 gallery-plugin.php:2892
+#: gallery-plugin.php:3043 gallery-plugin.php:3062
 msgid "Delete Permanently"
 msgstr "Hapus secara permanen"
 
-#: gallery-plugin.php:2879 gallery-plugin.php:2898
+#: gallery-plugin.php:3046 gallery-plugin.php:3068
 #, php-format
 msgid "View &#8220;%s&#8221;"
 msgstr "Lihat & # 8220; %s & # 8221;"
 
-#: gallery-plugin.php:2879 gallery-plugin.php:2898 gallery-plugin.php:2981
+#: gallery-plugin.php:3046 gallery-plugin.php:3068 gallery-plugin.php:3151
 msgid "View"
 msgstr "Melihat"
 
-#: gallery-plugin.php:2881
+#: gallery-plugin.php:3048
 msgid "Attach"
 msgstr "Melampirkan"
 
-#: gallery-plugin.php:2887
+#: gallery-plugin.php:3056
 msgid "Restore"
 msgstr "Mengembalikan"
 
-#: gallery-plugin.php:2916
+#: gallery-plugin.php:3086
 msgid "A list or dropdown of Gallery categories."
 msgstr ""
 
-#: gallery-plugin.php:2961
+#: gallery-plugin.php:3131
 msgid "Select Gallery Category"
 msgstr ""
 
-#: gallery-plugin.php:3019
+#: gallery-plugin.php:3189
 #, fuzzy
 msgid "Title:"
 msgstr "Judul"
 
-#: gallery-plugin.php:3022
+#: gallery-plugin.php:3192
 msgid "Display as dropdown"
 msgstr ""
 
-#: gallery-plugin.php:3024
+#: gallery-plugin.php:3194
 msgid "Show gallery counts"
 msgstr ""
 
-#: gallery-plugin.php:3026
+#: gallery-plugin.php:3196
 msgid "Show hierarchy"
 msgstr ""
 
-#: gallery-plugin.php:3142
+#: gallery-plugin.php:3312
 msgid "Warning"
 msgstr "PERINGATAN"
 
-#: gallery-plugin.php:3142
+#: gallery-plugin.php:3312
 msgid "You can add only images to the gallery"
 msgstr "Anda dapat menambahkan hanya gambar ke galeri"
 
-#: gallery-plugin.php:3173
-msgid "or"
-msgstr "atau"
-
-#: gallery-plugin.php:3181
+#: gallery-plugin.php:3367
 msgid "no title"
 msgstr "tanpa judul"
 
-#: gallery-plugin.php:3192
+#: gallery-plugin.php:3377
 msgid ""
 "Display an album image with the description and the link to a single gallery "
 "page"
 msgstr ""
 "Menampilkan gambar album dengan deskripsi dan link ke halaman galeri tunggal"
 
-#: gallery-plugin.php:3196
+#: gallery-plugin.php:3381
 msgid "Sorry, no gallery found."
 msgstr "Maaf, tidak ada galeri ditemukan."
 
@@ -517,106 +562,128 @@ msgstr "Ekspor Impor"
 msgid "License Key"
 msgstr "Kunci lisensi"
 
-#: includes/class-gllr-settings.php:210
-msgid "Custom image size was changed. You need to update gallery images."
-msgstr "ukuran gambar kustom berubah. Anda perlu memperbarui gambar galeri."
-
-#: includes/class-gllr-settings.php:247
+#: includes/class-gllr-settings.php:244
 msgid "Settings saved"
 msgstr "pengaturan disimpan"
 
-#: includes/class-gllr-settings.php:259
+#: includes/class-gllr-settings.php:256
 msgid "Please, enable JavaScript in Your browser."
 msgstr "Silahkan mengaktifkan JavaScript di browser Anda."
 
-#: includes/class-gllr-settings.php:264
+#: includes/class-gllr-settings.php:260
+msgid "Custom image size was changed. You need to update gallery images."
+msgstr "ukuran gambar kustom berubah. Anda perlu memperbarui gambar galeri."
+
+#: includes/class-gllr-settings.php:261
 msgid "Update Images"
 msgstr "Gambar pembaruan"
 
-#: includes/class-gllr-settings.php:279
+#: includes/class-gllr-settings.php:276
 msgid "Gallery Images"
 msgstr "Galeri gambar"
 
-#: includes/class-gllr-settings.php:284
+#: includes/class-gllr-settings.php:281
 msgid "Images adding requires JavaScript."
 msgstr ""
 
-#: includes/class-gllr-settings.php:287
+#: includes/class-gllr-settings.php:284
 msgid "Add Media"
 msgstr "Tambahkan Media"
 
-#: includes/class-gllr-settings.php:296
+#: includes/class-gllr-settings.php:293
 msgid "The grid view for the Gallery images requires JavaScript."
 msgstr "Tampilan kotak untuk gambar Galeri membutuhkan JavaScript."
 
-#: includes/class-gllr-settings.php:296
+#: includes/class-gllr-settings.php:293
 msgid "Switch to the list view"
 msgstr "Beralih ke tampilan daftar"
 
-#: includes/class-gllr-settings.php:319
+#: includes/class-gllr-settings.php:320
+#, fuzzy
+#| msgid "Add gallery to the search"
+msgid "Add Gallery to the Slider"
+msgstr "Додати галерею до пошуку"
+
+#: includes/class-gllr-settings.php:332
+msgid "Activate"
+msgstr "Mengaktifkan"
+
+#: includes/class-gllr-settings.php:335 includes/class-gllr-settings.php:1022
+msgid "Install Now"
+msgstr "Pasang sekarang"
+
+#: includes/class-gllr-settings.php:337
+msgid "Add"
+msgstr ""
+
+#: includes/class-gllr-settings.php:340
+msgid "Click to add current gallery to the slider. Slider plugin is required."
+msgstr ""
+
+#: includes/class-gllr-settings.php:351
 msgid "Single Gallery Settings"
 msgstr "Pengaturan Galeri tunggal"
 
-#: includes/class-gllr-settings.php:321
+#: includes/class-gllr-settings.php:353
 #, php-format
 msgid "Enable to configure single gallery settings and disable %s."
 msgstr ""
 "Memungkinkan untuk mengkonfigurasi pengaturan galeri tunggal dan "
 "menonaktifkan %s ."
 
-#: includes/class-gllr-settings.php:332 includes/class-gllr-settings.php:389
-#: includes/class-gllr-settings.php:433 includes/class-gllr-settings.php:483
-#: includes/class-gllr-settings.php:621 includes/class-gllr-settings.php:709
-#: includes/class-gllr-settings.php:745 includes/class-gllr-settings.php:795
-#: includes/class-gllr-settings.php:923
+#: includes/class-gllr-settings.php:365 includes/class-gllr-settings.php:422
+#: includes/class-gllr-settings.php:466 includes/class-gllr-settings.php:516
+#: includes/class-gllr-settings.php:654 includes/class-gllr-settings.php:742
+#: includes/class-gllr-settings.php:785 includes/class-gllr-settings.php:835
+#: includes/class-gllr-settings.php:894 includes/class-gllr-settings.php:983
 msgid "Close"
 msgstr "Dekat"
 
-#: includes/class-gllr-settings.php:336
+#: includes/class-gllr-settings.php:369
 msgid "Gallery Layout"
 msgstr "galeri Tata Letak"
 
-#: includes/class-gllr-settings.php:341
+#: includes/class-gllr-settings.php:374
 msgid "Grid"
 msgstr "kisi"
 
-#: includes/class-gllr-settings.php:347
+#: includes/class-gllr-settings.php:380
 msgid "Masonry"
 msgstr "perkumpulan rahasia"
 
-#: includes/class-gllr-settings.php:360
+#: includes/class-gllr-settings.php:393
 msgid "Number of Columns"
 msgstr "Jumlah kolom"
 
-#: includes/class-gllr-settings.php:363
+#: includes/class-gllr-settings.php:396
 #, php-format
 msgid "Number of gallery columns (default is %s)."
 msgstr "Jumlah kolom galeri (default adalah %s )."
 
-#: includes/class-gllr-settings.php:367 includes/class-gllr-settings.php:749
+#: includes/class-gllr-settings.php:400 includes/class-gllr-settings.php:789
 msgid "Image Size"
 msgstr "Ukuran gambar"
 
-#: includes/class-gllr-settings.php:373 includes/class-gllr-settings.php:606
+#: includes/class-gllr-settings.php:406 includes/class-gllr-settings.php:639
 msgid "Custom"
 msgstr "Adat"
 
-#: includes/class-gllr-settings.php:375
+#: includes/class-gllr-settings.php:408
 msgid ""
 "Maximum gallery image size. \"Custom\" uses the Image Dimensions values."
 msgstr ""
 "Maksimum ukuran galeri foto. \\ \"Custom \" menggunakan Gambar nilai Dimensi."
 
-#: includes/class-gllr-settings.php:379
+#: includes/class-gllr-settings.php:412
 msgid "Custom Image Size"
 msgstr "Ukuran kustom Gambar"
 
-#: includes/class-gllr-settings.php:381 includes/class-gllr-settings.php:469
-#: includes/class-gllr-settings.php:614 includes/class-gllr-settings.php:664
+#: includes/class-gllr-settings.php:414 includes/class-gllr-settings.php:502
+#: includes/class-gllr-settings.php:647 includes/class-gllr-settings.php:697
 msgid "px"
 msgstr "px"
 
-#: includes/class-gllr-settings.php:382
+#: includes/class-gllr-settings.php:415
 msgid ""
 "Adjust these values based on the number of columns in your gallery. This "
 "won't effect the full size of your images in the lightbox."
@@ -624,11 +691,11 @@ msgstr ""
 "Menyesuaikan nilai-nilai ini didasarkan pada jumlah kolom dalam galeri anda. "
 "Ini tidak akan mempengaruhi ukuran penuh gambar Anda dalam lightbox."
 
-#: includes/class-gllr-settings.php:393
+#: includes/class-gllr-settings.php:426
 msgid "Crop Images"
 msgstr "Gambar tanaman"
 
-#: includes/class-gllr-settings.php:395
+#: includes/class-gllr-settings.php:428
 msgid ""
 "Enable to crop images using the sizes defined for Custom Image Size. Disable "
 "to resize images automatically using their aspect ratio."
@@ -637,63 +704,63 @@ msgstr ""
 "Ukuran Custom Image. Menonaktifkan untuk mengubah ukuran gambar secara "
 "otomatis menggunakan aspek rasio mereka."
 
-#: includes/class-gllr-settings.php:399 includes/class-gllr-settings.php:631
+#: includes/class-gllr-settings.php:432 includes/class-gllr-settings.php:664
 msgid "Crop Position"
 msgstr "Posisi tanaman"
 
-#: includes/class-gllr-settings.php:414 includes/class-gllr-settings.php:646
+#: includes/class-gllr-settings.php:447 includes/class-gllr-settings.php:679
 msgid "Select crop position base (by default: center)."
 msgstr "Pilih posisi tanaman dasar (default: pusat)."
 
-#: includes/class-gllr-settings.php:424
+#: includes/class-gllr-settings.php:457
 msgid "Image Title"
 msgstr "gambar Judul"
 
-#: includes/class-gllr-settings.php:426
+#: includes/class-gllr-settings.php:459
 msgid "Enable to display image title along with the gallery image."
 msgstr ""
 "Memungkinkan untuk menampilkan judul gambar bersama dengan gambar galeri."
 
-#: includes/class-gllr-settings.php:437
+#: includes/class-gllr-settings.php:470
 msgid "Image Title Position"
 msgstr "Gambar Judul Posisi"
 
-#: includes/class-gllr-settings.php:442
+#: includes/class-gllr-settings.php:475
 msgid "Under image"
 msgstr "di bawah gambar"
 
-#: includes/class-gllr-settings.php:448
+#: includes/class-gllr-settings.php:481
 msgid "On mouse hover"
 msgstr "Pada mouse hover"
 
-#: includes/class-gllr-settings.php:461
+#: includes/class-gllr-settings.php:494
 msgid "Image Border"
 msgstr "gambar Border"
 
-#: includes/class-gllr-settings.php:463
+#: includes/class-gllr-settings.php:496
 msgid ""
 "Enable images border using the styles defined for Image Border Size and "
 "Color options."
 msgstr ""
 
-#: includes/class-gllr-settings.php:467
+#: includes/class-gllr-settings.php:500
 msgid "Image Border Size"
 msgstr "Gambar Ukuran Border"
 
-#: includes/class-gllr-settings.php:470
+#: includes/class-gllr-settings.php:503
 #, php-format
 msgid "Gallery image border width (default is %s)"
 msgstr "Galeri lebar border image (default adalah %s )"
 
-#: includes/class-gllr-settings.php:474
+#: includes/class-gllr-settings.php:507
 msgid "Image Border Color"
 msgstr "Warna Gambar Border"
 
-#: includes/class-gllr-settings.php:487
+#: includes/class-gllr-settings.php:520
 msgid "Pagination"
 msgstr "pagination"
 
-#: includes/class-gllr-settings.php:490
+#: includes/class-gllr-settings.php:523
 msgid ""
 "Enable pagination for images to limit number of images displayed on a single "
 "gallery page."
@@ -701,36 +768,32 @@ msgstr ""
 "Aktifkan pagination untuk gambar untuk membatasi jumlah gambar yang "
 "ditampilkan pada halaman galeri tunggal."
 
-#: includes/class-gllr-settings.php:494
+#: includes/class-gllr-settings.php:527
 msgid "Number of Images"
 msgstr "Jumlah gambar"
 
-#: includes/class-gllr-settings.php:497
+#: includes/class-gllr-settings.php:530
 #, php-format
 msgid "Number of images displayed per page (default is %d)."
 msgstr "Jumlah gambar yang ditampilkan per halaman (default adalah %d )."
 
-#: includes/class-gllr-settings.php:507
+#: includes/class-gllr-settings.php:540
 msgid "Sort Images by"
 msgstr "Urutkan Gambar dengan"
 
-#: includes/class-gllr-settings.php:510
+#: includes/class-gllr-settings.php:543
 msgid "Manually (default)"
 msgstr "Manual (default)"
 
-#: includes/class-gllr-settings.php:511
+#: includes/class-gllr-settings.php:544
 msgid "Image ID"
 msgstr "ID gambar"
 
-#: includes/class-gllr-settings.php:512
+#: includes/class-gllr-settings.php:545
 msgid "Name"
 msgstr "Nama"
 
-#: includes/class-gllr-settings.php:514 includes/class-gllr-settings.php:685
-msgid "Random"
-msgstr "Acak"
-
-#: includes/class-gllr-settings.php:516
+#: includes/class-gllr-settings.php:549
 msgid ""
 "Select images sorting order in your gallery. By default, you can sort images "
 "manually in the images tab."
@@ -738,23 +801,23 @@ msgstr ""
 "Pilih gambar menyortir urutan galeri Anda. Secara default, Anda dapat "
 "mengurutkan gambar secara manual di tab gambar."
 
-#: includes/class-gllr-settings.php:520
+#: includes/class-gllr-settings.php:553
 msgid "Arrange Images by"
 msgstr "Atur Gambar dengan"
 
-#: includes/class-gllr-settings.php:523 includes/class-gllr-settings.php:694
+#: includes/class-gllr-settings.php:556 includes/class-gllr-settings.php:727
 msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
 msgstr "Naik (misalnya 1, 2, 3, a, b, c)"
 
-#: includes/class-gllr-settings.php:524 includes/class-gllr-settings.php:695
+#: includes/class-gllr-settings.php:557 includes/class-gllr-settings.php:728
 msgid "Descending (e.g. 3, 2, 1; c, b, a)"
 msgstr "Menurun (misalnya 3, 2, 1; c, b, a)"
 
-#: includes/class-gllr-settings.php:529
+#: includes/class-gllr-settings.php:562
 msgid "Back Link"
 msgstr "Back link"
 
-#: includes/class-gllr-settings.php:531
+#: includes/class-gllr-settings.php:564
 msgid ""
 "Enable to show a back link in a single gallery page which navigate to a "
 "previous page."
@@ -762,96 +825,96 @@ msgstr ""
 "Memungkinkan untuk menunjukkan link kembali halaman galeri tunggal yang "
 "menavigasi ke halaman sebelumnya."
 
-#: includes/class-gllr-settings.php:535
+#: includes/class-gllr-settings.php:568
 msgid "Back Link URL"
 msgstr "Tautan URL Kembali"
 
-#: includes/class-gllr-settings.php:538
+#: includes/class-gllr-settings.php:571
 msgid "Back link custom page URL. Leave blank to use Gallery page template."
 msgstr ""
 "Kembali menautkan URL halaman kustom. Biarkan kosong untuk menggunakan "
 "Gallery template halaman."
 
-#: includes/class-gllr-settings.php:542
+#: includes/class-gllr-settings.php:575
 msgid "Back Link Label"
 msgstr "Back Link Label"
 
-#: includes/class-gllr-settings.php:548
+#: includes/class-gllr-settings.php:581
 msgid "Back Link with Shortcode"
 msgstr "Back Link dengan pendek"
 
-#: includes/class-gllr-settings.php:551
+#: includes/class-gllr-settings.php:584
 msgid "Enable to display a back link on a page where shortcode is used."
 msgstr ""
 "Memungkinkan untuk menampilkan link kembali pada halaman di mana shortcode "
 "digunakan."
 
-#: includes/class-gllr-settings.php:562
+#: includes/class-gllr-settings.php:595
 msgid "Cover Settings"
 msgstr "Pengaturan penutup"
 
-#: includes/class-gllr-settings.php:567
+#: includes/class-gllr-settings.php:600
 msgid "Galleries Page"
 msgstr "galeri Halaman"
 
-#: includes/class-gllr-settings.php:575
+#: includes/class-gllr-settings.php:608
 msgid "Base page where all existing galleries will be displayed."
 msgstr "halaman dasar di mana semua galeri yang ada akan ditampilkan."
 
-#: includes/class-gllr-settings.php:579
+#: includes/class-gllr-settings.php:612
 msgid "Albums Displaying"
 msgstr ""
 
-#: includes/class-gllr-settings.php:582
+#: includes/class-gllr-settings.php:615
 msgid "Column"
 msgstr ""
 
-#: includes/class-gllr-settings.php:583
+#: includes/class-gllr-settings.php:616
 msgid "Rows"
 msgstr ""
 
-#: includes/class-gllr-settings.php:585
+#: includes/class-gllr-settings.php:618
 msgid "Select the way galleries will be displayed on the Galleries Page."
 msgstr ""
 
-#: includes/class-gllr-settings.php:589
+#: includes/class-gllr-settings.php:622
 msgid "Column Alignment"
 msgstr ""
 
-#: includes/class-gllr-settings.php:592
+#: includes/class-gllr-settings.php:625
 msgid "Left"
 msgstr "Kiri"
 
-#: includes/class-gllr-settings.php:593
+#: includes/class-gllr-settings.php:626
 msgid "Right"
 msgstr "Право"
 
-#: includes/class-gllr-settings.php:594
+#: includes/class-gllr-settings.php:627
 msgid "Center"
 msgstr "Центр"
 
-#: includes/class-gllr-settings.php:596
+#: includes/class-gllr-settings.php:629
 msgid "Select the column alignment."
 msgstr ""
 
-#: includes/class-gllr-settings.php:600
+#: includes/class-gllr-settings.php:633
 msgid "Cover Image Size"
 msgstr "Ukuran Penutup gambar"
 
-#: includes/class-gllr-settings.php:608
+#: includes/class-gllr-settings.php:641
 msgid "Maximum cover image size. Custom uses the Image Dimensions values."
 msgstr ""
 "Maksimum ukuran Penutup gambar. Kustom menggunakan Gambar nilai Dimensi."
 
-#: includes/class-gllr-settings.php:612
+#: includes/class-gllr-settings.php:645
 msgid "Custom Cover Image Size"
 msgstr "Kustom Sampul Ukuran Gambar"
 
-#: includes/class-gllr-settings.php:625
+#: includes/class-gllr-settings.php:658
 msgid "Crop Cover Images"
 msgstr "Gambar Cover Crop"
 
-#: includes/class-gllr-settings.php:627
+#: includes/class-gllr-settings.php:660
 msgid ""
 "Enable to crop images using the sizes defined for Custom Cover Image Size. "
 "Disable to resize images automatically using their aspect ratio."
@@ -860,11 +923,11 @@ msgstr ""
 "Custom Sampul Ukuran Gambar. Menonaktifkan untuk mengubah ukuran gambar "
 "secara otomatis menggunakan aspek rasio mereka."
 
-#: includes/class-gllr-settings.php:656
+#: includes/class-gllr-settings.php:689
 msgid "Cover Image Border"
 msgstr "Penutup Gambar Berbatasan"
 
-#: includes/class-gllr-settings.php:658
+#: includes/class-gllr-settings.php:691
 msgid ""
 "Enable cover images border using the styles defined for Image Border Size "
 "and Color."
@@ -872,56 +935,40 @@ msgstr ""
 "Aktifkan gambar sampul perbatasan menggunakan gaya yang ditetapkan untuk "
 "Ukuran Gambar Berbatasan dan Warna."
 
-#: includes/class-gllr-settings.php:662
+#: includes/class-gllr-settings.php:695
 msgid "Cover Image Border Size"
 msgstr "Penutup Ukuran Gambar Border"
 
-#: includes/class-gllr-settings.php:665
+#: includes/class-gllr-settings.php:698
 #, php-format
 msgid "Cover image border width (default is %s)"
 msgstr "Menutupi lebar berbatasan gambar (default adalah %s )"
 
-#: includes/class-gllr-settings.php:669
+#: includes/class-gllr-settings.php:702
 msgid "Cover Image Border Color"
 msgstr "Penutup gambar Warna Berbatasan"
 
-#: includes/class-gllr-settings.php:675
+#: includes/class-gllr-settings.php:708
 msgid "Sort Albums by"
 msgstr "Album Urutkan berdasarkan"
 
-#: includes/class-gllr-settings.php:678
-msgid "Gallery ID"
-msgstr "galeri ID"
-
-#: includes/class-gllr-settings.php:681
-msgid "Last modified date"
-msgstr "tanggal diubah terakhir"
-
-#: includes/class-gllr-settings.php:682
-msgid "Comment count"
-msgstr "jumlah komentar"
-
-#: includes/class-gllr-settings.php:683
-msgid "\"Order\" field on the gallery edit page"
-msgstr ""
-
-#: includes/class-gllr-settings.php:687
+#: includes/class-gllr-settings.php:720
 msgid "Select galleries sorting order in your galleries page."
 msgstr "Pilih galeri menyortir urutan halaman galeri Anda."
 
-#: includes/class-gllr-settings.php:691
+#: includes/class-gllr-settings.php:724
 msgid "Arrange Albums by"
 msgstr "Mengatur Album oleh"
 
-#: includes/class-gllr-settings.php:700
+#: includes/class-gllr-settings.php:733
 msgid "Read More Link Label"
 msgstr "Read More link Label"
 
-#: includes/class-gllr-settings.php:713
+#: includes/class-gllr-settings.php:746
 msgid "Instant Lightbox"
 msgstr "Lightbox instan"
 
-#: includes/class-gllr-settings.php:716
+#: includes/class-gllr-settings.php:749
 msgid ""
 "Enable to display all images in the lightbox after clicking cover image or "
 "URL instead of going to a single gallery page."
@@ -929,19 +976,29 @@ msgstr ""
 "Memungkinkan untuk menampilkan semua gambar dalam lightbox setelah mengklik "
 "gambar cover atau URL bukannya pergi ke halaman galeri tunggal."
 
-#: includes/class-gllr-settings.php:730
+#: includes/class-gllr-settings.php:763
 msgid "Lightbox Settings"
 msgstr "Pengaturan Lightbox"
 
-#: includes/class-gllr-settings.php:735
+#: includes/class-gllr-settings.php:768
+msgid "Unclickable Thumbnail Images"
+msgstr ""
+
+#: includes/class-gllr-settings.php:771
+msgid ""
+"Enable to make the images in a single gallery unclickable and hide their "
+"URLs. This option also disables Lightbox."
+msgstr ""
+
+#: includes/class-gllr-settings.php:775
 msgid "Enable Lightbox"
 msgstr "aktifkan Lightbox"
 
-#: includes/class-gllr-settings.php:738
+#: includes/class-gllr-settings.php:778
 msgid "Enable to show the lightbox when clicking on gallery images."
 msgstr "Aktifkan untuk menampilkan lightbox ketika mengklik gambar galeri."
 
-#: includes/class-gllr-settings.php:756
+#: includes/class-gllr-settings.php:796
 msgid ""
 "Select the maximum gallery image size for the lightbox view. \"Default\" "
 "will display the original, full size image."
@@ -949,93 +1006,93 @@ msgstr ""
 "Pilih ukuran galeri gambar maksimal untuk tampilan lightbox. \\ \"Default \" "
 "akan menampilkan asli, ukuran gambar penuh."
 
-#: includes/class-gllr-settings.php:760
+#: includes/class-gllr-settings.php:800
 msgid "Overlay Color"
 msgstr "Hamparan Warna"
 
-#: includes/class-gllr-settings.php:766
+#: includes/class-gllr-settings.php:806
 msgid "Overlay Opacity"
 msgstr "Opacity hamparan"
 
-#: includes/class-gllr-settings.php:769
+#: includes/class-gllr-settings.php:809
 #, php-format
 msgid ""
 "Lightbox overlay opacity. Leave blank to disable opacity (default is %s, max "
 "is %s)."
 msgstr ""
 
-#: includes/class-gllr-settings.php:779
+#: includes/class-gllr-settings.php:819
 msgid "Slideshow"
 msgstr "slideshow"
 
-#: includes/class-gllr-settings.php:781
+#: includes/class-gllr-settings.php:821
 msgid "Enable to start the slideshow automatically when the lightbox is used."
 msgstr ""
 "Memungkinkan untuk memulai slideshow secara otomatis ketika lightbox yang "
 "digunakan."
 
-#: includes/class-gllr-settings.php:785
+#: includes/class-gllr-settings.php:825
 msgid "Slideshow Duration"
 msgstr "Durasi slideshow"
 
-#: includes/class-gllr-settings.php:787
+#: includes/class-gllr-settings.php:827
 msgid "ms"
 msgstr "Nona"
 
-#: includes/class-gllr-settings.php:788
+#: includes/class-gllr-settings.php:828
 msgid "Slideshow interval duration between two images."
 msgstr "Slideshow durasi interval antara dua gambar."
 
-#: includes/class-gllr-settings.php:799
+#: includes/class-gllr-settings.php:839
 #, fuzzy
 msgid "Lightbox Helpers"
 msgstr "Lightbox Helper"
 
-#: includes/class-gllr-settings.php:801
+#: includes/class-gllr-settings.php:841
 msgid "Enable to display the lightbox toolbar and arrows."
 msgstr ""
 
-#: includes/class-gllr-settings.php:805
+#: includes/class-gllr-settings.php:845
 #, fuzzy
 msgid "Lightbox Thumbnails"
 msgstr "Ukuran Lightbox Helper Thumbnail"
 
-#: includes/class-gllr-settings.php:807
+#: includes/class-gllr-settings.php:847
 msgid "Enable to use a lightbox helper navigation between images."
 msgstr ""
 
-#: includes/class-gllr-settings.php:811
+#: includes/class-gllr-settings.php:851
 #, fuzzy
 msgid "Lightbox Thumbnails Position"
 msgstr "Lightbox Helper Thumbnail Posisi"
 
-#: includes/class-gllr-settings.php:814
+#: includes/class-gllr-settings.php:854
 msgid "Top"
 msgstr "Puncak"
 
-#: includes/class-gllr-settings.php:819
+#: includes/class-gllr-settings.php:859
 msgid "Lightbox Button Label"
 msgstr "Lightbox Tombol Label"
 
-#: includes/class-gllr-settings.php:821
+#: includes/class-gllr-settings.php:861
 #, fuzzy
 msgid "Read More"
 msgstr "Baca lebih banyak"
 
-#: includes/class-gllr-settings.php:831
+#: includes/class-gllr-settings.php:871
 #, fuzzy
 msgid "Download Button"
 msgstr "Завантажити"
 
-#: includes/class-gllr-settings.php:833
+#: includes/class-gllr-settings.php:873
 msgid "Enable to display download button."
 msgstr ""
 
-#: includes/class-gllr-settings.php:837
+#: includes/class-gllr-settings.php:877
 msgid "Single Lightbox"
 msgstr "Lightbox tunggal"
 
-#: includes/class-gllr-settings.php:839
+#: includes/class-gllr-settings.php:879
 msgid ""
 "Enable to use a single lightbox for multiple galleries located on a single "
 "page."
@@ -1043,27 +1100,27 @@ msgstr ""
 "Memungkinkan untuk menggunakan lightbox tunggal untuk beberapa galeri yang "
 "terletak pada satu halaman."
 
-#: includes/class-gllr-settings.php:849
+#: includes/class-gllr-settings.php:889
 msgid "Social Sharing Buttons Settings"
 msgstr "Sharing sosial Tombol Pengaturan"
 
-#: includes/class-gllr-settings.php:857
+#: includes/class-gllr-settings.php:898
 msgid "Social Buttons"
 msgstr ""
 
-#: includes/class-gllr-settings.php:859
+#: includes/class-gllr-settings.php:900
 msgid "Enable social sharing buttons in the lightbox."
 msgstr ""
 
-#: includes/class-gllr-settings.php:863
+#: includes/class-gllr-settings.php:904
 msgid "Social Networks"
 msgstr "Jaringan sosial"
 
-#: includes/class-gllr-settings.php:874
+#: includes/class-gllr-settings.php:915
 msgid "Counter"
 msgstr "Melawan"
 
-#: includes/class-gllr-settings.php:877
+#: includes/class-gllr-settings.php:918
 #, fuzzy
 msgid ""
 "Enable to show likes counter for each social button (not available for "
@@ -1072,11 +1129,11 @@ msgstr ""
 "Aktifkan untuk menampilkan orang-orang seperti meja untuk setiap tombol "
 "sosial."
 
-#: includes/class-gllr-settings.php:892
+#: includes/class-gllr-settings.php:933
 msgid "Demo Data"
 msgstr "data yang demo"
 
-#: includes/class-gllr-settings.php:894
+#: includes/class-gllr-settings.php:935
 msgid ""
 "Install demo data to create galleries with images, post with shortcodes and "
 "page with a list of all galleries."
@@ -1084,11 +1141,11 @@ msgstr ""
 "Pasang data demo untuk membuat galeri dengan gambar, posting dengan "
 "shortcode dan halaman dengan daftar semua galeri."
 
-#: includes/class-gllr-settings.php:913
+#: includes/class-gllr-settings.php:973
 msgid "Gallery Post Type"
 msgstr "Galeri Posting Mengetik"
 
-#: includes/class-gllr-settings.php:915
+#: includes/class-gllr-settings.php:975
 msgid ""
 "Enable to avoid conflicts with other gallery plugins installed. All "
 "galleries created earlier will stay unchanged. However, after enabling we "
@@ -1100,27 +1157,23 @@ msgstr ""
 "setelah mengaktifkan kami sarankan untuk memeriksa pengaturan plugin lain di "
 "mana \\ \"gallery \" Jenis posting digunakan."
 
-#: includes/class-gllr-settings.php:927
+#: includes/class-gllr-settings.php:987
 msgid "Gallery Slug"
 msgstr "galeri Slug"
 
-#: includes/class-gllr-settings.php:931
+#: includes/class-gllr-settings.php:991
 msgid "Enter the unique gallery slug."
 msgstr "Masukkan siput galeri unik."
 
-#: includes/class-gllr-settings.php:947
+#: includes/class-gllr-settings.php:1007
 msgid "Activate Now"
 msgstr "Sekarang aktif"
 
-#: includes/class-gllr-settings.php:962
-msgid "Install Now"
-msgstr "Pasang sekarang"
-
-#: includes/class-gllr-settings.php:965
+#: includes/class-gllr-settings.php:1025
 msgid "Enable to include galleries to your website search."
 msgstr "Memungkinkan untuk menyertakan galeri untuk pencarian website Anda."
 
-#: includes/class-gllr-settings.php:965
+#: includes/class-gllr-settings.php:1025
 #, php-format
 msgid "%s is required."
 msgstr "%s diperlukan."
@@ -1214,6 +1267,9 @@ msgstr ""
 msgid "Yes, install demo now"
 msgstr "Ya, instal demo sekarang"
 
+#~ msgid "or"
+#~ msgstr "atau"
+
 #~ msgid "Sorting order (the input field for sorting order)"
 #~ msgstr "Menyortir order (kolom input untuk menyortir order)"
 
@@ -1298,9 +1354,6 @@ msgstr "Ya, instal demo sekarang"
 
 #~ msgid "Learn more"
 #~ msgstr "Belajarlah lagi"
-
-#~ msgid "Activate"
-#~ msgstr "Mengaktifkan"
 
 #~ msgid "Add multiple gallery categories"
 #~ msgstr "Tambahkan beberapa kategori galeri"
@@ -1648,9 +1701,6 @@ msgstr "Ya, instal demo sekarang"
 #~ msgid "Full URL to custom page"
 #~ msgstr "Повне посилання на сторінку користувача"
 
-#~ msgid "Add gallery to the search"
-#~ msgstr "Додати галерею до пошуку"
-
 #~ msgid "Using"
 #~ msgstr "Використовуючи"
 
@@ -1725,9 +1775,6 @@ msgstr "Ya, instal demo sekarang"
 
 #~ msgid "Select a background color"
 #~ msgstr "Виберіть колір фону"
-
-#~ msgid "Sort galleries by"
-#~ msgstr "Сортувати галереї за"
 
 #~ msgid "The number of images per row can be less"
 #~ msgstr "Кількість зображень в рядку може бути менше"

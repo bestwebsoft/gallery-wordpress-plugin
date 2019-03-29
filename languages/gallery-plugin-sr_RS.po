@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-15 15:12+0200\n"
-"PO-Revision-Date: 2017-12-15 15:12+0200\n"
+"POT-Creation-Date: 2019-03-26 12:53+0200\n"
+"PO-Revision-Date: 2019-03-26 12:53+0200\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: Radovan Georgijevic, Andrijana Nikolic <http://www."
 "georgijevic.info, andrijanan@webhostinggeeks.com>\n"
@@ -16,137 +16,137 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gallery-plugin.php:37 includes/class-gllr-settings.php:310
+#: gallery-plugin.php:37 includes/class-gllr-settings.php:314
 msgid "Gallery Settings"
 msgstr "Podešavanja Galerije"
 
-#: gallery-plugin.php:37 includes/class-gllr-settings.php:321
+#: gallery-plugin.php:37 includes/class-gllr-settings.php:353
 #, fuzzy
 msgid "Global Settings"
 msgstr "Paramètres généraux"
 
-#: gallery-plugin.php:43 gallery-plugin.php:2771
+#: gallery-plugin.php:43 gallery-plugin.php:2934
 #, fuzzy
 msgid "Upgrade to Pro"
 msgstr "Пређи на Про"
 
-#: gallery-plugin.php:237
+#: gallery-plugin.php:340
 #, fuzzy
 msgid "Return to all albums"
 msgstr "Revenir à tous les albums"
 
-#: gallery-plugin.php:249
+#: gallery-plugin.php:354
 msgid "See images &raquo;"
 msgstr "Pogledaj sliku &raquo;"
 
-#: gallery-plugin.php:336 gallery-plugin.php:345
+#: gallery-plugin.php:442 gallery-plugin.php:451
 msgid "Galleries"
 msgstr "Galerije"
 
-#: gallery-plugin.php:337 gallery-plugin.php:3187
+#: gallery-plugin.php:443 gallery-plugin.php:3360
 msgid "Gallery"
 msgstr "Galerija"
 
-#: gallery-plugin.php:338
+#: gallery-plugin.php:444
 msgid "Add New Gallery"
 msgstr "Dodaj novu Galeriju"
 
-#: gallery-plugin.php:339
+#: gallery-plugin.php:445
 msgid "Edit Gallery"
 msgstr "Uredi Galeriju"
 
-#: gallery-plugin.php:340
+#: gallery-plugin.php:446
 msgid "New Gallery"
 msgstr "Nova Galerija"
 
-#: gallery-plugin.php:341
+#: gallery-plugin.php:447
 msgid "View Gallery"
 msgstr "Pregled Galerije"
 
-#: gallery-plugin.php:342 includes/class-gllr-settings.php:941
+#: gallery-plugin.php:448 includes/class-gllr-settings.php:1001
 #, fuzzy
 msgid "Search Galleries"
 msgstr "Rechercher une galerie"
 
-#: gallery-plugin.php:343
+#: gallery-plugin.php:449
 msgid "No Gallery found"
 msgstr "Nije pronađena Galerija"
 
-#: gallery-plugin.php:365 gallery-plugin.php:1600 gallery-plugin.php:2917
-#: gallery-plugin.php:2925 gallery-plugin.php:2963 gallery-plugin.php:2986
-#: gallery-plugin.php:3171
+#: gallery-plugin.php:471 gallery-plugin.php:1721 gallery-plugin.php:3087
+#: gallery-plugin.php:3095 gallery-plugin.php:3133 gallery-plugin.php:3156
+#: gallery-plugin.php:3332
 #, fuzzy
 msgid "Gallery Categories"
 msgstr "Catégories de galeries"
 
-#: gallery-plugin.php:366 gallery-plugin.php:805
+#: gallery-plugin.php:472 gallery-plugin.php:917
 #, fuzzy
 msgid "Gallery Category"
 msgstr "Catégories de galeries"
 
-#: gallery-plugin.php:367
+#: gallery-plugin.php:473
 #, fuzzy
 msgid "Add Gallery Category"
 msgstr "Ajouter une catégorie à la galerie"
 
-#: gallery-plugin.php:368
+#: gallery-plugin.php:474
 #, fuzzy
 msgid "Add New Gallery Category"
 msgstr "Ajouter une nouvelle catégorie de galerie"
 
-#: gallery-plugin.php:369 gallery-plugin.php:370
+#: gallery-plugin.php:475 gallery-plugin.php:476
 #, fuzzy
 msgid "Edit Gallery Category"
 msgstr "Modifier la catégorie de la galerie"
 
-#: gallery-plugin.php:371
+#: gallery-plugin.php:477
 #, fuzzy
 msgid "New Gallery Category"
 msgstr "Ajouter une nouvelle catégorie de galerie"
 
-#: gallery-plugin.php:372 gallery-plugin.php:373
+#: gallery-plugin.php:478 gallery-plugin.php:479
 #, fuzzy
 msgid "View Gallery Category"
 msgstr "Voir les catégories de galerie"
 
-#: gallery-plugin.php:374
+#: gallery-plugin.php:480
 #, fuzzy
 msgid "Find Gallery Category"
 msgstr "Trouver une catégorie de gallerie"
 
-#: gallery-plugin.php:375
+#: gallery-plugin.php:481
 #, fuzzy
 msgid "No Gallery Categories found"
 msgstr "Aucune catégorie de galerie trouvée"
 
-#: gallery-plugin.php:376
+#: gallery-plugin.php:482
 #, fuzzy
 msgid "No Gallery Categories found in Trash"
 msgstr "Pas de catégorie de galerie trouvée dans la poubelle"
 
-#: gallery-plugin.php:377
+#: gallery-plugin.php:483
 #, fuzzy
 msgid "Parent Gallery Category"
 msgstr "Catégorie parente des galeries"
 
-#: gallery-plugin.php:378
+#: gallery-plugin.php:484
 #, fuzzy
 msgid "Gallery Categories list navigation"
 msgstr "Navigation dans la liste des catégories de galerie"
 
-#: gallery-plugin.php:379
+#: gallery-plugin.php:485
 #, fuzzy
 msgid "Gallery Categories list"
 msgstr "Liste des catégories de galeries"
 
-#: gallery-plugin.php:455
+#: gallery-plugin.php:533
 msgid "Gallery Shortcode"
 msgstr "Kratak kod za Galeriju"
 
-#: gallery-plugin.php:464
+#: gallery-plugin.php:542
 #, fuzzy
 msgid ""
 "Add a single gallery with images to your posts, pages, custom post types or "
@@ -155,7 +155,7 @@ msgstr ""
 "Ajouter une galerie avec des images dans vos articles, pages, type d'article "
 "personnalisé ou widgets en utilisant le code court&nbsp;:"
 
-#: gallery-plugin.php:468
+#: gallery-plugin.php:546
 #, fuzzy
 msgid ""
 "Add a gallery cover including featured image, description, and a link to "
@@ -164,100 +164,146 @@ msgstr ""
 "Ajouter une présentation de votre galerie avec une image à la une, une "
 "description et un lien vers votre galerie en utilisant le code court&nbsp;:"
 
-#: gallery-plugin.php:581
+#: gallery-plugin.php:659
 #, fuzzy
 msgid "Note"
 msgstr "Note"
 
-#: gallery-plugin.php:581
+#: gallery-plugin.php:659
 #, php-format
 msgid ""
 "When deleting a category, the galleries that belong to this category will "
 "not be deleted. These galleries will be moved to the category %s."
 msgstr ""
 
-#: gallery-plugin.php:594 gallery-plugin.php:1599
+#: gallery-plugin.php:670
+#, fuzzy
+msgid "Sort Galleries in Category by"
+msgstr "Poređaj slike po"
+
+#: gallery-plugin.php:673 gallery-plugin.php:3346
+#: includes/class-gllr-settings.php:711
+#, fuzzy
+msgid "Gallery ID"
+msgstr "Galerie ID"
+
+#: gallery-plugin.php:674 gallery-plugin.php:1718 gallery-plugin.php:2788
+#: gallery-plugin.php:2895 gallery-plugin.php:3008 gallery-plugin.php:3347
+#: includes/class-gllr-settings.php:712
+msgid "Title"
+msgstr "Naslov"
+
+#: gallery-plugin.php:675 gallery-plugin.php:1723 gallery-plugin.php:3348
+#: includes/class-gllr-settings.php:546 includes/class-gllr-settings.php:713
+msgid "Date"
+msgstr "Datum"
+
+#: gallery-plugin.php:676 gallery-plugin.php:3349
+#: includes/class-gllr-settings.php:714
+#, fuzzy
+msgid "Last modified date"
+msgstr "Date de dernière modification"
+
+#: gallery-plugin.php:677 gallery-plugin.php:3350
+#: includes/class-gllr-settings.php:715
+#, fuzzy
+msgid "Comment count"
+msgstr "Nombre de commentaires"
+
+#: gallery-plugin.php:678 gallery-plugin.php:3351
+#: includes/class-gllr-settings.php:716
+msgid "\"Order\" field on the gallery edit page"
+msgstr ""
+
+#: gallery-plugin.php:679 gallery-plugin.php:1722 gallery-plugin.php:3352
+#: includes/class-gllr-settings.php:717
+msgid "Author"
+msgstr "Autor"
+
+#: gallery-plugin.php:680 gallery-plugin.php:3353
+#: includes/class-gllr-settings.php:547 includes/class-gllr-settings.php:718
+msgid "Random"
+msgstr "Nasumično"
+
+#: gallery-plugin.php:681 gallery-plugin.php:3354
+#, fuzzy
+#| msgid "Settings"
+msgid "Plugin Settings"
+msgstr "Podešavanja"
+
+#: gallery-plugin.php:683 gallery-plugin.php:3356
+#, fuzzy
+msgid "Select galleries sorting order in your category."
+msgstr "Choisissez l'ordre de tri de vos galeries dans la page des albums."
+
+#: gallery-plugin.php:703 gallery-plugin.php:1720
 #, fuzzy
 msgid "Shortcode"
 msgstr "Code court"
 
-#: gallery-plugin.php:640
+#: gallery-plugin.php:749
 #, fuzzy
 msgid "All Gallery Categories"
 msgstr "Toutes les catégories de galerie"
 
-#: gallery-plugin.php:717
+#: gallery-plugin.php:827
 #, fuzzy
 msgid "You can't delete default gallery category."
 msgstr "Vous ne pouvez pas supprimer la catégorie par défaut des galeries."
 
-#: gallery-plugin.php:1089 gallery-plugin.php:1196 gallery-plugin.php:2108
+#: gallery-plugin.php:1209 gallery-plugin.php:1317 gallery-plugin.php:2243
 msgid "Sorry, nothing found."
 msgstr "Nažalost nije pronađeno"
 
-#: gallery-plugin.php:1596
+#: gallery-plugin.php:1717
 #, fuzzy
 msgid "Featured Image"
 msgstr "Image à la une"
 
-#: gallery-plugin.php:1597 gallery-plugin.php:2628 gallery-plugin.php:2732
-#: gallery-plugin.php:2843 includes/class-gllr-settings.php:679
-msgid "Title"
-msgstr "Naslov"
-
-#: gallery-plugin.php:1598 includes/class-gllr-settings.php:41
+#: gallery-plugin.php:1719 includes/class-gllr-settings.php:41
 #, fuzzy
 msgid "Images"
 msgstr "Images"
 
-#: gallery-plugin.php:1601 includes/class-gllr-settings.php:684
-msgid "Author"
-msgstr "Autor"
-
-#: gallery-plugin.php:1602 includes/class-gllr-settings.php:513
-#: includes/class-gllr-settings.php:680
-msgid "Date"
-msgstr "Datum"
-
-#: gallery-plugin.php:1688
+#: gallery-plugin.php:1810
 #, php-format
 msgid "%s Settings"
 msgstr ""
 
-#: gallery-plugin.php:1715 gallery-plugin.php:1733
+#: gallery-plugin.php:1837 gallery-plugin.php:1855
 #: includes/class-gllr-settings.php:30 includes/class-gllr-settings.php:42
 msgid "Settings"
 msgstr "Podešavanja"
 
-#: gallery-plugin.php:1716
+#: gallery-plugin.php:1838
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:1717
+#: gallery-plugin.php:1839
 msgid "Support"
 msgstr "Podrška"
 
-#: gallery-plugin.php:1756
+#: gallery-plugin.php:1878
 #, fuzzy
 msgid "Updating images..."
 msgstr "Mise à jour des images..."
 
-#: gallery-plugin.php:1757
+#: gallery-plugin.php:1879
 #, fuzzy
 msgid "No images found."
 msgstr "Pas d'image trouvée."
 
-#: gallery-plugin.php:1758
+#: gallery-plugin.php:1880
 #, fuzzy
 msgid "All images were updated."
 msgstr "Toutes les images ont été mises à jour."
 
-#: gallery-plugin.php:1759
+#: gallery-plugin.php:1881
 #, fuzzy
 msgid "Error."
 msgstr "Грешка"
 
-#: gallery-plugin.php:1771
+#: gallery-plugin.php:1893
 #, fuzzy
 msgid ""
 "You are about to remove these items from this gallery.\n"
@@ -266,7 +312,7 @@ msgstr ""
 "Vous allez supprimer ces éléments de la galerie.\n"
 "'Annuler' pour arrêter, 'Ok' pour supprimer"
 
-#: gallery-plugin.php:1772
+#: gallery-plugin.php:1894
 #, fuzzy
 msgid ""
 "You are about to remove this image from the gallery.\n"
@@ -275,7 +321,7 @@ msgstr ""
 "Vous allez supprimer ces éléments de la galerie.\n"
 "'Annuler' pour arrêter, 'Ok' pour supprimer"
 
-#: gallery-plugin.php:1773
+#: gallery-plugin.php:1895
 #, fuzzy
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
@@ -284,22 +330,26 @@ msgstr ""
 "ou plus! Nous ne garantissons pas que notre extension fonctionne "
 "correctement. Merci de mettre à jour votre version de WordPress."
 
-#: gallery-plugin.php:1774
+#: gallery-plugin.php:1896
 #, fuzzy
 msgid "Insert Media"
 msgstr "Insérer un média"
 
-#: gallery-plugin.php:1775
+#: gallery-plugin.php:1897
 #, fuzzy
 msgid "Insert"
 msgstr "Insérer"
 
-#: gallery-plugin.php:2300 gallery-plugin.php:2326
+#: gallery-plugin.php:1898
+msgid "Gallery has been successfully added!"
+msgstr ""
+
+#: gallery-plugin.php:2435 gallery-plugin.php:2468
 #, fuzzy
 msgid "Image size not defined"
 msgstr "Taille de l'image non définie"
 
-#: gallery-plugin.php:2315
+#: gallery-plugin.php:2455
 #, fuzzy
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
@@ -308,91 +358,91 @@ msgstr ""
 "Il n'est possible de mettre à jour que les images de type PNG, JPEG, GIF, "
 "WPMP or XBM. Pour les autres, merci de faire une mise à jour manuelle."
 
-#: gallery-plugin.php:2355 gallery-plugin.php:2358 gallery-plugin.php:2363
+#: gallery-plugin.php:2501 gallery-plugin.php:2505 gallery-plugin.php:2511
 #, fuzzy
 msgid "Invalid path"
 msgstr "Chemin invalide"
 
-#: gallery-plugin.php:2452
+#: gallery-plugin.php:2607
 #, fuzzy
 msgid "List View"
 msgstr "Vue en mode liste"
 
-#: gallery-plugin.php:2453
+#: gallery-plugin.php:2608
 #, fuzzy
 msgid "Grid View"
 msgstr "Vue en mode grille"
 
-#: gallery-plugin.php:2508
+#: gallery-plugin.php:2665
 #, fuzzy
 msgid "Filter"
 msgstr "Filtrer"
 
-#: gallery-plugin.php:2512
+#: gallery-plugin.php:2669
 #, fuzzy
 msgid "Empty Trash"
 msgstr "Vider la corbeille"
 
-#: gallery-plugin.php:2533
+#: gallery-plugin.php:2692
 #, fuzzy
 msgid "No images found"
 msgstr "Pas d'image trouvée"
 
-#: gallery-plugin.php:2585
+#: gallery-plugin.php:2745
 #, fuzzy
 msgid "Select bulk action"
 msgstr "Sélectionne l'action en masse"
 
-#: gallery-plugin.php:2587
+#: gallery-plugin.php:2747
 #, fuzzy
 msgid "Bulk Actions"
 msgstr "Actions en masse"
 
-#: gallery-plugin.php:2597
+#: gallery-plugin.php:2757
 #, fuzzy
 msgid "Apply"
 msgstr "Appliquer"
 
-#: gallery-plugin.php:2604
+#: gallery-plugin.php:2764
 #, fuzzy
 msgid "Delete from Gallery"
 msgstr "Supprimer de la galerie"
 
-#: gallery-plugin.php:2613
+#: gallery-plugin.php:2773
 #, fuzzy
 msgid "Bulk Select"
 msgstr "Sélection en masse"
 
-#: gallery-plugin.php:2614
+#: gallery-plugin.php:2774
 #, fuzzy
 msgid "Cancel Selection"
 msgstr "Annuler la sélection"
 
-#: gallery-plugin.php:2615
+#: gallery-plugin.php:2775
 #, fuzzy
 msgid "Delete Selected"
 msgstr "Supprimer la sélection"
 
-#: gallery-plugin.php:2626
+#: gallery-plugin.php:2786
 #, fuzzy
 msgid "File"
 msgstr "Fichier"
 
-#: gallery-plugin.php:2627 gallery-plugin.php:2727 gallery-plugin.php:2838
+#: gallery-plugin.php:2787 gallery-plugin.php:2890 gallery-plugin.php:3003
 #, fuzzy
 msgid "Dimensions"
 msgstr "Dimensions"
 
-#: gallery-plugin.php:2629 gallery-plugin.php:2738 gallery-plugin.php:2848
+#: gallery-plugin.php:2789 gallery-plugin.php:2901 gallery-plugin.php:3013
 #, fuzzy
 msgid "Alt Text"
 msgstr "Alt Texte"
 
-#: gallery-plugin.php:2630 gallery-plugin.php:2742 gallery-plugin.php:2853
+#: gallery-plugin.php:2790 gallery-plugin.php:2905 gallery-plugin.php:3018
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:2630 gallery-plugin.php:2744
+#: gallery-plugin.php:2790 gallery-plugin.php:2907
 #, fuzzy
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
@@ -401,166 +451,162 @@ msgstr ""
 "Saisir votre URL personnalisée pour faire un lien de cette image vers une "
 "page ou un article. Laisser vide pour ouvrir l'image en plein écran."
 
-#: gallery-plugin.php:2709
+#: gallery-plugin.php:2872
 #, fuzzy
 msgid "Remove Image from Gallery"
 msgstr "Supprimer les images de la galerie"
 
-#: gallery-plugin.php:2712
+#: gallery-plugin.php:2875
 #, fuzzy
 msgid "Edit Image Info"
 msgstr "Modifier les informations de l'image"
 
-#: gallery-plugin.php:2713
+#: gallery-plugin.php:2876
 #, fuzzy
 msgid "Deselect"
 msgstr "Désélectionner"
 
-#: gallery-plugin.php:2725
+#: gallery-plugin.php:2888
 #, fuzzy
 msgid "File name"
 msgstr "Nom du fichier"
 
-#: gallery-plugin.php:2726
+#: gallery-plugin.php:2889
 #, fuzzy
 msgid "File type"
 msgstr "Type de fichier"
 
-#: gallery-plugin.php:2751
+#: gallery-plugin.php:2914
 #, fuzzy
 msgid "Description"
 msgstr "Description"
 
-#: gallery-plugin.php:2757
+#: gallery-plugin.php:2920
 #, fuzzy
 msgid "Lightbox Button URL"
 msgstr "URL du bouton pour Lightbox"
 
-#: gallery-plugin.php:2764
+#: gallery-plugin.php:2927
 #, fuzzy
 msgid "New Tab"
 msgstr "Nouvel onglet"
 
-#: gallery-plugin.php:2766
+#: gallery-plugin.php:2929
 #, fuzzy
 msgid "Enable to open URLs above in a new tab."
 msgstr "Activer pour ouvrir l'URL dans un nouvel onglet."
 
-#: gallery-plugin.php:2771
+#: gallery-plugin.php:2934
 #, fuzzy
 msgid "Go Pro"
 msgstr "Passer à la version PRO"
 
-#: gallery-plugin.php:2777
+#: gallery-plugin.php:2940
 #, fuzzy
 msgid "Edit more details"
 msgstr "Modifier plus de détails"
 
-#: gallery-plugin.php:2779
+#: gallery-plugin.php:2942
 #, fuzzy
 msgid "Remove from Gallery"
 msgstr "Supprimer de la galerie"
 
-#: gallery-plugin.php:2813
+#: gallery-plugin.php:2978
 #, fuzzy, php-format
 msgid "Select %s"
 msgstr "Sélectionner %s"
 
-#: gallery-plugin.php:2826
+#: gallery-plugin.php:2991
 #, fuzzy, php-format
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Pré-visualiser &#8220;%s&#8221;"
 
-#: gallery-plugin.php:2834
+#: gallery-plugin.php:2999
 #, fuzzy
 msgid "Edit Attachment Info"
 msgstr "Modifier les informations du document"
 
-#: gallery-plugin.php:2871 gallery-plugin.php:2884
+#: gallery-plugin.php:3036 gallery-plugin.php:3052
 #, fuzzy
 msgid "Edit"
 msgstr "Modifier"
 
-#: gallery-plugin.php:2874 gallery-plugin.php:2889
+#: gallery-plugin.php:3040 gallery-plugin.php:3058
 #, fuzzy
 msgid "Trash"
 msgstr "Poubelle"
 
-#: gallery-plugin.php:2877 gallery-plugin.php:2892
+#: gallery-plugin.php:3043 gallery-plugin.php:3062
 #, fuzzy
 msgid "Delete Permanently"
 msgstr "Supprimer de manière définitive"
 
-#: gallery-plugin.php:2879 gallery-plugin.php:2898
+#: gallery-plugin.php:3046 gallery-plugin.php:3068
 #, fuzzy, php-format
 msgid "View &#8220;%s&#8221;"
 msgstr "Pré-visualiser &#8220;%s&#8221;"
 
-#: gallery-plugin.php:2879 gallery-plugin.php:2898 gallery-plugin.php:2981
+#: gallery-plugin.php:3046 gallery-plugin.php:3068 gallery-plugin.php:3151
 #, fuzzy
 msgid "View"
 msgstr "Voir"
 
-#: gallery-plugin.php:2881
+#: gallery-plugin.php:3048
 #, fuzzy
 msgid "Attach"
 msgstr "Attacher"
 
-#: gallery-plugin.php:2887
+#: gallery-plugin.php:3056
 #, fuzzy
 msgid "Restore"
 msgstr "Remettre"
 
-#: gallery-plugin.php:2916
+#: gallery-plugin.php:3086
 #, fuzzy
 msgid "A list or dropdown of Gallery categories."
 msgstr "Une liste ou une liste déroulante des catégories de galerie."
 
-#: gallery-plugin.php:2961
+#: gallery-plugin.php:3131
 #, fuzzy
 msgid "Select Gallery Category"
 msgstr "Choisir une catégorie pour la galerie"
 
-#: gallery-plugin.php:3019
+#: gallery-plugin.php:3189
 #, fuzzy
 msgid "Title:"
 msgstr "Naslov"
 
-#: gallery-plugin.php:3022
+#: gallery-plugin.php:3192
 #, fuzzy
 msgid "Display as dropdown"
 msgstr "Montrer sous la forme d'une liste déroulante"
 
-#: gallery-plugin.php:3024
+#: gallery-plugin.php:3194
 #, fuzzy
 msgid "Show gallery counts"
 msgstr "Monter le nombre de galleries"
 
-#: gallery-plugin.php:3026
+#: gallery-plugin.php:3196
 #, fuzzy
 msgid "Show hierarchy"
 msgstr "Voir la hiérarchie"
 
-#: gallery-plugin.php:3142
+#: gallery-plugin.php:3312
 #, fuzzy
 msgid "Warning"
 msgstr "Упозорење"
 
-#: gallery-plugin.php:3142
+#: gallery-plugin.php:3312
 #, fuzzy
 msgid "You can add only images to the gallery"
 msgstr "Vous ne pouvez ajouter que des images dans la galerie"
 
-#: gallery-plugin.php:3173
-msgid "or"
-msgstr ""
-
-#: gallery-plugin.php:3181
+#: gallery-plugin.php:3367
 #, fuzzy
 msgid "no title"
 msgstr "Naslov"
 
-#: gallery-plugin.php:3192
+#: gallery-plugin.php:3377
 #, fuzzy
 msgid ""
 "Display an album image with the description and the link to a single gallery "
@@ -569,7 +615,7 @@ msgstr ""
 "Afficher une image pour l'album avec la description et un lien vers une page "
 "contenant la galerie"
 
-#: gallery-plugin.php:3196
+#: gallery-plugin.php:3381
 #, fuzzy
 msgid "Sorry, no gallery found."
 msgstr "Désolé, rien n'a été trouvé."
@@ -609,109 +655,132 @@ msgstr "Importer / Exporter"
 msgid "License Key"
 msgstr "Clé de licence"
 
-#: includes/class-gllr-settings.php:210
+#: includes/class-gllr-settings.php:244
+#, fuzzy
+msgid "Settings saved"
+msgstr "Paramètres enregistrés."
+
+#: includes/class-gllr-settings.php:256
+#, fuzzy
+msgid "Please, enable JavaScript in Your browser."
+msgstr "Merci d'activer JavaScript dans votre navigateur."
+
+#: includes/class-gllr-settings.php:260
 #, fuzzy
 msgid "Custom image size was changed. You need to update gallery images."
 msgstr ""
 "La taille personnalisée des images a été modifiée. Vous devez mettre à jour "
 "les images dans les galeries."
 
-#: includes/class-gllr-settings.php:247
-#, fuzzy
-msgid "Settings saved"
-msgstr "Paramètres enregistrés."
-
-#: includes/class-gllr-settings.php:259
-#, fuzzy
-msgid "Please, enable JavaScript in Your browser."
-msgstr "Merci d'activer JavaScript dans votre navigateur."
-
-#: includes/class-gllr-settings.php:264
+#: includes/class-gllr-settings.php:261
 #, fuzzy
 msgid "Update Images"
 msgstr "Mise à jour des images"
 
-#: includes/class-gllr-settings.php:279
+#: includes/class-gllr-settings.php:276
 #, fuzzy
 msgid "Gallery Images"
 msgstr "Galerie d'images"
 
-#: includes/class-gllr-settings.php:284
+#: includes/class-gllr-settings.php:281
 msgid "Images adding requires JavaScript."
 msgstr ""
 
-#: includes/class-gllr-settings.php:287
+#: includes/class-gllr-settings.php:284
 #, fuzzy
 msgid "Add Media"
 msgstr "Ajouter un média"
 
-#: includes/class-gllr-settings.php:296
+#: includes/class-gllr-settings.php:293
 #, fuzzy
 msgid "The grid view for the Gallery images requires JavaScript."
 msgstr ""
 "La vue en mode grille pour les images des galeries nécessite Java-script."
 
-#: includes/class-gllr-settings.php:296
+#: includes/class-gllr-settings.php:293
 #, fuzzy
 msgid "Switch to the list view"
 msgstr "Basculer vers une vue en mode liste"
 
-#: includes/class-gllr-settings.php:319
+#: includes/class-gllr-settings.php:320
+#, fuzzy
+msgid "Add Gallery to the Slider"
+msgstr "Ajouter une catégorie à la galerie"
+
+#: includes/class-gllr-settings.php:332
+#, fuzzy
+msgid "Activate"
+msgstr "Aktivirani moduli"
+
+#: includes/class-gllr-settings.php:335 includes/class-gllr-settings.php:1022
+#, fuzzy
+msgid "Install Now"
+msgstr "Installer maintenant"
+
+#: includes/class-gllr-settings.php:337
+msgid "Add"
+msgstr ""
+
+#: includes/class-gllr-settings.php:340
+msgid "Click to add current gallery to the slider. Slider plugin is required."
+msgstr ""
+
+#: includes/class-gllr-settings.php:351
 #, fuzzy
 msgid "Single Gallery Settings"
 msgstr "Paramètres de la galerie"
 
-#: includes/class-gllr-settings.php:321
+#: includes/class-gllr-settings.php:353
 #, fuzzy, php-format
 msgid "Enable to configure single gallery settings and disable %s."
 msgstr ""
 "Activer pour pouvoir définir les paramètres par galerie et désactiver %s."
 
-#: includes/class-gllr-settings.php:332 includes/class-gllr-settings.php:389
-#: includes/class-gllr-settings.php:433 includes/class-gllr-settings.php:483
-#: includes/class-gllr-settings.php:621 includes/class-gllr-settings.php:709
-#: includes/class-gllr-settings.php:745 includes/class-gllr-settings.php:795
-#: includes/class-gllr-settings.php:923
+#: includes/class-gllr-settings.php:365 includes/class-gllr-settings.php:422
+#: includes/class-gllr-settings.php:466 includes/class-gllr-settings.php:516
+#: includes/class-gllr-settings.php:654 includes/class-gllr-settings.php:742
+#: includes/class-gllr-settings.php:785 includes/class-gllr-settings.php:835
+#: includes/class-gllr-settings.php:894 includes/class-gllr-settings.php:983
 #, fuzzy
 msgid "Close"
 msgstr "Затвори"
 
-#: includes/class-gllr-settings.php:336
+#: includes/class-gllr-settings.php:369
 #, fuzzy
 msgid "Gallery Layout"
 msgstr "Mise en page de la galerie"
 
-#: includes/class-gllr-settings.php:341
+#: includes/class-gllr-settings.php:374
 #, fuzzy
 msgid "Grid"
 msgstr "Grille"
 
-#: includes/class-gllr-settings.php:347
+#: includes/class-gllr-settings.php:380
 #, fuzzy
 msgid "Masonry"
 msgstr "Mur"
 
-#: includes/class-gllr-settings.php:360
+#: includes/class-gllr-settings.php:393
 #, fuzzy
 msgid "Number of Columns"
 msgstr "Nombre de colonnes"
 
-#: includes/class-gllr-settings.php:363
+#: includes/class-gllr-settings.php:396
 #, fuzzy, php-format
 msgid "Number of gallery columns (default is %s)."
 msgstr "Nombre de colonnes pour la galerie (par défaut %s)."
 
-#: includes/class-gllr-settings.php:367 includes/class-gllr-settings.php:749
+#: includes/class-gllr-settings.php:400 includes/class-gllr-settings.php:789
 #, fuzzy
 msgid "Image Size"
 msgstr "Taille de l'image"
 
-#: includes/class-gllr-settings.php:373 includes/class-gllr-settings.php:606
+#: includes/class-gllr-settings.php:406 includes/class-gllr-settings.php:639
 #, fuzzy
 msgid "Custom"
 msgstr "Personnalisé"
 
-#: includes/class-gllr-settings.php:375
+#: includes/class-gllr-settings.php:408
 #, fuzzy
 msgid ""
 "Maximum gallery image size. \"Custom\" uses the Image Dimensions values."
@@ -719,18 +788,18 @@ msgstr ""
 "Taille maximum d'une image dans la galerie. \"Personnalisé\" utilise les "
 "valeurs définies pour les images."
 
-#: includes/class-gllr-settings.php:379
+#: includes/class-gllr-settings.php:412
 #, fuzzy
 msgid "Custom Image Size"
 msgstr "Taille de l'image personalisée"
 
-#: includes/class-gllr-settings.php:381 includes/class-gllr-settings.php:469
-#: includes/class-gllr-settings.php:614 includes/class-gllr-settings.php:664
+#: includes/class-gllr-settings.php:414 includes/class-gllr-settings.php:502
+#: includes/class-gllr-settings.php:647 includes/class-gllr-settings.php:697
 #, fuzzy
 msgid "px"
 msgstr "px"
 
-#: includes/class-gllr-settings.php:382
+#: includes/class-gllr-settings.php:415
 #, fuzzy
 msgid ""
 "Adjust these values based on the number of columns in your gallery. This "
@@ -739,12 +808,12 @@ msgstr ""
 "Ajuster ces valeurs sur la base du nombre de colonnes dans votre galerie. "
 "Cela ne changera pas la taille maximum de vos images dans la lightbox."
 
-#: includes/class-gllr-settings.php:393
+#: includes/class-gllr-settings.php:426
 #, fuzzy
 msgid "Crop Images"
 msgstr "Réduire les images"
 
-#: includes/class-gllr-settings.php:395
+#: includes/class-gllr-settings.php:428
 #, fuzzy
 msgid ""
 "Enable to crop images using the sizes defined for Custom Image Size. Disable "
@@ -754,74 +823,74 @@ msgstr ""
 "paramètres de personnalisation. Désactiver pour restaurer les images "
 "automatiquement en utilisant leur aspect d'origine."
 
-#: includes/class-gllr-settings.php:399 includes/class-gllr-settings.php:631
+#: includes/class-gllr-settings.php:432 includes/class-gllr-settings.php:664
 #, fuzzy
 msgid "Crop Position"
 msgstr "Position pour la réduction"
 
-#: includes/class-gllr-settings.php:414 includes/class-gllr-settings.php:646
+#: includes/class-gllr-settings.php:447 includes/class-gllr-settings.php:679
 #, fuzzy
 msgid "Select crop position base (by default: center)."
 msgstr ""
 "Sélectionner la position de base pour la réduction (par défaut le centre)."
 
-#: includes/class-gllr-settings.php:424
+#: includes/class-gllr-settings.php:457
 #, fuzzy
 msgid "Image Title"
 msgstr "Titre de l'image"
 
-#: includes/class-gllr-settings.php:426
+#: includes/class-gllr-settings.php:459
 #, fuzzy
 msgid "Enable to display image title along with the gallery image."
 msgstr "Activer pour afficher le titre avec l'image dans la galerie."
 
-#: includes/class-gllr-settings.php:437
+#: includes/class-gllr-settings.php:470
 #, fuzzy
 msgid "Image Title Position"
 msgstr "Position du titre de l'image"
 
-#: includes/class-gllr-settings.php:442
+#: includes/class-gllr-settings.php:475
 #, fuzzy
 msgid "Under image"
 msgstr "Sous l'image"
 
-#: includes/class-gllr-settings.php:448
+#: includes/class-gllr-settings.php:481
 #, fuzzy
 msgid "On mouse hover"
 msgstr "Par survol de la souris"
 
-#: includes/class-gllr-settings.php:461
+#: includes/class-gllr-settings.php:494
 #, fuzzy
 msgid "Image Border"
 msgstr "Image avec bordure"
 
-#: includes/class-gllr-settings.php:463
+#: includes/class-gllr-settings.php:496
 msgid ""
 "Enable images border using the styles defined for Image Border Size and "
 "Color options."
 msgstr ""
 
-#: includes/class-gllr-settings.php:467
+#: includes/class-gllr-settings.php:500
 #, fuzzy
 msgid "Image Border Size"
 msgstr "Taille de la bordure de l'image"
 
-#: includes/class-gllr-settings.php:470
+#: includes/class-gllr-settings.php:503
 #, fuzzy, php-format
 msgid "Gallery image border width (default is %s)"
 msgstr "Largeur de la bordure pour les images (par défaut %s)"
 
-#: includes/class-gllr-settings.php:474
+#: includes/class-gllr-settings.php:507
 #, fuzzy
 msgid "Image Border Color"
 msgstr "Choisir une couleur pour la bordure"
 
-#: includes/class-gllr-settings.php:487
+#: includes/class-gllr-settings.php:520
 #, fuzzy
 msgid "Pagination"
 msgstr "Pagination"
 
-#: includes/class-gllr-settings.php:490
+#: includes/class-gllr-settings.php:523
 #, fuzzy
 msgid ""
 "Enable pagination for images to limit number of images displayed on a single "
@@ -830,41 +899,37 @@ msgstr ""
 "Activer la pagination pour les images afin de limiter le nombre d'images "
 "affichées sur une seule page dans la galerie."
 
-#: includes/class-gllr-settings.php:494
+#: includes/class-gllr-settings.php:527
 #, fuzzy
 msgid "Number of Images"
 msgstr "Nombre d'images"
 
-#: includes/class-gllr-settings.php:497
+#: includes/class-gllr-settings.php:530
 #, fuzzy, php-format
 msgid "Number of images displayed per page (default is %d)."
 msgstr "Nombre d'images affichées par page (par défaut %d)."
 
-#: includes/class-gllr-settings.php:507
+#: includes/class-gllr-settings.php:540
 #, fuzzy
 msgid "Sort Images by"
 msgstr "Trier les images par"
 
-#: includes/class-gllr-settings.php:510
+#: includes/class-gllr-settings.php:543
 #, fuzzy
 msgid "Manually (default)"
 msgstr "Manuel (défaut)"
 
-#: includes/class-gllr-settings.php:511
+#: includes/class-gllr-settings.php:544
 #, fuzzy
 msgid "Image ID"
 msgstr "Image ID"
 
-#: includes/class-gllr-settings.php:512
+#: includes/class-gllr-settings.php:545
 #, fuzzy
 msgid "Name"
 msgstr "Nom"
 
-#: includes/class-gllr-settings.php:514 includes/class-gllr-settings.php:685
-msgid "Random"
-msgstr "Nasumično"
-
-#: includes/class-gllr-settings.php:516
+#: includes/class-gllr-settings.php:549
 #, fuzzy
 msgid ""
 "Select images sorting order in your gallery. By default, you can sort images "
@@ -873,27 +938,27 @@ msgstr ""
 "Choisir l'ordre de tri des images dans votre galerie. Par défaut, vous "
 "pouvez trier les images manuellement dans l'onglet des images. "
 
-#: includes/class-gllr-settings.php:520
+#: includes/class-gllr-settings.php:553
 #, fuzzy
 msgid "Arrange Images by"
 msgstr "Trier les images par"
 
-#: includes/class-gllr-settings.php:523 includes/class-gllr-settings.php:694
+#: includes/class-gllr-settings.php:556 includes/class-gllr-settings.php:727
 #, fuzzy
 msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
 msgstr "Ascendant  (par ex 1, 2, 3; a, b, c)"
 
-#: includes/class-gllr-settings.php:524 includes/class-gllr-settings.php:695
+#: includes/class-gllr-settings.php:557 includes/class-gllr-settings.php:728
 #, fuzzy
 msgid "Descending (e.g. 3, 2, 1; c, b, a)"
 msgstr "Descendant (par ex 1, 2, 3; a, b, c)"
 
-#: includes/class-gllr-settings.php:529
+#: includes/class-gllr-settings.php:562
 #, fuzzy
 msgid "Back Link"
 msgstr "Lien de retour"
 
-#: includes/class-gllr-settings.php:531
+#: includes/class-gllr-settings.php:564
 #, fuzzy
 msgid ""
 "Enable to show a back link in a single gallery page which navigate to a "
@@ -902,110 +967,110 @@ msgstr ""
 "Activer pour afficher un lien de retour dans la page d'une galerie vers la "
 "page précédente."
 
-#: includes/class-gllr-settings.php:535
+#: includes/class-gllr-settings.php:568
 #, fuzzy
 msgid "Back Link URL"
 msgstr "L'URL pour le lien de retour"
 
-#: includes/class-gllr-settings.php:538
+#: includes/class-gllr-settings.php:571
 #, fuzzy
 msgid "Back link custom page URL. Leave blank to use Gallery page template."
 msgstr ""
 "Lien de retour personnalisé vers une page. Laisser vide pour utiliser le "
 "modèle de page de galerie."
 
-#: includes/class-gllr-settings.php:542
+#: includes/class-gllr-settings.php:575
 #, fuzzy
 msgid "Back Link Label"
 msgstr "Libellé pour le lien de retour"
 
-#: includes/class-gllr-settings.php:548
+#: includes/class-gllr-settings.php:581
 #, fuzzy
 msgid "Back Link with Shortcode"
 msgstr "Lien de retour dans le code court"
 
-#: includes/class-gllr-settings.php:551
+#: includes/class-gllr-settings.php:584
 #, fuzzy
 msgid "Enable to display a back link on a page where shortcode is used."
 msgstr ""
 "Activer pour afficher le lien de retour vers la page où le code court est "
 "utilisé."
 
-#: includes/class-gllr-settings.php:562
+#: includes/class-gllr-settings.php:595
 #, fuzzy
 msgid "Cover Settings"
 msgstr "Paramètres de couverture"
 
-#: includes/class-gllr-settings.php:567
+#: includes/class-gllr-settings.php:600
 #, fuzzy
 msgid "Galleries Page"
 msgstr "Page des galeries"
 
-#: includes/class-gllr-settings.php:575
+#: includes/class-gllr-settings.php:608
 #, fuzzy
 msgid "Base page where all existing galleries will be displayed."
 msgstr "Page de base où toutes les galeries existantes seront affichées."
 
-#: includes/class-gllr-settings.php:579
+#: includes/class-gllr-settings.php:612
 msgid "Albums Displaying"
 msgstr ""
 
-#: includes/class-gllr-settings.php:582
+#: includes/class-gllr-settings.php:615
 msgid "Column"
 msgstr ""
 
-#: includes/class-gllr-settings.php:583
+#: includes/class-gllr-settings.php:616
 msgid "Rows"
 msgstr ""
 
-#: includes/class-gllr-settings.php:585
+#: includes/class-gllr-settings.php:618
 msgid "Select the way galleries will be displayed on the Galleries Page."
 msgstr ""
 
-#: includes/class-gllr-settings.php:589
+#: includes/class-gllr-settings.php:622
 msgid "Column Alignment"
 msgstr ""
 
-#: includes/class-gllr-settings.php:592
+#: includes/class-gllr-settings.php:625
 #, fuzzy
 msgid "Left"
 msgstr "Gauche"
 
-#: includes/class-gllr-settings.php:593
+#: includes/class-gllr-settings.php:626
 msgid "Right"
 msgstr ""
 
-#: includes/class-gllr-settings.php:594
+#: includes/class-gllr-settings.php:627
 msgid "Center"
 msgstr ""
 
-#: includes/class-gllr-settings.php:596
+#: includes/class-gllr-settings.php:629
 msgid "Select the column alignment."
 msgstr ""
 
-#: includes/class-gllr-settings.php:600
+#: includes/class-gllr-settings.php:633
 #, fuzzy
 msgid "Cover Image Size"
 msgstr "Taille de l'image de couverture"
 
-#: includes/class-gllr-settings.php:608
+#: includes/class-gllr-settings.php:641
 #, fuzzy
 msgid "Maximum cover image size. Custom uses the Image Dimensions values."
 msgstr ""
 "Taille maximum de l'image de couverture. Utiliser les dimensions "
 "personnalisées de l'image."
 
-#: includes/class-gllr-settings.php:612
+#: includes/class-gllr-settings.php:645
 #, fuzzy
 msgid "Custom Cover Image Size"
 msgstr "Taille personnalisée de l'image de couverture"
 
-#: includes/class-gllr-settings.php:625
+#: includes/class-gllr-settings.php:658
 #, fuzzy
 msgid "Crop Cover Images"
 msgstr "Réduire les images de couverture"
 
-#: includes/class-gllr-settings.php:627
+#: includes/class-gllr-settings.php:660
 #, fuzzy
 msgid ""
 "Enable to crop images using the sizes defined for Custom Cover Image Size. "
@@ -1015,12 +1080,12 @@ msgstr ""
 "dans le champ de personnalisation. Désactiver pour restaurer les images "
 "automatiquement en utilisant leur aspect d'origine."
 
-#: includes/class-gllr-settings.php:656
+#: includes/class-gllr-settings.php:689
 #, fuzzy
 msgid "Cover Image Border"
 msgstr "Bordure de l'image de couverture"
 
-#: includes/class-gllr-settings.php:658
+#: includes/class-gllr-settings.php:691
 #, fuzzy
 msgid ""
 "Enable cover images border using the styles defined for Image Border Size "
@@ -1029,66 +1094,47 @@ msgstr ""
 "Activer les bordures de l'image de couverture avec la taille et la couleur "
 "définies."
 
-#: includes/class-gllr-settings.php:662
+#: includes/class-gllr-settings.php:695
 #, fuzzy
 msgid "Cover Image Border Size"
 msgstr "Taille de la bordure de l'image de couverture"
 
-#: includes/class-gllr-settings.php:665
+#: includes/class-gllr-settings.php:698
 #, fuzzy, php-format
 msgid "Cover image border width (default is %s)"
 msgstr "Taille de la bordure de l'image de couverture (par défaut %s)"
 
-#: includes/class-gllr-settings.php:669
+#: includes/class-gllr-settings.php:702
 #, fuzzy
 msgid "Cover Image Border Color"
 msgstr "Couleur de la bordure de l'image de couverture"
 
-#: includes/class-gllr-settings.php:675
+#: includes/class-gllr-settings.php:708
 #, fuzzy
 msgid "Sort Albums by"
 msgstr "Trier les albums par"
 
-#: includes/class-gllr-settings.php:678
-#, fuzzy
-msgid "Gallery ID"
-msgstr "Galerie ID"
-
-#: includes/class-gllr-settings.php:681
-#, fuzzy
-msgid "Last modified date"
-msgstr "Date de dernière modification"
-
-#: includes/class-gllr-settings.php:682
-#, fuzzy
-msgid "Comment count"
-msgstr "Nombre de commentaires"
-
-#: includes/class-gllr-settings.php:683
-msgid "\"Order\" field on the gallery edit page"
-msgstr ""
-
-#: includes/class-gllr-settings.php:687
+#: includes/class-gllr-settings.php:720
 #, fuzzy
 msgid "Select galleries sorting order in your galleries page."
 msgstr "Choisissez l'ordre de tri de vos galeries dans la page des albums."
 
-#: includes/class-gllr-settings.php:691
+#: includes/class-gllr-settings.php:724
 #, fuzzy
 msgid "Arrange Albums by"
 msgstr "Tirer les albums par"
 
-#: includes/class-gllr-settings.php:700
+#: includes/class-gllr-settings.php:733
 #, fuzzy
 msgid "Read More Link Label"
 msgstr "Texte pour le lien \"En savoir plus\""
 
-#: includes/class-gllr-settings.php:713
+#: includes/class-gllr-settings.php:746
 #, fuzzy
 msgid "Instant Lightbox"
 msgstr "Lightbox rapide"
 
-#: includes/class-gllr-settings.php:716
+#: includes/class-gllr-settings.php:749
 #, fuzzy
 msgid ""
 "Enable to display all images in the lightbox after clicking cover image or "
@@ -1098,24 +1144,34 @@ msgstr ""
 "cliquer sur l'image de couverture ou le lien au lieu d'une page avec la "
 "galerie"
 
-#: includes/class-gllr-settings.php:730
+#: includes/class-gllr-settings.php:763
 #, fuzzy
 msgid "Lightbox Settings"
 msgstr "Paramètres lightbox"
 
-#: includes/class-gllr-settings.php:735
+#: includes/class-gllr-settings.php:768
+msgid "Unclickable Thumbnail Images"
+msgstr ""
+
+#: includes/class-gllr-settings.php:771
+msgid ""
+"Enable to make the images in a single gallery unclickable and hide their "
+"URLs. This option also disables Lightbox."
+msgstr ""
+
+#: includes/class-gllr-settings.php:775
 #, fuzzy
 msgid "Enable Lightbox"
 msgstr "Activer Lightbox"
 
-#: includes/class-gllr-settings.php:738
+#: includes/class-gllr-settings.php:778
 #, fuzzy
 msgid "Enable to show the lightbox when clicking on gallery images."
 msgstr ""
 "Activer pour voir la lightbox lorsque l'on clique sur une image de la "
 "galerie."
 
-#: includes/class-gllr-settings.php:756
+#: includes/class-gllr-settings.php:796
 #, fuzzy
 msgid ""
 "Select the maximum gallery image size for the lightbox view. \"Default\" "
@@ -1124,105 +1180,105 @@ msgstr ""
 "Choisissez la taille maximum de l'image pour la lightbox. \"Défaut\" "
 "affichera l'image d'origine dans sa taille d'origine."
 
-#: includes/class-gllr-settings.php:760
+#: includes/class-gllr-settings.php:800
 #, fuzzy
 msgid "Overlay Color"
 msgstr "Couleur de superposition"
 
-#: includes/class-gllr-settings.php:766
+#: includes/class-gllr-settings.php:806
 #, fuzzy
 msgid "Overlay Opacity"
 msgstr "Opacité de la superposition"
 
-#: includes/class-gllr-settings.php:769
+#: includes/class-gllr-settings.php:809
 #, php-format
 msgid ""
 "Lightbox overlay opacity. Leave blank to disable opacity (default is %s, max "
 "is %s)."
 msgstr ""
 
-#: includes/class-gllr-settings.php:779
+#: includes/class-gllr-settings.php:819
 #, fuzzy
 msgid "Slideshow"
 msgstr "Diaporama"
 
-#: includes/class-gllr-settings.php:781
+#: includes/class-gllr-settings.php:821
 #, fuzzy
 msgid "Enable to start the slideshow automatically when the lightbox is used."
 msgstr ""
 "Activer pour lancer le diaporama automatiquement quand la lightbox est "
 "utilisée."
 
-#: includes/class-gllr-settings.php:785
+#: includes/class-gllr-settings.php:825
 #, fuzzy
 msgid "Slideshow Duration"
 msgstr "Durée du diaporama"
 
-#: includes/class-gllr-settings.php:787
+#: includes/class-gllr-settings.php:827
 #, fuzzy
 msgid "ms"
 msgstr "ms"
 
-#: includes/class-gllr-settings.php:788
+#: includes/class-gllr-settings.php:828
 #, fuzzy
 msgid "Slideshow interval duration between two images."
 msgstr "Durée entre deux images dans le diaporama."
 
-#: includes/class-gllr-settings.php:799
+#: includes/class-gllr-settings.php:839
 #, fuzzy
 msgid "Lightbox Helpers"
 msgstr "Lightbox helper"
 
-#: includes/class-gllr-settings.php:801
+#: includes/class-gllr-settings.php:841
 #, fuzzy
 msgid "Enable to display the lightbox toolbar and arrows."
 msgstr "Activer pour voir les options PRO de cette extension."
 
-#: includes/class-gllr-settings.php:805
+#: includes/class-gllr-settings.php:845
 #, fuzzy
 msgid "Lightbox Thumbnails"
 msgstr "Vignettes de la lightbox"
 
-#: includes/class-gllr-settings.php:807
+#: includes/class-gllr-settings.php:847
 msgid "Enable to use a lightbox helper navigation between images."
 msgstr ""
 
-#: includes/class-gllr-settings.php:811
+#: includes/class-gllr-settings.php:851
 #, fuzzy
 msgid "Lightbox Thumbnails Position"
 msgstr "Position des vignettes de la lightbox"
 
-#: includes/class-gllr-settings.php:814
+#: includes/class-gllr-settings.php:854
 #, fuzzy
 msgid "Top"
 msgstr "Haut"
 
-#: includes/class-gllr-settings.php:819
+#: includes/class-gllr-settings.php:859
 #, fuzzy
 msgid "Lightbox Button Label"
 msgstr "Label du bouton pour Lightbox"
 
-#: includes/class-gllr-settings.php:821
+#: includes/class-gllr-settings.php:861
 #, fuzzy
 msgid "Read More"
 msgstr "Lire plus..."
 
-#: includes/class-gllr-settings.php:831
+#: includes/class-gllr-settings.php:871
 #, fuzzy
 msgid "Download Button"
 msgstr "Bouton de téléchargement"
 
-#: includes/class-gllr-settings.php:833
+#: includes/class-gllr-settings.php:873
 #, fuzzy
 msgid "Enable to display download button."
 msgstr "Activer pour voir le bouton de téléchargement."
 
-#: includes/class-gllr-settings.php:837
+#: includes/class-gllr-settings.php:877
 #, fuzzy
 msgid "Single Lightbox"
 msgstr "Lightbox simple"
 
-#: includes/class-gllr-settings.php:839
+#: includes/class-gllr-settings.php:879
 #, fuzzy
 msgid ""
 "Enable to use a single lightbox for multiple galleries located on a single "
@@ -1231,45 +1287,45 @@ msgstr ""
 "Activer pour utiliser un seul diaporama pour plusieurs galeries se trouvant "
 "sur la même page."
 
-#: includes/class-gllr-settings.php:849
+#: includes/class-gllr-settings.php:889
 #, fuzzy
 msgid "Social Sharing Buttons Settings"
 msgstr "Paramètres des boutons des réseaux sociaux"
 
-#: includes/class-gllr-settings.php:857
+#: includes/class-gllr-settings.php:898
 #, fuzzy
 msgid "Social Buttons"
 msgstr ""
 "Afficher les boutons de partage sur les réseaux sociaux dans la lightbox"
 
-#: includes/class-gllr-settings.php:859
+#: includes/class-gllr-settings.php:900
 #, fuzzy
 msgid "Enable social sharing buttons in the lightbox."
 msgstr ""
 "Afficher les boutons de partage sur les réseaux sociaux dans la lightbox"
 
-#: includes/class-gllr-settings.php:863
+#: includes/class-gllr-settings.php:904
 #, fuzzy
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: includes/class-gllr-settings.php:874
+#: includes/class-gllr-settings.php:915
 #, fuzzy
 msgid "Counter"
 msgstr "Compteur"
 
-#: includes/class-gllr-settings.php:877
+#: includes/class-gllr-settings.php:918
 msgid ""
 "Enable to show likes counter for each social button (not available for "
 "Google +1)."
 msgstr ""
 
-#: includes/class-gllr-settings.php:892
+#: includes/class-gllr-settings.php:933
 #, fuzzy
 msgid "Demo Data"
 msgstr "Données de démonstration"
 
-#: includes/class-gllr-settings.php:894
+#: includes/class-gllr-settings.php:935
 #, fuzzy
 msgid ""
 "Install demo data to create galleries with images, post with shortcodes and "
@@ -1279,12 +1335,12 @@ msgstr ""
 "images, des articles avec les différents codes courts, des pages avec des "
 "listes de galeries seront créés."
 
-#: includes/class-gllr-settings.php:913
+#: includes/class-gllr-settings.php:973
 #, fuzzy
 msgid "Gallery Post Type"
 msgstr "Type d'article de Galerie"
 
-#: includes/class-gllr-settings.php:915
+#: includes/class-gllr-settings.php:975
 #, fuzzy
 msgid ""
 "Enable to avoid conflicts with other gallery plugins installed. All "
@@ -1297,32 +1353,27 @@ msgstr ""
 "cependant, après la modification, merci de vérifier le paramétrage de vos "
 "autres extensions où le type d'article 'galerie' est utilisé."
 
-#: includes/class-gllr-settings.php:927
+#: includes/class-gllr-settings.php:987
 #, fuzzy
 msgid "Gallery Slug"
 msgstr "Identifiant de la galerie"
 
-#: includes/class-gllr-settings.php:931
+#: includes/class-gllr-settings.php:991
 #, fuzzy
 msgid "Enter the unique gallery slug."
 msgstr "Saisir le slug unique pour la galerie."
 
-#: includes/class-gllr-settings.php:947
+#: includes/class-gllr-settings.php:1007
 #, fuzzy
 msgid "Activate Now"
 msgstr "Activer maintenant"
 
-#: includes/class-gllr-settings.php:962
-#, fuzzy
-msgid "Install Now"
-msgstr "Installer maintenant"
-
-#: includes/class-gllr-settings.php:965
+#: includes/class-gllr-settings.php:1025
 #, fuzzy
 msgid "Enable to include galleries to your website search."
 msgstr "Activer pour inclure les galeries dans la recherche de votre site."
 
-#: includes/class-gllr-settings.php:965
+#: includes/class-gllr-settings.php:1025
 #, fuzzy, php-format
 msgid "%s is required."
 msgstr "%s est requis"
@@ -1474,10 +1525,6 @@ msgstr "Oui, installer les données de démonstration"
 #, fuzzy
 #~ msgid "Learn more"
 #~ msgstr "Pročitaj više"
-
-#, fuzzy
-#~ msgid "Activate"
-#~ msgstr "Aktivirani moduli"
 
 #, fuzzy
 #~ msgid "Enable social sharing buttons in the Lightbox."
@@ -1663,10 +1710,6 @@ msgstr "Oui, installer les données de démonstration"
 
 #~ msgid "Select a background color"
 #~ msgstr "Izaberi pozadinsku boju"
-
-#, fuzzy
-#~ msgid "Sort galleries by"
-#~ msgstr "Poređaj slike po"
 
 #~ msgid "Width (in px)"
 #~ msgstr "Širina (u pikselima)"

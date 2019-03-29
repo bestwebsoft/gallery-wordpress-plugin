@@ -39,7 +39,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			} else {
 				$tabs = array(
 					'images' 		=> array( 'label' => __( 'Images', 'gallery-plugin' ) ),
-					'settings' 		=> array( 'label' => __( 'Settings', 'gallery-plugin' ), 'is_pro' => 1 ),
+					'settings' 		=> array( 'label' => __( 'Settings', 'gallery-plugin' ) ),
 				);
 			}
 
@@ -303,26 +303,62 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		/**
 		 *
 		 */
-		public function tab_settings() { ?>
+		public function tab_settings() {
+
+			$wp_gallery_media_table = new Gllr_Media_Table();
+			$wp_gallery_media_table->prepare_items();
+
+			$all_plugins = get_plugins();
+			$attrs = $plugin_notice = ''; ?>
+
 			<h3 class="bws_tab_label"><?php _e( 'Gallery Settings', 'gallery-plugin' ); ?></h3>
 			<?php $this->help_phrase(); ?>
 			<hr>
 			<?php if ( ! $this->is_global_settings ) { ?>
-				<div class="bws_pro_version_bloc">
-					<div class="bws_pro_version_table_bloc">
-						<div class="bws_table_bg"></div>
-						<table class="form-table bws_pro_version">
-							<tr valign="top">
-								<th scope="row"><?php _e( 'Single Gallery Settings', 'gallery-plugin' ); ?> </th>
-								<td>
-									<input disabled="disabled" type="checkbox" /> <span class="bws_info"><?php printf( __( 'Enable to configure single gallery settings and disable %s.', 'gallery-plugin' ), '<a style="z-index: 2;position: relative;" href="edit.php?post_type=' . $this->options['post_type_name'] . '&page=gallery-plugin.php" target="_blank">' . __( 'Global Settings', 'gallery-plugin' ) . '</a>' ); ?></span>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<?php $this->bws_pro_block_links(); ?>
-				</div>
-			<?php } else {
+                <table class="form-table ">
+                    <tr valign="top">
+                        <th scope="row"><?php _e( 'Add Gallery to the Slider', 'gallery-plugin' ); ?> </th>
+                        <td>
+                            <?php $plugin_info = gallery_plugin_status(
+                                'slider-bws/slider-bws.php',
+                                $all_plugins,
+                                $this->is_network_options
+                            );
+                            if ( '0' == $wp_gallery_media_table->_pagination_args['total_items'] ) {
+                                $attrs = 'disabled="disabled"';
+                            }
+                            if ( 'deactivated' == $plugin_info['status'] ) {
+                                $attrs = 'disabled="disabled"';
+                                $plugin_notice = ' <a href="' . self_admin_url( 'plugins.php' ). '">' . __( 'Activate', 'gallery-plugin' ) . '</a>';
+                            } elseif ( 'not_installed' == $plugin_info['status'] ) {
+                                $attrs = 'disabled="disabled"';
+                                $plugin_notice = ' <a href="https://bestwebsoft.com/products/wordpress/plugins/slider/' . '" target="_blank">' . __( 'Install Now', 'gallery-plugin' ) . '</a>';
+                            }
+                            $export = __( 'Add', 'gallery-plugin' ) ?>
+                            <input type="button" <?php echo $this->change_permission_attr; ?> class="button" <?php echo $attrs; ?> id="gllr-export-slider" name="gllr-export-slider" value="<?php echo $export ?>">
+                            <span id="gllr_export_loader" class="gllr_loader"><img src="<?php echo plugins_url( '../images/ajax-loader.gif', __FILE__ ); ?>" alt="loader" /></span><br />
+                            <span class="bws_info"><?php _e( 'Click to add current gallery to the slider. Slider plugin is required.', 'gallery-plugin' ); echo $plugin_notice; ?></span>
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+                <?php if ( ! $this->hide_pro_tabs ) { ?>
+                    <div class="bws_pro_version_bloc">
+                        <div class="bws_pro_version_table_bloc">
+                            <div class="bws_table_bg"></div>
+                            <table class="form-table bws_pro_version">
+                                <tr valign="top">
+                                    <th scope="row"><?php _e( 'Single Gallery Settings', 'gallery-plugin' ); ?> </th>
+                                    <td>
+                                        <input disabled="disabled" type="checkbox" /> <span class="bws_info"><?php printf( __( 'Enable to configure single gallery settings and disable %s.', 'gallery-plugin' ), '<a style="z-index: 2;position: relative;" href="edit.php?post_type=' . $this->options['post_type_name'] . '&page=gallery-plugin.php" target="_blank">' . __( 'Global Settings', 'gallery-plugin' ) . '</a>' ); ?></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <?php $this->bws_pro_block_links(); ?>
+                    </div>
+                <?php }
+			} else {
 				if ( ! $this->hide_pro_tabs ) { ?>
 					<div class="bws_pro_version_bloc">
 						<div class="bws_pro_version_table_bloc">

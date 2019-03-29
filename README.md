@@ -15,6 +15,7 @@
 <li>Gallery categories</li>
 </ul>
 </li>
+<li>Add Gallery to the <a href="https://bestwebsoft.com/products/wordpress/plugins/slider/" rel="nofollow">Slider</a> [NEW]</li>
 <li>Choose albums layout:
 <ul>
 <li>Column</li>

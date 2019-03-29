@@ -290,6 +290,21 @@ function gllr_setError( msg ) {
 				} );
 			}
 		} );
+
+		$( '#gllr-export-slider' ).on( 'click', function() {
+			$.ajax( {
+				url: ajaxurl,
+				type: "POST",
+				data:  { action: 'gllr_export_slider', post_id: gllr_vars.post, post_title: gllr_vars.title, gllr_ajax_nonce_field: gllr_vars.gllr_nonce },
+				beforeSend: function() {
+					$( '.gllr_loader' ).css( 'display', 'inline-block' );
+				},
+				success: function () {
+					$( '.gllr_loader' ).hide();
+					$( '<div class="updated fade"><p><strong>' + gllr_vars.export_message + '</strong></p></div>' ).insertAfter( "#titlewrap" );
+				}
+			} );
+		} );
 	} );
 } )( jQuery );
 

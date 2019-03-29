@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.5.9
+Version: 4.6.0
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -150,6 +150,120 @@ if ( ! function_exists( 'gllr_plugin_activate' ) ) {
 			restore_current_blog();
 		} else {
 			register_uninstall_hook( __FILE__, 'gllr_plugin_uninstall' );
+		}
+	}
+}
+
+// check plugin status
+if ( ! function_exists( 'gallery_plugin_status' ) ) {
+	function gallery_plugin_status( $plugins, $all_plugins, $is_network ) {
+		$result = array(
+			'status'		=> '',
+			'plugin'		=> '',
+			'plugin_info'	=> array(),
+		);
+		foreach ( ( array )$plugins as $plugin ) {
+			if ( array_key_exists( $plugin, $all_plugins ) ) {
+				if (
+					( $is_network && is_plugin_active_for_network( $plugin ) ) ||
+					( ! $is_network && is_plugin_active( $plugin ) )
+				) {
+					$result['status'] = 'actived';
+					$result['plugin'] = $plugin;
+					$result['plugin_info'] = $all_plugins[ $plugin ];
+					break;
+				} else {
+					$result['status'] = 'deactivated';
+					$result['plugin'] = $plugin;
+					$result['plugin_info'] = $all_plugins[ $plugin ];
+				}
+			}
+		}
+		if ( empty( $result['status'] ) ) {
+			$result['status'] = 'not_installed';
+		}
+		return $result;
+	}
+}
+
+// export gallery to the slider
+if ( ! function_exists( 'gllr_export_slider' ) ) {
+	function gllr_export_slider () {
+		global $wpdb;
+
+		$id = $_POST['post_id'];
+		$title = $_POST['post_title'];
+
+		$select = $wpdb->get_results( "
+            SELECT meta_value 
+            FROM {$wpdb->prefix}postmeta
+            WHERE post_id = '$id'
+            AND meta_key = '_gallery_images'
+        ", ARRAY_A );
+
+		if ( $select ) {
+
+			$get_meta_val = $select[0]['meta_value'];
+			$explode_meta_val = explode(',', $get_meta_val);
+
+			$sldr_settings = array(
+				'loop'                  => false,
+				'nav'                   => false,
+				'dots'                  => false,
+				'items'                 => 1,
+				'autoplay'              => false,
+				'autoplay_timeout'      => 2000,
+				'autoplay_hover_pause'  => false
+			);
+
+			$serialize_sldr_settings = serialize( $sldr_settings );
+
+			$wpdb->insert( $wpdb->prefix . 'sldr_slider',
+				array(
+					'title'     => $title,
+					'datetime'  => date( 'Y-m-d' ),
+					'settings'  => $serialize_sldr_settings
+				)
+			);
+
+			$slider_id = $wpdb->get_results( "
+                SELECT slider_id 
+                FROM {$wpdb->prefix}sldr_slider
+                WHERE title = '$title'
+            ", ARRAY_A );
+
+			$data_slide = array();
+			$data_relation = array();
+			$slice = array_values( array_slice( $slider_id, -1 ) )[0];
+			$i = 0;
+
+			foreach ( $explode_meta_val as $val ) {
+				$i++;
+				$data_slide[] = '("' . $val . '","' . $i . '")';
+				$data_relation[] = '("' . $slice['slider_id'] . '","' . $val . '")';
+			}
+
+			$implode_data_slide = implode( ', ', $data_slide );
+
+			$implode_data_relation = implode( ', ', $data_relation );
+
+			$check_duplicate = $wpdb->get_results( "
+                SELECT slide_id 
+                FROM {$wpdb->prefix}sldr_slide
+                WHERE attachment_id = '$get_meta_val'
+            ", ARRAY_A );
+
+			if ( ! $check_duplicate) {
+				$wpdb->query( "
+                    INSERT INTO {$wpdb->prefix}sldr_slide ( `attachment_id`, `order` )
+                    VALUES {$implode_data_slide}
+                " );
+            }
+
+			$wpdb->query( "
+                INSERT INTO {$wpdb->prefix}sldr_relation ( `slider_id`, `attachment_id` )
+                VALUES {$implode_data_relation}
+            " );
 		}
 	}
 }
@@ -1748,7 +1862,7 @@ if ( ! function_exists( 'gllr_plugin_action_links' ) ) {
 
 if ( ! function_exists ( 'gllr_admin_head' ) ) {
 	function gllr_admin_head() {
-		global $wp_version, $gllr_plugin_info, $post_type, $pagenow, $gllr_options;
+		global $wp_version, $gllr_plugin_info, $post_type, $pagenow, $gllr_options, $post;
 
 		wp_enqueue_style( 'gllr_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 		wp_enqueue_script( 'jquery' );
@@ -1781,6 +1895,9 @@ if ( ! function_exists ( 'gllr_admin_head' ) ) {
 					'confirm_update_gallery'	=> __( "Switching to another mode, all unsaved data will be lost. Save data before switching?", 'gallery-plugin' ),
 					'wp_media_title'			=> __( 'Insert Media', 'gallery-plugin' ),
 					'wp_media_button'			=> __( 'Insert', 'gallery-plugin' ),
+					'export_message'            => __( 'Gallery has been successfully added!', 'gallery-plugin' ),
+					'post'                      => $post->ID,
+					'title'                     => $post->post_title
 				)
 			);
 		}
@@ -2505,7 +2622,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			$sortable = array();
 			$current_page = $this->get_pagenum();
 			$this->_column_headers = array( $columns, $hidden, $sortable );
-			$images_id = get_post_meta( $original_post->ID, '_gallery_images', true );
+			$original_post ? $images_id = get_post_meta( $original_post->ID, '_gallery_images', true ) : false;
 			if ( empty( $images_id ) ) {
 				$total_items = 0;
 			} else {
@@ -2709,7 +2826,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			$old_post = $post;
 			add_filter( 'the_title','esc_html' );
 
-			$images_id = get_post_meta( $original_post->ID, '_gallery_images', true );
+			$original_post ? $images_id = get_post_meta( $original_post->ID, '_gallery_images', true ) : false;
 			query_posts( array(
 				'post__in'			=> explode( ',', $images_id ),
 				'post_type'			=> 'attachment',
@@ -3462,3 +3579,5 @@ add_filter( 'bws_shortcode_button_content', 'gllr_shortcode_button_content' );
 add_action( 'wp_ajax_gllr_delete_image', 'gllr_delete_image' );
 add_action( 'wp_ajax_gllr_add_from_media', 'gllr_add_from_media' );
 add_action( 'wp_ajax_gllr_change_view_mode', 'gllr_change_view_mode' );
+
+add_action( 'wp_ajax_gllr_export_slider', 'gllr_export_slider' );
