@@ -4,7 +4,7 @@ Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 4.0
 Tested up to: 5.1.1
-Stable tag: 4.6.0
+Stable tag: 4.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 	* Albums to gallery
 	* Images to album
 	* Gallery categories
-* Add Gallery to the [Slider](https://bestwebsoft.com/products/wordpress/plugins/slider/) [NEW]
+* Add Gallery to the [Slider](https://bestwebsoft.com/products/wordpress/plugins/slider/)
 * Choose albums layout:
 	* Column
 	* Rows
@@ -226,6 +226,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 9. Adding Gallery Categories Widget.
 
 == Changelog ==
+
+= V4.6.1 - 09.05.2019 =
+* Update : The function for returning an array of objects has been added.
 
 = V4.6.0 - 29.03.2019 =
 * NEW : Ability to add a gallery to the slider has been added.
@@ -665,6 +668,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.6.1 =
+* Functionality improved.
 
 = V4.6.0 =
 * New features added.
