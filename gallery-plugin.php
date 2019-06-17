@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.6.1
+Version: 4.6.2
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */

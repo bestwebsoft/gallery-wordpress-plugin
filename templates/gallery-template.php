@@ -31,8 +31,9 @@ get_header(); ?>
 										<div class='gllr_clear'></div>
 									</div>
 								</div><!-- .pagination -->
-								<?php if ( function_exists( 'pgntn_display_pagination' ) ) pgntn_display_pagination( 'custom', $content['second_query'] ); ?>
-							<?php }
+								<?php $custom_query = ( object ) array( 'max_num_pages' => $content['second_query']->max_num_pages, 'case' => 'bws-gallery');
+								if ( function_exists( 'pgntn_display_pagination' ) ) pgntn_display_pagination( 'custom', $custom_query );
+							}
 						} ?>
 					</div><!-- .gallery_box -->
 				<?php } else { ?>
