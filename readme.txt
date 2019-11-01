@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 4.0
-Tested up to: 5.2.2
-Stable tag: 4.6.3
+Tested up to: 5.2.4
+Stable tag: 4.6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,12 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 	* Albums to gallery
 	* Images to album
 	* Gallery categories
+* Add and configure latest galleries widget [NEW]:
+    * Title
+    * Button Text
+    * Link
+    * Number of Galleries
+    * Hover Color
 * Add Gallery to the [Slider](https://bestwebsoft.com/products/wordpress/plugins/slider/)
 * Choose albums layout:
 	* Column
@@ -219,13 +225,19 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 2. Single Gallery page in the front-end.
 3. The pop-up window containing the album images.
 4. Displaying Gallery Categories Widget in the Sidebar on your WordPress website.
-5. Edit Gallery page.
-6. Edit Gallery Image Info.
-7. Gallery Categories page.
-8. Gallery Global Settings page.
-9. Adding Gallery Categories Widget.
+5. "Latest Galleries" widget displaying in the footer.
+6. Edit Gallery page.
+7. Edit Gallery Image Info.
+8. Gallery Categories page.
+9. Gallery Global Settings page.
+10. Adding Gallery Categories Widget.
+11. The adding of the Latest Galleries widget.
 
 == Changelog ==
+
+= V4.6.4 - 01.11.2019 =
+* NEW : Ability to disable third-party fancybox has been added.
+* NEW : Widget with the Latest Galleries has been added.
 
 = V4.6.3 - 04.09.2019 =
 * Update: The deactivation feedback has been changed. Misleading buttons have been removed.
@@ -247,13 +259,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Bugfix : Compatibility with WPML has been fixed.
 * Update : All functionality was updated for WordPress 5.0.3.
 
-= V4.5.8 - 24.12.2018 = 
+= V4.5.8 - 24.12.2018 =
 * Update : All functionality was updated for WordPress 5.0.2.
 
-= V4.5.7 - 03.09.2018 = 
+= V4.5.7 - 03.09.2018 =
 * Bugfix: The bugs with the rewrite rules and the compatibility with third-party products have been fixed.
 
-= V4.5.6 - 27.08.2018 = 
+= V4.5.6 - 27.08.2018 =
 * Bugfix: The bug with the rewrite rules has been fixed.
 
 = V4.5.5 - 08.03.2018 =
@@ -677,8 +689,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Upgrade Notice ==
 
+= V4.6.4 =
+* New features added.
+
 = V4.6.3 =
-* Usability improved
+* Usability improved.
 
 = V4.6.2 =
 * Bugs fixed.
@@ -696,9 +711,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Bugs fixed.
 * The compatibility with new WordPress version updated.
 
-= V4.5.8 = 
+= V4.5.8 =
 * The compatibility with new WordPress version updated.
- 
+
 = V4.5.7 =
 * Bugs fixed.
 

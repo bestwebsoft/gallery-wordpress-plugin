@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 2.2.0
+* Version: 2.2.2
 */
 
 if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) )
@@ -116,7 +116,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 							'timeout' => ( ( defined('DOING_CRON') && DOING_CRON ) ? 30 : 3 ),
 							'body' => array( 'plugins' => serialize( $to_send ) ),
 							'user-agent' => 'WordPress/' . $wp_version . '; ' . get_bloginfo( 'url' ) );
-						$raw_response = wp_remote_post( 'http://bestwebsoft.com/wp-content/plugins/paid-products/plugins/update-check/1.0/', $options );
+						$raw_response = wp_remote_post( 'http://bestwebsoft.com/wp-content/plugins/paid-products/plugins/pro-license-check/1.0/', $options );
 
 						if ( is_wp_error( $raw_response ) || 200 != wp_remote_retrieve_response_code( $raw_response ) ) {
 							$error = __( "Something went wrong. Please try again later. If the error appears again, please contact us", 'bestwebsoft' ) . ' <a href="https://support.bestwebsoft.com">BestWebSoft</a>. ' . __( "We are sorry for inconvenience.", 'bestwebsoft' );
@@ -386,21 +386,20 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 						if ( !function_exists( 'curl_init' ) ) {
 							$received_content = file_get_contents( $url );
 						} else {
-							$ch = curl_init();
-							curl_setopt( $ch, CURLOPT_URL, $url );
-							curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-							curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
-							$received_content = curl_exec( $ch );
-							curl_close( $ch );
+							$args = array(
+								'method' 	  => 'POST',
+								'timeout'     => 100
+							);
+							$received_content = wp_remote_post( $url, $args );
 						}
 
-						if ( ! $received_content ) {
+						if ( ! $received_content['body'] ) {
 							$error = __( "Failed to download the zip archive. Please, upload the plugin manually", 'bestwebsoft' );
 						} else {
 							if ( is_writable( $uploadDir["path"] ) ) {
 								$file_put_contents = $uploadDir["path"] . "/" . $zip_name[0] . ".zip";
 
-								if ( file_put_contents( $file_put_contents, $received_content ) ) {
+								if ( file_put_contents( $file_put_contents, $received_content['body'] ) ) {
 									@chmod( $file_put_contents, octdec( 755 ) );
 
 									echo '<p>' . __( 'Unpacking the package', 'bestwebsoft' ) . '...</p>';

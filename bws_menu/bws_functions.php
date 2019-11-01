@@ -581,9 +581,8 @@ if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) ) {
 	function bws_admin_enqueue_scripts() {
 		global $wp_scripts, $hook_suffix;
 
-		$jquery_version = isset( $wp_scripts->registered['jquery-ui-core']->ver ) ? $wp_scripts->registered['jquery-ui-core']->ver : '1.12.1';
-
-		wp_enqueue_style( 'jquery-ui-style', '//code.jquery.com/ui/' . $jquery_version . '/themes/smoothness/jquery-ui.min.css', array(), $jquery_version );
+		$jquery_ui_version = isset( $wp_scripts->registered['jquery-ui-core']->ver ) ? $wp_scripts->registered['jquery-ui-core']->ver : '1.12.1';
+		wp_enqueue_style( 'jquery-ui-style', bws_menu_url( 'css/jquery-ui-styles/' . $jquery_ui_version . '/jquery-ui.css' ) );
 		wp_enqueue_style( 'bws-admin-css', bws_menu_url( 'css/general_style.css' ) );
 		wp_enqueue_script( 'bws-admin-scripts', bws_menu_url( 'js/general_script.js' ), array( 'jquery', 'jquery-ui-tooltip' ) );
 
@@ -696,8 +695,15 @@ if ( ! function_exists ( 'bws_plugins_admin_footer' ) ) {
 
 if ( ! function_exists ( 'bws_plugins_include_codemirror' ) ) {
 	function bws_plugins_include_codemirror() {
-		wp_enqueue_style( 'codemirror.css', bws_menu_url( 'css/codemirror.css' ) );
-		wp_enqueue_script( 'codemirror.js', bws_menu_url( 'js/codemirror.js' ), array( 'jquery' ) );
+		global $wp_version;
+		if ( version_compare( $wp_version,'4.9.0',  '>=' ) ) {
+			wp_enqueue_style('wp-codemirror');
+			wp_enqueue_script('wp-codemirror');
+        } else {
+			wp_enqueue_style( 'codemirror.css', bws_menu_url( 'css/codemirror.css' ) );
+			wp_enqueue_script( 'codemirror.js', bws_menu_url( 'js/codemirror.js' ), array( 'jquery' ) );
+        }
+
     }
 }
 

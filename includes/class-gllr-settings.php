@@ -114,18 +114,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			$custom_image_size_w_photo 	= intval( $_POST['gllr_custom_image_size_w_photo'] );
 			$custom_image_size_h_photo 	= intval( $_POST['gllr_custom_image_size_h_photo'] );
 			$custom_size_px_photo 		= array( $custom_image_size_w_photo, $custom_image_size_h_photo );
-			if ( 'photo-thumb' == $new_image_size_photo ) {
-				if ( $new_image_size_photo != $this->options['image_size_photo'] ) {
-					$need_image_update = true;
-				} else {
-					foreach ( $custom_size_px_photo as $key => $value ) {
-						if ( $value != $this->options['custom_size_px']['photo-thumb'][ $key ] ) {
-							$need_image_update = true;
-							break;
-						}
-					}
-				}
-			}
+
 			$this->options['custom_size_px']['photo-thumb'] = $custom_size_px_photo;
 			$this->options['image_size_photo'] 				= $new_image_size_photo;
 
@@ -153,18 +142,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			$custom_image_size_w_album 	= intval( $_POST['gllr_custom_image_size_w_album'] );
 			$custom_image_size_h_album 	= intval( $_POST['gllr_custom_image_size_h_album'] );
 			$custom_size_px_album 		= array( $custom_image_size_w_album, $custom_image_size_h_album );
-			if ( 'album-thumb' == $new_image_size_album ) {
-				if ( $new_image_size_album != $this->options['image_size_album'] ) {
-					$need_image_update = true;
-				} else {
-					foreach ( $custom_size_px_album as $key => $value ) {
-						if ( $value != $this->options['custom_size_px']['album-thumb'][ $key ] ) {
-							$need_image_update = true;
-							break;
-						}
-					}
-				}
-			}
+
 
 			$this->options['custom_size_px']['album-thumb'] = $custom_size_px_album;
 			$this->options['image_size_album'] 				= $new_image_size_album;
@@ -187,6 +165,8 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			$this->options["slideshow_interval"]	= empty( $_POST['gllr_slideshow_interval'] ) ? 2000 : intval( $_POST['gllr_slideshow_interval'] );
 			$this->options["lightbox_download_link"] = ( isset( $_POST['gllr_lightbox_download_link'] ) ) ? 1 : 0;
 			$this->options["single_lightbox_for_multiple_galleries"] = ( isset( $_POST['gllr_single_lightbox_for_multiple_galleries'] ) ) ? 1 : 0;
+
+			$this->options["disable_foreing_fancybox"] = ( isset( $_POST['gllr_disable_foreing_fancybox'] ) ) ? 1 : 0;
 
 			/**
 			 * rewriting post types name with unique one from default options
@@ -584,6 +564,12 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<span class="bws_info"><?php _e( 'Enable to display a back link on a page where shortcode is used.' , 'gallery-plugin' ); ?></span>
 						</td>
 					</tr>
+                    <tr valign="top">
+                        <th scope="row"><?php _e( 'Try to disable 3rd-party fancybox', 'gallery-plugin' ); ?></th>
+                        <td>
+                            <input type="checkbox" name="gllr_disable_foreing_fancybox" value="1" <?php if ( 1 == $this->options["disable_foreing_fancybox"] ) echo 'checked="checked"'; ?> /> <span class="bws_info"><?php _e( 'Enable to avoid conflicts with 3rd-party fancybox.' , 'gallery-plugin' ); ?></span>
+                        </td>
+                    </tr>
 				</table>
 			<?php }
 		}

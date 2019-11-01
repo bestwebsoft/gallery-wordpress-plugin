@@ -213,8 +213,6 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 							}
 						}
 
-						$attach_id = 0;
-
 						if ( is_wp_error( $post_id ) || 0 == $post_id ) {
 							$error ++;
 						} else {

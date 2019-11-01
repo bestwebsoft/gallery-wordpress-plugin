@@ -18,6 +18,10 @@ get_header(); ?>
 			} ?>
 		</div><!-- #container -->
 	</div><!-- .content-area -->
-	<?php get_sidebar(); ?>
+	<?php
+    /* Theme Twenty Nineteen hasn`t sidebar */
+    if( 'Twenty Nineteen' != wp_get_theme()->get( 'Name' ) ) {
+		get_sidebar();
+    } ?>
 </div><!-- .wrap -->
 <?php get_footer(); ?>

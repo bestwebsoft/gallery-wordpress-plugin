@@ -164,7 +164,7 @@ function gllr_setError( msg ) {
 								function( k,l ) {
 									$( '#' + l + ' input[name^="_gallery_order"]' ).val( k + 1 );
 								}
-							)
+							);
 						}
 					} );
 					$( "#the-list input" ).on( 'click', function() { $( this ).focus(); } );
@@ -177,7 +177,7 @@ function gllr_setError( msg ) {
 								function( k,l ) {
 									$( '#' + l + ' input[name^="_gallery_order"]' ).val( k + 1 );
 								}
-							)
+							);
 						}
 					} );
 				}

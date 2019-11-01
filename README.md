@@ -15,6 +15,15 @@
 <li>Gallery categories</li>
 </ul>
 </li>
+<li>Add and configure latest galleries widget [NEW]:
+<ul>
+<li>Title</li>
+<li>Button Text</li>
+<li>Link</li>
+<li>Number of Galleries</li>
+<li>Hover Color</li>
+</ul>
+</li>
 <li>Add Gallery to the <a href="https://bestwebsoft.com/products/wordpress/plugins/slider/" rel="nofollow">Slider</a></li>
 <li>Choose albums layout:
 <ul>
