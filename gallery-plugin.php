@@ -1926,13 +1926,15 @@ if ( ! function_exists( 'gllr_wp_head' ) ) {
 			wp_enqueue_style( 'gllr_fancybox_stylesheet', plugins_url( 'fancybox/jquery.fancybox.min.css', __FILE__ ) ); ?>
 			<!-- Start ios -->
 			<script type="text/javascript">
-				( function( $ ){
-					$( document ).ready( function() {
-						$( '#fancybox-overlay' ).css( {
-							'width' : $( document ).width()
+				window.addEventListener ('load', function () {
+					( function( $ ){
+						$( document ).ready( function() {
+							$( '#fancybox-overlay' ).css( {
+								'width' : $( document ).width()
+							} );
 						} );
-					} );
-				} )( jQuery );
+					} )( jQuery );
+				});
 			</script>
 			<!-- End ios -->
 		<?php }
