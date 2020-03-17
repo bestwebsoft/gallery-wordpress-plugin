@@ -74,16 +74,6 @@ function gllr_setError( msg ) {
 		} );
 
 		if ( $( window ).width() < 800 ) {
-			$.each(	$( '.gllr_add_responsive_column' ), function() {
-				var content = '<div class="gllr_info hidden">';
-				$.each(	$( this ).find( 'td:hidden' ).not( '.column-order' ), function() {
-					content = content + '<label>' + $( this ).attr( 'data-colname' ) + '</label><br/>' + $( this ).html() + '<br/>';
-					$( this ).html( '' );
-				} );
-				content = content + '</div>';
-				$( this ).find( '.column-title' ).append( content );
-				$( this ).find( '.gllr_info_show' ).show();
-			} );
 			$( '.gllr_info_show' ).on( 'click', function( event ) {
 				event.preventDefault();
 				if ( $( this ).next( '.gllr_info' ).is( ':hidden' ) ) {

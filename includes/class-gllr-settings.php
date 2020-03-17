@@ -3,13 +3,12 @@
  * Displays the content on the plugin settings page
  */
 
-require_once( dirname( dirname( __FILE__ ) ) . '/bws_menu/class-bws-settings.php' );
-
 if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 	class Gllr_Settings_Tabs extends Bws_Settings_Tabs {
 		public $wp_image_sizes = array();
 		public $is_global_settings = true;
 		public $cstmsrch_options;
+		private $wp_sizes;
 
 		/**
 		 * Constructor.
@@ -61,9 +60,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				'trial_days'		 => 7
 			) );
 
-			$wp_sizes = get_intermediate_image_sizes();
+			$this->wp_sizes = get_intermediate_image_sizes();
 
-			foreach ( ( array ) $wp_sizes as $size ) {
+			foreach ( ( array ) $this->wp_sizes as $size ) {
 				if ( ! array_key_exists( $size, $gllr_options['custom_size_px'] ) ) {
 					if ( isset( $_wp_additional_image_sizes[ $size ] ) ) {
 						$width  = absint( $_wp_additional_image_sizes[ $size ]['width'] );
@@ -104,69 +103,68 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		 * @return array    The action results
 		 */
 		public function save_options() {
+			$message = $notice = $error = '';
 
-			/* Settings Tab */
-			$this->options["custom_image_row_count"] 	= intval( $_POST['gllr_custom_image_row_count'] );
-			if ( 1 > $this->options["custom_image_row_count"] )
-				$this->options["custom_image_row_count"] = 1;
+			$image_names = array( 'photo', 'album' );
+			$this->wp_sizes[] = 'full';
+			foreach ( $image_names as $name ) {
+				$new_image_size 		= in_array( $_POST['gllr_image_size_' . $name ], $this->wp_sizes, true ) ? $_POST['gllr_image_size_' . $name ] : $this->options['image_size_' . $name ];
+				$custom_image_size_w    = isset( $_POST['gllr_custom_image_size_w_' . $name ] ) && is_numeric( $_POST['gllr_custom_image_size_w_' . $name ] ) ? absint( $_POST['gllr_custom_image_size_w_' . $name ] ) : $this->options['custom_size_px'][ $name . '-thumb'][0];
+				$custom_image_size_h    = isset( $_POST['gllr_custom_image_size_h_' . $name ] ) && is_numeric( $_POST['gllr_custom_image_size_h_' . $name ] ) ? absint( $_POST['gllr_custom_image_size_h_' . $name ] ) : $this->options['custom_size_px'][ $name . '-thumb'][1];
+				$custom_size_px 		= array( $custom_image_size_w, $custom_image_size_h );
 
-			$new_image_size_photo 		= esc_attr( $_POST['gllr_image_size_photo'] );
-			$custom_image_size_w_photo 	= intval( $_POST['gllr_custom_image_size_w_photo'] );
-			$custom_image_size_h_photo 	= intval( $_POST['gllr_custom_image_size_h_photo'] );
-			$custom_size_px_photo 		= array( $custom_image_size_w_photo, $custom_image_size_h_photo );
-
-			$this->options['custom_size_px']['photo-thumb'] = $custom_size_px_photo;
-			$this->options['image_size_photo'] 				= $new_image_size_photo;
-
-			$this->options["image_text"] 				= ( isset( $_REQUEST['gllr_image_text'] ) ) ? 1 : 0;
-			$this->options["border_images"] 			= ( isset( $_POST['gllr_border_images'] ) ) ? 1 : 0;
-			$this->options["border_images_width"]		= intval( $_POST['gllr_border_images_width'] );
-			$this->options["border_images_color"]		= esc_attr( trim( $_POST['gllr_border_images_color'] ) );
-			if ( ! preg_match( '/^#[A-Fa-f0-9]{6}$/', $this->options["border_images_color"] ) )
-				$this->options["border_images_color"] = $this->default_options["border_images_color"];
-			$this->options["order_by"]					= esc_attr( $_POST['gllr_order_by'] );
-			$this->options["order"]						= esc_attr( $_POST['gllr_order'] );
-			$this->options["return_link"]				= ( isset( $_POST['gllr_return_link'] ) ) ? 1 : 0;
-			$this->options["return_link_url"]			= esc_url( $_POST['gllr_return_link_url'] );
-			$this->options["return_link_text"] 			= stripslashes( esc_html( $_POST['gllr_return_link_text'] ) );
-			$this->options["return_link_shortcode"]		= ( isset( $_POST['gllr_return_link_shortcode'] ) && isset( $_POST['gllr_return_link'] ) ) ? 1 : 0;
-
-			/* Cover Tab */
-			if ( $this->options['page_id_gallery_template'] != intval( $_POST['gllr_page_id_gallery_template'] ) ) {
-				/* for rewrite */
-				$this->options["flush_rewrite_rules"] = 1;
-				$this->options['page_id_gallery_template'] = intval( $_POST['gllr_page_id_gallery_template'] );
+				if ( $name . '-thumb' == $new_image_size ) {
+					if ( $new_image_size != $this->options['image_size_' . $name ] ) {
+						$need_image_update = true;
+					} else {
+						foreach ( $custom_size_px as $key => $value ) {
+							if ( $value != $this->options['custom_size_px'][ $name . '-thumb'][ $key ] ) {
+								$need_image_update = true;
+								break;
+							}
+						}
+					}
+				}
+				$this->options['image_size_' . $name ] 				= $new_image_size;
+				$this->options['custom_size_px'][ $name . '-thumb'] = ( $name . '-thumb' == $this->options['image_size_' . $name ] ) ? $custom_size_px : $this->options['custom_size_px'][ $name . '-thumb'];
 			}
 
-			$new_image_size_album 		= esc_attr( $_POST['gllr_image_size_album'] );
-			$custom_image_size_w_album 	= intval( $_POST['gllr_custom_image_size_w_album'] );
-			$custom_image_size_h_album 	= intval( $_POST['gllr_custom_image_size_h_album'] );
-			$custom_size_px_album 		= array( $custom_image_size_w_album, $custom_image_size_h_album );
+			/* Settings Tab */
+			$this->options["custom_image_row_count"]    = isset( $_POST['gllr_custom_image_row_count'] ) && is_numeric( $_POST['gllr_custom_image_row_count'] ) ? absint( $_POST['gllr_custom_image_row_count'] ) : $this->options["custom_image_row_count"];
+			$this->options["image_text"] 				= isset( $_POST['gllr_image_text'] ) ? 1 : 0;
+			$this->options["border_images"] 			= isset( $_POST['gllr_border_images'] ) ? 1 : 0;
+			$this->options["border_images_width"]       = isset( $_POST['gllr_border_images_width'] ) && is_numeric( $_POST['gllr_border_images_width'] ) ? absint( $_POST['gllr_border_images_width'] ) : $this->options["border_images_width"];
+			$this->options["border_images_color"]       = isset( $_POST['gllr_border_images_color'] ) ? sanitize_hex_color( $_POST['gllr_border_images_color'] ) : $this->options["border_images_color"];
+			$this->options['order_by']                  = in_array( $_POST['gllr_order_by'], array( 'meta_value_num', 'ID', 'title', 'date', 'rand' ), true ) ? $_POST['gllr_order_by'] : $this->options['order_by'];
+			$this->options['order']                     = in_array( $_POST['gllr_order'], array( 'ASC', 'DESC' ), true ) ? $_POST['gllr_order'] : $this->options['order'];
+			$this->options["return_link"]				= isset( $_POST['gllr_return_link'] ) ? 1 : 0;
+			$this->options["return_link_url"]           = isset( $_POST['gllr_return_link_url'] ) ? esc_url( $_POST['gllr_return_link_url'] ) : $this->options["return_link_url"];
+			$this->options["return_link_text"]          = isset( $_POST['gllr_return_link_text'] ) ? stripslashes( sanitize_text_field( $_POST['gllr_return_link_text'] ) ) : $this->options["return_link_text"];
+			$this->options["return_link_shortcode"]		= isset( $_POST['gllr_return_link_shortcode'] ) && isset( $_POST['gllr_return_link'] ) ? 1 : 0;
+			$this->options["disable_foreing_fancybox"]  = isset( $_POST['gllr_disable_foreing_fancybox'] ) ? 1 : 0;
 
+			/* Cover Tab */
+			/* for rewrite */
+			if ( $this->options['page_id_gallery_template'] != $_POST['gllr_page_id_gallery_template'] )
+				$this->options["flush_rewrite_rules"] = 1;
+			$this->options['page_id_gallery_template'] = is_numeric( $_POST['gllr_page_id_gallery_template'] ) ? absint( $_POST['gllr_page_id_gallery_template'] ) : '';
 
-			$this->options['custom_size_px']['album-thumb'] = $custom_size_px_album;
-			$this->options['image_size_album'] 				= $new_image_size_album;
-
-			$this->options["cover_border_images"] 		= ( isset( $_POST['gllr_cover_border_images'] ) ) ? 1 : 0;
-			$this->options["cover_border_images_width"]	= intval( $_POST['gllr_cover_border_images_width'] );
-			$this->options["cover_border_images_color"]	= esc_attr( trim( $_POST['gllr_cover_border_images_color'] ) );
-			if ( ! preg_match( '/^#[A-Fa-f0-9]{6}$/', $this->options["cover_border_images_color"] ) )
-				$this->options["cover_border_images_color"] = $this->default_options["cover_border_images_color"];
-			$this->options["album_order_by"]		= esc_attr( $_POST['gllr_album_order_by'] );
-			$this->options["album_order"]			= esc_attr( $_POST['gllr_album_order'] );
-			$this->options["galleries_layout"]			= esc_attr( $_POST['gllr_layout'] );
-			$this->options["galleries_column_alignment"]	= esc_attr( $_POST['gllr_column_align'] );
-			$this->options["read_more_link_text"]	= stripslashes( esc_html( $_POST['gllr_read_more_link_text'] ) );
+			$this->options['galleries_layout']              = in_array( $_POST['gllr_layout'], array( 'column', 'rows' ), true ) ? $_POST['gllr_layout'] : $this->options['galleries_layout'];
+			$this->options['galleries_column_alignment']    = in_array( $_POST['gllr_column_align'], array( 'left', 'right', 'center' ), true ) ? $_POST['gllr_column_align'] : $this->options['galleries_column_alignment'];
+			$this->options["cover_border_images"] 		    = isset( $_POST['gllr_cover_border_images'] ) ? 1 : 0;
+			$this->options["cover_border_images_width"]     = isset( $_POST['gllr_cover_border_images_width'] ) && is_numeric( $_POST['gllr_cover_border_images_width'] ) ? absint( $_POST['gllr_cover_border_images_width'] ) : $this->options["cover_border_images_width"];
+			$this->options["cover_border_images_color"]     = isset( $_POST['gllr_cover_border_images_color'] ) ? sanitize_hex_color( $_POST['gllr_cover_border_images_color'] ) : $this->options["cover_border_images_color"];
+			$this->options['album_order_by']                = in_array( $_POST['gllr_album_order_by'], array( 'ID', 'title', 'date', 'modified', 'comment_count', 'menu_order', 'author', 'rand' ), true ) ? $_POST['gllr_album_order_by'] : $this->options['album_order_by'];
+			$this->options['album_order']                   = in_array( $_POST['gllr_album_order'], array( 'ASC', 'DESC' ), true ) ? $_POST['gllr_album_order'] : $this->options['album_order'];
+			$this->options["read_more_link_text"]           = isset( $_POST['gllr_read_more_link_text'] ) ? stripslashes( sanitize_text_field( $_POST['gllr_read_more_link_text'] ) ) : $this->options["read_more_link_text"];
 
 			/* Lightbox Tab */
-			$this->options["enable_lightbox"]		= ( isset( $_POST['gllr_enable_lightbox'] ) ) ? 1 : 0;
-			$this->options["enable_image_opening"]	= ( isset( $_POST['gllr_enable_image_opening'] ) ) ? 1 : 0;
-			$this->options["start_slideshow"]		= ( isset( $_POST['gllr_start_slideshow'] ) ) ? 1 : 0;
-			$this->options["slideshow_interval"]	= empty( $_POST['gllr_slideshow_interval'] ) ? 2000 : intval( $_POST['gllr_slideshow_interval'] );
-			$this->options["lightbox_download_link"] = ( isset( $_POST['gllr_lightbox_download_link'] ) ) ? 1 : 0;
-			$this->options["single_lightbox_for_multiple_galleries"] = ( isset( $_POST['gllr_single_lightbox_for_multiple_galleries'] ) ) ? 1 : 0;
-
-			$this->options["disable_foreing_fancybox"] = ( isset( $_POST['gllr_disable_foreing_fancybox'] ) ) ? 1 : 0;
+			$this->options["enable_image_opening"]	    = isset( $_POST['gllr_enable_image_opening'] ) ? 1 : 0;
+			$this->options["enable_lightbox"]		    = isset( $_POST['gllr_enable_lightbox'] ) ? 1 : 0;
+			$this->options["start_slideshow"]		    = isset( $_POST['gllr_start_slideshow'] ) ? 1 : 0;
+			$this->options["slideshow_interval"]        = isset( $_POST['gllr_slideshow_interval'] ) && is_numeric( $_POST['gllr_slideshow_interval'] ) ? absint( $_POST['gllr_slideshow_interval'] ) : $this->options["slideshow_interval"];
+			$this->options["lightbox_download_link"]    = isset( $_POST['gllr_lightbox_download_link'] ) ? 1 : 0;
+			$this->options["single_lightbox_for_multiple_galleries"] = isset( $_POST['gllr_single_lightbox_for_multiple_galleries'] ) ? 1 : 0;
 
 			/**
 			 * rewriting post types name with unique one from default options
@@ -185,6 +183,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				);
 				$this->options['post_type_name'] = $this->default_options['post_type_name'];
 			}
+
+			if ( isset( $need_image_update ) )
+				$this->options['need_image_update'] = 1;
 
 			if ( ! empty( $this->cstmsrch_options ) ) {
 				if ( isset( $this->cstmsrch_options['output_order'] ) ) {
@@ -221,7 +222,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			}
 
 			update_option( 'gllr_options', $this->options );
-			$message = __( "Settings saved", 'gallery-plugin' );
+			$message .= __( "Settings saved", 'gallery-plugin' );
 
 			return compact( 'message', 'notice', 'error' );
 		}
@@ -234,7 +235,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		 */
 		public function display_custom_messages( $save_results ) { ?>
 			<noscript><div class="error below-h2"><p><strong><?php _e( "Please, enable JavaScript in Your browser.", 'gallery-plugin' ); ?></strong></p></div></noscript>
-			<?php if ( ! empty( $this->options['need_image_update'] ) ) { ?>
+			<?php if ( isset( $this->options['need_image_update'] ) ) { ?>
 				<div class="updated bws-notice inline gllr_image_update_message">
 					<p>
 						<?php _e( 'Custom image size was changed. You need to update gallery images.', 'gallery-plugin' ); ?>
@@ -296,7 +297,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<hr>
 			<?php if ( ! $this->is_global_settings ) { ?>
                 <table class="form-table ">
-                    <tr valign="top">
+                    <tr>
                         <th scope="row"><?php _e( 'Add Gallery to the Slider', 'gallery-plugin' ); ?> </th>
                         <td>
                             <?php $plugin_info = gallery_plugin_status(
@@ -318,7 +319,6 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
                             <input type="button" <?php echo $this->change_permission_attr; ?> class="button" <?php echo $attrs; ?> id="gllr-export-slider" name="gllr-export-slider" value="<?php echo $export ?>">
                             <span id="gllr_export_loader" class="gllr_loader"><img src="<?php echo plugins_url( '../images/ajax-loader.gif', __FILE__ ); ?>" alt="loader" /></span><br />
                             <span class="bws_info"><?php _e( 'Click to add current gallery to the slider. Slider plugin is required.', 'gallery-plugin' ); echo $plugin_notice; ?></span>
-                            </label>
                         </td>
                     </tr>
                 </table>
@@ -327,7 +327,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
                         <div class="bws_pro_version_table_bloc">
                             <div class="bws_table_bg"></div>
                             <table class="form-table bws_pro_version">
-                                <tr valign="top">
+                                <tr>
                                     <th scope="row"><?php _e( 'Single Gallery Settings', 'gallery-plugin' ); ?> </th>
                                     <td>
                                         <input disabled="disabled" type="checkbox" /> <span class="bws_info"><?php printf( __( 'Enable to configure single gallery settings and disable %s.', 'gallery-plugin' ), '<a style="z-index: 2;position: relative;" href="edit.php?post_type=' . $this->options['post_type_name'] . '&page=gallery-plugin.php" target="_blank">' . __( 'Global Settings', 'gallery-plugin' ) . '</a>' ); ?></span>
@@ -345,7 +345,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 							<div class="bws_table_bg"></div>
 							<table class="form-table bws_pro_version">
-								<tr valign="top">
+								<tr>
 									<th scope="row"><?php _e( 'Gallery Layout', 'gallery-plugin' ); ?> </th>
 									<td>
 										<fieldset>
@@ -369,14 +369,14 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					</div>
 				<?php } ?>
 				<table class="form-table">
-					<tr valign="top">
+					<tr>
 						<th scope="row"><?php _e( 'Number of Columns', 'gallery-plugin' ); ?> </th>
 						<td>
 							<input type="number" name="gllr_custom_image_row_count" min="1" max="10000" value="<?php echo $this->options["custom_image_row_count"]; ?>" />
 							 <div class="bws_info"><?php printf( __( 'Number of gallery columns (default is %s).', 'gallery-plugin' ), '3' ); ?></div>
 						</td>
 					</tr>
-					<tr valign="top">
+					<tr>
 						<th scope="row"><?php _e( 'Image Size', 'gallery-plugin' ); ?> </th>
 						<td>
 							<select name="gllr_image_size_photo">
@@ -388,7 +388,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<div class="bws_info"><?php _e( 'Maximum gallery image size. "Custom" uses the Image Dimensions values.', 'gallery-plugin' ); ?></div>
 						</td>
 					</tr>
-					<tr valign="top" class="gllr_for_custom_image_size">
+					<tr class="gllr_for_custom_image_size">
 						<th scope="row"><?php _e( 'Custom Image Size', 'gallery-plugin' ); ?> </th>
 						<td>
 							<input type="number" name="gllr_custom_image_size_w_photo" min="1" max="10000" value="<?php echo $this->options['custom_size_px']['photo-thumb'][0]; ?>" /> x <input type="number" name="gllr_custom_image_size_h_photo" min="1" max="10000" value="<?php echo $this->options['custom_size_px']['photo-thumb'][1]; ?>" /> <?php _e( 'px', 'gallery-plugin' ); ?>
@@ -402,13 +402,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 							<div class="bws_table_bg"></div>
 							<table class="form-table bws_pro_version">
-								<tr valign="top">
+								<tr>
 									<th scope="row"><?php _e( 'Crop Images', 'gallery-plugin' ); ?></th>
 									<td>
 										<input disabled checked type="checkbox" /> <span class="bws_info"><?php _e( 'Enable to crop images using the sizes defined for Custom Image Size. Disable to resize images automatically using their aspect ratio.', 'gallery-plugin' ); ?></span>
 									</td>
 								</tr>
-								<tr valign="top">
+								<tr>
 									<th scope="row"><?php _e( 'Crop Position', 'gallery-plugin' ); ?></th>
 									<td>
 										<div>
@@ -446,7 +446,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 							<div class="bws_table_bg"></div>
 							<table class="form-table bws_pro_version">
-								<tr valign="top">
+								<tr>
 									<th scope="row"><?php _e( 'Image Title Position', 'gallery-plugin' ); ?></th>
 									<td>
 										<fieldset>
@@ -470,20 +470,20 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					</div>
 				<?php } ?>
 				<table class="form-table">
-					<tr valign="top">
+					<tr>
 						<th scope="row"><?php _e( 'Image Border', 'gallery-plugin' ); ?></th>
 						<td>
 							<input type="checkbox" name="gllr_border_images" value="1" <?php if ( 1 == $this->options["border_images"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_border_images" /> <span class="bws_info"><?php _e( 'Enable images border using the styles defined for Image Border Size and Color options.', 'gallery-plugin' ); ?></span>
 						</td>
 					</tr>
-					<tr valign="top" class="gllr_for_border_images">
+					<tr class="gllr_for_border_images">
 						<th scope="row"><?php _e( 'Image Border Size', 'gallery-plugin' ); ?></th>
 						<td>
 							<input type="number" min="0" max="10000" value="<?php echo $this->options["border_images_width"]; ?>" name="gllr_border_images_width" /> <?php _e( 'px', 'gallery-plugin' ); ?>
-							<div class="bws_info"><?php printf( __( 'Gallery image border width (default is %s)', 'gallery-plugin' ), '10px' ); ?></div>
+							<div class="bws_info"><?php printf( __( 'Gallery image border width (default is %s).', 'gallery-plugin' ), '10px' ); ?></div>
 						</td>
 					</tr>
-					<tr valign="top" class="gllr_for_border_images">
+					<tr class="gllr_for_border_images">
 						<th scope="row"><?php _e( 'Image Border Color', 'gallery-plugin' ); ?></th>
 						<td>
 							<input type="text" value="<?php echo $this->options["border_images_color"]; ?>" name="gllr_border_images_color" class="gllr_color_field" data-default-color="#F1F1F1" />
@@ -496,14 +496,14 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 							<div class="bws_table_bg"></div>
 							<table class="form-table bws_pro_version">
-								<tr valign="top">
+								<tr>
 									<th scope="row"><?php _e( 'Pagination', 'gallery-plugin' ); ?></th>
 									<td>
 										<input disabled type="checkbox" value="1" />
 										<span class="bws_info"><?php _e( 'Enable pagination for images to limit number of images displayed on a single gallery page.', 'gallery-plugin' ); ?></span>
 									</td>
 								</tr>
-								<tr valign="top">
+								<tr>
 									<th scope="row"><?php _e( 'Number of Images', 'gallery-plugin' ); ?></th>
 									<td>
 										<input disabled type="number" value="10" />
@@ -516,7 +516,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					</div>
 				<?php } ?>
 				<table class="form-table">
-					<tr valign="top">
+					<tr>
 						<th scope="row"><?php _e( 'Sort Images by', 'gallery-plugin' ); ?></th>
 						<td>
 							<select name="gllr_order_by">
@@ -529,7 +529,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<div class="bws_info"><?php _e( 'Select images sorting order in your gallery. By default, you can sort images manually in the images tab.', 'gallery-plugin' ); ?></div>
 						</td>
 					</tr>
-					<tr valign="top" class="gllr_image_order">
+					<tr class="gllr_image_order">
 						<th scope="row"><?php _e( 'Arrange Images by', 'gallery-plugin' ); ?></th>
 						<td>
 							<fieldset>
@@ -538,33 +538,33 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							</fieldset>
 						</td>
 					</tr>
-					<tr valign="top">
+					<tr>
 						<th scope="row"><?php _e( 'Back Link', 'gallery-plugin' ); ?></th>
 						<td>
 							<input type="checkbox" name="gllr_return_link" value="1" <?php if ( 1 == $this->options["return_link"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_return_link" /> <span class="bws_info"><?php _e( 'Enable to show a back link in a single gallery page which navigate to a previous page.' , 'gallery-plugin' ); ?></span>
 						</td>
 					</tr>
-					<tr valign="top" class="gllr_for_return_link">
+					<tr class="gllr_for_return_link">
 						<th scope="row"><?php _e( 'Back Link URL', 'gallery-plugin' ); ?></th>
 						<td>
 							<input type="text" value="<?php echo $this->options["return_link_url"]; ?>" name="gllr_return_link_url" maxlength="250" />
 							<div class="bws_info"><?php _e( 'Back link custom page URL. Leave blank to use Gallery page template.' , 'gallery-plugin' ); ?></div>
 						</td>
 					</tr>
-					<tr valign="top" class="gllr_for_return_link">
+					<tr class="gllr_for_return_link">
 						<th scope="row"><?php _e( 'Back Link Label', 'gallery-plugin' ); ?> </th>
 						<td>
 							<input type="text" name="gllr_return_link_text" maxlength="250" value="<?php echo $this->options["return_link_text"]; ?>" />
 						</td>
 					</tr>
-					<tr valign="top" class="gllr_for_return_link">
+					<tr class="gllr_for_return_link">
 						<th scope="row"><?php _e( 'Back Link with Shortcode', 'gallery-plugin' ); ?> </th>
 						<td>
 							<input type="checkbox" name="gllr_return_link_shortcode" value="1" <?php if ( 1 == $this->options["return_link_shortcode"] ) echo 'checked="checked"'; ?> />
 							<span class="bws_info"><?php _e( 'Enable to display a back link on a page where shortcode is used.' , 'gallery-plugin' ); ?></span>
 						</td>
 					</tr>
-                    <tr valign="top">
+                    <tr>
                         <th scope="row"><?php _e( 'Try to disable 3rd-party fancybox', 'gallery-plugin' ); ?></th>
                         <td>
                             <input type="checkbox" name="gllr_disable_foreing_fancybox" value="1" <?php if ( 1 == $this->options["disable_foreing_fancybox"] ) echo 'checked="checked"'; ?> /> <span class="bws_info"><?php _e( 'Enable to avoid conflicts with 3rd-party fancybox.' , 'gallery-plugin' ); ?></span>
@@ -582,7 +582,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<?php $this->help_phrase(); ?>
 			<hr>
 			<table class="form-table">
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Galleries Page', 'gallery-plugin' ); ?></th>
 					<td>
 						<?php wp_dropdown_pages( array(
@@ -594,7 +594,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<div class="bws_info"><?php _e( 'Base page where all existing galleries will be displayed.' , 'gallery-plugin' ); ?></div>
 					</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Albums Displaying', 'gallery-plugin' ); ?></th>
 					<td>
 						<fieldset>
@@ -604,7 +604,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<div class="bws_info"><?php _e( 'Select the way galleries will be displayed on the Galleries Page.' , 'gallery-plugin' ); ?></div>
 					</td>
 				</tr>
-				<tr valign="top" class="gllr_column_alignment">
+				<tr class="gllr_column_alignment">
 					<th scope="row"><?php _e( 'Column Alignment', 'gallery-plugin' ); ?></th>
 					<td>
 						<fieldset>
@@ -615,7 +615,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<div class="bws_info"><?php _e( 'Select the column alignment.' , 'gallery-plugin' ); ?></div>
 					</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Cover Image Size', 'gallery-plugin' ); ?> </th>
 					<td>
 						<select name="gllr_image_size_album">
@@ -627,7 +627,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<div class="bws_info"><?php _e( 'Maximum cover image size. Custom uses the Image Dimensions values.', 'gallery-plugin' ); ?></div>
 					</td>
 				</tr>
-				<tr valign="top" class="gllr_for_custom_image_size_album">
+				<tr class="gllr_for_custom_image_size_album">
 					<th scope="row"><?php _e( 'Custom Cover Image Size', 'gallery-plugin' ); ?> </th>
 					<td>
 						<input type="number" name="gllr_custom_image_size_w_album" min="1" max="10000" value="<?php echo $this->options['custom_size_px']['album-thumb'][0]; ?>" /> x <input type="number" name="gllr_custom_image_size_h_album" min="1" max="10000" value="<?php echo $this->options['custom_size_px']['album-thumb'][1]; ?>" /> <?php _e( 'px', 'gallery-plugin' ); ?>
@@ -640,13 +640,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 						<div class="bws_table_bg"></div>
 						<table class="form-table bws_pro_version">
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Crop Cover Images', 'gallery-plugin' ); ?></th>
 								<td>
 									<input disabled checked type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to crop images using the sizes defined for Custom Cover Image Size. Disable to resize images automatically using their aspect ratio.', 'gallery-plugin' ); ?></span>
 								</td>
 							</tr>
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Crop Position', 'gallery-plugin' ); ?></th>
 								<td>
 									<div>
@@ -671,26 +671,26 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				</div>
 			<?php } ?>
 			<table class="form-table">
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Cover Image Border', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="checkbox" name="gllr_cover_border_images" value="1" <?php if ( 1 == $this->options["cover_border_images"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_cover_border_images" /> <span class="bws_info"><?php _e( 'Enable cover images border using the styles defined for Image Border Size and Color.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
-				<tr valign="top" class="gllr_for_cover_border_images">
+				<tr class="gllr_for_cover_border_images">
 					<th scope="row"><?php _e( 'Cover Image Border Size', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="number" min="0" max="10000" value="<?php echo $this->options["cover_border_images_width"]; ?>" name="gllr_cover_border_images_width" /> <?php _e( 'px', 'gallery-plugin' ); ?>
-						<div class="bws_info"><?php printf( __( 'Cover image border width (default is %s)', 'gallery-plugin' ), '10px' ); ?></div>
+						<div class="bws_info"><?php printf( __( 'Cover image border width (default is %s).', 'gallery-plugin' ), '10px' ); ?></div>
 					</td>
 				</tr>
-				<tr valign="top" class="gllr_for_cover_border_images">
+				<tr class="gllr_for_cover_border_images">
 					<th scope="row"><?php _e( 'Cover Image Border Color', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="text" value="<?php echo $this->options["cover_border_images_color"]; ?>" name="gllr_cover_border_images_color" class="gllr_color_field" data-default-color="#F1F1F1" />
 					</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Sort Albums by', 'gallery-plugin' ); ?></th>
 					<td>
 						<select name="gllr_album_order_by">
@@ -706,7 +706,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<div class="bws_info"><?php _e( 'Select galleries sorting order in your galleries page.', 'gallery-plugin' ); ?></div>
 					</td>
 				</tr>
-				<tr valign="top" class="gllr_album_order">
+				<tr class="gllr_album_order">
 					<th scope="row"><?php _e( 'Arrange Albums by', 'gallery-plugin' ); ?></th>
 					<td>
 						<fieldset>
@@ -715,7 +715,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						</fieldset>
 					</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Read More Link Label', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="text" name="gllr_read_more_link_text" maxlength="250" value="<?php echo $this->options["read_more_link_text"]; ?>" />
@@ -728,7 +728,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 						<div class="bws_table_bg"></div>
 						<table class="form-table bws_pro_version">
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Instant Lightbox', 'gallery-plugin' ); ?> </th>
 								<td>
 									<input type="checkbox" value="1" disabled />
@@ -750,14 +750,14 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<?php $this->help_phrase(); ?>
 			<hr>
 			<table class="form-table">
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Unclickable Thumbnail Images', 'gallery-plugin' ); ?> </th>
 					<td>
 						<input type="checkbox" name="gllr_enable_image_opening" <?php if ( 1 == $this->options["enable_image_opening"] ) echo 'checked="checked"'; ?> />
 						<span class="bws_info"><?php _e( 'Enable to make the images in a single gallery unclickable and hide their URLs. This option also disables Lightbox.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
-				<tr valign="top" class="gllr_for_enable_opening_images">
+				<tr class="gllr_for_enable_opening_images">
 					<th scope="row"><?php _e( 'Enable Lightbox', 'gallery-plugin' ); ?> </th>
 					<td>
 						<input type="checkbox" name="gllr_enable_lightbox" <?php if ( 1 == $this->options["enable_lightbox"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_enable_lightbox" />
@@ -771,7 +771,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 						<div class="bws_table_bg"></div>
 						<table class="form-table bws_pro_version">
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Image Size', 'gallery-plugin' ); ?> </th>
 								<td>
 									<select disabled name="gllr_image_size_full">
@@ -782,13 +782,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 									<div class="bws_info"><?php _e( 'Select the maximum gallery image size for the lightbox view. "Default" will display the original, full size image.', 'gallery-plugin' ); ?></div>
 								</td>
 							</tr>
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Overlay Color', 'gallery-plugin' ); ?> </th>
 								<td>
 									<input disabled="disabled" type="text" value="#777777" size="7" />
 								</td>
 							</tr>
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Overlay Opacity', 'gallery-plugin' ); ?> </th>
 								<td>
 									<input disabled type="text" size="8" value="0.7" />
@@ -801,13 +801,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				</div>
 			<?php } ?>
 			<table class="form-table gllr_for_enable_lightbox">
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Slideshow', 'gallery-plugin' ); ?> </th>
 					<td>
 						<input type="checkbox" name="gllr_start_slideshow" value="1" <?php if ( 1 == $this->options["start_slideshow"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_start_slideshow" /> <span class="bws_info"><?php _e( 'Enable to start the slideshow automatically when the lightbox is used.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
-				<tr valign="top" class="gllr_for_start_slideshow">
+				<tr class="gllr_for_start_slideshow">
 					<th scope="row"><?php _e( 'Slideshow Duration', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="number" name="gllr_slideshow_interval" min="1" max="1000000" value="<?php echo $this->options["slideshow_interval"]; ?>" /> <?php _e( 'ms', 'gallery-plugin' ); ?>
@@ -821,19 +821,19 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 						<div class="bws_table_bg"></div>
 						<table class="form-table bws_pro_version">
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Lightbox Helpers', 'gallery-plugin' ); ?></th>
 								<td>
 									<input disabled type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to display the lightbox toolbar and arrows.', 'gallery-plugin' ); ?></span>
 								</td>
 							</tr>
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Lightbox Thumbnails', 'gallery-plugin' ); ?></th>
 								<td>
 									<input disabled type="checkbox" name="" /> <span class="bws_info"><?php _e( 'Enable to use a lightbox helper navigation between images.', 'gallery-plugin' ); ?></span>
 								</td>
 							</tr>
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Lightbox Thumbnails Position', 'gallery-plugin' ); ?></th>
 								<td>
 									<select disabled name="">
@@ -841,7 +841,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 									</select>
 								</td>
 							</tr>
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Lightbox Button Label', 'gallery-plugin' ); ?></th>
 								<td>
 									<input type="text" disabled value="<?php _e( 'Read More', 'gallery-plugin' ); ?>" />
@@ -853,13 +853,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				</div>
 			<?php } ?>
 			<table class="form-table gllr_for_enable_lightbox">
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Download Button', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="checkbox" name="gllr_lightbox_download_link" value="1" <?php if ( 1 == $this->options["lightbox_download_link"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_lightbox_download_link" /> <span class="bws_info"><?php _e( 'Enable to display download button.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Single Lightbox', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="checkbox" name="gllr_single_lightbox_for_multiple_galleries" value="1" <?php if ( 1 == $this->options["single_lightbox_for_multiple_galleries"] ) echo 'checked="checked"'; ?> /> <span class="bws_info"><?php _e( 'Enable to use a single lightbox for multiple galleries located on a single page.', 'gallery-plugin' ); ?></span>
@@ -880,28 +880,27 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
                     <button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
                     <div class="bws_table_bg"></div>
                     <table class="form-table bws_pro_version">
-                        <tr valign="top">
+                        <tr>
                             <th scope="row"><?php _e( 'Social Buttons', 'gallery-plugin' ); ?></th>
                             <td>
-                                <input type="checkbox" disabled="disabled" checked="checked" /> <span class="bws_info"><?php _e( 'Enable social sharing buttons in the lightbox.', 'gallery-plugin' ); ?></span>
+                                <input type="checkbox" disabled="disabled" /> <span class="bws_info"><?php _e( 'Enable social sharing buttons in the lightbox.', 'gallery-plugin' ); ?></span>
                             </td>
                         </tr>
-                        <tr valign="top">
+                        <tr>
                             <th scope="row"><?php _e( 'Social Networks', 'gallery-plugin' ); ?></th>
                             <td>
                                 <fieldset>
                                     <label><input disabled="disabled" type="checkbox" /> Facebook</label><br>
                                     <label><input disabled="disabled" type="checkbox" /> Twitter</label><br>
                                     <label><input disabled="disabled" type="checkbox" /> Pinterest</label><br>
-                                    <label><input disabled="disabled" type="checkbox" /> Google +1</label>
                                 </fieldset>
                             </td>
                         </tr>
-                        <tr valign="top">
+                        <tr>
                             <th scope="row"><?php _e( 'Counter', 'gallery-plugin' ); ?></th>
                             <td>
                                 <input disabled type="checkbox" value="1" />
-                                <span class="bws_info"><?php _e( 'Enable to show likes counter for each social button (not available for Google +1).', 'gallery-plugin' ); ?></span>
+                                <span class="bws_info"><?php _e( 'Enable to show likes counter for each social button.', 'gallery-plugin' ); ?></span>
                             </td>
                         </tr>
                     </table>
@@ -915,7 +914,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		 */
 		public function additional_import_export_options() { ?>
 			<table class="form-table">
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Demo Data', 'gallery-plugin' ); ?></th>
 					<td>
 						<?php $this->demo_data->bws_show_demo_button( __( 'Install demo data to create galleries with images, post with shortcodes and page with a list of all galleries.', 'gallery-plugin' ) ); ?>
@@ -955,7 +954,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			$old_post_type_gallery = $wpdb->get_col( "SELECT ID FROM $wpdb->posts WHERE post_type = 'gallery'" );
 
 			if ( ! empty( $old_post_type_gallery ) ) { ?>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e( 'Gallery Post Type', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="checkbox" name="gllr_rename_post_type" value="1" /> <span class="bws_info"><?php _e( 'Enable to avoid conflicts with other gallery plugins installed. All galleries created earlier will stay unchanged. However, after enabling we recommend to check settings of other plugins where "gallery" post type is used.', 'gallery-plugin' ); ?></span>
@@ -969,7 +968,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
 						<div class="bws_table_bg"></div>
 						<table class="form-table bws_pro_version">
-							<tr valign="top">
+							<tr>
 								<th scope="row"><?php _e( 'Gallery Slug', 'gallery-plugin' ); ?></th>
 								<td>
 									<input type="text" value="gallery" disabled />
@@ -981,36 +980,36 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					</div>
 					<?php $this->bws_pro_block_links(); ?>
 				</div>
-				<table class="form-table">
+                <table class="form-table">
 			<?php } ?>
-			<tr valign="top">
-				<th scope="row"><?php _e( 'Search Galleries', 'gallery-plugin' ); ?></th>
-				<td>
-					<?php $disabled = $checked = $link = '';
-					if ( array_key_exists( 'custom-search-plugin/custom-search-plugin.php', $this->all_plugins ) || array_key_exists( 'custom-search-pro/custom-search-pro.php', $this->all_plugins ) ) {
-						if ( ! is_plugin_active( 'custom-search-plugin/custom-search-plugin.php' ) && ! is_plugin_active( 'custom-search-pro/custom-search-pro.php' ) ) {
-							$disabled = ' disabled="disabled"';
-							$link = '<a href="' . admin_url( 'plugins.php' ) . '">' . __( 'Activate Now', 'gallery-plugin' ) . '</a>';
-						}
-						if ( isset( $this->cstmsrch_options['output_order'] ) ) {
-							foreach ( $this->cstmsrch_options['output_order'] as $key => $item ) {
-								if ( $item['name'] == $this->options['post_type_name'] && $item['type'] == 'post_type' ) {
-									if ( $item['enabled'] )
-										$checked = ' checked="checked"';
-									break;
-								}
-							}
-						} elseif ( ! empty( $this->cstmsrch_options['post_types'] ) && in_array( $this->options['post_type_name'], $this->cstmsrch_options['post_types'] ) ) {
-							$checked = ' checked="checked"';
-						}
-					} else {
-						$disabled = ' disabled="disabled"';
-						$link = '<a href="https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=62eae81381e03dd9e843fc277c6e64c1&amp;pn=' . $this->link_pn . '&amp;v=' . $this->plugins_info["Version"] . '&amp;wp_v=' . $wp_version . '" target="_blank">' . __( 'Install Now', 'gallery-plugin' ) . '</a>';
-					} ?>
-					<input type="checkbox" name="gllr_add_to_search" value="1"<?php echo $disabled . $checked; ?> />
-					 <span class="bws_info"><?php _e( 'Enable to include galleries to your website search.', 'gallery-plugin' ); ?> <?php printf( __( '%s is required.', 'gallery-plugin' ), 'Custom Search plugin' ); ?> <?php echo $link; ?></span>
-				</td>
-			</tr>
+                <tr>
+                    <th scope="row"><?php _e( 'Search Galleries', 'gallery-plugin' ); ?></th>
+                    <td>
+                        <?php $disabled = $checked = $link = '';
+                        if ( array_key_exists( 'custom-search-plugin/custom-search-plugin.php', $this->all_plugins ) || array_key_exists( 'custom-search-pro/custom-search-pro.php', $this->all_plugins ) ) {
+                            if ( ! is_plugin_active( 'custom-search-plugin/custom-search-plugin.php' ) && ! is_plugin_active( 'custom-search-pro/custom-search-pro.php' ) ) {
+                                $disabled = ' disabled="disabled"';
+                                $link = '<a href="' . admin_url( 'plugins.php' ) . '">' . __( 'Activate Now', 'gallery-plugin' ) . '</a>';
+                            }
+                            if ( isset( $this->cstmsrch_options['output_order'] ) ) {
+                                foreach ( $this->cstmsrch_options['output_order'] as $key => $item ) {
+                                    if ( $item['name'] == $this->options['post_type_name'] && $item['type'] == 'post_type' ) {
+                                        if ( $item['enabled'] )
+                                            $checked = ' checked="checked"';
+                                        break;
+                                    }
+                                }
+                            } elseif ( ! empty( $this->cstmsrch_options['post_types'] ) && in_array( $this->options['post_type_name'], $this->cstmsrch_options['post_types'] ) ) {
+                                $checked = ' checked="checked"';
+                            }
+                        } else {
+                            $disabled = ' disabled="disabled"';
+                            $link = '<a href="https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=62eae81381e03dd9e843fc277c6e64c1&amp;pn=' . $this->link_pn . '&amp;v=' . $this->plugins_info["Version"] . '&amp;wp_v=' . $wp_version . '" target="_blank">' . __( 'Install Now', 'gallery-plugin' ) . '</a>';
+                        } ?>
+                        <input type="checkbox" name="gllr_add_to_search" value="1"<?php echo $disabled . $checked; ?> />
+                         <span class="bws_info"><?php _e( 'Enable to include galleries to your website search.', 'gallery-plugin' ); ?> <?php printf( __( '%s is required.', 'gallery-plugin' ), 'Custom Search plugin' ); ?> <?php echo $link; ?></span>
+                    </td>
+                </tr>
 		<?php }
 
 		/**
@@ -1019,6 +1018,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		 */
 		public function additional_restore_options( $default_options ) {
 			$default_options['post_type_name'] = $this->options['post_type_name'];
+
 			return $default_options;
 		}
 	}

@@ -1,7 +1,7 @@
 <?php
 /**
  * Load demo data
- * @version 1.0.6
+ * @version 1.0.7
  */
 
 if ( ! class_exists( 'Bws_Demo_Data' ) ) {
@@ -57,8 +57,8 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				<p><?php echo $label; ?></p>
 				<form method="post" action="">
 					<p>
-						<button class="button button-primary" name="bws_<?php echo $_POST['bws_handle_demo']; ?>_demo_confirm" value="true"><?php echo $button_title; ?></button>
-						<button class="button" name="bws_<?php echo $_POST['bws_handle_demo']; ?>_demo_deny" value="true"><?php _e( 'No, go back to the settings page', $this->bws_plugin_text_domain ) ?></button>
+						<button class="button button-primary" name="bws_<?php echo esc_attr( $_POST['bws_handle_demo'] ); ?>_demo_confirm" value="true"><?php echo $button_title; ?></button>
+						<button class="button" name="bws_<?php echo esc_attr( $_POST['bws_handle_demo'] ); ?>_demo_deny" value="true"><?php _e( 'No, go back to the settings page', $this->bws_plugin_text_domain ) ?></button>
 						<?php wp_nonce_field( $this->bws_plugin_basename, 'bws_nonce_name' ); ?>
 					</p>
 				</form>
@@ -232,7 +232,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 										/* insert current attachment */
 										/* Check if file is image */
 										$file_data = ( '.' == $attachment || '..' == $attachment ) ? false : @getimagesize( $file );
-										$bws_is_image = ! ( $file_data || in_array( $file_data[2], array( 1, 2, 3 ) ) ) ? false : true;
+										$bws_is_image = ! ( $file_data || ( is_array( $file_data ) && in_array( $file_data[2], array( 1, 2, 3 ) ) ) ) ? false : true;
 										if ( $bws_is_image ) {
 
 											$destination   = $wp_upload_dir['path'] . '/' . $this->bws_plugin_prefix . 'demo_' . $attachment; /* path to new file */
@@ -531,7 +531,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 
 		function bws_handle_demo_notice( $show_demo_notice ) {
 
-			if ( 1 == $show_demo_notice ) {
+			if ( 1 == $show_demo_notice && empty( $this->bws_demo_options ) ) {
 				global $wp_version;
 
 				if ( isset( $_POST['bws_hide_demo_notice'] ) && check_admin_referer( $this->bws_plugin_basename, 'bws_demo_nonce_name' ) ) {

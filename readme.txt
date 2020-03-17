@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
-Requires at least: 4.0
-Tested up to: 5.2.4
-Stable tag: 4.6.4
+Requires at least: 4.5
+Tested up to: 5.3.2
+Stable tag: 4.6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 	* Albums to gallery
 	* Images to album
 	* Gallery categories
-* Add and configure latest galleries widget [NEW]:
+* Add and configure latest galleries widget:
     * Title
     * Button Text
     * Link
@@ -98,7 +98,6 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 > 	* Facebook
 > 	* Twitter
 > 	* Pinterest
-> 	* Google +1
 > * Enable lightbox helper:
 > 	* Button
 > 	* Thumbnail
@@ -116,7 +115,7 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Documentation & Videos =
 
-* [[Doc] How to Use](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
+* [[Doc] User Guide](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
 * [[Doc] How to Receive Trial License](https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/)
 * [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 * [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
@@ -234,6 +233,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 11. The adding of the Latest Galleries widget.
 
 == Changelog ==
+
+= V4.6.5 - 17.03.2020 =
+* Update : BWS menu has been updated.
+* Update : All functionality was updated for WordPress 5.3.2.
+* Update : Removed Google+1 button.
+* Update : Templates are updated.
 
 = V4.6.4 - 01.11.2019 =
 * NEW : Ability to disable third-party fancybox has been added.
@@ -688,6 +693,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.6.5 =
+* Bugs fixed.
 
 = V4.6.4 =
 * New features added.

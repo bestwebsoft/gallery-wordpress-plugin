@@ -37,7 +37,7 @@ if ( ! class_exists( 'GLLR_Categories_Widget' ) ) {
 
 			/* Get value of HTTP Request */
 			if ( isset( $_REQUEST['gallery_categories'] ) ) {
-				$term = get_term_by( 'slug', $_REQUEST['gallery_categories'], 'gallery_categories' );
+				$term = get_term_by( 'slug', esc_attr( $_REQUEST['gallery_categories'] ), 'gallery_categories' );
 			} else {
 				global $wp;
 				$http_request = parse_url( add_query_arg( $wp->query_string, '', home_url( $wp->request ) ) );
@@ -72,18 +72,19 @@ if ( ! class_exists( 'GLLR_Categories_Widget' ) ) {
 				$cat_args['name']             = 'gallery_categories';
 				$cat_args['id']               = $dropdown_id; ?>
 				<form action="<?php bloginfo( 'url' ); ?>/" method="get">
-					<?php wp_dropdown_categories( apply_filters( 'widget_categories_dropdown_args', $cat_args ) ); ?>
-					<script type='text/javascript'>
-                        (function() {
-                            var dropdown = document.getElementById( "<?php echo esc_js( $dropdown_id ); ?>" );
-                            function onCatChange() {
-                                if ( dropdown.options[ dropdown.selectedIndex ].value != -1 ) {
-                                    location.href = "<?php echo home_url(); ?>/?gallery_categories=" + dropdown.options[ dropdown.selectedIndex ].value;
-                                }
+					<?php wp_dropdown_categories( apply_filters( 'widget_categories_dropdown_args', $cat_args ) );
+					$script = '(function() {
+                        var dropdown = document.getElementById( "' . esc_js( $dropdown_id ) . '" );
+                        function onCatChange() {
+                            if ( dropdown.options[ dropdown.selectedIndex ].value != -1 ) {
+                                location.href = "' . home_url() . '/?gallery_categories=" + dropdown.options[ dropdown.selectedIndex ].value;
                             }
-                            dropdown.onchange = onCatChange;
-                        })();
-					</script>
+                        }
+                        dropdown.onchange = onCatChange;
+					})();';
+					wp_register_script( 'gllr_widget_script', '' );
+					wp_enqueue_script( 'gllr_widget_script' );
+					wp_add_inline_script( 'gllr_widget_script', sprintf( $script ) ); ?>
 					<noscript>
 						<br />
 						<input type="submit" value="<?php _e( 'View', 'gallery-plugin' ); ?>" />
@@ -226,9 +227,8 @@ if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
 				}
 
 				/* output button in cell */
-				$widget_galleries_table_wrapper .= $gllr_cells_properties[ $gllr_image_number ]['cell'] .
-                        '<div class="gllr-widget-cell-item gllr-widget-content-center">
-                            <a class="button gllr-widget-button" href="' . get_permalink( $widget_galleries_button_link ) . '">' . $widget_galleries_button_text . '</a>
+				$widget_galleries_table_wrapper .= $gllr_cells_properties[ $gllr_image_number ]['cell'] . '<div class="gllr-widget-cell-item gllr-widget-content-center">
+                            <a href="' . get_permalink( $widget_galleries_button_link ) . '"><span class="button">' . $widget_galleries_button_text . '</span></a>
                          </div>
 				     </td></tr>';
 
@@ -328,8 +328,7 @@ if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
 				       value="<?php echo esc_attr( $widget_galleries_hover_color ); ?>",
 				       data-default-color="#F1F1F1"/>
 			</p>
-			<script type='text/javascript'>
-                jQuery( document ).ready( function( $ ) {
+            <?php $script = "jQuery( document ).ready( function( $ ) {
 
                     $( '.widget-inside:has(.gllr-hover-color)' ).each( function () {
                         initColorPicker( $( this ) );
@@ -338,10 +337,10 @@ if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
                     $( document ).on( 'widget-added widget-updated', onFormUpdate );
 
                     function initColorPicker( widget ) {
-                        widget.find( '.gllr-hover-color' ).not('[id*="__i__"]').wpColorPicker( {
+                        widget.find( '.gllr-hover-color' ).not('[id*=\"__i__\"]').wpColorPicker( {
                             change: function( e, ui ) {
                                 $( e.target ).val( ui.color.toString() );
-                                $( e.target ).trigger( 'change' ); // enable widget "Save" button
+                                $( e.target ).trigger( 'change' ); // enable widget \"Save\" button
                             },
                         } );
                     }
@@ -350,8 +349,10 @@ if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
                         initColorPicker( widget );
                     }
 
-                } );
-			</script>
+                } );";
+			wp_register_script( 'gllr_form_script', '' );
+			wp_enqueue_script( 'gllr_form_script' );
+			wp_add_inline_script( 'gllr_form_script', sprintf( $script ) ); ?>
 			<noscript>
 				<p>
 					<?php _e( 'Please, enable JavaScript in Your browser.', 'gallery-plugin' ); ?>

@@ -6,12 +6,12 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.6.4
+Version: 4.6.5
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2019  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  © Copyright 2020  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -95,7 +95,7 @@ if ( ! function_exists( 'gllr_init' ) ) {
 		}
 
 		/* Function check if plugin is compatible with current WP version  */
-		bws_wp_min_version_check( plugin_basename( __FILE__ ), $gllr_plugin_info, '4.0' );
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $gllr_plugin_info, '4.5' );
 
 		/* Call register settings function */
 		gllr_settings();
@@ -125,7 +125,7 @@ if ( ! function_exists( 'gllr_init' ) ) {
 
 if ( ! function_exists( 'gllr_admin_init' ) ) {
 	function gllr_admin_init() {
-		global $bws_plugin_info, $gllr_plugin_info, $bws_shortcode_list, $gllr_options;
+		global $bws_plugin_info, $gllr_plugin_info, $bws_shortcode_list, $pagenow, $gllr_options;
 		/* Add variable for bws_menu */
 		if ( empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '79', 'version' => $gllr_plugin_info["Version"] );
@@ -133,6 +133,13 @@ if ( ! function_exists( 'gllr_admin_init' ) ) {
 
 		/* add gallery to global $bws_shortcode_list */
 		$bws_shortcode_list['gllr'] = array( 'name' => 'Gallery', 'js_function' => 'gllr_shortcode_init' );
+
+		if ( 'plugins.php' == $pagenow ) {
+			/* Install the option defaults */
+			if ( function_exists( 'bws_plugin_banner_go_pro' ) ) {
+				bws_plugin_banner_go_pro( $gllr_options, $gllr_plugin_info, 'gllr', 'gallery', '01a04166048e9416955ce1cbe9d5ca16', '79', 'gallery-plugin' );
+			}
+		}
 
 		add_filter( 'manage_' . $gllr_options['post_type_name'] . '_posts_columns', 'gllr_change_columns' );
 		add_action( 'manage_' . $gllr_options['post_type_name'] . '_posts_custom_column', 'gllr_custom_columns', 10, 2 );
@@ -193,8 +200,8 @@ if ( ! function_exists( 'gllr_export_slider' ) ) {
 	function gllr_export_slider () {
 		global $wpdb;
 
-		$id = $_POST['post_id'];
-		$title = $_POST['post_title'];
+		$id = isset( $_POST['post_id'] ) ? intval( $_POST['post_id'] ) : "";
+		$title = isset( $_POST['post_title'] ) ? esc_attr( $_POST['post_title'] ) : "";
 
 		$select = $wpdb->get_results( "
             SELECT meta_value 
@@ -303,10 +310,8 @@ if ( ! function_exists( 'gllr_settings' ) ) {
 		}
 
 		if ( function_exists( 'add_image_size' ) ) {
-			if ( 'album-thumb' == $gllr_options['image_size_album'] )
-				add_image_size( 'album-thumb', $gllr_options['custom_size_px']['album-thumb'][0], $gllr_options['custom_size_px']['album-thumb'][1], true );
-			if ( 'photo-thumb' == $gllr_options['image_size_photo'] )
-				add_image_size( 'photo-thumb', $gllr_options['custom_size_px']['photo-thumb'][0], $gllr_options['custom_size_px']['photo-thumb'][1], true );
+            add_image_size( 'album-thumb', $gllr_options['custom_size_px']['album-thumb'][0], $gllr_options['custom_size_px']['album-thumb'][1], true );
+            add_image_size( 'photo-thumb', $gllr_options['custom_size_px']['photo-thumb'][0], $gllr_options['custom_size_px']['photo-thumb'][1], true );
 		}
 	}
 }
@@ -564,7 +569,7 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 			if ( isset( $_POST['_gallery_order_' . $post->ID ] ) ) {
 				$i = 1;
 				foreach ( $_POST['_gallery_order_' . $post->ID ] as $post_order_id => $order_id ) {
-					update_post_meta( $post_order_id, '_gallery_order_' . $post->ID, $i );
+					update_post_meta( intval( $post_order_id ), '_gallery_order_' . $post->ID, $i );
 					$i++;
 				}
 				update_post_meta( $post->ID, '_gallery_images', implode( ',', array_keys( $_POST['_gallery_order_' . $post->ID ] ) ) );
@@ -576,8 +581,8 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 				$gallery_images_array = explode( ',', $gallery_images );
 				$gallery_images_array = array_flip( $gallery_images_array );
 				foreach ( $_POST['media'] as $delete_id ) {
-					delete_post_meta( $delete_id, '_gallery_order_' . $post->ID );
-					unset( $gallery_images_array[ $delete_id ] );
+					delete_post_meta( intval( $delete_id ), '_gallery_order_' . $post->ID );
+					unset( $gallery_images_array[ intval( $delete_id ) ] );
 				}
 				$gallery_images_array = array_flip( $gallery_images_array );
 				$gallery_images = implode( ',', $gallery_images_array );
@@ -585,13 +590,13 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 			}
 			if ( isset( $_REQUEST['gllr_image_text'] ) ) {
 				foreach ( $_REQUEST['gllr_image_text'] as $gllr_image_text_key => $gllr_image_text ) {
-					$value = htmlspecialchars( trim( $gllr_image_text ) );
-					if ( get_post_meta( $gllr_image_text_key, 'gllr_image_text', false ) ) {
+					$value = sanitize_text_field( $gllr_image_text );
+					if ( get_post_meta( intval( $gllr_image_text_key ), 'gllr_image_text', false ) ) {
 						/* Custom field has a value and this custom field exists in database */
-						update_post_meta( $gllr_image_text_key, 'gllr_image_text', $value );
+						update_post_meta( intval( $gllr_image_text_key ), 'gllr_image_text', $value );
 					} elseif ( $value ) {
 						/* Custom field has a value, but this custom field does not exist in database */
-						add_post_meta( $gllr_image_text_key, 'gllr_image_text', $value );
+						add_post_meta( intval( $gllr_image_text_key ), 'gllr_image_text', $value );
 					}
 				}
 			}
@@ -601,24 +606,24 @@ if ( ! function_exists ( 'gllr_save_postdata' ) ) {
 					if ( filter_var( $value, FILTER_VALIDATE_URL ) === FALSE ) {
 						$value = '';
 					}
-					if ( get_post_meta( $gllr_link_url_key, 'gllr_link_url', FALSE ) ) {
+					if ( get_post_meta( intval( $gllr_link_url_key ), 'gllr_link_url', FALSE ) ) {
 						/* Custom field has a value and this custom field exists in database */
-						update_post_meta( $gllr_link_url_key, 'gllr_link_url', $value );
+						update_post_meta( intval( $gllr_link_url_key ), 'gllr_link_url', $value );
 					} elseif ( $value ) {
 						/* Custom field has a value, but this custom field does not exist in database */
-						add_post_meta( $gllr_link_url_key, 'gllr_link_url', $value );
+						add_post_meta( intval( $gllr_link_url_key ), 'gllr_link_url', $value );
 					}
 				}
 			}
 			if ( isset( $_REQUEST['gllr_image_alt_tag'] ) ) {
 				foreach ( $_REQUEST['gllr_image_alt_tag'] as $gllr_image_alt_tag_key => $gllr_image_alt_tag ) {
-					$value = htmlspecialchars( trim( $gllr_image_alt_tag ) );
-					if ( get_post_meta( $gllr_image_alt_tag_key, 'gllr_image_alt_tag', FALSE ) ) {
+					$value = sanitize_text_field( $gllr_image_alt_tag );
+					if ( get_post_meta( intval( $gllr_image_alt_tag_key ), 'gllr_image_alt_tag', FALSE ) ) {
 						/* Custom field has a value and this custom field exists in database */
-						update_post_meta( $gllr_image_alt_tag_key, 'gllr_image_alt_tag', $value );
+						update_post_meta( intval( $gllr_image_alt_tag_key ), 'gllr_image_alt_tag', $value );
 					} elseif ( $value ) {
 						/* Custom field has a value, but this custom field does not exist in database */
-						add_post_meta( $gllr_image_alt_tag_key, 'gllr_image_alt_tag', $value );
+						add_post_meta( intval( $gllr_image_alt_tag_key ), 'gllr_image_alt_tag', $value );
 					}
 				}
 			}
@@ -751,7 +756,7 @@ if ( ! function_exists( 'gllr_taxonomy_filter' ) ) {
 	function gllr_taxonomy_filter() {
 		global $typenow, $gllr_options;
 		if ( $typenow == $gllr_options['post_type_name'] ) {
-			$current_taxonomy = isset( $_GET['gallery_categories'] ) ? $_GET['gallery_categories'] : '';
+			$current_taxonomy = isset( $_GET['gallery_categories'] ) ? esc_attr( $_GET['gallery_categories'] ) : '';
 			$terms = get_terms( 'gallery_categories' );
 			if ( count( $terms ) > 0 ) { ?>
 				<select name="gallery_categories" id="gallery_categories">
@@ -1110,8 +1115,11 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 
 			while ( $second_query->have_posts() ) {
 				$second_query->the_post(); ?>
-				<h1 class="home_page_title entry-header"><?php the_title(); ?></h1>
+                <header class="entry-header  <?php echo ( 'Twenty Twenty' == wp_get_theme()->get( 'Name' ) ) ? 'has-text-align-center' : ''; ?>">
+                    <h1 class="home_page_title entry-title"><?php the_title(); ?></h1>
+                </header>
 				<div class="gallery_box_single entry-content">
+                    <div class="gllr_page_content">
 					<?php if ( ! post_password_required() ) {
 						the_content();
 
@@ -1130,7 +1138,7 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 						) );
 						if ( count( $posts ) > 0 ) {
 							$count_image_block = 0; ?>
-							<div class="gallery clearfix gllr_grid" data-gllr-columns="<?php echo $gllr_options["custom_image_row_count"]; ?>" data-gllr-border-width="<?php echo $gllr_options['border_images_width']; ?>">
+							<div class="gallery gllr_grid" data-gllr-columns="<?php echo $gllr_options["custom_image_row_count"]; ?>" data-gllr-border-width="<?php echo $gllr_options['border_images_width']; ?>">
 								<?php foreach ( $posts as $attachment ) {
 									$image_attributes = wp_get_attachment_image_src( $attachment->ID, $gllr_options['image_size_photo'] );
 									$image_attributes_large = wp_get_attachment_image_src( $attachment->ID, 'large' );
@@ -1168,7 +1176,7 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 												} ?>
 											</p>
 											<?php if ( 1 == $gllr_options["image_text"] ) { ?>
-												<div <?php if ( $width ) echo 'style="width:' . ( $width + $border_images ) . 'px;"'; ?> class="gllr_single_image_text"><?php echo $image_text; ?>&nbsp;</div>
+												<div <?php if ( $width ) echo 'style="width:' . ( $width + $border_images ) . 'px;"'; ?> class="gllr_single_image_text gllr_single_image_text_under"><?php echo $image_text; ?>&nbsp;</div>
 											<?php } ?>
 										</div><!-- .gllr_image_block -->
 									<?php if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) { ?>
@@ -1185,10 +1193,12 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 						if ( 1 == $gllr_options['return_link'] ) {
 							if ( empty( $gllr_options['return_link_url'] ) ) {
 								if ( ! empty( $gllr_options['page_id_gallery_template'] ) ) { ?>
-									<div class="return_link gllr_return_link"><a href="<?php echo get_permalink( $gllr_options['page_id_gallery_template'] ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
+                                    <div class="gllr_clear"></div>
+                                    <div class="return_link gllr_return_link"><a href="<?php echo get_permalink( $gllr_options['page_id_gallery_template'] ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
 								<?php }
 							} else { ?>
-								<div class="return_link gllr_return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
+                                <div class="gllr_clear"></div>
+                                <div class="return_link gllr_return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
 							<?php }
 						}
 						if ( $gllr_options['enable_lightbox'] ) {
@@ -1203,6 +1213,7 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 					} else { ?>
 						<p><?php echo get_the_password_form(); ?></p>
 					<?php } ?>
+				    </div><!-- .gllr_page_content -->
 				</div><!-- .gallery_box_single -->
 			<?php }
 		} else { ?>
@@ -1293,7 +1304,7 @@ if ( ! function_exists( 'gllr_add_pdf_print_content' ) ) {
 											<img src="' . $image_attributes[0] . '" style="' . $image_style . '" />
 										</div>';
 										if ( 1 == $gllr_options["image_text"] ) {
-											$custom_content .= '<div class="gllr_single_image_text">' . get_post_meta( $attachment->ID, 'gllr_image_text', true ) . '</div>';
+											$custom_content .= '<div class="gllr_single_image_text gllr_single_image_text_under">' . get_post_meta( $attachment->ID, 'gllr_image_text', true ) . '</div>';
 										}
 										$custom_content .= "</td><!-- .gllr_image_block -->\n";
 										if ( $count_image_block % $gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) {
@@ -1669,7 +1680,7 @@ if ( ! function_exists( 'gllr_add_pdf_print_content' ) ) {
 									}
 									$image_style .= "margin: 0;";
 
-									$custom_content .= '<table class="gallery clearfix gllr_table" data-gllr-columns="' . $gllr_options["custom_image_row_count"] . '" data-gllr-border-width="' . $border_images_width . '"' . ( ( 1 == $gllr_options["image_text"] ) ? 'data-image-text-position="' . $gllr_options["image_text_position"] . '"' : '' ) . '>';
+									$custom_content .= '<table class="gallery gllr_table" data-gllr-columns="' . $gllr_options["custom_image_row_count"] . '" data-gllr-border-width="' . $border_images_width . '"' . ( ( 1 == $gllr_options["image_text"] ) ? 'data-image-text-position="' . $gllr_options["image_text_position"] . '"' : '' ) . '>';
 
 										foreach ( $posts as $attachment ) {
 											$image_attributes = wp_get_attachment_image_src( $attachment->ID, $gllr_options['image_size_photo'] );
@@ -1682,7 +1693,7 @@ if ( ! function_exists( 'gllr_add_pdf_print_content' ) ) {
 												$custom_content .= '<img src="' . $image_attributes[0] . '" style="' . $image_style . '" />';
 											$custom_content .= '</div>';
 											if ( 1 == $gllr_options["image_text"] && $title != '' ) {
-												$custom_content .= '<div style="width:' . ( $width + $border_images ) . 'px;" class="gllr_single_image_text">' . $title . '</div>';
+												$custom_content .= '<div style="width:' . ( $width + $border_images ) . 'px;" class="gllr_single_image_text gllr_single_image_text_under">' . $title . '</div>';
 											}
 											$custom_content .= '</td>';
 											if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) {
@@ -1795,6 +1806,8 @@ if ( ! function_exists( 'gllr_the_excerpt_max_charlength' ) ) {
 
 if ( ! function_exists( 'gllr_settings_page' ) ) {
 	function gllr_settings_page() {
+		if ( ! class_exists( 'Bws_Settings_Tabs' ) )
+			require_once( dirname( __FILE__ ) . '/bws_menu/class-bws-settings.php' );
 		require_once( dirname( __FILE__ ) . '/includes/class-gllr-settings.php' );
 		$page = new Gllr_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
 		<div class="wrap">
@@ -1901,7 +1914,7 @@ if ( ! function_exists( 'gllr_enqueue_scripts' ) ) {
 	    global $gllr_options, $post, $wp_scripts;
 
 		$post_type = get_post_type();
-		$is_gallery_on_page = (	( is_single() && $gllr_options['post_type_name'] == $post_type ) ||	( has_shortcode( $post->post_content, 'print_gllr' ) ) );
+		$is_gallery_on_page = (	( is_single() && $gllr_options['post_type_name'] == $post_type ) ||	( isset( $post ) && has_shortcode( $post->post_content, 'print_gllr' ) ) );
 
 		/* disable 3rd-party fancybox */
         if( $gllr_options['disable_foreing_fancybox'] && $is_gallery_on_page ) {
@@ -1923,19 +1936,22 @@ if ( ! function_exists( 'gllr_wp_head' ) ) {
 		wp_enqueue_style( 'gllr_stylesheet', plugins_url( 'css/frontend_style.css', __FILE__ ), array( 'dashicons' ) );
 
 		if ( $gllr_options['enable_lightbox'] ) {
-			wp_enqueue_style( 'gllr_fancybox_stylesheet', plugins_url( 'fancybox/jquery.fancybox.min.css', __FILE__ ) ); ?>
-			<!-- Start ios -->
-			<script type="text/javascript">
-				( function( $ ){
-					$( document ).ready( function() {
-						$( '#fancybox-overlay' ).css( {
-							'width' : $( document ).width()
-						} );
-					} );
-				} )( jQuery );
-			</script>
-			<!-- End ios -->
-		<?php }
+			wp_enqueue_style( 'gllr_fancybox_stylesheet', plugins_url( 'fancybox/jquery.fancybox.min.css', __FILE__ ) );
+            /* Start ios */
+            $script = '
+            ( function( $ ){
+                $( document ).ready( function() {
+                    $( \'#fancybox-overlay\' ).css( {
+                        \'width\' : $( document ).width()
+                    } );
+                } );
+            } )( jQuery );
+            ';
+            /* End ios */
+            wp_register_script( 'gllr_enable_lightbox_ios', '' );
+            wp_enqueue_script( 'gllr_enable_lightbox_ios' );
+            wp_add_inline_script( 'gllr_enable_lightbox_ios', sprintf( $script ) );
+		}
 		if ( 1 == $gllr_options["image_text"] ) { ?>
 			<style type="text/css">
 				.gllr_image_row {
@@ -2194,7 +2210,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 
 							if ( 0 < count( $posts ) ) {
 								$count_image_block = 0; ?>
-								<div class="gallery clearfix gllr_grid" data-gllr-columns="<?php echo $gllr_options["custom_image_row_count"]; ?>" data-gllr-border-width="<?php echo $gllr_options['border_images_width']; ?>">
+								<div class="gallery gllr_grid" data-gllr-columns="<?php echo $gllr_options["custom_image_row_count"]; ?>" data-gllr-border-width="<?php echo $gllr_options['border_images_width']; ?>">
 									<?php foreach ( $posts as $attachment ) {
 										$image_attributes		= 	wp_get_attachment_image_src( $attachment->ID, $gllr_options['image_size_photo'] );
 										$image_attributes_large	=	wp_get_attachment_image_src( $attachment->ID, 'large' );
@@ -2225,7 +2241,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 													} ?>
 												</p>
 												<?php if ( 1 == $gllr_options["image_text"] ) { ?>
-													<div <?php if ( $width ) echo 'style="width:' . ( $width + $border_images ) . 'px;"'; ?> class="gllr_single_image_text"><?php echo $image_text; ?>&nbsp;</div>
+													<div <?php if ( $width ) echo 'style="width:' . ( $width + $border_images ) . 'px;"'; ?> class="gllr_single_image_text gllr_single_image_text_under"><?php echo $image_text; ?>&nbsp;</div>
 												<?php } ?>
 											</div><!-- .gllr_image_block -->
 										<?php if ( $count_image_block%$gllr_options['custom_image_row_count'] == $gllr_options['custom_image_row_count']-1 ) { ?>
@@ -2242,10 +2258,12 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 							if ( 1 == $gllr_options['return_link_shortcode'] ) {
 								if ( empty( $gllr_options['return_link_url'] ) ) {
 									if ( ! empty( $gllr_options["page_id_gallery_template"] ) ) { ?>
-										<div class="return_link gllr_return_link"><a href="<?php echo get_permalink( $gllr_options["page_id_gallery_template"] ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
+                                        <div class="gllr_clear"></div>
+                                        <div class="return_link gllr_return_link"><a href="<?php echo get_permalink( $gllr_options["page_id_gallery_template"] ); ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
 									<?php }
 								} else { ?>
-									<div class="return_link gllr_return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
+                                    <div class="gllr_clear"></div>
+                                    <div class="return_link gllr_return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
 								<?php }
 							} ?>
 						</div><!-- .gallery_box_single -->
@@ -2278,54 +2296,73 @@ if ( ! function_exists( 'gllr_echo_inline_script' ) ) {
 	function gllr_echo_inline_script() {
 		global $gllr_vars_for_inline_script, $gllr_options;
 
-		if ( isset( $gllr_vars_for_inline_script['single_script'] ) ) { ?>
-			<script type="text/javascript">
-				var gllr_onload = window.onload;
-				function gllr_fancy_init() {
-					var options = {
-						loop    : true,
-						arrows  : false,
-						infobar : true,
-						caption : function( instance, current ) {
-							current.full_src = jQuery( this ).find( 'img' ).attr( 'rel' );
-							var title = jQuery( this ).attr( 'title' ).replace(/</g, "&lt;");
-							return title ? '<div>' + title + '</div>' : '';
-						},
-						buttons : ['close']
-					};
-					<?php if ( $gllr_options['lightbox_download_link'] ) { ?>
-						if ( ! jQuery.fancybox.defaults.btnTpl.download )
-							jQuery.fancybox.defaults.btnTpl.download = '<a class="fancybox-button bws_gallery_download_link dashicons dashicons-download"></a>';
+		if ( isset( $gllr_vars_for_inline_script['single_script'] ) ) {
 
-						options.buttons.unshift( 'download' );
-						options.beforeShow = function( instance, current ) {
-							jQuery( '.bws_gallery_download_link' ).attr( 'href', current.full_src ).attr( 'download', current.full_src.substring( current.full_src.lastIndexOf('/') + 1 ) );
-						}
-					<?php }
+            $script = '
+            var gllr_onload = window.onload;
+            function gllr_fancy_init() {
+                var options = {
+                    loop    : true,
+                    arrows  : false,
+                    infobar : true,
+                    caption : function( instance, current ) {
+                        current.full_src = jQuery( this ).find( \'img\' ).attr( \'rel\' );
+                        var title = jQuery( this ).attr( \'title\' ).replace(/</g, "&lt;");
+                        return title ? \'<div>\' + title + \'</div>\' : \'\';
+                    },
+                    buttons : [\'close\']
+                };
+            ';
 
-					if ( $gllr_options['start_slideshow'] ) { ?>
-						options.buttons.unshift( 'slideShow' );
-						options.slideShow = { autoStart : true, speed : <?php echo $gllr_options['slideshow_interval']; ?> };
-					<?php }
-					/* prevent several fancybox initialization */
-					if ( $gllr_options['single_lightbox_for_multiple_galleries'] ) { ?>
-						jQuery( "a[data-fancybox=gallery_fancybox]" ).fancybox( options );
-					<?php } else {
-						foreach ( $gllr_vars_for_inline_script['single_script'] as $vars ) { ?>
-						jQuery( "a[data-fancybox=gallery_fancybox_<?php echo $vars['post_id']; ?>]" ).fancybox( options );
-					<?php }
-					} ?>
-				}
-				if ( typeof gllr_onload === 'function' ) {
-					window.onload = function() {
-						gllr_onload();
-						gllr_fancy_init();
-					}
-				} else {
-					window.onload = gllr_fancy_init;
-				}
-			</script>
-			<?php unset( $gllr_vars_for_inline_script );
+            if ( $gllr_options['lightbox_download_link'] ) {
+                $script .= '
+                if ( ! jQuery.fancybox.defaults.btnTpl.download )
+                    jQuery.fancybox.defaults.btnTpl.download = \'<a class="fancybox-button bws_gallery_download_link dashicons dashicons-download"></a>\';
+
+                options.buttons.unshift( \'download\' );
+                options.beforeShow = function( instance, current ) {
+                    jQuery( \'.bws_gallery_download_link\' ).attr( \'href\', current.full_src ).attr( \'download\', current.full_src.substring( current.full_src.lastIndexOf(\'/\') + 1 ) );
+                }
+                ';
+            }
+
+            if ( $gllr_options['start_slideshow'] ) {
+                $script .= '
+                options.buttons.unshift( \'slideShow\' );
+                options.slideShow = { autoStart : true, speed : ' . $gllr_options['slideshow_interval'] . ' };
+                ';
+            }
+
+            /* prevent several fancybox initialization */
+            if ( $gllr_options['single_lightbox_for_multiple_galleries'] ) {
+                $script .= '
+                jQuery( "a[data-fancybox=gallery_fancybox]" ).fancybox( options );
+                ';
+            } else {
+                foreach ( $gllr_vars_for_inline_script['single_script'] as $vars ) {
+                    $script .= '
+                    jQuery( "a[data-fancybox=gallery_fancybox_' . $vars['post_id'] . ']" ).fancybox( options );
+                    ';
+                }
+            }
+
+            $script .= '
+            }
+            if ( typeof gllr_onload === \'function\' ) {
+                window.onload = function() {
+                    gllr_onload();
+                    gllr_fancy_init();
+                }
+			} else {
+                window.onload = gllr_fancy_init;
+            }
+            ';
+
+            wp_register_script( 'gllr_fancy_init', '' );
+            wp_enqueue_script( 'gllr_fancy_init' );
+            wp_add_inline_script( 'gllr_fancy_init', sprintf( $script ) );
+
+            unset( $gllr_vars_for_inline_script );
 		}
 	}
 }
@@ -2335,8 +2372,8 @@ if ( ! function_exists ( 'gllr_update_image' ) ) {
 		global $wpdb, $gllr_options;
 		check_ajax_referer( plugin_basename( __FILE__ ), 'gllr_ajax_nonce_field' );
 
-		$action	= isset( $_REQUEST['action1'] ) ? $_REQUEST['action1'] : "";
-		$id		= isset( $_REQUEST['id'] ) ? $_REQUEST['id'] : "";
+		$action	= isset( $_REQUEST['action1'] ) ? esc_attr( $_REQUEST['action1'] ) : "";
+		$id		= isset( $_REQUEST['id'] ) ? intval( $_REQUEST['id'] ) : "";
 		switch ( $action ) {
 			case 'get_all_attachment':
 				$array_parent_id = $wpdb->get_col( $wpdb->prepare( "SELECT `ID` FROM $wpdb->posts WHERE `post_type` = %s", $gllr_options['post_type_name'] ) );
@@ -2606,6 +2643,8 @@ if ( ! function_exists ( 'gllr_theme_body_classes' ) ) {
 /* Create custom meta box for gallery post type */
 if ( ! function_exists( 'gllr_media_custom_box' ) ) {
 	function gllr_media_custom_box( $obj = '', $box = '' ) {
+		if ( ! class_exists( 'Bws_Settings_Tabs' ) )
+			require_once( dirname( __FILE__ ) . '/bws_menu/class-bws-settings.php' );
 		require_once( dirname( __FILE__ ) . '/includes/class-gllr-settings.php' );
 		$page = new Gllr_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
 		<div style="padding-top:10px;">
@@ -2973,7 +3012,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 				$user_can_edit = current_user_can( 'edit_post', $post->ID );
 				$post_owner = ( get_current_user_id() == $post->post_author ) ? 'self' : 'other';
 				$att_title = _draft_or_post_title(); ?>
-				<tr id="post-<?php echo $post->ID; ?>" class="<?php if ( $wp_version < '4.3' ) echo 'gllr_add_responsive_column '; echo trim( ' author-' . $post_owner . ' status-' . $post->post_status ); ?>">
+				<tr id="post-<?php echo $post->ID; ?>" class="<?php echo trim( ' author-' . $post_owner . ' status-' . $post->post_status ); ?>">
 					<?php list( $columns, $hidden ) = $this->get_column_info();
 					foreach ( $columns as $column_name => $column_display_name ) {
 
@@ -3098,9 +3137,9 @@ if ( ! function_exists( 'gllr_delete_image' ) ) {
 	function gllr_delete_image() {
 		check_ajax_referer( plugin_basename( __FILE__ ), 'gllr_ajax_nonce_field' );
 
-		$action				= isset( $_POST['action'] ) ? $_POST['action'] : "";
-		$delete_id_array	= isset( $_POST['delete_id_array'] ) ? $_POST['delete_id_array'] : "";
-		$post_id			= $_POST['post_id'];
+		$action				= isset( $_POST['action'] ) ? esc_attr( $_POST['action'] ) : "";
+		$delete_id_array	= isset( $_POST['delete_id_array'] ) ? esc_attr( $_POST['delete_id_array'] ) : "";
+		$post_id			= isset( $_POST['post_id'] ) ? intval( $_POST['post_id'] ) : "";
 
 		if ( 'gllr_delete_image' == $action && ! empty( $delete_id_array ) && ! empty( $post_id ) ) {
 			if ( is_array( $delete_id_array ) )
@@ -3137,7 +3176,7 @@ if ( ! function_exists( 'gllr_add_from_media' ) ) {
 
 		$add_id				= isset( $_POST['add_id'] ) ? intval( $_POST['add_id'] ) : "";
 		$original_post_id	= isset( $_POST['post_id'] ) ? intval( $_POST['post_id'] ) : "";
-		$gllr_mode			= isset( $_POST['mode'] ) ? $_POST['mode'] : 'grid';
+		$gllr_mode			= isset( $_POST['mode'] ) ? esc_attr( $_POST['mode'] ) : 'grid';
 
 		if ( ! empty( $_POST['add_id'] ) && ! empty( $original_post_id ) ) {
 			$post = get_post( $add_id );
@@ -3180,15 +3219,16 @@ if ( ! function_exists( 'gllr_print_media_notice' ) ) {
 		global $post, $gllr_options;
 		if ( isset( $post ) ) {
 			if ( $post->post_type == $gllr_options['post_type_name'] ) {
-				$image_info = '<# gllr_notice_wiev( data.id ); #><div id="gllr_media_notice" class="upload-errors"></div>'; ?>
-				<script type="text/javascript">
-					( function ($) {
-						$( '#tmpl-attachment-details' ).html(
-							$( '#tmpl-attachment-details' ).html().replace( '<div class="attachment-info"', '<?php echo $image_info; ?>$&' )
-						);
-					} )(jQuery);
-				</script>
-			<?php }
+
+				$script = "( function ($) {
+                    $( '#tmpl-attachment-details' ).html(
+                        $( '#tmpl-attachment-details' ).html().replace( '<div class=\"attachment-info\"', '<# gllr_notice_wiev( data.id ); #><div id=\"gllr_media_notice\" class=\"upload-errors\"></div>$&' )
+                    );
+                } )(jQuery);";
+				wp_register_script( 'gllr_print_media_notice', '' );
+				wp_enqueue_script( 'gllr_print_media_notice' );
+				wp_add_inline_script( 'gllr_print_media_notice', sprintf( $script ) );
+			}
 		}
 	}
 }
@@ -3279,45 +3319,51 @@ if ( ! function_exists( 'gllr_shortcode_button_content' ) ) {
 			</fieldset>
 			<?php if ( ! empty( $gllr_first ) ) { ?>
 				<input class="bws_default_shortcode" type="hidden" name="default" value="[print_gllr id=<?php echo $gllr_first; ?>]" />
-			<?php } ?>
-			<script type="text/javascript">
-				function gllr_shortcode_init() {
+			<?php }
+
+            $script = '
+            function gllr_shortcode_init() {
 					(function($) {
-						$( '.mce-reset input[name="gllr_shortcode_radio"], .mce-reset #gllr_display_short, .mce-reset #gllr_album_order_by_shortcode_option, .mce-reset #gllr_shortcode_list, .mce-reset #gllr_gallery_categories' ).on( 'change', function() {
-							if ( $( '.mce-reset #gllr_shortcode_list' ).is( ":focus" ) ) {
-								$( '.mce-reset input[class="gllr_shortcode_radio_single"]' ).prop( 'checked', true );
-							} else if ( $( '.mce-reset #gllr_gallery_categories' ).is( ":focus" ) ) {
-								$( '.mce-reset input[class=gllr_shortcode_radio_category]' ).prop( 'checked', true );
+						$( \'.mce-reset input[name="gllr_shortcode_radio"], .mce-reset #gllr_display_short, .mce-reset #gllr_album_order_by_shortcode_option, .mce-reset #gllr_shortcode_list, .mce-reset #gllr_gallery_categories\' ).on( \'change\', function() {
+							if ( $( \'.mce-reset #gllr_shortcode_list\' ).is( ":focus" ) ) {
+								$( \'.mce-reset input[class="gllr_shortcode_radio_single"]\' ).prop( \'checked\', true );
+							} else if ( $( \'.mce-reset #gllr_gallery_categories\' ).is( ":focus" ) ) {
+								$( \'.mce-reset input[class=gllr_shortcode_radio_category]\' ).prop( \'checked\', true );
 							}
-							var shortcode 	= '[print_gllr ',
-								id 			= '',
-								sort_by 	= '';
-							if( $( '.mce-reset input[class=gllr_shortcode_radio_category]' ).is( ':checked' ) ) {
-								id = 'gllr_gallery_categories';
-								shortcode += 'cat_id=';
-								$( '.gllr_shortcode_checkbox' ).hide();
-								$( '.gllr_shortcode_selectbox' ).show();
-							} else if ( $( '.mce-reset input[class="gllr_shortcode_radio_single"]' ).is( ':checked' ) ) {
-								id = 'gllr_shortcode_list';
-								shortcode += 'id=';
-								$( '.gllr_shortcode_checkbox' ).show();
-								$( '.gllr_shortcode_selectbox' ).hide();
+							var shortcode 	= \'[print_gllr \',
+								id 			= \'\',
+								sort_by 	= \'\';
+							if( $( \'.mce-reset input[class=gllr_shortcode_radio_category]\' ).is( \':checked\' ) ) {
+								id = \'gllr_gallery_categories\';
+								shortcode += \'cat_id=\';
+								$( \'.gllr_shortcode_checkbox\' ).hide();
+								$( \'.gllr_shortcode_selectbox\' ).show();
+							} else if ( $( \'.mce-reset input[class="gllr_shortcode_radio_single"]\' ).is( \':checked\' ) ) {
+								id = \'gllr_shortcode_list\';
+								shortcode += \'id=\';
+								$( \'.gllr_shortcode_checkbox\' ).show();
+								$( \'.gllr_shortcode_selectbox\' ).hide();
 							}
-							var gllr_list = $( '.mce-reset #' + id + ' option:selected' ).val();
+							var gllr_list = $( \'.mce-reset #\' + id + \' option:selected\' ).val();
 							shortcode += gllr_list;
-							if ( $( '.mce-reset #gllr_display_short' ).is( ':checked' ) && $( '.mce-reset input[class="gllr_shortcode_radio_single"]' ).is( ':checked' ) ) {
-								shortcode += ' display=short';
+							if ( $( \'.mce-reset #gllr_display_short\' ).is( \':checked\' ) && $( \'.mce-reset input[class="gllr_shortcode_radio_single"]\' ).is( \':checked\' ) ) {
+								shortcode += \' display=short\';
 							}
-							if ( $( '.mce-reset input[class="gllr_shortcode_radio_category"]' ).is( ':checked' ) ) {
-								sort_by = ' sort_by=' + $( '.mce-reset #gllr_album_order_by_shortcode_option option:selected' ).val();
+							if ( $( \'.mce-reset input[class="gllr_shortcode_radio_category"]\' ).is( \':checked\' ) ) {
+								sort_by = \' sort_by=\' + $( \'.mce-reset #gllr_album_order_by_shortcode_option option:selected\' ).val();
 							}
 							shortcode += sort_by;
-							shortcode += ']';
-							$( '.mce-reset #bws_shortcode_display' ).text( shortcode );
-						} ).trigger( 'change' );
+							shortcode += \']\';
+							$( \'.mce-reset #bws_shortcode_display\' ).text( shortcode );
+						} ).trigger( \'change\' );
 					})(jQuery);
 				}
-			</script>
+            ';
+
+            wp_register_script( 'gllr_shortcode_script', '' );
+            wp_enqueue_script( 'gllr_shortcode_script' );
+            wp_add_inline_script( 'gllr_shortcode_script', sprintf( $script ) );
+			?>
 			<div class="clear"></div>
 		</div>
 	<?php }
@@ -3351,9 +3397,6 @@ if ( ! function_exists ( 'gllr_admin_notices' ) ) {
 			$gllr_BWS_demo_data->bws_handle_demo_notice( $gllr_options['display_demo_notice'] );
 
 			if ( 'plugins.php' == $hook_suffix ) {
-				if ( isset( $gllr_options['first_install'] ) && strtotime( '-1 week' ) > $gllr_options['first_install'] )
-					bws_plugin_banner( $gllr_plugin_info, 'gllr', 'gallery', '01a04166048e9416955ce1cbe9d5ca16', '79', '//ps.w.org/gallery-plugin/assets/icon-128x128.png' );
-
 				bws_plugin_banner_to_settings( $gllr_plugin_info, 'gllr_options', 'gallery-plugin', 'edit.php?post_type=' . $gllr_options['post_type_name'] . '&page=gallery-plugin.php', 'post-new.php?post_type=' . $gllr_options['post_type_name'] );
 			} else {
 				bws_plugin_suggest_feature_banner( $gllr_plugin_info, 'gllr_options', 'gallery-plugin' );
