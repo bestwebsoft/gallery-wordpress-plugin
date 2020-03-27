@@ -580,18 +580,18 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 							}
 						</style>
 					<?php } ?>
-					<div class="update-nag" style="position: relative;">
+					<div class="notice" style="position: relative;">
 						<form id="bws_handle_notice_form" action="" method="post">
 							<button class="notice-dismiss bws_hide_demo_notice" title="<?php _e( 'Close notice', $this->bws_plugin_text_domain ); ?>"></button>
 							<input type="hidden" name="bws_hide_demo_notice" value="hide" />
 							<?php wp_nonce_field( $this->bws_plugin_basename, 'bws_demo_nonce_name' ); ?>
 						</form>
-						<div style="margin: 0 20px;">
+						<p>
 							<?php printf(
-								__( 'Do you want to install demo content and settings for %s? (You can do this later using Import / Export settings)', $this->bws_plugin_text_domain ),
-								$this->bws_plugin_name . ' by BestWebSoft'
-							); ?>&nbsp;<a href="<?php echo admin_url( 'admin.php?page=' . $this->bws_plugin_page ); ?>"><?php _e( 'Yes, install demo now', $this->bws_plugin_text_domain ); ?></a>
-						</div>
+								__( 'Do you want to install demo content and settings for %s now?', $this->bws_plugin_text_domain ),
+								'<b>' . $this->bws_plugin_name . ' by BestWebSoft</b>'
+							); ?>&nbsp;<a href="<?php echo admin_url( 'admin.php?page=' . $this->bws_plugin_page ); ?>"><?php _e( 'Yes, install demo data', $this->bws_plugin_text_domain ); ?></a>
+						</p>
 					</div>
 				<?php }
 			}

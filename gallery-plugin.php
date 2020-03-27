@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your Wordpress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.6.5
+Version: 4.6.6
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -1899,7 +1899,7 @@ if ( ! function_exists ( 'gllr_admin_head' ) ) {
 					'confirm_update_gallery'	=> __( "Switching to another mode, all unsaved data will be lost. Save data before switching?", 'gallery-plugin' ),
 					'wp_media_title'			=> __( 'Insert Media', 'gallery-plugin' ),
 					'wp_media_button'			=> __( 'Insert', 'gallery-plugin' ),
-					'export_message'            => __( 'Gallery has been successfully added!', 'gallery-plugin' ),
+					'export_message'            => sprintf( '%s <a href="admin.php?page=slider.php">%s</a>', __( 'A new slider is added.', 'gallery-plugin' ), __( 'Edit slider', 'gallery-plugin' ) ),
 					'post'                      => $post->ID,
 					'title'                     => $post->post_title
 				)

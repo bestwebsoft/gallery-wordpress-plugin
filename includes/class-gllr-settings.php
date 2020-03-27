@@ -298,7 +298,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<?php if ( ! $this->is_global_settings ) { ?>
                 <table class="form-table ">
                     <tr>
-                        <th scope="row"><?php _e( 'Add Gallery to the Slider', 'gallery-plugin' ); ?> </th>
+                        <th scope="row"><?php _e( 'Create Slider', 'gallery-plugin' ); ?> </th>
                         <td>
                             <?php $plugin_info = gallery_plugin_status(
                                 'slider-bws/slider-bws.php',
@@ -315,10 +315,10 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
                                 $attrs = 'disabled="disabled"';
                                 $plugin_notice = ' <a href="https://bestwebsoft.com/products/wordpress/plugins/slider/' . '" target="_blank">' . __( 'Install Now', 'gallery-plugin' ) . '</a>';
                             }
-                            $export = __( 'Add', 'gallery-plugin' ) ?>
+                            $export = __( 'Create New Slider', 'gallery-plugin' ) ?>
                             <input type="button" <?php echo $this->change_permission_attr; ?> class="button" <?php echo $attrs; ?> id="gllr-export-slider" name="gllr-export-slider" value="<?php echo $export ?>">
                             <span id="gllr_export_loader" class="gllr_loader"><img src="<?php echo plugins_url( '../images/ajax-loader.gif', __FILE__ ); ?>" alt="loader" /></span><br />
-                            <span class="bws_info"><?php _e( 'Click to add current gallery to the slider. Slider plugin is required.', 'gallery-plugin' ); echo $plugin_notice; ?></span>
+                            <span class="bws_info"><?php _e( 'Click to create a new slider using gallery images. Slider plugin is required.', 'gallery-plugin' ); echo $plugin_notice; ?></span>
                         </td>
                     </tr>
                 </table>
@@ -452,7 +452,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 										<fieldset>
 											<label>
 												<input disabled type="radio" value="under" checked="checked">
-												<?php _e( 'Under image', 'gallery-plugin' ); ?>
+												<?php _e( 'Below images', 'gallery-plugin' ); ?>
 												<?php echo bws_add_help_box( '<img src="' . plugins_url( 'images/display_text_under_image.jpg', dirname( __FILE__ ) ) . '" />', 'bws-hide-for-mobile bws-auto-width' ); ?>
 											</label>
 											<br/>
@@ -489,6 +489,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<input type="text" value="<?php echo $this->options["border_images_color"]; ?>" name="gllr_border_images_color" class="gllr_color_field" data-default-color="#F1F1F1" />
 						</td>
 					</tr>
+                    <tr>
+                        <th scope="row"><?php _e( 'Unclickable Thumbnail Images', 'gallery-plugin' ); ?> </th>
+                        <td>
+                            <input type="checkbox" name="gllr_enable_image_opening" <?php if ( 1 == $this->options["enable_image_opening"] ) echo 'checked="checked"'; ?> />
+                            <span class="bws_info"><?php _e( 'Enable to make the images in a single gallery unclickable and hide their URLs. This option also disables Lightbox.', 'gallery-plugin' ); ?></span>
+                        </td>
+                    </tr>
 				</table>
 				<?php if ( ! $this->hide_pro_tabs ) { ?>
 					<div class="bws_pro_version_bloc">
@@ -548,7 +555,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<th scope="row"><?php _e( 'Back Link URL', 'gallery-plugin' ); ?></th>
 						<td>
 							<input type="text" value="<?php echo $this->options["return_link_url"]; ?>" name="gllr_return_link_url" maxlength="250" />
-							<div class="bws_info"><?php _e( 'Back link custom page URL. Leave blank to use Gallery page template.' , 'gallery-plugin' ); ?></div>
+							<div class="bws_info"><?php _e( 'Leave blank to use the Gallery page template or enter a custom page URL.' , 'gallery-plugin' ); ?></div>
 						</td>
 					</tr>
 					<tr class="gllr_for_return_link">
@@ -565,9 +572,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						</td>
 					</tr>
                     <tr>
-                        <th scope="row"><?php _e( 'Try to disable 3rd-party fancybox', 'gallery-plugin' ); ?></th>
+                        <th scope="row"><?php _e( 'Disable Fancybox', 'gallery-plugin' ); ?></th>
                         <td>
-                            <input type="checkbox" name="gllr_disable_foreing_fancybox" value="1" <?php if ( 1 == $this->options["disable_foreing_fancybox"] ) echo 'checked="checked"'; ?> /> <span class="bws_info"><?php _e( 'Enable to avoid conflicts with 3rd-party fancybox.' , 'gallery-plugin' ); ?></span>
+                            <input type="checkbox" name="gllr_disable_foreing_fancybox" value="1" <?php if ( 1 == $this->options["disable_foreing_fancybox"] ) echo 'checked="checked"'; ?> /> <span class="bws_info"><?php _e( 'Enable to avoid possible conflicts with a 3rd party Fancybox.' , 'gallery-plugin' ); ?></span>
                         </td>
                     </tr>
 				</table>
@@ -715,31 +722,33 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						</fieldset>
 					</td>
 				</tr>
-				<tr>
+            </table>
+				<?php if ( ! $this->hide_pro_tabs ) { ?>
+                    <div class="bws_pro_version_bloc gllr_for_enable_lightbox">
+                        <div class="bws_pro_version_table_bloc">
+                            <button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
+                            <div class="bws_table_bg"></div>
+                            <table class="form-table bws_pro_version">
+                                <tr>
+                                    <th scope="row"><?php _e( 'Instant Lightbox', 'gallery-plugin' ); ?> </th>
+                                    <td>
+                                        <input type="checkbox" value="1" disabled />
+                                        <span class="bws_info"><?php _e( 'Enable to display all images in the lightbox after clicking cover image or URL instead of going to a single gallery page.', 'gallery-plugin' ); ?></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+						<?php $this->bws_pro_block_links(); ?>
+                    </div>
+				<?php } ?>
+            <table class="form-table">
+                <tr>
 					<th scope="row"><?php _e( 'Read More Link Label', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="text" name="gllr_read_more_link_text" maxlength="250" value="<?php echo $this->options["read_more_link_text"]; ?>" />
 					</td>
 				</tr>
 			</table>
-			<?php if ( ! $this->hide_pro_tabs ) { ?>
-				<div class="bws_pro_version_bloc gllr_for_enable_lightbox">
-					<div class="bws_pro_version_table_bloc">
-						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
-						<div class="bws_table_bg"></div>
-						<table class="form-table bws_pro_version">
-							<tr>
-								<th scope="row"><?php _e( 'Instant Lightbox', 'gallery-plugin' ); ?> </th>
-								<td>
-									<input type="checkbox" value="1" disabled />
-									<span class="bws_info"><?php _e( 'Enable to display all images in the lightbox after clicking cover image or URL instead of going to a single gallery page.', 'gallery-plugin' ); ?></span>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<?php $this->bws_pro_block_links(); ?>
-				</div>
-			<?php } ?>
 		<?php }
 
 		/**
@@ -750,13 +759,6 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			<?php $this->help_phrase(); ?>
 			<hr>
 			<table class="form-table">
-				<tr>
-					<th scope="row"><?php _e( 'Unclickable Thumbnail Images', 'gallery-plugin' ); ?> </th>
-					<td>
-						<input type="checkbox" name="gllr_enable_image_opening" <?php if ( 1 == $this->options["enable_image_opening"] ) echo 'checked="checked"'; ?> />
-						<span class="bws_info"><?php _e( 'Enable to make the images in a single gallery unclickable and hide their URLs. This option also disables Lightbox.', 'gallery-plugin' ); ?></span>
-					</td>
-				</tr>
 				<tr class="gllr_for_enable_opening_images">
 					<th scope="row"><?php _e( 'Enable Lightbox', 'gallery-plugin' ); ?> </th>
 					<td>
