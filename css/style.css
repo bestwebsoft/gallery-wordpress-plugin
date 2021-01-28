@@ -83,6 +83,9 @@
 .gllr-wp-filter {
 	margin-top: 15px;
 }
+.type-bws-gallery img {
+	max-height: 65px;
+}
 #bws_settings_tabs_wrapper .bws_tab#gllr_images_tab > .attachments {
 	margin: 0;
 	width: 100%;

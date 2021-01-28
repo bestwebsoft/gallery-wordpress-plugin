@@ -143,7 +143,7 @@ function gllr_setError( msg ) {
 			return false;
 		} );
 
-		function gllr_add_sortable() {			
+		function gllr_add_sortable() {		
 			if ( $.fn.sortable ) {
 				if ( $( "#the-list tr" ).length > 1 ) {
 					$( '#the-list' ).sortable( {

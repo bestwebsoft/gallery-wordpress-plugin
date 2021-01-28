@@ -10,6 +10,7 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 		private $tabs;
 		private $pro_plugin_is_activated = false;
 		private $custom_code_args = array();
+		private $bws_plugin_link = '';
 
 		public $plugin_basename;
 		public $prefix;
@@ -53,6 +54,8 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 		 * @param array|string $args
 		 */
 		public function __construct( $args = array() ) {
+			global $wp_version;
+
 			$args = wp_parse_args( $args, array(
 				'plugin_basename' 	 => '',
 				'prefix' 			 => '',
@@ -66,8 +69,6 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 				'wp_slug'			 => '',
 				'demo_data' 		 => false,
 				/* if this is free version and pro exist */
-				'pro_page'			 => '',
-				'bws_license_plugin' => '',
 				'link_key'			 => '',
 				'link_pn'			 => '',
 				'trial_days'		 => false,
@@ -90,14 +91,27 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 			$this->doc_link  			= $args['doc_link'];
 			$this->doc_video_link  		= $args['doc_video_link'];
 
-			$this->pro_page  			= $args['pro_page'];
-			$this->bws_license_plugin  	= $args['bws_license_plugin'];
 			$this->link_key  			= $args['link_key'];
 			$this->link_pn  			= $args['link_pn'];
 			$this->trial_days  			= $args['trial_days'];
 			$this->licenses 			= $args['licenses'];
 
-			$this->hide_pro_tabs   		= bws_hide_premium_options_check( $this->options );
+			$this->pro_page = $this->bws_license_plugin = '';
+			/* get $bws_plugins */
+			require( dirname( __FILE__ ) . '/product_list.php' );
+			if ( isset( $bws_plugins[ $this->plugin_basename ] ) ) {
+				if ( isset( $bws_plugins[ $this->plugin_basename ]['pro_settings'] ) ) {
+					$this->pro_page  			= $bws_plugins[ $this->plugin_basename ]['pro_settings'];
+					$this->bws_license_plugin  	= $bws_plugins[ $this->plugin_basename ]['pro_version'];
+				}						
+
+				$this->bws_plugin_link = substr( $bws_plugins[ $this->plugin_basename ]['link'],0 , strpos( $bws_plugins[ $this->plugin_basename ]['link'], '?' ) ); 
+
+				if ( ! empty( $this->link_key ) && ! empty( $this->link_pn ) )
+					$this->bws_plugin_link .= '?k=' . $this->link_key . '&pn=' . $this->link_pn . '&v=' . $this->plugins_info["Version"] . '&wp_v=' . $wp_version;
+			}
+
+			$this->hide_pro_tabs = bws_hide_premium_options_check( $this->options );
 			$this->version = '1.0.0';
 			$this->is_multisite = is_multisite();
 
@@ -112,7 +126,7 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 				$this->licenses[ $this->plugins_info['TextDomain'] ] = array(
 					'name'          => $this->plugins_info['Name'],
 					'slug'          => $this->plugins_info['TextDomain'],
-					'pro_slug'      => stristr( $this->bws_license_plugin, '/', TRUE ),
+					'pro_slug'      => substr( $this->bws_license_plugin, 0, stripos( $this->bws_license_plugin, '/' ) ),
 					'basename'      => $this->plugin_basename,
 					'pro_basename'  => $this->bws_license_plugin
 				);
@@ -155,8 +169,12 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
                                             <div class="submitbox" id="submitpost">
                                                 <div id="minor-publishing">
                                                     <div id="misc-publishing-actions">
-														<?php if ( $this->is_pro ) {															
-															if ( ! array_key_exists( $this->plugin_basename, $bstwbsftwppdtplgns_options['time_out'] ) || isset( $bstwbsftwppdtplgns_options['wrong_license_key'][ $this->plugin_basename ] ) ) {
+                                                        <?php /**
+                                                         * action - Display additional content for #misc-publishing-actions
+                                                         */
+                                                        do_action( __CLASS__ . '_information_postbox_top' ); ?>
+														<?php if ( $this->is_pro ) {
+															if ( isset( $bstwbsftwppdtplgns_options['wrong_license_key'][ $this->plugin_basename ] ) || empty( $bstwbsftwppdtplgns_options['time_out'] ) || ! array_key_exists( $this->plugin_basename, $bstwbsftwppdtplgns_options['time_out'] ) ) {
 																$license_type = 'Pro';
 																$license_status = __( 'Inactive', 'bestwebsoft' ) . ' <a href="#' . $this->prefix . '_license_tab" class="bws_trigger_tab_click">' . __( 'Learn More', 'bestwebsoft' ) . '</a>';
 															} else {
@@ -191,6 +209,10 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
                                                         <div class="misc-pub-section">
                                                             <strong><?php _e( 'Version', 'bestwebsoft' ); ?>:</strong> <?php echo $this->plugins_info['Version']; ?>
                                                         </div><!-- .misc-pub-section -->
+                                                        <?php /**
+                                                         * action - Display additional content for #misc-publishing-actions
+                                                         */
+                                                        do_action( __CLASS__ . '_information_postbox_bottom' ); ?>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -234,8 +256,7 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 		 * @param  void
 		 * @return void
 		 */
-		public function display_tabs() {
-			global $wp_version; ?>
+		public function display_tabs() { ?>
             <div id="bws_settings_tabs_wrapper">
                 <ul id="bws_settings_tabs">
 					<?php $this->display_tabs_list(); ?>
@@ -762,18 +783,15 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
                             </tr>
                         </table>
 					<?php } else {
-						$attr = '';
+						$attr = $license_key = '';
 						if ( isset( $bstwbsftwppdtplgns_options['go_pro'][ $this->bws_license_plugin ]['count'] ) &&
 						     '5' < $bstwbsftwppdtplgns_options['go_pro'][ $this->bws_license_plugin ]['count'] &&
 						     $bstwbsftwppdtplgns_options['go_pro'][ $this->bws_license_plugin ]['time'] > ( time() - ( 24 * 60 * 60 ) ) )
 							$attr = 'disabled="disabled"';
 
-						$license_key = '';
-						if( ! empty( $single_license['pro_basename'] ) ) {
+						if ( ! empty( $single_license['pro_basename'] ) ) {
 							$license_key = ! empty( $bstwbsftwppdtplgns_options[ $single_license['pro_basename'] ] ) ? $bstwbsftwppdtplgns_options[ $single_license['pro_basename'] ] : '';
-						}
-						$current_plugin_link = ( ! empty( $this->link_key ) && ! empty( $this->link_pn ) ? esc_url( 'https://bestwebsoft.com/products/wordpress/plugins/' . $this->wp_slug . '/' . '?k=' . $this->link_key . '&pn=' . $this->link_pn . '&v=' . $this->plugins_info["Version"] . '&wp_v=' . $wp_version ) : esc_url( 'https://bestwebsoft.com/products/wordpress/plugins/' . $this->wp_slug . '/' ) );
-						?>
+						} ?>
                         <table class="form-table">
                             <tr>
                                 <th scope="row"><?php echo $pro_plugin_name . ' License'; ?></th>
@@ -782,7 +800,7 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
                                     <input <?php echo $attr; ?> type="hidden" name="bws_license_plugin_<?php echo ( ! empty( $single_license['pro_slug'] ) ) ? $single_license['pro_slug'] : $single_license['slug']; ?>" value="<?php echo esc_attr( ( ! empty( $single_license['pro_slug'] ) ) ? $single_license['pro_slug'] : $single_license['slug'] ); ?>" />
                                     <input <?php echo $attr; ?> type="submit" class="button button-secondary" name="bws_license_submit" value="<?php _e( 'Activate', 'bestwebsoft' ); ?>" />
                                     <div class="bws_info">
-										<?php printf( __( 'Enter your license key to activate %s and get premium plugin features.', 'bestwebsoft' ), '<a href="' . $current_plugin_link . '" target="_blank" title="' . $pro_plugin_name . '">' . $pro_plugin_name . '</a>' ); ?>
+										<?php printf( __( 'Enter your license key to activate %s and get premium plugin features.', 'bestwebsoft' ), '<a href="' . $this->bws_plugin_link . '" target="_blank" title="' . $pro_plugin_name . '">' . $pro_plugin_name . '</a>' ); ?>
                                     </div>
 									<?php if ( '' != $attr ) { ?>
                                         <p><?php _e( "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually.", 'bestwebsoft' ); ?></p>
@@ -832,6 +850,7 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 		private function save_options_license_key() {
 			global $wp_version, $bstwbsftwppdtplgns_options;
 			/*$empty_field_error - added to avoid error when 1 field is empty while another field contains license key*/
+			
 			$error = $message = $empty_field_error = '';
 			
 			foreach ( $this->licenses as $single_license) {
@@ -855,7 +874,7 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 							if ( ! empty( $this->all_plugins ) && ! empty( $current ) && isset( $current->response ) && is_array( $current->response ) ) {
 								$to_send = array();
 								$to_send["plugins"][ $single_license['basename'] ] = $this->all_plugins[ $single_license['basename'] ];
-								$to_send["plugins"][ $single_license['basename'] ]["bws_license_key"]    = $bws_license_key;
+								$to_send["plugins"][ $single_license['basename'] ]["bws_license_key"] = $bws_license_key;
 								$to_send["plugins"][ $single_license['basename'] ]["bws_illegal_client"] = true;
 								$options                                                            = array(
 									'timeout'    => ( ( defined( 'DOING_CRON' ) && DOING_CRON ) ? 30 : 3 ),

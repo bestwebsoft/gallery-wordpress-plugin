@@ -54,7 +54,7 @@ $current_theme_name = wp_get_theme()->get( 'Name' ); ?>
 	/* Theme Twenty Nineteen hasn`t sidebar */
 	if( 'Twenty Twenty' == $current_theme_name ) {
 		get_template_part( 'template-parts/footer-menus-widgets' );
-	} elseif( 'Twenty Nineteen' != $current_theme_name ) {
+	} elseif ( file_exists( TEMPLATEPATH . '/sidebar.php' ) ) {
 		get_sidebar();
 	} ?>
 </div><!-- .wrap -->

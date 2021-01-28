@@ -53,8 +53,6 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				'doc_link'			 => 'https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/',
 				'wp_slug'			 => 'gallery-plugin',
 				'demo_data'			 => $gllr_BWS_demo_data,
-				'pro_page' 			 => 'admin.php?page=gallery-plugin-pro.php',
-				'bws_license_plugin' => 'gallery-plugin-pro/gallery-plugin-pro.php',
 				'link_key' 			 => '63a36f6bf5de0726ad6a43a165f38fe5',
 				'link_pn' 			 => '79',
 				'trial_days'		 => 7

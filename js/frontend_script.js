@@ -4,7 +4,7 @@
 
 			$( ".gllr_grid:visible" ).each( function() {
 				var $gallery = $( this ),
-					gallery_wrap_width = $gallery.parent( '.gallery_box_single' ).width(),
+					gallery_wrap_width = $gallery.parents( '.gallery_box_single' ).width(),
 					$gallery_rows = $gallery.find( '.gllr_image_row' ),
 					$gallery_first_row = $gallery_rows.filter( ':first' ),
 					$images = $gallery.find( '.gllr_image_block' ),

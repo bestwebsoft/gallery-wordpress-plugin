@@ -24,7 +24,7 @@ get_header(); ?>
 	$current_theme = wp_get_theme();
 	if( 'Twenty Twenty' == $current_theme->get( 'Name' ) ) {
 		get_template_part( 'template-parts/footer-menus-widgets' );
-	} elseif( 'Twenty Nineteen' != $current_theme->get( 'Name' ) ) {
+	} elseif ( file_exists( TEMPLATEPATH . '/sidebar.php' ) ) {
 		get_sidebar();
 	} ?>
 </div><!-- .wrap -->
