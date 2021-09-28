@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-24 13:30+0200\n"
-"PO-Revision-Date: 2020-03-24 13:31+0200\n"
+"POT-Creation-Date: 2021-08-20 14:44+0300\n"
+"PO-Revision-Date: 2021-08-20 14:44+0300\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -17,117 +17,117 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: bws_menu\n"
 
-#: gallery-plugin.php:39 includes/class-gllr-settings.php:295
+#: gallery-plugin.php:41 includes/class-gllr-settings.php:299
 msgid "Gallery Settings"
 msgstr "Настройки Галерей"
 
-#: gallery-plugin.php:39 includes/class-gllr-settings.php:333
+#: gallery-plugin.php:41 includes/class-gllr-settings.php:338
 msgid "Global Settings"
 msgstr "Общие настройки"
 
-#: gallery-plugin.php:45 gallery-plugin.php:2994
+#: gallery-plugin.php:48 includes/class-gllr-media-table.php:346
 msgid "Upgrade to Pro"
 msgstr "Обновить до Pro"
 
-#: gallery-plugin.php:349
+#: gallery-plugin.php:354
 msgid "Return to all albums"
 msgstr "Вернуться ко всем альбомам"
 
-#: gallery-plugin.php:363
+#: gallery-plugin.php:368
 msgid "See images &raquo;"
 msgstr "Смотреть фотографии &raquo;"
 
-#: gallery-plugin.php:453 gallery-plugin.php:462
+#: gallery-plugin.php:461 gallery-plugin.php:470
 msgid "Galleries"
 msgstr "Галереи"
 
-#: gallery-plugin.php:454 gallery-plugin.php:3296
+#: gallery-plugin.php:462 gallery-plugin.php:2829
 msgid "Gallery"
 msgstr "Галерея"
 
-#: gallery-plugin.php:455
+#: gallery-plugin.php:463
 msgid "Add New Gallery"
 msgstr "Добавить новую галерею"
 
-#: gallery-plugin.php:456
+#: gallery-plugin.php:464
 msgid "Edit Gallery"
 msgstr "Редактировать галерею"
 
-#: gallery-plugin.php:457
+#: gallery-plugin.php:465
 msgid "New Gallery"
 msgstr "Новая галерея"
 
-#: gallery-plugin.php:458
+#: gallery-plugin.php:466
 msgid "View Gallery"
 msgstr "Просмотреть галерею"
 
-#: gallery-plugin.php:459 includes/class-gllr-settings.php:998
+#: gallery-plugin.php:467 includes/class-gllr-settings.php:1034
 msgid "Search Galleries"
 msgstr "Искать галереи"
 
-#: gallery-plugin.php:460
+#: gallery-plugin.php:468
 msgid "No Gallery found"
 msgstr "Ни одной галереи не найдено"
 
-#: gallery-plugin.php:482 gallery-plugin.php:1733 gallery-plugin.php:3268
+#: gallery-plugin.php:490 gallery-plugin.php:1740 gallery-plugin.php:2801
 #: includes/class-gllr-widgets.php:25 includes/class-gllr-widgets.php:33
 #: includes/class-gllr-widgets.php:71 includes/class-gllr-widgets.php:95
 msgid "Gallery Categories"
 msgstr "Категории галерей"
 
-#: gallery-plugin.php:483 gallery-plugin.php:932
+#: gallery-plugin.php:491 gallery-plugin.php:940
 msgid "Gallery Category"
 msgstr "Категория галерей"
 
-#: gallery-plugin.php:484
+#: gallery-plugin.php:492
 msgid "Add Gallery Category"
 msgstr "Добавить категорию галерей"
 
-#: gallery-plugin.php:485
+#: gallery-plugin.php:493
 msgid "Add New Gallery Category"
 msgstr "Добавить новую категорию галерей"
 
-#: gallery-plugin.php:486 gallery-plugin.php:487
+#: gallery-plugin.php:494 gallery-plugin.php:495
 msgid "Edit Gallery Category"
 msgstr "Редактировать категорию галерей"
 
-#: gallery-plugin.php:488
+#: gallery-plugin.php:496
 msgid "New Gallery Category"
 msgstr "Новая категория галерей"
 
-#: gallery-plugin.php:489 gallery-plugin.php:490
+#: gallery-plugin.php:497 gallery-plugin.php:498
 msgid "View Gallery Category"
 msgstr "Просмотреть категорию галерей"
 
-#: gallery-plugin.php:491
+#: gallery-plugin.php:499
 msgid "Find Gallery Category"
 msgstr "Найти категорию галерей"
 
-#: gallery-plugin.php:492
+#: gallery-plugin.php:500
 msgid "No Gallery Categories found"
 msgstr "Ни одной категории галерей не найдено"
 
-#: gallery-plugin.php:493
+#: gallery-plugin.php:501
 msgid "No Gallery Categories found in Trash"
 msgstr "Ни одной категории галерей в корзине не найдено"
 
-#: gallery-plugin.php:494
+#: gallery-plugin.php:502
 msgid "Parent Gallery Category"
 msgstr "Родительская категория галереи"
 
-#: gallery-plugin.php:495
+#: gallery-plugin.php:503
 msgid "Gallery Categories list navigation"
 msgstr "Навигация списка категории галерей"
 
-#: gallery-plugin.php:496
+#: gallery-plugin.php:504
 msgid "Gallery Categories list"
 msgstr "Список категорий галерей"
 
-#: gallery-plugin.php:546
+#: gallery-plugin.php:554
 msgid "Gallery Shortcode"
 msgstr "Шорткод галереи"
 
-#: gallery-plugin.php:555
+#: gallery-plugin.php:563
 msgid ""
 "Add a single gallery with images to your posts, pages, custom post types or "
 "widgets by using the following shortcode:"
@@ -135,7 +135,7 @@ msgstr ""
 "Добавляйте одну галерею с изображениями в ваши записи, страницы, "
 "пользовательские типы записей или виджеты с помощью следующего шорткода:"
 
-#: gallery-plugin.php:559
+#: gallery-plugin.php:567
 msgid ""
 "Add a gallery cover including featured image, description, and a link to "
 "your single gallery using the following shortcode:"
@@ -143,11 +143,11 @@ msgstr ""
 "Добавляйте альбом галереи, включая изображение альбома, описание и ссылку на "
 "полную галерею с помощью следующего шорткода:"
 
-#: gallery-plugin.php:671
+#: gallery-plugin.php:679
 msgid "Note"
 msgstr "Примечание"
 
-#: gallery-plugin.php:671
+#: gallery-plugin.php:679
 #, php-format
 msgid ""
 "When deleting a category, the galleries that belong to this category will "
@@ -156,118 +156,120 @@ msgstr ""
 "Удаление категории не приводит к удалению галерей из этой категории. Вместо "
 "этого галереи из удалённой категории будут перемещены в категорию %s."
 
-#: gallery-plugin.php:682
+#: gallery-plugin.php:690
 msgid "Sort Galleries in Category by"
 msgstr "Сортировать галереи в категории по"
 
-#: gallery-plugin.php:685 gallery-plugin.php:3282
-#: includes/class-gllr-settings.php:697
+#: gallery-plugin.php:693 gallery-plugin.php:2815
+#: includes/class-gllr-settings.php:720
 msgid "Gallery ID"
 msgstr "ID галереи"
 
-#: gallery-plugin.php:686 gallery-plugin.php:1730 gallery-plugin.php:2848
-#: gallery-plugin.php:2955 gallery-plugin.php:3068 gallery-plugin.php:3283
-#: includes/class-gllr-settings.php:698 includes/class-gllr-widgets.php:282
+#: gallery-plugin.php:694 gallery-plugin.php:1737 gallery-plugin.php:2816
+#: includes/class-gllr-media-table.php:199
+#: includes/class-gllr-media-table.php:306
+#: includes/class-gllr-media-table.php:421 includes/class-gllr-settings.php:721
+#: includes/class-gllr-widgets.php:282
 msgid "Title"
 msgstr "Название"
 
-#: gallery-plugin.php:687 gallery-plugin.php:1735 gallery-plugin.php:3284
-#: includes/class-gllr-settings.php:526 includes/class-gllr-settings.php:699
+#: gallery-plugin.php:695 gallery-plugin.php:1742 gallery-plugin.php:2817
+#: includes/class-gllr-settings.php:547 includes/class-gllr-settings.php:722
 msgid "Date"
 msgstr "Дата"
 
-#: gallery-plugin.php:688 gallery-plugin.php:3285
-#: includes/class-gllr-settings.php:700
+#: gallery-plugin.php:696 gallery-plugin.php:2818
+#: includes/class-gllr-settings.php:723
 msgid "Last modified date"
 msgstr "Дата последнего изменения"
 
-#: gallery-plugin.php:689 gallery-plugin.php:3286
-#: includes/class-gllr-settings.php:701
+#: gallery-plugin.php:697 gallery-plugin.php:2819
+#: includes/class-gllr-settings.php:724
 msgid "Comment count"
 msgstr "Количество комментариев"
 
-#: gallery-plugin.php:690 gallery-plugin.php:3287
-#: includes/class-gllr-settings.php:702
+#: gallery-plugin.php:698 gallery-plugin.php:2820
+#: includes/class-gllr-settings.php:725
 msgid "\"Order\" field on the gallery edit page"
 msgstr "Поле \"Порядок\" в редакторе галереи"
 
-#: gallery-plugin.php:691 gallery-plugin.php:1734 gallery-plugin.php:3288
-#: includes/class-gllr-settings.php:703
+#: gallery-plugin.php:699 gallery-plugin.php:1741 gallery-plugin.php:2821
+#: includes/class-gllr-settings.php:726
 msgid "Author"
 msgstr "Автор"
 
-#: gallery-plugin.php:692 gallery-plugin.php:3289
-#: includes/class-gllr-settings.php:527 includes/class-gllr-settings.php:704
+#: gallery-plugin.php:700 gallery-plugin.php:2822
+#: includes/class-gllr-settings.php:548 includes/class-gllr-settings.php:727
 msgid "Random"
 msgstr "Произвольно"
 
-#: gallery-plugin.php:693 gallery-plugin.php:3290
+#: gallery-plugin.php:701 gallery-plugin.php:2823
 msgid "Plugin Settings"
 msgstr "Настройки плагина"
 
-#: gallery-plugin.php:695 gallery-plugin.php:3292
+#: gallery-plugin.php:703 gallery-plugin.php:2825
 msgid "Select galleries sorting order in your category."
 msgstr "Выберите порядок сортировки галерей в вашей категории."
 
-#: gallery-plugin.php:717 gallery-plugin.php:1732
+#: gallery-plugin.php:725 gallery-plugin.php:1739
 msgid "Shortcode"
 msgstr "Шорткод"
 
-#: gallery-plugin.php:763
+#: gallery-plugin.php:771
 msgid "All Gallery Categories"
 msgstr "Все категории галерей"
 
-#: gallery-plugin.php:841
+#: gallery-plugin.php:849
 msgid "You can't delete default gallery category."
 msgstr "Вы не можете удалить стандартную категорию галереи."
 
-#: gallery-plugin.php:1221 gallery-plugin.php:1329 gallery-plugin.php:2283
+#: gallery-plugin.php:1228 gallery-plugin.php:1336 gallery-plugin.php:2293
 msgid "Sorry, nothing found."
 msgstr "Извините, ничего не найдено."
 
-#: gallery-plugin.php:1729
+#: gallery-plugin.php:1736
 msgid "Featured Image"
 msgstr "Изображение альбома"
 
-#: gallery-plugin.php:1731 includes/class-gllr-settings.php:40
+#: gallery-plugin.php:1738 includes/class-gllr-settings.php:42
 msgid "Images"
 msgstr "Изображения"
 
-#: gallery-plugin.php:1814
+#: gallery-plugin.php:1823
 #, php-format
 msgid "%s Settings"
 msgstr "Настройки %s"
 
-#: gallery-plugin.php:1841 gallery-plugin.php:1859
-#: includes/class-gllr-settings.php:29 includes/class-gllr-settings.php:41
+#: gallery-plugin.php:1850 gallery-plugin.php:1868
+#: includes/class-gllr-settings.php:29 includes/class-gllr-settings.php:43
 msgid "Settings"
 msgstr "Настройки"
 
-#: gallery-plugin.php:1842
+#: gallery-plugin.php:1851
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:1843
+#: gallery-plugin.php:1852
 msgid "Support"
 msgstr "Поддержка"
 
-#: gallery-plugin.php:1882
+#: gallery-plugin.php:1891
 msgid "Updating images..."
 msgstr "Обновление изображений..."
 
-#: gallery-plugin.php:1883
+#: gallery-plugin.php:1892
 msgid "No images found."
 msgstr "Изображения не найдены."
 
-#: gallery-plugin.php:1884
+#: gallery-plugin.php:1893
 msgid "All images were updated."
 msgstr "Все изображения обновлены."
 
-#: gallery-plugin.php:1885
+#: gallery-plugin.php:1894
 msgid "Error."
 msgstr "Ошибка."
 
-#: gallery-plugin.php:1897
+#: gallery-plugin.php:1906
 msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -275,7 +277,7 @@ msgstr ""
 "Вы собираетесь удалить эти элементы из этой галереи.\n"
 " «Отмена» — оставить, «ОК» — удалить."
 
-#: gallery-plugin.php:1898
+#: gallery-plugin.php:1907
 msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -283,7 +285,7 @@ msgstr ""
 "Вы собираетесь удалить это изображение из этой галереи.\n"
 " «Отмена» — оставить, «ОК» — удалить."
 
-#: gallery-plugin.php:1899
+#: gallery-plugin.php:1908
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
@@ -291,27 +293,27 @@ msgstr ""
 "При переключении на другой режим все несохраненные данные будут потеряны. "
 "Сохранить данные перед переключением?"
 
-#: gallery-plugin.php:1900
+#: gallery-plugin.php:1909
 msgid "Insert Media"
 msgstr "Вставить медиафайл"
 
-#: gallery-plugin.php:1901
+#: gallery-plugin.php:1910
 msgid "Insert"
 msgstr "Вставить"
 
-#: gallery-plugin.php:1902
+#: gallery-plugin.php:1911
 msgid "A new slider is added."
 msgstr "Добавлен новый слайдер."
 
-#: gallery-plugin.php:1902
+#: gallery-plugin.php:1911
 msgid "Edit slider"
 msgstr "Редактировать слайдер"
 
-#: gallery-plugin.php:2494 gallery-plugin.php:2527
+#: gallery-plugin.php:2507 gallery-plugin.php:2540
 msgid "Image size not defined"
 msgstr "Невозможно определить размер изображения"
 
-#: gallery-plugin.php:2514
+#: gallery-plugin.php:2527
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
@@ -319,188 +321,23 @@ msgstr ""
 "Плагин может обновить только следующие типы файлов: PNG, JPEG, GIF, XBM или "
 "WPMP.  Для других, пожалуйста, вручную перезагрузите изображения."
 
-#: gallery-plugin.php:2560 gallery-plugin.php:2564 gallery-plugin.php:2570
+#: gallery-plugin.php:2573 gallery-plugin.php:2577 gallery-plugin.php:2583
 msgid "Invalid path"
 msgstr "Путь к изображению некорректный"
 
-#: gallery-plugin.php:2668
-msgid "List View"
-msgstr "В виде списка"
-
-#: gallery-plugin.php:2669
-msgid "Grid View"
-msgstr "В виде сетки"
-
-#: gallery-plugin.php:2725
-msgid "Filter"
-msgstr "Фильтр"
-
-#: gallery-plugin.php:2729
-msgid "Empty Trash"
-msgstr "Очистить корзину"
-
-#: gallery-plugin.php:2752
-msgid "No images found"
-msgstr "Ни одного изображения не найдено"
-
-#: gallery-plugin.php:2805
-msgid "Select bulk action"
-msgstr "Выберите массовое действие"
-
-#: gallery-plugin.php:2807
-msgid "Bulk Actions"
-msgstr "Действия"
-
-#: gallery-plugin.php:2817
-msgid "Apply"
-msgstr "Применить"
-
-#: gallery-plugin.php:2824
-msgid "Delete from Gallery"
-msgstr "Удалить из галереи"
-
-#: gallery-plugin.php:2833
-msgid "Bulk Select"
-msgstr "Выбор"
-
-#: gallery-plugin.php:2834
-msgid "Cancel Selection"
-msgstr "Отменить выбор"
-
-#: gallery-plugin.php:2835
-msgid "Delete Selected"
-msgstr "Удалить выбранное"
-
-#: gallery-plugin.php:2846
-msgid "File"
-msgstr "Файл"
-
-#: gallery-plugin.php:2847 gallery-plugin.php:2950 gallery-plugin.php:3063
-msgid "Dimensions"
-msgstr "Размеры"
-
-#: gallery-plugin.php:2849 gallery-plugin.php:2961 gallery-plugin.php:3073
-msgid "Alt Text"
-msgstr "Альтернативный текст"
-
-#: gallery-plugin.php:2850 gallery-plugin.php:2965 gallery-plugin.php:3078
-msgid "URL"
-msgstr "Ссылка"
-
-#: gallery-plugin.php:2850 gallery-plugin.php:2967
-msgid ""
-"Enter your custom URL to link this image to other page or file. Leave blank "
-"to open a full size image."
-msgstr ""
-"Введите свой собственный URL, чтобы связать это изображение с другой "
-"страницей или файлом. Оставьте пустым, чтобы открыть полноразмерное "
-"изображение."
-
-#: gallery-plugin.php:2932
-msgid "Remove Image from Gallery"
-msgstr "Удалить изображение из галереи"
-
-#: gallery-plugin.php:2935
-msgid "Edit Image Info"
-msgstr "Изменить информацию изображения"
-
-#: gallery-plugin.php:2936
-msgid "Deselect"
-msgstr "Отменить выбор"
-
-#: gallery-plugin.php:2948
-msgid "File name"
-msgstr "Название файла"
-
-#: gallery-plugin.php:2949
-msgid "File type"
-msgstr "Тип файла"
-
-#: gallery-plugin.php:2974
-msgid "Description"
-msgstr "Описание"
-
-#: gallery-plugin.php:2980
-msgid "Lightbox Button URL"
-msgstr "Ссылка для кнопки в лайтбоксе"
-
-#: gallery-plugin.php:2987
-msgid "New Tab"
-msgstr "Новая вкладка"
-
-#: gallery-plugin.php:2989
-msgid "Enable to open URLs above in a new tab."
-msgstr "Включите, чтобы открыть ссылку в новой вкладке."
-
-#: gallery-plugin.php:2994
-msgid "Go Pro"
-msgstr "Обновить до Pro"
-
-#: gallery-plugin.php:3000
-msgid "Edit more details"
-msgstr "Изменить детали"
-
-#: gallery-plugin.php:3002
-msgid "Remove from Gallery"
-msgstr "Удалить из галереи"
-
-#: gallery-plugin.php:3038
-#, php-format
-msgid "Select %s"
-msgstr "Выбрать %s"
-
-#: gallery-plugin.php:3051
-#, php-format
-msgid "Edit &#8220;%s&#8221;"
-msgstr "Изменить &#8220;%s&#8221;"
-
-#: gallery-plugin.php:3059
-msgid "Edit Attachment Info"
-msgstr "Изменить информацию изображения"
-
-#: gallery-plugin.php:3096 gallery-plugin.php:3112
-msgid "Edit"
-msgstr "Изменить"
-
-#: gallery-plugin.php:3100 gallery-plugin.php:3118
-msgid "Trash"
-msgstr "Удалить"
-
-#: gallery-plugin.php:3103 gallery-plugin.php:3122
-msgid "Delete Permanently"
-msgstr "Удалить навсегда"
-
-#: gallery-plugin.php:3106 gallery-plugin.php:3128
-#, php-format
-msgid "View &#8220;%s&#8221;"
-msgstr "Просмотр &#8220;%s&#8221;"
-
-#: gallery-plugin.php:3106 gallery-plugin.php:3128
-#: includes/class-gllr-widgets.php:90
-msgid "View"
-msgstr "Просмотр"
-
-#: gallery-plugin.php:3108
-msgid "Attach"
-msgstr "Прикрепить"
-
-#: gallery-plugin.php:3116
-msgid "Restore"
-msgstr "Восстановить"
-
-#: gallery-plugin.php:3248 gallery-plugin.php:3409
+#: gallery-plugin.php:2781 gallery-plugin.php:2942
 msgid "Warning"
 msgstr "Внимание"
 
-#: gallery-plugin.php:3248
+#: gallery-plugin.php:2781
 msgid "You can add only images to the gallery"
 msgstr "Вы можете добавить только изображения в галерею"
 
-#: gallery-plugin.php:3303
+#: gallery-plugin.php:2836
 msgid "no title"
 msgstr "без названия"
 
-#: gallery-plugin.php:3313
+#: gallery-plugin.php:2846
 msgid ""
 "Display an album image with the description and the link to a single gallery "
 "page"
@@ -508,11 +345,11 @@ msgstr ""
 "Отобразить изображение альбома с описанием и ссылкой на отдельную страницу "
 "галереи"
 
-#: gallery-plugin.php:3317
+#: gallery-plugin.php:2850
 msgid "Sorry, no gallery found."
 msgstr "Извините, галерей не найдено."
 
-#: gallery-plugin.php:3409
+#: gallery-plugin.php:2942
 #, php-format
 msgid ""
 "Maximum upload file size %s. Contact your administrator or hosting provider "
@@ -521,11 +358,187 @@ msgstr ""
 "Максимальный размер файла %s. Свяжитесь с вашим администратором или "
 "провайдером хостинга, если вам нужно загрузить файл большего размера."
 
+#: includes/class-gllr-media-table.php:19
+msgid "List View"
+msgstr "В виде списка"
+
+#: includes/class-gllr-media-table.php:20
+msgid "Grid View"
+msgstr "В виде сетки"
+
+#: includes/class-gllr-media-table.php:76
+msgid "Filter"
+msgstr "Фильтр"
+
+#: includes/class-gllr-media-table.php:80
+msgid "Empty Trash"
+msgstr "Очистить корзину"
+
+#: includes/class-gllr-media-table.php:103
+msgid "No images found"
+msgstr "Ни одного изображения не найдено"
+
+#: includes/class-gllr-media-table.php:156
+msgid "Select bulk action"
+msgstr "Выберите массовое действие"
+
+#: includes/class-gllr-media-table.php:158
+msgid "Bulk Actions"
+msgstr "Действия"
+
+#: includes/class-gllr-media-table.php:168
+msgid "Apply"
+msgstr "Применить"
+
+#: includes/class-gllr-media-table.php:175
+msgid "Delete from Gallery"
+msgstr "Удалить из галереи"
+
+#: includes/class-gllr-media-table.php:184
+msgid "Bulk Select"
+msgstr "Выбор"
+
+#: includes/class-gllr-media-table.php:185
+msgid "Cancel Selection"
+msgstr "Отменить выбор"
+
+#: includes/class-gllr-media-table.php:186
+msgid "Delete Selected"
+msgstr "Удалить выбранное"
+
+#: includes/class-gllr-media-table.php:197
+msgid "File"
+msgstr "Файл"
+
+#: includes/class-gllr-media-table.php:198
+#: includes/class-gllr-media-table.php:301
+#: includes/class-gllr-media-table.php:416
+msgid "Dimensions"
+msgstr "Размеры"
+
+#: includes/class-gllr-media-table.php:200
+#: includes/class-gllr-media-table.php:312
+#: includes/class-gllr-media-table.php:426
+msgid "Alt Text"
+msgstr "Альтернативный текст"
+
+#: includes/class-gllr-media-table.php:201
+#: includes/class-gllr-media-table.php:316
+#: includes/class-gllr-media-table.php:431
+msgid "URL"
+msgstr "Ссылка"
+
+#: includes/class-gllr-media-table.php:201
+#: includes/class-gllr-media-table.php:318
+msgid ""
+"Enter your custom URL to link this image to other page or file. Leave blank "
+"to open a full size image."
+msgstr ""
+"Введите свой собственный URL, чтобы связать это изображение с другой "
+"страницей или файлом. Оставьте пустым, чтобы открыть полноразмерное "
+"изображение."
+
+#: includes/class-gllr-media-table.php:283
+msgid "Remove Image from Gallery"
+msgstr "Удалить изображение из галереи"
+
+#: includes/class-gllr-media-table.php:286
+msgid "Edit Image Info"
+msgstr "Изменить информацию изображения"
+
+#: includes/class-gllr-media-table.php:287
+msgid "Deselect"
+msgstr "Отменить выбор"
+
+#: includes/class-gllr-media-table.php:299
+msgid "File name"
+msgstr "Название файла"
+
+#: includes/class-gllr-media-table.php:300
+msgid "File type"
+msgstr "Тип файла"
+
+#: includes/class-gllr-media-table.php:326
+msgid "Description"
+msgstr "Описание"
+
+#: includes/class-gllr-media-table.php:332
+msgid "Lightbox Button URL"
+msgstr "Ссылка для кнопки в лайтбоксе"
+
+#: includes/class-gllr-media-table.php:339
+msgid "New Tab"
+msgstr "Новая вкладка"
+
+#: includes/class-gllr-media-table.php:341
+msgid "Enable to open URLs above in a new tab."
+msgstr "Включите, чтобы открыть ссылку в новой вкладке."
+
+#: includes/class-gllr-media-table.php:346
+msgid "Go Pro"
+msgstr "Обновить до Pro"
+
+#: includes/class-gllr-media-table.php:353
+msgid "Edit more details"
+msgstr "Изменить детали"
+
+#: includes/class-gllr-media-table.php:355
+msgid "Remove from Gallery"
+msgstr "Удалить из галереи"
+
+#: includes/class-gllr-media-table.php:391
+#, php-format
+msgid "Select %s"
+msgstr "Выбрать %s"
+
+#: includes/class-gllr-media-table.php:404
+#, php-format
+msgid "Edit &#8220;%s&#8221;"
+msgstr "Изменить &#8220;%s&#8221;"
+
+#: includes/class-gllr-media-table.php:412
+msgid "Edit Attachment Info"
+msgstr "Изменить информацию изображения"
+
+#: includes/class-gllr-media-table.php:449
+#: includes/class-gllr-media-table.php:465
+msgid "Edit"
+msgstr "Изменить"
+
+#: includes/class-gllr-media-table.php:453
+#: includes/class-gllr-media-table.php:471
+msgid "Trash"
+msgstr "Удалить"
+
+#: includes/class-gllr-media-table.php:456
+#: includes/class-gllr-media-table.php:475
+msgid "Delete Permanently"
+msgstr "Удалить навсегда"
+
+#: includes/class-gllr-media-table.php:459
+#: includes/class-gllr-media-table.php:481
+#, php-format
+msgid "View &#8220;%s&#8221;"
+msgstr "Просмотр &#8220;%s&#8221;"
+
+#: includes/class-gllr-media-table.php:459
+#: includes/class-gllr-media-table.php:481 includes/class-gllr-widgets.php:90
+msgid "View"
+msgstr "Просмотр"
+
+#: includes/class-gllr-media-table.php:461
+msgid "Attach"
+msgstr "Прикрепить"
+
+#: includes/class-gllr-media-table.php:469
+msgid "Restore"
+msgstr "Восстановить"
+
 #: includes/class-gllr-settings.php:30
 msgid "Cover"
 msgstr "Альбом"
 
-#: includes/class-gllr-settings.php:31 includes/class-gllr-settings.php:770
+#: includes/class-gllr-settings.php:31
 msgid "Lightbox"
 msgstr "Лайтбокс"
 
@@ -545,134 +558,134 @@ msgstr "Пользовательский код"
 msgid "Import / Export"
 msgstr "Импорт / Экспорт"
 
-#: includes/class-gllr-settings.php:36
+#: includes/class-gllr-settings.php:37
 msgid "License Key"
 msgstr "Лицензионный ключ"
 
-#: includes/class-gllr-settings.php:225
+#: includes/class-gllr-settings.php:229
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: includes/class-gllr-settings.php:237 includes/class-gllr-widgets.php:358
+#: includes/class-gllr-settings.php:241 includes/class-gllr-widgets.php:358
 msgid "Please, enable JavaScript in Your browser."
 msgstr "Пожалуйста, включите JavaScript в вашем браузере."
 
-#: includes/class-gllr-settings.php:241
+#: includes/class-gllr-settings.php:245
 msgid "Custom image size was changed. You need to update gallery images."
 msgstr ""
 "Пользовательский размер изображения был изменен. Вам необходимо обновить "
 "изображения галерей."
 
-#: includes/class-gllr-settings.php:242
+#: includes/class-gllr-settings.php:246
 msgid "Update Images"
 msgstr "Обновить изображения"
 
-#: includes/class-gllr-settings.php:257
+#: includes/class-gllr-settings.php:261
 msgid "Gallery Images"
 msgstr "Изображения галереи"
 
-#: includes/class-gllr-settings.php:262
+#: includes/class-gllr-settings.php:266
 msgid "Images adding requires JavaScript."
 msgstr "Добавление изображений требует наличия JavaScript."
 
-#: includes/class-gllr-settings.php:265
+#: includes/class-gllr-settings.php:269
 msgid "Add Media"
 msgstr "Добавить медиафайл"
 
-#: includes/class-gllr-settings.php:274
+#: includes/class-gllr-settings.php:278
 msgid "The grid view for the Gallery images requires JavaScript."
 msgstr "Просмотр галереи в виде сетки требует наличия JavaScript."
 
-#: includes/class-gllr-settings.php:274
+#: includes/class-gllr-settings.php:278
 msgid "Switch to the list view"
 msgstr "Переключиться на список"
 
-#: includes/class-gllr-settings.php:301
+#: includes/class-gllr-settings.php:305
 msgid "Create Slider"
 msgstr "Создание слайдера"
 
-#: includes/class-gllr-settings.php:313
+#: includes/class-gllr-settings.php:317
 msgid "Activate"
 msgstr "Активировать"
 
-#: includes/class-gllr-settings.php:316 includes/class-gllr-settings.php:1019
+#: includes/class-gllr-settings.php:320 includes/class-gllr-settings.php:1055
 msgid "Install Now"
 msgstr "Установить сейчас"
 
-#: includes/class-gllr-settings.php:318
+#: includes/class-gllr-settings.php:322
 msgid "Create New Slider"
 msgstr "Создать новый слайдер"
 
-#: includes/class-gllr-settings.php:321
+#: includes/class-gllr-settings.php:325
 msgid ""
 "Click to create a new slider using gallery images. Slider plugin is required."
 msgstr ""
 "Нажмите, чтобы создать новый слайдер, используя галерею изображений. Плагин "
 "слайдера обязателен."
 
-#: includes/class-gllr-settings.php:331
+#: includes/class-gllr-settings.php:336
 msgid "Single Gallery Settings"
 msgstr "Настройки галереи"
 
-#: includes/class-gllr-settings.php:333
+#: includes/class-gllr-settings.php:338
 #, php-format
 msgid "Enable to configure single gallery settings and disable %s."
 msgstr "Включите, чтобы настроить параметры этой галереи и отключить %s."
 
-#: includes/class-gllr-settings.php:345 includes/class-gllr-settings.php:402
-#: includes/class-gllr-settings.php:446 includes/class-gllr-settings.php:496
-#: includes/class-gllr-settings.php:640 includes/class-gllr-settings.php:722
-#: includes/class-gllr-settings.php:783 includes/class-gllr-settings.php:833
-#: includes/class-gllr-settings.php:892 includes/class-gllr-settings.php:980
+#: includes/class-gllr-settings.php:352 includes/class-gllr-settings.php:411
+#: includes/class-gllr-settings.php:457 includes/class-gllr-settings.php:516
+#: includes/class-gllr-settings.php:662 includes/class-gllr-settings.php:746
+#: includes/class-gllr-settings.php:792 includes/class-gllr-settings.php:845
+#: includes/class-gllr-settings.php:907 includes/class-gllr-settings.php:998
 msgid "Close"
 msgstr "Закрыть"
 
-#: includes/class-gllr-settings.php:349
+#: includes/class-gllr-settings.php:356
 msgid "Gallery Layout"
 msgstr "Макет галереи"
 
-#: includes/class-gllr-settings.php:354
+#: includes/class-gllr-settings.php:361
 msgid "Grid"
 msgstr "Сетка"
 
-#: includes/class-gllr-settings.php:360
+#: includes/class-gllr-settings.php:367
 msgid "Masonry"
 msgstr "Masonry"
 
-#: includes/class-gllr-settings.php:373
+#: includes/class-gllr-settings.php:381
 msgid "Number of Columns"
 msgstr "Количество колонок"
 
-#: includes/class-gllr-settings.php:376
+#: includes/class-gllr-settings.php:384
 #, php-format
 msgid "Number of gallery columns (default is %s)."
 msgstr "Количество колонок галерей (по умолчанию - %s)."
 
-#: includes/class-gllr-settings.php:380 includes/class-gllr-settings.php:787
+#: includes/class-gllr-settings.php:388 includes/class-gllr-settings.php:796
 msgid "Image Size"
 msgstr "Размер изображения"
 
-#: includes/class-gllr-settings.php:386 includes/class-gllr-settings.php:625
+#: includes/class-gllr-settings.php:394 includes/class-gllr-settings.php:646
 msgid "Custom"
 msgstr "Пользовательский"
 
-#: includes/class-gllr-settings.php:388
+#: includes/class-gllr-settings.php:396
 msgid ""
 "Maximum gallery image size. \"Custom\" uses the Image Dimensions values."
 msgstr ""
 "Максимальный размер изображений галереи. \"Пользовательский\" использует "
 "значения, указанные в поле Размеры изображения."
 
-#: includes/class-gllr-settings.php:392
+#: includes/class-gllr-settings.php:400
 msgid "Custom Image Size"
 msgstr "Пользовательский размер изображения"
 
-#: includes/class-gllr-settings.php:394 includes/class-gllr-settings.php:482
-#: includes/class-gllr-settings.php:633 includes/class-gllr-settings.php:683
+#: includes/class-gllr-settings.php:402 includes/class-gllr-settings.php:494
+#: includes/class-gllr-settings.php:654 includes/class-gllr-settings.php:706
 msgid "px"
 msgstr "пикс"
 
-#: includes/class-gllr-settings.php:395
+#: includes/class-gllr-settings.php:403
 msgid ""
 "Adjust these values based on the number of columns in your gallery. This "
 "won't effect the full size of your images in the lightbox."
@@ -680,11 +693,11 @@ msgstr ""
 "Отрегулируйте эти значения на основе числа колонок в вашей галерее. Это не "
 "влияет на размеры полного изображения в лайтбоксе."
 
-#: includes/class-gllr-settings.php:406
+#: includes/class-gllr-settings.php:415
 msgid "Crop Images"
 msgstr "Обрезка изображений"
 
-#: includes/class-gllr-settings.php:408
+#: includes/class-gllr-settings.php:417
 msgid ""
 "Enable to crop images using the sizes defined for Custom Image Size. Disable "
 "to resize images automatically using their aspect ratio."
@@ -693,41 +706,41 @@ msgstr ""
 "пользовательского размера изображения. Отключите, чтобы изменить размер "
 "изображения автоматически, используя их пропорции."
 
-#: includes/class-gllr-settings.php:412 includes/class-gllr-settings.php:650
+#: includes/class-gllr-settings.php:421 includes/class-gllr-settings.php:672
 msgid "Crop Position"
 msgstr "Позиция обрезки"
 
-#: includes/class-gllr-settings.php:427 includes/class-gllr-settings.php:665
+#: includes/class-gllr-settings.php:436 includes/class-gllr-settings.php:687
 msgid "Select crop position base (by default: center)."
 msgstr "Выберите позицию обрезки (по умолчанию: центр)."
 
-#: includes/class-gllr-settings.php:437
+#: includes/class-gllr-settings.php:447
 msgid "Image Title"
 msgstr "Название изображения"
 
-#: includes/class-gllr-settings.php:439
+#: includes/class-gllr-settings.php:449
 msgid "Enable to display image title along with the gallery image."
 msgstr ""
 "Включите, чтобы отобразить название изображения вместе с изображением "
 "галереи."
 
-#: includes/class-gllr-settings.php:450
+#: includes/class-gllr-settings.php:461
 msgid "Image Title Position"
 msgstr "Расположение названия изображения"
 
-#: includes/class-gllr-settings.php:455
+#: includes/class-gllr-settings.php:466
 msgid "Below images"
 msgstr "Ниже изображения"
 
-#: includes/class-gllr-settings.php:461
+#: includes/class-gllr-settings.php:472
 msgid "On mouse hover"
 msgstr "По наведению мыши"
 
-#: includes/class-gllr-settings.php:474
+#: includes/class-gllr-settings.php:486
 msgid "Image Border"
 msgstr "Рамка изображения"
 
-#: includes/class-gllr-settings.php:476
+#: includes/class-gllr-settings.php:488
 msgid ""
 "Enable images border using the styles defined for Image Border Size and "
 "Color options."
@@ -735,24 +748,36 @@ msgstr ""
 "Включить рамку изображения с использованием стилей, указанных для Цвета и "
 "Размера рамки."
 
-#: includes/class-gllr-settings.php:480
+#: includes/class-gllr-settings.php:492
 msgid "Image Border Size"
 msgstr "Размер рамки изображения"
 
-#: includes/class-gllr-settings.php:483
+#: includes/class-gllr-settings.php:495
 #, php-format
 msgid "Gallery image border width (default is %s)."
 msgstr "Ширина рамки для изображений галереи (по умолчанию %s)."
 
-#: includes/class-gllr-settings.php:487
+#: includes/class-gllr-settings.php:499
 msgid "Image Border Color"
 msgstr "Цвет рамки изображений"
 
-#: includes/class-gllr-settings.php:500
+#: includes/class-gllr-settings.php:505
+msgid "Unclickable Thumbnail Images"
+msgstr "Некликабельные изображения"
+
+#: includes/class-gllr-settings.php:508
+msgid ""
+"Enable to make the images in a single gallery unclickable and hide their "
+"URLs. This option also disables Lightbox."
+msgstr ""
+"Включите, чтобы сделать миниатюры изображений в галерее некликабельными, а "
+"так же не отображать их ссылки. Эта опция так же отключает лайтбокс."
+
+#: includes/class-gllr-settings.php:520
 msgid "Pagination"
 msgstr "Постраничная навигация"
 
-#: includes/class-gllr-settings.php:503
+#: includes/class-gllr-settings.php:523
 msgid ""
 "Enable pagination for images to limit number of images displayed on a single "
 "gallery page."
@@ -760,33 +785,33 @@ msgstr ""
 "Включить постраничную навигацию для изображений, чтобы ограничить количество "
 "изображений, отображаемых на одной странице галереи."
 
-#: includes/class-gllr-settings.php:507
+#: includes/class-gllr-settings.php:527
 msgid "Number of Images"
 msgstr "Количество изображений"
 
-#: includes/class-gllr-settings.php:510
+#: includes/class-gllr-settings.php:530
 #, php-format
 msgid "Number of images displayed per page (default is %d)."
 msgstr ""
 "Количество изображений, отображаемых на одной странице (по умолчанию %d)."
 
-#: includes/class-gllr-settings.php:520
+#: includes/class-gllr-settings.php:541
 msgid "Sort Images by"
 msgstr "Cортировка изображений по"
 
-#: includes/class-gllr-settings.php:523
+#: includes/class-gllr-settings.php:544
 msgid "Manually (default)"
 msgstr "Вручную (по умолчанию)"
 
-#: includes/class-gllr-settings.php:524
+#: includes/class-gllr-settings.php:545
 msgid "Image ID"
 msgstr "ID изображения"
 
-#: includes/class-gllr-settings.php:525
+#: includes/class-gllr-settings.php:546
 msgid "Name"
 msgstr "Название"
 
-#: includes/class-gllr-settings.php:529
+#: includes/class-gllr-settings.php:550
 msgid ""
 "Select images sorting order in your gallery. By default, you can sort images "
 "manually in the images tab."
@@ -794,23 +819,23 @@ msgstr ""
 "Выберите порядок сортировки изображений в вашей галерее. По умолчанию, это "
 "ручная сортировка изображения на вкладке изображений."
 
-#: includes/class-gllr-settings.php:533
+#: includes/class-gllr-settings.php:554
 msgid "Arrange Images by"
 msgstr "Сортировка изображений"
 
-#: includes/class-gllr-settings.php:536 includes/class-gllr-settings.php:713
+#: includes/class-gllr-settings.php:557 includes/class-gllr-settings.php:736
 msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
 msgstr "По возрастанию (например, 1, 2, 3; а, б, в)"
 
-#: includes/class-gllr-settings.php:537 includes/class-gllr-settings.php:714
+#: includes/class-gllr-settings.php:558 includes/class-gllr-settings.php:737
 msgid "Descending (e.g. 3, 2, 1; c, b, a)"
 msgstr "По убыванию (например, 3, 2, 1; в, б, а)"
 
-#: includes/class-gllr-settings.php:542
+#: includes/class-gllr-settings.php:563
 msgid "Back Link"
 msgstr "Обратная ссылка"
 
-#: includes/class-gllr-settings.php:544
+#: includes/class-gllr-settings.php:565
 msgid ""
 "Enable to show a back link in a single gallery page which navigate to a "
 "previous page."
@@ -818,107 +843,107 @@ msgstr ""
 "Включите, чтобы показать обратную ссылку на странице галереи, которая "
 "перейдет к предыдущей странице."
 
-#: includes/class-gllr-settings.php:548
+#: includes/class-gllr-settings.php:569
 msgid "Back Link URL"
 msgstr "URL обратной ссылки"
 
-#: includes/class-gllr-settings.php:551
+#: includes/class-gllr-settings.php:572
 msgid ""
 "Leave blank to use the Gallery page template or enter a custom page URL."
 msgstr ""
 "Оставьте пустым, чтобы использовать шаблон страницы галереи или введите "
 "пользовательский URL страницы."
 
-#: includes/class-gllr-settings.php:555
+#: includes/class-gllr-settings.php:576
 msgid "Back Link Label"
 msgstr "Текст обратной ссылки"
 
-#: includes/class-gllr-settings.php:561
+#: includes/class-gllr-settings.php:582
 msgid "Back Link with Shortcode"
 msgstr "Обратная ссылка шорткода"
 
-#: includes/class-gllr-settings.php:564
+#: includes/class-gllr-settings.php:585
 msgid "Enable to display a back link on a page where shortcode is used."
 msgstr ""
 "Включите, чтобы отображать обратную ссылку на страницу при использовании "
 "шорткода."
 
-#: includes/class-gllr-settings.php:568
+#: includes/class-gllr-settings.php:589
 msgid "Disable Fancybox"
 msgstr "Отключить Fancybox"
 
-#: includes/class-gllr-settings.php:570
+#: includes/class-gllr-settings.php:591
 msgid "Enable to avoid possible conflicts with a 3rd party Fancybox."
 msgstr "Включите, чтобы избежать возможных конфликтов со сторонними fancybox."
 
-#: includes/class-gllr-settings.php:581
+#: includes/class-gllr-settings.php:602
 msgid "Cover Settings"
 msgstr "Настройки альбома"
 
-#: includes/class-gllr-settings.php:586
+#: includes/class-gllr-settings.php:607
 msgid "Galleries Page"
 msgstr "Страница галерей"
 
-#: includes/class-gllr-settings.php:594
+#: includes/class-gllr-settings.php:615
 msgid "Base page where all existing galleries will be displayed."
 msgstr ""
 "Базовая страница, на которой будут отображаться все существующие галереи."
 
-#: includes/class-gllr-settings.php:598
+#: includes/class-gllr-settings.php:619
 msgid "Albums Displaying"
 msgstr "Отображение альбомов"
 
-#: includes/class-gllr-settings.php:601
+#: includes/class-gllr-settings.php:622
 msgid "Column"
 msgstr "В колонку"
 
-#: includes/class-gllr-settings.php:602
+#: includes/class-gllr-settings.php:623
 msgid "Rows"
 msgstr "В строку"
 
-#: includes/class-gllr-settings.php:604
+#: includes/class-gllr-settings.php:625
 msgid "Select the way galleries will be displayed on the Galleries Page."
 msgstr "Выберите способ отображения галерей на Странице галерей."
 
-#: includes/class-gllr-settings.php:608
+#: includes/class-gllr-settings.php:629
 msgid "Column Alignment"
 msgstr "Ориентация колонки"
 
-#: includes/class-gllr-settings.php:611
+#: includes/class-gllr-settings.php:632
 msgid "Left"
 msgstr "Лево"
 
-#: includes/class-gllr-settings.php:612
+#: includes/class-gllr-settings.php:633
 msgid "Right"
 msgstr "Право"
 
-#: includes/class-gllr-settings.php:613
+#: includes/class-gllr-settings.php:634
 msgid "Center"
 msgstr "Центр"
 
-#: includes/class-gllr-settings.php:615
+#: includes/class-gllr-settings.php:636
 msgid "Select the column alignment."
 msgstr "Выберите ориентацию колонки."
 
-#: includes/class-gllr-settings.php:619
+#: includes/class-gllr-settings.php:640
 msgid "Cover Image Size"
 msgstr "Размер изображения альбома"
 
-#: includes/class-gllr-settings.php:627
+#: includes/class-gllr-settings.php:648
 msgid "Maximum cover image size. Custom uses the Image Dimensions values."
 msgstr ""
 "Максимальный размер изображения альбома. Пользовательский использует "
 "значения Размеров изображения."
 
-#: includes/class-gllr-settings.php:631
+#: includes/class-gllr-settings.php:652
 msgid "Custom Cover Image Size"
 msgstr "Пользовательский размер изображения альбома"
 
-#: includes/class-gllr-settings.php:644
+#: includes/class-gllr-settings.php:666
 msgid "Crop Cover Images"
 msgstr "Обрезка изображения альбома"
 
-#: includes/class-gllr-settings.php:646
+#: includes/class-gllr-settings.php:668
 msgid ""
 "Enable to crop images using the sizes defined for Custom Cover Image Size. "
 "Disable to resize images automatically using their aspect ratio."
@@ -927,11 +952,11 @@ msgstr ""
 "пользовательского размера изображения альбома. Отключите, чтобы изменить "
 "размер изображения автоматически, используя их пропорции."
 
-#: includes/class-gllr-settings.php:675
+#: includes/class-gllr-settings.php:698
 msgid "Cover Image Border"
 msgstr "Рамка для изображения альбома"
 
-#: includes/class-gllr-settings.php:677
+#: includes/class-gllr-settings.php:700
 msgid ""
 "Enable cover images border using the styles defined for Image Border Size "
 "and Color."
@@ -939,36 +964,36 @@ msgstr ""
 "Включить рамку изображения альбома с использованием стилей, указанных для "
 "Цвета и Размера рамки."
 
-#: includes/class-gllr-settings.php:681
+#: includes/class-gllr-settings.php:704
 msgid "Cover Image Border Size"
 msgstr "Размер рамки изображения альбома"
 
-#: includes/class-gllr-settings.php:684
+#: includes/class-gllr-settings.php:707
 #, php-format
 msgid "Cover image border width (default is %s)."
 msgstr "Ширина рамки для изображения альбома (по умолчанию %s)."
 
-#: includes/class-gllr-settings.php:688
+#: includes/class-gllr-settings.php:711
 msgid "Cover Image Border Color"
 msgstr "Цвет рамки для изображения альбома"
 
-#: includes/class-gllr-settings.php:694
+#: includes/class-gllr-settings.php:717
 msgid "Sort Albums by"
 msgstr "Cортировка альбомов по"
 
-#: includes/class-gllr-settings.php:706
+#: includes/class-gllr-settings.php:729
 msgid "Select galleries sorting order in your galleries page."
 msgstr "Выберите порядок сортировки галерей на странице галерей."
 
-#: includes/class-gllr-settings.php:710
+#: includes/class-gllr-settings.php:733
 msgid "Arrange Albums by"
 msgstr "Сортировка альбомов по"
 
-#: includes/class-gllr-settings.php:726
+#: includes/class-gllr-settings.php:750
 msgid "Instant Lightbox"
 msgstr "Мгновенный лайтбокс"
 
-#: includes/class-gllr-settings.php:729
+#: includes/class-gllr-settings.php:753
 msgid ""
 "Enable to display all images in the lightbox after clicking cover image or "
 "URL instead of going to a single gallery page."
@@ -976,35 +1001,23 @@ msgstr ""
 "Включите, чтобы отображать все изображения в лайтбоксе после клика на "
 "изображение альбома или URL вместо перехода на отдельную страницу галереи."
 
-#: includes/class-gllr-settings.php:739
+#: includes/class-gllr-settings.php:764
 msgid "Read More Link Label"
 msgstr "Текст ссылки Узнать больше"
 
-#: includes/class-gllr-settings.php:751
+#: includes/class-gllr-settings.php:776
 msgid "Lightbox Settings"
 msgstr "Настройки лайтбокса"
 
-#: includes/class-gllr-settings.php:756
-msgid "Unclickable Thumbnail Images"
-msgstr "Некликабельные изображения"
-
-#: includes/class-gllr-settings.php:759
-msgid ""
-"Enable to make the images in a single gallery unclickable and hide their "
-"URLs. This option also disables Lightbox."
-msgstr ""
-"Включите, чтобы сделать миниатюры изображений в галерее некликабельными, а "
-"так же не отображать их ссылки. Эта опция так же отключает лайтбокс."
-
-#: includes/class-gllr-settings.php:763
+#: includes/class-gllr-settings.php:781
 msgid "Enable Lightbox"
 msgstr "Включить лайтбокс"
 
-#: includes/class-gllr-settings.php:766
+#: includes/class-gllr-settings.php:784
 msgid "Enable to show the lightbox when clicking on gallery images."
 msgstr "Включите, чтобы показать лайтбокс при нажатии на изображения галереи."
 
-#: includes/class-gllr-settings.php:794
+#: includes/class-gllr-settings.php:803
 msgid ""
 "Select the maximum gallery image size for the lightbox view. \"Default\" "
 "will display the original, full size image."
@@ -1012,15 +1025,15 @@ msgstr ""
 "Выберите максимальный размер изображений галереи для просмотра в лайтбоксе. "
 "По умолчанию будет отображаться оригинал, полный размер."
 
-#: includes/class-gllr-settings.php:798
+#: includes/class-gllr-settings.php:807
 msgid "Overlay Color"
 msgstr "Цвет подложки"
 
-#: includes/class-gllr-settings.php:804
+#: includes/class-gllr-settings.php:813
 msgid "Overlay Opacity"
 msgstr "Прозрачность подложки"
 
-#: includes/class-gllr-settings.php:807
+#: includes/class-gllr-settings.php:816
 #, php-format
 msgid ""
 "Lightbox overlay opacity. Leave blank to disable opacity (default is %s, max "
@@ -1029,75 +1042,75 @@ msgstr ""
 "Прозрачность подложки лайтбокса. Оставьте пустым, чтобы отключить "
 "прозрачность (по умолчанию %s, максимум %s)."
 
-#: includes/class-gllr-settings.php:817
+#: includes/class-gllr-settings.php:828
 msgid "Slideshow"
 msgstr "Слайд-шоу"
 
-#: includes/class-gllr-settings.php:819
+#: includes/class-gllr-settings.php:830
 msgid "Enable to start the slideshow automatically when the lightbox is used."
 msgstr ""
 "Включение автоматического запуска слайд-шоу при использовании лайтбокса."
 
-#: includes/class-gllr-settings.php:823
+#: includes/class-gllr-settings.php:834
 msgid "Slideshow Duration"
 msgstr "Интервал времени"
 
-#: includes/class-gllr-settings.php:825
+#: includes/class-gllr-settings.php:836
 msgid "ms"
 msgstr "мс"
 
-#: includes/class-gllr-settings.php:826
+#: includes/class-gllr-settings.php:837
 msgid "Slideshow interval duration between two images."
 msgstr "Интервал переключения между двумя изображениями."
 
-#: includes/class-gllr-settings.php:837
+#: includes/class-gllr-settings.php:849
 msgid "Lightbox Helpers"
 msgstr "Вспомогательные элементы в лайтбоксе"
 
-#: includes/class-gllr-settings.php:839
+#: includes/class-gllr-settings.php:851
 msgid "Enable to display the lightbox toolbar and arrows."
 msgstr ""
 "Включите, чтобы показать панель инструментов и кнопки навигации лайтбокса."
 
-#: includes/class-gllr-settings.php:843
+#: includes/class-gllr-settings.php:855
 msgid "Lightbox Thumbnails"
 msgstr "Миниатюры в лайтбоксе"
 
-#: includes/class-gllr-settings.php:845
+#: includes/class-gllr-settings.php:857
 msgid "Enable to use a lightbox helper navigation between images."
 msgstr ""
 "Разрешить использовать вспомогательные элементы лайтбокса для навигации "
 "между изображениями."
 
-#: includes/class-gllr-settings.php:849
+#: includes/class-gllr-settings.php:861
 msgid "Lightbox Thumbnails Position"
 msgstr "Расположение миниатюр в лайтбоксе"
 
-#: includes/class-gllr-settings.php:852
+#: includes/class-gllr-settings.php:864
 msgid "Top"
 msgstr "Верх"
 
-#: includes/class-gllr-settings.php:857
+#: includes/class-gllr-settings.php:869
 msgid "Lightbox Button Label"
 msgstr "Текст кнопки в лайтбоксе"
 
-#: includes/class-gllr-settings.php:859
+#: includes/class-gllr-settings.php:871
 msgid "Read More"
 msgstr "Подробнее"
 
-#: includes/class-gllr-settings.php:869
+#: includes/class-gllr-settings.php:883
 msgid "Download Button"
 msgstr "Кнопка \"Скачать\""
 
-#: includes/class-gllr-settings.php:871
+#: includes/class-gllr-settings.php:885
 msgid "Enable to display download button."
 msgstr "Включите, чтобы показать ссылку для скачивания исходного изображения."
 
-#: includes/class-gllr-settings.php:875
+#: includes/class-gllr-settings.php:889
 msgid "Single Lightbox"
 msgstr "Один лайтбокс"
 
-#: includes/class-gllr-settings.php:877
+#: includes/class-gllr-settings.php:891
 msgid ""
 "Enable to use a single lightbox for multiple galleries located on a single "
 "page."
@@ -1105,35 +1118,35 @@ msgstr ""
 "Включите, чтобы использовать один лайтбокс для нескольких галерей, "
 "расположенных на одной странице."
 
-#: includes/class-gllr-settings.php:887
+#: includes/class-gllr-settings.php:901
 msgid "Social Sharing Buttons Settings"
 msgstr "Настройки социальных кнопок"
 
-#: includes/class-gllr-settings.php:896
+#: includes/class-gllr-settings.php:911
 msgid "Social Buttons"
 msgstr "Социальные кнопки"
 
-#: includes/class-gllr-settings.php:898
+#: includes/class-gllr-settings.php:913
 msgid "Enable social sharing buttons in the lightbox."
 msgstr "Включите социальные кнопки в лайтбоксе."
 
-#: includes/class-gllr-settings.php:902
+#: includes/class-gllr-settings.php:917
 msgid "Social Networks"
 msgstr "Социальные сети"
 
-#: includes/class-gllr-settings.php:912
+#: includes/class-gllr-settings.php:927
 msgid "Counter"
 msgstr "Счетчик"
 
-#: includes/class-gllr-settings.php:915
+#: includes/class-gllr-settings.php:930
 msgid "Enable to show likes counter for each social button."
 msgstr "Включите, чтобы показать счетчик для каждой социальной кнопки."
 
-#: includes/class-gllr-settings.php:930
+#: includes/class-gllr-settings.php:947
 msgid "Demo Data"
 msgstr "Демо-данные"
 
-#: includes/class-gllr-settings.php:932
+#: includes/class-gllr-settings.php:949
 msgid ""
 "Install demo data to create galleries with images, post with shortcodes and "
 "page with a list of all galleries."
@@ -1141,11 +1154,11 @@ msgstr ""
 "Установите демо-данные, чтобы создать галереи с изображениями, запись с "
 "шорткодами и страницу со списком всех галерей."
 
-#: includes/class-gllr-settings.php:970
+#: includes/class-gllr-settings.php:987
 msgid "Gallery Post Type"
 msgstr "Тип записи галереи"
 
-#: includes/class-gllr-settings.php:972
+#: includes/class-gllr-settings.php:989
 msgid ""
 "Enable to avoid conflicts with other gallery plugins installed. All "
 "galleries created earlier will stay unchanged. However, after enabling we "
@@ -1157,23 +1170,45 @@ msgstr ""
 "переименования проверьте, пожалуйста, настройки других плагинов, где "
 "используется тип записи \"gallery\"."
 
-#: includes/class-gllr-settings.php:984
+#: includes/class-gllr-settings.php:1002
 msgid "Gallery Slug"
 msgstr "Слаг галереи"
 
-#: includes/class-gllr-settings.php:988
+#: includes/class-gllr-settings.php:1006
 msgid "Enter the unique gallery slug."
 msgstr "Введите уникальный слаг галереи."
 
-#: includes/class-gllr-settings.php:1004
+#: includes/class-gllr-settings.php:1010
+msgid "ShortPixel Image Optimizer"
+msgstr "Оптимизатор изображения ShortPixel"
+
+#: includes/class-gllr-settings.php:1013
+msgid "Enable to apply ShortPixel optimizer to gallery images."
+msgstr ""
+"Включите, чтобы применить оптимизатор ShortPixel к изображениям галереи"
+
+#: includes/class-gllr-settings.php:1018
+msgid "API Key"
+msgstr "Ключ API"
+
+#: includes/class-gllr-settings.php:1022
+#, php-format
+msgid "Input API Key. If you don't have an API Key, please  %s "
+msgstr "Введите ключ API. Если у вас нет ключа API, пожалуйста %s"
+
+#: includes/class-gllr-settings.php:1022
+msgid " sign up to get your API key"
+msgstr "зарегистрируйтесь, чтобы получить свой ключ API"
+
+#: includes/class-gllr-settings.php:1040
 msgid "Activate Now"
 msgstr "Активировать сейчас"
 
-#: includes/class-gllr-settings.php:1022
+#: includes/class-gllr-settings.php:1058
 msgid "Enable to include galleries to your website search."
 msgstr "Включить галерею в поиск на вашем сайте."
 
-#: includes/class-gllr-settings.php:1022
+#: includes/class-gllr-settings.php:1058
 #, php-format
 msgid "%s is required."
 msgstr "Требуется %s."
@@ -1336,7 +1371,6 @@ msgstr "Хотите установить демо-контент и настр�
 #~ msgid "Try to disable 3rd-party fancybox"
 #~ msgstr "Попробуйте отключить сторонний fancybox"
 
-#, php-format
 #~ msgid ""
 #~ "Do you want to install demo content and settings for %s? (You can do this "
 #~ "later using Import / Export settings)"

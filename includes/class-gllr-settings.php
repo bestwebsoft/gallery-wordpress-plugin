@@ -33,7 +33,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					'misc' 			=> array( 'label' => __( 'Misc', 'gallery-plugin' ) ),
 					'custom_code' 	=> array( 'label' => __( 'Custom Code', 'gallery-plugin' ) ),
 					'import-export' => array( 'label' => __( 'Import / Export', 'gallery-plugin' ) ),
+					/*pls */
 					'license'		=> array( 'label' => __( 'License Key', 'gallery-plugin' ) ),
+					/* pls*/
 				);
 			} else {
 				$tabs = array(
@@ -50,11 +52,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				'options' 			 => $gllr_options,
 				'is_network_options' => is_network_admin(),
 				'tabs' 				 => $tabs,
-				'doc_link'			 => 'https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/',
-				'wp_slug'			 => 'gallery-plugin',
+				'doc_link'			 => 'https://bestwebsoft.com/documentation/gallery/gallery-user-guide/',
 				'demo_data'			 => $gllr_BWS_demo_data,
+				/*pls */
+				'wp_slug'			 => 'gallery-plugin',				
 				'link_key' 			 => '63a36f6bf5de0726ad6a43a165f38fe5',
 				'link_pn' 			 => '79',
+				/* pls*/
 				'trial_days'		 => 7
 			) );
 
@@ -164,6 +168,8 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			$this->options["lightbox_download_link"]    = isset( $_POST['gllr_lightbox_download_link'] ) ? 1 : 0;
 			$this->options["single_lightbox_for_multiple_galleries"] = isset( $_POST['gllr_single_lightbox_for_multiple_galleries'] ) ? 1 : 0;
 
+			$this->options = apply_filters ( 'gllr_save_additional_options', $this->options );
+			
 			/**
 			 * rewriting post types name with unique one from default options
 			 * @since 4.4.4
@@ -314,12 +320,13 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
                                 $plugin_notice = ' <a href="https://bestwebsoft.com/products/wordpress/plugins/slider/' . '" target="_blank">' . __( 'Install Now', 'gallery-plugin' ) . '</a>';
                             }
                             $export = __( 'Create New Slider', 'gallery-plugin' ) ?>
-                            <input type="button" <?php echo $this->change_permission_attr; ?> class="button" <?php echo $attrs; ?> id="gllr-export-slider" name="gllr-export-slider" value="<?php echo $export ?>">
+                            <input type="button"  class="button" <?php echo $attrs; ?> id="gllr-export-slider" name="gllr-export-slider" value="<?php echo $export ?>">
                             <span id="gllr_export_loader" class="gllr_loader"><img src="<?php echo plugins_url( '../images/ajax-loader.gif', __FILE__ ); ?>" alt="loader" /></span><br />
                             <span class="bws_info"><?php _e( 'Click to create a new slider using gallery images. Slider plugin is required.', 'gallery-plugin' ); echo $plugin_notice; ?></span>
                         </td>
                     </tr>
                 </table>
+                <!-- pls -->
                 <?php if ( ! $this->hide_pro_tabs ) { ?>
                     <div class="bws_pro_version_bloc">
                         <div class="bws_pro_version_table_bloc">
@@ -335,9 +342,11 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
                         </div>
                         <?php $this->bws_pro_block_links(); ?>
                     </div>
-                <?php }
-			} else {
-				if ( ! $this->hide_pro_tabs ) { ?>
+                <?php } ?>
+                <!-- end pls -->
+			<?php } else { ?>
+				<!-- pls -->
+				<?php if ( ! $this->hide_pro_tabs ) { ?>
 					<div class="bws_pro_version_bloc">
 						<div class="bws_pro_version_table_bloc">
 							<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
@@ -366,6 +375,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<?php $this->bws_pro_block_links(); ?>
 					</div>
 				<?php } ?>
+				<!-- end pls -->
 				<table class="form-table">
 					<tr>
 						<th scope="row"><?php _e( 'Number of Columns', 'gallery-plugin' ); ?> </th>
@@ -394,6 +404,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						</td>
 					</tr>
 				</table>
+				<!-- pls -->
 				<?php if ( ! $this->hide_pro_tabs ) { ?>
 					<div class="bws_pro_version_bloc gllr_for_custom_image_size">
 						<div class="bws_pro_version_table_bloc">
@@ -430,6 +441,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<?php $this->bws_pro_block_links(); ?>
 					</div>
 				<?php } ?>
+				<!-- end pls -->
 				<table class="form-table">
 					<tr>
 						<th scope="row"><?php _e( 'Image Title', 'gallery-plugin' ); ?></th>
@@ -438,6 +450,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						</td>
 					</tr>
 				</table>
+				<!-- pls -->
 				<?php if ( ! $this->hide_pro_tabs ) { ?>
 					<div class="bws_pro_version_bloc gllr_for_image_text">
 						<div class="bws_pro_version_table_bloc">
@@ -467,6 +480,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<?php $this->bws_pro_block_links(); ?>
 					</div>
 				<?php } ?>
+				<!-- end pls -->
 				<table class="form-table">
 					<tr>
 						<th scope="row"><?php _e( 'Image Border', 'gallery-plugin' ); ?></th>
@@ -495,6 +509,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
                         </td>
                     </tr>
 				</table>
+				<!-- pls -->
 				<?php if ( ! $this->hide_pro_tabs ) { ?>
 					<div class="bws_pro_version_bloc">
 						<div class="bws_pro_version_table_bloc">
@@ -520,6 +535,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<?php $this->bws_pro_block_links(); ?>
 					</div>
 				<?php } ?>
+				<!-- end pls -->
 				<table class="form-table">
 					<tr>
 						<th scope="row"><?php _e( 'Sort Images by', 'gallery-plugin' ); ?></th>
@@ -639,6 +655,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					</td>
 				</tr>
 			</table>
+			<!-- pls -->
 			<?php if ( ! $this->hide_pro_tabs ) { ?>
 				<div class="bws_pro_version_bloc gllr_for_custom_image_size_album">
 					<div class="bws_pro_version_table_bloc">
@@ -675,6 +692,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					<?php $this->bws_pro_block_links(); ?>
 				</div>
 			<?php } ?>
+			<!-- end pls -->
 			<table class="form-table">
 				<tr>
 					<th scope="row"><?php _e( 'Cover Image Border', 'gallery-plugin' ); ?></th>
@@ -721,24 +739,26 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					</td>
 				</tr>
             </table>
-				<?php if ( ! $this->hide_pro_tabs ) { ?>
-                    <div class="bws_pro_version_bloc gllr_for_enable_lightbox">
-                        <div class="bws_pro_version_table_bloc">
-                            <button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
-                            <div class="bws_table_bg"></div>
-                            <table class="form-table bws_pro_version">
-                                <tr>
-                                    <th scope="row"><?php _e( 'Instant Lightbox', 'gallery-plugin' ); ?> </th>
-                                    <td>
-                                        <input type="checkbox" value="1" disabled />
-                                        <span class="bws_info"><?php _e( 'Enable to display all images in the lightbox after clicking cover image or URL instead of going to a single gallery page.', 'gallery-plugin' ); ?></span>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-						<?php $this->bws_pro_block_links(); ?>
+            <!-- pls -->
+			<?php if ( ! $this->hide_pro_tabs ) { ?>
+                <div class="bws_pro_version_bloc gllr_for_enable_lightbox">
+                    <div class="bws_pro_version_table_bloc">
+                        <button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
+                        <div class="bws_table_bg"></div>
+                        <table class="form-table bws_pro_version">
+                            <tr>
+                                <th scope="row"><?php _e( 'Instant Lightbox', 'gallery-plugin' ); ?> </th>
+                                <td>
+                                    <input type="checkbox" value="1" disabled />
+                                    <span class="bws_info"><?php _e( 'Enable to display all images in the lightbox after clicking cover image or URL instead of going to a single gallery page.', 'gallery-plugin' ); ?></span>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-				<?php } ?>
+					<?php $this->bws_pro_block_links(); ?>
+                </div>
+			<?php } ?>
+			<!-- end pls -->
             <table class="form-table">
                 <tr>
 					<th scope="row"><?php _e( 'Read More Link Label', 'gallery-plugin' ); ?></th>
@@ -764,6 +784,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<span class="bws_info"><?php _e( 'Enable to show the lightbox when clicking on gallery images.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
+			<!-- pls -->
 			</table>
 			<?php if ( ! $this->hide_pro_tabs ) { ?>
 				<div class="bws_pro_version_bloc gllr_for_enable_lightbox">
@@ -801,7 +822,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				</div>
 			<?php } ?>
 			<table class="form-table gllr_for_enable_lightbox">
-				<tr>
+			<!-- end pls -->
+			<?php do_action( 'gllr_display_settings_overlay', $this->options ); ?>				
+				<tr class="gllr_for_enable_lightbox">
 					<th scope="row"><?php _e( 'Slideshow', 'gallery-plugin' ); ?> </th>
 					<td>
 						<input type="checkbox" name="gllr_start_slideshow" value="1" <?php if ( 1 == $this->options["start_slideshow"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_start_slideshow" /> <span class="bws_info"><?php _e( 'Enable to start the slideshow automatically when the lightbox is used.', 'gallery-plugin' ); ?></span>
@@ -813,7 +836,8 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<input type="number" name="gllr_slideshow_interval" min="1" max="1000000" value="<?php echo $this->options["slideshow_interval"]; ?>" /> <?php _e( 'ms', 'gallery-plugin' ); ?>
 						<div class="bws_info"><?php _e( 'Slideshow interval duration between two images.', 'gallery-plugin' ); ?></div>
 					</td>
-				</tr>
+				</tr>			
+			<!-- pls -->
 			</table>
 			<?php if ( ! $this->hide_pro_tabs ) { ?>
 				<div class="bws_pro_version_bloc gllr_for_enable_lightbox">
@@ -851,15 +875,17 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					</div>
 					<?php $this->bws_pro_block_links(); ?>
 				</div>
-			<?php } ?>
+			<?php } ?>		
 			<table class="form-table gllr_for_enable_lightbox">
-				<tr>
+			<!-- end pls -->
+			<?php do_action( 'gllr_display_settings_lightbox', $this->options ); ?>
+				<tr class="gllr_for_enable_lightbox">
 					<th scope="row"><?php _e( 'Download Button', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="checkbox" name="gllr_lightbox_download_link" value="1" <?php if ( 1 == $this->options["lightbox_download_link"] ) echo 'checked="checked"'; ?> class="bws_option_affect" data-affect-show=".gllr_for_lightbox_download_link" /> <span class="bws_info"><?php _e( 'Enable to display download button.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
-				<tr>
+				<tr class="gllr_for_enable_lightbox">
 					<th scope="row"><?php _e( 'Single Lightbox', 'gallery-plugin' ); ?></th>
 					<td>
 						<input type="checkbox" name="gllr_single_lightbox_for_multiple_galleries" value="1" <?php if ( 1 == $this->options["single_lightbox_for_multiple_galleries"] ) echo 'checked="checked"'; ?> /> <span class="bws_info"><?php _e( 'Enable to use a single lightbox for multiple galleries located on a single page.', 'gallery-plugin' ); ?></span>
@@ -875,6 +901,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
             <h3 class="bws_tab_label"><?php _e( 'Social Sharing Buttons Settings', 'gallery-plugin' ); ?></h3>
             <?php $this->help_phrase(); ?>
             <hr>
+            <!-- pls -->
             <div class="bws_pro_version_bloc">
                 <div class="bws_pro_version_table_bloc">
                     <button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
@@ -907,7 +934,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
                 </div>
                 <?php $this->bws_pro_block_links(); ?>
             </div>
-        <?php }
+            <!-- end pls -->
+            <?php do_action( 'gllr_display_settings_social', $this->options );
+        }
 
 		/**
 		 *
@@ -929,7 +958,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 		 */
 		public function additional_misc_options_affected() {
 			global $wp_version, $wpdb;
-
+			do_action( 'gllr_settings_page_misc_action', $this->options );
 			//rename post_type via $_GET if checkbox doesn't shows
 			if ( isset( $_GET['bws_rename_post_type_gallery'] ) ) {
 				global $wpdb;
@@ -960,9 +989,10 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						<input type="checkbox" name="gllr_rename_post_type" value="1" /> <span class="bws_info"><?php _e( 'Enable to avoid conflicts with other gallery plugins installed. All galleries created earlier will stay unchanged. However, after enabling we recommend to check settings of other plugins where "gallery" post type is used.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
-			<?php }
-			if ( ! $this->hide_pro_tabs ) { ?>
-				</table>
+			<?php } ?>
+			<!-- pls -->
+			</table>
+			<?php if ( ! $this->hide_pro_tabs ) { ?>				
 				<div class="bws_pro_version_bloc">
 					<div class="bws_pro_version_table_bloc">
 						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'gallery-plugin' ); ?>"></button>
@@ -976,12 +1006,30 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 									<span class="bws_info"><?php _e( 'Enter the unique gallery slug.', 'gallery-plugin' ); ?></span>
 								</td>
 							</tr>
+                            <tr valign="top">
+                                <th scope="row"><?php _e( 'ShortPixel Image Optimizer', 'gallery-plugin' ); ?></th>
+                                <td>
+                                    <label>
+                                        <input<?php echo $this->change_permission_attr; ?> type="checkbox" name="gllr_short_pixel" value="1" disabled /> <span class="bws_info"><?php _e( 'Enable to apply ShortPixel optimizer to gallery images.', 'gallery-plugin' ); ?></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr id="gllr_for_short_pixel">
+                                <th scope="row"><?php _e( 'API Key', 'gallery-plugin' ); ?></th>
+                                <td>
+                                    <input type="text" name="gllr_short_pixel_api_key"  value="<?php echo $this->options["api_key"]; ?>" disabled  />
+                                    <div class="bws_info">
+                                        <?php printf( __( 'Input API Key. If you don\'t have an API Key, please  %s ', 'gallery-plugin' ), '<a href="https://shortpixel.com/wp-apikey" target="_blank">' . __( ' sign up to get your API key', 'gallery-plugin' ) . '</a>' ); ?>&nbsp;
+                                    </div>
+                                </td>
+                            </tr>
 						</table>
 					</div>
 					<?php $this->bws_pro_block_links(); ?>
 				</div>
-                <table class="form-table">
-			<?php } ?>
+			<?php } ?>		
+			<!-- end pls -->
+			<table class="form-table">
                 <tr>
                     <th scope="row"><?php _e( 'Search Galleries', 'gallery-plugin' ); ?></th>
                     <td>

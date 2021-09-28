@@ -125,6 +125,7 @@
 <li>Thumbnail</li>
 </ul>
 </li>
+<li>Optimize images [NEW]</li>
 <li>Select &#8216;self&#8217;/&#8217;blank&#8217; for external URLs</li>
 <li>Add lightbox image description</li>
 <li>Add a button with URL to the lightbox</li>
@@ -149,7 +150,7 @@
 <h4>Help &amp; Support</h4>
 <p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8211; <a href="https://support.bestwebsoft.com/" rel="nofollow ugc">https://support.bestwebsoft.com/</a></p>
 <h4>Affiliate Program</h4>
-<p>Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — <a href="https://bestwebsoft.com/affiliate/" rel="nofollow">https://bestwebsoft.com/affiliate/</a></p>
+<p>Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — <a href="https://bestwebsoft.com/affiliate/?utm_source=plugin&amp;utm_medium=readme&amp;utm_campaign=affiliate_program" rel="nofollow ugc">https://bestwebsoft.com/affiliate/</a></p>
 <h4>Translation</h4>
 <ul>
 <li>Brazilian Portuguese (pt_BR) (thanks to DJIO, www.djio.com.br)</li>

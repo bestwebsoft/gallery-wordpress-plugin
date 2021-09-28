@@ -1,4 +1,5 @@
 function bws_show_settings_notice() {
+	"use strict";
 	(function($) {
 		$( '.updated.fade:not(.bws_visible), .error:not(.bws_visible)' ).css( 'display', 'none' );
 		$( '#bws_save_settings_notice' ).css( 'display', 'block' );
@@ -6,11 +7,12 @@ function bws_show_settings_notice() {
 }
 
 (function($) {
+	"use strict";
 	$( document ).ready( function() {
 		/**
 		 * add notice about changing on the settings page 
 		 */
-		$( '.bws_form input, .bws_form textarea, .bws_form select' ).bind( "change paste select", function() {
+		$( '.bws_form input, .bws_form textarea, .bws_form select' ).on( "change paste select", function() {
 			if ( $( this ).attr( 'type' ) != 'submit' && ! $( this ).hasClass( 'bws_no_bind_notice' ) ) {
 				bws_show_settings_notice();
 			};

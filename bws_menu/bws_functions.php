@@ -481,6 +481,53 @@ if ( ! function_exists( 'bws_plugin_suggest_feature_banner' ) ) {
 	<?php }
 }
 
+if ( ! function_exists( 'bws_affiliate_postbox' ) ) {
+	function bws_affiliate_postbox() {
+
+		$dismissed = get_user_meta( get_current_user_id(), '_bws_affiliate_postbox_dismissed', true );
+
+		if ( ! empty( $dismissed ) && strtotime( '-3 month' ) < $dismissed ) {
+			return;
+		}
+
+		if ( isset( $_POST['bws_hide_affiliate_banner' ] ) && check_admin_referer( 'bws_affiliate_postbox', 'bws_settings_nonce_name' ) ) {
+			update_user_meta( get_current_user_id(), '_bws_affiliate_postbox_dismissed', strtotime( 'now' ) );
+			return;
+		}
+
+		$bws_link = esc_url( 'https://bestwebsoft.com/affiliate/?utm_source=plugin&utm_medium=settings&utm_campaign=affiliate_program' ); ?>
+		<div id="bws-affiliate-postbox" class="postbox">
+			<form action="" method="post">
+				<button class="notice-dismiss bws_hide_settings_notice" title="<?php esc_html_e( 'Close notice', 'bestwebsoft' ); ?>"></button>
+				<input type="hidden" name="bws_hide_affiliate_banner" value="hide" />
+				<?php wp_nonce_field( 'bws_affiliate_postbox', 'bws_settings_nonce_name' ); ?>
+			</form>
+			<p>BESTWEBSOFT</p>	
+			<h3><?php esc_html_e( 'Affiliate Program', 'bestwebsoft' ); ?></h3>
+			<div class="bws-affiliate-get"><?php printf( esc_html__( 'Get %s', 'bestwebsoft' ), '20%' ); ?></div>
+			<div><?php esc_html_e( 'from each BestWebSoft plugin and theme sale you refer', 'bestwebsoft' ); ?></div>
+			<div class="bws-row">
+				<div class="bws-cell">
+					<img src="<?php echo bws_menu_url( "images/join-icon.svg" ); ?>" alt="" />
+					<div><?php esc_html_e( 'Join affiliate program', 'bestwebsoft' ); ?></div>
+				</div>
+				<div class="bws-cell">
+					<img src="<?php echo bws_menu_url( "images/promote-icon.svg" ); ?>" alt="" />
+					<div><?php esc_html_e( 'Promote and sell products', 'bestwebsoft' ); ?></div>
+				</div>
+				<div class="bws-cell">
+					<img src="<?php echo bws_menu_url( "images/earn-icon.svg" ); ?>" alt="" />
+					<div><?php esc_html_e( 'Get commission!', 'bestwebsoft' ); ?></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<p>
+				<a class="button" href="<?php echo $bws_link; ?>" target="_blank"><?php esc_html_e( 'Start Now', 'bestwebsoft' ); ?></a>
+			</p>
+		</div>
+	<?php }
+}
+
 if ( ! function_exists( 'bws_show_settings_notice' ) ) {
 	function bws_show_settings_notice() { ?>
 		<div id="bws_save_settings_notice" class="updated fade below-h2" style="display:none;">
@@ -697,6 +744,7 @@ if ( ! function_exists( 'bws_enqueue_settings_scripts' ) ) {
 	function bws_enqueue_settings_scripts() {
 		wp_enqueue_script( 'jquery-ui-resizable' );
 		wp_enqueue_script( 'jquery-ui-tabs' );
+		wp_enqueue_style( 'bws-modal-css', bws_menu_url( 'css/modal.css' ) );
 	}
 }
 
@@ -799,7 +847,7 @@ if ( ! class_exists( 'BWS_admin_tooltip' ) ) {
 				if ( ! in_array( $tooltip_args['position']['edge'], array( 'left', 'right', 'top', 'bottom' ) )  ) {
 					$tooltip_args['position']['edge'] = 'top';
 				}
-				if ( ! in_array( $tooltip_args['position']['align'], array( 'top', 'bottom', 'left', 'right', 'center', ) ) ) {
+				if ( ! in_array( $tooltip_args['position']['align'], array( 'top', 'bottom', 'left', 'right', 'center' ) ) ) {
 					$tooltip_args['position']['align'] = 'center';
 				}
 			}
@@ -957,7 +1005,7 @@ if ( ! function_exists( 'bws_help_tab' ) ) {
 
 		$screen->set_help_sidebar(
 			'<p><strong>' . __( 'For more information:', 'bestwebsoft' ) . '</strong></p>' .
-			'<p><a href="https://drive.google.com/folderview?id=0B5l8lO-CaKt9VGh0a09vUjNFNjA&usp=sharing#list" target="_blank">' . __( 'Documentation', 'bestwebsoft' ) . '</a></p>' .
+			'<p><a href="https://bestwebsoft.com/documentation/" target="_blank">' . __( 'Documentation', 'bestwebsoft' ) . '</a></p>' .
 			'<p><a href="https://www.youtube.com/user/bestwebsoft/playlists?flow=grid&sort=da&view=1" target="_blank">' . __( 'Video Instructions', 'bestwebsoft' ) . '</a></p>' .
 			'<p><a href="https://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">' . __( 'Submit a Request', 'bestwebsoft' ) . '</a></p>'
 		);

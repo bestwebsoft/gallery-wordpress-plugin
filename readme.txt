@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 4.5
-Tested up to: 5.6
-Stable tag: 4.6.7
+Tested up to: 5.8.1
+Stable tag: 4.6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,7 @@ https://www.youtube.com/watch?v=aydaTdOpaRM
 > * Enable lightbox helper:
 > 	* Button
 > 	* Thumbnail
+> * Optimize images [NEW]
 > * Select 'self'/'blank' for external URLs
 > * Add lightbox image description
 > * Add a button with URL to the lightbox
@@ -115,17 +116,21 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Documentation & Videos =
 
-* [[Doc] User Guide](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
-* [[Doc] How to Receive Trial License](https://docs.google.com/document/d/1koBRu7k9OnOw2Ic3YqmBWjL_KtC3tI8WU1agMa3AYGo/)
-* [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
-* [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
-* [[Video] How to Add](https://www.youtube.com/watch?v=-P9o6-APlv0)
-* [[Video] Installation Instruction](https://www.youtube.com/watch?v=3u-Ov-HxZ7U)
-* [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=KAbiac-iORw)
+ * [[Doc] User Guide](https://bestwebsoft.com/documentation/gallery/gallery-user-guide/)
+ * [[Doc] How to Receive Trial License](https://bestwebsoft.com/documentation/gallery/how-to-receive-and-activate-gallery-pro-trial-license/)
+ * [[Doc] Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
+ * [[Doc] Purchase](https://bestwebsoft.com/documentation/how-to-purchase-a-wordpress-plugin/how-to-purchase-wordpress-plugin-from-bestwebsoft/)
+ * [[Video] How to Add](https://www.youtube.com/watch?v=-P9o6-APlv0)
+ * [[Video] Installation Instruction](https://www.youtube.com/watch?v=3u-Ov-HxZ7U)
+ * [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=KAbiac-iORw)
 
 = Help & Support =
 
 Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <https://support.bestwebsoft.com/>
+
+= Affiliate Program =
+
+Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — [https://bestwebsoft.com/affiliate/](https://bestwebsoft.com/affiliate/?utm_source=plugin&utm_medium=readme&utm_campaign=affiliate_program)
 
 = Translation =
 
@@ -167,7 +172,7 @@ Some of these translations are not complete. We are constantly adding new featur
 2. Add or Upload pictures via 'Add Media' button.
 3. Save the page.
 
-[View a Step-by-step Instruction "How to Use"](https://docs.google.com/document/d/1l4zMhovBgO7rsPIzJk_15v0sdhiCpnjuacoDEfmzGEw/)
+[View a Step-by-step Instruction "How to Use"](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
 
 = How to change or override plugin templates? =
 
@@ -216,7 +221,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/)
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://bestwebsoft.com/documentation/admin-panel-issues/system-status/)
 
 == Screenshots ==
 
@@ -233,6 +238,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 11. The adding of the Latest Galleries widget.
 
 == Changelog ==
+
+= V4.6.8 - 10.09.2021 =
+* Update : All functionality was updated for WordPress 5.8.1
+* Update : BWS Panel section was updated.
+* Pro : The ability to optimize images has been added.
+* Bugfix : The bug with displaying lightbox was fixed.
 
 = V4.6.7 - 28.01.2021 =
 * Update : All functionality was updated for WordPress 5.6
@@ -701,6 +712,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.6.8 =
+* The compatibility with new WordPress version updated.
+* New features added.
+* Bugs fixed.
 
 = V4.6.7 =
 * The compatibility with new WordPress version updated.
