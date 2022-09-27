@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 14:44+0300\n"
-"PO-Revision-Date: 2021-08-20 14:44+0300\n"
+"POT-Creation-Date: 2022-04-12 16:02+0530\n"
+"PO-Revision-Date: 2022-04-12 16:03+0530\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: bws_menu\n"
 
@@ -325,7 +325,7 @@ msgstr ""
 msgid "Invalid path"
 msgstr "Путь к изображению некорректный"
 
-#: gallery-plugin.php:2781 gallery-plugin.php:2942
+#: gallery-plugin.php:2781 gallery-plugin.php:2943 gallery-plugin.php:2946
 msgid "Warning"
 msgstr "Внимание"
 
@@ -349,7 +349,7 @@ msgstr ""
 msgid "Sorry, no gallery found."
 msgstr "Извините, галерей не найдено."
 
-#: gallery-plugin.php:2942
+#: gallery-plugin.php:2943
 #, php-format
 msgid ""
 "Maximum upload file size %s. Contact your administrator or hosting provider "
@@ -357,6 +357,17 @@ msgid ""
 msgstr ""
 "Максимальный размер файла %s. Свяжитесь с вашим администратором или "
 "провайдером хостинга, если вам нужно загрузить файл большего размера."
+
+#: gallery-plugin.php:2946
+#, php-format
+msgid ""
+"Input vars count %s i.e. the number of pictures in the gallery may be "
+"limited. Contact your administrator or hosting provider if you need to "
+"upload a large input vars count."
+msgstr ""
+"Количество входных параметров %s, т.е. количество картинок в галерее может "
+"быть ограничено. Обратитесь к администратору или хостинг-провайдеру, если "
+"вам нужно загрузить большое количество входных параметров."
 
 #: includes/class-gllr-media-table.php:19
 msgid "List View"

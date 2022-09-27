@@ -19,10 +19,9 @@ get_header(); ?>
 		</div><!-- #container -->
 	</div><!-- .content-area -->
 	<?php
-    $current_theme = wp_get_theme();
     /* Theme Twenty Nineteen hasn`t sidebar */
 	$current_theme = wp_get_theme();
-	if( 'Twenty Twenty' == $current_theme->get( 'Name' ) ) {
+	if ( 'Twenty Twenty' == $current_theme->get( 'Name' ) ) {
 		get_template_part( 'template-parts/footer-menus-widgets' );
 	} elseif ( file_exists( TEMPLATEPATH . '/sidebar.php' ) ) {
 		get_sidebar();
