@@ -27,7 +27,7 @@ function gllr_setError( msg ) {
 			} else {
 				$('input[name="gllr_enable_lightbox"]').removeAttr("disabled");
 			}
-		} ).trigger( 'change' );
+		} );
 
 		$( '#gllr_ajax_update_images' ).click( function() {
 			gllr_setMessage( "<p>" + gllr_vars.update_img_message + "</p>" );

@@ -9,74 +9,74 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 		$posts = array(
 			/* Page Template Gallery */
 			array(
-				'comment_status' 		=> 'closed',
-				'ping_status'    		=> 'closed',
-				'post_status'    		=> 'publish',
-				'post_type'      		=> 'page',
-				'post_title'     		=> 'DEMO Galleries',
-				'post_content'   		=> '',
-				'save_to_options'		=> 'page_id_gallery_template'
+				'comment_status'  => 'closed',
+				'ping_status'     => 'closed',
+				'post_status'     => 'publish',
+				'post_type'       => 'page',
+				'post_title'      => 'DEMO Galleries',
+				'post_content'    => '',
+				'save_to_options' => 'page_id_gallery_template',
 			),
 			/* Galleries */
 			array(
-				'comment_status' => 'closed',
-				'ping_status'    => 'closed',
-				'post_status'    => 'publish',
-				'post_type'      => $post_type,
-				'post_title'     => 'DEMO Gastronomy',
-				'post_content'   => 'Nowadays food photographing is becoming more and more popular. Today thousands of blogs are devoted to such pictures. Using our Gallery plugin you can post such images easily! For more information visit <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/">Our Site</a>',
-				'post_meta'      => array(
-					'gllr_download_link' => '1'
+				'comment_status'     => 'closed',
+				'ping_status'        => 'closed',
+				'post_status'        => 'publish',
+				'post_type'          => $post_type,
+				'post_title'         => 'DEMO Gastronomy',
+				'post_content'       => 'Nowadays food photographing is becoming more and more popular. Today thousands of blogs are devoted to such pictures. Using our Gallery plugin you can post such images easily! For more information visit <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/">Our Site</a>',
+				'post_meta'          => array(
+					'gllr_download_link' => '1',
 				),
-				'attachments_folder' => 'gastronomy'
+				'attachments_folder' => 'gastronomy',
 			),
 			array(
-				'comment_status' => 'closed',
-				'ping_status'    => 'closed',
-				'post_status'    => 'publish',
-				'post_type'      => $post_type,
-				'post_title'     => 'DEMO Music',
-				'post_content'   => 'Music is an integral part of our lives. It surrounds us everywhere. Save memorable moments of the concerts and festivals and share them with your friends! Our Gallery plugin will help you with this. For more information visit <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/">Our Site</a>',
-				'post_meta'      => array(
-					'gllr_download_link' => '1'
+				'comment_status'     => 'closed',
+				'ping_status'        => 'closed',
+				'post_status'        => 'publish',
+				'post_type'          => $post_type,
+				'post_title'         => 'DEMO Music',
+				'post_content'       => 'Music is an integral part of our lives. It surrounds us everywhere. Save memorable moments of the concerts and festivals and share them with your friends! Our Gallery plugin will help you with this. For more information visit <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/">Our Site</a>',
+				'post_meta'          => array(
+					'gllr_download_link' => '1',
 				),
-				'attachments_folder' => 'music'
+				'attachments_folder' => 'music',
 			),
 			array(
-				'comment_status' => 'closed',
-				'ping_status'    => 'closed',
-				'post_status'    => 'publish',
-				'post_type'      => $post_type,
-				'post_title'     => 'DEMO Travelling',
-				'post_content'   => 'Millions of people all over the world spend their holidays travelling. Nowadays we can also share our impressions with friends! And our Gallery plugin will help you with this. Also you can use an exclusive add-on Gallery Categories which allows you to create different categories of galleries on your site. For more information visit <a href="https://bestwebsoft.com/">Our Site</a>',
-				'post_meta'      => array(
-					'gllr_download_link' => '1'
+				'comment_status'     => 'closed',
+				'ping_status'        => 'closed',
+				'post_status'        => 'publish',
+				'post_type'          => $post_type,
+				'post_title'         => 'DEMO Travelling',
+				'post_content'       => 'Millions of people all over the world spend their holidays travelling. Nowadays we can also share our impressions with friends! And our Gallery plugin will help you with this. Also you can use an exclusive add-on Gallery Categories which allows you to create different categories of galleries on your site. For more information visit <a href="https://bestwebsoft.com/">Our Site</a>',
+				'post_meta'          => array(
+					'gllr_download_link' => '1',
 				),
-				'attachments_folder' => 'travelling'
+				'attachments_folder' => 'travelling',
 			),
 			array(
-				'comment_status' => 'closed',
-				'ping_status'    => 'closed',
-				'post_status'    => 'publish',
-				'post_type'      => $post_type,
-				'post_title'     => 'DEMO Sport',
-				'post_content'   => 'Sport is Life! And now you have a great opportunity to share your achievements with the whole world. And our Gallery plugin will help you with this. For more information visit <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/">Our Site</a>',
-				'post_meta'      => array(
-					'gllr_download_link' => '1'
+				'comment_status'     => 'closed',
+				'ping_status'        => 'closed',
+				'post_status'        => 'publish',
+				'post_type'          => $post_type,
+				'post_title'         => 'DEMO Sport',
+				'post_content'       => 'Sport is Life! And now you have a great opportunity to share your achievements with the whole world. And our Gallery plugin will help you with this. For more information visit <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/">Our Site</a>',
+				'post_meta'          => array(
+					'gllr_download_link' => '1',
 				),
-				'attachments_folder' => 'sport'
+				'attachments_folder' => 'sport',
 			),
 			array(
-				'comment_status' => 'closed',
-				'ping_status'    => 'closed',
-				'post_status'    => 'publish',
-				'post_type'      => $post_type,
-				'post_title'     => 'DEMO Nature',
-				'post_content'   => 'Look for inspiration in the nature! You can admire its beauty all day long. With our Gallery plugin you can share beautiful pictures with your friends. For more information visit <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/">Our Site</a>',
-				'post_meta'      => array(
-					'gllr_download_link' => '1'
+				'comment_status'     => 'closed',
+				'ping_status'        => 'closed',
+				'post_status'        => 'publish',
+				'post_type'          => $post_type,
+				'post_title'         => 'DEMO Nature',
+				'post_content'       => 'Look for inspiration in the nature! You can admire its beauty all day long. With our Gallery plugin you can share beautiful pictures with your friends. For more information visit <a href="https://bestwebsoft.com/products/wordpress/plugins/gallery/">Our Site</a>',
+				'post_meta'          => array(
+					'gllr_download_link' => '1',
 				),
-				'attachments_folder' => 'nature'
+				'attachments_folder' => 'nature',
 			),
 			/* Post with Gallery shortcodes */
 			array(
@@ -91,67 +91,67 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 
 		$attachments = array(
 			/* gastronomy */
-			'apple.jpg' => array(
+			'apple.jpg'           => array(
 				'gllr_image_alt_tag' => 'Apple',
 				'gllr_image_text'    => 'Apple',
 				'gllr_link_url'      => '',
 			),
-			'brunch.jpg' => array(
+			'brunch.jpg'          => array(
 				'gllr_image_alt_tag' => 'Brunch',
 				'gllr_image_text'    => 'Brunch',
 				'gllr_link_url'      => '',
 			),
-			'cheese.jpg' => array(
+			'cheese.jpg'          => array(
 				'gllr_image_alt_tag' => 'Cheese',
 				'gllr_image_text'    => 'Cheese',
 				'gllr_link_url'      => '',
 			),
-			'cinnamon.jpg' => array(
+			'cinnamon.jpg'        => array(
 				'gllr_image_alt_tag' => 'Cinnamon',
 				'gllr_image_text'    => 'Cinnamon',
 				'gllr_link_url'      => '',
 			),
-			'cupcakes.jpg' => array(
+			'cupcakes.jpg'        => array(
 				'gllr_image_alt_tag' => 'Cupcakes',
 				'gllr_image_text'    => 'Cupcakes',
 				'gllr_link_url'      => '',
 			),
-			'grapes.jpg' => array(
+			'grapes.jpg'          => array(
 				'gllr_image_alt_tag' => 'Grapes',
 				'gllr_image_text'    => 'Grapes',
 				'gllr_link_url'      => '',
 			),
-			'hamburger.jpg' => array(
+			'hamburger.jpg'       => array(
 				'gllr_image_alt_tag' => 'Hamburger',
 				'gllr_image_text'    => 'Hamburger',
 				'gllr_link_url'      => '',
 			),
-			'pasta.jpg' => array(
+			'pasta.jpg'           => array(
 				'gllr_image_alt_tag' => 'Pasta',
 				'gllr_image_text'    => 'Pasta',
 				'gllr_link_url'      => '',
 			),
-			'peanut_butter.jpg' => array(
+			'peanut_butter.jpg'   => array(
 				'gllr_image_alt_tag' => 'Peanut Butter',
 				'gllr_image_text'    => 'Peanut Butter',
 				'gllr_link_url'      => '',
 			),
-			'pizza.jpg' => array(
+			'pizza.jpg'           => array(
 				'gllr_image_alt_tag' => 'Pizza',
 				'gllr_image_text'    => 'Pizza',
 				'gllr_link_url'      => '',
 			),
-			'restaurant.jpg' => array(
+			'restaurant.jpg'      => array(
 				'gllr_image_alt_tag' => 'Restaurant',
 				'gllr_image_text'    => 'Restaurant',
 				'gllr_link_url'      => '',
 			),
-			'spice.jpg' => array(
+			'spice.jpg'           => array(
 				'gllr_image_alt_tag' => 'Spice',
 				'gllr_image_text'    => 'Spice',
 				'gllr_link_url'      => '',
 			),
-			'cake.jpg' => array(
+			'cake.jpg'            => array(
 				'gllr_image_alt_tag' => 'Cake',
 				'gllr_image_text'    => 'Cake',
 				'gllr_link_url'      => '',
@@ -162,258 +162,258 @@ if ( ! function_exists( 'bws_demo_data_array' ) ) {
 				'gllr_image_text'    => 'Acoustic Guitar',
 				'gllr_link_url'      => '',
 			),
-			'disco.jpg' => array(
+			'disco.jpg'           => array(
 				'gllr_image_alt_tag' => 'Disco',
 				'gllr_image_text'    => 'Disco',
 				'gllr_link_url'      => '',
 			),
-			'dj.jpg' => array(
+			'dj.jpg'              => array(
 				'gllr_image_alt_tag' => 'DJ',
 				'gllr_image_text'    => 'DJ',
 				'gllr_link_url'      => '',
 			),
-			'drummer.jpg' => array(
+			'drummer.jpg'         => array(
 				'gllr_image_alt_tag' => 'Drummer',
 				'gllr_image_text'    => 'Drummer',
 				'gllr_link_url'      => '',
 			),
-			'guitar_case.jpg' => array(
+			'guitar_case.jpg'     => array(
 				'gllr_image_alt_tag' => 'Guitar Case',
 				'gllr_image_text'    => 'Guitar Case',
 				'gllr_link_url'      => '',
 			),
-			'headphones.jpg' => array(
+			'headphones.jpg'      => array(
 				'gllr_image_alt_tag' => 'Headphones',
 				'gllr_image_text'    => 'Headphones',
 				'gllr_link_url'      => '',
 			),
-			'metronome.jpg' => array(
+			'metronome.jpg'       => array(
 				'gllr_image_alt_tag' => 'Metronome',
 				'gllr_image_text'    => 'Metronome',
 				'gllr_link_url'      => '',
 			),
-			'music.jpg' => array(
+			'music.jpg'           => array(
 				'gllr_image_alt_tag' => 'Music',
 				'gllr_image_text'    => 'Music',
 				'gllr_link_url'      => '',
 			),
-			'musicassette.jpg' => array(
+			'musicassette.jpg'    => array(
 				'gllr_image_alt_tag' => 'Musicassette',
 				'gllr_image_text'    => 'Musicassette',
 				'gllr_link_url'      => '',
 			),
-			'notes.jpg' => array(
+			'notes.jpg'           => array(
 				'gllr_image_alt_tag' => 'Notes',
 				'gllr_image_text'    => 'Notes',
 				'gllr_link_url'      => '',
 			),
-			'saxophone.jpg' => array(
+			'saxophone.jpg'       => array(
 				'gllr_image_alt_tag' => 'Saxophone',
 				'gllr_image_text'    => 'Saxophone',
 				'gllr_link_url'      => '',
 			),
-			'tickets.jpg' => array(
+			'tickets.jpg'         => array(
 				'gllr_image_alt_tag' => 'Tickets',
 				'gllr_image_text'    => 'Tickets',
 				'gllr_link_url'      => '',
 			),
 			/* nature */
-			'blueberry.jpg' => array(
+			'blueberry.jpg'       => array(
 				'gllr_image_alt_tag' => 'Blueberry',
 				'gllr_image_text'    => 'Blueberry',
 				'gllr_link_url'      => '',
 			),
-			'dandelion.jpg' => array(
+			'dandelion.jpg'       => array(
 				'gllr_image_alt_tag' => 'Dandelion',
 				'gllr_image_text'    => 'Dandelion',
 				'gllr_link_url'      => '',
 			),
-			'flower.jpg' => array(
+			'flower.jpg'          => array(
 				'gllr_image_alt_tag' => 'Flower',
 				'gllr_image_text'    => 'Flower',
 				'gllr_link_url'      => '',
 			),
-			'grass.jpg' => array(
+			'grass.jpg'           => array(
 				'gllr_image_alt_tag' => 'Grass',
 				'gllr_image_text'    => 'Grass',
 				'gllr_link_url'      => '',
 			),
-			'ladybug.jpg' => array(
+			'ladybug.jpg'         => array(
 				'gllr_image_alt_tag' => 'Ladybug',
 				'gllr_image_text'    => 'Ladybug',
 				'gllr_link_url'      => '',
 			),
-			'forest_edge.jpg' => array(
+			'forest_edge.jpg'     => array(
 				'gllr_image_alt_tag' => 'Landscape',
 				'gllr_image_text'    => 'Landscape',
 				'gllr_link_url'      => '',
 			),
-			'roses.jpg' => array(
+			'roses.jpg'           => array(
 				'gllr_image_alt_tag' => 'Roses',
 				'gllr_image_text'    => 'Roses',
 				'gllr_link_url'      => '',
 			),
-			'tulips.jpg' => array(
+			'tulips.jpg'          => array(
 				'gllr_image_alt_tag' => 'Tulips',
 				'gllr_image_text'    => 'Tulips',
 				'gllr_link_url'      => '',
 			),
-			'water.jpg' => array(
+			'water.jpg'           => array(
 				'gllr_image_alt_tag' => 'Water',
 				'gllr_image_text'    => 'Water',
 				'gllr_link_url'      => '',
 			),
-			'winter.jpg' => array(
+			'winter.jpg'          => array(
 				'gllr_image_alt_tag' => 'Winter',
 				'gllr_image_text'    => 'Winter',
 				'gllr_link_url'      => '',
 			),
-			'wood.jpg' => array(
+			'wood.jpg'            => array(
 				'gllr_image_alt_tag' => 'Wood',
 				'gllr_image_text'    => 'Wood',
 				'gllr_link_url'      => '',
 			),
-			'grasshopper.jpg' => array(
+			'grasshopper.jpg'     => array(
 				'gllr_image_alt_tag' => 'Grasshopper',
 				'gllr_image_text'    => 'Grasshopper',
 				'gllr_link_url'      => '',
 			),
 			/* sport */
-			'air_gymnastics.jpg' => array(
+			'air_gymnastics.jpg'  => array(
 				'gllr_image_alt_tag' => 'Air Gymnastics',
 				'gllr_image_text'    => 'Air Gymnastics',
 				'gllr_link_url'      => '',
 			),
-			'baseball.jpg' => array(
+			'baseball.jpg'        => array(
 				'gllr_image_alt_tag' => 'Baseball',
 				'gllr_image_text'    => 'Baseball',
 				'gllr_link_url'      => '',
 			),
-			'basketball.jpg' => array(
+			'basketball.jpg'      => array(
 				'gllr_image_alt_tag' => 'Basketball',
 				'gllr_image_text'    => 'Basketball',
 				'gllr_link_url'      => '',
 			),
-			'bike.jpg' => array(
+			'bike.jpg'            => array(
 				'gllr_image_alt_tag' => 'Bike',
 				'gllr_image_text'    => 'Bike',
 				'gllr_link_url'      => '',
 			),
-			'paraglider.jpg' => array(
+			'paraglider.jpg'      => array(
 				'gllr_image_alt_tag' => 'Paraglider',
 				'gllr_image_text'    => 'Paraglider',
 				'gllr_link_url'      => '',
 			),
-			'ski.jpg' => array(
+			'ski.jpg'             => array(
 				'gllr_image_alt_tag' => 'Ski',
 				'gllr_image_text'    => 'Ski',
 				'gllr_link_url'      => '',
 			),
-			'soccer.jpg' => array(
+			'soccer.jpg'          => array(
 				'gllr_image_alt_tag' => 'Soccer',
 				'gllr_image_text'    => 'Soccer',
 				'gllr_link_url'      => '',
 			),
-			'swimming_pool.jpg' => array(
+			'swimming_pool.jpg'   => array(
 				'gllr_image_alt_tag' => 'Swimming Pool',
 				'gllr_image_text'    => 'Swimming Pool',
 				'gllr_link_url'      => '',
 			),
-			'tennis_rackets.jpg' => array(
+			'tennis_rackets.jpg'  => array(
 				'gllr_image_alt_tag' => 'Tennis Rackets',
 				'gllr_image_text'    => 'Tennis Rackets',
 				'gllr_link_url'      => '',
 			),
-			'track.jpg' => array(
+			'track.jpg'           => array(
 				'gllr_image_alt_tag' => 'Track',
 				'gllr_image_text'    => 'Track',
 				'gllr_link_url'      => '',
 			),
-			'motorcycle.jpg' => array(
+			'motorcycle.jpg'      => array(
 				'gllr_image_alt_tag' => 'Motorcycle',
 				'gllr_image_text'    => 'Motorcycle',
 				'gllr_link_url'      => '',
 			),
-			'snowboard.jpg' => array(
+			'snowboard.jpg'       => array(
 				'gllr_image_alt_tag' => 'Snowboard',
 				'gllr_image_text'    => 'Snowboard',
 				'gllr_link_url'      => '',
 			),
 			/* travelling */
-			'accessories.jpg' => array(
+			'accessories.jpg'     => array(
 				'gllr_image_alt_tag' => 'Accessories',
 				'gllr_image_text'    => 'Accessories',
 				'gllr_link_url'      => '',
 			),
-			'beach.jpg' => array(
+			'beach.jpg'           => array(
 				'gllr_image_alt_tag' => 'Beach',
 				'gllr_image_text'    => 'Beach',
 				'gllr_link_url'      => '',
 			),
-			'coffee.jpg' => array(
+			'coffee.jpg'          => array(
 				'gllr_image_alt_tag' => 'Coffee',
 				'gllr_image_text'    => 'Coffee',
 				'gllr_link_url'      => '',
 			),
-			'compass.jpg' => array(
+			'compass.jpg'         => array(
 				'gllr_image_alt_tag' => 'Compass',
 				'gllr_image_text'    => 'Compass',
 				'gllr_link_url'      => '',
 			),
-			'france.jpg' => array(
+			'france.jpg'          => array(
 				'gllr_image_alt_tag' => 'France',
 				'gllr_image_text'    => 'France',
 				'gllr_link_url'      => '',
 			),
-			'globe.jpg' => array(
+			'globe.jpg'           => array(
 				'gllr_image_alt_tag' => 'Globe',
 				'gllr_image_text'    => 'Globe',
 				'gllr_link_url'      => '',
 			),
-			'landscape.jpg' => array(
+			'landscape.jpg'       => array(
 				'gllr_image_alt_tag' => 'Landscape',
 				'gllr_image_text'    => 'Landscape',
 				'gllr_link_url'      => '',
 			),
-			'luggage.jpg' => array(
+			'luggage.jpg'         => array(
 				'gllr_image_alt_tag' => 'Luggage',
 				'gllr_image_text'    => 'Luggage',
 				'gllr_link_url'      => '',
 			),
-			'luggage_cart.jpg' => array(
+			'luggage_cart.jpg'    => array(
 				'gllr_image_alt_tag' => 'Luggage Cart',
 				'gllr_image_text'    => 'Luggage Cart',
 				'gllr_link_url'      => '',
 			),
-			'maps.jpg' => array(
+			'maps.jpg'            => array(
 				'gllr_image_alt_tag' => 'Maps',
 				'gllr_image_text'    => 'Maps',
 				'gllr_link_url'      => '',
 			),
-			'motel.jpg' => array(
+			'motel.jpg'           => array(
 				'gllr_image_alt_tag' => 'Motel',
 				'gllr_image_text'    => 'Motel',
 				'gllr_link_url'      => '',
 			),
-			'railway.jpg' => array(
+			'railway.jpg'         => array(
 				'gllr_image_alt_tag' => 'Railway',
 				'gllr_image_text'    => 'Railway',
 				'gllr_link_url'      => '',
 			),
-			'teak_forests.jpg' => array(
+			'teak_forests.jpg'    => array(
 				'gllr_image_alt_tag' => 'Teak Forests',
 				'gllr_image_text'    => 'Teak Forests',
 				'gllr_link_url'      => '',
 			),
-			'travel.jpg' => array(
+			'travel.jpg'          => array(
 				'gllr_image_alt_tag' => 'Travel',
 				'gllr_image_text'    => 'Travel',
 				'gllr_link_url'      => '',
-			)
+			),
 		);
 		return array(
 			'posts'       => $posts,
-			'attachments' => $attachments
+			'attachments' => $attachments,
 		);
 	}
 }
