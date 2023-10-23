@@ -1,1688 +1,3586 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Gallery\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 12:53+0200\n"
-"PO-Revision-Date: 2019-03-26 12:53+0200\n"
-"Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
-"Language-Team: DJIO | Dionizio Bonfim Bach <wordpress@djio.com.br>\n"
+"Project-Id-Version: Gallery by BestWebSoft\n"
+"PO-Revision-Date: 2023-04-05 13:58+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.0.6\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Textdomain-Support: yes\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: gallery-plugin.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,"
+"2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__"
+"ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
-# @ gallery
-#: gallery-plugin.php:37 includes/class-gllr-settings.php:314
+# automatic translation
+#: bws_menu/bws_functions.php:85 bws_menu/bws_functions.php:283
+msgid "requires"
+msgstr "requer"
+
+# automatic translation
+#: bws_menu/bws_functions.php:87
+msgid ""
+"or higher, that is why it has been deactivated! Please upgrade WordPress "
+"and try again."
+msgstr ""
+"ou superior, por isso foi desativado! Atualize o WordPress e tente "
+"novamente."
+
+# automatic translation
+#: bws_menu/bws_functions.php:88
+msgid "Back to the WordPress"
+msgstr "De volta ao WordPress"
+
+# automatic translation
+#: bws_menu/bws_functions.php:90
+msgid "Plugins page"
+msgstr "página de plug-ins"
+
+# automatic translation
+#: bws_menu/bws_functions.php:112
+msgid "Like the plugin?"
+msgstr "Gostou do plug-in?"
+
+# automatic translation
+#: bws_menu/bws_functions.php:113
+#, php-format
+msgid "%s reviews"
+msgstr "%s comentários"
+
+# automatic translation
+#: bws_menu/bws_functions.php:114
+msgid "Rate it"
+msgstr "Avalie"
+
+# automatic translation
+#: bws_menu/bws_functions.php:123
+msgid "Need help?"
+msgstr "Preciso de ajuda?"
+
+# automatic translation
+#: bws_menu/bws_functions.php:124 bws_menu/bws_functions.php:1189
+#: bws_menu/class-bws-settings.php:1193
+msgid "Visit Help Center"
+msgstr "Visite a Central de Ajuda"
+
+# automatic translation
+#: bws_menu/bws_functions.php:127
+msgid "Want to support the plugin?"
+msgstr "Quer apoiar o plugin?"
+
+# automatic translation
+#: bws_menu/bws_functions.php:128 bws_menu/bws_menu.php:659
+msgid "Donate"
+msgstr "Doar"
+
+# automatic translation
+#: bws_menu/bws_functions.php:155
+msgid "WARNING: Illegal use notification"
+msgstr "AVISO: Notificação de uso ilegal"
+
+# automatic translation
+#: bws_menu/bws_functions.php:155
+msgid ""
+"You can use one license of the Pro plugin for one domain only. Please check "
+"and edit your license or domain if necessary using your personal Client "
+"Area. We strongly recommend you to solve the problem within 24 hours, "
+"otherwise the Pro plugin will be deactivated."
+msgstr ""
+"Você pode usar uma licença do plug-in Pro apenas para um domínio. Verifique "
+"e edite sua licença ou domínio, se necessário, usando sua Área de Cliente "
+"pessoal. Recomendamos fortemente que você resolva o problema em 24 horas, "
+"caso contrário, o plug-in Pro será desativado."
+
+# automatic translation
+#: bws_menu/bws_functions.php:155 bws_menu/bws_functions.php:247
+#: bws_menu/bws_menu.php:754 bws_menu/class-bws-settings.php:189
+msgid "Learn More"
+msgstr "Saber mais"
+
+# automatic translation
+#: bws_menu/bws_functions.php:174
+msgid ""
+"Notice: Your Pro Trial license has expired. To continue using the plugin, "
+"you should buy a Pro license"
+msgstr ""
+"Aviso: sua licença Pro Trial expirou. Para continuar usando o plugin, você "
+"deve comprar uma licença Pro"
+
+# automatic translation
+#: bws_menu/bws_functions.php:176
+msgid ""
+"Your license has expired. To continue getting top-priority support and "
+"plugin updates, you should extend it."
+msgstr ""
+"Sua licença expirou. Para continuar recebendo suporte de alta prioridade e "
+"atualizações de plugins, você deve estendê-lo."
+
+# automatic translation
+#: bws_menu/bws_functions.php:176 bws_menu/bws_functions.php:267
+msgid "Learn more"
+msgstr "Saber mais"
+
+# automatic translation
+#: bws_menu/bws_functions.php:196
+#, php-format
+msgid "Notice: You are using the Pro Trial license of %s plugin."
+msgstr "Aviso: Você está usando a licença Pro Trial do plug-in %s."
+
+# automatic translation
+#: bws_menu/bws_functions.php:198
+msgid "Notice: You are using the Pro Trial license of plugin."
+msgstr "Aviso: Você está usando a licença Pro Trial do plug-in."
+
+# automatic translation
+#: bws_menu/bws_functions.php:201
+msgid "The Pro Trial license will expire on"
+msgstr "A licença Pro Trial irá expirar em"
+
+# automatic translation
+#: bws_menu/bws_functions.php:238 bws_menu/bws_functions.php:263
+#: bws_menu/bws_functions.php:313 bws_menu/bws_functions.php:323
+#: bws_menu/bws_functions.php:560 bws_menu/bws_functions.php:593
+#: includes/demo-data/class-bws-demo-data.php:617
+msgid "Close notice"
+msgstr "Fechar aviso"
+
+# automatic translation
+#: bws_menu/bws_functions.php:243
+msgid "It’s time to upgrade your"
+msgstr "É hora de atualizar seu"
+
+# automatic translation
+#: bws_menu/bws_functions.php:243
+msgid "to"
+msgstr "para"
+
+# automatic translation
+#: bws_menu/bws_functions.php:243
+msgid "version!"
+msgstr "versão!"
+
+# automatic translation
+#: bws_menu/bws_functions.php:244
+msgid "Extend standard plugin functionality with new great options."
+msgstr "Estenda a funcionalidade padrão do plug-in com novas opções excelentes."
+
+# automatic translation
+#: bws_menu/bws_functions.php:267
+#, php-format
+msgid ""
+"Your license key for %1$s expires on %2$s and you won't be granted "
+"TOP-PRIORITY SUPPORT or UPDATES."
+msgstr ""
+"Sua chave de licença para %1$s expira em %2$s e você não receberá SUPORTE "
+"DE ALTA PRIORIDADE ou ATUALIZAÇÕES."
+
+# automatic translation
+#: bws_menu/bws_functions.php:285
+msgid ""
+"or higher! We do not guarantee that our plugin will work correctly. Please "
+"upgrade to WordPress latest version."
+msgstr ""
+"ou mais alto! Não garantimos que nosso plugin funcionará corretamente. "
+"Atualize para a versão mais recente do WordPress."
+
+# automatic translation
+#: bws_menu/bws_functions.php:303
+#, php-format
+msgid "Thank you for installing %s plugin!"
+msgstr "Obrigado por instalar o plug-in %s!"
+
+# automatic translation
+#: bws_menu/bws_functions.php:305
+msgid "Let's get started"
+msgstr "Vamos começar"
+
+# automatic translation
+#: bws_menu/bws_functions.php:306 bws_menu/bws_functions.php:339
+#: bws_menu/bws_menu.php:665 bws_menu/bws_menu.php:667 gallery-plugin.php:2043
+#: gallery-plugin.php:2063 includes/class-gllr-settings.php:29
+#: includes/class-gllr-settings.php:46
+msgid "Settings"
+msgstr "Configurações"
+
+# automatic translation
+#: bws_menu/bws_functions.php:308 bws_menu/bws_menu.php:377
+#: bws_menu/class-bws-settings.php:908 bws_menu/class-bws-settings.php:1196
+#: bws_menu/class-bws-settings.php:1209 bws_menu/deprecated.php:260
+msgid "or"
+msgstr "ou"
+
+# automatic translation
+#: bws_menu/bws_functions.php:309 bws_menu/bws_functions.php:341
+msgid "Add New"
+msgstr "Adicionar novo"
+
+# automatic translation
+#: bws_menu/bws_functions.php:328
+msgid "Thank you for installing plugins by BestWebSoft!"
+msgstr "Obrigado por instalar os plugins da BestWebSoft!"
+
+# automatic translation
+#: bws_menu/bws_functions.php:330
+msgid "More Details"
+msgstr "Mais detalhes"
+
+# automatic translation
+#: bws_menu/bws_functions.php:331
+msgid "Less Details"
+msgstr "menos detalhes"
+
+# automatic translation
+#: bws_menu/bws_functions.php:362
+msgid "Deprecated function(-s) is used on the site here:"
+msgstr "A(s) função(ões) obsoleta(s) é(são) usada(s) no site aqui:"
+
+# automatic translation
+#: bws_menu/bws_functions.php:380
+msgid "This function(-s) will be removed over time. Please update the product(-s)."
+msgstr ""
+"Esta(s) função(ões) será(ão) removida(s) com o tempo. Atualize o(s) "
+"produto(s)."
+
+# automatic translation
+#: bws_menu/bws_functions.php:555
+#, php-format
+msgid "Thank you for choosing %s plugin!"
+msgstr "Obrigado por escolher o plug-in %s!"
+
+# automatic translation
+#: bws_menu/bws_functions.php:556
+msgid ""
+"If you have a feature, suggestion or idea you'd like to see in the plugin, "
+"we'd love to hear about it!"
+msgstr ""
+"Se você tiver um recurso, sugestão ou ideia que gostaria de ver no plug-in, "
+"adoraríamos saber!"
+
+# automatic translation
+#: bws_menu/bws_functions.php:557
+msgid "Suggest a Feature"
+msgstr "Sugira um recurso"
+
+# automatic translation
+#: bws_menu/bws_functions.php:598
+msgid "Affiliate Program"
+msgstr "Programa de Afiliados"
+
+# automatic translation
+#: bws_menu/bws_functions.php:599
+#, php-format
+msgid "Get %s"
+msgstr "Obter %s"
+
+# automatic translation
+#: bws_menu/bws_functions.php:600
+msgid "from each BestWebSoft plugin and theme sale you refer"
+msgstr "de cada plug-in BestWebSoft e venda de tema que você indicar"
+
+# automatic translation
+#: bws_menu/bws_functions.php:604
+msgid "Join affiliate program"
+msgstr "Junte-se ao programa de afiliados"
+
+# automatic translation
+#: bws_menu/bws_functions.php:608
+msgid "Promote and sell products"
+msgstr "Promover e vender produtos"
+
+# automatic translation
+#: bws_menu/bws_functions.php:612
+msgid "Get commission!"
+msgstr "Receba comissão!"
+
+# automatic translation
+#: bws_menu/bws_functions.php:617
+msgid "Start Now"
+msgstr "Comece agora"
+
+# automatic translation
+#: bws_menu/bws_functions.php:634 bws_menu/class-bws-settings.php:640
+#: bws_menu/class-bws-settings.php:645 bws_menu/class-bws-settings.php:714
+#: bws_menu/class-bws-settings.php:719
+msgid "Notice"
+msgstr "Perceber"
+
+# automatic translation
+#: bws_menu/bws_functions.php:634
+msgid "The plugin's settings have been changed."
+msgstr "As configurações do plug-in foram alteradas."
+
+# automatic translation
+#: bws_menu/bws_functions.php:635 bws_menu/class-bws-settings.php:235
+#: bws_menu/class-bws-settings.php:263
+msgid "Save Changes"
+msgstr "Salvar alterações"
+
+# automatic translation
+#: bws_menu/bws_functions.php:656
+msgid ""
+"You can always look at premium options by checking the \"Pro Options\" in "
+"the \"Misc\" tab."
+msgstr ""
+"Você sempre pode ver as opções premium marcando as \"Opções Pro\" na guia "
+"\"Diversos\"."
+
+# automatic translation
+#: bws_menu/bws_functions.php:838
+msgid "Add BWS Shortcode"
+msgstr "Adicionar código curto do BWS"
+
+# automatic translation
+#: bws_menu/bws_functions.php:839
+msgid "Add BWS Plugins Shortcode"
+msgstr "Adicionar código curto de plug-ins do BWS"
+
+# automatic translation
+#: bws_menu/bws_functions.php:861
+msgid "Add shortcode"
+msgstr "Adicionar código de acesso"
+
+# automatic translation
+#: bws_menu/bws_functions.php:861
+msgid "Add BestWebSoft plugins' shortcodes using this button."
+msgstr "Adicione os códigos de acesso dos plugins BestWebSoft usando este botão."
+
+# automatic translation
+#: bws_menu/bws_functions.php:970 includes/class-gllr-settings.php:384
+#: includes/class-gllr-settings.php:443 includes/class-gllr-settings.php:489
+#: includes/class-gllr-settings.php:558 includes/class-gllr-settings.php:736
+#: includes/class-gllr-settings.php:835 includes/class-gllr-settings.php:888
+#: includes/class-gllr-settings.php:946 includes/class-gllr-settings.php:1020
+#: includes/class-gllr-settings.php:1117
+msgid "Close"
+msgstr "Fechar"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1062
+msgid "Are you sure you want to restore default settings?"
+msgstr "Tem certeza de que deseja restaurar as configurações padrão?"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1065
+msgid "Yes, restore all settings"
+msgstr "Sim, restaurar todas as configurações"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1066
+#: includes/demo-data/class-bws-demo-data.php:66
+msgid "No, go back to the settings page"
+msgstr "Não, volte para a página de configurações"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1128
+msgid "Plugin"
+msgstr "Plugar"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1137
+msgid "Shortcode settings"
+msgstr "Configurações de código curto"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1142
+msgid "The shortcode will be inserted"
+msgstr "O shortcode será inserido"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1194 gallery-plugin.php:2045
+msgid "FAQ"
+msgstr "Perguntas frequentes"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1200
+msgid "For more information:"
+msgstr "Para maiores informações:"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1201 bws_menu/bws_menu.php:475
+#: bws_menu/class-bws-settings.php:870
+msgid "Documentation"
+msgstr "Documentação"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1202 bws_menu/bws_menu.php:477
+#: bws_menu/class-bws-settings.php:872
+msgid "Video Instructions"
+msgstr "Instruções de vídeo"
+
+# automatic translation
+#: bws_menu/bws_functions.php:1203
+msgid "Submit a Request"
+msgstr "Envie uma solicitação"
+
+# automatic translation
+#: bws_menu/bws_menu.php:105 bws_menu/class-bws-settings.php:971
+msgid "Wrong license key"
+msgstr "Chave de licença errada"
+
+# automatic translation
+#: bws_menu/bws_menu.php:127 bws_menu/class-bws-settings.php:997
+#: bws_menu/class-bws-settings.php:1074 bws_menu/class-bws-settings.php:1112
+msgid ""
+"Something went wrong. Please try again later. If the error appears again, "
+"please contact us"
+msgstr ""
+"Algo deu errado. Por favor, tente novamente mais tarde. Se o erro aparecer "
+"novamente, entre em contato conosco"
+
+# automatic translation
+#: bws_menu/bws_menu.php:127 bws_menu/class-bws-settings.php:997
+#: bws_menu/class-bws-settings.php:1074 bws_menu/class-bws-settings.php:1112
+msgid "We are sorry for inconvenience."
+msgstr "Lamentamos o inconveniente."
+
+# automatic translation
+#: bws_menu/bws_menu.php:134 bws_menu/class-bws-settings.php:1003
+#: bws_menu/class-bws-settings.php:1118
+msgid "Wrong license key."
+msgstr "Chave de licença errada."
+
+# automatic translation
+#: bws_menu/bws_menu.php:136
+msgid ""
+"This license key is bound to another site. Change it via personal Client "
+"Area."
+msgstr ""
+"Esta chave de licença está vinculada a outro site. Altere-o através da Área "
+"de Cliente pessoal."
+
+# automatic translation
+#: bws_menu/bws_menu.php:136
+msgid "Log in"
+msgstr "Conecte-se"
+
+# automatic translation
+#: bws_menu/bws_menu.php:138 bws_menu/bws_menu.php:385
+#: bws_menu/deprecated.php:172
+msgid "Unfortunately, you have exceeded the number of available tries per day."
+msgstr "Infelizmente, você excedeu o número de tentativas disponíveis por dia."
+
+# automatic translation
+#: bws_menu/bws_menu.php:140
+#, php-format
+msgid ""
+"Unfortunately, Your license has expired. To continue getting top-priority "
+"support and plugin updates, you should extend it in your %s"
+msgstr ""
+"Infelizmente, sua licença expirou. Para continuar recebendo suporte de alta "
+"prioridade e atualizações de plugins, você deve estendê-lo em seu %s"
+
+# automatic translation
+#: bws_menu/bws_menu.php:142 bws_menu/class-bws-settings.php:1126
+msgid ""
+"Unfortunately, the Pro licence was already installed to this domain. The "
+"Pro Trial license can be installed only once."
+msgstr ""
+"Infelizmente, a licença Pro já foi instalada neste domínio. A licença Pro "
+"Trial pode ser instalada apenas uma vez."
+
+# automatic translation
+#: bws_menu/bws_menu.php:148 bws_menu/class-bws-settings.php:1018
+msgid "The license key is valid."
+msgstr "A chave de licença é válida."
+
+# automatic translation
+#: bws_menu/bws_menu.php:150 bws_menu/class-bws-settings.php:1022
+msgid "Your license will expire on"
+msgstr "Sua licença irá expirar em"
+
+# automatic translation
+#: bws_menu/bws_menu.php:153
+msgid "Congratulations! Pro Membership license is activated successfully."
+msgstr "Parabéns! A licença Pro Membership foi ativada com sucesso."
+
+# automatic translation
+#: bws_menu/bws_menu.php:160 bws_menu/class-bws-settings.php:1136
+msgid ""
+"Something went wrong. Try again later or upload the plugin manually. We are "
+"sorry for inconvenience."
+msgstr ""
+"Algo deu errado. Tente novamente mais tarde ou carregue o plug-in "
+"manualmente. Lamentamos o inconveniente."
+
+# automatic translation
+#: bws_menu/bws_menu.php:171
+msgid "Please enter your license key."
+msgstr "Insira sua chave de licença."
+
+# automatic translation
+#: bws_menu/bws_menu.php:183
+msgid "Not set"
+msgstr "Não configurado"
+
+# automatic translation
+#: bws_menu/bws_menu.php:186
+msgid "On"
+msgstr "Sobre"
+
+# automatic translation
+#: bws_menu/bws_menu.php:186
+msgid "Off"
+msgstr "Desligado"
+
+# automatic translation
+#: bws_menu/bws_menu.php:187 bws_menu/bws_menu.php:188
+#: bws_menu/bws_menu.php:189 bws_menu/bws_menu.php:190
+#: bws_menu/bws_menu.php:191 bws_menu/bws_menu.php:192
+#: bws_menu/bws_menu.php:201
+msgid "N/A"
+msgstr "N / D"
+
+# automatic translation
+#: bws_menu/bws_menu.php:192
+msgid "Mb"
+msgstr "Mb"
+
+# automatic translation
+#: bws_menu/bws_menu.php:193 bws_menu/bws_menu.php:194
+#: bws_menu/bws_menu.php:195 bws_menu/bws_menu.php:199
+msgid "Yes"
+msgstr "Sim"
+
+# automatic translation
+#: bws_menu/bws_menu.php:193 bws_menu/bws_menu.php:194
+#: bws_menu/bws_menu.php:195 bws_menu/bws_menu.php:199
+msgid "No"
+msgstr "Não"
+
+# automatic translation
+#: bws_menu/bws_menu.php:206
+msgid "WordPress Environment"
+msgstr "Ambiente WordPress"
+
+# automatic translation
+#: bws_menu/bws_menu.php:208
+msgid "Home URL"
+msgstr "URL inicial"
+
+# automatic translation
+#: bws_menu/bws_menu.php:209
+msgid "Website URL"
+msgstr "URL do site"
+
+# automatic translation
+#: bws_menu/bws_menu.php:210
+msgid "WP Version"
+msgstr "Versão WP"
+
+# automatic translation
+#: bws_menu/bws_menu.php:211
+msgid "WP Multisite"
+msgstr "WP Multisite"
+
+# automatic translation
+#: bws_menu/bws_menu.php:212
+msgid "WP Memory Limit"
+msgstr "Limite de Memória WP"
+
+# automatic translation
+#: bws_menu/bws_menu.php:213
+msgid "Active Theme"
+msgstr "Tema ativo"
+
+# automatic translation
+#: bws_menu/bws_menu.php:213 bws_menu/bws_menu.php:258
+#: bws_menu/bws_menu.php:261
+#, php-format
+msgid "by %s"
+msgstr "por %s"
+
+# automatic translation
+#: bws_menu/bws_menu.php:217
+msgid "Server Environment"
+msgstr "Ambiente do servidor"
+
+# automatic translation
+#: bws_menu/bws_menu.php:219
+msgid "Operating System"
+msgstr "Sistema operacional"
+
+# automatic translation
+#: bws_menu/bws_menu.php:220
+msgid "Server"
+msgstr "Servidor"
+
+# automatic translation
+#: bws_menu/bws_menu.php:221
+msgid "PHP Version"
+msgstr "Versão do PHP"
+
+# automatic translation
+#: bws_menu/bws_menu.php:222
+msgid "PHP Allow URL fopen"
+msgstr "PHP Permitir URL fopen"
+
+# automatic translation
+#: bws_menu/bws_menu.php:223
+msgid "PHP Memory Limit"
+msgstr "Limite de memória do PHP"
+
+# automatic translation
+#: bws_menu/bws_menu.php:224
+msgid "Memory Usage"
+msgstr "Uso de memória"
+
+# automatic translation
+#: bws_menu/bws_menu.php:225
+msgid "PHP Max Upload Size"
+msgstr "Tamanho Máximo de Carregamento do PHP"
+
+# automatic translation
+#: bws_menu/bws_menu.php:226
+msgid "PHP Max Post Size"
+msgstr "PHP Max tamanho da postagem"
+
+# automatic translation
+#: bws_menu/bws_menu.php:227
+msgid "PHP Max Script Execute Time"
+msgstr "Tempo máximo de execução do script PHP"
+
+# automatic translation
+#: bws_menu/bws_menu.php:228
+msgid "PHP Exif support"
+msgstr "Suporte PHP Exif"
+
+# automatic translation
+#: bws_menu/bws_menu.php:229
+msgid "PHP IPTC support"
+msgstr "PHP Suporte IPTC"
+
+# automatic translation
+#: bws_menu/bws_menu.php:230
+msgid "PHP XML support"
+msgstr "Suporte PHP XML"
+
+# automatic translation
+#: bws_menu/bws_menu.php:236
+msgid "Database"
+msgstr "Base de dados"
+
+# automatic translation
+#: bws_menu/bws_menu.php:238
+msgid "WP DB version"
+msgstr "Versão do banco de dados do WP"
+
+# automatic translation
+#: bws_menu/bws_menu.php:239
+msgid "MySQL version"
+msgstr "Versão do MySQL"
+
+# automatic translation
+#: bws_menu/bws_menu.php:240
+msgid "SQL Mode"
+msgstr "Modo SQL"
+
+# automatic translation
+#: bws_menu/bws_menu.php:244
+msgid "Active Plugins"
+msgstr "Plug-ins ativos"
+
+# automatic translation
+#: bws_menu/bws_menu.php:249
+msgid "Inactive Plugins"
+msgstr "Plug-ins inativos"
+
+# automatic translation
+#: bws_menu/bws_menu.php:270
+msgid "Please enter a valid email address."
+msgstr "Por favor insira um endereço de e-mail válido."
+
+# automatic translation
+#: bws_menu/bws_menu.php:272
+#, php-format
+msgid "Email with system info is sent to %s."
+msgstr "O e-mail com informações do sistema foi enviado para %s."
+
+# automatic translation
+#: bws_menu/bws_menu.php:276
+msgid "Thank you for contacting us."
+msgstr "Obrigado por nos contatar."
+
+# automatic translation
+#: bws_menu/bws_menu.php:300
+msgid "Sorry, email message could not be delivered."
+msgstr "Desculpe, a mensagem de e-mail não pôde ser entregue."
+
+# automatic translation
+#: bws_menu/bws_menu.php:321 bws_menu/bws_menu.php:342
+#: bws_menu/bws_menu.php:427 bws_menu/deprecated.php:27
+msgid "Plugins"
+msgstr "Plugins"
+
+# automatic translation
+#: bws_menu/bws_menu.php:329 bws_menu/bws_menu.php:350
+#: bws_menu/bws_menu.php:739 bws_menu/deprecated.php:28
+msgid "Themes"
+msgstr "Temas"
+
+# automatic translation
+#: bws_menu/bws_menu.php:334 bws_menu/bws_menu.php:358
+#: bws_menu/bws_menu.php:775
+msgid "System status"
+msgstr "Status do sistema"
+
+# automatic translation
+#: bws_menu/bws_menu.php:365 gallery-plugin.php:2046
+msgid "Support"
+msgstr "Apoiar"
+
+# automatic translation
+#: bws_menu/bws_menu.php:366
+msgid "Manage purchased licenses & subscriptions"
+msgstr "Gerenciar licenças e assinaturas compradas"
+
+# automatic translation
+#: bws_menu/bws_menu.php:375
+#, php-format
+msgid "Get Access to %s+ Premium Plugins"
+msgstr "Obtenha acesso a %s+ plug-ins premium"
+
+# automatic translation
+#: bws_menu/bws_menu.php:377
+msgid "Subscribe to Pro Membership"
+msgstr "Inscrever-se na Associação Pro"
+
+# automatic translation
+#: bws_menu/bws_menu.php:387 bws_menu/bws_menu.php:408
+#: bws_menu/class-bws-settings.php:925 bws_menu/deprecated.php:133
+msgid "Check license key"
+msgstr "Verifique a chave de licença"
+
+# automatic translation
+#: bws_menu/bws_menu.php:395
+msgid "Enter your license key"
+msgstr "Digite sua chave de licença"
+
+# automatic translation
+#: bws_menu/bws_menu.php:406 bws_menu/bws_menu.php:673
+#: bws_menu/bws_menu.php:682 bws_menu/class-bws-settings.php:898
+#: bws_menu/deprecated.php:170 bws_menu/deprecated.php:178
+#: bws_menu/deprecated.php:268 bws_menu/deprecated.php:281
+#: includes/class-gllr-settings.php:343
+msgid "Activate"
+msgstr "Ativar"
+
+# automatic translation
+#: bws_menu/bws_menu.php:428
+msgid "Upload Plugin"
+msgstr "Carregar plug-in"
+
+# automatic translation
+#: bws_menu/bws_menu.php:433
+#, php-format
+msgid ""
+"The plugin generated %d characters of <strong>unexpected output</strong> "
+"during activation. If you notice &#8220;headers already sent&#8221; "
+"messages, problems with syndication feeds or other issues, try deactivating "
+"or removing this plugin."
+msgstr ""
+"O plug-in gerou %d caracteres de <strong>saída inesperada</strong> durante "
+"a ativação. Se você notar mensagens de “cabeçalhos já enviados”, problemas "
+"com feeds de distribuição ou outros problemas, tente desativar ou remover "
+"este plug-in."
+
+# automatic translation
+#: bws_menu/bws_menu.php:435
+msgid ""
+"Plugin could not be activated because it triggered a <strong>fatal "
+"error</strong>."
+msgstr ""
+"O plug-in não pôde ser ativado porque acionou um <strong>erro "
+"fatal</strong> ."
+
+# automatic translation
+#: bws_menu/bws_menu.php:440
+msgid "Plugin <strong>activated</strong>."
+msgstr "Plug-in <strong>ativado</strong> ."
+
+# automatic translation
+#: bws_menu/bws_menu.php:457
+msgid "Download Pro Plugin"
+msgstr "Baixe o plug-in profissional"
+
+# automatic translation
+#: bws_menu/bws_menu.php:459 bws_menu/class-bws-settings.php:853
+msgid "Your Pro plugin is ready"
+msgstr "Seu plug-in Pro está pronto"
+
+# automatic translation
+#: bws_menu/bws_menu.php:461 bws_menu/class-bws-settings.php:855
+msgid "Your plugin has been zipped, and now is ready to download."
+msgstr "Seu plug-in foi compactado e agora está pronto para download."
+
+# automatic translation
+#: bws_menu/bws_menu.php:464 bws_menu/class-bws-settings.php:858
+msgid "Download Now"
+msgstr "Baixe Agora"
+
+# automatic translation
+#: bws_menu/bws_menu.php:468 bws_menu/class-bws-settings.php:862
+msgid "Need help installing the plugin?"
+msgstr "Precisa de ajuda para instalar o plugin?"
+
+# automatic translation
+#: bws_menu/bws_menu.php:470 bws_menu/class-bws-settings.php:864
+msgid "How to install WordPress plugin from your admin Dashboard (ZIP archive)"
+msgstr ""
+"Como instalar o plugin do WordPress a partir do seu painel de administração "
+"(arquivo ZIP)"
+
+# automatic translation
+#: bws_menu/bws_menu.php:473 bws_menu/class-bws-settings.php:868
+msgid "Get Started"
+msgstr "Iniciar"
+
+# automatic translation
+#: bws_menu/bws_menu.php:479 bws_menu/class-bws-settings.php:874
+msgid "Knowledge Base"
+msgstr "Base de conhecimento"
+
+# automatic translation
+#: bws_menu/bws_menu.php:482
+msgid "Licenses & Domains"
+msgstr "Licenças e domínios"
+
+# automatic translation
+#: bws_menu/bws_menu.php:487
+msgid "Client Area"
+msgstr "Área do cliente"
+
+# automatic translation
+#: bws_menu/bws_menu.php:491
+msgid "Return to BestWebSoft Panel"
+msgstr "Voltar ao Painel BestWebSoft"
+
+# automatic translation
+#: bws_menu/bws_menu.php:506 bws_menu/bws_menu.php:541
+#: bws_menu/bws_menu.php:714
+msgid "All"
+msgstr "Todos"
+
+# automatic translation
+#: bws_menu/bws_menu.php:514 bws_menu/bws_menu.php:762
+msgid "Installed"
+msgstr "Instalado"
+
+# automatic translation
+#: bws_menu/bws_menu.php:522
+msgid "Not Installed"
+msgstr "Não instalado"
+
+# automatic translation
+#: bws_menu/bws_menu.php:529
+msgid "Filter results"
+msgstr "Filtrar resultados"
+
+# automatic translation
+#: bws_menu/bws_menu.php:532 bws_menu/bws_menu.php:705
+msgid "Category"
+msgstr "Categoria"
+
+# automatic translation
+#: bws_menu/bws_menu.php:625
+msgid "Not installed"
+msgstr "Não instalado"
+
+# automatic translation
+#: bws_menu/bws_menu.php:629
+msgid "Renew to get updates"
+msgstr "Renove para receber atualizações"
+
+# automatic translation
+#: bws_menu/bws_menu.php:632
+#, php-format
+msgid "Update to v %s"
+msgstr "Atualizar para v %s"
+
+# automatic translation
+#: bws_menu/bws_menu.php:647 bws_menu/bws_menu.php:676
+msgid "Get Pro"
+msgstr "Obter Pro"
+
+# automatic translation
+#: bws_menu/bws_menu.php:653 bws_menu/class-bws-settings.php:202
+#: bws_menu/class-bws-settings.php:1206 gallery-plugin.php:50
+#: includes/class-gllr-media-table.php:374
+msgid "Upgrade to Pro"
+msgstr "Atualizar para Pro"
+
+# automatic translation
+#: bws_menu/bws_menu.php:673 bws_menu/bws_menu.php:682
+msgid "Activate this plugin"
+msgstr "Ative este plug-in"
+
+# automatic translation
+#: bws_menu/bws_menu.php:687
+msgid "Install this plugin"
+msgstr "Instalar este plug-in"
+
+# automatic translation
+#: bws_menu/bws_menu.php:687 includes/class-gllr-settings.php:346
+#: includes/class-gllr-settings.php:1176
+msgid "Install Now"
+msgstr "instale agora"
+
+# automatic translation
+#: bws_menu/bws_menu.php:700
+msgid "Nothing found. Try another criteria."
+msgstr "Nada encontrado. Tente outro critério."
+
+# automatic translation
+#: bws_menu/bws_menu.php:751
+#, php-format
+msgid "By %s"
+msgstr "Por %s"
+
+# automatic translation
+#: bws_menu/bws_menu.php:760
+msgid "Already Installed"
+msgstr "Já instalado"
+
+# automatic translation
+#: bws_menu/bws_menu.php:772
+msgid "Browse More WordPress Themes"
+msgstr "Navegue por mais temas do WordPress"
+
+# automatic translation
+#: bws_menu/bws_menu.php:791
+msgid "Send to support"
+msgstr "Enviar para o suporte"
+
+# automatic translation
+#: bws_menu/bws_menu.php:798
+msgid "Send to custom email &#187;"
+msgstr "Enviar para e-mail personalizado &#187;"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:174
+msgid "Information"
+msgstr "Informação"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:189
+msgid "Inactive"
+msgstr "Inativo"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:197
+msgid "Expired"
+msgstr "Expirado"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:200
+#, php-format
+msgid "%s day(-s) left"
+msgstr "%s Dias Restantes"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:206
+#, php-format
+msgid "Expired on %s"
+msgstr "Expirou em %s"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:206
+msgid "Renew Now"
+msgstr "Renovar agora"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:208
+msgid "Active"
+msgstr "Ativo"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:214
+msgid "License"
+msgstr "Licença"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:217
+msgid "Status"
+msgstr "Status"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:221
+msgid "Version"
+msgstr "Versão"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:368
+msgid "All plugin settings were restored."
+msgstr "Todas as configurações do plug-in foram restauradas."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:531 includes/class-gllr-settings.php:37
+msgid "Custom Code"
+msgstr "Código personalizado"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:537
+msgid ""
+"The ability to add custom code is available in the Pro version. If the Pro "
+"version is not available please contact us via Help Center"
+msgstr ""
+"A capacidade de adicionar código personalizado está disponível na versão "
+"Pro. Se a versão Pro não estiver disponível, entre em contato conosco "
+"através da Central de Ajuda"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:548
+msgid "You do not have sufficient permissions to edit plugins for this site."
+msgstr "Você não tem permissões suficientes para editar plugins para este site."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:554
+msgid "These styles will be added to the header on all pages of your site."
+msgstr ""
+"Esses estilos serão adicionados ao cabeçalho de todas as páginas do seu "
+"site."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:558
+#, php-format
+msgid ""
+"This PHP code will be hooked to the %s Action and will be printed on front "
+"end only."
+msgstr ""
+"Este código PHP será vinculado à ação %s e será impresso apenas no "
+"front-end."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:562
+msgid "These code will be added to the header on all pages of your site."
+msgstr ""
+"Esses códigos serão adicionados ao cabeçalho de todas as páginas do seu "
+"site."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:574
+msgid "Browsing"
+msgstr "Navegando"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:586
+#, php-format
+msgid "Activate custom %s code."
+msgstr "Ative o código %s personalizado."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:597
+#, php-format
+msgid "Learn more about %s"
+msgstr "Saiba mais sobre %s"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:629
+msgid "Miscellaneous Settings"
+msgstr "Configurações Diversas"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:640 bws_menu/class-bws-settings.php:714
+#, php-format
+msgid ""
+"It is prohibited to change %1$s settings on this site in the %2$s network "
+"settings."
+msgstr ""
+"É proibido alterar as configurações de %1$s neste site nas configurações de "
+"rede %2$s."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:645 bws_menu/class-bws-settings.php:719
+#, php-format
+msgid ""
+"It is prohibited to view %1$s settings on this site in the %2$s network "
+"settings."
+msgstr ""
+"É proibido visualizar as configurações de %1$s neste site nas configurações "
+"de rede %2$s."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:656
+msgid "Pro Options"
+msgstr "Opções Profissionais"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:665
+msgid "Enable to display plugin Pro options."
+msgstr "Ative para exibir as opções do plug-in Pro."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:671
+msgid "Track Usage"
+msgstr "Rastreie o uso"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:680
+msgid ""
+"Enable to allow tracking plugin usage anonymously in order to make it "
+"better."
+msgstr ""
+"Ative para permitir o rastreamento do uso do plug-in anonimamente para "
+"torná-lo melhor."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:685
+msgid "Default Settings"
+msgstr "Configurações padrão"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:687
+msgid "Restore Settings"
+msgstr "Restaurar configurações"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:688
+msgid "This will restore plugin settings to defaults."
+msgstr "Isso restaurará as configurações do plug-in para os padrões."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:703 includes/class-gllr-settings.php:38
+msgid "Import / Export"
+msgstr "Importar / Exportar"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:837 includes/class-gllr-settings.php:40
+msgid "License Key"
+msgstr "Chave de licença"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:901
+#, php-format
+msgid "Enter your license key to activate %s and get premium plugin features."
+msgstr ""
+"Digite sua chave de licença para ativar %s e obter recursos de plug-in "
+"premium."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:904 bws_menu/class-bws-settings.php:1122
+#: bws_menu/deprecated.php:275
+msgid ""
+"Unfortunately, you have exceeded the number of available tries per day. "
+"Please, upload the plugin manually."
+msgstr ""
+"Infelizmente, você excedeu o número de tentativas disponíveis por dia. Por "
+"favor, carregue o plugin manualmente."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:908 bws_menu/deprecated.php:260
+#, php-format
+msgid "Start Your Free %s-Day Trial Now"
+msgstr "Comece sua avaliação gratuita de %s dias agora"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:927
+msgid ""
+"If necessary, you can check if the license key is correct or reenter it in "
+"the field below."
+msgstr ""
+"Se necessário, você pode verificar se a chave de licença está correta ou "
+"inseri-la novamente no campo abaixo."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:938
+msgid "Manage License Settings"
+msgstr "Gerenciar configurações de licença"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:940
+msgid "Login to Client Area"
+msgstr "Entrar na Área do Cliente"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:942
+msgid ""
+"Manage active licenses, download BWS products, and view your payment "
+"history using BestWebSoft Client Area."
+msgstr ""
+"Gerencie licenças ativas, baixe produtos BWS e visualize seu histórico de "
+"pagamentos usando a Área do Cliente BestWebSoft."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:964
+msgid "Security check"
+msgstr "Verificação de segurança"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1005 bws_menu/class-bws-settings.php:1120
+msgid "This license key is bound to another site."
+msgstr "Esta chave de licença está vinculada a outro site."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1007
+msgid ""
+"This license key is valid, but Your license has expired. If you want to "
+"update our plugin in future, you should extend the license."
+msgstr ""
+"Esta chave de licença é válida, mas sua licença expirou. Se você deseja "
+"atualizar nosso plug-in no futuro, deve estender a licença."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1009
+msgid "Unfortunately, you have exceeded the number of available tries."
+msgstr "Infelizmente, você excedeu o número de tentativas disponíveis."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1011
+msgid ""
+"Unfortunately, the Pro Trial licence was already installed to this domain. "
+"The Pro Trial license can be installed only once."
+msgstr ""
+"Infelizmente, a licença Pro Trial já foi instalada neste domínio. A licença "
+"Pro Trial pode ser instalada apenas uma vez."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1016
+msgid "The Pro Trial license key is valid."
+msgstr "A chave de licença Pro Trial é válida."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1029 bws_menu/deprecated.php:155
+#, php-format
+msgid "In order to continue using the plugin it is necessary to buy a %s license."
+msgstr "Para continuar usando o plugin é necessário comprar uma licença %s."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1124
+#, php-format
+msgid ""
+"Unfortunately, Your license has expired. To continue getting top-priority "
+"support and plugin updates, you should extend it in your %s."
+msgstr ""
+"Infelizmente, sua licença expirou. Para continuar recebendo suporte de alta "
+"prioridade e atualizações de plugins, você deve estendê-lo em seu %s."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1173
+msgid "Please, enter Your license key"
+msgstr "Por favor, insira sua chave de licença"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1189
+msgid "Need Help?"
+msgstr "Preciso de ajuda?"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1191
+msgid "Read the Instruction"
+msgstr "Leia a Instrução"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1196
+msgid "Watch the Video"
+msgstr "Assista o vídeo"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1210
+msgid "Start Your Free Trial"
+msgstr "Inicie o seu teste gratuito"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1248
+msgid "Request a Feature"
+msgstr "Solicite um recurso"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1254
+#, php-format
+msgid "How can we improve %s?"
+msgstr "Como podemos melhorar %s?"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1256
+msgid "We look forward to hear your ideas."
+msgstr "Estamos ansiosos para ouvir suas ideias."
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1258
+msgid "Describe your idea"
+msgstr "Descreva sua ideia"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1261 bws_menu/deactivation-form.php:123
+msgid "Send website data and allow to contact me back"
+msgstr "Enviar dados do site e permitir contato comigo de volta"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1266
+msgid "Submit"
+msgstr "Enviar"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1267 bws_menu/deactivation-form.php:130
+msgid "Processing"
+msgstr "Em processamento"
+
+# automatic translation
+#: bws_menu/class-bws-settings.php:1268
+msgid "Thank you!"
+msgstr "Obrigado!"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:25
+msgid "Need help? We are ready to answer your questions."
+msgstr "Preciso de ajuda? Estamos prontos para responder às suas perguntas."
+
+# automatic translation
+#: bws_menu/deactivation-form.php:25
+msgid "Contact Support"
+msgstr "Entre em contato com o suporte"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:30
+msgid "The plugin is not working"
+msgstr "O plug-in não está funcionando"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:32
+msgid "Kindly share what didn't work so we can fix it in future updates..."
+msgstr ""
+"Por favor, compartilhe o que não funcionou para que possamos corrigi-lo em "
+"futuras atualizações..."
+
+# automatic translation
+#: bws_menu/deactivation-form.php:36
+msgid "The plugin didn't work as expected"
+msgstr "O plug-in não funcionou como esperado"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:38
+msgid "What did you expect?"
+msgstr "O que você esperava?"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:42
+msgid "The plugin suddenly stopped working"
+msgstr "O plug-in parou de funcionar repentinamente"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:49
+msgid "The plugin broke my site"
+msgstr "O plugin quebrou meu site"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:56
+msgid "I couldn't understand how to get it work"
+msgstr "não consegui entender como fazer funcionar"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:63
+msgid "I found a better plugin"
+msgstr "Achei um plugin melhor"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:65
+msgid "What's the plugin name?"
+msgstr "Qual é o nome do plug-in?"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:69
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr ""
+"O plug-in é ótimo, mas preciso de um recurso específico que você não "
+"oferece suporte"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:71
+msgid "What feature?"
+msgstr "Que recurso?"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:75
+msgid "I no longer need the plugin"
+msgstr "Não preciso mais do plug-in"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:81
+msgid "It's a temporary deactivation, I'm just debugging an issue"
+msgstr "É uma desativação temporária, estou apenas depurando um problema"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:87
+msgid "Other"
+msgstr "Outro"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:96
+msgid "Quick Feedback"
+msgstr "Feedback rápido"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:98
+msgid "If you have a moment, please let us know why you are deactivating"
+msgstr "Se você tiver um momento, informe-nos por que está desativando"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:128
+msgid "Submit and Deactivate"
+msgstr "Enviar e desativar"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:129
+msgid "Skip and Deactivate"
+msgstr "Ignorar e desativar"
+
+# automatic translation
+#: bws_menu/deactivation-form.php:275
+msgid "Please tell us the reason so we can improve it."
+msgstr "Por favor, diga-nos o motivo para que possamos melhorá-lo."
+
+# automatic translation
+#: bws_menu/deprecated.php:29
+msgid "System Status"
+msgstr "Status do sistema"
+
+# automatic translation
+#: bws_menu/deprecated.php:129
+msgid ""
+"If necessary, you can check if the license key is correct or reenter it in "
+"the field below. You can find your license key on your personal page - "
+"Client Area - on our website"
+msgstr ""
+"Se necessário, você pode verificar se a chave de licença está correta ou "
+"inseri-la novamente no campo abaixo. Você pode encontrar sua chave de "
+"licença em sua página pessoal - Área do Cliente - em nosso site"
+
+# automatic translation
+#: bws_menu/deprecated.php:129
+msgid ""
+"(your username is the email address specified during the purchase). If "
+"necessary, please submit \"Lost your password?\" request."
+msgstr ""
+"(seu nome de usuário é o endereço de e-mail especificado durante a compra). "
+"Se necessário, envie \"Esqueceu sua senha?\" solicitar."
+
+# automatic translation
+#: bws_menu/deprecated.php:155
+msgid "After that, you can activate it by entering your license key."
+msgstr "Depois disso, você pode ativá-lo inserindo sua chave de licença."
+
+# automatic translation
+#: bws_menu/deprecated.php:158 bws_menu/deprecated.php:253
+msgid "License key can be found in the"
+msgstr "A chave de licença pode ser encontrada no"
+
+# automatic translation
+#: bws_menu/deprecated.php:160 bws_menu/deprecated.php:255
+msgid "(your username is the email address specified during the purchase)."
+msgstr "(seu nome de usuário é o endereço de e-mail especificado durante a compra)."
+
+# automatic translation
+#: bws_menu/deprecated.php:187
+msgid "Congratulations! The Pro license of the plugin is activated successfully."
+msgstr "Parabéns! A licença Pro do plug-in foi ativada com sucesso."
+
+# automatic translation
+#: bws_menu/deprecated.php:189 bws_menu/deprecated.php:233
+msgid "Please, go to"
+msgstr "Por favor vá a"
+
+# automatic translation
+#: bws_menu/deprecated.php:189 bws_menu/deprecated.php:233
+msgid "the setting page"
+msgstr "a página de configuração"
+
+# automatic translation
+#: bws_menu/deprecated.php:207
+msgid "Restore all plugin settings to defaults"
+msgstr "Restaurar todas as configurações do plug-in para os padrões"
+
+# automatic translation
+#: bws_menu/deprecated.php:209
+msgid "Restore settings"
+msgstr "Restaurar configurações"
+
+# automatic translation
+#: bws_menu/deprecated.php:231
+msgid ""
+"Congratulations! Pro version of the plugin is  installed and activated "
+"successfully."
+msgstr "Parabéns! A versão Pro do plug-in foi instalada e ativada com sucesso."
+
+# automatic translation
+#: bws_menu/deprecated.php:242
+msgid "Show Pro features"
+msgstr "Mostrar recursos profissionais"
+
+# automatic translation
+#: bws_menu/deprecated.php:249
+msgid "Enter your license key to install and activate"
+msgstr "Digite sua chave de licença para instalar e ativar"
+
+# automatic translation
+#: bws_menu/deprecated.php:251
+msgid "version of the plugin."
+msgstr "versão do plug-in."
+
+# automatic translation
+#: bws_menu/product_list.php:9
+msgid "Admin Tools"
+msgstr "Ferramentas Administrativas"
+
+# automatic translation
+#: bws_menu/product_list.php:10
+msgid "Content"
+msgstr "Contente"
+
+# automatic translation
+#: bws_menu/product_list.php:11
+msgid "eCommerce"
+msgstr "comércio eletrônico"
+
+# automatic translation
+#: bws_menu/product_list.php:12
+msgid "Marketing"
+msgstr "Marketing"
+
+# automatic translation
+#: bws_menu/product_list.php:13
+msgid "Navigation"
+msgstr "Navegação"
+
+# automatic translation
+#: bws_menu/product_list.php:14
+msgid "Recommended"
+msgstr "Recomendado"
+
+# automatic translation
+#: bws_menu/product_list.php:15
+msgid "Security"
+msgstr "Segurança"
+
+# automatic translation
+#: bws_menu/product_list.php:16
+msgid "SEO"
+msgstr "ESSE"
+
+# automatic translation
+#: bws_menu/product_list.php:17
+msgid "SMM"
+msgstr "SMM"
+
+# automatic translation
+#: bws_menu/product_list.php:24
+msgid "Give a birth for your bike rental and booking WordPress website."
+msgstr "Dê à luz o seu site WordPress de aluguel e reserva de bicicletas."
+
+# automatic translation
+#: bws_menu/product_list.php:36
+msgid "Best secure captcha plugin to protect your WordPress forms."
+msgstr ""
+"Melhor plug-in de captcha seguro para proteger seus formulários do "
+"WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:46
+msgid "Create your own rental website for car renting and booking."
+msgstr "Crie seu próprio site de aluguel para aluguel e reserva de carros."
+
+# automatic translation
+#: bws_menu/product_list.php:58
+msgid ""
+"Add columns with custom content to WordPress website pages, posts, widgets, "
+"etc."
+msgstr ""
+"Adicione colunas com conteúdo personalizado às páginas do site WordPress, "
+"posts, widgets, etc."
+
+# automatic translation
+#: bws_menu/product_list.php:65
+msgid ""
+"Allow customers to reach you using secure contact form plugin any website "
+"must have."
+msgstr ""
+"Permita que os clientes entrem em contato com você usando o plug-in de "
+"formulário de contato seguro que qualquer site deve ter."
+
+# automatic translation
+#: bws_menu/product_list.php:75
+msgid "Add unlimited number of contact forms to WordPress website."
+msgstr "Adicione um número ilimitado de formulários de contato ao site WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:85
+msgid "Save and manage Contact Form messages. Never lose important data."
+msgstr ""
+"Salve e gerencie as mensagens do formulário de contato. Nunca perca dados "
+"importantes."
+
+# automatic translation
+#: bws_menu/product_list.php:95
+msgid "Add unlimited custom pages to WordPress admin dashboard."
+msgstr ""
+"Adicione páginas personalizadas ilimitadas ao painel de administração do "
+"WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:105
+msgid "Add custom post types and taxonomies to WordPress website search results."
+msgstr ""
+"Adicione tipos de postagem personalizados e taxonomias aos resultados de "
+"pesquisa do site WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:115
+msgid "Add PayPal and 2CO donate buttons to receive charity payments."
+msgstr ""
+"Adicione os botões de doação do PayPal e 2CO para receber pagamentos de "
+"caridade."
+
+# automatic translation
+#: bws_menu/product_list.php:122
+msgid ""
+"Get latest error log messages to diagnose website problems. Define and fix "
+"issues faster."
+msgstr ""
+"Obtenha as mensagens de log de erros mais recentes para diagnosticar "
+"problemas do site. Defina e corrija problemas mais rapidamente."
+
+# automatic translation
+#: bws_menu/product_list.php:129
+msgid ""
+"Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and "
+"widgets."
+msgstr ""
+"Adicione os botões Seguir, Curtir e Compartilhar do Facebook a postagens, "
+"páginas e widgets do WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:139
+msgid ""
+"Add beautiful galleries, albums & images to your WordPress website in a few "
+"clicks."
+msgstr ""
+"Adicione belas galerias, álbuns e imagens ao seu site WordPress com apenas "
+"alguns cliques."
+
+# automatic translation
+#: bws_menu/product_list.php:149
+msgid ""
+"Stronger security solution which protects your WordPress website from hacks "
+"and unauthorized login attempts."
+msgstr ""
+"Solução de segurança mais forte que protege seu site WordPress contra hacks "
+"e tentativas de login não autorizadas."
+
+# automatic translation
+#: bws_menu/product_list.php:159
+msgid ""
+"Add Adsense ads to WordPress website pages, posts, custom posts, search "
+"results, categories, tags, and widgets."
+msgstr ""
+"Adicione anúncios do Adsense às páginas do site WordPress, postagens, "
+"postagens personalizadas, resultados de pesquisa, categorias, tags e "
+"widgets."
+
+# automatic translation
+#: bws_menu/product_list.php:169
+msgid "Add Google Analytics code to WordPress website and track basic stats."
+msgstr ""
+"Adicione o código do Google Analytics ao site WordPress e acompanhe as "
+"estatísticas básicas."
+
+# automatic translation
+#: bws_menu/product_list.php:179
+msgid "Protect WordPress website forms from spam entries with reCaptcha."
+msgstr ""
+"Proteja os formulários do site WordPress contra entradas de spam com o "
+"reCaptcha."
+
+# automatic translation
+#: bws_menu/product_list.php:189
+msgid "Add customized Google maps to WordPress posts, pages and widgets."
+msgstr ""
+"Adicione mapas personalizados do Google a postagens, páginas e widgets do "
+"WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:199
+msgid ""
+"Generate and add XML sitemap to WordPress website. Help search engines "
+"index your blog."
+msgstr ""
+"Gere e adicione um mapa do site XML ao site WordPress. Ajude os mecanismos "
+"de pesquisa a indexar seu blog."
+
+# automatic translation
+#: bws_menu/product_list.php:209
+msgid ""
+"Replace external WordPress website links with Google shortlinks and track "
+"click stats."
+msgstr ""
+"Substitua os links externos do site WordPress por links curtos do Google e "
+"acompanhe as estatísticas de cliques."
+
+# automatic translation
+#: bws_menu/product_list.php:216
+msgid ""
+"Protect WordPress website – allow and deny access for certain IP addresses, "
+"hostnames, etc."
+msgstr ""
+"Proteja o site WordPress – permita e negue acesso a determinados endereços "
+"IP, nomes de host, etc."
+
+# automatic translation
+#: bws_menu/product_list.php:226
+msgid ""
+"Create your personal job board and listing WordPress website. Search jobs, "
+"submit CV/resumes, choose candidates."
+msgstr ""
+"Crie seu quadro de empregos pessoal e liste o site WordPress. Pesquise "
+"empregos, envie CV/currículos, escolha candidatos."
+
+# automatic translation
+#: bws_menu/product_list.php:233
+msgid ""
+"Protect WordPress website against brute force attacks. Limit rate of login "
+"attempts."
+msgstr ""
+"Proteja o site WordPress contra ataques de força bruta. Limite a taxa de "
+"tentativas de login."
+
+# automatic translation
+#: bws_menu/product_list.php:243
+msgid ""
+"Add LinkedIn Share and Follow buttons to WordPress posts, pages and "
+"widgets. 5 plugins included – profile, insider, etc."
+msgstr ""
+"Adicione os botões Compartilhar e Seguir do LinkedIn às postagens, páginas "
+"e widgets do WordPress. 5 plugins incluídos – perfil, insider, etc."
+
+# automatic translation
+#: bws_menu/product_list.php:253
+msgid ""
+"Translate WordPress website content to other languages manually. Create "
+"multilingual pages, posts, widgets, menus, etc."
+msgstr ""
+"Traduza o conteúdo do site WordPress para outros idiomas manualmente. Crie "
+"páginas multilíngues, posts, widgets, menus, etc."
+
+# automatic translation
+#: bws_menu/product_list.php:263
+msgid ""
+"Add customizable pagination to WordPress website. Split long content to "
+"multiple pages for better navigation."
+msgstr ""
+"Adicione paginação personalizável ao site WordPress. Divida o conteúdo "
+"longo em várias páginas para uma melhor navegação."
+
+# automatic translation
+#: bws_menu/product_list.php:273
+msgid ""
+"Generate PDF files and print WordPress posts/pages. Customize document "
+"header/footer styles and appearance."
+msgstr ""
+"Gere arquivos PDF e imprima postagens/páginas do WordPress. Personalize os "
+"estilos e a aparência do cabeçalho/rodapé do documento."
+
+# automatic translation
+#: bws_menu/product_list.php:283
+msgid ""
+"Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, "
+"Profile) to WordPress posts, pages and widgets."
+msgstr ""
+"Adicione os botões Pinterest Follow, Pin It e widgets de perfil (Pin, "
+"Board, Profile) às postagens, páginas e widgets do WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:293
+msgid ""
+"Create your personal portfolio WordPress website. Manage and showcase past "
+"projects to get more clients."
+msgstr ""
+"Crie seu site WordPress de portfólio pessoal. Gerencie e exiba projetos "
+"anteriores para obter mais clientes."
+
+# automatic translation
+#: bws_menu/product_list.php:303
+msgid "Export WordPress posts to CSV file format easily. Configure data order."
+msgstr ""
+"Exporte postagens do WordPress para o formato de arquivo CSV facilmente. "
+"Configurar ordem de dados."
+
+# automatic translation
+#: bws_menu/product_list.php:313
+msgid ""
+"Add extra fields to default WordPress user profile. The easiest way to "
+"create and manage additional custom values."
+msgstr ""
+"Adicione campos extras ao perfil de usuário padrão do WordPress. A maneira "
+"mais fácil de criar e gerenciar valores personalizados adicionais."
+
+# automatic translation
+#: bws_menu/product_list.php:323
+msgid ""
+"Add and display HTML advertisement banner on WordPress website. Customize "
+"bar styles and appearance."
+msgstr ""
+"Adicione e exiba banner de anúncio HTML no site WordPress. Personalize os "
+"estilos e a aparência da barra."
+
+# automatic translation
+#: bws_menu/product_list.php:333
+msgid ""
+"Add customizable quotes and tips blocks to WordPress posts, pages and "
+"widgets."
+msgstr ""
+"Adicione citações personalizáveis e blocos de dicas a postagens, páginas e "
+"widgets do WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:340
+msgid ""
+"Add rating plugin to your WordPress website to receive feedback from your "
+"customers."
+msgstr ""
+"Adicione o plug-in de classificação ao seu site WordPress para receber "
+"feedback de seus clientes."
+
+# automatic translation
+#: bws_menu/product_list.php:350
+msgid ""
+"Create your personal real estate WordPress website. Sell, rent and buy "
+"properties. Add, search and browse listings easily."
+msgstr ""
+"Crie seu site WordPress imobiliário pessoal. Vender, alugar e comprar "
+"propriedades. Adicione, pesquise e navegue nas listas facilmente."
+
+# automatic translation
+#: bws_menu/product_list.php:360
+msgid ""
+"Add related, featured, latest, and popular posts to your WordPress website. "
+"Connect your blog readers with a relevant content."
+msgstr ""
+"Adicione postagens relacionadas, em destaque, mais recentes e populares ao "
+"seu site WordPress. Conecte os leitores do seu blog com um conteúdo "
+"relevante."
+
+# automatic translation
+#: bws_menu/product_list.php:367
+msgid ""
+"Send bulk email messages to WordPress users. Custom templates, advanced "
+"settings and detailed reports."
+msgstr ""
+"Envie mensagens de e-mail em massa para usuários do WordPress. Modelos "
+"personalizados, configurações avançadas e relatórios detalhados."
+
+# automatic translation
+#: bws_menu/product_list.php:377
+msgid ""
+"The best responsive slider plugin for your WordPress website. Create "
+"beautifully animated slides just in a few clicks."
+msgstr ""
+"O melhor plug-in de controle deslizante responsivo para o seu site "
+"WordPress. Crie slides lindamente animados com apenas alguns cliques."
+
+# automatic translation
+#: bws_menu/product_list.php:384
+msgid ""
+"Configure SMTP server to receive email messages from WordPress to Gmail, "
+"Yahoo, Hotmail and other services."
+msgstr ""
+"Configure o servidor SMTP para receber mensagens de e-mail do WordPress "
+"para Gmail, Yahoo, Hotmail e outros serviços."
+
+# automatic translation
+#: bws_menu/product_list.php:391
+msgid ""
+"Add social media buttons and widgets to WordPress posts, pages and widgets. "
+"FB, Twitter, Pinterest, LinkedIn."
+msgstr ""
+"Adicione botões e widgets de mídia social a postagens, páginas e widgets do "
+"WordPress. Facebook, Twitter, Pinterest, LinkedIn."
+
+# automatic translation
+#: bws_menu/product_list.php:401
+msgid ""
+"Add social media login, registration, and commenting to your WordPress "
+"website."
+msgstr ""
+"Adicione login de mídia social, registro e comentários ao seu site "
+"WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:408
+msgid ""
+"Add email newsletter sign up form to WordPress posts, pages and widgets. "
+"Collect data and subscribe your users."
+msgstr ""
+"Adicione o formulário de inscrição do boletim informativo por e-mail às "
+"postagens, páginas e widgets do WordPress. Colete dados e inscreva seus "
+"usuários."
+
+# automatic translation
+#: bws_menu/product_list.php:418
+msgid ""
+"Add testimonials and feedbacks from your customers to WordPress website "
+"posts, pages, and widgets."
+msgstr ""
+"Adicione depoimentos e feedbacks de seus clientes às postagens, páginas e "
+"widgets do site WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:425
+msgid ""
+"Best timesheet plugin for WordPress. Track employee time, streamline "
+"attendance and generate reports."
+msgstr ""
+"Melhor plugin de quadro de horários para WordPress. Acompanhe o tempo dos "
+"funcionários, simplifique o comparecimento e gere relatórios."
+
+# automatic translation
+#: bws_menu/product_list.php:435
+msgid ""
+"Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts "
+"and pages."
+msgstr ""
+"Adicione os botões Twitter Follow, Tweet, Hashtag e Mention às postagens e "
+"páginas do WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:445
+msgid ""
+"Automatically check and update WordPress website core with all installed "
+"plugins and themes to the latest versions."
+msgstr ""
+"Verifique e atualize automaticamente o núcleo do site WordPress com todos "
+"os plugins e temas instalados para as versões mais recentes."
+
+# automatic translation
+#: bws_menu/product_list.php:455
+msgid ""
+"Powerful user role management plugin for WordPress website. Create, edit, "
+"copy, and delete user roles."
+msgstr ""
+"Poderoso plug-in de gerenciamento de função do usuário para o site "
+"WordPress. Crie, edite, copie e exclua funções de usuário."
+
+# automatic translation
+#: bws_menu/product_list.php:465
+msgid ""
+"Display live count of online visitors who are currently browsing your "
+"WordPress website."
+msgstr ""
+"Exiba a contagem ao vivo de visitantes online que estão navegando no seu "
+"site WordPress."
+
+# automatic translation
+#: bws_menu/product_list.php:475
+msgid ""
+"Backup and export Zendesk Help Center content automatically to your "
+"WordPress website database."
+msgstr ""
+"Faça backup e exporte o conteúdo da Central de Ajuda do Zendesk "
+"automaticamente para o banco de dados do seu site WordPress."
+
+# automatic translation
+#: gallery-plugin.php:43 includes/class-gllr-settings.php:324
 msgid "Gallery Settings"
 msgstr "Configurações da Galeria"
 
-# @ gallery
-#: gallery-plugin.php:37 includes/class-gllr-settings.php:353
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:43 includes/class-gllr-settings.php:370
 msgid "Global Settings"
-msgstr "Configurações da Galeria"
+msgstr "Configurações globais"
 
-#: gallery-plugin.php:43 gallery-plugin.php:2934
-msgid "Upgrade to Pro"
-msgstr ""
-
-#: gallery-plugin.php:340
+# automatic translation
+#: gallery-plugin.php:391
 msgid "Return to all albums"
-msgstr ""
+msgstr "Voltar para todos os álbuns"
 
-# @ gallery
-#: gallery-plugin.php:354
+# automatic translation
+#: gallery-plugin.php:405
 msgid "See images &raquo;"
 msgstr "Ver imagens &raquo;"
 
-# @ gallery
-#: gallery-plugin.php:442 gallery-plugin.php:451
+# automatic translation
+#: gallery-plugin.php:506 gallery-plugin.php:515
 msgid "Galleries"
 msgstr "Galerias"
 
-# @ gallery
-#: gallery-plugin.php:443 gallery-plugin.php:3360
+# automatic translation
+#: gallery-plugin.php:507 gallery-plugin.php:3181
 msgid "Gallery"
 msgstr "Galeria"
 
-# @ gallery
-#: gallery-plugin.php:444
+# automatic translation
+#: gallery-plugin.php:508
 msgid "Add New Gallery"
 msgstr "Adicionar Nova Galeria"
 
-# @ gallery
-#: gallery-plugin.php:445
+# automatic translation
+#: gallery-plugin.php:509
 msgid "Edit Gallery"
-msgstr "Editar Galeria"
+msgstr "Editar galeria"
 
-# @ gallery
-#: gallery-plugin.php:446
+# automatic translation
+#: gallery-plugin.php:510
 msgid "New Gallery"
 msgstr "Nova Galeria"
 
-# @ gallery
-#: gallery-plugin.php:447
+# automatic translation
+#: gallery-plugin.php:511
 msgid "View Gallery"
-msgstr "Ver Galeria"
+msgstr "Veja a galeria"
 
-# @ gallery
-#: gallery-plugin.php:448 includes/class-gllr-settings.php:1001
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:512 includes/class-gllr-settings.php:1153
 msgid "Search Galleries"
-msgstr "Galerias"
+msgstr "Pesquisar galerias"
 
-# @ gallery
-#: gallery-plugin.php:449
+# automatic translation
+#: gallery-plugin.php:513
 msgid "No Gallery found"
-msgstr "Nenhuma Galeria foi encontrada"
+msgstr "Nenhuma galeria encontrada"
 
-# @ gallery
-#: gallery-plugin.php:471 gallery-plugin.php:1721 gallery-plugin.php:3087
-#: gallery-plugin.php:3095 gallery-plugin.php:3133 gallery-plugin.php:3156
-#: gallery-plugin.php:3332
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:538 gallery-plugin.php:1929 gallery-plugin.php:3151
+#: includes/class-gllr-widgets.php:28 includes/class-gllr-widgets.php:35
+#: includes/class-gllr-widgets.php:74 includes/class-gllr-widgets.php:101
 msgid "Gallery Categories"
-msgstr "Tamanho da imagem da galeria"
+msgstr "Categorias da Galeria"
 
-# @ gallery
-#: gallery-plugin.php:472 gallery-plugin.php:917
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:539 gallery-plugin.php:1012
 msgid "Gallery Category"
-msgstr "Tamanho da imagem da galeria"
+msgstr "Categoria da galeria"
 
-#: gallery-plugin.php:473
+# automatic translation
+#: gallery-plugin.php:540
 msgid "Add Gallery Category"
-msgstr ""
+msgstr "Adicionar categoria de galeria"
 
-# @ gallery
-#: gallery-plugin.php:474
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:541
 msgid "Add New Gallery Category"
-msgstr "Adicionar Nova Galeria"
+msgstr "Adicionar nova categoria de galeria"
 
-#: gallery-plugin.php:475 gallery-plugin.php:476
+# automatic translation
+#: gallery-plugin.php:542 gallery-plugin.php:543
 msgid "Edit Gallery Category"
-msgstr ""
+msgstr "Editar categoria da galeria"
 
-#: gallery-plugin.php:477
+# automatic translation
+#: gallery-plugin.php:544
 msgid "New Gallery Category"
-msgstr ""
+msgstr "Nova categoria de galeria"
 
-#: gallery-plugin.php:478 gallery-plugin.php:479
+# automatic translation
+#: gallery-plugin.php:545 gallery-plugin.php:546
 msgid "View Gallery Category"
-msgstr ""
+msgstr "Ver Categoria da Galeria"
 
-#: gallery-plugin.php:480
+# automatic translation
+#: gallery-plugin.php:547
 msgid "Find Gallery Category"
-msgstr ""
+msgstr "Localizar categoria da galeria"
 
-#: gallery-plugin.php:481
+# automatic translation
+#: gallery-plugin.php:548
 msgid "No Gallery Categories found"
-msgstr ""
+msgstr "Nenhuma categoria de galeria encontrada"
 
-#: gallery-plugin.php:482
+# automatic translation
+#: gallery-plugin.php:549
 msgid "No Gallery Categories found in Trash"
-msgstr ""
+msgstr "Nenhuma categoria de galeria encontrada na Lixeira"
 
-#: gallery-plugin.php:483
+# automatic translation
+#: gallery-plugin.php:550
 msgid "Parent Gallery Category"
-msgstr ""
+msgstr "Categoria da Galeria principal"
 
-#: gallery-plugin.php:484
+# automatic translation
+#: gallery-plugin.php:551
 msgid "Gallery Categories list navigation"
-msgstr ""
+msgstr "Navegação na lista de categorias da galeria"
 
-#: gallery-plugin.php:485
+# automatic translation
+#: gallery-plugin.php:552
 msgid "Gallery Categories list"
-msgstr ""
+msgstr "Lista de categorias da galeria"
 
-# @ gallery
-#: gallery-plugin.php:533
+# automatic translation
+#: gallery-plugin.php:605
 msgid "Gallery Shortcode"
-msgstr "Shortcode da Galeria"
+msgstr "Código curto da galeria"
 
-#: gallery-plugin.php:542
+# automatic translation
+#: gallery-plugin.php:615
 msgid ""
 "Add a single gallery with images to your posts, pages, custom post types or "
 "widgets by using the following shortcode:"
 msgstr ""
+"Adicione uma única galeria com imagens às suas postagens, páginas, tipos de "
+"postagem personalizados ou widgets usando o seguinte shortcode:"
 
-#: gallery-plugin.php:546
+# automatic translation
+#: gallery-plugin.php:621
 msgid ""
 "Add a gallery cover including featured image, description, and a link to "
 "your single gallery using the following shortcode:"
 msgstr ""
+"Adicione uma capa de galeria incluindo imagem em destaque, descrição e um "
+"link para sua galeria única usando o seguinte shortcode:"
 
-#: gallery-plugin.php:659
+# automatic translation
+#: gallery-plugin.php:740
 msgid "Note"
-msgstr ""
+msgstr "Observação"
 
-#: gallery-plugin.php:659
+# automatic translation
+#: gallery-plugin.php:740
 #, php-format
 msgid ""
 "When deleting a category, the galleries that belong to this category will "
 "not be deleted. These galleries will be moved to the category %s."
 msgstr ""
+"Ao excluir uma categoria, as galerias pertencentes a esta categoria não "
+"serão excluídas. Estas galerias serão movidas para a categoria %s."
 
-# @ gallery
-#: gallery-plugin.php:670
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:752
 msgid "Sort Galleries in Category by"
-msgstr "Ordenar imagens por"
+msgstr "Ordenar Galerias em Categoria por"
 
-# @ gallery
-#: gallery-plugin.php:673 gallery-plugin.php:3346
-#: includes/class-gllr-settings.php:711
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:755 gallery-plugin.php:3167
+#: includes/class-gllr-settings.php:799
 msgid "Gallery ID"
-msgstr "Galeria"
+msgstr "ID da galeria"
 
-# @ gallery
-#: gallery-plugin.php:674 gallery-plugin.php:1718 gallery-plugin.php:2788
-#: gallery-plugin.php:2895 gallery-plugin.php:3008 gallery-plugin.php:3347
-#: includes/class-gllr-settings.php:712
+# automatic translation
+#: gallery-plugin.php:756 gallery-plugin.php:1926 gallery-plugin.php:3168
+#: includes/class-gllr-media-table.php:214
+#: includes/class-gllr-media-table.php:327
+#: includes/class-gllr-media-table.php:469 includes/class-gllr-settings.php:800
+#: includes/class-gllr-widgets.php:296
 msgid "Title"
 msgstr "Título"
 
-# @ gallery
-#: gallery-plugin.php:675 gallery-plugin.php:1723 gallery-plugin.php:3348
-#: includes/class-gllr-settings.php:546 includes/class-gllr-settings.php:713
+# automatic translation
+#: gallery-plugin.php:757 gallery-plugin.php:1931 gallery-plugin.php:3169
+#: includes/class-gllr-settings.php:589 includes/class-gllr-settings.php:801
 msgid "Date"
 msgstr "Data"
 
-#: gallery-plugin.php:676 gallery-plugin.php:3349
-#: includes/class-gllr-settings.php:714
+# automatic translation
+#: gallery-plugin.php:758 gallery-plugin.php:3170
+#: includes/class-gllr-settings.php:802
 msgid "Last modified date"
-msgstr ""
+msgstr "Data da última modificação"
 
-#: gallery-plugin.php:677 gallery-plugin.php:3350
-#: includes/class-gllr-settings.php:715
+# automatic translation
+#: gallery-plugin.php:759 gallery-plugin.php:3171
+#: includes/class-gllr-settings.php:803
 msgid "Comment count"
-msgstr ""
+msgstr "Contagem de comentários"
 
-#: gallery-plugin.php:678 gallery-plugin.php:3351
-#: includes/class-gllr-settings.php:716
+# automatic translation
+#: gallery-plugin.php:760 gallery-plugin.php:3172
+#: includes/class-gllr-settings.php:804
 msgid "\"Order\" field on the gallery edit page"
-msgstr ""
+msgstr "Campo \"Pedido\" na página de edição da galeria"
 
-# @ gallery
-#: gallery-plugin.php:679 gallery-plugin.php:1722 gallery-plugin.php:3352
-#: includes/class-gllr-settings.php:717
+# automatic translation
+#: gallery-plugin.php:761 gallery-plugin.php:1930 gallery-plugin.php:3173
+#: includes/class-gllr-settings.php:805
 msgid "Author"
 msgstr "Autor"
 
-# @ gallery
-#: gallery-plugin.php:680 gallery-plugin.php:3353
-#: includes/class-gllr-settings.php:547 includes/class-gllr-settings.php:718
+# automatic translation
+#: gallery-plugin.php:762 gallery-plugin.php:3174
+#: includes/class-gllr-settings.php:590 includes/class-gllr-settings.php:806
 msgid "Random"
-msgstr "Aleatório"
+msgstr "aleatório"
 
-# @ bestwebsoft
-# @ gallery
-#: gallery-plugin.php:681 gallery-plugin.php:3354
-#, fuzzy
-#| msgid "Settings"
+# automatic translation
+#: gallery-plugin.php:763 gallery-plugin.php:3175
 msgid "Plugin Settings"
-msgstr "Configurações"
+msgstr "Configurações do plug-in"
 
-#: gallery-plugin.php:683 gallery-plugin.php:3356
+# automatic translation
+#: gallery-plugin.php:765 gallery-plugin.php:3177
 msgid "Select galleries sorting order in your category."
-msgstr ""
+msgstr "Selecione a ordem de classificação das galerias em sua categoria."
 
-# @ gallery
-#: gallery-plugin.php:703 gallery-plugin.php:1720
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:791 gallery-plugin.php:1928
 msgid "Shortcode"
-msgstr "Shortcode da Galeria"
+msgstr "Código curto"
 
-#: gallery-plugin.php:749
+# automatic translation
+#: gallery-plugin.php:835
 msgid "All Gallery Categories"
-msgstr ""
+msgstr "Todas as categorias da galeria"
 
-#: gallery-plugin.php:827
+# automatic translation
+#: gallery-plugin.php:918
 msgid "You can't delete default gallery category."
-msgstr ""
+msgstr "Você não pode excluir a categoria padrão da galeria."
 
-# @ gallery
-#: gallery-plugin.php:1209 gallery-plugin.php:1317 gallery-plugin.php:2243
+# automatic translation
+#: gallery-plugin.php:1402 gallery-plugin.php:1512 gallery-plugin.php:2633
 msgid "Sorry, nothing found."
-msgstr "Desculpe, nada foi encontrado."
+msgstr "Desculpe, nada encontrado."
 
-#: gallery-plugin.php:1717
+# automatic translation
+#: gallery-plugin.php:1925
 msgid "Featured Image"
-msgstr ""
+msgstr "Imagem em destaque"
 
-# @ gallery
-#: gallery-plugin.php:1719 includes/class-gllr-settings.php:41
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:1927 includes/class-gllr-settings.php:45
 msgid "Images"
-msgstr "Ver imagens &raquo;"
+msgstr "Imagens"
 
-#: gallery-plugin.php:1810
+# automatic translation
+#: gallery-plugin.php:2015
 #, php-format
 msgid "%s Settings"
-msgstr ""
+msgstr "%s Configurações"
 
-# @ bestwebsoft
-# @ gallery
-#: gallery-plugin.php:1837 gallery-plugin.php:1855
-#: includes/class-gllr-settings.php:30 includes/class-gllr-settings.php:42
-msgid "Settings"
-msgstr "Configurações"
-
-# @ gallery
-#: gallery-plugin.php:1838
-msgid "FAQ"
-msgstr "FAQ"
-
-# @ gallery
-#: gallery-plugin.php:1839
-msgid "Support"
-msgstr "Suporte"
-
-#: gallery-plugin.php:1878
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:2094
 msgid "Updating images..."
-msgstr "Actualizando imagenes"
+msgstr "Atualizando imagens..."
 
-# @ gallery
-#: gallery-plugin.php:1879
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:2095
 msgid "No images found."
-msgstr "Nenhuma Galeria foi encontrada"
+msgstr "Nenhuma imagem encontrada."
 
-#: gallery-plugin.php:1880
+# automatic translation
+#: gallery-plugin.php:2096
 msgid "All images were updated."
-msgstr ""
+msgstr "Todas as imagens foram atualizadas."
 
-#: gallery-plugin.php:1881
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:2097
 msgid "Error."
-msgstr "Error"
+msgstr "Erro."
 
-#: gallery-plugin.php:1893
+# automatic translation
+#: gallery-plugin.php:2112
 msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
+"Você está prestes a remover estes itens desta galeria.\n"
+" 'Cancelar' para parar, 'OK' para deletar."
 
-#: gallery-plugin.php:1894
+# automatic translation
+#: gallery-plugin.php:2113
 msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
+"Você está prestes a remover esta imagem da galeria.\n"
+" 'Cancelar' para parar, 'OK' para deletar."
 
-#: gallery-plugin.php:1895
+# automatic translation
+#: gallery-plugin.php:2114
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
 msgstr ""
+"Mudando para outro modo, todos os dados não salvos serão perdidos. Salvar "
+"dados antes de mudar?"
 
-#: gallery-plugin.php:1896
+# automatic translation
+#: gallery-plugin.php:2115
 msgid "Insert Media"
-msgstr ""
+msgstr "Inserir mídia"
 
-#: gallery-plugin.php:1897
+# automatic translation
+#: gallery-plugin.php:2116
 msgid "Insert"
-msgstr ""
+msgstr "Inserir"
 
-#: gallery-plugin.php:1898
-msgid "Gallery has been successfully added!"
-msgstr ""
+# automatic translation
+#: gallery-plugin.php:2117
+msgid "A new slider is added."
+msgstr "Um novo controle deslizante é adicionado."
 
-# @ gallery
-#: gallery-plugin.php:2435 gallery-plugin.php:2468
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:2117
+msgid "Edit slider"
+msgstr "Editar controle deslizante"
+
+# automatic translation
+#: gallery-plugin.php:2855 gallery-plugin.php:2883
 msgid "Image size not defined"
-msgstr "Tanaño de imagen no definida"
+msgstr "Tamanho da imagem não definido"
 
-#: gallery-plugin.php:2455
+# automatic translation
+#: gallery-plugin.php:2871
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
 msgstr ""
+"O plug-in atualiza apenas os tipos de arquivo PNG, JPEG, GIF, WPMP ou XBM. "
+"Para outros, recarregue as imagens manualmente."
 
-#: gallery-plugin.php:2501 gallery-plugin.php:2505 gallery-plugin.php:2511
-#, fuzzy
+# automatic translation
+#: gallery-plugin.php:2916 gallery-plugin.php:2920 gallery-plugin.php:2926
 msgid "Invalid path"
-msgstr "Ruta incorrecta."
+msgstr "Caminho inválido"
 
-#: gallery-plugin.php:2607
+# automatic translation
+#: gallery-plugin.php:3128 gallery-plugin.php:3305 gallery-plugin.php:3308
+msgid "Warning"
+msgstr "Aviso"
+
+# automatic translation
+#: gallery-plugin.php:3128
+msgid "You can add only images to the gallery"
+msgstr "Você pode adicionar apenas imagens à galeria"
+
+# automatic translation
+#: gallery-plugin.php:3191
+msgid "no title"
+msgstr "sem título"
+
+# automatic translation
+#: gallery-plugin.php:3205
+msgid ""
+"Display an album image with the description and the link to a single "
+"gallery page"
+msgstr ""
+"Exiba uma imagem de álbum com a descrição e o link para uma única página de "
+"galeria"
+
+# automatic translation
+#: gallery-plugin.php:3209
+msgid "Sorry, no gallery found."
+msgstr "Desculpe, nenhuma galeria encontrada."
+
+# automatic translation
+#: gallery-plugin.php:3305
+#, php-format
+msgid ""
+"Maximum upload file size %s. Contact your administrator or hosting provider "
+"if you need to upload a large file size."
+msgstr ""
+"Tamanho máximo do arquivo de upload %s. Entre em contato com seu "
+"administrador ou provedor de hospedagem se precisar fazer upload de um "
+"arquivo grande."
+
+# automatic translation
+#: gallery-plugin.php:3308
+#, php-format
+msgid ""
+"Input vars count %s i.e. the number of pictures in the gallery may be "
+"limited. Contact your administrator or hosting provider if you need to "
+"upload a large input vars count."
+msgstr ""
+"Vars de entrada contam %s, ou seja, o número de fotos na galeria pode ser "
+"limitado. Entre em contato com seu administrador ou provedor de hospedagem "
+"se precisar fazer upload de uma grande contagem de vars de entrada."
+
+# automatic translation
+#: includes/class-gllr-media-table.php:19
 msgid "List View"
-msgstr ""
+msgstr "Exibição de lista"
 
-#: gallery-plugin.php:2608
+# automatic translation
+#: includes/class-gllr-media-table.php:20
 msgid "Grid View"
-msgstr ""
+msgstr "Exibição em grade"
 
-#: gallery-plugin.php:2665
+# automatic translation
+#: includes/class-gllr-media-table.php:81
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
-#: gallery-plugin.php:2669
+# automatic translation
+#: includes/class-gllr-media-table.php:85
 msgid "Empty Trash"
-msgstr ""
+msgstr "Lixo vazio"
 
-# @ gallery
-#: gallery-plugin.php:2692
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-media-table.php:110
 msgid "No images found"
-msgstr "Nenhuma Galeria foi encontrada"
+msgstr "Nenhuma imagem encontrada"
 
-#: gallery-plugin.php:2745
+# automatic translation
+#: includes/class-gllr-media-table.php:167
 msgid "Select bulk action"
-msgstr ""
+msgstr "Selecionar ação em massa"
 
-#: gallery-plugin.php:2747
+# automatic translation
+#: includes/class-gllr-media-table.php:169
 msgid "Bulk Actions"
-msgstr ""
+msgstr "Ações em massa"
 
-#: gallery-plugin.php:2757
+# automatic translation
+#: includes/class-gllr-media-table.php:179
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
-# @ gallery
-#: gallery-plugin.php:2764
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-media-table.php:186
 msgid "Delete from Gallery"
-msgstr "Nova Galeria"
+msgstr "Excluir da Galeria"
 
-#: gallery-plugin.php:2773
+# automatic translation
+#: includes/class-gllr-media-table.php:196
 msgid "Bulk Select"
-msgstr ""
+msgstr "Seleção em massa"
 
-#: gallery-plugin.php:2774
+# automatic translation
+#: includes/class-gllr-media-table.php:197
 msgid "Cancel Selection"
-msgstr ""
+msgstr "Cancelar seleção"
 
-#: gallery-plugin.php:2775
+# automatic translation
+#: includes/class-gllr-media-table.php:198
 msgid "Delete Selected"
-msgstr ""
+msgstr "Excluir selecionado"
 
-#: gallery-plugin.php:2786
+# automatic translation
+#: includes/class-gllr-media-table.php:212
 msgid "File"
-msgstr ""
+msgstr "Arquivo"
 
-#: gallery-plugin.php:2787 gallery-plugin.php:2890 gallery-plugin.php:3003
+# automatic translation
+#: includes/class-gllr-media-table.php:213
+#: includes/class-gllr-media-table.php:321
+#: includes/class-gllr-media-table.php:462
 msgid "Dimensions"
-msgstr ""
+msgstr "Dimensões"
 
-#: gallery-plugin.php:2789 gallery-plugin.php:2901 gallery-plugin.php:3013
+# automatic translation
+#: includes/class-gllr-media-table.php:215
+#: includes/class-gllr-media-table.php:334
+#: includes/class-gllr-media-table.php:476
 msgid "Alt Text"
-msgstr ""
+msgstr "Texto alternativo"
 
-# @ gallery
-#: gallery-plugin.php:2790 gallery-plugin.php:2905 gallery-plugin.php:3018
+# automatic translation
+#: includes/class-gllr-media-table.php:216
+#: includes/class-gllr-media-table.php:338
+#: includes/class-gllr-media-table.php:483
 msgid "URL"
 msgstr "URL"
 
-#: gallery-plugin.php:2790 gallery-plugin.php:2907
+# automatic translation
+#: includes/class-gllr-media-table.php:216
+#: includes/class-gllr-media-table.php:340
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
 msgstr ""
+"Digite seu URL personalizado para vincular esta imagem a outra página ou "
+"arquivo. Deixe em branco para abrir uma imagem em tamanho real."
 
-# @ gallery
-#: gallery-plugin.php:2872
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-media-table.php:303
 msgid "Remove Image from Gallery"
-msgstr "Nova Galeria"
+msgstr "Remover Imagem da Galeria"
 
-# @ gallery
-#: gallery-plugin.php:2875
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-media-table.php:306
 msgid "Edit Image Info"
-msgstr "ID do anexo"
+msgstr "Editar informações da imagem"
 
-#: gallery-plugin.php:2876
+# automatic translation
+#: includes/class-gllr-media-table.php:307
 msgid "Deselect"
-msgstr ""
+msgstr "Desmarcar"
 
-#: gallery-plugin.php:2888
+# automatic translation
+#: includes/class-gllr-media-table.php:319
 msgid "File name"
-msgstr ""
+msgstr "Nome do arquivo"
 
-#: gallery-plugin.php:2889
+# automatic translation
+#: includes/class-gllr-media-table.php:320
 msgid "File type"
-msgstr ""
+msgstr "Tipo de arquivo"
 
-#: gallery-plugin.php:2914
+# automatic translation
+#: includes/class-gllr-media-table.php:350
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
-# @ gallery
-#: gallery-plugin.php:2920
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-media-table.php:359
 msgid "Lightbox Button URL"
-msgstr "Fundo do Lightbox"
+msgstr "URL do botão lightbox"
 
-#: gallery-plugin.php:2927
+# automatic translation
+#: includes/class-gllr-media-table.php:367
 msgid "New Tab"
-msgstr ""
+msgstr "Nova aba"
 
-#: gallery-plugin.php:2929
+# automatic translation
+#: includes/class-gllr-media-table.php:369
 msgid "Enable to open URLs above in a new tab."
-msgstr ""
+msgstr "Ative para abrir os URLs acima em uma nova guia."
 
-#: gallery-plugin.php:2934
+# automatic translation
+#: includes/class-gllr-media-table.php:374
 msgid "Go Pro"
-msgstr ""
+msgstr "Torne-se profissional"
 
-#: gallery-plugin.php:2940
+# automatic translation
+#: includes/class-gllr-media-table.php:381
 msgid "Edit more details"
-msgstr ""
+msgstr "Editar mais detalhes"
 
-# @ gallery
-#: gallery-plugin.php:2942
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-media-table.php:383
 msgid "Remove from Gallery"
-msgstr "Nova Galeria"
+msgstr "Remover da Galeria"
 
-#: gallery-plugin.php:2978
+# automatic translation
+#: includes/class-gllr-media-table.php:424
 #, php-format
 msgid "Select %s"
-msgstr ""
+msgstr "Selecione% s"
 
-#: gallery-plugin.php:2991
+# automatic translation
+#: includes/class-gllr-media-table.php:442
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
-msgstr ""
+msgstr "Editar &#8220;%s&#8221;"
 
-# @ gallery
-#: gallery-plugin.php:2999
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-media-table.php:456
 msgid "Edit Attachment Info"
-msgstr "ID do anexo"
+msgstr "Editar informações do anexo"
 
-#: gallery-plugin.php:3036 gallery-plugin.php:3052
+# automatic translation
+#: includes/class-gllr-media-table.php:504
+#: includes/class-gllr-media-table.php:520
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
-#: gallery-plugin.php:3040 gallery-plugin.php:3058
+# automatic translation
+#: includes/class-gllr-media-table.php:508
+#: includes/class-gllr-media-table.php:526
 msgid "Trash"
-msgstr ""
+msgstr "Lixo"
 
-#: gallery-plugin.php:3043 gallery-plugin.php:3062
+# automatic translation
+#: includes/class-gllr-media-table.php:511
+#: includes/class-gllr-media-table.php:530
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Apagar permanentemente"
 
-#: gallery-plugin.php:3046 gallery-plugin.php:3068
+# automatic translation
+#: includes/class-gllr-media-table.php:514
+#: includes/class-gllr-media-table.php:536
 #, php-format
 msgid "View &#8220;%s&#8221;"
-msgstr ""
+msgstr "Exibir &#8220;%s&#8221;"
 
-#: gallery-plugin.php:3046 gallery-plugin.php:3068 gallery-plugin.php:3151
+# automatic translation
+#: includes/class-gllr-media-table.php:514
+#: includes/class-gllr-media-table.php:536 includes/class-gllr-widgets.php:95
 msgid "View"
-msgstr ""
+msgstr "Visualizar"
 
-# @ gallery
-#: gallery-plugin.php:3048
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-media-table.php:516
 msgid "Attach"
-msgstr "ID do anexo"
+msgstr "Anexar"
 
-#: gallery-plugin.php:3056
+# automatic translation
+#: includes/class-gllr-media-table.php:524
 msgid "Restore"
-msgstr ""
+msgstr "Restaurar"
 
-#: gallery-plugin.php:3086
-msgid "A list or dropdown of Gallery categories."
-msgstr ""
-
-#: gallery-plugin.php:3131
-msgid "Select Gallery Category"
-msgstr ""
-
-#: gallery-plugin.php:3189
-#, fuzzy
-msgid "Title:"
-msgstr "Título"
-
-#: gallery-plugin.php:3192
-msgid "Display as dropdown"
-msgstr ""
-
-#: gallery-plugin.php:3194
-msgid "Show gallery counts"
-msgstr ""
-
-#: gallery-plugin.php:3196
-msgid "Show hierarchy"
-msgstr ""
-
-#: gallery-plugin.php:3312
-msgid "Warning"
-msgstr ""
-
-#: gallery-plugin.php:3312
-msgid "You can add only images to the gallery"
-msgstr ""
-
-# @ gallery
-#: gallery-plugin.php:3367
-#, fuzzy
-msgid "no title"
-msgstr "Título"
-
-# @ gallery
-#: gallery-plugin.php:3377
-#, fuzzy
-msgid ""
-"Display an album image with the description and the link to a single gallery "
-"page"
-msgstr ""
-"Se você quiser mostrar uma breve descrição contendo a miniatura e o link "
-"para a Página da Galeria use assim"
-
-# @ gallery
-#: gallery-plugin.php:3381
-#, fuzzy
-msgid "Sorry, no gallery found."
-msgstr "Desculpe, nada foi encontrado."
-
-#: includes/class-gllr-settings.php:31
+# automatic translation
+#: includes/class-gllr-settings.php:30
 msgid "Cover"
-msgstr ""
+msgstr "Cobrir"
 
-#: includes/class-gllr-settings.php:32
+# automatic translation
+#: includes/class-gllr-settings.php:31
 msgid "Lightbox"
-msgstr ""
+msgstr "caixa de luz"
 
+# automatic translation
 #: includes/class-gllr-settings.php:33
 msgid "Social"
-msgstr ""
+msgstr "Social"
 
-#: includes/class-gllr-settings.php:34
-msgid "Misc"
-msgstr ""
-
-#: includes/class-gllr-settings.php:35
-msgid "Custom Code"
-msgstr ""
-
+# automatic translation
 #: includes/class-gllr-settings.php:36
-msgid "Import / Export"
-msgstr ""
+msgid "Misc"
+msgstr "Diversos"
 
-#: includes/class-gllr-settings.php:37
-msgid "License Key"
-msgstr ""
-
-# @ gallery
+# automatic translation
 #: includes/class-gllr-settings.php:244
-#, fuzzy
 msgid "Settings saved"
-msgstr "As configurações estão salvas"
+msgstr "Configurações salvas"
 
-# @ gallery
-#: includes/class-gllr-settings.php:256
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:258 includes/class-gllr-widgets.php:375
 msgid "Please, enable JavaScript in Your browser."
-msgstr "Favor havilitar o Javascript para usar o envio de arquivos."
+msgstr "Por favor, habilite o JavaScript em seu navegador."
 
-#: includes/class-gllr-settings.php:260
+# automatic translation
+#: includes/class-gllr-settings.php:262
 msgid "Custom image size was changed. You need to update gallery images."
 msgstr ""
+"O tamanho da imagem personalizada foi alterado. Você precisa atualizar as "
+"imagens da galeria."
 
-# @ gallery
-#: includes/class-gllr-settings.php:261
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:263
 msgid "Update Images"
-msgstr "ordenar imagens"
+msgstr "Atualizar imagens"
 
-# @ gallery
-#: includes/class-gllr-settings.php:276
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:280
 msgid "Gallery Images"
-msgstr "Tamanho da imagem da galeria"
+msgstr "Imagens da Galeria"
 
-#: includes/class-gllr-settings.php:281
-msgid "Images adding requires JavaScript."
-msgstr ""
-
+# automatic translation
 #: includes/class-gllr-settings.php:284
+msgid ""
+"The number of images you can add to the gallery depends on your server "
+"settings. If you have problems saving the gallery, try reducing the number "
+"of images in it."
+msgstr ""
+"O número de imagens que você pode adicionar à galeria depende das "
+"configurações do seu servidor. Se você tiver problemas para salvar a "
+"galeria, tente reduzir o número de imagens nela."
+
+# automatic translation
+#: includes/class-gllr-settings.php:286
+msgid "Images adding requires JavaScript."
+msgstr "A adição de imagens requer JavaScript."
+
+# automatic translation
+#: includes/class-gllr-settings.php:289
 msgid "Add Media"
-msgstr ""
+msgstr "Adicionar mídia"
 
-#: includes/class-gllr-settings.php:293
+# automatic translation
+#: includes/class-gllr-settings.php:300
 msgid "The grid view for the Gallery images requires JavaScript."
-msgstr ""
+msgstr "A visualização em grade das imagens da Galeria requer JavaScript."
 
-#: includes/class-gllr-settings.php:293
+# automatic translation
+#: includes/class-gllr-settings.php:300
 msgid "Switch to the list view"
+msgstr "Alternar para a exibição de lista"
+
+# automatic translation
+#: includes/class-gllr-settings.php:330
+msgid "Create Slider"
+msgstr "Criar controle deslizante"
+
+# automatic translation
+#: includes/class-gllr-settings.php:348
+msgid "Create New Slider"
+msgstr "Criar novo controle deslizante"
+
+# automatic translation
+#: includes/class-gllr-settings.php:354
+msgid ""
+"Click to create a new slider using gallery images. Slider plugin is "
+"required."
 msgstr ""
+"Clique para criar um novo slider usando as imagens da galeria. O plug-in do "
+"controle deslizante é necessário."
 
-# @ gallery
-#: includes/class-gllr-settings.php:320
-#, fuzzy
-msgid "Add Gallery to the Slider"
-msgstr "Adicionar Nova Galeria"
-
-#: includes/class-gllr-settings.php:332
-msgid "Activate"
-msgstr ""
-
-#: includes/class-gllr-settings.php:335 includes/class-gllr-settings.php:1022
-msgid "Install Now"
-msgstr ""
-
-#: includes/class-gllr-settings.php:337
-msgid "Add"
-msgstr ""
-
-#: includes/class-gllr-settings.php:340
-msgid "Click to add current gallery to the slider. Slider plugin is required."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:351
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:368
 msgid "Single Gallery Settings"
-msgstr "Configurações da Galeria"
+msgstr "Configurações de galeria única"
 
-#: includes/class-gllr-settings.php:353
+# automatic translation
+#: includes/class-gllr-settings.php:370
 #, php-format
 msgid "Enable to configure single gallery settings and disable %s."
-msgstr ""
+msgstr "Ative para definir configurações de galeria única e desative %s."
 
-#: includes/class-gllr-settings.php:365 includes/class-gllr-settings.php:422
-#: includes/class-gllr-settings.php:466 includes/class-gllr-settings.php:516
-#: includes/class-gllr-settings.php:654 includes/class-gllr-settings.php:742
-#: includes/class-gllr-settings.php:785 includes/class-gllr-settings.php:835
-#: includes/class-gllr-settings.php:894 includes/class-gllr-settings.php:983
-msgid "Close"
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:369
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:388
 msgid "Gallery Layout"
-msgstr "Nenhuma Galeria foi encontrada"
+msgstr "Layout da Galeria"
 
-#: includes/class-gllr-settings.php:374
-msgid "Grid"
-msgstr ""
-
-#: includes/class-gllr-settings.php:380
-msgid "Masonry"
-msgstr ""
-
+# automatic translation
 #: includes/class-gllr-settings.php:393
-msgid "Number of Columns"
-msgstr ""
+msgid "Grid"
+msgstr "Grade"
 
-#: includes/class-gllr-settings.php:396
+# automatic translation
+#: includes/class-gllr-settings.php:399
+msgid "Masonry"
+msgstr "Alvenaria"
+
+# automatic translation
+#: includes/class-gllr-settings.php:413
+msgid "Number of Columns"
+msgstr "Numero de colunas"
+
+# automatic translation
+#: includes/class-gllr-settings.php:416
 #, php-format
 msgid "Number of gallery columns (default is %s)."
-msgstr ""
+msgstr "Número de colunas da galeria (o padrão é %s)."
 
-# @ gallery
-#: includes/class-gllr-settings.php:400 includes/class-gllr-settings.php:789
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:420 includes/class-gllr-settings.php:892
 msgid "Image Size"
 msgstr "Tamanho da imagem"
 
-#: includes/class-gllr-settings.php:406 includes/class-gllr-settings.php:639
+# automatic translation
+#: includes/class-gllr-settings.php:426 includes/class-gllr-settings.php:720
 msgid "Custom"
-msgstr ""
+msgstr "Personalizado"
 
-#: includes/class-gllr-settings.php:408
-msgid ""
-"Maximum gallery image size. \"Custom\" uses the Image Dimensions values."
+# automatic translation
+#: includes/class-gllr-settings.php:428
+msgid "Maximum gallery image size. \"Custom\" uses the Image Dimensions values."
 msgstr ""
+"Tamanho máximo da imagem da galeria. \"Personalizado\" usa os valores de "
+"Dimensões da imagem."
 
-# @ gallery
-#: includes/class-gllr-settings.php:412
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:432
 msgid "Custom Image Size"
-msgstr "Tamanho da imagem"
+msgstr "Tamanho de imagem personalizado"
 
-#: includes/class-gllr-settings.php:414 includes/class-gllr-settings.php:502
-#: includes/class-gllr-settings.php:647 includes/class-gllr-settings.php:697
+# automatic translation
+#: includes/class-gllr-settings.php:434 includes/class-gllr-settings.php:531
+#: includes/class-gllr-settings.php:728 includes/class-gllr-settings.php:785
 msgid "px"
-msgstr ""
+msgstr "px"
 
-#: includes/class-gllr-settings.php:415
+# automatic translation
+#: includes/class-gllr-settings.php:435
 msgid ""
 "Adjust these values based on the number of columns in your gallery. This "
 "won't effect the full size of your images in the lightbox."
 msgstr ""
+"Ajuste esses valores com base no número de colunas em sua galeria. Isso não "
+"afetará o tamanho total de suas imagens no lightbox."
 
-# @ gallery
-#: includes/class-gllr-settings.php:426
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:447
 msgid "Crop Images"
-msgstr "Ordenar imagens:"
+msgstr "Cortar imagens"
 
-#: includes/class-gllr-settings.php:428
+# automatic translation
+#: includes/class-gllr-settings.php:449
 msgid ""
-"Enable to crop images using the sizes defined for Custom Image Size. Disable "
-"to resize images automatically using their aspect ratio."
+"Enable to crop images using the sizes defined for Custom Image Size. "
+"Disable to resize images automatically using their aspect ratio."
 msgstr ""
+"Ative para recortar imagens usando os tamanhos definidos para Tamanho de "
+"imagem personalizado. Desative para redimensionar imagens automaticamente "
+"usando sua proporção."
 
-# @ gallery
-#: includes/class-gllr-settings.php:432 includes/class-gllr-settings.php:664
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:453 includes/class-gllr-settings.php:746
 msgid "Crop Position"
-msgstr "Posição de recorte"
+msgstr "Posição de corte"
 
-#: includes/class-gllr-settings.php:447 includes/class-gllr-settings.php:679
+# automatic translation
+#: includes/class-gllr-settings.php:468 includes/class-gllr-settings.php:761
 msgid "Select crop position base (by default: center)."
-msgstr ""
+msgstr "Selecione a base da posição de corte (por padrão: centro)."
 
-# @ gallery
-#: includes/class-gllr-settings.php:457
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:479
 msgid "Image Title"
-msgstr "Tamanho da imagem"
+msgstr "Título da imagem"
 
-#: includes/class-gllr-settings.php:459
-msgid "Enable to display image title along with the gallery image."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:470
-#, fuzzy
-msgid "Image Title Position"
-msgstr "Tamanho da imagem"
-
-# @ gallery
-#: includes/class-gllr-settings.php:475
-#, fuzzy
-msgid "Under image"
-msgstr "ordenar imagens"
-
+# automatic translation
 #: includes/class-gllr-settings.php:481
+msgid "Enable to display image title along with the gallery image."
+msgstr "Ative para exibir o título da imagem junto com a imagem da galeria."
+
+# automatic translation
+#: includes/class-gllr-settings.php:493
+msgid "Image Title Position"
+msgstr "Posição do título da imagem"
+
+# automatic translation
+#: includes/class-gllr-settings.php:498
+msgid "Below images"
+msgstr "Abaixo imagens"
+
+# automatic translation
+#: includes/class-gllr-settings.php:504
 msgid "On mouse hover"
-msgstr ""
+msgstr "Ao passar o mouse"
 
-# @ gallery
-#: includes/class-gllr-settings.php:494
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:518
 msgid "Image Border"
-msgstr "Imagens com borda"
+msgstr "Borda da imagem"
 
-#: includes/class-gllr-settings.php:496
+# automatic translation
+#: includes/class-gllr-settings.php:525
 msgid ""
 "Enable images border using the styles defined for Image Border Size and "
 "Color options."
 msgstr ""
+"Ative a borda das imagens usando os estilos definidos para as opções "
+"Tamanho e cor da borda da imagem."
 
-# @ gallery
-#: includes/class-gllr-settings.php:500
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:529
 msgid "Image Border Size"
-msgstr "Tamanho da imagem"
+msgstr "Tamanho da Borda da Imagem"
 
-#: includes/class-gllr-settings.php:503
+# automatic translation
+#: includes/class-gllr-settings.php:532
 #, php-format
-msgid "Gallery image border width (default is %s)"
-msgstr ""
+msgid "Gallery image border width (default is %s)."
+msgstr "Largura da borda da imagem da galeria (o padrão é %s)."
 
-# @ gallery
-#: includes/class-gllr-settings.php:507
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:536
 msgid "Image Border Color"
-msgstr "Escolha a cor da borda"
+msgstr "Cor da Borda da Imagem"
 
-#: includes/class-gllr-settings.php:520
-msgid "Pagination"
-msgstr ""
-
-#: includes/class-gllr-settings.php:523
-msgid ""
-"Enable pagination for images to limit number of images displayed on a single "
-"gallery page."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:527
-#, fuzzy
-msgid "Number of Images"
-msgstr "Número de imagens por linha"
-
-#: includes/class-gllr-settings.php:530
-#, php-format
-msgid "Number of images displayed per page (default is %d)."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:540
-#, fuzzy
-msgid "Sort Images by"
-msgstr "Ordenar imagens por"
-
-#: includes/class-gllr-settings.php:543
-msgid "Manually (default)"
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:544
-#, fuzzy
-msgid "Image ID"
-msgstr "Imagem"
-
-#: includes/class-gllr-settings.php:545
-msgid "Name"
-msgstr ""
-
-#: includes/class-gllr-settings.php:549
-msgid ""
-"Select images sorting order in your gallery. By default, you can sort images "
-"manually in the images tab."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:553
-#, fuzzy
-msgid "Arrange Images by"
-msgstr "Ordenar imagens por"
-
-#: includes/class-gllr-settings.php:556 includes/class-gllr-settings.php:727
-msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
-msgstr ""
-
-#: includes/class-gllr-settings.php:557 includes/class-gllr-settings.php:728
-msgid "Descending (e.g. 3, 2, 1; c, b, a)"
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:562
-#, fuzzy
-msgid "Back Link"
-msgstr "URL do link Voltar"
-
-#: includes/class-gllr-settings.php:564
-msgid ""
-"Enable to show a back link in a single gallery page which navigate to a "
-"previous page."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:568
-#, fuzzy
-msgid "Back Link URL"
-msgstr "URL do link Voltar"
-
-#: includes/class-gllr-settings.php:571
-msgid "Back link custom page URL. Leave blank to use Gallery page template."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:575
-#, fuzzy
-msgid "Back Link Label"
-msgstr "URL do link Voltar"
-
-# @ gallery
-#: includes/class-gllr-settings.php:581
-#, fuzzy
-msgid "Back Link with Shortcode"
-msgstr "Exibir o link Voltar no shortcode"
-
-# @ gallery
-#: includes/class-gllr-settings.php:584
-#, fuzzy
-msgid "Enable to display a back link on a page where shortcode is used."
-msgstr "Exibir o link Voltar no shortcode"
-
-# @ gallery
-#: includes/class-gllr-settings.php:595
-#, fuzzy
-msgid "Cover Settings"
-msgstr "Configurações da Galeria"
-
-# @ gallery
-#: includes/class-gllr-settings.php:600
-#, fuzzy
-msgid "Galleries Page"
-msgstr "Galerias"
-
-#: includes/class-gllr-settings.php:608
-msgid "Base page where all existing galleries will be displayed."
-msgstr ""
-
-#: includes/class-gllr-settings.php:612
-msgid "Albums Displaying"
-msgstr ""
-
-#: includes/class-gllr-settings.php:615
-msgid "Column"
-msgstr ""
-
-#: includes/class-gllr-settings.php:616
-msgid "Rows"
-msgstr ""
-
-#: includes/class-gllr-settings.php:618
-msgid "Select the way galleries will be displayed on the Galleries Page."
-msgstr ""
-
-#: includes/class-gllr-settings.php:622
-msgid "Column Alignment"
-msgstr ""
-
-#: includes/class-gllr-settings.php:625
-msgid "Left"
-msgstr ""
-
-#: includes/class-gllr-settings.php:626
-msgid "Right"
-msgstr ""
-
-#: includes/class-gllr-settings.php:627
-msgid "Center"
-msgstr ""
-
-#: includes/class-gllr-settings.php:629
-msgid "Select the column alignment."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:633
-#, fuzzy
-msgid "Cover Image Size"
-msgstr "Tamanho da imagem"
-
-#: includes/class-gllr-settings.php:641
-msgid "Maximum cover image size. Custom uses the Image Dimensions values."
-msgstr ""
-
-#: includes/class-gllr-settings.php:645
-msgid "Custom Cover Image Size"
-msgstr ""
-
-#: includes/class-gllr-settings.php:658
-msgid "Crop Cover Images"
-msgstr ""
-
-#: includes/class-gllr-settings.php:660
-msgid ""
-"Enable to crop images using the sizes defined for Custom Cover Image Size. "
-"Disable to resize images automatically using their aspect ratio."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:689
-#, fuzzy
-msgid "Cover Image Border"
-msgstr "Imagens com borda"
-
-#: includes/class-gllr-settings.php:691
-msgid ""
-"Enable cover images border using the styles defined for Image Border Size "
-"and Color."
-msgstr ""
-
-#: includes/class-gllr-settings.php:695
-msgid "Cover Image Border Size"
-msgstr ""
-
-#: includes/class-gllr-settings.php:698
-#, php-format
-msgid "Cover image border width (default is %s)"
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:702
-#, fuzzy
-msgid "Cover Image Border Color"
-msgstr "Escolha a cor da borda"
-
-# @ gallery
-#: includes/class-gllr-settings.php:708
-#, fuzzy
-msgid "Sort Albums by"
-msgstr "Ordenar imagens por"
-
-#: includes/class-gllr-settings.php:720
-msgid "Select galleries sorting order in your galleries page."
-msgstr ""
-
-#: includes/class-gllr-settings.php:724
-msgid "Arrange Albums by"
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:733
-#, fuzzy
-msgid "Read More Link Label"
-msgstr "Texto do link Leia Mais"
-
-#: includes/class-gllr-settings.php:746
-msgid "Instant Lightbox"
-msgstr ""
-
-#: includes/class-gllr-settings.php:749
-msgid ""
-"Enable to display all images in the lightbox after clicking cover image or "
-"URL instead of going to a single gallery page."
-msgstr ""
-
-# @ gallery
-#: includes/class-gllr-settings.php:763
-#, fuzzy
-msgid "Lightbox Settings"
-msgstr "Fundo do Lightbox"
-
-#: includes/class-gllr-settings.php:768
+# automatic translation
+#: includes/class-gllr-settings.php:542
 msgid "Unclickable Thumbnail Images"
-msgstr ""
+msgstr "Miniaturas não clicáveis"
 
-#: includes/class-gllr-settings.php:771
+# automatic translation
+#: includes/class-gllr-settings.php:550
 msgid ""
 "Enable to make the images in a single gallery unclickable and hide their "
 "URLs. This option also disables Lightbox."
 msgstr ""
+"Ative para tornar as imagens em uma única galeria não clicáveis e ocultar "
+"seus URLs. Esta opção também desativa o Lightbox."
 
-#: includes/class-gllr-settings.php:775
-msgid "Enable Lightbox"
+# automatic translation
+#: includes/class-gllr-settings.php:562
+msgid "Pagination"
+msgstr "Paginação"
+
+# automatic translation
+#: includes/class-gllr-settings.php:565
+msgid ""
+"Enable pagination for images to limit number of images displayed on a "
+"single gallery page."
 msgstr ""
+"Habilite a paginação de imagens para limitar o número de imagens exibidas "
+"em uma única página da galeria."
 
-#: includes/class-gllr-settings.php:778
-msgid "Enable to show the lightbox when clicking on gallery images."
+# automatic translation
+#: includes/class-gllr-settings.php:569
+msgid "Number of Images"
+msgstr "Número de imagens"
+
+# automatic translation
+#: includes/class-gllr-settings.php:572
+#, php-format
+msgid "Number of images displayed per page (default is %d)."
+msgstr "Número de imagens exibidas por página (o padrão é %d)."
+
+# automatic translation
+#: includes/class-gllr-settings.php:583
+msgid "Sort Images by"
+msgstr "Classificar imagens por"
+
+# automatic translation
+#: includes/class-gllr-settings.php:586
+msgid "Manually (default)"
+msgstr "Manualmente (padrão)"
+
+# automatic translation
+#: includes/class-gllr-settings.php:587
+msgid "Image ID"
+msgstr "ID da imagem"
+
+# automatic translation
+#: includes/class-gllr-settings.php:588
+msgid "Name"
+msgstr "Nome"
+
+# automatic translation
+#: includes/class-gllr-settings.php:592
+msgid ""
+"Select images sorting order in your gallery. By default, you can sort "
+"images manually in the images tab."
 msgstr ""
+"Selecione a ordem de classificação das imagens em sua galeria. Por padrão, "
+"você pode classificar as imagens manualmente na guia de imagens."
 
+# automatic translation
+#: includes/class-gllr-settings.php:596
+msgid "Arrange Images by"
+msgstr "Organizar imagens por"
+
+# automatic translation
+#: includes/class-gllr-settings.php:604 includes/class-gllr-settings.php:820
+msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
+msgstr "Ascendente (por exemplo, 1, 2, 3; a, b, c)"
+
+# automatic translation
+#: includes/class-gllr-settings.php:610 includes/class-gllr-settings.php:826
+msgid "Descending (e.g. 3, 2, 1; c, b, a)"
+msgstr "Descendente (por exemplo, 3, 2, 1; c, b, a)"
+
+# automatic translation
+#: includes/class-gllr-settings.php:615
+msgid "Back Link"
+msgstr "Link Voltar"
+
+# automatic translation
+#: includes/class-gllr-settings.php:622
+msgid ""
+"Enable to show a back link in a single gallery page which navigate to a "
+"previous page."
+msgstr ""
+"Ative para mostrar um link de retorno em uma única página da galeria que "
+"navega para uma página anterior."
+
+# automatic translation
+#: includes/class-gllr-settings.php:626
+msgid "Back Link URL"
+msgstr "URL do link de retorno"
+
+# automatic translation
+#: includes/class-gllr-settings.php:629
+msgid "Leave blank to use the Gallery page template or enter a custom page URL."
+msgstr ""
+"Deixe em branco para usar o modelo de página da Galeria ou insira um URL de "
+"página personalizado."
+
+# automatic translation
+#: includes/class-gllr-settings.php:633
+msgid "Back Link Label"
+msgstr "Rótulo do link de retorno"
+
+# automatic translation
+#: includes/class-gllr-settings.php:639
+msgid "Back Link with Shortcode"
+msgstr "Link de volta com Shortcode"
+
+# automatic translation
+#: includes/class-gllr-settings.php:647
+msgid "Enable to display a back link on a page where shortcode is used."
+msgstr "Ative para exibir um link de retorno em uma página onde o shortcode é usado."
+
+# automatic translation
+#: includes/class-gllr-settings.php:651
+msgid "Disable Fancybox"
+msgstr "Desativar Fancybox"
+
+# automatic translation
+#: includes/class-gllr-settings.php:658
+msgid "Enable to avoid possible conflicts with a 3rd party Fancybox."
+msgstr "Habilite para evitar possíveis conflitos com uma Fancybox de terceiros."
+
+# automatic translation
+#: includes/class-gllr-settings.php:672
+msgid "Cover Settings"
+msgstr "Configurações de capa"
+
+# automatic translation
+#: includes/class-gllr-settings.php:677
+msgid "Galleries Page"
+msgstr "Página das Galerias"
+
+# automatic translation
+#: includes/class-gllr-settings.php:689
+msgid "Base page where all existing galleries will be displayed."
+msgstr "Página base onde serão exibidas todas as galerias existentes."
+
+# automatic translation
+#: includes/class-gllr-settings.php:693
+msgid "Albums Displaying"
+msgstr "Álbuns Exibindo"
+
+# automatic translation
+#: includes/class-gllr-settings.php:696
+msgid "Column"
+msgstr "Coluna"
+
+# automatic translation
+#: includes/class-gllr-settings.php:697
+msgid "Rows"
+msgstr "Linhas"
+
+# automatic translation
+#: includes/class-gllr-settings.php:699
+msgid "Select the way galleries will be displayed on the Galleries Page."
+msgstr "Selecione a forma como as galerias serão exibidas na página Galerias."
+
+# automatic translation
+#: includes/class-gllr-settings.php:703
+msgid "Column Alignment"
+msgstr "Alinhamento de coluna"
+
+# automatic translation
+#: includes/class-gllr-settings.php:706
+msgid "Left"
+msgstr "Esquerda"
+
+# automatic translation
+#: includes/class-gllr-settings.php:707
+msgid "Right"
+msgstr "Certo"
+
+# automatic translation
+#: includes/class-gllr-settings.php:708
+msgid "Center"
+msgstr "Centro"
+
+# automatic translation
+#: includes/class-gllr-settings.php:710
+msgid "Select the column alignment."
+msgstr "Selecione o alinhamento da coluna."
+
+# automatic translation
+#: includes/class-gllr-settings.php:714
+msgid "Cover Image Size"
+msgstr "Tamanho da imagem da capa"
+
+# automatic translation
+#: includes/class-gllr-settings.php:722
+msgid "Maximum cover image size. Custom uses the Image Dimensions values."
+msgstr ""
+"Tamanho máximo da imagem da capa. Personalizado usa os valores de Dimensões "
+"da imagem."
+
+# automatic translation
+#: includes/class-gllr-settings.php:726
+msgid "Custom Cover Image Size"
+msgstr "Tamanho de Imagem de Capa Personalizado"
+
+# automatic translation
+#: includes/class-gllr-settings.php:740
+msgid "Crop Cover Images"
+msgstr "Imagens de capa de corte"
+
+# automatic translation
+#: includes/class-gllr-settings.php:742
+msgid ""
+"Enable to crop images using the sizes defined for Custom Cover Image Size. "
+"Disable to resize images automatically using their aspect ratio."
+msgstr ""
+"Ative para recortar imagens usando os tamanhos definidos para Tamanho de "
+"imagem de capa personalizada. Desative para redimensionar imagens "
+"automaticamente usando sua proporção."
+
+# automatic translation
+#: includes/class-gllr-settings.php:772
+msgid "Cover Image Border"
+msgstr "Borda da imagem da capa"
+
+# automatic translation
+#: includes/class-gllr-settings.php:779
+msgid ""
+"Enable cover images border using the styles defined for Image Border Size "
+"and Color."
+msgstr ""
+"Ative a borda das imagens de capa usando os estilos definidos para Tamanho "
+"e cor da borda da imagem."
+
+# automatic translation
+#: includes/class-gllr-settings.php:783
+msgid "Cover Image Border Size"
+msgstr "Tamanho da Borda da Imagem da Capa"
+
+# automatic translation
+#: includes/class-gllr-settings.php:786
+#, php-format
+msgid "Cover image border width (default is %s)."
+msgstr "Largura da borda da imagem da capa (o padrão é %s)."
+
+# automatic translation
+#: includes/class-gllr-settings.php:790
+msgid "Cover Image Border Color"
+msgstr "Cor da Borda da Imagem da Capa"
+
+# automatic translation
 #: includes/class-gllr-settings.php:796
+msgid "Sort Albums by"
+msgstr "Classificar álbuns por"
+
+# automatic translation
+#: includes/class-gllr-settings.php:808
+msgid "Select galleries sorting order in your galleries page."
+msgstr "Selecione a ordem de classificação das galerias em sua página de galerias."
+
+# automatic translation
+#: includes/class-gllr-settings.php:812
+msgid "Arrange Albums by"
+msgstr "Organizar álbuns por"
+
+# automatic translation
+#: includes/class-gllr-settings.php:839
+msgid "Instant Lightbox"
+msgstr "Caixa de luz instantânea"
+
+# automatic translation
+#: includes/class-gllr-settings.php:842
+msgid ""
+"Enable to display all images in the lightbox after clicking cover image or "
+"URL instead of going to a single gallery page."
+msgstr ""
+"Ative para exibir todas as imagens na lightbox depois de clicar na imagem "
+"da capa ou URL, em vez de ir para uma única página da galeria."
+
+# automatic translation
+#: includes/class-gllr-settings.php:853
+msgid "Read More Link Label"
+msgstr "Leia mais Etiqueta do link"
+
+# automatic translation
+#: includes/class-gllr-settings.php:867
+msgid "Lightbox Settings"
+msgstr "Configurações da caixa de luz"
+
+# automatic translation
+#: includes/class-gllr-settings.php:872
+msgid "Enable Lightbox"
+msgstr "Ativar caixa de luz"
+
+# automatic translation
+#: includes/class-gllr-settings.php:880
+msgid "Enable to show the lightbox when clicking on gallery images."
+msgstr "Ative para mostrar a caixa de luz ao clicar nas imagens da galeria."
+
+# automatic translation
+#: includes/class-gllr-settings.php:899
 msgid ""
 "Select the maximum gallery image size for the lightbox view. \"Default\" "
 "will display the original, full size image."
 msgstr ""
+"Selecione o tamanho máximo da imagem da galeria para a exibição lightbox. "
+"\"Padrão\" exibirá a imagem original em tamanho real."
 
-#: includes/class-gllr-settings.php:800
+# automatic translation
+#: includes/class-gllr-settings.php:903
 msgid "Overlay Color"
-msgstr ""
+msgstr "Cor de Sobreposição"
 
-#: includes/class-gllr-settings.php:806
+# automatic translation
+#: includes/class-gllr-settings.php:909
 msgid "Overlay Opacity"
-msgstr ""
+msgstr "Opacidade de sobreposição"
 
-#: includes/class-gllr-settings.php:809
+# automatic translation
+#: includes/class-gllr-settings.php:912
 #, php-format
 msgid ""
-"Lightbox overlay opacity. Leave blank to disable opacity (default is %s, max "
-"is %s)."
+"Lightbox overlay opacity. Leave blank to disable opacity (default is %1$s, "
+"max is %2$s)."
 msgstr ""
+"Opacidade de sobreposição de caixa de luz. Deixe em branco para desativar a "
+"opacidade (o padrão é %1$s, o máximo é %2$s)."
 
-# @ gallery
-#: includes/class-gllr-settings.php:819
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:924
 msgid "Slideshow"
-msgstr "Iniciar Apresentação de Slides"
+msgstr "apresentação de slides"
 
-#: includes/class-gllr-settings.php:821
+# automatic translation
+#: includes/class-gllr-settings.php:931
 msgid "Enable to start the slideshow automatically when the lightbox is used."
 msgstr ""
+"Ative para iniciar a apresentação de slides automaticamente quando a caixa "
+"de luz for usada."
 
-# @ gallery
-#: includes/class-gllr-settings.php:825
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:935
 msgid "Slideshow Duration"
-msgstr "Intervalo de tempo entre cada Slide"
+msgstr "Duração da apresentação de slides"
 
-#: includes/class-gllr-settings.php:827
+# automatic translation
+#: includes/class-gllr-settings.php:937
 msgid "ms"
-msgstr ""
+msgstr "EM"
 
-#: includes/class-gllr-settings.php:828
+# automatic translation
+#: includes/class-gllr-settings.php:938
 msgid "Slideshow interval duration between two images."
-msgstr ""
+msgstr "Duração do intervalo da apresentação de slides entre duas imagens."
 
-# @ gallery
-#: includes/class-gllr-settings.php:839
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:950
 msgid "Lightbox Helpers"
-msgstr "Fundo do Lightbox"
+msgstr "Ajudantes de caixa de luz"
 
-#: includes/class-gllr-settings.php:841
+# automatic translation
+#: includes/class-gllr-settings.php:952
 msgid "Enable to display the lightbox toolbar and arrows."
-msgstr ""
+msgstr "Ative para exibir a barra de ferramentas e as setas do lightbox."
 
-# @ gallery
-#: includes/class-gllr-settings.php:845
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:956
 msgid "Lightbox Thumbnails"
-msgstr "Tamanho da imagem de capa do álbum"
+msgstr "Miniaturas Lightbox"
 
-#: includes/class-gllr-settings.php:847
+# automatic translation
+#: includes/class-gllr-settings.php:958
 msgid "Enable to use a lightbox helper navigation between images."
-msgstr ""
+msgstr "Habilite para usar uma navegação auxiliar lightbox entre as imagens."
 
-#: includes/class-gllr-settings.php:851
+# automatic translation
+#: includes/class-gllr-settings.php:962
 msgid "Lightbox Thumbnails Position"
-msgstr ""
+msgstr "Posição das Miniaturas Lightbox"
 
-#: includes/class-gllr-settings.php:854
+# automatic translation
+#: includes/class-gllr-settings.php:965
 msgid "Top"
-msgstr ""
+msgstr "Principal"
 
-# @ gallery
-#: includes/class-gllr-settings.php:859
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:970
 msgid "Lightbox Button Label"
-msgstr "Fundo do Lightbox"
+msgstr "Rótulo do Botão Lightbox"
 
-# @ gallery
-#: includes/class-gllr-settings.php:861
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:972
 msgid "Read More"
-msgstr "Texto do link Leia Mais"
+msgstr "consulte Mais informação"
 
-#: includes/class-gllr-settings.php:871
+# automatic translation
+#: includes/class-gllr-settings.php:984
 msgid "Download Button"
-msgstr ""
+msgstr "Botão de download"
 
-#: includes/class-gllr-settings.php:873
+# automatic translation
+#: includes/class-gllr-settings.php:991
 msgid "Enable to display download button."
-msgstr ""
+msgstr "Ative para exibir o botão de download."
 
-#: includes/class-gllr-settings.php:877
+# automatic translation
+#: includes/class-gllr-settings.php:995
 msgid "Single Lightbox"
-msgstr ""
+msgstr "Caixa de luz única"
 
-#: includes/class-gllr-settings.php:879
+# automatic translation
+#: includes/class-gllr-settings.php:1002
 msgid ""
 "Enable to use a single lightbox for multiple galleries located on a single "
 "page."
 msgstr ""
+"Ative para usar uma única caixa de luz para várias galerias localizadas em "
+"uma única página."
 
-#: includes/class-gllr-settings.php:889
+# automatic translation
+#: includes/class-gllr-settings.php:1014
 msgid "Social Sharing Buttons Settings"
-msgstr ""
+msgstr "Configurações dos Botões de Compartilhamento Social"
 
-#: includes/class-gllr-settings.php:898
+# automatic translation
+#: includes/class-gllr-settings.php:1024
 msgid "Social Buttons"
-msgstr ""
+msgstr "Botões sociais"
 
-#: includes/class-gllr-settings.php:900
+# automatic translation
+#: includes/class-gllr-settings.php:1026
 msgid "Enable social sharing buttons in the lightbox."
-msgstr ""
+msgstr "Ative os botões de compartilhamento social no lightbox."
 
-#: includes/class-gllr-settings.php:904
+# automatic translation
+#: includes/class-gllr-settings.php:1030
 msgid "Social Networks"
-msgstr ""
+msgstr "Redes sociais"
 
-# @ gallery
-#: includes/class-gllr-settings.php:915
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:1040
 msgid "Counter"
-msgstr "Intervalo de tempo entre cada Slide"
+msgstr "Contador"
 
-#: includes/class-gllr-settings.php:918
-msgid ""
-"Enable to show likes counter for each social button (not available for "
-"Google +1)."
-msgstr ""
+# automatic translation
+#: includes/class-gllr-settings.php:1043
+msgid "Enable to show likes counter for each social button."
+msgstr "Ative para mostrar o contador de curtidas para cada botão social."
 
-#: includes/class-gllr-settings.php:933
+# automatic translation
+#: includes/class-gllr-settings.php:1062
 msgid "Demo Data"
-msgstr ""
+msgstr "Data da Demonstração"
 
-#: includes/class-gllr-settings.php:935
+# automatic translation
+#: includes/class-gllr-settings.php:1064
 msgid ""
 "Install demo data to create galleries with images, post with shortcodes and "
 "page with a list of all galleries."
 msgstr ""
+"Instale dados de demonstração para criar galerias com imagens, poste com "
+"códigos de acesso e página com uma lista de todas as galerias."
 
-# @ gallery
-#: includes/class-gllr-settings.php:973
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:1106
 msgid "Gallery Post Type"
-msgstr "Shortcode da Galeria"
+msgstr "Tipo de postagem na galeria"
 
-#: includes/class-gllr-settings.php:975
+# automatic translation
+#: includes/class-gllr-settings.php:1108
 msgid ""
 "Enable to avoid conflicts with other gallery plugins installed. All "
 "galleries created earlier will stay unchanged. However, after enabling we "
 "recommend to check settings of other plugins where \"gallery\" post type is "
 "used."
 msgstr ""
+"Ative para evitar conflitos com outros plugins de galeria instalados. Todas "
+"as galerias criadas anteriormente permanecerão inalteradas. No entanto, "
+"depois de habilitar, recomendamos verificar as configurações de outros "
+"plug-ins onde o tipo de postagem \"galeria\" é usado."
 
-# @ gallery
-#: includes/class-gllr-settings.php:987
-#, fuzzy
+# automatic translation
+#: includes/class-gllr-settings.php:1121
 msgid "Gallery Slug"
-msgstr "Galeria"
+msgstr "Galeria Slug"
 
-#: includes/class-gllr-settings.php:991
+# automatic translation
+#: includes/class-gllr-settings.php:1125
 msgid "Enter the unique gallery slug."
-msgstr ""
+msgstr "Digite o slug exclusivo da galeria."
 
-#: includes/class-gllr-settings.php:1007
+# automatic translation
+#: includes/class-gllr-settings.php:1129
+msgid "ShortPixel Image Optimizer"
+msgstr "Otimizador de imagem ShortPixel"
+
+# automatic translation
+#: includes/class-gllr-settings.php:1132
+msgid "Enable to apply ShortPixel optimizer to gallery images."
+msgstr "Ative para aplicar o otimizador ShortPixel às imagens da galeria."
+
+# automatic translation
+#: includes/class-gllr-settings.php:1137
+msgid "API Key"
+msgstr "Chave API"
+
+# automatic translation
+#: includes/class-gllr-settings.php:1141
+#, php-format
+msgid "Input API Key. If you don't have an API Key, please  %s "
+msgstr "Chave de API de entrada. Se você não tiver uma chave de API, por favor %s"
+
+# automatic translation
+#: includes/class-gllr-settings.php:1141
+msgid " sign up to get your API key"
+msgstr " inscreva-se para obter sua chave de API"
+
+# automatic translation
+#: includes/class-gllr-settings.php:1160
 msgid "Activate Now"
-msgstr ""
+msgstr "Ative agora"
 
-#: includes/class-gllr-settings.php:1025
+# automatic translation
+#: includes/class-gllr-settings.php:1180
 msgid "Enable to include galleries to your website search."
-msgstr ""
+msgstr "Ative para incluir galerias na pesquisa do seu site."
 
-#: includes/class-gllr-settings.php:1025
+# automatic translation
+#: includes/class-gllr-settings.php:1180
 #, php-format
 msgid "%s is required."
-msgstr ""
+msgstr "%s é obrigatório."
 
-#: includes/demo-data/class-bws-demo-data.php:33
+# automatic translation
+#: includes/class-gllr-widgets.php:26
+msgid "A list or dropdown of Gallery categories."
+msgstr "Uma lista ou lista suspensa de categorias da Galeria."
+
+# automatic translation
+#: includes/class-gllr-widgets.php:72
+msgid "Select Gallery Category"
+msgstr "Selecione a categoria da galeria"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:139
+msgid "Title:"
+msgstr "Título:"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:142
+msgid "Display as dropdown"
+msgstr "Exibir como menu suspenso"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:144
+msgid "Show gallery counts"
+msgstr "Mostrar contagem de galerias"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:146
+msgid "Show hierarchy"
+msgstr "Mostrar hierarquia"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:164
+msgid "Displays the latest galleries and a link to the Galleries page."
+msgstr "Exibe as galerias mais recentes e um link para a página Galerias."
+
+# automatic translation
+#: includes/class-gllr-widgets.php:166
+msgid "Latest Galleries"
+msgstr "Galerias mais recentes"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:251
+msgid "No galleries"
+msgstr "Sem galerias"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:288
+msgid "View more"
+msgstr "Veja mais"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:304
+msgid "Button Text"
+msgstr "Botão de texto"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:312
+msgid "Link to the Galleries Page"
+msgstr "Link para a página das galerias"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:327
+msgid "Number of Galleries to Display"
+msgstr "Número de galerias a serem exibidas"
+
+# automatic translation
+#: includes/class-gllr-widgets.php:341
+msgid "Gallery Hover Color"
+msgstr "Cor da Galeria"
+
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:35
 msgid "Install Demo Data"
-msgstr ""
+msgstr "Instalar dados de demonstração"
 
-#: includes/demo-data/class-bws-demo-data.php:36
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:38
 msgid "Remove Demo Data"
-msgstr ""
+msgstr "Remover dados de demonstração"
 
-#: includes/demo-data/class-bws-demo-data.php:37
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:39
 msgid "Delete demo data and restore old plugin settings."
 msgstr ""
+"Exclua os dados de demonstração e restaure as configurações antigas do "
+"plug-in."
 
-#: includes/demo-data/class-bws-demo-data.php:50
-msgid "Yes, install demo data"
-msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:51
-msgid "Are you sure you want to install demo data?"
-msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:53
-msgid "Yes, remove demo data"
-msgstr ""
-
+# automatic translation
 #: includes/demo-data/class-bws-demo-data.php:54
+#: includes/demo-data/class-bws-demo-data.php:628
+msgid "Yes, install demo data"
+msgstr "Sim, instale dados de demonstração"
+
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:55
+msgid "Are you sure you want to install demo data?"
+msgstr "Tem certeza de que deseja instalar os dados de demonstração?"
+
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:57
+msgid "Yes, remove demo data"
+msgstr "Sim, remover dados de demonstração"
+
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:58
 msgid "Are you sure you want to remove demo data?"
-msgstr ""
+msgstr "Tem certeza de que deseja remover os dados de demonstração?"
 
-# @ gallery
-#: includes/demo-data/class-bws-demo-data.php:61
-#, fuzzy
-msgid "No, go back to the settings page"
-msgstr "da página de configurações do plugin ("
-
-#: includes/demo-data/class-bws-demo-data.php:111
-msgid "Can not get demo data."
-msgstr ""
-
+# automatic translation
 #: includes/demo-data/class-bws-demo-data.php:118
+msgid "Can not get demo data."
+msgstr "Não é possível obter dados de demonstração."
+
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:125
 msgid "Demo settings already installed."
-msgstr ""
+msgstr "Configurações de demonstração já instaladas."
 
-#: includes/demo-data/class-bws-demo-data.php:367
-msgid "Demo data installed successfully."
-msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:369
-msgid "View post with shortcodes"
-msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:372
-msgid "View page with examples"
-msgstr ""
-
+# automatic translation
 #: includes/demo-data/class-bws-demo-data.php:383
+msgid "Demo data installed successfully."
+msgstr "Dados de demonstração instalados com sucesso."
+
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:385
+msgid "View post with shortcodes"
+msgstr "Ver postagem com códigos de acesso"
+
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:388
+msgid "View page with examples"
+msgstr "Ver página com exemplos"
+
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:401
 msgid "Installation of demo data with some errors occurred."
-msgstr ""
+msgstr "Ocorreu a instalação de dados de demonstração com alguns erros."
 
-#: includes/demo-data/class-bws-demo-data.php:386
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:404
 msgid "Posts data is missing."
-msgstr ""
+msgstr "Faltam dados de postagens."
 
-#: includes/demo-data/class-bws-demo-data.php:458
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:479
 msgid "Demo data have already been removed."
-msgstr ""
+msgstr "Os dados de demonstração já foram removidos."
 
-#: includes/demo-data/class-bws-demo-data.php:515
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:541
 msgid "Demo data successfully removed."
-msgstr ""
+msgstr "Dados de demonstração removidos com sucesso."
 
-#: includes/demo-data/class-bws-demo-data.php:519
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:545
 msgid "Removing demo data with some errors occurred."
-msgstr ""
+msgstr "Ocorreu a remoção de dados de demonstração com alguns erros."
 
-#: includes/demo-data/class-bws-demo-data.php:587
-msgid "Close notice"
-msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:593
+# automatic translation
+#: includes/demo-data/class-bws-demo-data.php:624
 #, php-format
+msgid "Do you want to install demo content and settings for %s now?"
+msgstr "Deseja instalar conteúdo de demonstração e configurações para %s agora?"
+
+# automatic translation
+#. Plugin Name of the plugin/theme
+msgid "Gallery by BestWebSoft"
+msgstr "Galeria por BestWebSoft"
+
+# automatic translation
+#. Plugin URI of the plugin/theme
+msgid "https://bestwebsoft.com/products/wordpress/plugins/gallery/"
+msgstr "https://bestwebsoft.com/products/wordpress/plugins/gallery/"
+
+# automatic translation
+#. Description of the plugin/theme
 msgid ""
-"Do you want to install demo content and settings for %s? (You can do this "
-"later using Import / Export settings)"
+"Add beautiful galleries, albums & images to your WordPress website in few "
+"clicks."
 msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:595
-msgid "Yes, install demo now"
-msgstr ""
-
-# @ gallery
-#, fuzzy
-#~ msgid ""
-#~ "Enable to display link to the original file under each image in the "
-#~ "lightbox."
-#~ msgstr "Exibir a imagem em tamanho original no Lightbox"
-
-# @ gallery
-#~ msgid "Download high resolution image"
-#~ msgstr "Download de imagem de alta resolução"
-
-# @ gallery
-#~ msgid "Image"
-#~ msgstr "Imagem"
-
-# @ gallery
-#, fuzzy
-#~ msgid "Download Original File"
-#~ msgstr "Download de imagem de alta resolução"
-
-# @ gallery
-#~ msgid "Default"
-#~ msgstr "Padrão"
-
-# @ gallery
-#, fuzzy
-#~ msgid "Enable social sharing buttons in the Lightbox."
-#~ msgstr "Exibir botões de Curtir no Lightbox"
-
-# @ gallery
-#, fuzzy
-#~ msgid "No image found."
-#~ msgstr "Nenhuma Galeria foi encontrada"
-
-# @ gallery
-#, fuzzy
-#~ msgid ""
-#~ "If you would like to add a Gallery to your page or post, please use %s "
-#~ "button"
-#~ msgstr ""
-#~ "Se você quiser adicionar uma Galeria específica em sua página ou post, "
-#~ "basta copiar e colar este shortcode em seu post ou página:"
-
-# @ gallery
-#, fuzzy
-#~ msgid ""
-#~ "Use this shortcode to display an album image with the description and the "
-#~ "link to a single gallery page"
-#~ msgstr ""
-#~ "Se você quiser mostrar uma breve descrição contendo a miniatura e o link "
-#~ "para a Página da Galeria use assim"
-
-# @ gallery
-#, fuzzy
-#~ msgid "Photos"
-#~ msgstr "Foto"
-
-# @ gallery
-#, fuzzy
-#~ msgid "All plugin settings were restored."
-#~ msgstr "da página de configurações do plugin ("
-
-# @ gallery
-#, fuzzy
-#~ msgid "Please enable JavaScript to use the option to renew images."
-#~ msgstr "Favor havilitar o Javascript para usar o envio de arquivos."
-
-# @ gallery
-#, fuzzy
-#~ msgid ""
-#~ "The number of images per row can be less depending on the width of the "
-#~ "parent block"
-#~ msgstr "Número de imagens por linha"
-
-# @ gallery
-#~ msgid ""
-#~ "WordPress will create a new thumbnail with the specified dimensions when "
-#~ "you upload a new photo."
-#~ msgstr ""
-#~ "WordPress irá criar uma nova miniatura com os tamanhos especificados "
-#~ "quando você enviar uma nova foto."
-
-# @ gallery
-#, fuzzy
-#~ msgid "For the album cover"
-#~ msgstr "Tamanho da imagem de capa do álbum"
-
-# @ gallery
-#, fuzzy
-#~ msgid "For images in the lightbox"
-#~ msgstr "Tamanho da imagem da galeria no Lightbox"
-
-# @ gallery
-#~ msgid "Display a full size image in the lightbox"
-#~ msgstr "Exibir a imagem em tamanho original no Lightbox"
-
-# @ gallery
-#~ msgid "center"
-#~ msgstr "centro"
-
-# @ gallery
-#~ msgid "Horizontal"
-#~ msgstr "Horizontal"
-
-# @ gallery
-#~ msgid "Vertical"
-#~ msgstr "Vertical"
-
-# @ gallery
-#, fuzzy
-#~ msgid ""
-#~ "Turn off the checkbox, if you want to display image title just in a "
-#~ "lightbox"
-#~ msgstr ""
-#~ "Desmarque a caixa de seleção, se você deseja mostrar texto apenas numa "
-#~ "lightbox"
-
-# @ gallery
-#~ msgid "Border width in px, just numbers"
-#~ msgstr "Largura da borda em px, apenas os números"
-
-# @ gallery
-#, fuzzy
-#~ msgid "by Attachment ID"
-#~ msgstr "ID do anexo"
-
-# @ gallery
-#, fuzzy
-#~ msgid "by Image Name"
-#~ msgstr "Nome da Imagem"
-
-# @ gallery
-#, fuzzy
-#~ msgid "by Date"
-#~ msgstr "Data"
-
-# @ gallery
-#~ msgid ""
-#~ "ASC (ascending order from lowest to highest values - 1, 2, 3; a, b, c)"
-#~ msgstr ""
-#~ "ASC (ordem crescente dos valores mais baixos para os mais altos - 1, 2, "
-#~ "3; a, b, c)"
-
-# @ gallery
-#~ msgid ""
-#~ "DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
-#~ msgstr ""
-#~ "DESC (ordem decrescente dos valores mais altos para os mais baixos - 3, "
-#~ "2, 1; c, b, a)"
-
-# @ gallery
-#, fuzzy
-#~ msgid "Sort galleries"
-#~ msgstr "Galerias"
-
-# @ gallery
-#, fuzzy
-#~ msgid "by Title"
-#~ msgstr "Título"
-
-# @ gallery
-#, fuzzy
-#~ msgid "by Author"
-#~ msgstr "Autor"
-
-# @ gallery
-#~ msgid "Display the Back link"
-#~ msgstr "Exibir o link Voltar"
-
-# @ gallery
-#~ msgid "The Back link text"
-#~ msgstr "Texto do link Voltar"
-
-# @ gallery
-#~ msgid "Gallery page (Page with Gallery Template)"
-#~ msgstr "Página da Galeria (página usando o Modelo de Galeria)"
-
-# @ gallery
-#~ msgid "(Full URL to custom page)"
-#~ msgstr "(URL completa para a página personalizada)"
-
-# @ gallery
-#, fuzzy
-#~ msgid "Single gallery view"
-#~ msgstr "Slug para o item da galeria"
-
-# @ gallery
-#~ msgid "Lightbox background"
-#~ msgstr "Fundo do Lightbox"
-
-# @ gallery
-#~ msgid "Background transparency (from 0 to 1)"
-#~ msgstr "Transparência de background (de 0 a 1)"
-
-# @ gallery
-#~ msgid "FaceBook"
-#~ msgstr "Facebook"
-
-# @ gallery
-#~ msgid "Twitter"
-#~ msgstr "Twitter"
-
-# @ gallery
-#~ msgid "Pinterest"
-#~ msgstr "Pinterest"
-
-# @ gallery
-#~ msgid "Google +1"
-#~ msgstr "Google +1"
-
-# @ gallery
-#~ msgid "Slug for gallery item"
-#~ msgstr "Slug para o item da galeria"
-
-# @ gallery
-#~ msgid "for any structure of permalinks except the default structure"
-#~ msgstr ""
-#~ "para qualquer estrutura de links permanentes, exceto a estrutura padrão"
-
-# @ default
-#~ msgid "Save Changes"
-#~ msgstr "Salvar Alterações"
-
-# @ gallery
-#, fuzzy
-#~ msgid "Edit Attachment"
-#~ msgstr "ID do anexo"
-
-# @ gallery
-#~ msgid "This setting is available in Pro version"
-#~ msgstr "Esta configuração está disponível na versão Pro"
-
-# @ gallery
-#, fuzzy
-#~ msgid ""
-#~ "The following files '%s' and '%s' were not found in the directory of your "
-#~ "theme. Please copy them from the directory `%s` to the directory of your "
-#~ "theme for the correct work of the Gallery plugin"
-#~ msgstr ""
-#~ "Os seguintes arquivos \"gallery-template.php\" e \"gallery-single-"
-#~ "template.php\" não foram encontrados no diretório do seu tema. Por favor, "
-#~ "copie-os a partir do diretório `/wp-content/plugins/gallery-plugin/"
-#~ "template/` para o diretório do seu tema para que o plugin Galeria "
-#~ "funcione corretamente"
-
-# @ gallery
-#~ msgid "Select a background color"
-#~ msgstr "Selecionar uma cor de fundo"
-
-# @ gallery
-#~ msgid "Width (in px)"
-#~ msgstr "Largura (em px)"
-
-# @ gallery
-#~ msgid "Height (in px)"
-#~ msgstr "Altura (em px)"
-
-# @ gallery
-#~ msgid "Max width (in px)"
-#~ msgstr "Largura máxima (em px)"
-
-# @ gallery
-#~ msgid "Max height (in px)"
-#~ msgstr "Altura máxima (em px)"
-
-# @ gallery
-#, fuzzy
-#~ msgid "Display text under the image"
-#~ msgstr "Mostrar texto acima da imagem"
-
-# @ gallery
-#, fuzzy
-#~ msgid "Uploaded on"
-#~ msgstr "Enviar Arquivo"
-
-# @ gallery
-#~ msgid "(by click on image opens a link in a new window)"
-#~ msgstr "(clicar na imagem abre um link em uma nova janela)"
-
-# @ gallery
-#~ msgid "Add a Gallery"
-#~ msgstr "Adicionar uma Galeria"
-
-# @ gallery
-#~ msgid "Find a Gallery"
-#~ msgstr "Encontre uma Galeria"
-
-# @ gallery
-#~ msgid ""
-#~ "The gallery temp directory (gallery-plugin/upload/files) is not available "
-#~ "for record on your webserver. Please use the standard WP functionality to "
-#~ "upload images (media library)"
-#~ msgstr ""
-#~ "O diretório temporário da Galeria (gallery-plugin/upload/files) não está "
-#~ "disponível para escrita em seu servidor Web. Por favor, utilize o método "
-#~ "padrão do WP para fazer upload de imagens (biblioteca de mídia)"
-
-# @ gallery
-#~ msgid "Choose an image for upload:"
-#~ msgstr "Escolha uma imagem para fazer upload:"
-
-# @ gallery
-#~ msgid "Allow the download link for all images in this gallery"
-#~ msgstr "Permitir o link de download para todas as imagens nesta galeria"
-
-# @ gallery
-#~ msgid ""
-#~ "Please use the drag and drop function to change an order of the images "
-#~ "displaying and do not forget to save the post."
-#~ msgstr ""
-#~ "Por favor, use a função arrastar e soltar para alterar a ordem de "
-#~ "exibição das imagens e não se esqueça de salvar o post."
-
-# @ gallery
-#~ msgid "Please make a choice"
-#~ msgstr "Por favor, faça uma escolha"
-
-# @ gallery
-#~ msgid "sort images"
-#~ msgstr "ordenar imagens"
-
-# @ gallery
-#~ msgid "on the plugin settings page ("
-#~ msgstr "da página de configurações do plugin ("
-
-# @ gallery
-#, fuzzy
-#~ msgid "Open the URL"
-#~ msgstr "Abrir o link"
+"Adicione belas galerias, álbuns e imagens ao seu site WordPress em poucos "
+"cliques."
+
+# automatic translation
+#. Author of the plugin/theme
+msgid "BestWebSoft"
+msgstr "BestWebSoft"
+
+# automatic translation
+#. Author URI of the plugin/theme
+msgid "https://bestwebsoft.com/"
+msgstr "https://bestwebsoft.com/"

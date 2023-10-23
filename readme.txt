@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
 Requires at least: 5.6
-Tested up to: 6.1.1
-Stable tag: 4.7.0
+Tested up to: 6.3.1
+Stable tag: 4.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -238,6 +238,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 11. The adding of the Latest Galleries widget.
 
 == Changelog ==
+
+= V4.7.1 - 23.10.2023 =
+* Update : All functionality was updated for WordPress 6.3.1
+* Update : BWS Panel section was updated.
+* Update : Updated fansybox library.
+* NEW : Ability to display arrows in the lightbox has been added.
 
 = V4.7.0 - 23.03.2023 =
 * Update : All functionality was updated for WordPress 6.1.1
@@ -728,6 +734,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.7.1 =
+* The compatibility with new WordPress version updated.
+* Usability improved.
 
 = V4.7.0 =
 * The compatibility with new WordPress version updated.

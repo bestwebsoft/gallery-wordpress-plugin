@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gallery by BestWebSoft\n"
-"PO-Revision-Date: 2023-04-04 15:40+0300\n"
+"PO-Revision-Date: 2023-04-13 14:59+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: es_ES\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: gallery-plugin.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -24,68 +24,66 @@ msgstr ""
 # automatic translation
 #: bws_menu/bws_functions.php:85 bws_menu/bws_functions.php:283
 msgid "requires"
-msgstr "requiere"
+msgstr "必要"
 
 # automatic translation
 #: bws_menu/bws_functions.php:87
 msgid ""
 "or higher, that is why it has been deactivated! Please upgrade WordPress "
 "and try again."
-msgstr ""
-"o superior, ¡por eso se ha desactivado! Actualice WordPress y vuelva a "
-"intentarlo."
+msgstr "それ以上の場合、それが非アクティブ化された理由です! WordPress をアップグレードしてから、もう一度お試しください。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:88
 msgid "Back to the WordPress"
-msgstr "Volver a WordPress"
+msgstr "ワードプレスに戻る"
 
 # automatic translation
 #: bws_menu/bws_functions.php:90
 msgid "Plugins page"
-msgstr "Página de complementos"
+msgstr "プラグインページ"
 
 # automatic translation
 #: bws_menu/bws_functions.php:112
 msgid "Like the plugin?"
-msgstr "¿Te gusta el complemento?"
+msgstr "プラグインが好きですか？"
 
 # automatic translation
 #: bws_menu/bws_functions.php:113
 #, php-format
 msgid "%s reviews"
-msgstr "%s reseñas"
+msgstr "%s 件のレビュー"
 
 # automatic translation
 #: bws_menu/bws_functions.php:114
 msgid "Rate it"
-msgstr "Puntúalo"
+msgstr "それを評価"
 
 # automatic translation
 #: bws_menu/bws_functions.php:123
 msgid "Need help?"
-msgstr "¿Necesitas ayuda?"
+msgstr "助けが必要？"
 
 # automatic translation
 #: bws_menu/bws_functions.php:124 bws_menu/bws_functions.php:1189
 #: bws_menu/class-bws-settings.php:1193
 msgid "Visit Help Center"
-msgstr "Visite el Centro de ayuda"
+msgstr "ヘルプセンターにアクセス"
 
 # automatic translation
 #: bws_menu/bws_functions.php:127
 msgid "Want to support the plugin?"
-msgstr "¿Quieres apoyar el complemento?"
+msgstr "プラグインをサポートしたいですか？"
 
 # automatic translation
 #: bws_menu/bws_functions.php:128 bws_menu/bws_menu.php:659
 msgid "Donate"
-msgstr "Donar"
+msgstr "寄付"
 
 # automatic translation
 #: bws_menu/bws_functions.php:155
 msgid "WARNING: Illegal use notification"
-msgstr "ADVERTENCIA: notificación de uso ilegal"
+msgstr "警告: 不正使用の通知"
 
 # automatic translation
 #: bws_menu/bws_functions.php:155
@@ -95,55 +93,50 @@ msgid ""
 "Area. We strongly recommend you to solve the problem within 24 hours, "
 "otherwise the Pro plugin will be deactivated."
 msgstr ""
-"Puede usar una licencia del complemento Pro solo para un dominio. Verifique "
-"y edite su licencia o dominio si es necesario utilizando su Área de Cliente "
-"personal. Le recomendamos encarecidamente que resuelva el problema dentro "
-"de las 24 horas, de lo contrario, el complemento Pro se desactivará."
+"Pro プラグインの 1 つのライセンスは、1 つのドメインに対してのみ使用できます。必要に応じて、個人のクライアント "
+"エリアを使用してライセンスまたはドメインを確認し、編集してください。 24 時間以内に問題を解決することを強くお勧めします。そうしないと、Pro "
+"プラグインが無効になります。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:155 bws_menu/bws_functions.php:247
 #: bws_menu/bws_menu.php:754 bws_menu/class-bws-settings.php:189
 msgid "Learn More"
-msgstr "Aprende más"
+msgstr "もっと詳しく知る"
 
 # automatic translation
 #: bws_menu/bws_functions.php:174
 msgid ""
 "Notice: Your Pro Trial license has expired. To continue using the plugin, "
 "you should buy a Pro license"
-msgstr ""
-"Aviso: Su licencia Pro Trial ha caducado. Para continuar usando el "
-"complemento, debe comprar una licencia Pro"
+msgstr "注意: Pro トライアル ライセンスの有効期限が切れています。プラグインを引き続き使用するには、Pro ライセンスを購入する必要があります"
 
 # automatic translation
 #: bws_menu/bws_functions.php:176
 msgid ""
 "Your license has expired. To continue getting top-priority support and "
 "plugin updates, you should extend it."
-msgstr ""
-"Su licencia ha expirado. Para continuar recibiendo soporte de máxima "
-"prioridad y actualizaciones de complementos, debe extenderlo."
+msgstr "ライセンスの有効期限が切れています。最優先のサポートとプラグインの更新を引き続き取得するには、延長する必要があります。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:176 bws_menu/bws_functions.php:267
 msgid "Learn more"
-msgstr "Aprende más"
+msgstr "もっと詳しく知る"
 
 # automatic translation
 #: bws_menu/bws_functions.php:196
 #, php-format
 msgid "Notice: You are using the Pro Trial license of %s plugin."
-msgstr "Aviso: está utilizando la licencia Pro Trial del complemento %s."
+msgstr "注意: %s プラグインのプロ トライアル ライセンスを使用しています。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:198
 msgid "Notice: You are using the Pro Trial license of plugin."
-msgstr "Aviso: está utilizando la licencia Pro Trial del complemento."
+msgstr "注意: プラグインのプロ トライアル ライセンスを使用しています。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:201
 msgid "The Pro Trial license will expire on"
-msgstr "La licencia Pro Trial caducará el"
+msgstr "プロ トライアル ライセンスの有効期限は次のとおりです。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:238 bws_menu/bws_functions.php:263
@@ -151,29 +144,27 @@ msgstr "La licencia Pro Trial caducará el"
 #: bws_menu/bws_functions.php:560 bws_menu/bws_functions.php:593
 #: includes/demo-data/class-bws-demo-data.php:617
 msgid "Close notice"
-msgstr "Cerrar aviso"
+msgstr "お知らせを閉じる"
 
 # automatic translation
 #: bws_menu/bws_functions.php:243
 msgid "It’s time to upgrade your"
-msgstr "Es hora de actualizar tu"
+msgstr "アップグレードする時が来ました"
 
 # automatic translation
 #: bws_menu/bws_functions.php:243
 msgid "to"
-msgstr "a"
+msgstr "に"
 
 # automatic translation
 #: bws_menu/bws_functions.php:243
 msgid "version!"
-msgstr "¡versión!"
+msgstr "バージョン！"
 
 # automatic translation
 #: bws_menu/bws_functions.php:244
 msgid "Extend standard plugin functionality with new great options."
-msgstr ""
-"Amplíe la funcionalidad del complemento estándar con nuevas opciones "
-"excelentes."
+msgstr "新しい優れたオプションで標準のプラグイン機能を拡張します。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:267
@@ -181,29 +172,25 @@ msgstr ""
 msgid ""
 "Your license key for %1$s expires on %2$s and you won't be granted "
 "TOP-PRIORITY SUPPORT or UPDATES."
-msgstr ""
-"Su clave de licencia para %1$s vence el %2$sy no se le otorgará SOPORTE DE "
-"PRIMERA PRIORIDAD ni ACTUALIZACIONES."
+msgstr "%1$s のライセンス キーは %2$s に期限切れになり、最優先のサポートまたは更新は許可されません。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:285
 msgid ""
 "or higher! We do not guarantee that our plugin will work correctly. Please "
 "upgrade to WordPress latest version."
-msgstr ""
-"¡o mas alto! No garantizamos que nuestro complemento funcione "
-"correctamente. Actualice a la última versión de WordPress."
+msgstr "以上！プラグインが正しく動作することを保証するものではありません。 WordPress の最新バージョンにアップグレードしてください。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:303
 #, php-format
 msgid "Thank you for installing %s plugin!"
-msgstr "¡Gracias por instalar el complemento %s!"
+msgstr "%s プラグインをインストールしていただきありがとうございます!"
 
 # automatic translation
 #: bws_menu/bws_functions.php:305
 msgid "Let's get started"
-msgstr "Empecemos"
+msgstr "始めましょう"
 
 # automatic translation
 #: bws_menu/bws_functions.php:306 bws_menu/bws_functions.php:339
@@ -211,149 +198,143 @@ msgstr "Empecemos"
 #: gallery-plugin.php:2063 includes/class-gllr-settings.php:29
 #: includes/class-gllr-settings.php:46
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "設定"
 
 # automatic translation
 #: bws_menu/bws_functions.php:308 bws_menu/bws_menu.php:377
 #: bws_menu/class-bws-settings.php:908 bws_menu/class-bws-settings.php:1196
 #: bws_menu/class-bws-settings.php:1209 bws_menu/deprecated.php:260
 msgid "or"
-msgstr "o"
+msgstr "また"
 
 # automatic translation
 #: bws_menu/bws_functions.php:309 bws_menu/bws_functions.php:341
 msgid "Add New"
-msgstr "Agregar nuevo"
+msgstr "新しく追加する"
 
 # automatic translation
 #: bws_menu/bws_functions.php:328
 msgid "Thank you for installing plugins by BestWebSoft!"
-msgstr "¡Gracias por instalar complementos de BestWebSoft!"
+msgstr "BestWebSoft のプラグインをインストールしていただきありがとうございます。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:330
 msgid "More Details"
-msgstr "Más detalles"
+msgstr "詳細"
 
 # automatic translation
 #: bws_menu/bws_functions.php:331
 msgid "Less Details"
-msgstr "Menos detalles"
+msgstr "詳細を非表示"
 
 # automatic translation
 #: bws_menu/bws_functions.php:362
 msgid "Deprecated function(-s) is used on the site here:"
-msgstr "La(s) función(es) obsoleta(s) se usa(n) en el sitio aquí:"
+msgstr "非推奨の関数 (-s) は、次のサイトで使用されています。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:380
 msgid "This function(-s) will be removed over time. Please update the product(-s)."
-msgstr "Esta(s) función(es) se eliminarán con el tiempo. Actualice los productos."
+msgstr "この機能 (-s) は、時間の経過とともに削除されます。製品を更新してください(-s)。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:555
 #, php-format
 msgid "Thank you for choosing %s plugin!"
-msgstr "¡Gracias por elegir el complemento %s!"
+msgstr "%s プラグインをお選びいただきありがとうございます!"
 
 # automatic translation
 #: bws_menu/bws_functions.php:556
 msgid ""
 "If you have a feature, suggestion or idea you'd like to see in the plugin, "
 "we'd love to hear about it!"
-msgstr ""
-"Si tiene una característica, sugerencia o idea que le gustaría ver en el "
-"complemento, ¡nos encantaría saberlo!"
+msgstr "プラグインに追加してほしい機能、提案、またはアイデアがあれば、ぜひお知らせください。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:557
 msgid "Suggest a Feature"
-msgstr "Sugerir una función"
+msgstr "機能を提案する"
 
 # automatic translation
 #: bws_menu/bws_functions.php:598
 msgid "Affiliate Program"
-msgstr "programa de afiliación"
+msgstr "アフィリエイトプログラム"
 
 # automatic translation
 #: bws_menu/bws_functions.php:599
 #, php-format
 msgid "Get %s"
-msgstr "Obtiene"
+msgstr "取得"
 
 # automatic translation
 #: bws_menu/bws_functions.php:600
 msgid "from each BestWebSoft plugin and theme sale you refer"
-msgstr "de cada complemento BestWebSoft y venta de temas que recomiende"
+msgstr "あなたが参照する各BestWebSoftプラグインとテーマの販売から"
 
 # automatic translation
 #: bws_menu/bws_functions.php:604
 msgid "Join affiliate program"
-msgstr "Únase al programa de afiliados"
+msgstr "アフィリエイト プログラムに参加する"
 
 # automatic translation
 #: bws_menu/bws_functions.php:608
 msgid "Promote and sell products"
-msgstr "Promocionar y vender productos"
+msgstr "製品の宣伝と販売"
 
 # automatic translation
 #: bws_menu/bws_functions.php:612
 msgid "Get commission!"
-msgstr "¡Consigue comisión!"
+msgstr "コミッションをゲット！"
 
 # automatic translation
 #: bws_menu/bws_functions.php:617
 msgid "Start Now"
-msgstr "Empezar ahora"
+msgstr "今すぐ開始"
 
 # automatic translation
 #: bws_menu/bws_functions.php:634 bws_menu/class-bws-settings.php:640
 #: bws_menu/class-bws-settings.php:645 bws_menu/class-bws-settings.php:714
 #: bws_menu/class-bws-settings.php:719
 msgid "Notice"
-msgstr "Aviso"
+msgstr "知らせ"
 
 # automatic translation
 #: bws_menu/bws_functions.php:634
 msgid "The plugin's settings have been changed."
-msgstr "Se ha cambiado la configuración del complemento."
+msgstr "プラグインの設定が変更されました。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:635 bws_menu/class-bws-settings.php:235
 #: bws_menu/class-bws-settings.php:263
 msgid "Save Changes"
-msgstr "Guardar cambios"
+msgstr "変更内容を保存"
 
 # automatic translation
 #: bws_menu/bws_functions.php:656
 msgid ""
 "You can always look at premium options by checking the \"Pro Options\" in "
 "the \"Misc\" tab."
-msgstr ""
-"Siempre puede ver las opciones premium marcando las \"Opciones "
-"profesionales\" en la pestaña \"Misc\"."
+msgstr "「その他」タブの「プロ オプション」をチェックすると、いつでもプレミアム オプションを確認できます。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:838
 msgid "Add BWS Shortcode"
-msgstr "Agregar código abreviado BWS"
+msgstr "BWSショートコードを追加"
 
 # automatic translation
 #: bws_menu/bws_functions.php:839
 msgid "Add BWS Plugins Shortcode"
-msgstr "Agregar código abreviado de complementos BWS"
+msgstr "BWS プラグイン ショートコードを追加する"
 
 # automatic translation
 #: bws_menu/bws_functions.php:861
 msgid "Add shortcode"
-msgstr "Añadir código abreviado"
+msgstr "ショートコードを追加"
 
 # automatic translation
 #: bws_menu/bws_functions.php:861
 msgid "Add BestWebSoft plugins' shortcodes using this button."
-msgstr ""
-"Agregue los códigos abreviados de los complementos de BestWebSoft usando "
-"este botón."
+msgstr "このボタンを使用して、BestWebSoft プラグインのショートコードを追加します。"
 
 # automatic translation
 #: bws_menu/bws_functions.php:970 includes/class-gllr-settings.php:384
@@ -363,70 +344,70 @@ msgstr ""
 #: includes/class-gllr-settings.php:946 includes/class-gllr-settings.php:1020
 #: includes/class-gllr-settings.php:1117
 msgid "Close"
-msgstr "Cerca"
+msgstr "近い"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1062
 msgid "Are you sure you want to restore default settings?"
-msgstr "¿Está seguro de que desea restaurar la configuración predeterminada?"
+msgstr "デフォルト設定を復元してもよろしいですか?"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1065
 msgid "Yes, restore all settings"
-msgstr "Sí, restaurar todas las configuraciones"
+msgstr "はい、すべての設定を復元します"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1066
 #: includes/demo-data/class-bws-demo-data.php:66
 msgid "No, go back to the settings page"
-msgstr "No, vuelve a la página de configuración"
+msgstr "いいえ、設定ページに戻ります"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1128
 msgid "Plugin"
-msgstr "Enchufar"
+msgstr "プラグイン"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1137
 msgid "Shortcode settings"
-msgstr "Configuración de código corto"
+msgstr "ショートコードの設定"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1142
 msgid "The shortcode will be inserted"
-msgstr "Se insertará el código abreviado"
+msgstr "ショートコードが挿入されます"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1194 gallery-plugin.php:2045
 msgid "FAQ"
-msgstr "Preguntas más frecuentes"
+msgstr "よくある質問"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1200
 msgid "For more information:"
-msgstr "Para más información:"
+msgstr "詳細については："
 
 # automatic translation
 #: bws_menu/bws_functions.php:1201 bws_menu/bws_menu.php:475
 #: bws_menu/class-bws-settings.php:870
 msgid "Documentation"
-msgstr "Documentación"
+msgstr "ドキュメンテーション"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1202 bws_menu/bws_menu.php:477
 #: bws_menu/class-bws-settings.php:872
 msgid "Video Instructions"
-msgstr "Instrucciones en vídeo"
+msgstr "ビデオの説明"
 
 # automatic translation
 #: bws_menu/bws_functions.php:1203
 msgid "Submit a Request"
-msgstr "Presentar una solicitud"
+msgstr "リクエストを送信"
 
 # automatic translation
 #: bws_menu/bws_menu.php:105 bws_menu/class-bws-settings.php:971
 msgid "Wrong license key"
-msgstr "Clave de licencia incorrecta"
+msgstr "間違ったライセンス キー"
 
 # automatic translation
 #: bws_menu/bws_menu.php:127 bws_menu/class-bws-settings.php:997
@@ -434,41 +415,37 @@ msgstr "Clave de licencia incorrecta"
 msgid ""
 "Something went wrong. Please try again later. If the error appears again, "
 "please contact us"
-msgstr ""
-"Algo salió mal. Por favor, inténtelo de nuevo más tarde. Si el error vuelve "
-"a aparecer, por favor contáctenos"
+msgstr "エラーが発生しました。後でもう一度やり直してください。再度エラーが表示される場合は、弊社までご連絡ください"
 
 # automatic translation
 #: bws_menu/bws_menu.php:127 bws_menu/class-bws-settings.php:997
 #: bws_menu/class-bws-settings.php:1074 bws_menu/class-bws-settings.php:1112
 msgid "We are sorry for inconvenience."
-msgstr "Lamentamos las molestias."
+msgstr "ご不便をおかけして申し訳ございません。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:134 bws_menu/class-bws-settings.php:1003
 #: bws_menu/class-bws-settings.php:1118
 msgid "Wrong license key."
-msgstr "Clave de licencia incorrecta."
+msgstr "ライセンスキーが間違っています。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:136
 msgid ""
 "This license key is bound to another site. Change it via personal Client "
 "Area."
-msgstr ""
-"Esta clave de licencia está vinculada a otro sitio. Cámbialo a través del "
-"Área de Cliente personal."
+msgstr "このライセンス キーは別のサイトにバインドされています。パーソナル クライアント エリアから変更します。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:136
 msgid "Log in"
-msgstr "Acceso"
+msgstr "ログイン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:138 bws_menu/bws_menu.php:385
 #: bws_menu/deprecated.php:172
 msgid "Unfortunately, you have exceeded the number of available tries per day."
-msgstr "Desafortunadamente, ha excedido el número de intentos disponibles por día."
+msgstr "残念ながら、1 日に利用できる試行回数を超えました。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:140
@@ -476,63 +453,56 @@ msgstr "Desafortunadamente, ha excedido el número de intentos disponibles por d
 msgid ""
 "Unfortunately, Your license has expired. To continue getting top-priority "
 "support and plugin updates, you should extend it in your %s"
-msgstr ""
-"Lamentablemente, su licencia ha caducado. Para continuar recibiendo soporte "
-"de máxima prioridad y actualizaciones de complementos, debe ampliarlo en su "
-"%s"
+msgstr "残念ながら、ライセンスの有効期限が切れています。最優先のサポートとプラグインの更新を引き続き取得するには、%s で拡張する必要があります"
 
 # automatic translation
 #: bws_menu/bws_menu.php:142 bws_menu/class-bws-settings.php:1126
 msgid ""
 "Unfortunately, the Pro licence was already installed to this domain. The "
 "Pro Trial license can be installed only once."
-msgstr ""
-"Desafortunadamente, la licencia Pro ya estaba instalada en este dominio. La "
-"licencia Pro Trial solo se puede instalar una vez."
+msgstr "残念ながら、Pro ライセンスは既にこのドメインにインストールされています。 Pro Trial ライセンスは 1 回のみインストールできます。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:148 bws_menu/class-bws-settings.php:1018
 msgid "The license key is valid."
-msgstr "La clave de licencia es válida."
+msgstr "ライセンスキーは有効です。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:150 bws_menu/class-bws-settings.php:1022
 msgid "Your license will expire on"
-msgstr "Su licencia caducará el"
+msgstr "ライセンスの有効期限は次のとおりです"
 
 # automatic translation
 #: bws_menu/bws_menu.php:153
 msgid "Congratulations! Pro Membership license is activated successfully."
-msgstr "¡Felicidades! La licencia de Membresía Pro se activó con éxito."
+msgstr "おめでとう！プロ メンバーシップ ライセンスが正常にアクティブ化されました。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:160 bws_menu/class-bws-settings.php:1136
 msgid ""
 "Something went wrong. Try again later or upload the plugin manually. We are "
 "sorry for inconvenience."
-msgstr ""
-"Algo salió mal. Vuelva a intentarlo más tarde o cargue el complemento "
-"manualmente. Lamentamos las molestias."
+msgstr "エラーが発生しました。後で再試行するか、プラグインを手動でアップロードしてください。ご不便をおかけして申し訳ございません。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:171
 msgid "Please enter your license key."
-msgstr "Por favor, introduzca su clave de licencia."
+msgstr "ライセンスキーを入力してください。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:183
 msgid "Not set"
-msgstr "no establecido"
+msgstr "設定されていません"
 
 # automatic translation
 #: bws_menu/bws_menu.php:186
 msgid "On"
-msgstr "En"
+msgstr "の上"
 
 # automatic translation
 #: bws_menu/bws_menu.php:186
 msgid "Off"
-msgstr "Apagado"
+msgstr "オフ"
 
 # automatic translation
 #: bws_menu/bws_menu.php:187 bws_menu/bws_menu.php:188
@@ -540,232 +510,232 @@ msgstr "Apagado"
 #: bws_menu/bws_menu.php:191 bws_menu/bws_menu.php:192
 #: bws_menu/bws_menu.php:201
 msgid "N/A"
-msgstr "N / A"
+msgstr "なし"
 
 # automatic translation
 #: bws_menu/bws_menu.php:192
 msgid "Mb"
-msgstr "megabyte"
+msgstr "メガバイト"
 
 # automatic translation
 #: bws_menu/bws_menu.php:193 bws_menu/bws_menu.php:194
 #: bws_menu/bws_menu.php:195 bws_menu/bws_menu.php:199
 msgid "Yes"
-msgstr "Sí"
+msgstr "はい"
 
 # automatic translation
 #: bws_menu/bws_menu.php:193 bws_menu/bws_menu.php:194
 #: bws_menu/bws_menu.php:195 bws_menu/bws_menu.php:199
 msgid "No"
-msgstr "No"
+msgstr "いいえ"
 
 # automatic translation
 #: bws_menu/bws_menu.php:206
 msgid "WordPress Environment"
-msgstr "Entorno de WordPress"
+msgstr "WordPress 環境"
 
 # automatic translation
 #: bws_menu/bws_menu.php:208
 msgid "Home URL"
-msgstr "URL de inicio"
+msgstr "ホーム URL"
 
 # automatic translation
 #: bws_menu/bws_menu.php:209
 msgid "Website URL"
-msgstr "URL del sitio web"
+msgstr "ウェブサイトのURL"
 
 # automatic translation
 #: bws_menu/bws_menu.php:210
 msgid "WP Version"
-msgstr "Versión de trabajo en equipo"
+msgstr "WP版"
 
 # automatic translation
 #: bws_menu/bws_menu.php:211
 msgid "WP Multisite"
-msgstr "WP multisitio"
+msgstr "WP マルチサイト"
 
 # automatic translation
 #: bws_menu/bws_menu.php:212
 msgid "WP Memory Limit"
-msgstr "Límite de memoria de WP"
+msgstr "WP メモリ制限"
 
 # automatic translation
 #: bws_menu/bws_menu.php:213
 msgid "Active Theme"
-msgstr "Tema activo"
+msgstr "アクティブなテーマ"
 
 # automatic translation
 #: bws_menu/bws_menu.php:213 bws_menu/bws_menu.php:258
 #: bws_menu/bws_menu.php:261
 #, php-format
 msgid "by %s"
-msgstr "por %s"
+msgstr "%sによる"
 
 # automatic translation
 #: bws_menu/bws_menu.php:217
 msgid "Server Environment"
-msgstr "Entorno del servidor"
+msgstr "サーバー環境"
 
 # automatic translation
 #: bws_menu/bws_menu.php:219
 msgid "Operating System"
-msgstr "Sistema operativo"
+msgstr "オペレーティング·システム"
 
 # automatic translation
 #: bws_menu/bws_menu.php:220
 msgid "Server"
-msgstr "Servidor"
+msgstr "サーバ"
 
 # automatic translation
 #: bws_menu/bws_menu.php:221
 msgid "PHP Version"
-msgstr "Versión PHP"
+msgstr "PHP バージョン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:222
 msgid "PHP Allow URL fopen"
-msgstr "PHP Permitir URL fopen"
+msgstr "PHP 許可 URL fopen"
 
 # automatic translation
 #: bws_menu/bws_menu.php:223
 msgid "PHP Memory Limit"
-msgstr "Límite de memoria PHP"
+msgstr "PHP メモリ制限"
 
 # automatic translation
 #: bws_menu/bws_menu.php:224
 msgid "Memory Usage"
-msgstr "Uso de memoria"
+msgstr "メモリ使用量"
 
 # automatic translation
 #: bws_menu/bws_menu.php:225
 msgid "PHP Max Upload Size"
-msgstr "Tamaño máximo de carga de PHP"
+msgstr "PHP 最大アップロード サイズ"
 
 # automatic translation
 #: bws_menu/bws_menu.php:226
 msgid "PHP Max Post Size"
-msgstr "Tamaño máximo de publicación de PHP"
+msgstr "PHP 最大投稿サイズ"
 
 # automatic translation
 #: bws_menu/bws_menu.php:227
 msgid "PHP Max Script Execute Time"
-msgstr "Tiempo máximo de ejecución del script PHP"
+msgstr "PHP スクリプトの最大実行時間"
 
 # automatic translation
 #: bws_menu/bws_menu.php:228
 msgid "PHP Exif support"
-msgstr "Compatibilidad con PHP Exif"
+msgstr "PHP Exif のサポート"
 
 # automatic translation
 #: bws_menu/bws_menu.php:229
 msgid "PHP IPTC support"
-msgstr "Compatibilidad con PHP IPTC"
+msgstr "PHP IPTC サポート"
 
 # automatic translation
 #: bws_menu/bws_menu.php:230
 msgid "PHP XML support"
-msgstr "Compatibilidad con PHPXML"
+msgstr "PHP XML サポート"
 
 # automatic translation
 #: bws_menu/bws_menu.php:236
 msgid "Database"
-msgstr "Base de datos"
+msgstr "データベース"
 
 # automatic translation
 #: bws_menu/bws_menu.php:238
 msgid "WP DB version"
-msgstr "Versión de la base de datos de WP"
+msgstr "WP DB バージョン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:239
 msgid "MySQL version"
-msgstr "versión mysql"
+msgstr "MySQL のバージョン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:240
 msgid "SQL Mode"
-msgstr "Modo SQL"
+msgstr "SQL モード"
 
 # automatic translation
 #: bws_menu/bws_menu.php:244
 msgid "Active Plugins"
-msgstr "Complementos activos"
+msgstr "アクティブなプラグイン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:249
 msgid "Inactive Plugins"
-msgstr "Complementos inactivos"
+msgstr "非アクティブなプラグイン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:270
 msgid "Please enter a valid email address."
-msgstr "Por favor, introduce una dirección de correo electrónico válida."
+msgstr "有効なメールアドレスを入力してください。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:272
 #, php-format
 msgid "Email with system info is sent to %s."
-msgstr "Se envía un correo electrónico con la información del sistema a %s."
+msgstr "システム情報を含む電子メールが %s に送信されます。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:276
 msgid "Thank you for contacting us."
-msgstr "Gracias por contactarnos."
+msgstr "ご連絡いただきありがとうございます。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:300
 msgid "Sorry, email message could not be delivered."
-msgstr "Lo sentimos, no se pudo entregar el mensaje de correo electrónico."
+msgstr "申し訳ありませんが、メール メッセージを配信できませんでした。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:321 bws_menu/bws_menu.php:342
 #: bws_menu/bws_menu.php:427 bws_menu/deprecated.php:27
 msgid "Plugins"
-msgstr "Complementos"
+msgstr "プラグイン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:329 bws_menu/bws_menu.php:350
 #: bws_menu/bws_menu.php:739 bws_menu/deprecated.php:28
 msgid "Themes"
-msgstr "Temas"
+msgstr "テーマ"
 
 # automatic translation
 #: bws_menu/bws_menu.php:334 bws_menu/bws_menu.php:358
 #: bws_menu/bws_menu.php:775
 msgid "System status"
-msgstr "Estado del sistema"
+msgstr "システムステータス"
 
 # automatic translation
 #: bws_menu/bws_menu.php:365 gallery-plugin.php:2046
 msgid "Support"
-msgstr "Apoyo"
+msgstr "サポート"
 
 # automatic translation
 #: bws_menu/bws_menu.php:366
 msgid "Manage purchased licenses & subscriptions"
-msgstr "Administrar licencias y suscripciones compradas"
+msgstr "購入したライセンスとサブスクリプションを管理する"
 
 # automatic translation
 #: bws_menu/bws_menu.php:375
 #, php-format
 msgid "Get Access to %s+ Premium Plugins"
-msgstr "Obtenga acceso a %s+ complementos premium"
+msgstr "%s+ プレミアム プラグインへのアクセスを取得"
 
 # automatic translation
 #: bws_menu/bws_menu.php:377
 msgid "Subscribe to Pro Membership"
-msgstr "Suscríbete a la Membresía Pro"
+msgstr "プロ会員に申し込む"
 
 # automatic translation
 #: bws_menu/bws_menu.php:387 bws_menu/bws_menu.php:408
 #: bws_menu/class-bws-settings.php:925 bws_menu/deprecated.php:133
 msgid "Check license key"
-msgstr "Comprobar clave de licencia"
+msgstr "ライセンスキーの確認"
 
 # automatic translation
 #: bws_menu/bws_menu.php:395
 msgid "Enter your license key"
-msgstr "Introduce tu clave de licencia"
+msgstr "ライセンスキーを入力してください"
 
 # automatic translation
 #: bws_menu/bws_menu.php:406 bws_menu/bws_menu.php:673
@@ -774,12 +744,12 @@ msgstr "Introduce tu clave de licencia"
 #: bws_menu/deprecated.php:268 bws_menu/deprecated.php:281
 #: includes/class-gllr-settings.php:343
 msgid "Activate"
-msgstr "Activar"
+msgstr "活性化"
 
 # automatic translation
 #: bws_menu/bws_menu.php:428
 msgid "Upload Plugin"
-msgstr "Cargar complemento"
+msgstr "アップロードプラグイン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:433
@@ -790,264 +760,255 @@ msgid ""
 "messages, problems with syndication feeds or other issues, try deactivating "
 "or removing this plugin."
 msgstr ""
-"El complemento generó %d caracteres de <strong>salida inesperada</strong> "
-"durante la activación. Si observa mensajes de &quot;encabezados ya "
-"enviados&quot;, problemas con las fuentes de distribución u otros "
-"problemas, intente desactivar o eliminar este complemento."
+"プラグインは、アクティブ化中に %d 文字の<strong>予期しない出力</strong>を生成しました。 「headers already "
+"sent」メッセージ、シンジケーション フィードの問題、またはその他の問題に気付いた場合は、このプラグインを無効にするか、削除してみてください。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:435
 msgid ""
 "Plugin could not be activated because it triggered a <strong>fatal "
 "error</strong>."
-msgstr ""
-"El complemento no se pudo activar porque provocó un <strong>error "
-"fatal</strong> ."
+msgstr "<strong>致命的なエラーが</strong>発生したため、プラグインをアクティブ化できませんでした。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:440
 msgid "Plugin <strong>activated</strong>."
-msgstr "Complemento <strong>activado</strong> ."
+msgstr "プラグインが<strong>有効化されました</strong>。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:457
 msgid "Download Pro Plugin"
-msgstr "Descargar complemento profesional"
+msgstr "プロプラグインをダウンロード"
 
 # automatic translation
 #: bws_menu/bws_menu.php:459 bws_menu/class-bws-settings.php:853
 msgid "Your Pro plugin is ready"
-msgstr "Su complemento Pro está listo"
+msgstr "Pro プラグインの準備ができました"
 
 # automatic translation
 #: bws_menu/bws_menu.php:461 bws_menu/class-bws-settings.php:855
 msgid "Your plugin has been zipped, and now is ready to download."
-msgstr "Su complemento ha sido comprimido y ahora está listo para descargar."
+msgstr "プラグインが圧縮され、ダウンロードする準備が整いました。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:464 bws_menu/class-bws-settings.php:858
 msgid "Download Now"
-msgstr "Descargar ahora"
+msgstr "ダウンロード中"
 
 # automatic translation
 #: bws_menu/bws_menu.php:468 bws_menu/class-bws-settings.php:862
 msgid "Need help installing the plugin?"
-msgstr "¿Necesita ayuda para instalar el complemento?"
+msgstr "プラグインのインストールにヘルプが必要ですか?"
 
 # automatic translation
 #: bws_menu/bws_menu.php:470 bws_menu/class-bws-settings.php:864
 msgid "How to install WordPress plugin from your admin Dashboard (ZIP archive)"
-msgstr ""
-"Cómo instalar el complemento de WordPress desde su panel de administración "
-"(archivo ZIP)"
+msgstr "管理ダッシュボードから WordPress プラグインをインストールする方法 (ZIP アーカイブ)"
 
 # automatic translation
 #: bws_menu/bws_menu.php:473 bws_menu/class-bws-settings.php:868
 msgid "Get Started"
-msgstr "Empezar"
+msgstr "始めましょう"
 
 # automatic translation
 #: bws_menu/bws_menu.php:479 bws_menu/class-bws-settings.php:874
 msgid "Knowledge Base"
-msgstr "Base de conocimientos"
+msgstr "知識ベース"
 
 # automatic translation
 #: bws_menu/bws_menu.php:482
 msgid "Licenses & Domains"
-msgstr "Licencias y Dominios"
+msgstr "ライセンスとドメイン"
 
 # automatic translation
 #: bws_menu/bws_menu.php:487
 msgid "Client Area"
-msgstr "Área de Clientes"
+msgstr "クライアントエリア"
 
 # automatic translation
 #: bws_menu/bws_menu.php:491
 msgid "Return to BestWebSoft Panel"
-msgstr "Regresar al panel de BestWebSoft"
+msgstr "BestWebSoft パネルに戻る"
 
 # automatic translation
 #: bws_menu/bws_menu.php:506 bws_menu/bws_menu.php:541
 #: bws_menu/bws_menu.php:714
 msgid "All"
-msgstr "Todo"
+msgstr "全て"
 
 # automatic translation
 #: bws_menu/bws_menu.php:514 bws_menu/bws_menu.php:762
 msgid "Installed"
-msgstr "Instalado"
+msgstr "インストール済み"
 
 # automatic translation
 #: bws_menu/bws_menu.php:522
 msgid "Not Installed"
-msgstr "No instalado"
+msgstr "インストールされていない"
 
 # automatic translation
 #: bws_menu/bws_menu.php:529
 msgid "Filter results"
-msgstr "Filtrar Resultados"
+msgstr "結果のフィルタリング"
 
 # automatic translation
 #: bws_menu/bws_menu.php:532 bws_menu/bws_menu.php:705
 msgid "Category"
-msgstr "Categoría"
+msgstr "カテゴリー"
 
 # automatic translation
 #: bws_menu/bws_menu.php:625
 msgid "Not installed"
-msgstr "No instalado"
+msgstr "インストールされていない"
 
 # automatic translation
 #: bws_menu/bws_menu.php:629
 msgid "Renew to get updates"
-msgstr "Renovar para obtener actualizaciones"
+msgstr "更新してアップデートを入手する"
 
 # automatic translation
 #: bws_menu/bws_menu.php:632
 #, php-format
 msgid "Update to v %s"
-msgstr "Actualizar a v %s"
+msgstr "v %s に更新"
 
 # automatic translation
 #: bws_menu/bws_menu.php:647 bws_menu/bws_menu.php:676
 msgid "Get Pro"
-msgstr "Obtener pro"
+msgstr "プロになる"
 
 # automatic translation
 #: bws_menu/bws_menu.php:653 bws_menu/class-bws-settings.php:202
 #: bws_menu/class-bws-settings.php:1206 gallery-plugin.php:50
 #: includes/class-gllr-media-table.php:374
 msgid "Upgrade to Pro"
-msgstr "Actualízate a Pro"
+msgstr "プロ仕様にアップグレードする"
 
 # automatic translation
 #: bws_menu/bws_menu.php:673 bws_menu/bws_menu.php:682
 msgid "Activate this plugin"
-msgstr "Activar este complemento"
+msgstr "このプラグインを有効にする"
 
 # automatic translation
 #: bws_menu/bws_menu.php:687
 msgid "Install this plugin"
-msgstr "Instala este complemento"
+msgstr "このプラグインをインストール"
 
 # automatic translation
 #: bws_menu/bws_menu.php:687 includes/class-gllr-settings.php:346
 #: includes/class-gllr-settings.php:1176
 msgid "Install Now"
-msgstr "Instalar ahora"
+msgstr "今すぐインストール"
 
 # automatic translation
 #: bws_menu/bws_menu.php:700
 msgid "Nothing found. Try another criteria."
-msgstr "Nada Encontrado. Pruebe con otro criterio."
+msgstr "何も見つかりません。別の基準を試してください。"
 
 # automatic translation
 #: bws_menu/bws_menu.php:751
 #, php-format
 msgid "By %s"
-msgstr "Por %s"
+msgstr "%s で"
 
 # automatic translation
 #: bws_menu/bws_menu.php:760
 msgid "Already Installed"
-msgstr "Ya instalado"
+msgstr "すでにインストールされています"
 
 # automatic translation
 #: bws_menu/bws_menu.php:772
 msgid "Browse More WordPress Themes"
-msgstr "Explorar más temas de WordPress"
+msgstr "他の WordPress テーマを参照する"
 
 # automatic translation
 #: bws_menu/bws_menu.php:791
 msgid "Send to support"
-msgstr "Enviar a soporte"
+msgstr "サポートに送信"
 
 # automatic translation
 #: bws_menu/bws_menu.php:798
 msgid "Send to custom email &#187;"
-msgstr "Enviar a correo electrónico personalizado &#187;"
+msgstr "カスタム メールに送信 &#187;"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:174
 msgid "Information"
-msgstr "Información"
+msgstr "情報"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:189
 msgid "Inactive"
-msgstr "Inactivo"
+msgstr "非活性"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:197
 msgid "Expired"
-msgstr "Venció"
+msgstr "期限切れ"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:200
 #, php-format
 msgid "%s day(-s) left"
-msgstr "Quedan %s día(s)"
+msgstr "残り %s 日 (-s)"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:206
 #, php-format
 msgid "Expired on %s"
-msgstr "Caducó el %s"
+msgstr "%s に期限切れ"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:206
 msgid "Renew Now"
-msgstr "Renovar ahora"
+msgstr "今すぐ更新"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:208
 msgid "Active"
-msgstr "Activo"
+msgstr "アクティブ"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:214
 msgid "License"
-msgstr "Licencia"
+msgstr "ライセンス"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:217
 msgid "Status"
-msgstr "Estado"
+msgstr "スターテス"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:221
 msgid "Version"
-msgstr "Versión"
+msgstr "バージョン"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:368
 msgid "All plugin settings were restored."
-msgstr "Se restauraron todas las configuraciones del complemento."
+msgstr "すべてのプラグイン設定が復元されました。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:531 includes/class-gllr-settings.php:37
 msgid "Custom Code"
-msgstr "Código personalizado"
+msgstr "カスタムコード"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:537
 msgid ""
 "The ability to add custom code is available in the Pro version. If the Pro "
 "version is not available please contact us via Help Center"
-msgstr ""
-"La capacidad de agregar código personalizado está disponible en la versión "
-"Pro. Si la versión Pro no está disponible, contáctenos a través del Centro "
-"de ayuda"
+msgstr "カスタム コードを追加する機能は、Pro バージョンで利用できます。 Proバージョンが利用できない場合は、ヘルプセンターからお問い合わせください"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:548
 msgid "You do not have sufficient permissions to edit plugins for this site."
-msgstr "No tiene suficientes permisos para editar complementos para este sitio."
+msgstr "このサイトのプラグインを編集するための十分な権限がありません。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:554
 msgid "These styles will be added to the header on all pages of your site."
-msgstr "Estos estilos se agregarán al encabezado en todas las páginas de su sitio."
+msgstr "これらのスタイルは、サイトのすべてのページのヘッダーに追加されます。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:558
@@ -1055,36 +1016,34 @@ msgstr "Estos estilos se agregarán al encabezado en todas las páginas de su si
 msgid ""
 "This PHP code will be hooked to the %s Action and will be printed on front "
 "end only."
-msgstr ""
-"Este código PHP se conectará a la acción %s y se imprimirá solo en la parte "
-"frontal."
+msgstr "この PHP コードは %s アクションにフックされ、フロント エンドでのみ出力されます。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:562
 msgid "These code will be added to the header on all pages of your site."
-msgstr "Estos códigos se agregarán al encabezado en todas las páginas de su sitio."
+msgstr "これらのコードは、サイトのすべてのページのヘッダーに追加されます。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:574
 msgid "Browsing"
-msgstr "Hojeada"
+msgstr "ブラウジング"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:586
 #, php-format
 msgid "Activate custom %s code."
-msgstr "Activa el código %s personalizado."
+msgstr "カスタム %s コードを有効にします。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:597
 #, php-format
 msgid "Learn more about %s"
-msgstr "Más información sobre %s"
+msgstr "%s の詳細"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:629
 msgid "Miscellaneous Settings"
-msgstr "Otras configuraciones"
+msgstr "その他の設定"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:640 bws_menu/class-bws-settings.php:714
@@ -1092,9 +1051,7 @@ msgstr "Otras configuraciones"
 msgid ""
 "It is prohibited to change %1$s settings on this site in the %2$s network "
 "settings."
-msgstr ""
-"Está prohibido cambiar la configuración de %1$s en este sitio en la "
-"configuración de red de %2$s."
+msgstr "%2$s ネットワーク設定で、このサイトの %1$s 設定を変更することは禁止されています。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:645 bws_menu/class-bws-settings.php:719
@@ -1102,68 +1059,60 @@ msgstr ""
 msgid ""
 "It is prohibited to view %1$s settings on this site in the %2$s network "
 "settings."
-msgstr ""
-"Está prohibido ver la configuración de %1$s en este sitio en la "
-"configuración de red de %2$s."
+msgstr "%2$s ネットワーク設定で、このサイトの %1$s 設定を表示することは禁止されています。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:656
 msgid "Pro Options"
-msgstr "Opciones profesionales"
+msgstr "プロのオプション"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:665
 msgid "Enable to display plugin Pro options."
-msgstr "Habilite para mostrar las opciones del complemento Pro."
+msgstr "プラグインの Pro オプションを表示できるようにします。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:671
 msgid "Track Usage"
-msgstr "Seguimiento de uso"
+msgstr "使用状況の追跡"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:680
 msgid ""
 "Enable to allow tracking plugin usage anonymously in order to make it "
 "better."
-msgstr ""
-"Habilite para permitir el seguimiento del uso del complemento de forma "
-"anónima para mejorarlo."
+msgstr "プラグインの使用状況を匿名で追跡できるように有効にして、改善します。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:685
 msgid "Default Settings"
-msgstr "Configuración por defecto"
+msgstr "デフォルトの設定"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:687
 msgid "Restore Settings"
-msgstr "Restaurar configuracion"
+msgstr "設定の復元"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:688
 msgid "This will restore plugin settings to defaults."
-msgstr ""
-"Esto restaurará la configuración del complemento a los valores "
-"predeterminados."
+msgstr "これにより、プラグイン設定がデフォルトに復元されます。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:703 includes/class-gllr-settings.php:38
 msgid "Import / Export"
-msgstr "Importación y exportación"
+msgstr "インポート・エクスポート"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:837 includes/class-gllr-settings.php:40
 msgid "License Key"
-msgstr "Clave de licencia"
+msgstr "ライセンスキー"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:901
 #, php-format
 msgid "Enter your license key to activate %s and get premium plugin features."
-msgstr ""
-"Ingrese su clave de licencia para activar %s y obtener funciones de "
-"complemento premium."
+msgstr "ライセンス キーを入力して %s をアクティベートし、プレミアム プラグイン機能を取得してください。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:904 bws_menu/class-bws-settings.php:1122
@@ -1171,67 +1120,59 @@ msgstr ""
 msgid ""
 "Unfortunately, you have exceeded the number of available tries per day. "
 "Please, upload the plugin manually."
-msgstr ""
-"Desafortunadamente, ha excedido el número de intentos disponibles por día. "
-"Por favor, cargue el complemento manualmente."
+msgstr "残念ながら、1 日に利用できる試行回数を超えました。プラグインを手動でアップロードしてください。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:908 bws_menu/deprecated.php:260
 #, php-format
 msgid "Start Your Free %s-Day Trial Now"
-msgstr "Comience su prueba gratuita de %s días ahora"
+msgstr "%s 日間の無料トライアルを今すぐ開始"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:927
 msgid ""
 "If necessary, you can check if the license key is correct or reenter it in "
 "the field below."
-msgstr ""
-"Si es necesario, puede verificar si la clave de licencia es correcta o "
-"volver a ingresarla en el campo a continuación."
+msgstr "必要に応じて、ライセンス キーが正しいかどうかを確認するか、下のフィールドに再入力できます。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:938
 msgid "Manage License Settings"
-msgstr "Administrar la configuración de la licencia"
+msgstr "ライセンス設定の管理"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:940
 msgid "Login to Client Area"
-msgstr "Iniciar sesión en el área de clientes"
+msgstr "クライアントエリアにログイン"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:942
 msgid ""
 "Manage active licenses, download BWS products, and view your payment "
 "history using BestWebSoft Client Area."
-msgstr ""
-"Administre licencias activas, descargue productos BWS y vea su historial de "
-"pagos utilizando el Área de cliente de BestWebSoft."
+msgstr "BestWebSoft クライアント エリアを使用して、有効なライセンスを管理し、BWS 製品をダウンロードし、支払い履歴を表示します。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:964
 msgid "Security check"
-msgstr "Control de seguridad"
+msgstr "セキュリティーチェック"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1005 bws_menu/class-bws-settings.php:1120
 msgid "This license key is bound to another site."
-msgstr "Esta clave de licencia está vinculada a otro sitio."
+msgstr "このライセンス キーは別のサイトにバインドされています。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1007
 msgid ""
 "This license key is valid, but Your license has expired. If you want to "
 "update our plugin in future, you should extend the license."
-msgstr ""
-"Esta clave de licencia es válida, pero su licencia ha caducado. Si desea "
-"actualizar nuestro complemento en el futuro, debe extender la licencia."
+msgstr "このライセンス キーは有効ですが、ライセンスの有効期限が切れています。今後プラグインを更新する場合は、ライセンスを延長する必要があります。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1009
 msgid "Unfortunately, you have exceeded the number of available tries."
-msgstr "Desafortunadamente, ha excedido el número de intentos disponibles."
+msgstr "残念ながら、利用可能な試行回数を超えました。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1011
@@ -1239,21 +1180,19 @@ msgid ""
 "Unfortunately, the Pro Trial licence was already installed to this domain. "
 "The Pro Trial license can be installed only once."
 msgstr ""
-"Desafortunadamente, la licencia Pro Trial ya estaba instalada en este "
-"dominio. La licencia Pro Trial solo se puede instalar una vez."
+"残念ながら、Pro Trial ライセンスはこのドメインに既にインストールされています。 Pro Trial ライセンスは 1 "
+"回のみインストールできます。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1016
 msgid "The Pro Trial license key is valid."
-msgstr "La clave de licencia Pro Trial es válida."
+msgstr "プロ トライアル ライセンス キーは有効です。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1029 bws_menu/deprecated.php:155
 #, php-format
 msgid "In order to continue using the plugin it is necessary to buy a %s license."
-msgstr ""
-"Para continuar usando el complemento, es necesario comprar una licencia de "
-"%s."
+msgstr "プラグインを引き続き使用するには、%s ライセンスを購入する必要があります。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1124
@@ -1261,190 +1200,183 @@ msgstr ""
 msgid ""
 "Unfortunately, Your license has expired. To continue getting top-priority "
 "support and plugin updates, you should extend it in your %s."
-msgstr ""
-"Lamentablemente, su licencia ha caducado. Para continuar recibiendo soporte "
-"de máxima prioridad y actualizaciones de complementos, debe ampliarlo en su "
-"%s."
+msgstr "残念ながら、ライセンスの有効期限が切れています。最優先のサポートとプラグインの更新を引き続き取得するには、%s で拡張する必要があります。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1173
 msgid "Please, enter Your license key"
-msgstr "Por favor, introduzca su clave de licencia"
+msgstr "ライセンスキーを入力してください"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1189
 msgid "Need Help?"
-msgstr "¿Necesitas ayuda?"
+msgstr "助けが必要？"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1191
 msgid "Read the Instruction"
-msgstr "Lea las instrucciones"
+msgstr "指示を読む"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1196
 msgid "Watch the Video"
-msgstr "Ver el vídeo"
+msgstr "ビデオを見る"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1210
 msgid "Start Your Free Trial"
-msgstr "Comienza tu prueba gratuita"
+msgstr "無料トライアルを開始する"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1248
 msgid "Request a Feature"
-msgstr "Solicitar una función"
+msgstr "機能をリクエストする"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1254
 #, php-format
 msgid "How can we improve %s?"
-msgstr "¿Cómo podemos mejorar %s?"
+msgstr "%s を改善するにはどうすればよいですか?"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1256
 msgid "We look forward to hear your ideas."
-msgstr "Esperamos escuchar sus ideas."
+msgstr "皆様のご意見をお待ちしております。"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1258
 msgid "Describe your idea"
-msgstr "Describe tu idea"
+msgstr "あなたのアイデアを説明してください"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1261 bws_menu/deactivation-form.php:123
 msgid "Send website data and allow to contact me back"
-msgstr "Enviar datos del sitio web y permitir que me contacten de nuevo"
+msgstr "ウェブサイトのデータを送信し、私に連絡することを許可します"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1266
 msgid "Submit"
-msgstr "Entregar"
+msgstr "送信"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1267 bws_menu/deactivation-form.php:130
 msgid "Processing"
-msgstr "Procesando"
+msgstr "処理"
 
 # automatic translation
 #: bws_menu/class-bws-settings.php:1268
 msgid "Thank you!"
-msgstr "¡Gracias!"
+msgstr "ありがとう！"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:25
 msgid "Need help? We are ready to answer your questions."
-msgstr "¿Necesitas ayuda? Estamos listos para responder a sus preguntas."
+msgstr "助けが必要？ご質問にお答えする準備ができています。"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:25
 msgid "Contact Support"
-msgstr "Soporte de contacto"
+msgstr "サポート問い合わせ先"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:30
 msgid "The plugin is not working"
-msgstr "El complemento no funciona."
+msgstr "プラグインが機能していません"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:32
 msgid "Kindly share what didn't work so we can fix it in future updates..."
-msgstr ""
-"Comparta amablemente lo que no funcionó para que podamos solucionarlo en "
-"futuras actualizaciones..."
+msgstr "今後のアップデートで修正できるように、機能しなかったものを共有してください..."
 
 # automatic translation
 #: bws_menu/deactivation-form.php:36
 msgid "The plugin didn't work as expected"
-msgstr "El complemento no funcionó como se esperaba."
+msgstr "プラグインが期待どおりに機能しなかった"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:38
 msgid "What did you expect?"
-msgstr "¿Que esperabas?"
+msgstr "何を期待していましたか？"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:42
 msgid "The plugin suddenly stopped working"
-msgstr "El complemento de repente dejó de funcionar"
+msgstr "プラグインが突然動かなくなった"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:49
 msgid "The plugin broke my site"
-msgstr "El complemento rompió mi sitio"
+msgstr "プラグインが私のサイトを壊した"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:56
 msgid "I couldn't understand how to get it work"
-msgstr "No pude entender cómo hacerlo funcionar"
+msgstr "それを機能させる方法を理解できませんでした"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:63
 msgid "I found a better plugin"
-msgstr "Encontré un complemento mejor."
+msgstr "もっと良いプラグインを見つけた"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:65
 msgid "What's the plugin name?"
-msgstr "¿Cuál es el nombre del complemento?"
+msgstr "プラグイン名は？"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:69
 msgid "The plugin is great, but I need specific feature that you don't support"
-msgstr ""
-"El complemento es excelente, pero necesito una función específica que no "
-"admite"
+msgstr "プラグインは素晴らしいですが、サポートされていない特定の機能が必要です"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:71
 msgid "What feature?"
-msgstr "¿Qué característica?"
+msgstr "何の機能？"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:75
 msgid "I no longer need the plugin"
-msgstr "ya no necesito el plugin"
+msgstr "プラグインが不要になりました"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:81
 msgid "It's a temporary deactivation, I'm just debugging an issue"
-msgstr "Es una desactivación temporal, solo estoy depurando un problema."
+msgstr "これは一時的な非アクティブ化です。問題をデバッグしているだけです"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:87
 msgid "Other"
-msgstr "Otro"
+msgstr "他の"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:96
 msgid "Quick Feedback"
-msgstr "Comentarios rápidos"
+msgstr "クイックフィードバック"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:98
 msgid "If you have a moment, please let us know why you are deactivating"
-msgstr "Si tiene un momento, háganos saber por qué está desactivando"
+msgstr "お時間がありましたら、無効にする理由をお知らせください。"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:128
 msgid "Submit and Deactivate"
-msgstr "Enviar y desactivar"
+msgstr "送信して非アクティブ化"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:129
 msgid "Skip and Deactivate"
-msgstr "Omitir y desactivar"
+msgstr "スキップして非アクティブ化"
 
 # automatic translation
 #: bws_menu/deactivation-form.php:275
 msgid "Please tell us the reason so we can improve it."
-msgstr "Por favor, díganos el motivo para que podamos mejorarlo."
+msgstr "改善できるように理由を教えてください。"
 
 # automatic translation
 #: bws_menu/deprecated.php:29
 msgid "System Status"
-msgstr "Estado del sistema"
+msgstr "システムステータス"
 
 # automatic translation
 #: bws_menu/deprecated.php:129
@@ -1453,127 +1385,117 @@ msgid ""
 "the field below. You can find your license key on your personal page - "
 "Client Area - on our website"
 msgstr ""
-"Si es necesario, puede verificar si la clave de licencia es correcta o "
-"volver a ingresarla en el campo a continuación. Puede encontrar su clave de "
-"licencia en su página personal - Área de Cliente - en nuestro sitio web"
+"必要に応じて、ライセンス キーが正しいかどうかを確認するか、下のフィールドに再入力できます。ライセンス キーは、当社の Web サイトの個人ページ "
+"(クライアント エリア) で見つけることができます。"
 
 # automatic translation
 #: bws_menu/deprecated.php:129
 msgid ""
 "(your username is the email address specified during the purchase). If "
 "necessary, please submit \"Lost your password?\" request."
-msgstr ""
-"(su nombre de usuario es la dirección de correo electrónico especificada "
-"durante la compra). Si es necesario, envíe \"¿Perdió su contraseña?\" "
-"pedido."
+msgstr "(ユーザー名は、購入時に指定したメール アドレスです)。必要に応じて、「パスワードをお忘れですか?」と送信してください。リクエスト。"
 
 # automatic translation
 #: bws_menu/deprecated.php:155
 msgid "After that, you can activate it by entering your license key."
-msgstr "Después de eso, puede activarlo ingresando su clave de licencia."
+msgstr "その後、ライセンスキーを入力してアクティベートできます。"
 
 # automatic translation
 #: bws_menu/deprecated.php:158 bws_menu/deprecated.php:253
 msgid "License key can be found in the"
-msgstr "La clave de licencia se puede encontrar en el"
+msgstr "ライセンス キーは"
 
 # automatic translation
 #: bws_menu/deprecated.php:160 bws_menu/deprecated.php:255
 msgid "(your username is the email address specified during the purchase)."
-msgstr ""
-"(su nombre de usuario es la dirección de correo electrónico especificada "
-"durante la compra)."
+msgstr "(ユーザー名は、購入時に指定したメール アドレスです)。"
 
 # automatic translation
 #: bws_menu/deprecated.php:187
 msgid "Congratulations! The Pro license of the plugin is activated successfully."
-msgstr "¡Felicidades! La licencia Pro del complemento se activó con éxito."
+msgstr "おめでとう！プラグインの Pro ライセンスが正常にアクティブ化されました。"
 
 # automatic translation
 #: bws_menu/deprecated.php:189 bws_menu/deprecated.php:233
 msgid "Please, go to"
-msgstr "Por favor, ve a"
+msgstr "に行ってください"
 
 # automatic translation
 #: bws_menu/deprecated.php:189 bws_menu/deprecated.php:233
 msgid "the setting page"
-msgstr "la página de configuración"
+msgstr "設定ページ"
 
 # automatic translation
 #: bws_menu/deprecated.php:207
 msgid "Restore all plugin settings to defaults"
-msgstr ""
-"Restaurar todas las configuraciones del complemento a los valores "
-"predeterminados"
+msgstr "すべてのプラグイン設定をデフォルトに戻す"
 
 # automatic translation
 #: bws_menu/deprecated.php:209
 msgid "Restore settings"
-msgstr "Restaurar configuracion"
+msgstr "設定の復元"
 
 # automatic translation
 #: bws_menu/deprecated.php:231
 msgid ""
 "Congratulations! Pro version of the plugin is  installed and activated "
 "successfully."
-msgstr ""
-"¡Felicidades! La versión Pro del complemento está instalada y activada con "
-"éxito."
+msgstr "おめでとう！プラグインの Pro バージョンがインストールされ、正常にアクティブ化されました。"
 
 # automatic translation
 #: bws_menu/deprecated.php:242
 msgid "Show Pro features"
-msgstr "Mostrar funciones profesionales"
+msgstr "プロの機能を表示"
 
 # automatic translation
 #: bws_menu/deprecated.php:249
 msgid "Enter your license key to install and activate"
-msgstr "Ingrese su clave de licencia para instalar y activar"
+msgstr "ライセンス キーを入力して、インストールとアクティブ化を行います"
 
 # automatic translation
 #: bws_menu/deprecated.php:251
 msgid "version of the plugin."
-msgstr "versión del complemento."
+msgstr "プラグインのバージョン。"
 
 # automatic translation
 #: bws_menu/product_list.php:9
 msgid "Admin Tools"
-msgstr "Herramientas de administración"
+msgstr "管理ツール"
 
 # automatic translation
 #: bws_menu/product_list.php:10
 msgid "Content"
-msgstr "Contenido"
+msgstr "コンテンツ"
 
 # automatic translation
 #: bws_menu/product_list.php:11
 msgid "eCommerce"
-msgstr "comercio electrónico"
+msgstr "eコマース"
 
 # automatic translation
 #: bws_menu/product_list.php:12
 msgid "Marketing"
-msgstr "Marketing"
+msgstr "マーケティング"
 
 # automatic translation
 #: bws_menu/product_list.php:13
 msgid "Navigation"
-msgstr "Navegación"
+msgstr "ナビゲーション"
 
 # automatic translation
 #: bws_menu/product_list.php:14
 msgid "Recommended"
-msgstr "Recomendado"
+msgstr "おすすめされた"
 
 # automatic translation
 #: bws_menu/product_list.php:15
 msgid "Security"
-msgstr "Seguridad"
+msgstr "安全"
 
 # automatic translation
 #: bws_menu/product_list.php:16
 msgid "SEO"
-msgstr "ESTE"
+msgstr "これ"
 
 # automatic translation
 #: bws_menu/product_list.php:17
@@ -1583,184 +1505,141 @@ msgstr "SMM"
 # automatic translation
 #: bws_menu/product_list.php:24
 msgid "Give a birth for your bike rental and booking WordPress website."
-msgstr "Da a luz a tu sitio web de WordPress de alquiler y reserva de bicicletas."
+msgstr "自転車のレンタルと予約の WordPress ウェブサイトを誕生させましょう。"
 
 # automatic translation
 #: bws_menu/product_list.php:36
 msgid "Best secure captcha plugin to protect your WordPress forms."
-msgstr ""
-"El mejor complemento seguro de captcha para proteger sus formularios de "
-"WordPress."
+msgstr "WordPress フォームを保護するための最高の安全なキャプチャ プラグイン。"
 
 # automatic translation
 #: bws_menu/product_list.php:46
 msgid "Create your own rental website for car renting and booking."
-msgstr "Cree su propio sitio web de alquiler para alquilar y reservar automóviles."
+msgstr "レンタカーと予約のための独自のレンタル Web サイトを作成します。"
 
 # automatic translation
 #: bws_menu/product_list.php:58
 msgid ""
 "Add columns with custom content to WordPress website pages, posts, widgets, "
 "etc."
-msgstr ""
-"Agregue columnas con contenido personalizado a las páginas del sitio web de "
-"WordPress, publicaciones, widgets, etc."
+msgstr "カスタム コンテンツを含む列を WordPress Web サイト ページ、投稿、ウィジェットなどに追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:65
 msgid ""
 "Allow customers to reach you using secure contact form plugin any website "
 "must have."
-msgstr ""
-"Permita que los clientes se comuniquen con usted mediante el complemento de "
-"formulario de contacto seguro que cualquier sitio web debe tener."
+msgstr "Web サイトに必要な安全なコンタクト フォーム プラグインを使用して、顧客があなたに連絡できるようにします。"
 
 # automatic translation
 #: bws_menu/product_list.php:75
 msgid "Add unlimited number of contact forms to WordPress website."
-msgstr ""
-"Agregue un número ilimitado de formularios de contacto al sitio web de "
-"WordPress."
+msgstr "WordPress Web サイトに無制限の数のお問い合わせフォームを追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:85
 msgid "Save and manage Contact Form messages. Never lose important data."
-msgstr ""
-"Guarde y administre los mensajes del formulario de contacto. Nunca pierda "
-"datos importantes."
+msgstr "お問い合わせフォームのメッセージを保存して管理します。重要なデータを失うことはありません。"
 
 # automatic translation
 #: bws_menu/product_list.php:95
 msgid "Add unlimited custom pages to WordPress admin dashboard."
-msgstr ""
-"Agregue páginas personalizadas ilimitadas al panel de administración de "
-"WordPress."
+msgstr "WordPress 管理ダッシュボードに無制限のカスタム ページを追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:105
 msgid "Add custom post types and taxonomies to WordPress website search results."
-msgstr ""
-"Agregue tipos de publicaciones personalizadas y taxonomías a los resultados "
-"de búsqueda del sitio web de WordPress."
+msgstr "WordPress ウェブサイトの検索結果にカスタム投稿タイプとタクソノミーを追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:115
 msgid "Add PayPal and 2CO donate buttons to receive charity payments."
-msgstr ""
-"Agregue los botones de donación de PayPal y 2CO para recibir pagos de "
-"caridad."
+msgstr "PayPal と 2CO の寄付ボタンを追加して、チャリティーの支払いを受け取ります。"
 
 # automatic translation
 #: bws_menu/product_list.php:122
 msgid ""
 "Get latest error log messages to diagnose website problems. Define and fix "
 "issues faster."
-msgstr ""
-"Obtenga los últimos mensajes de registro de errores para diagnosticar "
-"problemas del sitio web. Defina y solucione problemas más rápido."
+msgstr "最新のエラー ログ メッセージを取得して、Web サイトの問題を診断します。問題をより迅速に定義して修正します。"
 
 # automatic translation
 #: bws_menu/product_list.php:129
 msgid ""
 "Add Facebook Follow, Like, and Share buttons to WordPress posts, pages, and "
 "widgets."
-msgstr ""
-"Agregue los botones Seguir, Me gusta y Compartir de Facebook a las "
-"publicaciones, páginas y widgets de WordPress."
+msgstr "Facebook のフォロー、いいね、共有ボタンを WordPress の投稿、ページ、ウィジェットに追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:139
 msgid ""
 "Add beautiful galleries, albums & images to your WordPress website in a few "
 "clicks."
-msgstr ""
-"Agregue hermosas galerías, álbumes e imágenes a su sitio web de WordPress "
-"con unos pocos clics."
+msgstr "数回クリックするだけで、美しいギャラリー、アルバム、画像を WordPress Web サイトに追加できます。"
 
 # automatic translation
 #: bws_menu/product_list.php:149
 msgid ""
 "Stronger security solution which protects your WordPress website from hacks "
 "and unauthorized login attempts."
-msgstr ""
-"Solución de seguridad más sólida que protege su sitio web de WordPress de "
-"ataques e intentos de inicio de sesión no autorizados."
+msgstr "WordPress Web サイトをハッキングや不正なログイン試行から保護する、より強力なセキュリティ ソリューション。"
 
 # automatic translation
 #: bws_menu/product_list.php:159
 msgid ""
 "Add Adsense ads to WordPress website pages, posts, custom posts, search "
 "results, categories, tags, and widgets."
-msgstr ""
-"Agregue anuncios de Adsense a las páginas del sitio web de WordPress, "
-"publicaciones, publicaciones personalizadas, resultados de búsqueda, "
-"categorías, etiquetas y widgets."
+msgstr "Adsense 広告を WordPress Web サイト ページ、投稿、カスタム投稿、検索結果、カテゴリ、タグ、およびウィジェットに追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:169
 msgid "Add Google Analytics code to WordPress website and track basic stats."
-msgstr ""
-"Agregue el código de Google Analytics al sitio web de WordPress y realice "
-"un seguimiento de las estadísticas básicas."
+msgstr "Google Analytics コードを WordPress Web サイトに追加して、基本的な統計を追跡します。"
 
 # automatic translation
 #: bws_menu/product_list.php:179
 msgid "Protect WordPress website forms from spam entries with reCaptcha."
-msgstr ""
-"Proteja los formularios del sitio web de WordPress de las entradas de spam "
-"con reCaptcha."
+msgstr "reCaptcha を使用して、WordPress Web サイトのフォームをスパム エントリから保護します。"
 
 # automatic translation
 #: bws_menu/product_list.php:189
 msgid "Add customized Google maps to WordPress posts, pages and widgets."
-msgstr ""
-"Agregue mapas de Google personalizados a las publicaciones, páginas y "
-"widgets de WordPress."
+msgstr "カスタマイズした Google マップを WordPress の投稿、ページ、ウィジェットに追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:199
 msgid ""
 "Generate and add XML sitemap to WordPress website. Help search engines "
 "index your blog."
-msgstr ""
-"Genere y agregue un mapa del sitio XML al sitio web de WordPress. Ayuda a "
-"los motores de búsqueda a indexar tu blog."
+msgstr "XML サイトマップを生成して WordPress Web サイトに追加します。検索エンジンがあなたのブログをインデックスに登録できるようにします。"
 
 # automatic translation
 #: bws_menu/product_list.php:209
 msgid ""
 "Replace external WordPress website links with Google shortlinks and track "
 "click stats."
-msgstr ""
-"Reemplace los enlaces de sitios web externos de WordPress con enlaces "
-"cortos de Google y realice un seguimiento de las estadísticas de clics."
+msgstr "外部 WordPress ウェブサイト リンクを Google 短縮リンクに置き換え、クリック統計を追跡します。"
 
 # automatic translation
 #: bws_menu/product_list.php:216
 msgid ""
 "Protect WordPress website – allow and deny access for certain IP addresses, "
 "hostnames, etc."
-msgstr ""
-"Proteja el sitio web de WordPress: permita y deniegue el acceso a ciertas "
-"direcciones IP, nombres de host, etc."
+msgstr "WordPress ウェブサイトを保護 – 特定の IP アドレス、ホスト名などへのアクセスを許可および拒否します。"
 
 # automatic translation
 #: bws_menu/product_list.php:226
 msgid ""
 "Create your personal job board and listing WordPress website. Search jobs, "
 "submit CV/resumes, choose candidates."
-msgstr ""
-"Crea tu bolsa de trabajo personal y lista el sitio web de WordPress. Busque "
-"trabajos, envíe CV/currículums, elija candidatos."
+msgstr "あなたの個人的な求人掲示板とリスティング WordPress Web サイトを作成します。求人の検索、履歴書の提出、候補者の選択。"
 
 # automatic translation
 #: bws_menu/product_list.php:233
 msgid ""
 "Protect WordPress website against brute force attacks. Limit rate of login "
 "attempts."
-msgstr ""
-"Proteja el sitio web de WordPress contra ataques de fuerza bruta. Limite la "
-"tasa de intentos de inicio de sesión."
+msgstr "ブルート フォース攻撃から WordPress Web サイトを保護します。ログイン試行回数を制限します。"
 
 # automatic translation
 #: bws_menu/product_list.php:243
@@ -1768,18 +1647,15 @@ msgid ""
 "Add LinkedIn Share and Follow buttons to WordPress posts, pages and "
 "widgets. 5 plugins included – profile, insider, etc."
 msgstr ""
-"Agregue los botones Compartir y Seguir de LinkedIn a las publicaciones, "
-"páginas y widgets de WordPress. 5 complementos incluidos: perfil, "
-"información privilegiada, etc."
+"LinkedIn の共有ボタンとフォロー ボタンを WordPress の投稿、ページ、ウィジェットに追加します。 5 つのプラグインが含まれています "
+"– プロファイル、インサイダーなど。"
 
 # automatic translation
 #: bws_menu/product_list.php:253
 msgid ""
 "Translate WordPress website content to other languages manually. Create "
 "multilingual pages, posts, widgets, menus, etc."
-msgstr ""
-"Traduce el contenido del sitio web de WordPress a otros idiomas "
-"manualmente. Cree páginas multilingües, publicaciones, widgets, menús, etc."
+msgstr "WordPress Web サイトのコンテンツを他の言語に手動で翻訳します。多言語ページ、投稿、ウィジェット、メニューなどを作成します。"
 
 # automatic translation
 #: bws_menu/product_list.php:263
@@ -1787,18 +1663,15 @@ msgid ""
 "Add customizable pagination to WordPress website. Split long content to "
 "multiple pages for better navigation."
 msgstr ""
-"Agregue paginación personalizable al sitio web de WordPress. Divida el "
-"contenido largo en varias páginas para una mejor navegación."
+"WordPress Web "
+"サイトにカスタマイズ可能なページネーションを追加します。ナビゲーションを改善するために、長いコンテンツを複数のページに分割します。"
 
 # automatic translation
 #: bws_menu/product_list.php:273
 msgid ""
 "Generate PDF files and print WordPress posts/pages. Customize document "
 "header/footer styles and appearance."
-msgstr ""
-"Genere archivos PDF e imprima publicaciones/páginas de WordPress. "
-"Personalice los estilos y la apariencia del encabezado/pie de página del "
-"documento."
+msgstr "PDF ファイルを生成し、WordPress の投稿/ページを印刷します。ドキュメントのヘッダー/フッターのスタイルと外観をカスタマイズします。"
 
 # automatic translation
 #: bws_menu/product_list.php:283
@@ -1806,89 +1679,69 @@ msgid ""
 "Add Pinterest Follow, Pin It buttons and profile widgets (Pin, Board, "
 "Profile) to WordPress posts, pages and widgets."
 msgstr ""
-"Agregue los botones Seguir, Pin It y widgets de perfil (Pin, Tablero, "
-"Perfil) de Pinterest a las publicaciones, páginas y widgets de WordPress."
+"Pinterest のフォロー、ピン留めボタン、プロフィール ウィジェット (ピン、ボード、プロフィール) を WordPress "
+"の投稿、ページ、ウィジェットに追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:293
 msgid ""
 "Create your personal portfolio WordPress website. Manage and showcase past "
 "projects to get more clients."
-msgstr ""
-"Cree su sitio web de WordPress de cartera personal. Administre y muestre "
-"proyectos anteriores para obtener más clientes."
+msgstr "個人のポートフォリオ WordPress Web サイトを作成します。過去のプロジェクトを管理して紹介し、より多くのクライアントを獲得します。"
 
 # automatic translation
 #: bws_menu/product_list.php:303
 msgid "Export WordPress posts to CSV file format easily. Configure data order."
-msgstr ""
-"Exporte publicaciones de WordPress a formato de archivo CSV fácilmente. "
-"Configurar orden de datos."
+msgstr "WordPress の投稿を CSV ファイル形式に簡単にエクスポートします。データの順序を構成します。"
 
 # automatic translation
 #: bws_menu/product_list.php:313
 msgid ""
 "Add extra fields to default WordPress user profile. The easiest way to "
 "create and manage additional custom values."
-msgstr ""
-"Agregue campos adicionales al perfil de usuario predeterminado de "
-"WordPress. La forma más fácil de crear y administrar valores personalizados "
-"adicionales."
+msgstr "デフォルトの WordPress ユーザー プロファイルにフィールドを追加します。追加のカスタム値を作成および管理する最も簡単な方法。"
 
 # automatic translation
 #: bws_menu/product_list.php:323
 msgid ""
 "Add and display HTML advertisement banner on WordPress website. Customize "
 "bar styles and appearance."
-msgstr ""
-"Agregue y muestre un banner publicitario HTML en el sitio web de WordPress. "
-"Personaliza los estilos y la apariencia de las barras."
+msgstr "WordPress ウェブサイトに HTML 広告バナーを追加して表示します。バーのスタイルと外観をカスタマイズします。"
 
 # automatic translation
 #: bws_menu/product_list.php:333
 msgid ""
 "Add customizable quotes and tips blocks to WordPress posts, pages and "
 "widgets."
-msgstr ""
-"Agregue citas personalizables y bloques de consejos a las publicaciones, "
-"páginas y widgets de WordPress."
+msgstr "WordPress の投稿、ページ、ウィジェットにカスタマイズ可能な引用文とヒント ブロックを追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:340
 msgid ""
 "Add rating plugin to your WordPress website to receive feedback from your "
 "customers."
-msgstr ""
-"Agregue un complemento de calificación a su sitio web de WordPress para "
-"recibir comentarios de sus clientes."
+msgstr "WordPress Web サイトに評価プラグインを追加して、顧客からのフィードバックを受け取ります。"
 
 # automatic translation
 #: bws_menu/product_list.php:350
 msgid ""
 "Create your personal real estate WordPress website. Sell, rent and buy "
 "properties. Add, search and browse listings easily."
-msgstr ""
-"Cree su sitio web personal de bienes raíces en WordPress. Vender, alquilar "
-"y comprar propiedades. Agregue, busque y explore listados fácilmente."
+msgstr "個人の不動産 WordPress Web サイトを作成します。不動産の販売、賃貸、購入。リストを簡単に追加、検索、閲覧できます。"
 
 # automatic translation
 #: bws_menu/product_list.php:360
 msgid ""
 "Add related, featured, latest, and popular posts to your WordPress website. "
 "Connect your blog readers with a relevant content."
-msgstr ""
-"Agregue publicaciones relacionadas, destacadas, más recientes y populares a "
-"su sitio web de WordPress. Conecta a los lectores de tu blog con un "
-"contenido relevante."
+msgstr "関連記事、特集記事、最新記事、人気記事を WordPress Web サイトに追加します。ブログの読者を関連するコンテンツにつなげます。"
 
 # automatic translation
 #: bws_menu/product_list.php:367
 msgid ""
 "Send bulk email messages to WordPress users. Custom templates, advanced "
 "settings and detailed reports."
-msgstr ""
-"Envíe mensajes de correo electrónico masivos a los usuarios de WordPress. "
-"Plantillas personalizadas, configuraciones avanzadas e informes detallados."
+msgstr "WordPress ユーザーに一括メール メッセージを送信します。カスタム テンプレート、詳細設定、詳細レポート。"
 
 # automatic translation
 #: bws_menu/product_list.php:377
@@ -1896,8 +1749,8 @@ msgid ""
 "The best responsive slider plugin for your WordPress website. Create "
 "beautifully animated slides just in a few clicks."
 msgstr ""
-"El mejor complemento deslizante receptivo para su sitio web de WordPress. "
-"Cree diapositivas bellamente animadas con solo unos pocos clics."
+"WordPress ウェブサイトに最適なレスポンシブ スライダー "
+"プラグイン。数回クリックするだけで、美しくアニメーション化されたスライドを作成できます。"
 
 # automatic translation
 #: bws_menu/product_list.php:384
@@ -1905,8 +1758,8 @@ msgid ""
 "Configure SMTP server to receive email messages from WordPress to Gmail, "
 "Yahoo, Hotmail and other services."
 msgstr ""
-"Configure el servidor SMTP para recibir mensajes de correo electrónico de "
-"WordPress a Gmail, Yahoo, Hotmail y otros servicios."
+"WordPress から Gmail、Yahoo、Hotmail およびその他のサービスへの電子メール メッセージを受信するように SMTP "
+"サーバーを構成します。"
 
 # automatic translation
 #: bws_menu/product_list.php:391
@@ -1914,17 +1767,15 @@ msgid ""
 "Add social media buttons and widgets to WordPress posts, pages and widgets. "
 "FB, Twitter, Pinterest, LinkedIn."
 msgstr ""
-"Agregue botones y widgets de redes sociales a las publicaciones, páginas y "
-"widgets de WordPress. Facebook, Twitter, Pinterest, LinkedIn."
+"ソーシャル メディアのボタンとウィジェットを WordPress の投稿、ページ、ウィジェットに追加します。 "
+"FB、ツイッター、ピンタレスト、リンクトイン。"
 
 # automatic translation
 #: bws_menu/product_list.php:401
 msgid ""
 "Add social media login, registration, and commenting to your WordPress "
 "website."
-msgstr ""
-"Agregue inicio de sesión, registro y comentarios de redes sociales a su "
-"sitio web de WordPress."
+msgstr "ソーシャル メディアのログイン、登録、コメントを WordPress Web サイトに追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:408
@@ -1932,230 +1783,208 @@ msgid ""
 "Add email newsletter sign up form to WordPress posts, pages and widgets. "
 "Collect data and subscribe your users."
 msgstr ""
-"Agregue el formulario de registro del boletín de correo electrónico a las "
-"publicaciones, páginas y widgets de WordPress. Recoge datos y suscribe a "
-"tus usuarios."
+"WordPress の投稿、ページ、ウィジェットにメール ニュースレターのサインアップ "
+"フォームを追加します。データを収集し、ユーザーをサブスクライブします。"
 
 # automatic translation
 #: bws_menu/product_list.php:418
 msgid ""
 "Add testimonials and feedbacks from your customers to WordPress website "
 "posts, pages, and widgets."
-msgstr ""
-"Agregue testimonios y comentarios de sus clientes a las publicaciones, "
-"páginas y widgets del sitio web de WordPress."
+msgstr "お客様の声やフィードバックを WordPress Web サイトの投稿、ページ、ウィジェットに追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:425
 msgid ""
 "Best timesheet plugin for WordPress. Track employee time, streamline "
 "attendance and generate reports."
-msgstr ""
-"El mejor complemento de hoja de tiempo para WordPress. Realice un "
-"seguimiento del tiempo de los empleados, optimice la asistencia y genere "
-"informes."
+msgstr "WordPress に最適なタイムシート プラグイン。従業員の時間を追跡し、出席を合理化し、レポートを生成します。"
 
 # automatic translation
 #: bws_menu/product_list.php:435
 msgid ""
 "Add Twitter Follow, Tweet, Hashtag, and Mention buttons to WordPress posts "
 "and pages."
-msgstr ""
-"Agregue los botones Seguir, Tweet, Hashtag y Mención de Twitter a las "
-"publicaciones y páginas de WordPress."
+msgstr "Twitter のフォロー、ツイート、ハッシュタグ、メンション ボタンを WordPress の投稿やページに追加します。"
 
 # automatic translation
 #: bws_menu/product_list.php:445
 msgid ""
 "Automatically check and update WordPress website core with all installed "
 "plugins and themes to the latest versions."
-msgstr ""
-"Verifique y actualice automáticamente el núcleo del sitio web de WordPress "
-"con todos los complementos y temas instalados a las últimas versiones."
+msgstr "インストールされているすべてのプラグインとテーマを使用して、WordPress Web サイトのコアを自動的にチェックし、最新バージョンに更新します。"
 
 # automatic translation
 #: bws_menu/product_list.php:455
 msgid ""
 "Powerful user role management plugin for WordPress website. Create, edit, "
 "copy, and delete user roles."
-msgstr ""
-"Potente complemento de gestión de funciones de usuario para el sitio web de "
-"WordPress. Cree, edite, copie y elimine roles de usuario."
+msgstr "WordPress Web サイト用の強力なユーザー ロール管理プラグイン。ユーザー ロールを作成、編集、コピー、および削除します。"
 
 # automatic translation
 #: bws_menu/product_list.php:465
 msgid ""
 "Display live count of online visitors who are currently browsing your "
 "WordPress website."
-msgstr ""
-"Muestre el recuento en vivo de los visitantes en línea que actualmente "
-"están navegando en su sitio web de WordPress."
+msgstr "現在 WordPress Web サイトを閲覧しているオンライン訪問者の実際の数を表示します。"
 
 # automatic translation
 #: bws_menu/product_list.php:475
 msgid ""
 "Backup and export Zendesk Help Center content automatically to your "
 "WordPress website database."
-msgstr ""
-"Haga una copia de seguridad y exporte el contenido del Centro de ayuda de "
-"Zendesk automáticamente a la base de datos de su sitio web de WordPress."
+msgstr "Zendesk ヘルプ センターのコンテンツを WordPress ウェブサイト データベースに自動的にバックアップおよびエクスポートします。"
 
 # automatic translation
 #: gallery-plugin.php:43 includes/class-gllr-settings.php:324
 msgid "Gallery Settings"
-msgstr "Configuración de la galería"
+msgstr "ギャラリー設定"
 
 # automatic translation
 #: gallery-plugin.php:43 includes/class-gllr-settings.php:370
 msgid "Global Settings"
-msgstr "Ajustes globales"
+msgstr "全体設定"
 
 # automatic translation
 #: gallery-plugin.php:391
 msgid "Return to all albums"
-msgstr "Volver a todos los álbumes"
+msgstr "すべてのアルバムに戻る"
 
 # automatic translation
 #: gallery-plugin.php:405
 msgid "See images &raquo;"
-msgstr "Ver imágenes &raquo;"
+msgstr "画像を見る &raquo;"
 
 # automatic translation
 #: gallery-plugin.php:506 gallery-plugin.php:515
 msgid "Galleries"
-msgstr "galerías"
+msgstr "ギャラリー"
 
 # automatic translation
 #: gallery-plugin.php:507 gallery-plugin.php:3181
 msgid "Gallery"
-msgstr "Galería"
+msgstr "ギャラリー"
 
 # automatic translation
 #: gallery-plugin.php:508
 msgid "Add New Gallery"
-msgstr "Agregar nueva galería"
+msgstr "新しいギャラリーを追加"
 
 # automatic translation
 #: gallery-plugin.php:509
 msgid "Edit Gallery"
-msgstr "Editar galería"
+msgstr "ギャラリーを編集"
 
 # automatic translation
 #: gallery-plugin.php:510
 msgid "New Gallery"
-msgstr "Nueva galería"
+msgstr "新しいギャラリー"
 
 # automatic translation
 #: gallery-plugin.php:511
 msgid "View Gallery"
-msgstr "Ver galería"
+msgstr "ギャラリーを見る"
 
 # automatic translation
 #: gallery-plugin.php:512 includes/class-gllr-settings.php:1153
 msgid "Search Galleries"
-msgstr "Buscar galerías"
+msgstr "ギャラリーを検索"
 
 # automatic translation
 #: gallery-plugin.php:513
 msgid "No Gallery found"
-msgstr "No se encontró ninguna galería"
+msgstr "ギャラリーが見つかりません"
 
 # automatic translation
 #: gallery-plugin.php:538 gallery-plugin.php:1929 gallery-plugin.php:3151
 #: includes/class-gllr-widgets.php:28 includes/class-gllr-widgets.php:35
 #: includes/class-gllr-widgets.php:74 includes/class-gllr-widgets.php:101
 msgid "Gallery Categories"
-msgstr "Categorías de la galería"
+msgstr "ギャラリーのカテゴリー"
 
 # automatic translation
 #: gallery-plugin.php:539 gallery-plugin.php:1012
 msgid "Gallery Category"
-msgstr "Galería Categoría"
+msgstr "ギャラリー部門"
 
 # automatic translation
 #: gallery-plugin.php:540
 msgid "Add Gallery Category"
-msgstr "Agregar categoría de galería"
+msgstr "ギャラリー カテゴリを追加"
 
 # automatic translation
 #: gallery-plugin.php:541
 msgid "Add New Gallery Category"
-msgstr "Agregar nueva categoría de galería"
+msgstr "新しいギャラリー カテゴリを追加"
 
 # automatic translation
 #: gallery-plugin.php:542 gallery-plugin.php:543
 msgid "Edit Gallery Category"
-msgstr "Editar categoría de la galería"
+msgstr "ギャラリーのカテゴリを編集"
 
 # automatic translation
 #: gallery-plugin.php:544
 msgid "New Gallery Category"
-msgstr "Nueva categoría de galería"
+msgstr "新しいギャラリー カテゴリ"
 
 # automatic translation
 #: gallery-plugin.php:545 gallery-plugin.php:546
 msgid "View Gallery Category"
-msgstr "Ver Galería Categoría"
+msgstr "ギャラリーカテゴリーを見る"
 
 # automatic translation
 #: gallery-plugin.php:547
 msgid "Find Gallery Category"
-msgstr "Buscar Galería Categoría"
+msgstr "ギャラリー カテゴリを検索"
 
 # automatic translation
 #: gallery-plugin.php:548
 msgid "No Gallery Categories found"
-msgstr "No se encontraron categorías de galería"
+msgstr "ギャラリーのカテゴリが見つかりません"
 
 # automatic translation
 #: gallery-plugin.php:549
 msgid "No Gallery Categories found in Trash"
-msgstr "No se encontraron categorías de galería en la papelera"
+msgstr "ごみ箱にギャラリー カテゴリがありません"
 
 # automatic translation
 #: gallery-plugin.php:550
 msgid "Parent Gallery Category"
-msgstr "Categoría principal de la galería"
+msgstr "親ギャラリー カテゴリ"
 
 # automatic translation
 #: gallery-plugin.php:551
 msgid "Gallery Categories list navigation"
-msgstr "Navegación de la lista de categorías de la galería"
+msgstr "ギャラリー カテゴリ リスト ナビゲーション"
 
 # automatic translation
 #: gallery-plugin.php:552
 msgid "Gallery Categories list"
-msgstr "Lista de categorías de la galería"
+msgstr "ギャラリーカテゴリー一覧"
 
 # automatic translation
 #: gallery-plugin.php:605
 msgid "Gallery Shortcode"
-msgstr "Código abreviado de la galería"
+msgstr "ギャラリーショートコード"
 
 # automatic translation
 #: gallery-plugin.php:615
 msgid ""
 "Add a single gallery with images to your posts, pages, custom post types or "
 "widgets by using the following shortcode:"
-msgstr ""
-"Agregue una sola galería con imágenes a sus publicaciones, páginas, tipos "
-"de publicaciones personalizadas o widgets utilizando el siguiente código "
-"abreviado:"
+msgstr "次のショートコードを使用して、投稿、ページ、カスタム投稿タイプ、またはウィジェットに画像付きのギャラリーを 1 つ追加します。"
 
 # automatic translation
 #: gallery-plugin.php:621
 msgid ""
 "Add a gallery cover including featured image, description, and a link to "
 "your single gallery using the following shortcode:"
-msgstr ""
-"Agregue una portada de la galería que incluya una imagen destacada, una "
-"descripción y un enlace a su galería individual usando el siguiente código "
-"abreviado:"
+msgstr "次のショートコードを使用して、注目の画像、説明、単一のギャラリーへのリンクを含むギャラリー カバーを追加します。"
 
 # automatic translation
 #: gallery-plugin.php:740
 msgid "Note"
-msgstr "Nota"
+msgstr "ノート"
 
 # automatic translation
 #: gallery-plugin.php:740
@@ -2163,20 +1992,18 @@ msgstr "Nota"
 msgid ""
 "When deleting a category, the galleries that belong to this category will "
 "not be deleted. These galleries will be moved to the category %s."
-msgstr ""
-"Al eliminar una categoría, las galerías que pertenecen a esta categoría no "
-"se eliminarán. Estas galerías se moverán a la categoría %s."
+msgstr "カテゴリを削除しても、そのカテゴリに属するギャラリーは削除されません。これらのギャラリーはカテゴリ %s に移動されます。"
 
 # automatic translation
 #: gallery-plugin.php:752
 msgid "Sort Galleries in Category by"
-msgstr "Ordenar galerías en categoría por"
+msgstr "カテゴリ内のギャラリーを並べ替え"
 
 # automatic translation
 #: gallery-plugin.php:755 gallery-plugin.php:3167
 #: includes/class-gllr-settings.php:799
 msgid "Gallery ID"
-msgstr "ID de la galería"
+msgstr "ギャラリーID"
 
 # automatic translation
 #: gallery-plugin.php:756 gallery-plugin.php:1926 gallery-plugin.php:3168
@@ -2185,109 +2012,109 @@ msgstr "ID de la galería"
 #: includes/class-gllr-media-table.php:469 includes/class-gllr-settings.php:800
 #: includes/class-gllr-widgets.php:296
 msgid "Title"
-msgstr "Título"
+msgstr "タイトル"
 
 # automatic translation
 #: gallery-plugin.php:757 gallery-plugin.php:1931 gallery-plugin.php:3169
 #: includes/class-gllr-settings.php:589 includes/class-gllr-settings.php:801
 msgid "Date"
-msgstr "Fecha"
+msgstr "日にち"
 
 # automatic translation
 #: gallery-plugin.php:758 gallery-plugin.php:3170
 #: includes/class-gllr-settings.php:802
 msgid "Last modified date"
-msgstr "Última fecha de modificación"
+msgstr "最終更新日"
 
 # automatic translation
 #: gallery-plugin.php:759 gallery-plugin.php:3171
 #: includes/class-gllr-settings.php:803
 msgid "Comment count"
-msgstr "Recuento de comentarios"
+msgstr "コメント数"
 
 # automatic translation
 #: gallery-plugin.php:760 gallery-plugin.php:3172
 #: includes/class-gllr-settings.php:804
 msgid "\"Order\" field on the gallery edit page"
-msgstr "Campo \"Pedido\" en la página de edición de la galería"
+msgstr "ギャラリー編集ページの「注文」欄"
 
 # automatic translation
 #: gallery-plugin.php:761 gallery-plugin.php:1930 gallery-plugin.php:3173
 #: includes/class-gllr-settings.php:805
 msgid "Author"
-msgstr "Autor"
+msgstr "著者"
 
 # automatic translation
 #: gallery-plugin.php:762 gallery-plugin.php:3174
 #: includes/class-gllr-settings.php:590 includes/class-gllr-settings.php:806
 msgid "Random"
-msgstr "aleatorio"
+msgstr "ランダム"
 
 # automatic translation
 #: gallery-plugin.php:763 gallery-plugin.php:3175
 msgid "Plugin Settings"
-msgstr "Configuración del complemento"
+msgstr "プラグイン設定"
 
 # automatic translation
 #: gallery-plugin.php:765 gallery-plugin.php:3177
 msgid "Select galleries sorting order in your category."
-msgstr "Seleccione el orden de clasificación de las galerías en su categoría."
+msgstr "カテゴリ内のギャラリーの並べ替え順序を選択します。"
 
 # automatic translation
 #: gallery-plugin.php:791 gallery-plugin.php:1928
 msgid "Shortcode"
-msgstr "Código corto"
+msgstr "ショートコード"
 
 # automatic translation
 #: gallery-plugin.php:835
 msgid "All Gallery Categories"
-msgstr "Todas las categorías de la galería"
+msgstr "すべてのギャラリー カテゴリ"
 
 # automatic translation
 #: gallery-plugin.php:918
 msgid "You can't delete default gallery category."
-msgstr "No puede eliminar la categoría de galería predeterminada."
+msgstr "デフォルトのギャラリー カテゴリは削除できません。"
 
 # automatic translation
 #: gallery-plugin.php:1402 gallery-plugin.php:1512 gallery-plugin.php:2633
 msgid "Sorry, nothing found."
-msgstr "Lo siento, no se encontró nada."
+msgstr "申し訳ありませんが、何も見つかりませんでした。"
 
 # automatic translation
 #: gallery-plugin.php:1925
 msgid "Featured Image"
-msgstr "Foto principal"
+msgstr "アイキャッチ画像"
 
 # automatic translation
 #: gallery-plugin.php:1927 includes/class-gllr-settings.php:45
 msgid "Images"
-msgstr "Imágenes"
+msgstr "画像"
 
 # automatic translation
 #: gallery-plugin.php:2015
 #, php-format
 msgid "%s Settings"
-msgstr "Configuración de %s"
+msgstr "%s 設定"
 
 # automatic translation
 #: gallery-plugin.php:2094
 msgid "Updating images..."
-msgstr "Actualizando imágenes..."
+msgstr "画像を更新しています..."
 
 # automatic translation
 #: gallery-plugin.php:2095
 msgid "No images found."
-msgstr "No se encontraron imágenes."
+msgstr "画像が見つかりません。"
 
 # automatic translation
 #: gallery-plugin.php:2096
 msgid "All images were updated."
-msgstr "Todas las imágenes fueron actualizadas."
+msgstr "すべての画像が更新されました。"
 
 # automatic translation
 #: gallery-plugin.php:2097
 msgid "Error."
-msgstr "Error."
+msgstr "エラー。"
 
 # automatic translation
 #: gallery-plugin.php:2112
@@ -2295,8 +2122,8 @@ msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
-"Está a punto de eliminar estos elementos de esta galería.\n"
-" 'Cancelar' para detener, 'OK' para borrar."
+"これらのアイテムをこのギャラリーから削除しようとしています。\n"
+" 「キャンセル」で中止、「OK」で削除。"
 
 # automatic translation
 #: gallery-plugin.php:2113
@@ -2304,85 +2131,79 @@ msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
-"Estás a punto de eliminar esta imagen de la galería.\n"
-" 'Cancelar' para detener, 'OK' para borrar."
+"この画像をギャラリーから削除しようとしています。\n"
+" 「キャンセル」で中止、「OK」で削除。"
 
 # automatic translation
 #: gallery-plugin.php:2114
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
-msgstr ""
-"Al cambiar a otro modo, todos los datos no guardados se perderán. ¿Guardar "
-"datos antes de cambiar?"
+msgstr "別のモードに切り替えると、保存されていないデータはすべて失われます。切り替える前にデータを保存しますか？"
 
 # automatic translation
 #: gallery-plugin.php:2115
 msgid "Insert Media"
-msgstr "Insertar medios"
+msgstr "メディアを挿入"
 
 # automatic translation
 #: gallery-plugin.php:2116
 msgid "Insert"
-msgstr "Insertar"
+msgstr "入れる"
 
 # automatic translation
 #: gallery-plugin.php:2117
 msgid "A new slider is added."
-msgstr "Se agrega un nuevo control deslizante."
+msgstr "新しいスライダーが追加されました。"
 
 # automatic translation
 #: gallery-plugin.php:2117
 msgid "Edit slider"
-msgstr "Control deslizante de edición"
+msgstr "スライダーを編集"
 
 # automatic translation
 #: gallery-plugin.php:2855 gallery-plugin.php:2883
 msgid "Image size not defined"
-msgstr "Tamaño de imagen no definido"
+msgstr "画像サイズが定義されていません"
 
 # automatic translation
 #: gallery-plugin.php:2871
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
-msgstr ""
-"El complemento actualiza solo el tipo de archivo PNG, JPEG, GIF, WPMP o "
-"XBM. Para otros, vuelva a cargar las imágenes manualmente."
+msgstr "プラグインは、PNG、JPEG、GIF、WPMP、または XBM ファイルタイプのみを更新します。その他の場合は、手動で画像をリロードしてください。"
 
 # automatic translation
 #: gallery-plugin.php:2916 gallery-plugin.php:2920 gallery-plugin.php:2926
 msgid "Invalid path"
-msgstr "Ruta no válida"
+msgstr "無効なパス"
 
 # automatic translation
 #: gallery-plugin.php:3128 gallery-plugin.php:3305 gallery-plugin.php:3308
 msgid "Warning"
-msgstr "Advertencia"
+msgstr "警告"
 
 # automatic translation
 #: gallery-plugin.php:3128
 msgid "You can add only images to the gallery"
-msgstr "Puedes agregar solo imágenes a la galería."
+msgstr "ギャラリーには画像のみを追加できます"
 
 # automatic translation
 #: gallery-plugin.php:3191
 msgid "no title"
-msgstr "Sin título"
+msgstr "タイトルなし"
 
 # automatic translation
 #: gallery-plugin.php:3205
 msgid ""
 "Display an album image with the description and the link to a single "
 "gallery page"
-msgstr ""
-"Muestre una imagen de álbum con la descripción y el enlace a una sola "
-"página de galería"
+msgstr "説明と 1 つのギャラリー ページへのリンクを含むアルバム画像を表示する"
 
 # automatic translation
 #: gallery-plugin.php:3209
 msgid "Sorry, no gallery found."
-msgstr "Lo sentimos, no se encontró ninguna galería."
+msgstr "申し訳ありませんが、ギャラリーが見つかりません。"
 
 # automatic translation
 #: gallery-plugin.php:3305
@@ -2391,9 +2212,8 @@ msgid ""
 "Maximum upload file size %s. Contact your administrator or hosting provider "
 "if you need to upload a large file size."
 msgstr ""
-"Tamaño máximo de archivo de carga %s. Póngase en contacto con su "
-"administrador o proveedor de alojamiento si necesita cargar un archivo de "
-"gran tamaño."
+"最大アップロード ファイル サイズ %s。大きなファイル サイズをアップロードする必要がある場合は、管理者またはホスティング "
+"プロバイダーにお問い合わせください。"
 
 # automatic translation
 #: gallery-plugin.php:3308
@@ -2403,88 +2223,88 @@ msgid ""
 "limited. Contact your administrator or hosting provider if you need to "
 "upload a large input vars count."
 msgstr ""
-"Ingrese vars count %s, es decir, la cantidad de imágenes en la galería "
-"puede ser limitada. Comuníquese con su administrador o proveedor de "
-"alojamiento si necesita cargar un gran número de variables de entrada."
+"入力変数は %s "
+"をカウントします。つまり、ギャラリー内の画像の数が制限されている可能性があります。大量の入力変数カウントをアップロードする必要がある場合は、管理者または"
+"ホスティング プロバイダーにお問い合わせください。"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:19
 msgid "List View"
-msgstr "Vista de la lista"
+msgstr "リストビュー"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:20
 msgid "Grid View"
-msgstr "Vista en cuadrícula"
+msgstr "グリッドビュー"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:81
 msgid "Filter"
-msgstr "Filtrar"
+msgstr "フィルター"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:85
 msgid "Empty Trash"
-msgstr "Papelera vacía"
+msgstr "空のごみ箱"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:110
 msgid "No images found"
-msgstr "No se encontraron imágenes"
+msgstr "画像が見つかりません"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:167
 msgid "Select bulk action"
-msgstr "Seleccionar acción masiva"
+msgstr "一括操作を選択"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:169
 msgid "Bulk Actions"
-msgstr "Acciones masivas"
+msgstr "一括操作"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:179
 msgid "Apply"
-msgstr "Aplicar"
+msgstr "申し込み"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:186
 msgid "Delete from Gallery"
-msgstr "Eliminar de la galería"
+msgstr "ギャラリーから削除"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:196
 msgid "Bulk Select"
-msgstr "Selección masiva"
+msgstr "一括選択"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:197
 msgid "Cancel Selection"
-msgstr "Cancelar selección"
+msgstr "選択をキャンセル"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:198
 msgid "Delete Selected"
-msgstr "Eliminar seleccionado"
+msgstr "選択を削除します"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:212
 msgid "File"
-msgstr "Archivo"
+msgstr "ファイル"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:213
 #: includes/class-gllr-media-table.php:321
 #: includes/class-gllr-media-table.php:462
 msgid "Dimensions"
-msgstr "Dimensiones"
+msgstr "寸法"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:215
 #: includes/class-gllr-media-table.php:334
 #: includes/class-gllr-media-table.php:476
 msgid "Alt Text"
-msgstr "Texto alternativo"
+msgstr "代替テキスト"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:216
@@ -2499,174 +2319,170 @@ msgstr "URL"
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
-msgstr ""
-"Ingrese su URL personalizada para vincular esta imagen a otra página o "
-"archivo. Déjelo en blanco para abrir una imagen a tamaño completo."
+msgstr "カスタム URL を入力して、この画像を他のページまたはファイルにリンクします。フルサイズの画像を開くには空白のままにします。"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:303
 msgid "Remove Image from Gallery"
-msgstr "Eliminar imagen de la galería"
+msgstr "ギャラリーから画像を削除"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:306
 msgid "Edit Image Info"
-msgstr "Editar información de la imagen"
+msgstr "画像情報の編集"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:307
 msgid "Deselect"
-msgstr "Deseleccionar"
+msgstr "選択解除"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:319
 msgid "File name"
-msgstr "Nombre del archivo"
+msgstr "ファイル名"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:320
 msgid "File type"
-msgstr "Tipo de archivo"
+msgstr "ファイルの種類"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:350
 msgid "Description"
-msgstr "Descripción"
+msgstr "説明"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:359
 msgid "Lightbox Button URL"
-msgstr "URL del botón Lightbox"
+msgstr "ライトボックス ボタンの URL"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:367
 msgid "New Tab"
-msgstr "Nueva pestaña"
+msgstr "新しいタブ"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:369
 msgid "Enable to open URLs above in a new tab."
-msgstr "Habilite para abrir las URL anteriores en una nueva pestaña."
+msgstr "上記の URL を新しいタブで開くことができるようにします。"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:374
 msgid "Go Pro"
-msgstr "Conviértete en profesional"
+msgstr "プロに行く"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:381
 msgid "Edit more details"
-msgstr "Editar más detalles"
+msgstr "詳細を編集"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:383
 msgid "Remove from Gallery"
-msgstr "Eliminar de la galería"
+msgstr "ギャラリーから削除"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:424
 #, php-format
 msgid "Select %s"
-msgstr "Seleccione %s"
+msgstr "%s を選択"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:442
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
-msgstr "Editar &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; を編集"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:456
 msgid "Edit Attachment Info"
-msgstr "Editar información del archivo adjunto"
+msgstr "添付情報の編集"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:504
 #: includes/class-gllr-media-table.php:520
 msgid "Edit"
-msgstr "Editar"
+msgstr "編集"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:508
 #: includes/class-gllr-media-table.php:526
 msgid "Trash"
-msgstr "Basura"
+msgstr "ごみ"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:511
 #: includes/class-gllr-media-table.php:530
 msgid "Delete Permanently"
-msgstr "borrar permanentemente"
+msgstr "完全に削除"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:514
 #: includes/class-gllr-media-table.php:536
 #, php-format
 msgid "View &#8220;%s&#8221;"
-msgstr "Ver &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; を表示"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:514
 #: includes/class-gllr-media-table.php:536 includes/class-gllr-widgets.php:95
 msgid "View"
-msgstr "Vista"
+msgstr "意見"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:516
 msgid "Attach"
-msgstr "Adjuntar"
+msgstr "取り付ける"
 
 # automatic translation
 #: includes/class-gllr-media-table.php:524
 msgid "Restore"
-msgstr "Restaurar"
+msgstr "戻す"
 
 # automatic translation
 #: includes/class-gllr-settings.php:30
 msgid "Cover"
-msgstr "Cubrir"
+msgstr "カバー"
 
 # automatic translation
 #: includes/class-gllr-settings.php:31
 msgid "Lightbox"
-msgstr "Caja ligera"
+msgstr "ライトボックス"
 
 # automatic translation
 #: includes/class-gllr-settings.php:33
 msgid "Social"
-msgstr "Social"
+msgstr "社交"
 
 # automatic translation
 #: includes/class-gllr-settings.php:36
 msgid "Misc"
-msgstr "Varios"
+msgstr "その他"
 
 # automatic translation
 #: includes/class-gllr-settings.php:244
 msgid "Settings saved"
-msgstr "Ajustes guardados"
+msgstr "保存された設定"
 
 # automatic translation
 #: includes/class-gllr-settings.php:258 includes/class-gllr-widgets.php:375
 msgid "Please, enable JavaScript in Your browser."
-msgstr "Por favor, habilite JavaScript en su navegador."
+msgstr "ブラウザで JavaScript を有効にしてください。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:262
 msgid "Custom image size was changed. You need to update gallery images."
-msgstr ""
-"Se cambió el tamaño de la imagen personalizada. Necesitas actualizar las "
-"imágenes de la galería."
+msgstr "カスタム画像サイズが変更されました。ギャラリーの画像を更新する必要があります。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:263
 msgid "Update Images"
-msgstr "Actualizar imágenes"
+msgstr "画像の更新"
 
 # automatic translation
 #: includes/class-gllr-settings.php:280
 msgid "Gallery Images"
-msgstr "Imágenes de la galería"
+msgstr "ギャラリー画像"
 
 # automatic translation
 #: includes/class-gllr-settings.php:284
@@ -2674,128 +2490,119 @@ msgid ""
 "The number of images you can add to the gallery depends on your server "
 "settings. If you have problems saving the gallery, try reducing the number "
 "of images in it."
-msgstr ""
-"La cantidad de imágenes que puede agregar a la galería depende de la "
-"configuración de su servidor. Si tiene problemas para guardar la galería, "
-"intente reducir la cantidad de imágenes que contiene."
+msgstr "ギャラリーに追加できる画像の数は、サーバーの設定によって異なります。ギャラリーの保存に問題がある場合は、ギャラリー内の画像の数を減らしてみてください。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:286
 msgid "Images adding requires JavaScript."
-msgstr "La adición de imágenes requiere JavaScript."
+msgstr "画像の追加には JavaScript が必要です。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:289
 msgid "Add Media"
-msgstr "Agregar medios"
+msgstr "メディアを追加"
 
 # automatic translation
 #: includes/class-gllr-settings.php:300
 msgid "The grid view for the Gallery images requires JavaScript."
-msgstr "La vista de cuadrícula para las imágenes de la Galería requiere JavaScript."
+msgstr "ギャラリー画像のグリッド ビューには JavaScript が必要です。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:300
 msgid "Switch to the list view"
-msgstr "Cambiar a la vista de lista"
+msgstr "リスト表示に切り替える"
 
 # automatic translation
 #: includes/class-gllr-settings.php:330
 msgid "Create Slider"
-msgstr "Crear control deslizante"
+msgstr "スライダーを作成"
 
 # automatic translation
 #: includes/class-gllr-settings.php:348
 msgid "Create New Slider"
-msgstr "Crear nuevo control deslizante"
+msgstr "新しいスライダーを作成"
 
 # automatic translation
 #: includes/class-gllr-settings.php:354
 msgid ""
 "Click to create a new slider using gallery images. Slider plugin is "
 "required."
-msgstr ""
-"Haga clic para crear un nuevo control deslizante utilizando imágenes de la "
-"galería. Se requiere el complemento deslizante."
+msgstr "クリックして、ギャラリーの画像を使用して新しいスライダーを作成します。スライダープラグインが必要です。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:368
 msgid "Single Gallery Settings"
-msgstr "Configuración de galería única"
+msgstr "シングルギャラリー設定"
 
 # automatic translation
 #: includes/class-gllr-settings.php:370
 #, php-format
 msgid "Enable to configure single gallery settings and disable %s."
-msgstr "Habilite para configurar los ajustes de una sola galería y deshabilite %s."
+msgstr "単一ギャラリー設定の構成を有効にし、%s を無効にします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:388
 msgid "Gallery Layout"
-msgstr "Diseño de la galería"
+msgstr "ギャラリーのレイアウト"
 
 # automatic translation
 #: includes/class-gllr-settings.php:393
 msgid "Grid"
-msgstr "Red"
+msgstr "グリッド"
 
 # automatic translation
 #: includes/class-gllr-settings.php:399
 msgid "Masonry"
-msgstr "Albañilería"
+msgstr "石積み"
 
 # automatic translation
 #: includes/class-gllr-settings.php:413
 msgid "Number of Columns"
-msgstr "Número de columnas"
+msgstr "列の数"
 
 # automatic translation
 #: includes/class-gllr-settings.php:416
 #, php-format
 msgid "Number of gallery columns (default is %s)."
-msgstr "Número de columnas de la galería (el valor predeterminado es %s)."
+msgstr "ギャラリーの列数 (デフォルトは %s)。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:420 includes/class-gllr-settings.php:892
 msgid "Image Size"
-msgstr "Tamaño de la imagen"
+msgstr "画像サイズ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:426 includes/class-gllr-settings.php:720
 msgid "Custom"
-msgstr "Costumbre"
+msgstr "カスタム"
 
 # automatic translation
 #: includes/class-gllr-settings.php:428
 msgid "Maximum gallery image size. \"Custom\" uses the Image Dimensions values."
-msgstr ""
-"Tamaño máximo de imagen de la galería. \"Personalizado\" utiliza los "
-"valores de Dimensiones de la imagen."
+msgstr "ギャラリー画像の最大サイズ。 「カスタム」は、画像の寸法値を使用します。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:432
 msgid "Custom Image Size"
-msgstr "Tamaño de imagen personalizado"
+msgstr "カスタム画像サイズ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:434 includes/class-gllr-settings.php:531
 #: includes/class-gllr-settings.php:728 includes/class-gllr-settings.php:785
 msgid "px"
-msgstr "píxeles"
+msgstr "ピクセル"
 
 # automatic translation
 #: includes/class-gllr-settings.php:435
 msgid ""
 "Adjust these values based on the number of columns in your gallery. This "
 "won't effect the full size of your images in the lightbox."
-msgstr ""
-"Ajuste estos valores en función del número de columnas de su galería. Esto "
-"no afectará el tamaño completo de sus imágenes en la caja de luz."
+msgstr "ギャラリーの列数に基づいてこれらの値を調整します。これは、ライトボックス内の画像のフル サイズには影響しません。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:447
 msgid "Crop Images"
-msgstr "Recortar imágenes"
+msgstr "画像のトリミング"
 
 # automatic translation
 #: includes/class-gllr-settings.php:449
@@ -2803,297 +2610,275 @@ msgid ""
 "Enable to crop images using the sizes defined for Custom Image Size. "
 "Disable to resize images automatically using their aspect ratio."
 msgstr ""
-"Habilite para recortar imágenes usando los tamaños definidos para Tamaño de "
-"imagen personalizado. Deshabilite para cambiar el tamaño de las imágenes "
-"automáticamente usando su relación de aspecto."
+"カスタム画像サイズに定義されたサイズを使用して画像をトリミングできるようにします。アスペクト比を使用して画像のサイズを自動的に変更することを無効にします"
+"。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:453 includes/class-gllr-settings.php:746
 msgid "Crop Position"
-msgstr "Posición de recorte"
+msgstr "クロップ位置"
 
 # automatic translation
 #: includes/class-gllr-settings.php:468 includes/class-gllr-settings.php:761
 msgid "Select crop position base (by default: center)."
-msgstr "Seleccione la base de la posición de recorte (por defecto: centro)."
+msgstr "トリミング位置のベースを選択します (デフォルト: 中央)。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:479
 msgid "Image Title"
-msgstr "titulo de la imagen"
+msgstr "画像のタイトル"
 
 # automatic translation
 #: includes/class-gllr-settings.php:481
 msgid "Enable to display image title along with the gallery image."
-msgstr ""
-"Habilite para mostrar el título de la imagen junto con la imagen de la "
-"galería."
+msgstr "ギャラリー画像とともに画像タイトルを表示できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:493
 msgid "Image Title Position"
-msgstr "Posición del título de la imagen"
+msgstr "画像タイトルの位置"
 
 # automatic translation
 #: includes/class-gllr-settings.php:498
 msgid "Below images"
-msgstr "Debajo de las imágenes"
+msgstr "下の画像"
 
 # automatic translation
 #: includes/class-gllr-settings.php:504
 msgid "On mouse hover"
-msgstr "Al pasar el mouse"
+msgstr "マウスホバー時"
 
 # automatic translation
 #: includes/class-gllr-settings.php:518
 msgid "Image Border"
-msgstr "borde de la imagen"
+msgstr "イメージボーダー"
 
 # automatic translation
 #: includes/class-gllr-settings.php:525
 msgid ""
 "Enable images border using the styles defined for Image Border Size and "
 "Color options."
-msgstr ""
-"Habilite el borde de las imágenes usando los estilos definidos para las "
-"opciones Tamaño y color del borde de la imagen."
+msgstr "画像の境界線のサイズと色のオプションで定義されたスタイルを使用して、画像の境界線を有効にします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:529
 msgid "Image Border Size"
-msgstr "Tamaño del borde de la imagen"
+msgstr "画像の枠サイズ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:532
 #, php-format
 msgid "Gallery image border width (default is %s)."
-msgstr "Ancho del borde de la imagen de la galería (el valor predeterminado es %s)."
+msgstr "ギャラリー画像の境界線の幅 (デフォルトは %s)。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:536
 msgid "Image Border Color"
-msgstr "Color del borde de la imagen"
+msgstr "画像の枠の色"
 
 # automatic translation
 #: includes/class-gllr-settings.php:542
 msgid "Unclickable Thumbnail Images"
-msgstr "Imágenes en miniatura en las que no se puede hacer clic"
+msgstr "クリックできないサムネイル画像"
 
 # automatic translation
 #: includes/class-gllr-settings.php:550
 msgid ""
 "Enable to make the images in a single gallery unclickable and hide their "
 "URLs. This option also disables Lightbox."
-msgstr ""
-"Habilite para hacer que las imágenes en una sola galería no se puedan hacer "
-"clic y ocultar sus URL. Esta opción también desactiva Lightbox."
+msgstr "1 つのギャラリー内の画像をクリックできないようにし、その URL を非表示にします。このオプションは、ライトボックスも無効にします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:562
 msgid "Pagination"
-msgstr "Paginación"
+msgstr "ページネーション"
 
 # automatic translation
 #: includes/class-gllr-settings.php:565
 msgid ""
 "Enable pagination for images to limit number of images displayed on a "
 "single gallery page."
-msgstr ""
-"Habilite la paginación de imágenes para limitar el número de imágenes que "
-"se muestran en una sola página de galería."
+msgstr "画像のページネーションを有効にして、1 つのギャラリー ページに表示される画像の数を制限します。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:569
 msgid "Number of Images"
-msgstr "Número de imágenes"
+msgstr "画像数"
 
 # automatic translation
 #: includes/class-gllr-settings.php:572
 #, php-format
 msgid "Number of images displayed per page (default is %d)."
-msgstr "Número de imágenes mostradas por página (el valor predeterminado es %d)."
+msgstr "ページごとに表示される画像の数 (デフォルトは %d)。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:583
 msgid "Sort Images by"
-msgstr "Ordenar imágenes por"
+msgstr "画像の並べ替え"
 
 # automatic translation
 #: includes/class-gllr-settings.php:586
 msgid "Manually (default)"
-msgstr "Manualmente (predeterminado)"
+msgstr "手動 (デフォルト)"
 
 # automatic translation
 #: includes/class-gllr-settings.php:587
 msgid "Image ID"
-msgstr "ID de imagen"
+msgstr "画像ID"
 
 # automatic translation
 #: includes/class-gllr-settings.php:588
 msgid "Name"
-msgstr "Nombre"
+msgstr "名前"
 
 # automatic translation
 #: includes/class-gllr-settings.php:592
 msgid ""
 "Select images sorting order in your gallery. By default, you can sort "
 "images manually in the images tab."
-msgstr ""
-"Seleccione el orden de clasificación de las imágenes en su galería. De "
-"forma predeterminada, puede ordenar las imágenes manualmente en la pestaña "
-"de imágenes."
+msgstr "ギャラリーで画像の並べ替え順序を選択します。デフォルトでは、画像タブで画像を手動で並べ替えることができます。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:596
 msgid "Arrange Images by"
-msgstr "Organizar imágenes por"
+msgstr "画像の並べ替え"
 
 # automatic translation
 #: includes/class-gllr-settings.php:604 includes/class-gllr-settings.php:820
 msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
-msgstr "Ascendente (por ejemplo, 1, 2, 3; a, b, c)"
+msgstr "昇順 (例: 1、2、3、a、b、c)"
 
 # automatic translation
 #: includes/class-gllr-settings.php:610 includes/class-gllr-settings.php:826
 msgid "Descending (e.g. 3, 2, 1; c, b, a)"
-msgstr "Descendente (por ejemplo, 3, 2, 1; c, b, a)"
+msgstr "降順 (例: 3、2、1; c、b、a)"
 
 # automatic translation
 #: includes/class-gllr-settings.php:615
 msgid "Back Link"
-msgstr "Vínculo posterior"
+msgstr "バックリンク"
 
 # automatic translation
 #: includes/class-gllr-settings.php:622
 msgid ""
 "Enable to show a back link in a single gallery page which navigate to a "
 "previous page."
-msgstr ""
-"Habilite para mostrar un enlace de retroceso en una sola página de galería "
-"que navega a una página anterior."
+msgstr "前のページに移動する単一のギャラリー ページに戻るリンクを表示できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:626
 msgid "Back Link URL"
-msgstr "URL de vínculo posterior"
+msgstr "戻るリンクの URL"
 
 # automatic translation
 #: includes/class-gllr-settings.php:629
 msgid "Leave blank to use the Gallery page template or enter a custom page URL."
-msgstr ""
-"Déjelo en blanco para usar la plantilla de la página de la galería o "
-"ingrese una URL de página personalizada."
+msgstr "空白のままにしてギャラリー ページ テンプレートを使用するか、カスタム ページ URL を入力します。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:633
 msgid "Back Link Label"
-msgstr "Etiqueta de vínculo posterior"
+msgstr "バックリンクラベル"
 
 # automatic translation
 #: includes/class-gllr-settings.php:639
 msgid "Back Link with Shortcode"
-msgstr "Vínculo posterior con código abreviado"
+msgstr "ショートコードによるバックリンク"
 
 # automatic translation
 #: includes/class-gllr-settings.php:647
 msgid "Enable to display a back link on a page where shortcode is used."
-msgstr ""
-"Habilite para mostrar un enlace de regreso en una página donde se usa "
-"shortcode."
+msgstr "ショートコードを使用しているページに戻るリンクを表示できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:651
 msgid "Disable Fancybox"
-msgstr "Desactivar Fancybox"
+msgstr "ファンシーボックスを無効にする"
 
 # automatic translation
 #: includes/class-gllr-settings.php:658
 msgid "Enable to avoid possible conflicts with a 3rd party Fancybox."
-msgstr "Habilite para evitar posibles conflictos con un Fancybox de terceros."
+msgstr "サードパーティの Fancybox との競合を回避するために有効にします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:672
 msgid "Cover Settings"
-msgstr "Configuración de portada"
+msgstr "表紙設定"
 
 # automatic translation
 #: includes/class-gllr-settings.php:677
 msgid "Galleries Page"
-msgstr "Página de galerías"
+msgstr "ギャラリーページ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:689
 msgid "Base page where all existing galleries will be displayed."
-msgstr "Página base donde se mostrarán todas las galerías existentes."
+msgstr "既存のすべてのギャラリーが表示されるベース ページ。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:693
 msgid "Albums Displaying"
-msgstr "Visualización de álbumes"
+msgstr "アルバム表示中"
 
 # automatic translation
 #: includes/class-gllr-settings.php:696
 msgid "Column"
-msgstr "Columna"
+msgstr "桁"
 
 # automatic translation
 #: includes/class-gllr-settings.php:697
 msgid "Rows"
-msgstr "Filas"
+msgstr "行"
 
 # automatic translation
 #: includes/class-gllr-settings.php:699
 msgid "Select the way galleries will be displayed on the Galleries Page."
-msgstr ""
-"Seleccione la forma en que se mostrarán las galerías en la Página de "
-"galerías."
+msgstr "ギャラリー ページでのギャラリーの表示方法を選択します。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:703
 msgid "Column Alignment"
-msgstr "Alineación de columnas"
+msgstr "列の配置"
 
 # automatic translation
 #: includes/class-gllr-settings.php:706
 msgid "Left"
-msgstr "Izquierda"
+msgstr "左"
 
 # automatic translation
 #: includes/class-gllr-settings.php:707
 msgid "Right"
-msgstr "Bien"
+msgstr "右"
 
 # automatic translation
 #: includes/class-gllr-settings.php:708
 msgid "Center"
-msgstr "Centro"
+msgstr "中心"
 
 # automatic translation
 #: includes/class-gllr-settings.php:710
 msgid "Select the column alignment."
-msgstr "Seleccione la alineación de la columna."
+msgstr "列の配置を選択します。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:714
 msgid "Cover Image Size"
-msgstr "Tamaño de imagen de portada"
+msgstr "表紙画像サイズ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:722
 msgid "Maximum cover image size. Custom uses the Image Dimensions values."
-msgstr ""
-"Tamaño máximo de imagen de portada. Personalizado utiliza los valores de "
-"Dimensiones de la imagen."
+msgstr "表紙画像の最大サイズ。カスタムでは、画像の寸法値が使用されます。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:726
 msgid "Custom Cover Image Size"
-msgstr "Tamaño de imagen de portada personalizado"
+msgstr "カスタム表紙の画像サイズ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:740
 msgid "Crop Cover Images"
-msgstr "Recortar imágenes de portada"
+msgstr "表紙画像のクロップ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:742
@@ -3101,112 +2886,100 @@ msgid ""
 "Enable to crop images using the sizes defined for Custom Cover Image Size. "
 "Disable to resize images automatically using their aspect ratio."
 msgstr ""
-"Habilite para recortar imágenes utilizando los tamaños definidos para "
-"Tamaño de imagen de portada personalizado. Deshabilite para cambiar el "
-"tamaño de las imágenes automáticamente usando su relación de aspecto."
+"カスタム カバー イメージ "
+"サイズで定義されたサイズを使用して画像をトリミングできるようにします。アスペクト比を使用して画像のサイズを自動的に変更することを無効にします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:772
 msgid "Cover Image Border"
-msgstr "Borde de la imagen de portada"
+msgstr "表紙画像の枠"
 
 # automatic translation
 #: includes/class-gllr-settings.php:779
 msgid ""
 "Enable cover images border using the styles defined for Image Border Size "
 "and Color."
-msgstr ""
-"Habilite el borde de las imágenes de portada usando los estilos definidos "
-"para Tamaño y color del borde de la imagen."
+msgstr "画像の境界線のサイズと色に定義されたスタイルを使用して、表紙の画像の境界線を有効にします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:783
 msgid "Cover Image Border Size"
-msgstr "Tamaño del borde de la imagen de portada"
+msgstr "表紙画像の枠サイズ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:786
 #, php-format
 msgid "Cover image border width (default is %s)."
-msgstr "Ancho del borde de la imagen de portada (el valor predeterminado es %s)."
+msgstr "カバー画像のボーダー幅 (デフォルトは %s)。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:790
 msgid "Cover Image Border Color"
-msgstr "Color del borde de la imagen de portada"
+msgstr "表紙画像の枠の色"
 
 # automatic translation
 #: includes/class-gllr-settings.php:796
 msgid "Sort Albums by"
-msgstr "Ordenar álbumes por"
+msgstr "アルバムの並べ替え"
 
 # automatic translation
 #: includes/class-gllr-settings.php:808
 msgid "Select galleries sorting order in your galleries page."
-msgstr ""
-"Seleccione el orden de clasificación de las galerías en su página de "
-"galerías."
+msgstr "ギャラリー ページでギャラリーの並べ替え順序を選択します。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:812
 msgid "Arrange Albums by"
-msgstr "Organizar álbumes por"
+msgstr "アルバムの並べ替え"
 
 # automatic translation
 #: includes/class-gllr-settings.php:839
 msgid "Instant Lightbox"
-msgstr "Caja de luz instantánea"
+msgstr "インスタント ライトボックス"
 
 # automatic translation
 #: includes/class-gllr-settings.php:842
 msgid ""
 "Enable to display all images in the lightbox after clicking cover image or "
 "URL instead of going to a single gallery page."
-msgstr ""
-"Habilite para mostrar todas las imágenes en el cuadro de luz después de "
-"hacer clic en la imagen de portada o URL en lugar de ir a una sola página "
-"de galería."
+msgstr "単一のギャラリー ページに移動する代わりに、カバー画像または URL をクリックした後にライトボックスにすべての画像を表示できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:853
 msgid "Read More Link Label"
-msgstr "Leer más Etiqueta de enlace"
+msgstr "続きを読む リンク ラベル"
 
 # automatic translation
 #: includes/class-gllr-settings.php:867
 msgid "Lightbox Settings"
-msgstr "Configuración de la caja de luz"
+msgstr "ライトボックス設定"
 
 # automatic translation
 #: includes/class-gllr-settings.php:872
 msgid "Enable Lightbox"
-msgstr "Habilitar caja de luz"
+msgstr "ライトボックスを有効にする"
 
 # automatic translation
 #: includes/class-gllr-settings.php:880
 msgid "Enable to show the lightbox when clicking on gallery images."
-msgstr ""
-"Habilite para mostrar la caja de luz al hacer clic en las imágenes de la "
-"galería."
+msgstr "ギャラリー画像をクリックしたときにライトボックスを表示できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:899
 msgid ""
 "Select the maximum gallery image size for the lightbox view. \"Default\" "
 "will display the original, full size image."
-msgstr ""
-"Seleccione el tamaño máximo de imagen de la galería para la vista de caja "
-"de luz. \"Predeterminado\" mostrará la imagen original a tamaño completo."
+msgstr "ライトボックス ビューのギャラリー画像の最大サイズを選択します。 「デフォルト」では、元のフルサイズの画像が表示されます。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:903
 msgid "Overlay Color"
-msgstr "Color de superposición"
+msgstr "オーバーレイの色"
 
 # automatic translation
 #: includes/class-gllr-settings.php:909
 msgid "Overlay Opacity"
-msgstr "Opacidad superpuesta"
+msgstr "オーバーレイの不透明度"
 
 # automatic translation
 #: includes/class-gllr-settings.php:912
@@ -3214,154 +2987,141 @@ msgstr "Opacidad superpuesta"
 msgid ""
 "Lightbox overlay opacity. Leave blank to disable opacity (default is %1$s, "
 "max is %2$s)."
-msgstr ""
-"Opacidad de superposición de caja de luz. Déjelo en blanco para "
-"deshabilitar la opacidad (el valor predeterminado es %1$s, el máximo es "
-"%2$s)."
+msgstr "ライトボックス オーバーレイの不透明度。空白のままにして不透明度を無効にします (デフォルトは %1$s、最大は %2$s)。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:924
 msgid "Slideshow"
-msgstr "Diapositivas"
+msgstr "スライドショー"
 
 # automatic translation
 #: includes/class-gllr-settings.php:931
 msgid "Enable to start the slideshow automatically when the lightbox is used."
-msgstr ""
-"Habilite para iniciar la presentación de diapositivas automáticamente "
-"cuando se utiliza la caja de luz."
+msgstr "ライトボックス使用時にスライドショーを自動的に開始できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:935
 msgid "Slideshow Duration"
-msgstr "Duración de la presentación de diapositivas"
+msgstr "スライドショーの長さ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:937
 msgid "ms"
-msgstr "EM"
+msgstr "MS"
 
 # automatic translation
 #: includes/class-gllr-settings.php:938
 msgid "Slideshow interval duration between two images."
-msgstr "Duración del intervalo de presentación de diapositivas entre dos imágenes."
+msgstr "2 つの画像間のスライドショー間隔。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:950
 msgid "Lightbox Helpers"
-msgstr "Ayudantes de la caja de luz"
+msgstr "ライトボックス ヘルパー"
 
 # automatic translation
 #: includes/class-gllr-settings.php:952
 msgid "Enable to display the lightbox toolbar and arrows."
-msgstr ""
-"Habilite para mostrar la barra de herramientas y las flechas de la caja de "
-"luz."
+msgstr "ライトボックスのツールバーと矢印を表示できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:956
 msgid "Lightbox Thumbnails"
-msgstr "Miniaturas de caja de luz"
+msgstr "ライトボックスのサムネイル"
 
 # automatic translation
 #: includes/class-gllr-settings.php:958
 msgid "Enable to use a lightbox helper navigation between images."
-msgstr ""
-"Habilite esta opción para utilizar una navegación auxiliar de lightbox "
-"entre imágenes."
+msgstr "画像間のライトボックス ヘルパー ナビゲーションを使用できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:962
 msgid "Lightbox Thumbnails Position"
-msgstr "Posición de las miniaturas de Lightbox"
+msgstr "ライトボックスのサムネイルの位置"
 
 # automatic translation
 #: includes/class-gllr-settings.php:965
 msgid "Top"
-msgstr "Arriba"
+msgstr "上"
 
 # automatic translation
 #: includes/class-gllr-settings.php:970
 msgid "Lightbox Button Label"
-msgstr "Etiqueta de botón de caja de luz"
+msgstr "ライトボックス ボタン ラベル"
 
 # automatic translation
 #: includes/class-gllr-settings.php:972
 msgid "Read More"
-msgstr "Leer más"
+msgstr "続きを読む"
 
 # automatic translation
 #: includes/class-gllr-settings.php:984
 msgid "Download Button"
-msgstr "Botón de descarga"
+msgstr "ダウンロードボタン"
 
 # automatic translation
 #: includes/class-gllr-settings.php:991
 msgid "Enable to display download button."
-msgstr "Habilite para mostrar el botón de descarga."
+msgstr "ダウンロードボタンを表示できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:995
 msgid "Single Lightbox"
-msgstr "Caja de luz individual"
+msgstr "単一のライトボックス"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1002
 msgid ""
 "Enable to use a single lightbox for multiple galleries located on a single "
 "page."
-msgstr ""
-"Habilite para usar una sola caja de luz para múltiples galerías ubicadas en "
-"una sola página."
+msgstr "1 つのページにある複数のギャラリーに 1 つのライトボックスを使用できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1014
 msgid "Social Sharing Buttons Settings"
-msgstr "Configuración de los botones para compartir en redes sociales"
+msgstr "ソーシャル共有ボタンの設定"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1024
 msgid "Social Buttons"
-msgstr "Botones sociales"
+msgstr "ソーシャルボタン"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1026
 msgid "Enable social sharing buttons in the lightbox."
-msgstr "Habilite los botones para compartir en redes sociales en el lightbox."
+msgstr "ライトボックスでソーシャル共有ボタンを有効にします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1030
 msgid "Social Networks"
-msgstr "Redes sociales"
+msgstr "ソーシャルネットワーク"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1040
 msgid "Counter"
-msgstr "Encimera"
+msgstr "カウンター"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1043
 msgid "Enable to show likes counter for each social button."
-msgstr "Habilite para mostrar el contador de Me gusta para cada botón social."
+msgstr "ソーシャルボタンごとにいいね数を表示できるようにしました。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1062
 msgid "Demo Data"
-msgstr "Fecha de demostración"
+msgstr "デモ日"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1064
 msgid ""
 "Install demo data to create galleries with images, post with shortcodes and "
 "page with a list of all galleries."
-msgstr ""
-"Instale datos de demostración para crear galerías con imágenes, publicar "
-"con códigos abreviados y una página con una lista de todas las galerías."
+msgstr "デモ データをインストールして、画像付きのギャラリーを作成し、ショートコード付きで投稿し、すべてのギャラリーのリストを含むページを作成します。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1106
 msgid "Gallery Post Type"
-msgstr "Tipo de publicación de la galería"
+msgstr "ギャラリー投稿タイプ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1108
@@ -3371,236 +3131,228 @@ msgid ""
 "recommend to check settings of other plugins where \"gallery\" post type is "
 "used."
 msgstr ""
-"Habilite para evitar conflictos con otros complementos de la galería "
-"instalados. Todas las galerías creadas anteriormente permanecerán sin "
-"cambios. Sin embargo, después de habilitarlo, recomendamos verificar la "
-"configuración de otros complementos donde se usa el tipo de publicación "
-"\"galería\"."
+"インストールされている他のギャラリー "
+"プラグインとの競合を回避するために有効にします。以前に作成されたすべてのギャラリーは変更されません。ただし、有効にした後、「ギャラリー」投稿タイプが使用"
+"されている他のプラグインの設定を確認することをお勧めします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1121
 msgid "Gallery Slug"
-msgstr "galería babosa"
+msgstr "ギャラリースラッグ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1125
 msgid "Enter the unique gallery slug."
-msgstr "Ingrese la babosa única de la galería."
+msgstr "ユニークなギャラリー スラッグを入力してください。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1129
 msgid "ShortPixel Image Optimizer"
-msgstr "Optimizador de imágenes de píxeles cortos"
+msgstr "ShortPixel イメージ オプティマイザ"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1132
 msgid "Enable to apply ShortPixel optimizer to gallery images."
-msgstr ""
-"Habilite para aplicar el optimizador ShortPixel a las imágenes de la "
-"galería."
+msgstr "ShortPixel オプティマイザーをギャラリー画像に適用できるようにします。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1137
 msgid "API Key"
-msgstr "Clave API"
+msgstr "API キー"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1141
 #, php-format
 msgid "Input API Key. If you don't have an API Key, please  %s "
-msgstr "Introduzca la clave API. Si no tiene una clave API, por favor %s"
+msgstr "API キーを入力します。 API キーを持っていない場合は、%s してください"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1141
 msgid " sign up to get your API key"
-msgstr " Regístrese para obtener su clave API"
+msgstr " サインアップして API キーを取得する"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1160
 msgid "Activate Now"
-msgstr "Activar ahora"
+msgstr "今すぐ有効化"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1180
 msgid "Enable to include galleries to your website search."
-msgstr "Habilite para incluir galerías en la búsqueda de su sitio web."
+msgstr "Web サイト検索にギャラリーを含めることができます。"
 
 # automatic translation
 #: includes/class-gllr-settings.php:1180
 #, php-format
 msgid "%s is required."
-msgstr "Se requiere %s."
+msgstr "%s が必要です。"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:26
 msgid "A list or dropdown of Gallery categories."
-msgstr "Una lista o menú desplegable de categorías de la Galería."
+msgstr "ギャラリー カテゴリのリストまたはドロップダウン。"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:72
 msgid "Select Gallery Category"
-msgstr "Seleccione la categoría de la galería"
+msgstr "ギャラリーのカテゴリを選択"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:139
 msgid "Title:"
-msgstr "Título:"
+msgstr "タイトル："
 
 # automatic translation
 #: includes/class-gllr-widgets.php:142
 msgid "Display as dropdown"
-msgstr "Mostrar como desplegable"
+msgstr "ドロップダウンとして表示"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:144
 msgid "Show gallery counts"
-msgstr "Mostrar recuentos de galerías"
+msgstr "ギャラリー数を表示"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:146
 msgid "Show hierarchy"
-msgstr "Mostrar jerarquía"
+msgstr "階層を表示"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:164
 msgid "Displays the latest galleries and a link to the Galleries page."
-msgstr "Muestra las últimas galerías y un enlace a la página Galerías."
+msgstr "最新のギャラリーとギャラリー ページへのリンクを表示します。"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:166
 msgid "Latest Galleries"
-msgstr "Últimas galerías"
+msgstr "最新のギャラリー"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:251
 msgid "No galleries"
-msgstr "Sin galerías"
+msgstr "ギャラリーなし"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:288
 msgid "View more"
-msgstr "Ver más"
+msgstr "もっと見る"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:304
 msgid "Button Text"
-msgstr "Botón de texto"
+msgstr "ボタンのテキスト"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:312
 msgid "Link to the Galleries Page"
-msgstr "Enlace a la página de galerías"
+msgstr "ギャラリーページへのリンク"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:327
 msgid "Number of Galleries to Display"
-msgstr "Número de galerías para mostrar"
+msgstr "表示するギャラリー数"
 
 # automatic translation
 #: includes/class-gllr-widgets.php:341
 msgid "Gallery Hover Color"
-msgstr "Color de desplazamiento de la galería"
+msgstr "ギャラリーホバーカラー"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:35
 msgid "Install Demo Data"
-msgstr "Instalar datos de demostración"
+msgstr "デモデータのインストール"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:38
 msgid "Remove Demo Data"
-msgstr "Eliminar datos de demostración"
+msgstr "デモデータを削除"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:39
 msgid "Delete demo data and restore old plugin settings."
-msgstr ""
-"Elimine los datos de demostración y restaure la configuración anterior del "
-"complemento."
+msgstr "デモ データを削除し、古いプラグイン設定を復元します。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:54
 #: includes/demo-data/class-bws-demo-data.php:628
 msgid "Yes, install demo data"
-msgstr "Sí, instalar datos de demostración"
+msgstr "はい、デモデータをインストールします"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:55
 msgid "Are you sure you want to install demo data?"
-msgstr "¿Está seguro de que desea instalar los datos de demostración?"
+msgstr "デモ データをインストールしますか?"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:57
 msgid "Yes, remove demo data"
-msgstr "Sí, eliminar datos de demostración"
+msgstr "はい、デモデータを削除します"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:58
 msgid "Are you sure you want to remove demo data?"
-msgstr "¿Está seguro de que desea eliminar los datos de demostración?"
+msgstr "デモ データを削除してもよろしいですか?"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:118
 msgid "Can not get demo data."
-msgstr "No se pueden obtener datos de demostración."
+msgstr "デモデータを取得できません。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:125
 msgid "Demo settings already installed."
-msgstr "Configuraciones de demostración ya instaladas."
+msgstr "デモ設定は既にインストールされています。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:383
 msgid "Demo data installed successfully."
-msgstr "Los datos de demostración se instalaron correctamente."
+msgstr "デモ データが正常にインストールされました。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:385
 msgid "View post with shortcodes"
-msgstr "Ver publicación con códigos cortos"
+msgstr "ショートコード付きの投稿を表示"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:388
 msgid "View page with examples"
-msgstr "Ver página con ejemplos"
+msgstr "例のあるページを見る"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:401
 msgid "Installation of demo data with some errors occurred."
-msgstr "Ocurrió la instalación de datos de demostración con algunos errores."
+msgstr "一部のエラーを伴うデモ データのインストールが発生しました。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:404
 msgid "Posts data is missing."
-msgstr "Faltan los datos de las publicaciones."
+msgstr "投稿データがありません。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:479
 msgid "Demo data have already been removed."
-msgstr "Los datos de demostración ya se han eliminado."
+msgstr "デモデータは既に削除されています。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:541
 msgid "Demo data successfully removed."
-msgstr "Los datos de demostración se eliminaron correctamente."
+msgstr "デモ データが正常に削除されました。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:545
 msgid "Removing demo data with some errors occurred."
-msgstr "Se produjeron algunos errores al eliminar los datos de demostración."
+msgstr "デモ データの削除中にエラーが発生しました。"
 
 # automatic translation
 #: includes/demo-data/class-bws-demo-data.php:624
 #, php-format
 msgid "Do you want to install demo content and settings for %s now?"
-msgstr ""
-"¿Desea instalar la configuración y el contenido de demostración para %s "
-"ahora?"
+msgstr "%s のデモ コンテンツと設定を今すぐインストールしますか?"
 
 # automatic translation
 #. Plugin Name of the plugin/theme
 msgid "Gallery by BestWebSoft"
-msgstr "Galería por BestWebSoft"
+msgstr "ギャラリー by BestWebSoft"
 
 # automatic translation
 #. Plugin URI of the plugin/theme
@@ -3612,14 +3364,12 @@ msgstr "https://bestwebsoft.com/products/wordpress/plugins/gallery/"
 msgid ""
 "Add beautiful galleries, albums & images to your WordPress website in few "
 "clicks."
-msgstr ""
-"Agregue hermosas galerías, álbumes e imágenes a su sitio web de WordPress "
-"con unos pocos clics."
+msgstr "数回クリックするだけで、美しいギャラリー、アルバム、画像を WordPress ウェブサイトに追加できます。"
 
 # automatic translation
 #. Author of the plugin/theme
 msgid "BestWebSoft"
-msgstr "mejorwebsoft"
+msgstr "ベストウェブソフト"
 
 # automatic translation
 #. Author URI of the plugin/theme

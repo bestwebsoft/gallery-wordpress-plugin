@@ -177,6 +177,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				$this->options['start_slideshow']                        = isset( $_POST['gllr_start_slideshow'] ) ? 1 : 0;
 				$this->options['slideshow_interval']                     = isset( $_POST['gllr_slideshow_interval'] ) && is_numeric( $_POST['gllr_slideshow_interval'] ) ? absint( $_POST['gllr_slideshow_interval'] ) : $this->options['slideshow_interval'];
 				$this->options['lightbox_download_link']                 = isset( $_POST['gllr_lightbox_download_link'] ) ? 1 : 0;
+				$this->options['lightbox_arrows']                        = isset( $_POST['gllr_lightbox_arrows'] ) ? 1 : 0;
 				$this->options['single_lightbox_for_multiple_galleries'] = isset( $_POST['gllr_single_lightbox_for_multiple_galleries'] ) ? 1 : 0;
 
 				$this->options = apply_filters( 'gllr_save_additional_options', $this->options );
@@ -209,7 +210,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 						$is_enabled      = isset( $_POST['gllr_add_to_search'] ) ? 1 : 0;
 						$post_type_exist = false;
 						foreach ( $this->cstmsrch_options['output_order'] as $key => $item ) {
-							if ( $item['name'] === $this->options['post_type_name'] && 'post_type' === $item['type'] ) {
+							if ( isset( $item['name'] ) && $item['name'] === $this->options['post_type_name'] && 'post_type' === $item['type'] ) {
 								$post_type_exist = true;
 								if ( $item['enabled'] !== $is_enabled ) {
 									$this->cstmsrch_options['output_order'][ $key ]['enabled'] = $is_enabled;
@@ -297,7 +298,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 			} else {
 				?>
 				<div class="error hide-if-js">
-					<p><?php esc_html_e( 'The grid view for the Gallery images requires JavaScript.', 'gallery-plugin' ); ?> <a href="<?php echo esc_url( add_query_arg( 'mode', 'list', filter_var( $_SERVER['REQUEST_URI'], FILTER_SANITIZE_STRING ) ) ); ?>"><?php esc_html_e( 'Switch to the list view', 'gallery-plugin' ); ?></a></p>
+					<p><?php esc_html_e( 'The grid view for the Gallery images requires JavaScript.', 'gallery-plugin' ); ?> <a href="<?php echo esc_url( add_query_arg( 'mode', 'list', filter_var( $_SERVER['REQUEST_URI'], FILTER_SANITIZE_FULL_SPECIAL_CHARS ) ) ); ?>"><?php esc_html_e( 'Switch to the list view', 'gallery-plugin' ); ?></a></p>
 				</div>
 				<ul tabindex="-1" class="attachments ui-sortable ui-sortable-disabled hide-if-no-js" id="__attachments-view-39">
 					<?php $wp_gallery_media_table->display_grid_rows(); ?>
@@ -978,28 +979,23 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 				</div>
 			<?php } ?>		
 			<table class="form-table gllr_for_enable_lightbox">
-			<!-- end pls -->
-			<?php do_action( 'gllr_display_settings_lightbox', $this->options ); ?>
+				<?php do_action( 'gllr_display_settings_lightbox', $this->options ); ?>
 				<tr class="gllr_for_enable_lightbox">
 					<th scope="row"><?php esc_html_e( 'Download Button', 'gallery-plugin' ); ?></th>
 					<td>
-						<input type="checkbox" name="gllr_lightbox_download_link" value="1" 
-						<?php
-						if ( 1 === absint( $this->options['lightbox_download_link'] ) ) {
-							echo 'checked="checked"';}
-						?>
-						 class="bws_option_affect" data-affect-show=".gllr_for_lightbox_download_link" /> <span class="bws_info"><?php esc_html_e( 'Enable to display download button.', 'gallery-plugin' ); ?></span>
+						<input type="checkbox" name="gllr_lightbox_download_link" value="1" <?php checked( 1 === absint( $this->options['lightbox_download_link'] ), true );	?> class="bws_option_affect" data-affect-show=".gllr_for_lightbox_download_link" /> <span class="bws_info"><?php esc_html_e( 'Enable to display download button.', 'gallery-plugin' ); ?></span>
+					</td>
+				</tr>
+				<tr class="gllr_for_enable_lightbox">
+					<th scope="row"><?php esc_html_e( 'Display Arrows', 'gallery-plugin' ); ?></th>
+					<td>
+						<input type="checkbox" name="gllr_lightbox_arrows" value="1" <?php checked( 1 === absint( $this->options['lightbox_arrows'] ), true ); ?> class="bws_option_affect" data-affect-show=".gllr_for_lightbox_download_link" /> <span class="bws_info"><?php esc_html_e( 'Enable to display arrows.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
 				<tr class="gllr_for_enable_lightbox">
 					<th scope="row"><?php esc_html_e( 'Single Lightbox', 'gallery-plugin' ); ?></th>
 					<td>
-						<input type="checkbox" name="gllr_single_lightbox_for_multiple_galleries" value="1" 
-						<?php
-						if ( 1 === absint( $this->options['single_lightbox_for_multiple_galleries'] ) ) {
-							echo 'checked="checked"';}
-						?>
-						 /> <span class="bws_info"><?php esc_html_e( 'Enable to use a single lightbox for multiple galleries located on a single page.', 'gallery-plugin' ); ?></span>
+						<input type="checkbox" name="gllr_single_lightbox_for_multiple_galleries" value="1" <?php checked( 1 === absint( $this->options['single_lightbox_for_multiple_galleries'] ), true ); ?> /> <span class="bws_info"><?php esc_html_e( 'Enable to use a single lightbox for multiple galleries located on a single page.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
 			</table>
@@ -1161,7 +1157,7 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							}
 							if ( isset( $this->cstmsrch_options['output_order'] ) ) {
 								foreach ( $this->cstmsrch_options['output_order'] as $key => $item ) {
-									if ( $item['name'] === $this->options['post_type_name'] && 'post_type' === $item['type'] ) {
+									if ( isset( $item['name'] ) && $item['name'] === $this->options['post_type_name'] && 'post_type' === $item['type'] ) {
 										if ( $item['enabled'] ) {
 											$checked = ' checked="checked"';
 										}

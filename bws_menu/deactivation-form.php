@@ -5,6 +5,7 @@
  * @package BestWebSoft
  * @since 2.1.3
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }

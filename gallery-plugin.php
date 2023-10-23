@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your WordPress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.7.0
+Version: 4.7.1
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
  */
@@ -409,6 +409,7 @@ if ( ! function_exists( 'gllr_get_options_default' ) ) {
 			'start_slideshow'                        => 0,
 			'slideshow_interval'                     => 2000,
 			'lightbox_download_link'                 => 0,
+			'lightbox_arrows'                        => 0,
 			'single_lightbox_for_multiple_galleries' => 0,
 			/* misc */
 			'post_type_name'                         => 'bws-gallery',
@@ -748,6 +749,30 @@ if ( ! function_exists( 'gllr_additive_field_in_category' ) ) {
 	function gllr_additive_field_in_category() {
 		global $gllr_options;
 		?>
+		<div class="form-field term-description-wrap">
+			<label for="tag-description"><?php esc_html_e( 'Sort Galleries in Category by', 'gallery-plugin' ); ?></label>
+			<select name="album_order_by_category_option">
+				<option value="ID" <?php selected( 'ID', $gllr_options['album_order_by_category_option'] ); ?>><?php esc_html_e( 'Gallery ID', 'gallery-plugin' ); ?></option>
+				<option value="title" <?php selected( 'title', $gllr_options['album_order_by_category_option'] ); ?>><?php esc_html_e( 'Title', 'gallery-plugin' ); ?></option>
+				<option value="date" <?php selected( 'date', $gllr_options['album_order_by_category_option'] ); ?>><?php esc_html_e( 'Date', 'gallery-plugin' ); ?></option>
+				<option value="modified" <?php selected( 'modified', $gllr_options['album_order_by_category_option'] ); ?>><?php esc_html_e( 'Last modified date', 'gallery-plugin' ); ?></option>
+				<option value="comment_count" <?php selected( 'comment_count', $gllr_options['album_order_by_category_option'] ); ?>><?php esc_html_e( 'Comment count', 'gallery-plugin' ); ?></option>
+				<option value="menu_order" <?php selected( 'menu_order', $gllr_options['album_order_by_category_option'] ); ?>><?php esc_html_e( '"Order" field on the gallery edit page', 'gallery-plugin' ); ?></option>
+				<option value="author" <?php selected( 'author', $gllr_options['album_order_by_category_option'] ); ?>><?php esc_html_e( 'Author', 'gallery-plugin' ); ?></option>
+				<option value="rand" <?php selected( 'rand', $gllr_options['album_order_by_category_option'] ); ?> class="bws_option_affect" data-affect-hide=".gllr_album_order"><?php esc_html_e( 'Random', 'gallery-plugin' ); ?></option>
+				<option value="default" <?php selected( 'default', $gllr_options['album_order_by_category_option'] ); ?> class="bws_option_affect" data-affect-hide=".gllr_album_order"><?php esc_html_e( 'Plugin Settings', 'gallery-plugin' ); ?></option>
+			</select>
+			<p id="description-description"><?php echo sprintf( esc_html__( 'Select galleries sorting order in your category. The sorting direction you can select in the %s', 'gallery-plugin' ), '<a href="' . admin_url( 'edit.php?post_type=bws-gallery&page=gallery-plugin.php' ) . '">' . esc_html__( 'Cover Settings', 'gallery-plugin' ) . '</a>' ); ?></p>
+		</div>
+		<?php wp_nonce_field( 'gllr_category_action', 'gllr_category_nonce_field' ); ?>
+		<?php
+	}
+}
+
+if ( ! function_exists( 'gllr_additive_field_in_category_edit' ) ) {
+	function gllr_additive_field_in_category_edit() {
+		global $gllr_options;
+		?>
 		<tr valign="top">
 			<th scope="row"><?php esc_html_e( 'Sort Galleries in Category by', 'gallery-plugin' ); ?></th>
 			<td>
@@ -762,7 +787,7 @@ if ( ! function_exists( 'gllr_additive_field_in_category' ) ) {
 					<option value="rand" <?php selected( 'rand', $gllr_options['album_order_by_category_option'] ); ?> class="bws_option_affect" data-affect-hide=".gllr_album_order"><?php esc_html_e( 'Random', 'gallery-plugin' ); ?></option>
 					<option value="default" <?php selected( 'default', $gllr_options['album_order_by_category_option'] ); ?> class="bws_option_affect" data-affect-hide=".gllr_album_order"><?php esc_html_e( 'Plugin Settings', 'gallery-plugin' ); ?></option>
 				</select>
-				<div class="bws_info"><?php esc_html_e( 'Select galleries sorting order in your category.', 'gallery-plugin' ); ?></div>
+				<div class="bws_info"><?php echo sprintf( esc_html__( 'Select galleries sorting order in your category. The sorting direction you can select in the %s', 'gallery-plugin' ), '<a href="' . admin_url( 'edit.php?post_type=bws-gallery&page=gallery-plugin.php' ) . '">' . esc_html__( 'Cover Settings', 'gallery-plugin' ) . '</a>' ); ?></p></div>
 			</td>
 		</tr>
 		<?php wp_nonce_field( 'gllr_category_action', 'gllr_category_nonce_field' ); ?>
@@ -2649,27 +2674,27 @@ if ( ! function_exists( 'gllr_echo_inline_script' ) ) {
 		global $gllr_vars_for_inline_script, $gllr_options;
 
 		if ( isset( $gllr_vars_for_inline_script['single_script'] ) ) {
-
 			$script = '
 			var gllr_onload = window.onload;
 			function gllr_fancy_init() {
 				var options = {
 					loop	: true,
-					arrows  : false,
+					arrows  : ' . ( 1 === absint( $gllr_options['lightbox_arrows'] ) ? 'true' : 'false' ) . ',
 					infobar : true,
 					caption : function( instance, current ) {
 						current.full_src = jQuery( this ).find( \'img\' ).attr( \'rel\' );
 						var title = jQuery( this ).attr( \'title\' ).replace(/</g, "&lt;");
 						return title ? \'<div>\' + title + \'</div>\' : \'\';
 					},
-					buttons : [\'close\']
+					buttons : [\'close\', ]
 				};
 			';
 
 			if ( $gllr_options['lightbox_download_link'] ) {
 				$script .= '
-				if ( ! jQuery.fancybox.defaults.btnTpl.download )
+				if ( ! jQuery.fancybox.defaults.btnTpl.download ) {
 					jQuery.fancybox.defaults.btnTpl.download = \'<a class="fancybox-button bws_gallery_download_link dashicons dashicons-download"></a>\';
+				}
 
 				options.buttons.unshift( \'download\' );
 				options.beforeShow = function( instance, current ) {
@@ -3159,7 +3184,7 @@ if ( ! function_exists( 'gllr_shortcode_button_content' ) ) {
 						'name'         => 'gllr_gallery_categories',
 						'id'           => 'gllr_gallery_categories',
 					);
-										wp_dropdown_categories( apply_filters( 'widget_categories_dropdown_args', $cat_args ) );
+					wp_dropdown_categories( apply_filters( 'widget_categories_dropdown_args', $cat_args ) );
 					?>
 					</label><br/>
 					<label class="gllr_shortcode_selectbox">
@@ -3174,7 +3199,7 @@ if ( ! function_exists( 'gllr_shortcode_button_content' ) ) {
 							<option value="rand" <?php selected( 'rand', $gllr_options['album_order_by_shortcode_option'] ); ?> class="bws_option_affect" data-affect-hide=".gllr_album_order"><?php esc_html_e( 'Random', 'gallery-plugin' ); ?></option>
 							<option value="default" <?php selected( 'default', $gllr_options['album_order_by_shortcode_option'] ); ?> class="bws_option_affect" data-affect-hide=".gllr_album_order"><?php esc_html_e( 'Plugin Settings', 'gallery-plugin' ); ?></option>
 						</select>
-						<div class="bws_info"><?php esc_html_e( 'Select galleries sorting order in your category.', 'gallery-plugin' ); ?></div>
+						<div class="bws_info"><?php echo sprintf( esc_html__( 'Select galleries sorting order in your category. The sorting direction you can select in the %s', 'gallery-plugin' ), '<a href="' . admin_url( 'edit.php?post_type=bws-gallery&page=gallery-plugin.php' ) . '">' . esc_html__( 'Cover Settings', 'gallery-plugin' ) . '</a>' ); ?></div>
 					</label>
 					<label>
 					<input name="gllr_shortcode_radio" class="gllr_shortcode_radio_single" type="radio" checked/>
@@ -3470,7 +3495,7 @@ add_filter( 'content_save_pre', 'gllr_content_save_pre', 10, 1 );
 add_action( 'pre_get_posts', 'gllr_manage_pre_get_posts', 1 );
 
 add_action( 'gallery_categories_add_form_fields', 'gllr_additive_field_in_category', 10, 2 );
-add_action( 'gallery_categories_edit_form_fields', 'gllr_additive_field_in_category', 10, 2 );
+add_action( 'gallery_categories_edit_form_fields', 'gllr_additive_field_in_category_edit', 10, 2 );
 add_action( 'edited_gallery_categories', 'gllr_save_category_additive_field', 10, 2 );
 add_action( 'create_gallery_categories', 'gllr_save_category_additive_field', 10, 2 );
 
