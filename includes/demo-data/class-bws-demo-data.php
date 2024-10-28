@@ -5,9 +5,22 @@
  * @version 1.0.7
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 	class Bws_Demo_Data {
-		private $bws_plugin_text_domain, $bws_plugin_prefix, $bws_plugin_page, $bws_plugin_name, $bws_plugin_basename, $bws_demo_options, $bws_plugin_options, $bws_demo_folder;
+		private $bws_plugin_text_domain,
+			$bws_plugin_prefix,
+			$bws_plugin_page,
+			$bws_plugin_name,
+			$bws_plugin_basename,
+			$bws_demo_options,
+			$bws_plugin_options,
+			$bws_demo_folder,
+			$install_callback,
+			$remove_callback;
 
 		public function __construct( $args ) {
 			$plugin_dir_array             = explode( '/', $args['plugin_basename'] );
@@ -33,6 +46,7 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				if ( empty( $this->bws_demo_options ) ) {
 					$value        = 'install';
 					$button_title = __( 'Install Demo Data', $this->bws_plugin_text_domain );
+					$this->bws_demo_options = array();
 				} else {
 					$value        = 'remove';
 					$button_title = __( 'Remove Demo Data', $this->bws_plugin_text_domain );
@@ -105,8 +119,11 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 				'terms'                        => null,
 				'options'                      => null,
 			);
-			$error     = 0;
-			$page_id   = $posttype_post_id = $post_id = '';
+			if ( ! empty( $this->bws_demo_options ) ) {
+				$this->bws_demo_options = array();
+			}
+			$error   = 0;
+			$page_id = $posttype_post_id = $post_id = '';
 			/* get demo data */
 			@include_once $this->bws_demo_folder . 'demo-data.php';
 			$received_demo_data = bws_demo_data_array( $this->bws_plugin_options['post_type_name'] );
@@ -185,6 +202,9 @@ if ( ! class_exists( 'Bws_Demo_Data' ) ) {
 					 * load demo posts
 					 */
 					$default_category = absint( $this->bws_plugin_options['default_gallery_category'] );
+
+					$this->bws_demo_options['posts']       = array();
+					$this->bws_demo_options['attachments'] = array();
 					foreach ( $demo_data['posts'] as $post ) {
 						if ( preg_match( '/{last_post_id}/', $post['post_content'] ) && ! empty( $post_id ) ) {
 							$post['post_content'] = preg_replace( '/{last_post_id}/', $post_id, $post['post_content'] );

@@ -1,8 +1,13 @@
 <?php
-/*
-* Template - Gallery post
-* Version: 1.3.0
-*/
+/**
+ * Template - Gallery post
+ * Version: 1.3.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header(); ?>
 <div class="wrap gllr_wrap entry">
 	<div id="primary" class="content-area">

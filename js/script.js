@@ -295,6 +295,10 @@ function gllr_setError( msg ) {
 				}
 			} );
 		} );
+
+		$( 'input[name="gllr_csv_file"]' ).on( 'change', function(){
+			$( '#bws_save_settings_notice' ).css( 'display', 'none' );
+		});
 	} );
 } )( jQuery );
 

@@ -1,17 +1,24 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Function for displaying BestWebSoft menu
  * Version: 2.4.3
  */
-
 if ( ! function_exists( 'bws_admin_enqueue_scripts' ) ) {
 	require_once dirname( __FILE__ ) . '/bws_functions.php';
 }
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
+	/**
+	 * Function for render BestWebSoft menu
+	 */
 	function bws_add_menu_render() {
 		global $wpdb, $wp_version, $bstwbsftwppdtplgns_options;
-		$error = $message = '';
+		$error   = '';
+		$message = '';
 
 		/**
 		 * @deprecated 1.9.8 (15.12.2016)
@@ -43,7 +50,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			$plugin_category = isset( $_GET['category'] ) ? sanitize_text_field( wp_unslash( $_GET['category'] ) ) : 'all';
 
 			if ( ( isset( $_GET['sub'] ) && 'installed' === sanitize_text_field( wp_unslash( $_GET['sub'] ) ) ) || ! isset( $_GET['sub'] ) ) {
-				$bws_plugins_update_availible = $bws_plugins_expired = array();
+				$bws_plugins_update_availible = array();
+				$bws_plugins_expired          = array();
 				foreach ( $bws_plugins as $key_plugin => $value_plugin ) {
 
 					foreach ( $value_plugin['category'] as $category_key ) {
@@ -96,6 +104,18 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			if ( isset( $_SESSION['bws_membership_time_check'] ) && isset( $_SESSION['bws_membership_list'] ) && $_SESSION['bws_membership_time_check'] < strtotime( '+12 hours' ) ) {
 				$update_membership_list = false;
 				$plugins_array          = $_SESSION['bws_membership_list'];
+				foreach ( $plugins_array as $plugins_key => $plugins_value ) {
+					if ( is_array( $plugins_value ) ) {
+						$plugins_array[ $plugins_key ] = array_map( 'sanitize_text_field', array_map( 'wp_unslash', $plugins_value ) );
+					} elseif ( is_object( $plugins_value ) ) {
+						foreach ( $plugins_value as $plugins_key2 => $plugins_value2 ) {
+							$plugins_value->$plugins_key2 = sanitize_text_field( wp_unslash( $plugins_value2 ) );
+						}
+						$plugins_array[ $plugins_key ] = $plugins_value;
+					} else {
+						$plugins_array[ $plugins_key ] = sanitize_text_field( wp_unslash( $plugins_value ) );
+					}
+				}
 			}
 
 			if ( ( $update_membership_list && ! empty( $bws_license_key ) ) || ( isset( $_POST['bws_license_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_license_nonce_name' ) ) ) {
@@ -305,7 +325,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 		<div class="bws-wrap">
 			<div class="bws-header">
 				<div class="bws-title">
-					<a href="<?php echo ( $is_main_page ) ? esc_url( self_admin_url( 'admin.php?page=bws_panel' ) ) : esc_url( self_admin_url( 'admin.php?page=' . $page ) ); ?>">
+					<a href="<?php echo esc_url( ( $is_main_page ) ? self_admin_url( 'admin.php?page=bws_panel' ) : self_admin_url( 'admin.php?page=' . $page ) ); ?>">
 						<span class="bws-logo bwsicons bwsicons-bws-logo"></span>
 						BestWebSoft
 						<span>panel</span>
@@ -410,13 +430,15 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 									<input 
 									<?php
 									if ( '' !== $error ) {
-										echo 'class="bws_input_error"';}
+										echo 'class="bws_input_error"';
+									}
 									?>
 										type="text" placeholder="<?php esc_html_e( 'Enter your license key', 'bestwebsoft' ); ?>" maxlength="100" name="bws_license_key" value="<?php echo esc_attr( $bws_license_key ); ?>" />
 									<div class="bws_error" 
 									<?php
 									if ( '' === $error ) {
-										echo 'style="display:none"';}
+										echo 'style="display:none"';
+									}
 									?>
 									><?php echo esc_html( $error ); ?></div>
 								</div>
@@ -440,7 +462,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 					<div class="updated notice is-dismissible inline" 
 					<?php
 					if ( '' === $message || '' !== $error ) {
-						echo 'style="display:none"';}
+						echo 'style="display:none"';
+					}
 					?>
 					><p><?php echo esc_html( $message ); ?></p></div>
 					<h1>
@@ -521,7 +544,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 								<a 
 								<?php
 								if ( ! isset( $_GET['sub'] ) ) {
-									echo 'class="current" ';}
+									echo 'class="current" ';
+								}
 								?>
 								href="<?php echo esc_url( self_admin_url( $category_href ) ); ?>"><?php esc_html_e( 'All', 'bestwebsoft' ); ?></a>
 							</li> |
@@ -529,7 +553,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 								<a 
 								<?php
 								if ( isset( $_GET['sub'] ) && 'installed' === sanitize_text_field( wp_unslash( $_GET['sub'] ) ) ) {
-									echo 'class="current" ';}
+									echo 'class="current" ';
+								}
 								?>
 								href="<?php echo esc_url( self_admin_url( $category_href . '&sub=installed' ) ); ?>"><?php esc_html_e( 'Installed', 'bestwebsoft' ); ?></a>
 							</li> |
@@ -537,7 +562,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 								<a 
 								<?php
 								if ( isset( $_GET['sub'] ) && 'not_installed' === sanitize_text_field( wp_unslash( $_GET['sub'] ) ) ) {
-									echo 'class="current" ';}
+									echo 'class="current" ';
+								}
 								?>
 								href="<?php echo esc_url( self_admin_url( $category_href . '&sub=not_installed' ) ); ?>"><?php esc_html_e( 'Not Installed', 'bestwebsoft' ); ?></a>
 							</li>
@@ -556,7 +582,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 										<a 
 										<?php
 										if ( 'all' === $plugin_category ) {
-											echo ' class="bws-active"';}
+											echo ' class="bws-active"';
+										}
 										?>
 											href="<?php echo esc_url( self_admin_url( $current_page . $sub_in_url ) ); ?>"><?php esc_html_e( 'All', 'bestwebsoft' ); ?>
 												<span>(<?php echo count( $bws_plugins ); ?>)</span>
@@ -567,10 +594,11 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 											<a 
 											<?php
 											if ( $category_key === $plugin_category ) {
-												echo ' class="bws-active"';}
+												echo ' class="bws-active"';
+											}
 											?>
 												href="<?php echo esc_url( self_admin_url( $current_page . $sub_in_url . '&category=' . $category_key ) ); ?>"><?php echo esc_html( $category_value['name'] ); ?>
-													<span>(<?php echo intval( $category_value['count'] ); ?>)</span>
+													<span>(<?php echo absint( $category_value['count'] ); ?>)</span>
 											</a>
 										</li>
 									<?php } ?>
@@ -619,7 +647,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 									<div class="bws_product_box
 									<?php
 									if ( $is_active || $is_pro_active ) {
-										echo esc_attr( ' bws_product_active' );}
+										echo esc_attr( ' bws_product_active' );
+									}
 									?>
 									">
 										<div class="bws_product_image">
@@ -654,7 +683,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 												?>
 											</div>
 											<div class="bws_product_description">
-												<?php echo ( strlen( $value_plugin['description'] ) > 100 ) ? esc_html( mb_substr( $value_plugin['description'], 0, 100 ) ) . '...' : esc_html( $value_plugin['description'] ); ?>
+												<?php echo esc_html( strlen( $value_plugin['description'] ) > 100 ? mb_substr( $value_plugin['description'], 0, 100 ) . '...' : $value_plugin['description'] ); ?>
 											</div>
 											<div class="bws_product_links">
 												<?php
@@ -729,7 +758,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 										<a 
 										<?php
 										if ( 'all' === $plugin_category ) {
-											echo ' class="bws-active"';}
+											echo ' class="bws-active"';
+										}
 										?>
 											href="<?php echo esc_url( self_admin_url( $current_page . $sub_in_url ) ); ?>"><?php esc_html_e( 'All', 'bestwebsoft' ); ?>
 											<span>(<?php echo count( $bws_plugins ); ?>)</span>
@@ -740,10 +770,11 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 											<a 
 											<?php
 											if ( $category_key === $plugin_category ) {
-												echo ' class="bws-active"';}
+												echo ' class="bws-active"';
+											}
 											?>
 												href="<?php echo esc_url( self_admin_url( $current_page . $sub_in_url . '&category=' . $category_key ) ); ?>"><?php echo esc_html( $category_value['name'] ); ?>
-												<span>(<?php echo intval( $category_value['count'] ); ?>)</span>
+												<span>(<?php echo absint( $category_value['count'] ); ?>)</span>
 											</a>
 										</li>
 									<?php } ?>
@@ -796,13 +827,15 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 					<div class="updated fade notice is-dismissible inline" 
 					<?php
 					if ( ! ( isset( $_REQUEST['bwsmn_form_submit'] ) || isset( $_REQUEST['bwsmn_form_submit_custom_email'] ) ) || '' !== $error ) {
-						echo 'style="display:none"';}
+						echo 'style="display:none"';
+					}
 					?>
 					><p><strong><?php echo esc_html( $message ); ?></strong></p></div>
 					<div class="error" 
 					<?php
 					if ( '' === $error ) {
-						echo 'style="display:none"';}
+						echo 'style="display:none"';
+					}
 					?>
 					><p><strong><?php echo esc_html( $error ); ?></strong></p></div>
 					<form method="post" action="">
@@ -856,6 +889,9 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 }
 
 if ( ! function_exists( 'bws_get_banner_array' ) ) {
+	/**
+	 * Get banner array
+	 */
 	function bws_get_banner_array() {
 		global $bstwbsftwppdtplgns_banner_array;
 		$bstwbsftwppdtplgns_banner_array = array(

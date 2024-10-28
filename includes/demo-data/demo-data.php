@@ -4,6 +4,10 @@
  * Gallery Plugin by Bestwebsoft
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! function_exists( 'bws_demo_data_array' ) ) {
 	function bws_demo_data_array( $post_type ) {
 		$posts = array(

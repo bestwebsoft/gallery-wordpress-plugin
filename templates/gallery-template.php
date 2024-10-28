@@ -1,8 +1,13 @@
 <?php
-/*
-Template Name: Gallery Template
-* Version: 1.3.0
-*/
+/**
+ * Template Name: Gallery Template
+ * Version: 1.3.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 $current_theme_name = wp_get_theme()->get( 'Name' ); ?>
 <div class="wrap gllr_wrap">
@@ -13,7 +18,8 @@ $current_theme_name = wp_get_theme()->get( 'Name' ); ?>
 					<h1 class="home_page_title <?php echo ( 'Twenty Seventeen' != $current_theme_name ) ? 'entry-title' : ''; ?>">
 						<?php
 						if ( function_exists( 'gllr_template_title' ) ) {
-							echo gllr_template_title(); }
+							echo wp_kses_post( gllr_template_title() );
+						}
 						?>
 					</h1>
 				</header>
@@ -23,7 +29,7 @@ $current_theme_name = wp_get_theme()->get( 'Name' ); ?>
 						<div class="gllr_page_content">
 							<?php
 							if ( is_page() ) {
-								echo apply_filters( 'the_content', $gllr_post->post_content );
+								echo wp_kses_post( apply_filters( 'the_content', $gllr_post->post_content ) );
 							}
 							if ( function_exists( 'gllr_template_content' ) ) {
 								$content = gllr_template_content();

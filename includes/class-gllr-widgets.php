@@ -3,22 +3,28 @@
  * Include all plugin widgets
  */
 
-/* Registing Widget */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! function_exists( 'gllr_register_widget' ) ) {
+	/**
+	 * Registing Widget
+	 */
 	function gllr_register_widget() {
 		register_widget( 'GLLR_Categories_Widget' );
 		register_widget( 'GLLR_Latest_Galleries_Widget' );
 	}
 }
 
-/**
- * Class extends WP class WP_Widget, and create new widget
- * Gallery Categories widget
- */
 if ( ! class_exists( 'GLLR_Categories_Widget' ) ) {
+	/**
+	 * Class extends WP class WP_Widget, and create new widget
+	 * Gallery Categories widget
+	 */
 	class GLLR_Categories_Widget extends WP_Widget {
 		/**
-		 * constructor of class
+		 * Constructor of class
 		 */
 		public function __construct() {
 			$widget_ops = array(
@@ -29,6 +35,9 @@ if ( ! class_exists( 'GLLR_Categories_Widget' ) ) {
 		}
 		/**
 		 * Function to displaying widget in front end
+		 *
+		 * @param array $args     Args for widget.
+		 * @param array $instance Array with widget info.
 		 */
 		public function widget( $args, $instance ) {
 			global $wp_version;
@@ -111,9 +120,9 @@ if ( ! class_exists( 'GLLR_Categories_Widget' ) ) {
 		/**
 		 * Function to save widget settings
 		 *
-		 * @param array() $new_instance  array with new settings.
-		 * @param array() $old_instance  array with old settings.
-		 * @return array()   $instance      array with updated settings
+		 * @param array $new_instance Array with new settings.
+		 * @param array $old_instance Array with old settings.
+		 * @return array   $instance  Array with updated settings
 		 */
 		public function update( $new_instance, $old_instance ) {
 			$instance                 = $old_instance;
@@ -126,7 +135,7 @@ if ( ! class_exists( 'GLLR_Categories_Widget' ) ) {
 		/**
 		 * Function to displaying widget settings in back end
 		 *
-		 * @param  array() $instance  array with widget settings
+		 * @param array $instance Array with widget settings.
 		 * @return void
 		 */
 		public function form( $instance ) {
@@ -149,14 +158,14 @@ if ( ! class_exists( 'GLLR_Categories_Widget' ) ) {
 	}
 }
 
-/**
- * Class extends WP class WP_Widget, and create new widget
- * Latest Galleries
- */
 if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
+	/**
+	 * Class extends WP class WP_Widget, and create new widget
+	 * Latest Galleries
+	 */
 	class GLLR_Latest_Galleries_Widget extends WP_Widget {
 		/**
-		 * constructor of class
+		 * Constructor of class
 		 */
 		public function __construct() {
 			$widget_ops = array(
@@ -177,6 +186,9 @@ if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
 
 		/**
 		 * Function to displaying widget in front end
+		 *
+		 * @param array $args     Args for widget.
+		 * @param array $instance Array with widget info.
 		 */
 		public function widget( $args, $instance ) {
 			global $gllr_options;
@@ -256,10 +268,10 @@ if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
 		/**
 		 * Function to save widget settings
 		 *
-		 * @param array() $new_instance  array with new settings
-		 * @param array() $old_instance  array with old settings
+		 * @param array $new_instance Array with new settings.
+		 * @param array $old_instance Array with old settings.
 		 *
-		 * @return array()   $instance      array with updated settings
+		 * @return array   $instance  Array with updated settings.
 		 */
 		public function update( $new_instance, $old_instance ) {
 			$instance                                   = $old_instance;
@@ -275,7 +287,7 @@ if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
 		/**
 		 * Function to displaying widget settings in back end
 		 *
-		 * @param array() $instance  array with widget settings
+		 * @param array $instance Array with widget settings.
 		 *
 		 * @return void
 		 */
@@ -380,20 +392,21 @@ if ( ! class_exists( 'GLLR_Latest_Galleries_Widget' ) ) {
 	}
 }
 
-/**
- * Function generate position and sizes for cells in collage
- *
- * @param int $count_galleries count galleries with button
- * @param int $count_column    count columns in grid
- * @param int $count_row       count rows in grid
- *
- * @return array()   $cell_properties       array with classes and coordinates for cells
- */
 if ( ! function_exists( 'gllr_generate_collage_template' ) ) {
+	/**
+	 * Function generate position and sizes for cells in collage
+	 *
+	 * @param int $count_galleries Count galleries with button.
+	 * @param int $count_column    Count columns in grid.
+	 * @param int $count_row       Count rows in grid.
+	 *
+	 * @return array   $cell_properties Array with classes and coordinates for cells.
+	 */
 	function gllr_generate_collage_template( $count_galleries, $count_column, $count_row ) {
-		$count_empty_cell = $count_column * $count_row - $count_galleries;
-		$count_large_cell = $count_medium_cell = 0;
-		$image_number     = 1;
+		$count_empty_cell  = $count_column * $count_row - $count_galleries;
+		$count_large_cell  = 0;
+		$count_medium_cell = 0;
+		$image_number      = 1;
 
 		if ( $count_empty_cell < 3 ) {
 			$count_medium_cell = $count_empty_cell + $image_number;
@@ -419,7 +432,11 @@ if ( ! function_exists( 'gllr_generate_collage_template' ) ) {
 			$j = rand( 0, $count_column - 2 );
 
 			if ( 0 === absint( $collage_template[ $i ][ $j ] ) && 0 === absint( $collage_template[ $i + 1 ][ $j ] ) && 0 === absint( $collage_template[ $i ][ $j + 1 ] ) && 0 === absint( $collage_template[ $i + 1 ][ $j + 1 ] ) ) {
-				$collage_template[ $i ][ $j ]             = $collage_template[ $i + 1 ][ $j ] = $collage_template[ $i ][ $j + 1 ] = $collage_template[ $i + 1 ][ $j + 1 ] = $image_number;
+				$collage_template[ $i ][ $j ]         = $image_number;
+				$collage_template[ $i + 1 ][ $j ]     = $image_number;
+				$collage_template[ $i ][ $j + 1 ]     = $image_number;
+				$collage_template[ $i + 1 ][ $j + 1 ] = $image_number;
+
 				$cell_properties[ $image_number ]['cell'] = '<td colspan="2" rowspan="2">';
 				$cell_properties[ $image_number ]['col']  = $j + 1;
 				$cell_properties[ $image_number ]['row']  = $i + 1;
@@ -436,7 +453,9 @@ if ( ! function_exists( 'gllr_generate_collage_template' ) ) {
 				switch ( rand( 0, 1 ) ) {
 					case 0:
 						if ( 0 === absint( $collage_template[ $i + 1 ][ $j ] ) ) {
-							$collage_template[ $i ][ $j ]             = $collage_template[ $i + 1 ][ $j ] = $image_number;
+							$collage_template[ $i ][ $j ]     = $image_number;
+							$collage_template[ $i + 1 ][ $j ] = $image_number;
+
 							$cell_properties[ $image_number ]['cell'] = '<td rowspan="2">';
 							$cell_properties[ $image_number ]['col']  = $j + 1;
 							$cell_properties[ $image_number ]['row']  = $i + 1;
@@ -445,7 +464,9 @@ if ( ! function_exists( 'gllr_generate_collage_template' ) ) {
 						break;
 					case 1:
 						if ( 0 === absint( $collage_template[ $i ][ $j + 1 ] ) ) {
-							$collage_template[ $i ][ $j ]             = $collage_template[ $i ][ $j + 1 ] = $image_number;
+							$collage_template[ $i ][ $j ]     = $image_number;
+							$collage_template[ $i ][ $j + 1 ] = $image_number;
+
 							$cell_properties[ $image_number ]['cell'] = '<td colspan="2">';
 							$cell_properties[ $image_number ]['col']  = $j + 1;
 							$cell_properties[ $image_number ]['row']  = $i + 1;
@@ -466,7 +487,8 @@ if ( ! function_exists( 'gllr_generate_collage_template' ) ) {
 				switch ( rand( 0, 1 ) ) {
 					case 0:
 						if ( 0 === absint( $collage_template[ $i - 1 ][ $j ] ) ) {
-							$collage_template[ $i ][ $j ]             = $collage_template[ $i - 1 ][ $j ] = $image_number;
+							$collage_template[ $i ][ $j ]     = $image_number;
+							$collage_template[ $i - 1 ][ $j ] = $image_number;
 							$cell_properties[ $image_number ]['cell'] = '<td rowspan="2">';
 							$cell_properties[ $image_number ]['col']  = $j + 1;
 							$cell_properties[ $image_number ]['row']  = $i;
@@ -475,7 +497,8 @@ if ( ! function_exists( 'gllr_generate_collage_template' ) ) {
 						break;
 					case 1:
 						if ( 0 === absint( $collage_template[ $i ][ $j - 1 ] ) ) {
-							$collage_template[ $i ][ $j ]             = $collage_template[ $i ][ $j - 1 ] = $image_number;
+							$collage_template[ $i ][ $j ]     = $image_number;
+							$collage_template[ $i ][ $j - 1 ] = $image_number;
 							$cell_properties[ $image_number ]['cell'] = '<td colspan="2">';
 							$cell_properties[ $image_number ]['col']  = $j;
 							$cell_properties[ $image_number ]['row']  = $i + 1;
@@ -506,6 +529,14 @@ if ( ! function_exists( 'gllr_generate_collage_template' ) ) {
 }
 
 if ( ! function_exists( 'gllr_cell_sort' ) ) {
+	/**
+	 * Function for sort
+	 *
+	 * @param array $a Array with info.
+	 * @param array $b Array with info.
+	 *
+	 * @return bool Sort flag.
+	 */
 	function gllr_cell_sort( $a, $b ) {
 		if ( version_compare( phpversion(), '8', '<' ) ) {
 			if ( $a['row'] === $b['row'] ) {

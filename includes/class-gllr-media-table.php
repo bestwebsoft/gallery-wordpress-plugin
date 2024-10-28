@@ -4,6 +4,10 @@
  * and create new Media Table
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 	if ( ! class_exists( 'WP_List_Table' ) ) {
 		require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
@@ -12,7 +16,16 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 		require_once ABSPATH . 'wp-admin/includes/class-wp-media-list-table.php';
 	}
 
+	/**
+	 * Class for create Gallery Media Table
+	 */
 	class Gllr_Media_Table extends WP_Media_List_Table {
+
+		/**
+		 * Construct
+		 *
+		 * @param array $args Arguments for constract.
+		 */
 		public function __construct( $args = array() ) {
 
 			$this->modes = array(
@@ -28,6 +41,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			);
 		}
 
+		/**
+		 * Prepare items
+		 */
 		public function prepare_items() {
 			global $wpdb, $gllr_mode, $original_post, $wp_version;
 
@@ -65,6 +81,11 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			}
 		}
 
+		/**
+		 * Extra table nav
+		 *
+		 * @param string $which Position for display.
+		 */
 		public function extra_tablenav( $which ) {
 			if ( 'bar' !== $which ) {
 				return;
@@ -89,6 +110,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			<?php
 		}
 
+		/**
+		 * Check if has items for display
+		 */
 		public function has_items() {
 			global $wpdb, $original_post;
 
@@ -106,14 +130,25 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			}
 		}
 
+		/**
+		 * No items message
+		 */
 		public function no_items() {
 			esc_html_e( 'No images found', 'gallery-plugin' );
 		}
 
+		/**
+		 * Remove views
+		 */
 		public function get_views() {
 			return false;
 		}
 
+		/**
+		 * Display table nav
+		 *
+		 * @param string $which Position for display.
+		 */
 		public function display_tablenav( $which ) {
 			?>
 			<div class="tablenav <?php echo esc_attr( $which ); ?>">
@@ -140,7 +175,8 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 		 */
 		public function bulk_actions( $which = '' ) {
 			if ( is_null( $this->_actions ) ) {
-				$no_new_actions = $this->_actions = $this->get_bulk_actions();
+				$no_new_actions = $this->get_bulk_actions();
+				$this->_actions = $no_new_actions;
 				/**
 				 * Filter the list table Bulk Actions drop-down.
 				 *
@@ -180,6 +216,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			echo '\n';
 		}
 
+		/**
+		 * Get bulk actions for table
+		 */
 		public function get_bulk_actions() {
 			$actions = array();
 
@@ -188,6 +227,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			return $actions;
 		}
 
+		/**
+		 * Dropdown for selected items
+		 */
 		public function views() {
 			global $gllr_mode;
 			?>
@@ -206,6 +248,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			<?php
 		}
 
+		/**
+		 * Get all columns for table
+		 */
 		public function get_columns() {
 			$lists_columns = array(
 				'cb'                 => '<input type="checkbox" />',
@@ -219,7 +264,10 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			return $lists_columns;
 		}
 
-		public function display_rows( $lists = array(), $level = 0 ) {
+		/**
+		 * Display rows
+		 */
+		public function display_rows() {
 			global $post, $gllr_mode, $original_post, $gllr_options;
 
 			add_filter( 'the_title', 'esc_html' );
@@ -249,6 +297,9 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			$post = $old_post;
 		}
 
+		/**
+		 * Display grid rows
+		 */
 		public function display_grid_rows() {
 			global $post, $gllr_mode, $original_post, $gllr_options;
 			$old_post = $post;
@@ -275,6 +326,11 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			$post = $old_post;
 		}
 
+		/**
+		 * Display single row
+		 *
+		 * @param string $gllr_mode Mode for display gallery.
+		 */
 		public function single_row( $gllr_mode ) {
 			global $post, $original_post, $gllr_options, $gllr_plugin_info, $wp_version;
 
@@ -325,7 +381,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 									<span class="name">
 										<?php
 										esc_html_e( 'Title', 'gallery-plugin' );
-										echo bws_add_help_box( '<img src="' . plugins_url( 'images/image-title-example.png', __FILE__ ) . '" />', 'bws-auto-width' );
+										echo wp_kses_post( bws_add_help_box( '<img src="' . plugins_url( 'images/image-title-example.png', __FILE__ ) . '" />', 'bws-auto-width' ) );
 										?>
 									</span>
 									<input type="text" name="gllr_image_text[<?php echo esc_attr( $post->ID ); ?>]" value="<?php echo esc_html( get_post_meta( $post->ID, 'gllr_image_text', true ) ); ?>" />
@@ -348,7 +404,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 												<span class="name">
 												<?php
 												esc_html_e( 'Description', 'gallery-plugin' );
-												echo bws_add_help_box( '<img src="' . plugins_url( 'images/image-description-example.png', __FILE__ ) . '" />', 'bws-auto-width' );
+												echo wp_kses_post( bws_add_help_box( '<img src="' . plugins_url( 'images/image-description-example.png', __FILE__ ) . '" />', 'bws-auto-width' ) );
 												?>
 												</span>
 												<textarea disabled name=""></textarea>
@@ -357,7 +413,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 												<span class="name">
 													<?php
 													esc_html_e( 'Lightbox Button URL', 'gallery-plugin' );
-													echo bws_add_help_box( '<img src="' . plugins_url( 'images/image-button-example.png', __FILE__ ) . '" />', 'bws-auto-width' );
+													echo wp_kses_post( bws_add_help_box( '<img src="' . plugins_url( 'images/image-button-example.png', __FILE__ ) . '" />', 'bws-auto-width' ) );
 													?>
 												</span>
 												<input disabled type="text" name="" value="" />
@@ -434,12 +490,12 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 									$thumb = wp_get_attachment_image( $post->ID, array( 80, 60 ), true );
 									if ( $this->is_trash || ! $user_can_edit ) {
 										if ( $thumb ) {
-											echo '<span class="media-icon image-icon">' . $thumb . '</span>';
+											echo '<span class="media-icon image-icon">' . wp_kses_post( $thumb ) . '</span>';
 										}
 										echo '<span aria-hidden="true">' . esc_html( $att_title ) . '</span>';
 									} else {
 										?>
-										<a href="<?php echo get_edit_post_link( $post->ID ); ?>" title="<?php echo esc_attr( sprintf( __( 'Edit &#8220;%s&#8221;', 'gallery-plugin' ), $att_title ) ); ?>">
+										<a href="<?php echo esc_url( get_edit_post_link( $post->ID ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'Edit &#8220;%s&#8221;', 'gallery-plugin' ), esc_html( $att_title ) ) ); ?>">
 											<?php
 											if ( $thumb ) {
 												echo '<span class="media-icon image-icon">' . wp_kses_post( $thumb ) . '</span>';}
@@ -452,7 +508,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 									?>
 									</strong>
 									<p class="filename"><?php echo esc_attr( wp_basename( $post->guid ) ); ?></p>
-									<?php echo $this->row_actions( $this->_get_row_actions( $post, $att_title ) ); ?>
+									<?php echo wp_kses_post( $this->row_actions( $this->_get_row_actions( $post, $att_title ) ) ); ?>
 									<a href="#" class="gllr_info_show hidden"><?php esc_html_e( 'Edit Attachment Info', 'gallery-plugin' ); ?></a>
 								</td>
 								<?php
@@ -467,7 +523,7 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 							case 'gllr_image_text':
 								?>
 								<td class="<?php echo esc_attr( $classes ); ?>" data-colname="<?php esc_html_e( 'Title', 'gallery-plugin' ); ?>">
-									<input type="text" name="<?php echo esc_attr( $column_name ); ?>[<?php echo $post->ID; ?>]" value="<?php echo esc_html( get_post_meta( $post->ID, $column_name, true ) ); ?>" />
+									<input type="text" name="<?php echo esc_attr( $column_name ); ?>[<?php echo esc_attr( $post->ID ); ?>]" value="<?php echo esc_html( get_post_meta( $post->ID, $column_name, true ) ); ?>" />
 								</td>
 								<?php
 								break;
@@ -493,8 +549,10 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 			}
 		}
 		/**
-		 * @param WP_Post $post
-		 * @param string  $att_title
+		 * Get row actions
+		 *
+		 * @param WP_Post $post      Post object.
+		 * @param string  $att_title Title for post object.
 		 */
 		public function _get_row_actions( $post, $att_title ) {
 			$actions = array();
@@ -505,10 +563,10 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 				}
 				if ( current_user_can( 'delete_post', $post->ID ) ) {
 					if ( EMPTY_TRASH_DAYS && MEDIA_TRASH ) {
-						$actions['trash'] = "<a class='submitdelete' href='" . wp_nonce_url( "post.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ) . "'>" . __( 'Trash', 'gallery-plugin' ) . '</a>';
+						$actions['trash'] = '<a class="submitdelete" href="' . wp_nonce_url( "post.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ) . '">' . __( 'Trash', 'gallery-plugin' ) . '</a>';
 					} else {
 						$delete_ays        = ! MEDIA_TRASH ? " onclick='return showNotice.warn();'" : '';
-						$actions['delete'] = "<a class='submitdelete'$delete_ays href='" . wp_nonce_url( "post.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ) . "'>" . __( 'Delete Permanently', 'gallery-plugin' ) . '</a>';
+						$actions['delete'] = '<a class="submitdelete"' . $delete_ays . ' href="' . wp_nonce_url( "post.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ) . '">' . __( 'Delete Permanently', 'gallery-plugin' ) . '</a>';
 					}
 				}
 				$actions['view'] = '<a href="' . get_permalink( $post->ID ) . '" title="' . esc_attr( sprintf( __( 'View &#8220;%s&#8221;', 'gallery-plugin' ), $att_title ) ) . '" rel="permalink">' . __( 'View', 'gallery-plugin' ) . '</a>';
@@ -521,13 +579,13 @@ if ( ! class_exists( 'Gllr_Media_Table' ) ) {
 				}
 				if ( current_user_can( 'delete_post', $post->ID ) ) {
 					if ( $this->is_trash ) {
-						$actions['untrash'] = "<a class='submitdelete' href='" . wp_nonce_url( "post.php?action=untrash&amp;post=$post->ID", 'untrash-post_' . $post->ID ) . "'>" . __( 'Restore', 'gallery-plugin' ) . '</a>';
+						$actions['untrash'] = '<a class="submitdelete" href="' . wp_nonce_url( "post.php?action=untrash&amp;post=$post->ID", 'untrash-post_' . $post->ID ) . '">' . __( 'Restore', 'gallery-plugin' ) . '</a>';
 					} elseif ( EMPTY_TRASH_DAYS && MEDIA_TRASH ) {
-						$actions['trash'] = "<a class='submitdelete' href='" . wp_nonce_url( "post.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ) . "'>" . __( 'Trash', 'gallery-plugin' ) . '</a>';
+						$actions['trash'] = '<a class="submitdelete" href="' . wp_nonce_url( "post.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ) . '">' . __( 'Trash', 'gallery-plugin' ) . '</a>';
 					}
 					if ( $this->is_trash || ! EMPTY_TRASH_DAYS || ! MEDIA_TRASH ) {
 						$delete_ays        = ( ! $this->is_trash && ! MEDIA_TRASH ) ? " onclick='return showNotice.warn();'" : '';
-						$actions['delete'] = "<a class='submitdelete'$delete_ays href='" . wp_nonce_url( "post.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ) . "'>" . __( 'Delete Permanently', 'gallery-plugin' ) . '</a>';
+						$actions['delete'] = '<a class="submitdelete"' . $delete_ays . ' href="' . wp_nonce_url( "post.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ) . '">' . __( 'Delete Permanently', 'gallery-plugin' ) . '</a>';
 					}
 				}
 

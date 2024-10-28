@@ -4,7 +4,7 @@
 <p>The best responsive gallery plugin for your WordPress website which will help you to create amazing galleries in a few clicks. Add an unlimited number of images to your gallery, create albums and categories, add comments, change appearance and much more.</p>
 <p>Showcase portfolio or just to show off useful images easily with gallery plugin to power up communication with your visitors, spark up your brand, and increase sales!</p>
 <p><a href="https://bestwebsoft.com/demo-for-gallery-pro/?ref=readme" rel="nofollow ugc">View Demo</a></p>
-<p><span class="embed-youtube" style="text-align:center; display: block;"></span></p>
+<p></p>
 <h4>Free Features</h4>
 <ul>
 <li>Fully Responsive</li>

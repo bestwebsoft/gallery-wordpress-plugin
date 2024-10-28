@@ -2,1283 +2,1429 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 12:53+0200\n"
-"PO-Revision-Date: 2019-03-26 12:53+0200\n"
+"POT-Creation-Date: 2024-10-28 15:30+0200\n"
+"PO-Revision-Date: 2024-10-28 15:32+0200\n"
 "Last-Translator: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: Michal Králik <ja@michalkralik.sk>\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bws_menu\n"
 
-#: gallery-plugin.php:37 includes/class-gllr-settings.php:314
+#: gallery-plugin.php:50 includes/class-gllr-settings.php:360
 msgid "Gallery Settings"
 msgstr "Nastavenie galérie"
 
-#: gallery-plugin.php:37 includes/class-gllr-settings.php:353
-#, fuzzy
+#: gallery-plugin.php:50 includes/class-gllr-settings.php:405
 msgid "Global Settings"
-msgstr "Nastavenie galérie"
+msgstr "Globálne nastavenia"
 
-#: gallery-plugin.php:43 gallery-plugin.php:2934
+#: gallery-plugin.php:57 includes/class-gllr-media-table.php:430
 msgid "Upgrade to Pro"
-msgstr ""
+msgstr "Prejdite na verziu Pro"
 
-#: gallery-plugin.php:340
+#: gallery-plugin.php:371 gallery-plugin.php:377 gallery-plugin.php:428
+#: gallery-plugin.php:434
+msgid ""
+"Errors occurred when uploading images, not all images were uploaded to the "
+"galleries"
+msgstr ""
+"Pri nahrávaní obrázkov sa vyskytli chyby, do galérií sa nenahrali všetky "
+"obrázky"
+
+#: gallery-plugin.php:718
 msgid "Return to all albums"
-msgstr ""
+msgstr "Späť na všetky albumy"
 
-#: gallery-plugin.php:354
+#: gallery-plugin.php:732
 msgid "See images &raquo;"
 msgstr "Vidieť fotky &raquo;"
 
-#: gallery-plugin.php:442 gallery-plugin.php:451
+#: gallery-plugin.php:841 gallery-plugin.php:851
 msgid "Galleries"
 msgstr "Galérie"
 
-#: gallery-plugin.php:443 gallery-plugin.php:3360
+#: gallery-plugin.php:842 gallery-plugin.php:3758
 msgid "Gallery"
 msgstr "Galéria"
 
-#: gallery-plugin.php:444
+#: gallery-plugin.php:843 gallery-plugin.php:844
 msgid "Add New Gallery"
 msgstr "Pridať novú galériu"
 
-#: gallery-plugin.php:445
+#: gallery-plugin.php:845
 msgid "Edit Gallery"
 msgstr "Upraviť galériu"
 
-#: gallery-plugin.php:446
+#: gallery-plugin.php:846
 msgid "New Gallery"
 msgstr "Nová galéria"
 
-#: gallery-plugin.php:447
+#: gallery-plugin.php:847
 msgid "View Gallery"
 msgstr "Zobraziť galériu"
 
-#: gallery-plugin.php:448 includes/class-gllr-settings.php:1001
-#, fuzzy
+#: gallery-plugin.php:848 includes/class-gllr-settings.php:1190
 msgid "Search Galleries"
-msgstr "Galérie"
+msgstr "Vyhľadávanie galérií"
 
-#: gallery-plugin.php:449
+#: gallery-plugin.php:849
 msgid "No Gallery found"
 msgstr "Galéria nebola nájdená"
 
-#: gallery-plugin.php:471 gallery-plugin.php:1721 gallery-plugin.php:3087
-#: gallery-plugin.php:3095 gallery-plugin.php:3133 gallery-plugin.php:3156
-#: gallery-plugin.php:3332
-#, fuzzy
+#: gallery-plugin.php:874 gallery-plugin.php:2363 gallery-plugin.php:3728
+#: includes/class-gllr-widgets.php:34 includes/class-gllr-widgets.php:44
+#: includes/class-gllr-widgets.php:83 includes/class-gllr-widgets.php:110
 msgid "Gallery Categories"
-msgstr "Veľkosť obrázka galérie"
+msgstr "Kategórie galérií"
 
-#: gallery-plugin.php:472 gallery-plugin.php:917
-#, fuzzy
+#: gallery-plugin.php:875 gallery-plugin.php:1418
 msgid "Gallery Category"
-msgstr "Veľkosť obrázka galérie"
+msgstr "Kategória galérie"
 
-#: gallery-plugin.php:473
+#: gallery-plugin.php:876
 msgid "Add Gallery Category"
-msgstr ""
+msgstr "Pridať kategóriu galérie"
 
-#: gallery-plugin.php:474
-#, fuzzy
+#: gallery-plugin.php:877
 msgid "Add New Gallery Category"
-msgstr "Pridať novú galériu"
+msgstr "Pridať novú kategóriu galérie"
 
-#: gallery-plugin.php:475 gallery-plugin.php:476
+#: gallery-plugin.php:878 gallery-plugin.php:879
 msgid "Edit Gallery Category"
-msgstr ""
+msgstr "Upraviť kategóriu galérie"
 
-#: gallery-plugin.php:477
+#: gallery-plugin.php:880
 msgid "New Gallery Category"
-msgstr ""
+msgstr "Nová kategória galérie"
 
-#: gallery-plugin.php:478 gallery-plugin.php:479
+#: gallery-plugin.php:881 gallery-plugin.php:882
 msgid "View Gallery Category"
-msgstr ""
+msgstr "Zobraziť kategóriu galérie"
 
-#: gallery-plugin.php:480
+#: gallery-plugin.php:883
 msgid "Find Gallery Category"
-msgstr ""
+msgstr "Nájsť kategóriu galérie"
 
-#: gallery-plugin.php:481
+#: gallery-plugin.php:884
 msgid "No Gallery Categories found"
-msgstr ""
+msgstr "Neboli nájdené žiadne kategórie galérií"
 
-#: gallery-plugin.php:482
+#: gallery-plugin.php:885
 msgid "No Gallery Categories found in Trash"
-msgstr ""
+msgstr "V kategórii Kôš neboli nájdené žiadne kategórie galérií"
 
-#: gallery-plugin.php:483
+#: gallery-plugin.php:886
 msgid "Parent Gallery Category"
-msgstr ""
+msgstr "Nadradená kategória galérie"
 
-#: gallery-plugin.php:484
+#: gallery-plugin.php:887
 msgid "Gallery Categories list navigation"
-msgstr ""
+msgstr "Navigácia v zozname kategórií galérie"
 
-#: gallery-plugin.php:485
+#: gallery-plugin.php:888
 msgid "Gallery Categories list"
-msgstr ""
+msgstr "Zoznam kategórií galérie"
 
-#: gallery-plugin.php:533
+#: gallery-plugin.php:944
 msgid "Gallery Shortcode"
 msgstr "Krátky kód galérie"
 
-#: gallery-plugin.php:542
+#: gallery-plugin.php:959
 msgid ""
 "Add a single gallery with images to your posts, pages, custom post types or "
 "widgets by using the following shortcode:"
 msgstr ""
+"Pridajte jednu galériu s obrázkami do príspevkov, stránok, vlastných typov "
+"príspevkov alebo widgetov pomocou nasledujúceho skratkového kódu:"
 
-#: gallery-plugin.php:546
+#: gallery-plugin.php:965
 msgid ""
 "Add a gallery cover including featured image, description, and a link to "
 "your single gallery using the following shortcode:"
 msgstr ""
+"Pomocou nasledujúceho skratkového kódu pridajte obálku galérie vrátane "
+"hlavného obrázka, popisu a odkazu na vašu jedinú galériu:"
 
-#: gallery-plugin.php:659
+#: gallery-plugin.php:1091
 msgid "Note"
-msgstr ""
+msgstr "Poznámka"
 
-#: gallery-plugin.php:659
+#: gallery-plugin.php:1091
 #, php-format
 msgid ""
 "When deleting a category, the galleries that belong to this category will "
 "not be deleted. These galleries will be moved to the category %s."
 msgstr ""
+"Pri vymazaní kategórie sa galérie, ktoré patria do tejto kategórie, "
+"nevymažú. Tieto galérie budú presunuté do kategórie %s."
 
-#: gallery-plugin.php:670
-#, fuzzy
+#: gallery-plugin.php:1106 gallery-plugin.php:1136
 msgid "Sort Galleries in Category by"
-msgstr "Zoradiť podľa"
+msgstr "Zoradiť galérie v kategórii podľa"
 
-#: gallery-plugin.php:673 gallery-plugin.php:3346
-#: includes/class-gllr-settings.php:711
-#, fuzzy
+#: gallery-plugin.php:1108 gallery-plugin.php:1139 gallery-plugin.php:3744
+#: includes/class-gllr-settings.php:835
 msgid "Gallery ID"
-msgstr "Galéria"
+msgstr "ID galérie"
 
-#: gallery-plugin.php:674 gallery-plugin.php:1718 gallery-plugin.php:2788
-#: gallery-plugin.php:2895 gallery-plugin.php:3008 gallery-plugin.php:3347
-#: includes/class-gllr-settings.php:712
+#: gallery-plugin.php:1109 gallery-plugin.php:1140 gallery-plugin.php:2360
+#: gallery-plugin.php:3745 includes/class-gllr-media-table.php:259
+#: includes/class-gllr-media-table.php:383
+#: includes/class-gllr-media-table.php:525 includes/class-gllr-settings.php:836
+#: includes/class-gllr-widgets.php:308
 msgid "Title"
 msgstr "Nadpis"
 
-#: gallery-plugin.php:675 gallery-plugin.php:1723 gallery-plugin.php:3348
-#: includes/class-gllr-settings.php:546 includes/class-gllr-settings.php:713
+#: gallery-plugin.php:1110 gallery-plugin.php:1141 gallery-plugin.php:2365
+#: gallery-plugin.php:3746 includes/class-gllr-settings.php:627
+#: includes/class-gllr-settings.php:837
 msgid "Date"
 msgstr "Dátum"
 
-#: gallery-plugin.php:676 gallery-plugin.php:3349
-#: includes/class-gllr-settings.php:714
+#: gallery-plugin.php:1111 gallery-plugin.php:1142 gallery-plugin.php:3747
+#: includes/class-gllr-settings.php:838
 msgid "Last modified date"
-msgstr ""
+msgstr "Posledný dátum úpravy"
 
-#: gallery-plugin.php:677 gallery-plugin.php:3350
-#: includes/class-gllr-settings.php:715
+#: gallery-plugin.php:1112 gallery-plugin.php:1143 gallery-plugin.php:3748
+#: includes/class-gllr-settings.php:839
 msgid "Comment count"
-msgstr ""
+msgstr "Počet komentárov"
 
-#: gallery-plugin.php:678 gallery-plugin.php:3351
-#: includes/class-gllr-settings.php:716
+#: gallery-plugin.php:1113 gallery-plugin.php:1144 gallery-plugin.php:3749
+#: includes/class-gllr-settings.php:840
 msgid "\"Order\" field on the gallery edit page"
-msgstr ""
+msgstr "pole \"Objednávka\" na stránke úprav galérie"
 
-#: gallery-plugin.php:679 gallery-plugin.php:1722 gallery-plugin.php:3352
-#: includes/class-gllr-settings.php:717
+#: gallery-plugin.php:1114 gallery-plugin.php:1145 gallery-plugin.php:2364
+#: gallery-plugin.php:3750 includes/class-gllr-settings.php:841
 msgid "Author"
 msgstr "Autor"
 
-#: gallery-plugin.php:680 gallery-plugin.php:3353
-#: includes/class-gllr-settings.php:547 includes/class-gllr-settings.php:718
+#: gallery-plugin.php:1115 gallery-plugin.php:1146 gallery-plugin.php:3751
+#: includes/class-gllr-settings.php:628 includes/class-gllr-settings.php:842
 msgid "Random"
 msgstr "Náhodne"
 
-#: gallery-plugin.php:681 gallery-plugin.php:3354
-#, fuzzy
-#| msgid "Settings"
+#: gallery-plugin.php:1116 gallery-plugin.php:1147 gallery-plugin.php:3752
 msgid "Plugin Settings"
-msgstr "Nastavenia"
+msgstr "Nastavenie pluginu"
 
-#: gallery-plugin.php:683 gallery-plugin.php:3356
-msgid "Select galleries sorting order in your category."
+#: gallery-plugin.php:1118 gallery-plugin.php:1149 gallery-plugin.php:3754
+#, php-format
+msgid ""
+"Select galleries sorting order in your category. The sorting direction you "
+"can select in the %s"
 msgstr ""
+"Vyberte poradie triedenia galérií vo vašej kategórii. Smer triedenia môžete "
+"vybrať v poli %s"
 
-#: gallery-plugin.php:703 gallery-plugin.php:1720
-#, fuzzy
+#: gallery-plugin.php:1118 gallery-plugin.php:1149 gallery-plugin.php:3754
+#: includes/class-gllr-settings.php:710
+msgid "Cover Settings"
+msgstr "Nastavenia obalu"
+
+#: gallery-plugin.php:1180 gallery-plugin.php:2362
 msgid "Shortcode"
-msgstr "Krátky kód galérie"
+msgstr "Shortcode"
 
-#: gallery-plugin.php:749
+#: gallery-plugin.php:1231
 msgid "All Gallery Categories"
-msgstr ""
+msgstr "Všetky kategórie galérie"
 
-#: gallery-plugin.php:827
+#: gallery-plugin.php:1320
 msgid "You can't delete default gallery category."
-msgstr ""
+msgstr "Predvolenú kategóriu galérie nemôžete odstrániť."
 
-#: gallery-plugin.php:1209 gallery-plugin.php:1317 gallery-plugin.php:2243
+#: gallery-plugin.php:1825 gallery-plugin.php:1940 gallery-plugin.php:3142
 msgid "Sorry, nothing found."
 msgstr "Prepáčte, nič som nenašiel."
 
-#: gallery-plugin.php:1717
+#: gallery-plugin.php:2359
 msgid "Featured Image"
-msgstr ""
+msgstr "Náhľadový obrázok"
 
-#: gallery-plugin.php:1719 includes/class-gllr-settings.php:41
-#, fuzzy
+#: gallery-plugin.php:2361 includes/class-gllr-settings.php:72
 msgid "Images"
-msgstr "Vidieť fotky &raquo;"
+msgstr "Obrázky"
 
-#: gallery-plugin.php:1810
+#: gallery-plugin.php:2468
 #, php-format
 msgid "%s Settings"
-msgstr ""
+msgstr "%s nastavenia"
 
-#: gallery-plugin.php:1837 gallery-plugin.php:1855
-#: includes/class-gllr-settings.php:30 includes/class-gllr-settings.php:42
+#: gallery-plugin.php:2505 gallery-plugin.php:2532
+#: includes/class-gllr-settings.php:56 includes/class-gllr-settings.php:73
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: gallery-plugin.php:1838
+#: gallery-plugin.php:2507
 msgid "FAQ"
 msgstr "FAQ"
 
-#: gallery-plugin.php:1839
+#: gallery-plugin.php:2508
 msgid "Support"
 msgstr "Podpora"
 
-#: gallery-plugin.php:1878
+#: gallery-plugin.php:2566
 msgid "Updating images..."
 msgstr "Nahrávanie obrázkov..."
 
-#: gallery-plugin.php:1879
-#, fuzzy
+#: gallery-plugin.php:2567
 msgid "No images found."
-msgstr "Obrázok nebol nájdený"
+msgstr "Zatiaľ žiadne obrazky."
 
-#: gallery-plugin.php:1880
-#, fuzzy
+#: gallery-plugin.php:2568
 msgid "All images were updated."
-msgstr "Všetky obrázky boli nahraté"
+msgstr "Všetky obrázky boli aktualizované."
 
-#: gallery-plugin.php:1881
+#: gallery-plugin.php:2569
 msgid "Error."
 msgstr "Chyba"
 
-#: gallery-plugin.php:1893
+#: gallery-plugin.php:2584
 msgid ""
 "You are about to remove these items from this gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
+"Chystáte sa odstrániť tieto položky z tejto galérie.\n"
+" \"Zrušiť\" pre zastavenie, \"OK\" pre odstránenie."
 
-#: gallery-plugin.php:1894
+#: gallery-plugin.php:2585
 msgid ""
 "You are about to remove this image from the gallery.\n"
 " 'Cancel' to stop, 'OK' to delete."
 msgstr ""
+"Chystáte sa odstrániť tento obrázok z galérie.\n"
+" \"Zrušiť\" pre zastavenie, \"OK\" pre odstránenie."
 
-#: gallery-plugin.php:1895
+#: gallery-plugin.php:2586
 msgid ""
 "Switching to another mode, all unsaved data will be lost. Save data before "
 "switching?"
 msgstr ""
+"Pri prepnutí do iného režimu sa všetky neuložené údaje stratia. Uložiť údaje "
+"pred prepnutím?"
 
-#: gallery-plugin.php:1896
+#: gallery-plugin.php:2587
 msgid "Insert Media"
-msgstr ""
+msgstr "Vložiť súbor"
 
-#: gallery-plugin.php:1897
+#: gallery-plugin.php:2588
 msgid "Insert"
-msgstr ""
+msgstr "Vložiť"
 
-#: gallery-plugin.php:1898
-msgid "Gallery has been successfully added!"
-msgstr ""
+#: gallery-plugin.php:2589
+msgid "A new slider is added."
+msgstr "Pridáva sa nový posuvník."
 
-#: gallery-plugin.php:2435 gallery-plugin.php:2468
+#: gallery-plugin.php:2589
+msgid "Edit slider"
+msgstr "Upraviť posuvník"
+
+#: gallery-plugin.php:3396 gallery-plugin.php:3424
 msgid "Image size not defined"
 msgstr "Veľkosť obrázka nebola definovaná"
 
-#: gallery-plugin.php:2455
-#, fuzzy
+#: gallery-plugin.php:3412
 msgid ""
 "Plugin updates only PNG, JPEG, GIF, WPMP or XBM filetype. For other, please "
 "reload images manually."
-msgstr "Môžete nahrať iba PNG, JPEG, GIF, WPMP alebo XBM súbory."
+msgstr ""
+"Plugin aktualizuje iba súbory typu PNG, JPEG, GIF, WPMP alebo XBM. V prípade "
+"iných súborov načítajte obrázky ručne."
 
-#: gallery-plugin.php:2501 gallery-plugin.php:2505 gallery-plugin.php:2511
+#: gallery-plugin.php:3459 gallery-plugin.php:3463 gallery-plugin.php:3469
 msgid "Invalid path"
 msgstr "Neplatná cesta"
 
-#: gallery-plugin.php:2607
+#: gallery-plugin.php:3701 gallery-plugin.php:3887 gallery-plugin.php:3890
+msgid "Warning"
+msgstr "Upozornenie"
+
+#: gallery-plugin.php:3701
+msgid "You can add only images to the gallery"
+msgstr "Do galérie môžete pridávať iba obrázky"
+
+#: gallery-plugin.php:3768
+msgid "no title"
+msgstr "bez názvu"
+
+#: gallery-plugin.php:3782
+msgid ""
+"Display an album image with the description and the link to a single gallery "
+"page"
+msgstr "Zobrazenie obrázka albumu s popisom a odkazom na jednu stránku galérie"
+
+#: gallery-plugin.php:3786
+msgid "Sorry, no gallery found."
+msgstr "Je nám ľúto, nenašla sa žiadna galéria."
+
+#: gallery-plugin.php:3887
+#, php-format
+msgid ""
+"Maximum upload file size %s. Contact your administrator or hosting provider "
+"if you need to upload a large file size."
+msgstr ""
+"Maximálna veľkosť nahrávaného súboru %s. Ak potrebujete nahrať súbor väčšej "
+"veľkosti, obráťte sa na svojho správcu alebo poskytovateľa hostingu."
+
+#: gallery-plugin.php:3890
+#, php-format
+msgid ""
+"Input vars count %s i.e. the number of pictures in the gallery may be "
+"limited. Contact your administrator or hosting provider if you need to "
+"upload a large input vars count."
+msgstr ""
+"Input vars count %s t.j. počet obrázkov v galérii môže byť obmedzený. Ak "
+"potrebujete nahrať veľký počet input vars, obráťte sa na svojho správcu "
+"alebo poskytovateľa hostingu."
+
+#: includes/class-gllr-media-table.php:32
 msgid "List View"
-msgstr ""
+msgstr "Zobraziť zoznam"
 
-#: gallery-plugin.php:2608
+#: includes/class-gllr-media-table.php:33
 msgid "Grid View"
-msgstr ""
+msgstr "Zobrazenie mriežky"
 
-#: gallery-plugin.php:2665
+#: includes/class-gllr-media-table.php:102
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
-#: gallery-plugin.php:2669
+#: includes/class-gllr-media-table.php:106
 msgid "Empty Trash"
-msgstr ""
+msgstr "Prázdny kôš"
 
-#: gallery-plugin.php:2692
-#, fuzzy
+#: includes/class-gllr-media-table.php:137
 msgid "No images found"
-msgstr "Obrázok nebol nájdený"
+msgstr "Nenašli sa žiadne obrázky"
 
-#: gallery-plugin.php:2745
+#: includes/class-gllr-media-table.php:203
 msgid "Select bulk action"
-msgstr ""
+msgstr "Vyberte hromadnú akciu"
 
-#: gallery-plugin.php:2747
+#: includes/class-gllr-media-table.php:205
 msgid "Bulk Actions"
-msgstr ""
+msgstr "Hromadné akcie"
 
-#: gallery-plugin.php:2757
+#: includes/class-gllr-media-table.php:215
 msgid "Apply"
-msgstr ""
+msgstr "Použiť"
 
-#: gallery-plugin.php:2764
-#, fuzzy
+#: includes/class-gllr-media-table.php:225
 msgid "Delete from Gallery"
-msgstr "Nová galéria"
+msgstr "Odstrániť z galérie"
 
-#: gallery-plugin.php:2773
+#: includes/class-gllr-media-table.php:238
 msgid "Bulk Select"
-msgstr ""
+msgstr "Hromadný výber"
 
-#: gallery-plugin.php:2774
+#: includes/class-gllr-media-table.php:239
 msgid "Cancel Selection"
-msgstr ""
+msgstr "Zrušiť výber"
 
-#: gallery-plugin.php:2775
+#: includes/class-gllr-media-table.php:240
 msgid "Delete Selected"
-msgstr ""
+msgstr "Vymazať označené"
 
-#: gallery-plugin.php:2786
+#: includes/class-gllr-media-table.php:257
 msgid "File"
-msgstr ""
+msgstr "Súbor"
 
-#: gallery-plugin.php:2787 gallery-plugin.php:2890 gallery-plugin.php:3003
+#: includes/class-gllr-media-table.php:258
+#: includes/class-gllr-media-table.php:377
+#: includes/class-gllr-media-table.php:518
 msgid "Dimensions"
-msgstr ""
+msgstr "Rozmery"
 
-#: gallery-plugin.php:2789 gallery-plugin.php:2901 gallery-plugin.php:3013
-#, fuzzy
+#: includes/class-gllr-media-table.php:260
+#: includes/class-gllr-media-table.php:390
+#: includes/class-gllr-media-table.php:532
 msgid "Alt Text"
-msgstr "Popisný text"
+msgstr "Alt Text"
 
-#: gallery-plugin.php:2790 gallery-plugin.php:2905 gallery-plugin.php:3018
+#: includes/class-gllr-media-table.php:261
+#: includes/class-gllr-media-table.php:394
+#: includes/class-gllr-media-table.php:539
 msgid "URL"
 msgstr "Adresa URL"
 
-#: gallery-plugin.php:2790 gallery-plugin.php:2907
+#: includes/class-gllr-media-table.php:261
+#: includes/class-gllr-media-table.php:396
 msgid ""
 "Enter your custom URL to link this image to other page or file. Leave blank "
 "to open a full size image."
 msgstr ""
+"Zadajte vlastnú adresu URL na prepojenie tohto obrázka s inou stránkou alebo "
+"súborom. Ak chcete otvoriť obrázok v plnej veľkosti, nechajte prázdne."
 
-#: gallery-plugin.php:2872
-#, fuzzy
+#: includes/class-gllr-media-table.php:359
 msgid "Remove Image from Gallery"
-msgstr "Nová galéria"
+msgstr "Odstránenie obrázka z galérie"
 
-#: gallery-plugin.php:2875
-#, fuzzy
+#: includes/class-gllr-media-table.php:362
 msgid "Edit Image Info"
-msgstr "ID pripojenia"
+msgstr "Upraviť informácie o obrázku"
 
-#: gallery-plugin.php:2876
+#: includes/class-gllr-media-table.php:363
 msgid "Deselect"
-msgstr ""
+msgstr "Odznačiť"
 
-#: gallery-plugin.php:2888
+#: includes/class-gllr-media-table.php:375
 msgid "File name"
-msgstr ""
+msgstr "Názov súboru"
 
-#: gallery-plugin.php:2889
+#: includes/class-gllr-media-table.php:376
 msgid "File type"
-msgstr ""
+msgstr "Typ súboru"
 
-#: gallery-plugin.php:2914
+#: includes/class-gllr-media-table.php:406
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
-#: gallery-plugin.php:2920
-#, fuzzy
+#: includes/class-gllr-media-table.php:415
 msgid "Lightbox Button URL"
-msgstr "pozadie Lightboxu"
+msgstr "Adresa URL tlačidla Lightbox"
 
-#: gallery-plugin.php:2927
+#: includes/class-gllr-media-table.php:423
 msgid "New Tab"
-msgstr ""
+msgstr "Nový list"
 
-#: gallery-plugin.php:2929
+#: includes/class-gllr-media-table.php:425
 msgid "Enable to open URLs above in a new tab."
-msgstr ""
+msgstr "Povoľte otvorenie vyššie uvedených adries URL v novej karte."
 
-#: gallery-plugin.php:2934
+#: includes/class-gllr-media-table.php:430
 msgid "Go Pro"
-msgstr ""
+msgstr "Prejsť na Pro"
 
-#: gallery-plugin.php:2940
+#: includes/class-gllr-media-table.php:437
 msgid "Edit more details"
-msgstr ""
+msgstr "Upraviť ďalšie podrobnosti"
 
-#: gallery-plugin.php:2942
-#, fuzzy
+#: includes/class-gllr-media-table.php:439
 msgid "Remove from Gallery"
-msgstr "Nová galéria"
+msgstr "Odstrániť z galérie"
 
-#: gallery-plugin.php:2978
+#: includes/class-gllr-media-table.php:480
 #, php-format
 msgid "Select %s"
-msgstr ""
+msgstr "Vyberte %s"
 
-#: gallery-plugin.php:2991
+#: includes/class-gllr-media-table.php:498
 #, php-format
 msgid "Edit &#8220;%s&#8221;"
-msgstr ""
+msgstr "Upraviť &#8220;%s&#8221;"
 
-#: gallery-plugin.php:2999
-#, fuzzy
+#: includes/class-gllr-media-table.php:512
 msgid "Edit Attachment Info"
-msgstr "ID pripojenia"
+msgstr "Upraviť informácie o prílohe"
 
-#: gallery-plugin.php:3036 gallery-plugin.php:3052
+#: includes/class-gllr-media-table.php:562
+#: includes/class-gllr-media-table.php:578
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
-#: gallery-plugin.php:3040 gallery-plugin.php:3058
+#: includes/class-gllr-media-table.php:566
+#: includes/class-gllr-media-table.php:584
 msgid "Trash"
-msgstr ""
+msgstr "Kôš"
 
-#: gallery-plugin.php:3043 gallery-plugin.php:3062
+#: includes/class-gllr-media-table.php:569
+#: includes/class-gllr-media-table.php:588
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Vymazať natrvalo"
 
-#: gallery-plugin.php:3046 gallery-plugin.php:3068
+#: includes/class-gllr-media-table.php:572
+#: includes/class-gllr-media-table.php:594
 #, php-format
 msgid "View &#8220;%s&#8221;"
-msgstr ""
+msgstr "Zobraziť &#8220;%s&#8221;"
 
-#: gallery-plugin.php:3046 gallery-plugin.php:3068 gallery-plugin.php:3151
+#: includes/class-gllr-media-table.php:572
+#: includes/class-gllr-media-table.php:594 includes/class-gllr-widgets.php:104
 msgid "View"
-msgstr ""
+msgstr "Zobraziť"
 
-#: gallery-plugin.php:3048
-#, fuzzy
+#: includes/class-gllr-media-table.php:574
 msgid "Attach"
-msgstr "ID pripojenia"
+msgstr "Pripojte stránku"
 
-#: gallery-plugin.php:3056
+#: includes/class-gllr-media-table.php:582
 msgid "Restore"
-msgstr ""
+msgstr "Obnoviť"
 
-#: gallery-plugin.php:3086
-msgid "A list or dropdown of Gallery categories."
-msgstr ""
-
-#: gallery-plugin.php:3131
-msgid "Select Gallery Category"
-msgstr ""
-
-#: gallery-plugin.php:3189
-#, fuzzy
-msgid "Title:"
-msgstr "Nadpis"
-
-#: gallery-plugin.php:3192
-msgid "Display as dropdown"
-msgstr ""
-
-#: gallery-plugin.php:3194
-msgid "Show gallery counts"
-msgstr ""
-
-#: gallery-plugin.php:3196
-msgid "Show hierarchy"
-msgstr ""
-
-#: gallery-plugin.php:3312
-msgid "Warning"
-msgstr ""
-
-#: gallery-plugin.php:3312
-msgid "You can add only images to the gallery"
-msgstr ""
-
-#: gallery-plugin.php:3367
-#, fuzzy
-msgid "no title"
-msgstr "Nadpis"
-
-#: gallery-plugin.php:3377
-#, fuzzy
-msgid ""
-"Display an album image with the description and the link to a single gallery "
-"page"
-msgstr ""
-"Ak chcete zobraziť krátky popis obsahujúci náhľad a odkaz na vlastnú stŕnaku "
-"galérie"
-
-#: gallery-plugin.php:3381
-#, fuzzy
-msgid "Sorry, no gallery found."
-msgstr "Prepáčte, nič som nenašiel."
-
-#: includes/class-gllr-settings.php:31
+#: includes/class-gllr-settings.php:57
 msgid "Cover"
-msgstr ""
+msgstr "Prekryť"
 
-#: includes/class-gllr-settings.php:32
-#, fuzzy
+#: includes/class-gllr-settings.php:58
 msgid "Lightbox"
-msgstr "vpravo"
+msgstr "Lightbox (zväčšenie obrázkov)"
 
-#: includes/class-gllr-settings.php:33
+#: includes/class-gllr-settings.php:60
 msgid "Social"
-msgstr ""
+msgstr "Sociálne"
 
-#: includes/class-gllr-settings.php:34
+#: includes/class-gllr-settings.php:63
 msgid "Misc"
-msgstr ""
+msgstr "Rôzne"
 
-#: includes/class-gllr-settings.php:35
+#: includes/class-gllr-settings.php:64
 msgid "Custom Code"
-msgstr ""
+msgstr "Vlasntý kód"
 
-#: includes/class-gllr-settings.php:36
+#: includes/class-gllr-settings.php:65
 msgid "Import / Export"
-msgstr ""
+msgstr "Import / Export"
 
-#: includes/class-gllr-settings.php:37
+#: includes/class-gllr-settings.php:67
 msgid "License Key"
-msgstr ""
+msgstr "Licenčný kľúč"
 
-#: includes/class-gllr-settings.php:244
-#, fuzzy
+#: includes/class-gllr-settings.php:149
+msgid "Import completed successfully"
+msgstr "Import prebehol úspešne"
+
+#: includes/class-gllr-settings.php:279
 msgid "Settings saved"
-msgstr "Nastavenia boli uložené."
+msgstr "Nastavenia uložené"
 
-#: includes/class-gllr-settings.php:256
-#, fuzzy
+#: includes/class-gllr-settings.php:293 includes/class-gllr-widgets.php:387
 msgid "Please, enable JavaScript in Your browser."
-msgstr "Povoľte prosím JavaScript na používanie nahrávania súborov."
+msgstr "Povoľte vo svojom prehliadači JavaScript."
 
-#: includes/class-gllr-settings.php:260
+#: includes/class-gllr-settings.php:297
 msgid "Custom image size was changed. You need to update gallery images."
 msgstr ""
+"Vlastná veľkosť obrázka bola zmenená. Je potrebné aktualizovať obrázky v "
+"galérii."
 
-#: includes/class-gllr-settings.php:261
-#, fuzzy
+#: includes/class-gllr-settings.php:298
 msgid "Update Images"
-msgstr "Nahrávanie obrázkov..."
+msgstr "Aktualizácia obrázkov"
 
-#: includes/class-gllr-settings.php:276
-#, fuzzy
+#: includes/class-gllr-settings.php:315
 msgid "Gallery Images"
-msgstr "Veľkosť obrázka galérie"
+msgstr "Obrázky galérie"
 
-#: includes/class-gllr-settings.php:281
+#: includes/class-gllr-settings.php:319
+msgid ""
+"The number of images you can add to the gallery depends on your server "
+"settings. If you have problems saving the gallery, try reducing the number "
+"of images in it."
+msgstr ""
+"Počet obrázkov, ktoré môžete pridať do galérie, závisí od nastavení servera. "
+"Ak máte problémy s uložením galérie, skúste znížiť počet obrázkov v nej."
+
+#: includes/class-gllr-settings.php:321
 msgid "Images adding requires JavaScript."
-msgstr ""
+msgstr "Pridávanie obrázkov vyžaduje JavaScript."
 
-#: includes/class-gllr-settings.php:284
+#: includes/class-gllr-settings.php:324
 msgid "Add Media"
-msgstr ""
+msgstr "Pridať média"
 
-#: includes/class-gllr-settings.php:293
+#: includes/class-gllr-settings.php:335
 msgid "The grid view for the Gallery images requires JavaScript."
-msgstr ""
+msgstr "Zobrazenie mriežky pre obrázky galérie vyžaduje JavaScript."
 
-#: includes/class-gllr-settings.php:293
+#: includes/class-gllr-settings.php:335
 msgid "Switch to the list view"
-msgstr ""
+msgstr "Prepnutie na zobrazenie zoznamu"
 
-#: includes/class-gllr-settings.php:320
-#, fuzzy
-#| msgid "Add gallery to the search"
-msgid "Add Gallery to the Slider"
-msgstr "Pridať galériu do hľadania"
+#: includes/class-gllr-settings.php:366
+msgid "Create Slider"
+msgstr "Vytvoriť posuvník"
 
-#: includes/class-gllr-settings.php:332
-#, fuzzy
+#: includes/class-gllr-settings.php:379
 msgid "Activate"
-msgstr "Plugin aktivovaný"
+msgstr "Aktivovať"
 
-#: includes/class-gllr-settings.php:335 includes/class-gllr-settings.php:1022
-#, fuzzy
+#: includes/class-gllr-settings.php:382 includes/class-gllr-settings.php:1215
 msgid "Install Now"
-msgstr "Inštalovať %s"
+msgstr "Nainštalovať teraz"
 
-#: includes/class-gllr-settings.php:337
-msgid "Add"
+#: includes/class-gllr-settings.php:384
+msgid "Create New Slider"
+msgstr "Vytvoriť nový Slider"
+
+#: includes/class-gllr-settings.php:390
+msgid ""
+"Click to create a new slider using gallery images. Slider plugin is required."
 msgstr ""
+"Kliknutím vytvoríte nový posuvník pomocou obrázkov z galérie. Vyžaduje sa "
+"zásuvný modul Slider."
 
-#: includes/class-gllr-settings.php:340
-msgid "Click to add current gallery to the slider. Slider plugin is required."
-msgstr ""
-
-#: includes/class-gllr-settings.php:351
-#, fuzzy
+#: includes/class-gllr-settings.php:403
 msgid "Single Gallery Settings"
-msgstr "Nastavenie galérie"
+msgstr "Nastavenia jednej galérie"
 
-#: includes/class-gllr-settings.php:353
+#: includes/class-gllr-settings.php:405
 #, php-format
 msgid "Enable to configure single gallery settings and disable %s."
-msgstr ""
+msgstr "Povoliť na konfiguráciu nastavení jednotlivých galérií a zakázať %s."
 
-#: includes/class-gllr-settings.php:365 includes/class-gllr-settings.php:422
-#: includes/class-gllr-settings.php:466 includes/class-gllr-settings.php:516
-#: includes/class-gllr-settings.php:654 includes/class-gllr-settings.php:742
-#: includes/class-gllr-settings.php:785 includes/class-gllr-settings.php:835
-#: includes/class-gllr-settings.php:894 includes/class-gllr-settings.php:983
+#: includes/class-gllr-settings.php:417 includes/class-gllr-settings.php:486
+#: includes/class-gllr-settings.php:530 includes/class-gllr-settings.php:597
+#: includes/class-gllr-settings.php:773 includes/class-gllr-settings.php:870
+#: includes/class-gllr-settings.php:921 includes/class-gllr-settings.php:977
+#: includes/class-gllr-settings.php:1045 includes/class-gllr-settings.php:1155
 msgid "Close"
-msgstr ""
+msgstr "Zatvoriť"
 
-#: includes/class-gllr-settings.php:369
-#, fuzzy
+#: includes/class-gllr-settings.php:421
 msgid "Gallery Layout"
-msgstr "Galéria nebola nájdená"
+msgstr "Rozloženie galérie"
 
-#: includes/class-gllr-settings.php:374
+#: includes/class-gllr-settings.php:426
 msgid "Grid"
-msgstr ""
+msgstr "Mriežka"
 
-#: includes/class-gllr-settings.php:380
+#: includes/class-gllr-settings.php:432
 msgid "Masonry"
-msgstr ""
+msgstr "Tehličkové usporiadanie (masonry)"
 
-#: includes/class-gllr-settings.php:393
+#: includes/class-gllr-settings.php:438
+msgid "Carousel"
+msgstr "Carousel"
+
+#: includes/class-gllr-settings.php:444
+msgid "Tilled"
+msgstr "Obrábanie"
+
+#: includes/class-gllr-settings.php:457
 msgid "Number of Columns"
-msgstr ""
+msgstr "Počet stĺpcov"
 
-#: includes/class-gllr-settings.php:396
+#: includes/class-gllr-settings.php:460
 #, php-format
 msgid "Number of gallery columns (default is %s)."
-msgstr ""
+msgstr "Počet stĺpcov galérie (predvolená hodnota je %s)."
 
-#: includes/class-gllr-settings.php:400 includes/class-gllr-settings.php:789
-#, fuzzy
+#: includes/class-gllr-settings.php:464 includes/class-gllr-settings.php:925
 msgid "Image Size"
-msgstr "Veľkosť obrázku"
+msgstr "Veľkosť obrázka"
 
-#: includes/class-gllr-settings.php:406 includes/class-gllr-settings.php:639
+#: includes/class-gllr-settings.php:470 includes/class-gllr-settings.php:758
 msgid "Custom"
-msgstr ""
+msgstr "Vlastné"
 
-#: includes/class-gllr-settings.php:408
+#: includes/class-gllr-settings.php:472
 msgid ""
 "Maximum gallery image size. \"Custom\" uses the Image Dimensions values."
 msgstr ""
+"Maximálna veľkosť obrázku v galérii. \"Vlastné\" používa hodnoty Image "
+"Dimensions."
 
-#: includes/class-gllr-settings.php:412
-#, fuzzy
+#: includes/class-gllr-settings.php:476
 msgid "Custom Image Size"
-msgstr "Veľkosť obrázku"
+msgstr "Vlastná veľkosť obrázku"
 
-#: includes/class-gllr-settings.php:414 includes/class-gllr-settings.php:502
-#: includes/class-gllr-settings.php:647 includes/class-gllr-settings.php:697
+#: includes/class-gllr-settings.php:478 includes/class-gllr-settings.php:571
+#: includes/class-gllr-settings.php:766 includes/class-gllr-settings.php:821
 msgid "px"
-msgstr ""
+msgstr "px"
 
-#: includes/class-gllr-settings.php:415
+#: includes/class-gllr-settings.php:479
 msgid ""
 "Adjust these values based on the number of columns in your gallery. This "
 "won't effect the full size of your images in the lightbox."
 msgstr ""
+"Tieto hodnoty upravte podľa počtu stĺpcov v galérii. Nebude to mať vplyv na "
+"plnú veľkosť vašich obrázkov v lightboxe."
 
-#: includes/class-gllr-settings.php:426
-#, fuzzy
+#: includes/class-gllr-settings.php:490
 msgid "Crop Images"
-msgstr "Zoradenie obrázkov"
+msgstr "Orezať obrázok"
 
-#: includes/class-gllr-settings.php:428
+#: includes/class-gllr-settings.php:492
 msgid ""
 "Enable to crop images using the sizes defined for Custom Image Size. Disable "
 "to resize images automatically using their aspect ratio."
 msgstr ""
+"Umožňuje orezávať obrázky pomocou veľkostí definovaných pre položku Vlastná "
+"veľkosť obrázka. Zakázať automatickú zmenu veľkosti obrázkov pomocou ich "
+"pomeru strán."
 
-#: includes/class-gllr-settings.php:432 includes/class-gllr-settings.php:664
-#, fuzzy
+#: includes/class-gllr-settings.php:496 includes/class-gllr-settings.php:783
 msgid "Crop Position"
-msgstr "Orezať"
+msgstr "Orezať pozíciu"
 
-#: includes/class-gllr-settings.php:447 includes/class-gllr-settings.php:679
+#: includes/class-gllr-settings.php:511 includes/class-gllr-settings.php:798
 msgid "Select crop position base (by default: center)."
-msgstr ""
+msgstr "Vyberte základnú pozíciu orezania (predvolene: stred)."
 
-#: includes/class-gllr-settings.php:457
-#, fuzzy
+#: includes/class-gllr-settings.php:521
 msgid "Image Title"
-msgstr "Veľkosť obrázku"
+msgstr "Názov obrázku*"
 
-#: includes/class-gllr-settings.php:459
+#: includes/class-gllr-settings.php:523
 msgid "Enable to display image title along with the gallery image."
-msgstr ""
+msgstr "Povolenie zobrazenia názvu obrázka spolu s obrázkom galérie."
 
-#: includes/class-gllr-settings.php:470
-#, fuzzy
+#: includes/class-gllr-settings.php:534
 msgid "Image Title Position"
-msgstr "Veľkosť obrázka nebola definovaná"
+msgstr "Názov obrázka Pozícia"
 
-#: includes/class-gllr-settings.php:475
-#, fuzzy
-msgid "Under image"
-msgstr "Nahrať obrázky"
+#: includes/class-gllr-settings.php:539
+msgid "Below images"
+msgstr "Nižšie uvedené obrázky"
 
-#: includes/class-gllr-settings.php:481
+#: includes/class-gllr-settings.php:545
 msgid "On mouse hover"
-msgstr ""
+msgstr "Pri prejdení myšou"
 
-#: includes/class-gllr-settings.php:494
-#, fuzzy
+#: includes/class-gllr-settings.php:558
 msgid "Image Border"
-msgstr "Obrázky s rámčekom"
+msgstr "Orámovanie obrázka"
 
-#: includes/class-gllr-settings.php:496
+#: includes/class-gllr-settings.php:565
 msgid ""
 "Enable images border using the styles defined for Image Border Size and "
 "Color options."
 msgstr ""
+"Povoľte ohraničenie obrázkov pomocou štýlov definovaných pre možnosti "
+"Veľkosť a farba ohraničenia obrázku."
 
-#: includes/class-gllr-settings.php:500
-#, fuzzy
+#: includes/class-gllr-settings.php:569
 msgid "Image Border Size"
-msgstr "Veľkosť obrázku"
+msgstr "Veľkosť okraja obrázka"
 
-#: includes/class-gllr-settings.php:503
+#: includes/class-gllr-settings.php:572
 #, php-format
-msgid "Gallery image border width (default is %s)"
-msgstr ""
+msgid "Gallery image border width (default is %s)."
+msgstr "Šírka okraja obrázka galérie (predvolená hodnota je %s)."
 
-#: includes/class-gllr-settings.php:507
-#, fuzzy
+#: includes/class-gllr-settings.php:576
 msgid "Image Border Color"
-msgstr "Vyberte farbu rámčeka"
+msgstr "Image Farba rámčeku"
 
-#: includes/class-gllr-settings.php:520
-msgid "Pagination"
-msgstr ""
-
-#: includes/class-gllr-settings.php:523
-msgid ""
-"Enable pagination for images to limit number of images displayed on a single "
-"gallery page."
-msgstr ""
-
-#: includes/class-gllr-settings.php:527
-#, fuzzy
-msgid "Number of Images"
-msgstr "Počet obrázkov v rade"
-
-#: includes/class-gllr-settings.php:530
-#, php-format
-msgid "Number of images displayed per page (default is %d)."
-msgstr ""
-
-#: includes/class-gllr-settings.php:540
-#, fuzzy
-msgid "Sort Images by"
-msgstr "Zoradiť podľa"
-
-#: includes/class-gllr-settings.php:543
-msgid "Manually (default)"
-msgstr ""
-
-#: includes/class-gllr-settings.php:544
-#, fuzzy
-msgid "Image ID"
-msgstr "Obrázok"
-
-#: includes/class-gllr-settings.php:545
-msgid "Name"
-msgstr ""
-
-#: includes/class-gllr-settings.php:549
-msgid ""
-"Select images sorting order in your gallery. By default, you can sort images "
-"manually in the images tab."
-msgstr ""
-
-#: includes/class-gllr-settings.php:553
-#, fuzzy
-msgid "Arrange Images by"
-msgstr "Zoradiť podľa"
-
-#: includes/class-gllr-settings.php:556 includes/class-gllr-settings.php:727
-msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
-msgstr ""
-
-#: includes/class-gllr-settings.php:557 includes/class-gllr-settings.php:728
-msgid "Descending (e.g. 3, 2, 1; c, b, a)"
-msgstr ""
-
-#: includes/class-gllr-settings.php:562
-#, fuzzy
-msgid "Back Link"
-msgstr "URL spätného odkazu"
-
-#: includes/class-gllr-settings.php:564
-msgid ""
-"Enable to show a back link in a single gallery page which navigate to a "
-"previous page."
-msgstr ""
-
-#: includes/class-gllr-settings.php:568
-#, fuzzy
-msgid "Back Link URL"
-msgstr "URL spätného odkazu"
-
-#: includes/class-gllr-settings.php:571
-msgid "Back link custom page URL. Leave blank to use Gallery page template."
-msgstr ""
-
-#: includes/class-gllr-settings.php:575
-#, fuzzy
-msgid "Back Link Label"
-msgstr "URL spätného odkazu"
-
-#: includes/class-gllr-settings.php:581
-#, fuzzy
-msgid "Back Link with Shortcode"
-msgstr "Zobraziť spatný odkaz v krátkom kóde"
-
-#: includes/class-gllr-settings.php:584
-#, fuzzy
-msgid "Enable to display a back link on a page where shortcode is used."
-msgstr "Zobraziť spatný odkaz v krátkom kóde"
-
-#: includes/class-gllr-settings.php:595
-#, fuzzy
-msgid "Cover Settings"
-msgstr "Nastavenie galérie"
-
-#: includes/class-gllr-settings.php:600
-#, fuzzy
-msgid "Galleries Page"
-msgstr "Galérie"
-
-#: includes/class-gllr-settings.php:608
-#, fuzzy
-msgid "Base page where all existing galleries will be displayed."
-msgstr ""
-"Ak aktualizujete na Pro verziu, všetky vaše nastavanie a galérie budú "
-"uložené."
-
-#: includes/class-gllr-settings.php:612
-msgid "Albums Displaying"
-msgstr ""
-
-#: includes/class-gllr-settings.php:615
-msgid "Column"
-msgstr ""
-
-#: includes/class-gllr-settings.php:616
-msgid "Rows"
-msgstr ""
-
-#: includes/class-gllr-settings.php:618
-msgid "Select the way galleries will be displayed on the Galleries Page."
-msgstr ""
-
-#: includes/class-gllr-settings.php:622
-msgid "Column Alignment"
-msgstr ""
-
-#: includes/class-gllr-settings.php:625
-msgid "Left"
-msgstr ""
-
-#: includes/class-gllr-settings.php:626
-msgid "Right"
-msgstr ""
-
-#: includes/class-gllr-settings.php:627
-msgid "Center"
-msgstr ""
-
-#: includes/class-gllr-settings.php:629
-msgid "Select the column alignment."
-msgstr ""
-
-#: includes/class-gllr-settings.php:633
-#, fuzzy
-msgid "Cover Image Size"
-msgstr "Veľkosť obrázku"
-
-#: includes/class-gllr-settings.php:641
-msgid "Maximum cover image size. Custom uses the Image Dimensions values."
-msgstr ""
-
-#: includes/class-gllr-settings.php:645
-msgid "Custom Cover Image Size"
-msgstr ""
-
-#: includes/class-gllr-settings.php:658
-msgid "Crop Cover Images"
-msgstr ""
-
-#: includes/class-gllr-settings.php:660
-msgid ""
-"Enable to crop images using the sizes defined for Custom Cover Image Size. "
-"Disable to resize images automatically using their aspect ratio."
-msgstr ""
-
-#: includes/class-gllr-settings.php:689
-#, fuzzy
-msgid "Cover Image Border"
-msgstr "Obrázky s rámčekom"
-
-#: includes/class-gllr-settings.php:691
-msgid ""
-"Enable cover images border using the styles defined for Image Border Size "
-"and Color."
-msgstr ""
-
-#: includes/class-gllr-settings.php:695
-msgid "Cover Image Border Size"
-msgstr ""
-
-#: includes/class-gllr-settings.php:698
-#, php-format
-msgid "Cover image border width (default is %s)"
-msgstr ""
-
-#: includes/class-gllr-settings.php:702
-#, fuzzy
-msgid "Cover Image Border Color"
-msgstr "Vyberte farbu rámčeka"
-
-#: includes/class-gllr-settings.php:708
-#, fuzzy
-msgid "Sort Albums by"
-msgstr "Zoradiť podľa"
-
-#: includes/class-gllr-settings.php:720
-msgid "Select galleries sorting order in your galleries page."
-msgstr ""
-
-#: includes/class-gllr-settings.php:724
-msgid "Arrange Albums by"
-msgstr ""
-
-#: includes/class-gllr-settings.php:733
-#, fuzzy
-msgid "Read More Link Label"
-msgstr "Text odkazu pre čítaj dalej"
-
-#: includes/class-gllr-settings.php:746
-msgid "Instant Lightbox"
-msgstr ""
-
-#: includes/class-gllr-settings.php:749
-msgid ""
-"Enable to display all images in the lightbox after clicking cover image or "
-"URL instead of going to a single gallery page."
-msgstr ""
-
-#: includes/class-gllr-settings.php:763
-#, fuzzy
-msgid "Lightbox Settings"
-msgstr "pozadie Lightboxu"
-
-#: includes/class-gllr-settings.php:768
+#: includes/class-gllr-settings.php:582
 msgid "Unclickable Thumbnail Images"
-msgstr ""
+msgstr "Neklikateľné miniatúry obrázkov"
 
-#: includes/class-gllr-settings.php:771
+#: includes/class-gllr-settings.php:590
 msgid ""
 "Enable to make the images in a single gallery unclickable and hide their "
 "URLs. This option also disables Lightbox."
 msgstr ""
+"Umožňuje odpojiť obrázky v jednej galérii a skryť ich adresy URL. Táto "
+"možnosť tiež deaktivuje Lightbox."
 
-#: includes/class-gllr-settings.php:775
+#: includes/class-gllr-settings.php:601
+msgid "Pagination"
+msgstr "Stránkovanie"
+
+#: includes/class-gllr-settings.php:604
+msgid ""
+"Enable pagination for images to limit number of images displayed on a single "
+"gallery page."
+msgstr ""
+"Povolenie stránkovania obrázkov na obmedzenie počtu obrázkov zobrazených na "
+"jednej stránke galérie."
+
+#: includes/class-gllr-settings.php:608
+msgid "Number of Images"
+msgstr "Počet obrázkov"
+
+#: includes/class-gllr-settings.php:611
+#, php-format
+msgid "Number of images displayed per page (default is %d)."
+msgstr "Počet obrázkov zobrazených na stránku (predvolená hodnota je %d)."
+
+#: includes/class-gllr-settings.php:621
+msgid "Sort Images by"
+msgstr "Zoradiť obrázky podľa"
+
+#: includes/class-gllr-settings.php:624
+msgid "Manually (default)"
+msgstr "Ručne (predvolené nastavenie)"
+
+#: includes/class-gllr-settings.php:625
+msgid "Image ID"
+msgstr "ID obrázka"
+
+#: includes/class-gllr-settings.php:626
+msgid "Name"
+msgstr "Meno"
+
+#: includes/class-gllr-settings.php:630
+msgid ""
+"Select images sorting order in your gallery. By default, you can sort images "
+"manually in the images tab."
+msgstr ""
+"Vyberte poradie triedenia obrázkov v galérii. V predvolenom nastavení môžete "
+"obrázky zoradiť ručne na karte Obrázky."
+
+#: includes/class-gllr-settings.php:634
+msgid "Arrange Images by"
+msgstr "Usporiadať obrázky podľa"
+
+#: includes/class-gllr-settings.php:642 includes/class-gllr-settings.php:856
+msgid "Ascending (e.g. 1, 2, 3; a, b, c)"
+msgstr "Vzostupne (napr. 1, 2, 3; a, b, c)"
+
+#: includes/class-gllr-settings.php:648 includes/class-gllr-settings.php:862
+msgid "Descending (e.g. 3, 2, 1; c, b, a)"
+msgstr "Klesajúci (napr. 3, 2, 1; c, b, a)"
+
+#: includes/class-gllr-settings.php:653
+msgid "Back Link"
+msgstr "Späť Link"
+
+#: includes/class-gllr-settings.php:660
+msgid ""
+"Enable to show a back link in a single gallery page which navigate to a "
+"previous page."
+msgstr ""
+"Umožniť zobrazenie spätného odkazu na jednej stránke galérie, ktorý naviguje "
+"na predchádzajúcu stránku."
+
+#: includes/class-gllr-settings.php:664
+msgid "Back Link URL"
+msgstr "URL adresa spätného odkazu"
+
+#: includes/class-gllr-settings.php:667
+msgid ""
+"Leave blank to use the Gallery page template or enter a custom page URL."
+msgstr ""
+"Ak chcete použiť šablónu stránky Galéria, nechajte prázdnu alebo zadajte "
+"vlastnú adresu URL stránky."
+
+#: includes/class-gllr-settings.php:671
+msgid "Back Link Label"
+msgstr "Štítok spätného odkazu"
+
+#: includes/class-gllr-settings.php:677
+msgid "Back Link with Shortcode"
+msgstr "Spätný odkaz so skratkou"
+
+#: includes/class-gllr-settings.php:685
+msgid "Enable to display a back link on a page where shortcode is used."
+msgstr ""
+"Povolenie zobrazenia spätného odkazu na stránke, na ktorej sa používa "
+"skratka."
+
+#: includes/class-gllr-settings.php:689
+msgid "Disable Fancybox"
+msgstr "Zakázanie aplikácie Fancybox"
+
+#: includes/class-gllr-settings.php:696
+msgid "Enable to avoid possible conflicts with a 3rd party Fancybox."
+msgstr ""
+"Povoľte, aby ste sa vyhli možným konfliktom so zariadením Fancybox tretej "
+"strany."
+
+#: includes/class-gllr-settings.php:715
+msgid "Galleries Page"
+msgstr "Stránka galérií"
+
+#: includes/class-gllr-settings.php:727
+msgid "Base page where all existing galleries will be displayed."
+msgstr "Základná stránka, na ktorej sa zobrazia všetky existujúce galérie."
+
+#: includes/class-gllr-settings.php:731
+msgid "Albums Displaying"
+msgstr "Zobrazenie albumov"
+
+#: includes/class-gllr-settings.php:734
+msgid "Column"
+msgstr "Stĺpec"
+
+#: includes/class-gllr-settings.php:735
+msgid "Rows"
+msgstr "Riadky"
+
+#: includes/class-gllr-settings.php:737
+msgid "Select the way galleries will be displayed on the Galleries Page."
+msgstr "Vyberte spôsob zobrazenia galérií na stránke Galérie."
+
+#: includes/class-gllr-settings.php:741
+msgid "Column Alignment"
+msgstr "Zarovnanie stĺpcov"
+
+#: includes/class-gllr-settings.php:744
+msgid "Left"
+msgstr "Vľavo"
+
+#: includes/class-gllr-settings.php:745
+msgid "Right"
+msgstr "Vpravo"
+
+#: includes/class-gllr-settings.php:746
+msgid "Center"
+msgstr "Stred"
+
+#: includes/class-gllr-settings.php:748
+msgid "Select the column alignment."
+msgstr "Vyberte zarovnanie stĺpcov."
+
+#: includes/class-gllr-settings.php:752
+msgid "Cover Image Size"
+msgstr "Veľkosť obrázka na obálke"
+
+#: includes/class-gllr-settings.php:760
+msgid "Maximum cover image size. Custom uses the Image Dimensions values."
+msgstr ""
+"Maximálna veľkosť krycieho obrázka. Vlastné používa hodnoty Image Dimensions."
+
+#: includes/class-gllr-settings.php:764
+msgid "Custom Cover Image Size"
+msgstr "Vlastná veľkosť obrázka obálky"
+
+#: includes/class-gllr-settings.php:777
+msgid "Crop Cover Images"
+msgstr "Obrázky pokrytia plodín"
+
+#: includes/class-gllr-settings.php:779
+msgid ""
+"Enable to crop images using the sizes defined for Custom Cover Image Size. "
+"Disable to resize images automatically using their aspect ratio."
+msgstr ""
+"Umožňuje orezávať obrázky pomocou veľkostí definovaných pre položku Vlastná "
+"veľkosť obrázka obálky. Zakázať, aby sa veľkosť obrázkov automaticky zmenila "
+"pomocou ich pomeru strán."
+
+#: includes/class-gllr-settings.php:808
+msgid "Cover Image Border"
+msgstr "Obrázok obálky Hranica"
+
+#: includes/class-gllr-settings.php:815
+msgid ""
+"Enable cover images border using the styles defined for Image Border Size "
+"and Color."
+msgstr ""
+"Povoľte ohraničenie krycích obrázkov pomocou štýlov definovaných pre Veľkosť "
+"a farbu ohraničenia obrázka."
+
+#: includes/class-gllr-settings.php:819
+msgid "Cover Image Border Size"
+msgstr "Veľkosť okraja obrázka na obálke"
+
+#: includes/class-gllr-settings.php:822
+#, php-format
+msgid "Cover image border width (default is %s)."
+msgstr "Šírka okraja krycieho obrázka (predvolená hodnota je %s)."
+
+#: includes/class-gllr-settings.php:826
+msgid "Cover Image Border Color"
+msgstr "Farba obálky obrázku"
+
+#: includes/class-gllr-settings.php:832
+msgid "Sort Albums by"
+msgstr "Zoradiť albumy podľa"
+
+#: includes/class-gllr-settings.php:844
+msgid "Select galleries sorting order in your galleries page."
+msgstr "Vyberte poradie triedenia galérií na stránke galérií."
+
+#: includes/class-gllr-settings.php:848
+msgid "Arrange Albums by"
+msgstr "Usporiadať albumy podľa"
+
+#: includes/class-gllr-settings.php:874
+msgid "Instant Lightbox"
+msgstr "Okamžitý Lightbox"
+
+#: includes/class-gllr-settings.php:877
+msgid ""
+"Enable to display all images in the lightbox after clicking cover image or "
+"URL instead of going to a single gallery page."
+msgstr ""
+"Povolenie zobrazenia všetkých obrázkov v lightboxe po kliknutí na titulný "
+"obrázok alebo URL namiesto prechodu na jednu stránku galérie."
+
+#: includes/class-gllr-settings.php:887
+msgid "Read More Link Label"
+msgstr "Čítajte viac Odkaz Label"
+
+#: includes/class-gllr-settings.php:901
+msgid "Lightbox Settings"
+msgstr "Nastavenie lightbox"
+
+#: includes/class-gllr-settings.php:906
 msgid "Enable Lightbox"
-msgstr ""
+msgstr "Povoliť Lightbox"
 
-#: includes/class-gllr-settings.php:778
+#: includes/class-gllr-settings.php:914
 msgid "Enable to show the lightbox when clicking on gallery images."
-msgstr ""
+msgstr "Povolenie zobrazenia lightboxu pri kliknutí na obrázky v galérii."
 
-#: includes/class-gllr-settings.php:796
+#: includes/class-gllr-settings.php:932
 msgid ""
 "Select the maximum gallery image size for the lightbox view. \"Default\" "
 "will display the original, full size image."
 msgstr ""
+"Vyberte maximálnu veľkosť obrázku galérie pre zobrazenie lightboxu. "
+"\"Predvolené\" zobrazí pôvodný obrázok v plnej veľkosti."
 
-#: includes/class-gllr-settings.php:800
+#: includes/class-gllr-settings.php:936
 msgid "Overlay Color"
-msgstr ""
+msgstr "Prekrytie farby"
 
-#: includes/class-gllr-settings.php:806
+#: includes/class-gllr-settings.php:942
 msgid "Overlay Opacity"
-msgstr ""
+msgstr "Prekrývacia opacita"
 
-#: includes/class-gllr-settings.php:809
+#: includes/class-gllr-settings.php:945
 #, php-format
 msgid ""
-"Lightbox overlay opacity. Leave blank to disable opacity (default is %s, max "
-"is %s)."
+"Lightbox overlay opacity. Leave blank to disable opacity (default is %1$s, "
+"max is %2$s)."
 msgstr ""
+"Nepriehľadnosť prekrytia Lightboxu. Ak chcete zakázať nepriehľadnosť, "
+"nechajte prázdne (predvolená hodnota je %1$s, maximálna hodnota je %2$s)."
 
-#: includes/class-gllr-settings.php:819
-#, fuzzy
+#: includes/class-gllr-settings.php:956
 msgid "Slideshow"
-msgstr "Spustiť Slideshow"
+msgstr "Prezentácia"
 
-#: includes/class-gllr-settings.php:821
+#: includes/class-gllr-settings.php:963
 msgid "Enable to start the slideshow automatically when the lightbox is used."
-msgstr ""
+msgstr "Povolenie automatického spustenia prezentácie pri použití lightboxu."
 
-#: includes/class-gllr-settings.php:825
-#, fuzzy
+#: includes/class-gllr-settings.php:967
 msgid "Slideshow Duration"
-msgstr "Trvanie slideshow"
+msgstr "Trvanie prezentácie"
 
-#: includes/class-gllr-settings.php:827
+#: includes/class-gllr-settings.php:969
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
-#: includes/class-gllr-settings.php:828
+#: includes/class-gllr-settings.php:970
 msgid "Slideshow interval duration between two images."
-msgstr ""
+msgstr "Trvanie intervalu prezentácie medzi dvoma snímkami."
 
-#: includes/class-gllr-settings.php:839
-#, fuzzy
+#: includes/class-gllr-settings.php:981
 msgid "Lightbox Helpers"
-msgstr "pozadie Lightboxu"
+msgstr "Pomocníci Lightbox"
 
-#: includes/class-gllr-settings.php:841
+#: includes/class-gllr-settings.php:983
 msgid "Enable to display the lightbox toolbar and arrows."
-msgstr ""
+msgstr "Povolenie zobrazenia panela nástrojov a šípok svetelného okna."
 
-#: includes/class-gllr-settings.php:845
-#, fuzzy
+#: includes/class-gllr-settings.php:987
 msgid "Lightbox Thumbnails"
-msgstr "Veľkosť obrázku pre obal albumu"
+msgstr "Miniatúry Lightbox"
 
-#: includes/class-gllr-settings.php:847
+#: includes/class-gllr-settings.php:989
 msgid "Enable to use a lightbox helper navigation between images."
-msgstr ""
+msgstr "Povolenie používania pomocnej navigácie lightbox medzi obrázkami."
 
-#: includes/class-gllr-settings.php:851
+#: includes/class-gllr-settings.php:993
 msgid "Lightbox Thumbnails Position"
-msgstr ""
+msgstr "Pozícia miniatúr v rámčeku Lightbox"
 
-#: includes/class-gllr-settings.php:854
-#, fuzzy
+#: includes/class-gllr-settings.php:996
 msgid "Top"
-msgstr "hore"
+msgstr "Hore"
 
-#: includes/class-gllr-settings.php:859
-#, fuzzy
+#: includes/class-gllr-settings.php:1001
 msgid "Lightbox Button Label"
-msgstr "pozadie Lightboxu"
+msgstr "Štítok tlačidla Lightbox"
 
-#: includes/class-gllr-settings.php:861
-#, fuzzy
+#: includes/class-gllr-settings.php:1003
 msgid "Read More"
-msgstr "Viac"
+msgstr "Čítať viac"
 
-#: includes/class-gllr-settings.php:871
-#, fuzzy
+#: includes/class-gllr-settings.php:1014
 msgid "Download Button"
-msgstr "Sťiahnuť vlastné hľadanie"
+msgstr "Tlačidlo sťahovania"
 
-#: includes/class-gllr-settings.php:873
+#: includes/class-gllr-settings.php:1016
 msgid "Enable to display download button."
-msgstr ""
+msgstr "Povolenie zobrazenia tlačidla na prevzatie."
 
-#: includes/class-gllr-settings.php:877
+#: includes/class-gllr-settings.php:1020
+msgid "Display Arrows"
+msgstr "Zobrazenie šípok"
+
+#: includes/class-gllr-settings.php:1022
+msgid "Enable to display arrows."
+msgstr "Povolenie zobrazenia šípok."
+
+#: includes/class-gllr-settings.php:1026
 msgid "Single Lightbox"
-msgstr ""
+msgstr "Jednotlivý Lightbox"
 
-#: includes/class-gllr-settings.php:879
-#, fuzzy
+#: includes/class-gllr-settings.php:1028
 msgid ""
 "Enable to use a single lightbox for multiple galleries located on a single "
 "page."
-msgstr "Použiť jeden lightbox pre viac galérií na jednej strane"
+msgstr ""
+"Umožňuje použiť jeden lightbox pre viacero galérií umiestnených na jednej "
+"stránke."
 
-#: includes/class-gllr-settings.php:889
+#: includes/class-gllr-settings.php:1040
 msgid "Social Sharing Buttons Settings"
-msgstr ""
+msgstr "Nastavenia tlačidiel na zdieľanie v sociálnych sieťach"
 
-#: includes/class-gllr-settings.php:898
+#: includes/class-gllr-settings.php:1049
 msgid "Social Buttons"
-msgstr ""
+msgstr "Sociálne tlačidlá"
 
-#: includes/class-gllr-settings.php:900
+#: includes/class-gllr-settings.php:1051
 msgid "Enable social sharing buttons in the lightbox."
-msgstr ""
+msgstr "Povolenie tlačidiel na zdieľanie v sociálnych sieťach v lightboxe."
 
-#: includes/class-gllr-settings.php:904
+#: includes/class-gllr-settings.php:1055
 msgid "Social Networks"
-msgstr ""
+msgstr "Sociálne siete"
 
-#: includes/class-gllr-settings.php:915
-#, fuzzy
+#: includes/class-gllr-settings.php:1065
 msgid "Counter"
-msgstr "Trvanie slideshow"
+msgstr "Počítadlo"
 
-#: includes/class-gllr-settings.php:918
-msgid ""
-"Enable to show likes counter for each social button (not available for "
-"Google +1)."
-msgstr ""
+#: includes/class-gllr-settings.php:1068
+msgid "Enable to show likes counter for each social button."
+msgstr "Povolenie zobrazenia počítadla lajkov pre každé sociálne tlačidlo."
 
-#: includes/class-gllr-settings.php:933
-#, fuzzy
+#: includes/class-gllr-settings.php:1086
 msgid "Demo Data"
-msgstr "Inštalovať %s"
+msgstr "Ukážkové údaje"
 
-#: includes/class-gllr-settings.php:935
+#: includes/class-gllr-settings.php:1088
 msgid ""
 "Install demo data to create galleries with images, post with shortcodes and "
 "page with a list of all galleries."
 msgstr ""
+"Nainštalujte demo údaje na vytvorenie galérií s obrázkami, príspevku so "
+"skratkami a stránky so zoznamom všetkých galérií."
 
-#: includes/class-gllr-settings.php:973
-#, fuzzy
+#: includes/class-gllr-settings.php:1092
+msgid "Export to CSV"
+msgstr "Exportovať do CSV"
+
+#: includes/class-gllr-settings.php:1095
+msgid "Export Now"
+msgstr "Exportovať teraz"
+
+#: includes/class-gllr-settings.php:1099
+msgid "Import from CSV"
+msgstr "Importovať z CSV súboru"
+
+#: includes/class-gllr-settings.php:1103
+msgid "Import Now"
+msgstr "Importovať teraz"
+
+#: includes/class-gllr-settings.php:1145
 msgid "Gallery Post Type"
-msgstr "Krátky kód galérie"
+msgstr "Typ príspevku v galérii"
 
-#: includes/class-gllr-settings.php:975
+#: includes/class-gllr-settings.php:1147
 msgid ""
 "Enable to avoid conflicts with other gallery plugins installed. All "
 "galleries created earlier will stay unchanged. However, after enabling we "
 "recommend to check settings of other plugins where \"gallery\" post type is "
 "used."
 msgstr ""
+"Povoľte, aby ste sa vyhli konfliktom s inými nainštalovanými zásuvnými "
+"modulmi galérie. Všetky predtým vytvorené galérie zostanú nezmenené. Po "
+"zapnutí však odporúčame skontrolovať nastavenia iných pluginov, v ktorých sa "
+"používa typ príspevku \"gallery\"."
 
-#: includes/class-gllr-settings.php:987
-#, fuzzy
+#: includes/class-gllr-settings.php:1159
 msgid "Gallery Slug"
-msgstr "Galéria"
+msgstr "Galéria Slug"
 
-#: includes/class-gllr-settings.php:991
+#: includes/class-gllr-settings.php:1163
 msgid "Enter the unique gallery slug."
-msgstr ""
+msgstr "Zadajte jedinečný slimák galérie."
 
-#: includes/class-gllr-settings.php:1007
-#, fuzzy
+#: includes/class-gllr-settings.php:1167
+msgid "ShortPixel Image Optimizer"
+msgstr "Optimalizátor obrázkov ShortPixel"
+
+#: includes/class-gllr-settings.php:1170
+msgid "Enable to apply ShortPixel optimizer to gallery images."
+msgstr "Umožňuje použiť optimalizátor ShortPixel na obrázky v galérii."
+
+#: includes/class-gllr-settings.php:1175
+msgid "API Key"
+msgstr "API klúč"
+
+#: includes/class-gllr-settings.php:1179
+#, php-format
+msgid "Input API Key. If you don't have an API Key, please  %s "
+msgstr "Vstupný kľúč API. Ak nemáte kľúč API, zadajte ho %s "
+
+#: includes/class-gllr-settings.php:1179
+msgid " sign up to get your API key"
+msgstr " zaregistrovať sa a získať kľúč API"
+
+#: includes/class-gllr-settings.php:1199
 msgid "Activate Now"
-msgstr "Plugin aktivovaný"
+msgstr "Aktivovať teraz"
 
-#: includes/class-gllr-settings.php:1025
+#: includes/class-gllr-settings.php:1219
 msgid "Enable to include galleries to your website search."
-msgstr ""
+msgstr "Umožňuje zahrnúť galérie do vyhľadávania na webových stránkach."
 
-#: includes/class-gllr-settings.php:1025
+#: includes/class-gllr-settings.php:1219
 #, php-format
 msgid "%s is required."
-msgstr ""
+msgstr "%s je povinné."
 
-#: includes/demo-data/class-bws-demo-data.php:33
-#, fuzzy
+#: includes/class-gllr-widgets.php:32
+msgid "A list or dropdown of Gallery categories."
+msgstr "Zoznam alebo rozbaľovací zoznam kategórií galérie."
+
+#: includes/class-gllr-widgets.php:81
+msgid "Select Gallery Category"
+msgstr "Vyberte kategóriu galérie"
+
+#: includes/class-gllr-widgets.php:148
+msgid "Title:"
+msgstr "Názov:"
+
+#: includes/class-gllr-widgets.php:151
+msgid "Display as dropdown"
+msgstr "Zobraziť ako rozbaľovací zoznam"
+
+#: includes/class-gllr-widgets.php:153
+msgid "Show gallery counts"
+msgstr "Zobraziť počty v galérii"
+
+#: includes/class-gllr-widgets.php:155
+msgid "Show hierarchy"
+msgstr "Zobraziť hierarchiu"
+
+#: includes/class-gllr-widgets.php:173
+msgid "Displays the latest galleries and a link to the Galleries page."
+msgstr "Zobrazuje najnovšie galérie a odkaz na stránku Galérie."
+
+#: includes/class-gllr-widgets.php:175
+msgid "Latest Galleries"
+msgstr "Najnovšie galérie"
+
+#: includes/class-gllr-widgets.php:263
+msgid "No galleries"
+msgstr "Žiadne galérie"
+
+#: includes/class-gllr-widgets.php:300
+msgid "View more"
+msgstr "Zobraziť viac"
+
+#: includes/class-gllr-widgets.php:316
+msgid "Button Text"
+msgstr "Text tlačítka"
+
+#: includes/class-gllr-widgets.php:324
+msgid "Link to the Galleries Page"
+msgstr "Odkaz na stránku galérií"
+
+#: includes/class-gllr-widgets.php:339
+msgid "Number of Galleries to Display"
+msgstr "Počet galérií na zobrazenie"
+
+#: includes/class-gllr-widgets.php:353
+msgid "Gallery Hover Color"
+msgstr "Farba zobrazenia galérie"
+
+#: includes/demo-data/class-bws-demo-data.php:48
 msgid "Install Demo Data"
-msgstr "Inštalovať %s"
+msgstr "Inštalácia vzorových údajov"
 
-#: includes/demo-data/class-bws-demo-data.php:36
+#: includes/demo-data/class-bws-demo-data.php:52
 msgid "Remove Demo Data"
-msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:37
-msgid "Delete demo data and restore old plugin settings."
-msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:50
-msgid "Yes, install demo data"
-msgstr ""
-
-#: includes/demo-data/class-bws-demo-data.php:51
-msgid "Are you sure you want to install demo data?"
-msgstr ""
+msgstr "Odstránenie ukážkových údajov"
 
 #: includes/demo-data/class-bws-demo-data.php:53
+msgid "Delete demo data and restore old plugin settings."
+msgstr ""
+"Odstránenie demo údajov a obnovenie starých nastavení zásuvného modulu."
+
+#: includes/demo-data/class-bws-demo-data.php:68
+#: includes/demo-data/class-bws-demo-data.php:648
+msgid "Yes, install demo data"
+msgstr "Áno, nainštalujte demo údaje"
+
+#: includes/demo-data/class-bws-demo-data.php:69
+msgid "Are you sure you want to install demo data?"
+msgstr "Ste si istí, že chcete nainštalovať demo údaje?"
+
+#: includes/demo-data/class-bws-demo-data.php:71
 msgid "Yes, remove demo data"
-msgstr ""
+msgstr "Áno, odstráňte demo údaje"
 
-#: includes/demo-data/class-bws-demo-data.php:54
+#: includes/demo-data/class-bws-demo-data.php:72
 msgid "Are you sure you want to remove demo data?"
-msgstr ""
+msgstr "Ste si istí, že chcete odstrániť demo údaje?"
 
-#: includes/demo-data/class-bws-demo-data.php:61
-#, fuzzy
+#: includes/demo-data/class-bws-demo-data.php:80
 msgid "No, go back to the settings page"
-msgstr "na strane nastavení ("
+msgstr "Nie, vráťte sa na stránku s nastaveniami"
 
-#: includes/demo-data/class-bws-demo-data.php:111
+#: includes/demo-data/class-bws-demo-data.php:135
 msgid "Can not get demo data."
-msgstr ""
+msgstr "Nie je možné získať demo údaje."
 
-#: includes/demo-data/class-bws-demo-data.php:118
+#: includes/demo-data/class-bws-demo-data.php:142
 msgid "Demo settings already installed."
-msgstr ""
+msgstr "Demo nastavenia sú už nainštalované."
 
-#: includes/demo-data/class-bws-demo-data.php:367
+#: includes/demo-data/class-bws-demo-data.php:403
 msgid "Demo data installed successfully."
-msgstr ""
+msgstr "Demo údaje boli úspešne nainštalované."
 
-#: includes/demo-data/class-bws-demo-data.php:369
+#: includes/demo-data/class-bws-demo-data.php:405
 msgid "View post with shortcodes"
-msgstr ""
+msgstr "Zobraziť príspevok so skratkami"
 
-#: includes/demo-data/class-bws-demo-data.php:372
+#: includes/demo-data/class-bws-demo-data.php:408
 msgid "View page with examples"
-msgstr ""
+msgstr "Zobraziť stránku s príkladmi"
 
-#: includes/demo-data/class-bws-demo-data.php:383
+#: includes/demo-data/class-bws-demo-data.php:421
 msgid "Installation of demo data with some errors occurred."
-msgstr ""
+msgstr "Došlo k inštalácii demo údajov s určitými chybami."
 
-#: includes/demo-data/class-bws-demo-data.php:386
+#: includes/demo-data/class-bws-demo-data.php:424
 msgid "Posts data is missing."
-msgstr ""
+msgstr "Chýbajú údaje o príspevkoch."
 
-#: includes/demo-data/class-bws-demo-data.php:458
+#: includes/demo-data/class-bws-demo-data.php:499
 msgid "Demo data have already been removed."
-msgstr ""
+msgstr "Ukážkové údaje už boli odstránené."
 
-#: includes/demo-data/class-bws-demo-data.php:515
+#: includes/demo-data/class-bws-demo-data.php:561
 msgid "Demo data successfully removed."
-msgstr ""
+msgstr "Ukážkové údaje boli úspešne odstránené."
 
-#: includes/demo-data/class-bws-demo-data.php:519
+#: includes/demo-data/class-bws-demo-data.php:565
 msgid "Removing demo data with some errors occurred."
-msgstr ""
+msgstr "Došlo k odstráneniu demo údajov s niektorými chybami."
 
-#: includes/demo-data/class-bws-demo-data.php:587
+#: includes/demo-data/class-bws-demo-data.php:637
 msgid "Close notice"
-msgstr ""
+msgstr "Záverečné oznámenie"
 
-#: includes/demo-data/class-bws-demo-data.php:593
+#: includes/demo-data/class-bws-demo-data.php:644
 #, php-format
-msgid ""
-"Do you want to install demo content and settings for %s? (You can do this "
-"later using Import / Export settings)"
-msgstr ""
+msgid "Do you want to install demo content and settings for %s now?"
+msgstr "Chcete teraz nainštalovať demo obsah a nastavenia pre %s?"
 
-#: includes/demo-data/class-bws-demo-data.php:595
 #, fuzzy
-msgid "Yes, install demo now"
-msgstr "Inštalovať %s"
+#~| msgid "Add gallery to the search"
+#~ msgid "Add Gallery to the Slider"
+#~ msgstr "Pridať galériu do hľadania"
+
+#, fuzzy
+#~ msgid "Under image"
+#~ msgstr "Nahrať obrázky"
+
+#, fuzzy
+#~ msgid "Yes, install demo now"
+#~ msgstr "Inštalovať %s"
 
 #, fuzzy
 #~ msgid "Sorting order (the input field for sorting order)"
@@ -1319,10 +1465,6 @@ msgstr "Inštalovať %s"
 #, fuzzy
 #~ msgid "Install %s"
 #~ msgstr "Inštalovať %s"
-
-#, fuzzy
-#~ msgid "Learn more"
-#~ msgstr "Viac"
 
 #, fuzzy
 #~ msgid "Enable social sharing buttons in the Lightbox."
@@ -1430,10 +1572,6 @@ msgstr "Inštalovať %s"
 #~ msgstr "DESC (zostupne)"
 
 #, fuzzy
-#~ msgid "Sort galleries"
-#~ msgstr "Galérie"
-
-#, fuzzy
 #~ msgid "by Title"
 #~ msgstr "Nadpis"
 
@@ -1504,9 +1642,9 @@ msgstr "Inštalovať %s"
 #~ "theme. Please copy them from the directory `%s` to the directory of your "
 #~ "theme for the correct work of the Gallery plugin"
 #~ msgstr ""
-#~ "Nasledujúci súbor \"gallery-template.php\" a \"gallery-single-template.php"
-#~ "\" nebol nájdený v priečinku vo vašej téme. Prosím skopírujte ich z `/wp-"
-#~ "content/plugins/gallery-plugin/template/` do priečinku vašej témy pre "
+#~ "Nasledujúci súbor \"gallery-template.php\" a \"gallery-single-template."
+#~ "php\" nebol nájdený v priečinku vo vašej téme. Prosím skopírujte ich z `/"
+#~ "wp-content/plugins/gallery-plugin/template/` do priečinku vašej témy pre "
 #~ "správnu prácu pluginu Galérie."
 
 #~ msgid "Select a background color"
@@ -1581,9 +1719,6 @@ msgstr "Inštalovať %s"
 
 #~ msgid "Please make a choice"
 #~ msgstr "Prosím vyberte si"
-
-#~ msgid "sort images"
-#~ msgstr "zoradené obrázky"
 
 #~ msgid "on the plugin settings page ("
 #~ msgstr "na strane nastavení ("
