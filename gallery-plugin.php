@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your WordPress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.7.3
+Version: 4.7.5
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
  */
@@ -270,7 +270,7 @@ if ( ! function_exists( 'export_gallery_to_csv' ) ) {
 						$images_shortpixel[] = isset( $image_postmeta['gallery_images_shortpixel'] ) ? $image_postmeta['gallery_images_shortpixel'][0] : '';
 					}
 				}
-				$export_str .= $wpdb->prepare( '%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;' . PHP_EOL, $title, $content, maybe_serialize( $categories ), $featured_image, maybe_serialize( $images_url ), maybe_serialize( $images_title ), maybe_serialize( $images_alt ), maybe_serialize( $images_text ), maybe_serialize( $images_order ), maybe_serialize( $images_shortpixel ) );
+				$export_str .= $wpdb->prepare( '%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;' . PHP_EOL, $title, $content, json_encode( $categories ), $featured_image, json_encode( $images_url ), json_encode( $images_title ), json_encode( $images_alt ), json_encode( $images_text ), json_encode( $images_order ), json_encode( $images_shortpixel ) );
 			}
 		}
 
@@ -304,75 +304,151 @@ if ( ! function_exists( 'import_gallery_from_csv' ) ) {
 		WP_Filesystem();
 
 		$upload_dir = wp_upload_dir();
-		$file_name = $_FILES['gllr_csv_file']['tmp_name'];
-
-		$csv_as_array = $wp_filesystem->get_contents( $file_name );
-		$csv_as_array = explode( PHP_EOL, $csv_as_array );
-		foreach( $csv_as_array as $key => $value ) {
-			$csv_as_array[ $key ] = explode( "';'", trim( $value, "';" ) );
+		if ( empty( $_FILES['gllr_csv_file']['tmp_name'] ) ) {
+			$gllr_upload_errors = __( 'Select a file to import data', 'gallery-plugin' );
+			return;
 		}
-		unset( $csv_as_array[0] );
-		foreach( $csv_as_array as $csv_string ) {
-			if ( empty( $csv_string[0] ) ) {
-				continue;
+		$file_tmp_name = sanitize_text_field( wp_unslash( $_FILES['gllr_csv_file']['tmp_name'] ) );
+		$file_name     = sanitize_text_field( wp_unslash( $_FILES['gllr_csv_file']['name'] ) );
+		$file_type     = sanitize_text_field( wp_unslash( $_FILES['gllr_csv_file']['type'] ) );
+
+		$validate_file_type = wp_check_filetype( $file_name, array( 'csv' => 'text/csv' ) );
+
+		if ( false === $validate_file_type['type'] || false === $validate_file_type['ext'] ) {
+			$gllr_upload_errors = __( 'File type is not allowed, you can only upload a csv file.', 'gallery-plugin' ) . '<br />';
+		} else {
+			$csv_as_array = $wp_filesystem->get_contents( $file_tmp_name );
+			$csv_as_array = explode( PHP_EOL, $csv_as_array );
+			foreach( $csv_as_array as $key => $value ) {
+				$csv_as_array[ $key ] = explode( "';'", trim( $value, "';" ) );
 			}
-			$post = array(
-				'comment_status'  => 'closed',
-				'ping_status'     => 'closed',
-				'post_status'     => 'publish',
-				'post_type'       => 'bws-gallery',
-				'post_title'      => $csv_string[0],
-				'post_content'    => $csv_string[1],
-			);
-			$post_id = wp_insert_post( $post );
-			$gallery_terms = array();
-			$categories    = maybe_unserialize( stripslashes_deep( $csv_string[2] ) );
-			if ( ! empty( $categories ) ) {
-				foreach( $categories as $term ) {
-					$term_exists = term_exists( $term[0], 'gallery_categories' );
-					if ( ! $term_exists ) {
-						$term_id = wp_insert_term(
-							$term[0],
-							'gallery_categories',
-							array(
-								'description' => $term[2],
-								'slug'        => $term[1],
-								'parent'      => $term[3],
-							)
-						);
-						$term_exists['term_id'] = $term_id;
-					}
-					$album_order = get_term_meta( absint( $term_exists['term_id'] ), 'gllr_album_order', true );
-					if ( empty( $album_order ) ) {
-						update_term_meta( absint( $term_exists['term_id'] ), 'gllr_album_order', sanitize_text_field( wp_unslash( $term[4] ) ) );
-					}
-					$gallery_terms[] = $term[1];
+			if ( isset( $csv_as_array[0] ) && isset( $csv_as_array[0][0] ) && 'Gallery Title' != $csv_as_array[0][0] ) {
+				$gllr_upload_errors = __( 'An invalid file was uploaded to import gallery data.', 'gallery-plugin' );
+				return;
+			}
+			unset( $csv_as_array[0] );
+			foreach( $csv_as_array as $csv_string ) {
+				if ( empty( $csv_string[0] ) ) {
+					continue;
 				}
-			}
-			wp_set_object_terms( $post_id, $gallery_terms, 'gallery_categories' );
-			$featured_image = stripslashes_deep( $csv_string[3] );
+				$post = array(
+					'comment_status'  => 'closed',
+					'ping_status'     => 'closed',
+					'post_status'     => 'publish',
+					'post_type'       => 'bws-gallery',
+					'post_title'      => $csv_string[0],
+					'post_content'    => $csv_string[1],
+				);
+				$post_id = wp_insert_post( $post );
+				$gallery_terms = array();
+				$categories    = json_decode( stripslashes_deep( $csv_string[2] ) );
+				if ( ! empty( $categories ) ) {
+					foreach( $categories as $term ) {
+						$term_exists = term_exists( $term[0], 'gallery_categories' );
+						if ( ! $term_exists ) {
+							$term_id = wp_insert_term(
+								$term[0],
+								'gallery_categories',
+								array(
+									'description' => $term[2],
+									'slug'        => $term[1],
+									'parent'      => $term[3],
+								)
+							);
+							$term_exists['term_id'] = $term_id;
+						}
+						$album_order = get_term_meta( absint( $term_exists['term_id'] ), 'gllr_album_order', true );
+						if ( empty( $album_order ) ) {
+							update_term_meta( absint( $term_exists['term_id'] ), 'gllr_album_order', sanitize_text_field( wp_unslash( $term[4] ) ) );
+						}
+						$gallery_terms[] = $term[1];
+					}
+				}
+				wp_set_object_terms( $post_id, $gallery_terms, 'gallery_categories' );
+				$featured_image = stripslashes_deep( $csv_string[3] );
 
-			$images_url   = maybe_unserialize( stripslashes_deep( $csv_string[4] ) );
-			$images_title = maybe_unserialize( stripslashes_deep( $csv_string[5] ) );
-			$images_alt   = maybe_unserialize( stripslashes_deep( $csv_string[6] ) );
-			$images_text  = maybe_unserialize( stripslashes_deep( $csv_string[7] ) );
-			$images_order = maybe_unserialize( stripslashes_deep( $csv_string[8] ) );
-			$images_shortpixel = maybe_unserialize( stripslashes_deep( $csv_string[9] ) );
+				$images_url   = json_decode( stripslashes_deep( $csv_string[4] ) );
+				$images_title = json_decode( stripslashes_deep( $csv_string[5] ) );
+				$images_alt   = json_decode( stripslashes_deep( $csv_string[6] ) );
+				$images_text  = json_decode( stripslashes_deep( $csv_string[7] ) );
+				$images_order = json_decode( stripslashes_deep( $csv_string[8] ) );
+				$images_shortpixel = json_decode( stripslashes_deep( $csv_string[9] ) );
 
-			$attach_images = array();
+				if ( empty( $images_url ) ) {
+					$gllr_upload_errors = __( 'Import completed successfully. It is possible that a file created in a previous version of the plugin was imported and the gallery image data will not be fully loaded.', 'gallery-plugin' );
+				}
 
-			if ( ! empty( $images_url ) ) {
-				$wp_upload_dir = wp_upload_dir();
-				require_once ABSPATH . 'wp-admin/includes/image.php';
-				foreach( $images_url as $key => $image ) {
+				$attach_images = array();
+
+				if ( ! empty( $images_url ) ) {
+					$wp_upload_dir = wp_upload_dir();
+					require_once ABSPATH . 'wp-admin/includes/image.php';
+					foreach( $images_url as $key => $image ) {
+						$http     = new WP_Http();
+						$response = $http->request( $image );
+						if ( is_wp_error( $response ) || ! isset( $response['response']['code'] ) || 200 !== $response['response']['code'] ) {
+							$gllr_upload_errors = esc_html__( 'Errors occurred when uploading images, not all images were uploaded to the galleries', 'gallery-plugin' );
+							continue;
+						}
+
+						$upload = wp_upload_bits( basename( $image ), null, $response['body'] );
+						if ( ! empty( $upload['error'] ) ) {
+							$gllr_upload_errors = esc_html__( 'Errors occurred when uploading images, not all images were uploaded to the galleries', 'gallery-plugin' );
+							continue;
+						}
+
+						$file_path        = $upload['file'];
+						$file_name        = basename( $file_path );
+						$file_type        = wp_check_filetype( $file_name, null );
+						$attachment_title = sanitize_file_name( pathinfo( $file_name, PATHINFO_FILENAME ) );
+
+						$post_info = array(
+							'guid'           => $wp_upload_dir['url'] . '/' . $file_name,
+							'post_mime_type' => $file_type['type'],
+							'post_title'     => $images_title[ $key ],
+							'post_content'   => '',
+							'post_status'    => 'inherit',
+							'post_parent'    => $post_id
+						);
+
+						$attach_id   = wp_insert_attachment( $post_info, $file_path );
+						$attach_data = wp_generate_attachment_metadata( $attach_id, $file_path );
+						
+						$attach_images[] = $attach_id;
+
+						wp_update_attachment_metadata( $attach_id, $attach_data );
+
+						if ( ! empty( $featured_image ) && $image === $featured_image ) {
+							set_post_thumbnail( $post_id, $attach_id );
+							$featured_image = '';
+						}
+						
+						add_post_meta( $attach_id, '_gallery_order_' . $post_id, $images_order[ $key ] );
+						if ( ! empty( $images_alt[ $key ] ) ) {
+							add_post_meta( $attach_id, 'gllr_image_alt_tag', $images_alt[ $key ] );
+						}					
+						if ( ! empty( $images_text[ $key ] ) ) {
+							add_post_meta( $attach_id, 'gllr_image_text', $images_text[ $key ] );
+						}					
+						if ( ! empty( $images_shortpixel[ $key ] ) ) {
+							add_post_meta( $attach_id, 'gallery_images_shortpixel', $images_shortpixel[ $key ] );
+						}
+					}
+				}
+
+				if ( ! empty( $attach_images ) ) {
+					add_post_meta( $post_id, '_gallery_images', implode( ',', $attach_images ) );
+				}
+
+				if ( ! empty( $featured_image ) ) {
 					$http     = new WP_Http();
-					$response = $http->request( $image );
+					$response = $http->request( $featured_image );
 					if ( 200 !== $response['response']['code'] ) {
 						$gllr_upload_errors = esc_html__( 'Errors occurred when uploading images, not all images were uploaded to the galleries', 'gallery-plugin' );
 						continue;
 					}
 
-					$upload = wp_upload_bits( basename( $image ), null, $response['body'] );
+					$upload = wp_upload_bits( basename( $featured_image ), null, $response['body'] );
 					if ( ! empty( $upload['error'] ) ) {
 						$gllr_upload_errors = esc_html__( 'Errors occurred when uploading images, not all images were uploaded to the galleries', 'gallery-plugin' );
 						continue;
@@ -394,68 +470,12 @@ if ( ! function_exists( 'import_gallery_from_csv' ) ) {
 
 					$attach_id   = wp_insert_attachment( $post_info, $file_path );
 					$attach_data = wp_generate_attachment_metadata( $attach_id, $file_path );
-					
-					$attach_images[] = $attach_id;
 
 					wp_update_attachment_metadata( $attach_id, $attach_data );
 
-					if ( ! empty( $featured_image ) && $image === $featured_image ) {
-						set_post_thumbnail( $post_id, $attach_id );
-						$featured_image = '';
-					}
-					
-					add_post_meta( $attach_id, '_gallery_order_' . $post_id, $images_order[ $key ] );
-					if ( ! empty( $images_alt[ $key ] ) ) {
-						add_post_meta( $attach_id, 'gllr_image_alt_tag', $images_alt[ $key ] );
-					}					
-					if ( ! empty( $images_text[ $key ] ) ) {
-						add_post_meta( $attach_id, 'gllr_image_text', $images_text[ $key ] );
-					}					
-					if ( ! empty( $images_shortpixel[ $key ] ) ) {
-						add_post_meta( $attach_id, 'gallery_images_shortpixel', $images_shortpixel[ $key ] );
-					}
+					set_post_thumbnail( $post_id, $attach_id );
+					$featured_image = '';
 				}
-			}
-
-			if ( ! empty( $attach_images ) ) {
-				add_post_meta( $post_id, '_gallery_images', implode( ',', $attach_images ) );
-			}
-
-			if ( ! empty( $featured_image ) ) {
-				$http     = new WP_Http();
-				$response = $http->request( $featured_image );
-				if ( 200 !== $response['response']['code'] ) {
-					$gllr_upload_errors = esc_html__( 'Errors occurred when uploading images, not all images were uploaded to the galleries', 'gallery-plugin' );
-					continue;
-				}
-
-				$upload = wp_upload_bits( basename( $featured_image ), null, $response['body'] );
-				if ( ! empty( $upload['error'] ) ) {
-					$gllr_upload_errors = esc_html__( 'Errors occurred when uploading images, not all images were uploaded to the galleries', 'gallery-plugin' );
-					continue;
-				}
-
-				$file_path        = $upload['file'];
-				$file_name        = basename( $file_path );
-				$file_type        = wp_check_filetype( $file_name, null );
-				$attachment_title = sanitize_file_name( pathinfo( $file_name, PATHINFO_FILENAME ) );
-
-				$post_info = array(
-					'guid'           => $wp_upload_dir['url'] . '/' . $file_name,
-					'post_mime_type' => $file_type['type'],
-					'post_title'     => $images_title[ $key ],
-					'post_content'   => '',
-					'post_status'    => 'inherit',
-					'post_parent'    => $post_id
-				);
-
-				$attach_id   = wp_insert_attachment( $post_info, $file_path );
-				$attach_data = wp_generate_attachment_metadata( $attach_id, $file_path );
-
-				wp_update_attachment_metadata( $attach_id, $attach_data );
-
-				set_post_thumbnail( $post_id, $attach_id );
-				$featured_image = '';
 			}
 		}
 	}

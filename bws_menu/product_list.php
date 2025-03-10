@@ -214,14 +214,14 @@ $bws_plugins = array(
 		'link'        => 'https://bestwebsoft.com/products/wordpress/plugins/google-shortlink/?k=afcf3eaed021bbbbeea1090e16bc22db&pn=' . $bws_plugin_info['id'] . '&v=' . $bws_plugin_info['version'] . '&wp_v=' . $wp_version,
 		'settings'    => 'admin.php?page=gglshrtlnk_options',
 	),
-	'gpt-ai-content-creator/gpt-ai-content-creator.php' => array(
+	'gpt-ai-content-creator-by-bestwebsoft/gpt-ai-content-creator-by-bestwebsoft.php' => array(
 		'category'     => array( 'content', 'recommended' ),
 		'name'         => 'GPT AI Content Creator',
 		'description'  => __( 'Create Content with GPT.', 'bestwebsoft' ),
 		'link'         => 'https://bestwebsoft.com/products/wordpress/plugins/gpt-ai-content-creator/?k=f1ef1b7d7d05f93c570b940cc9acfe15&pn=' . $bws_plugin_info['id'] . '&v=' . $bws_plugin_info['version'] . '&wp_v=' . $wp_version,
 		'settings'     => 'admin.php?page=gpt-ai-content-creator.php',
 		'icon'         => bws_menu_url( 'icons/plugins/' ) . 'gpt-ai-content-creator.png',
-		'pro_version'  => 'gpt-ai-content-creator-pro/gpt-ai-content-creator-pro.php',
+		'pro_version'  => 'gpt-ai-content-creator-pro-by-bestwebsoft/gpt-ai-content-creator-pro-by-bestwebsoft.php',
 		'purchase'     => 'https://bestwebsoft.com/products/wordpress/plugins/gpt-ai-content-creator/buy/?k=8b19619d4a36f8b42c5d4fbcbd9775bb&pn=' . $bws_plugin_info['id'] . '&v=' . $bws_plugin_info['version'] . '&wp_v=' . $wp_version,
 		'pro_settings' => 'admin.php?page=gpt-ai-content-creator-pro.php',
 	),

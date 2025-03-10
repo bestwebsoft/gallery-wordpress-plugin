@@ -1100,7 +1100,9 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 					<td>
 						<?php wp_nonce_field( 'gllr_import', 'gllr_import_nonce' ); ?>
 						<input type="file" name="gllr_csv_file">
-						<input type="submit" name="gllr_import_submit" class="button-secondary" value="<?php esc_html_e( 'Import Now', 'gallery-plugin' ); ?>" />
+						<input type="submit" name="gllr_import_submit" class="button-secondary" value="<?php esc_html_e( 'Import Now', 'gallery-plugin' ); ?>" /> <br />
+						<span class="bws_info"><?php esc_html_e( 'Note: Starting from Gallery version 4.7.4, the data conversion method for export and import has been changed.', 'gallery-plugin' ); ?></span><br />
+						<span class="bws_info"><?php esc_html_e( 'You can still import a file created with an earlier version, but the gallery image data will not be fully loaded.', 'gallery-plugin' ); ?></span>
 					</td>
 				</tr>
 			</table>

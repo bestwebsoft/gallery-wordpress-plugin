@@ -1394,7 +1394,7 @@ if ( ! function_exists( 'bws_submit_request_feature_action' ) ) {
 
 		if ( isset( $_REQUEST['bws_ajax_nonce'] ) ) {
 
-			wp_verify_nonce( sanitize_text_field( wp_unslash( $_REQUEST['bws_ajax_nonce'] ) ), 'bws_ajax_nonce' );
+			check_ajax_referer( 'bws_ajax_nonce', sanitize_text_field( wp_unslash( $_REQUEST['bws_ajax_nonce'] ) ) );
 
 			$basename = isset( $_REQUEST['plugin'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['plugin'] ) ) : '';
 			$info     = isset( $_REQUEST['info'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['info'] ) ) : '';
