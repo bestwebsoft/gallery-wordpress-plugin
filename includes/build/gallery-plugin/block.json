@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "gallery-plugin/gallery-plugin",
+  "version": "0.1.0",
+  "title": "Gallery by BestWebSoft",
+  "category": "widgets",
+  "description": "Add beautiful galleries, albums & images to your WordPress website in few clicks.",
+  "example": {},
+  "keywords": [
+    "gallery"
+  ],
+  "attributes": {
+    "galleryID": {
+      "type": "number"
+    },
+    "display": {
+      "type": "string"
+    },
+    "displayMode": {
+      "type": "boolean"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "gallery-plugin",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

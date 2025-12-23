@@ -2,226 +2,215 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add album, add galleries, add images, add pictures, add albums, gallery, gallery plugin, gallery slider, fancy gallery, slideshow, lightbox, fullscreen gallery
-Requires at least: 5.6
-Tested up to: 6.7
-Stable tag: 4.7.5
+Requires at least: 6.2
+Tested up to: 6.9
+Stable tag: 4.7.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add beautiful galleries, albums, images and categories to your WordPress website just in a few clicks.
+Add beautiful, fully responsive galleries, albums, images, and categories to your WordPress website quickly and easily. Showcase your portfolio, photos, or product images with customizable galleries that engage visitors and enhance your site’s appearance.
 
-== Description ==
+== Description == 
 
-The best responsive gallery plugin for your WordPress website which will help you to create amazing galleries in a few clicks. Add an unlimited number of images to your gallery, create albums and categories, add comments, change appearance and much more.
+Gallery by BestWebSoft is the best responsive gallery plugin for WordPress, designed to help you create unlimited image galleries with albums and categories in just a few clicks. Customize your gallery’s appearance, add comments, and organize images effortlessly.
 
-Showcase portfolio or just to show off useful images easily with gallery plugin to power up communication with your visitors, spark up your brand, and increase sales!
+Perfect for photographers, artists, bloggers, and businesses who want to present their images professionally, boost engagement, and improve user experience.
 
-[View Demo](https://bestwebsoft.com/demo-for-gallery-pro/?ref=readme)
+Key benefits:
+* Fully responsive galleries that look great on any device
+* Unlimited albums, images, and categories
+* Multiple sorting and layout options
+* Easy-to-use interface with no coding required
+* Supports all popular image formats and WordPress media library
+* Multilingual and RTL ready
+* Detailed documentation and tutorial videos available
 
-https://www.youtube.com/watch?v=aydaTdOpaRM
+Experience the power and flexibility of Gallery by BestWebSoft today!
+
+[View Demo](https://bestwebsoft.com/demo-for-gallery-pro/?ref=readme)  
+YouTube tutorial: https://www.youtube.com/watch?v=aydaTdOpaRM
 
 = Free Features =
 
-* Fully Responsive
+* Fully Responsive Design for all devices
 * Add unlimited number of:
-	* Albums to gallery
-	* Images to album
-	* Gallery categories
-* Add and configure latest galleries widget:
-    * Title
-    * Button Text
-    * Link
-    * Number of Galleries
-    * Hover Color
-* Add Gallery to the [Slider](https://bestwebsoft.com/products/wordpress/plugins/slider/)
-* Choose albums layout:
-	* Column
-	* Rows
-* Change image for album cover and its dimensions
-* Disable image opening from the thumbnail in a single gallery
-* Set default sorting order for images by:
-	* Attachment ID
-	* Image Name
-	* Date
-	* Sorting order in the Gallery
-	* Random
-	* ASC (ascending order from lowest to highest values)
-	* DESC (descending order from highest to lowest values)
-* Set default gallery projects sorting order by:
-	* Gallery ID
-	* Title
-	* Date
-	* Last modified date
-	* Comment count
-	* Sorting order
-	* Author
-	* Random
-	* ASC (ascending order from lowest to highest values)
-	* DESC (descending order from highest to lowest values)
-* Sort galleries in a category
-* Add gallery categories widget and select the additional info:
-	* Display as dropdown
-	* Show galleries count
-	* Show hierarchy
-* Install/delete demo data
-* Slideshow and full-size image displaying
-* Change border width and color
-* Add:
-	* Any image file format
-	* Comments to galleries
-	* Images from WordPress media library
-	* Descriptions to each album
-* Add custom code via plugin settings page
-* Compatible with latest WordPress version
-* Incredibly simple settings for fast setup without modifying code
-* Detailed step-by-step documentation and videos
-* Multilingual and RTL ready
+  * Albums to galleries
+  * Images to albums
+  * Gallery categories
+* Latest galleries widget with customizable:
+  * Title
+  * Button text and link
+  * Number of galleries displayed
+  * Hover color effect
+* Integration with [Slider Plugin](https://bestwebsoft.com/products/wordpress/plugins/slider/)
+* Choose album layouts:
+  * Columns
+  * Rows
+* Customize album cover image and dimensions
+* Disable image opening from thumbnail in single gallery view
+* Default sorting options for images by:
+  * Attachment ID, Image Name, Date, Gallery order, Random
+  * Ascending (ASC) or Descending (DESC) order
+* Sorting options for galleries by:
+  * Gallery ID, Title, Date, Last modified date, Comment count, Author, Random, ASC, DESC
+* Sort galleries within categories
+* Gallery categories widget with options:
+  * Display as dropdown
+  * Show galleries count
+  * Show hierarchy
+* Demo data installation and deletion
+* Slideshow with full-size image display
+* Customize border width and color
+* Support for any image file format
+* Add comments to galleries
+* Use images from WordPress media library
+* Add descriptions for each album
+* Insert custom code via plugin settings page
+* Compatible with latest WordPress versions
+* Simple and fast setup without coding
+* Step-by-step documentation and tutorial videos
+* Multilingual and RTL support
 
 > **Pro Features**
 >
-> All features from Free version included plus:
+> All free features included plus:
 >
-> * Change gallery layout:
-> 	* Grid (default)
-> 	* Masonry
+> * Additional gallery layouts:
+>   * Grid (default)
+>   * Masonry
 > * Display image text:
-> 	* Under image
-> 	* By mouse hover
-> * Set:
-> 	* Lightbox image size
-> 	* Background color and the lightbox transparency
-> 	* Gallery item slug
-> * Image crop position
-> 	* Horizontal
-> 	* Vertical
-> * Add and display Like buttons:
-> 	* Facebook
-> 	* Twitter
-> 	* Pinterest
-> * Enable lightbox helper:
-> 	* Button
-> 	* Thumbnail
-> * Optimize images [NEW]
-> * Select 'self'/'blank' for external URLs
-> * Add lightbox image description
-> * Add a button with URL to the lightbox
-> * Single gallery pagination
-> * Configure every gallery or apply global settings
-> * Configure all subsites on the network
-> * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
+>   * Under images
+>   * On mouse hover
+> * Configure lightbox:
+>   * Image size
+>   * Background color and transparency
+>   * Gallery item slug customization
+> * Image crop position control:
+>   * Horizontal and vertical alignment
+> * Social Like buttons integration:
+>   * Facebook, Twitter, Pinterest
+> * Lightbox helper options:
+>   * Buttons and thumbnails
+> * Enable watermark for gallery image:
+>   * Text
+>   * Image
+> * Image optimization [NEW]
+> * Select target attribute (self/blank) for external URLs
+> * Add descriptions and buttons with URLs inside lightbox
+> * Single gallery pagination support
+> * Configure galleries individually or globally
+> * Network multisite support and configuration
+> * Priority support with response within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
 > [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/gallery/?k=57ad5c0c7fe312e2a45ef9a76f47334c)
 
-If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
+Have ideas or feature requests? Let us know! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
 
 = Documentation & Videos =
 
- * [[Doc] User Guide](https://bestwebsoft.com/documentation/gallery/gallery-user-guide/)
- * [[Doc] How to Receive Trial License](https://bestwebsoft.com/documentation/gallery/how-to-receive-and-activate-gallery-pro-trial-license/)
- * [[Doc] Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
- * [[Doc] Purchase](https://bestwebsoft.com/documentation/how-to-purchase-a-wordpress-plugin/how-to-purchase-wordpress-plugin-from-bestwebsoft/)
- * [[Video] How to Add](https://www.youtube.com/watch?v=-P9o6-APlv0)
- * [[Video] Installation Instruction](https://www.youtube.com/watch?v=3u-Ov-HxZ7U)
- * [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=KAbiac-iORw)
+* [[Doc] User Guide](https://bestwebsoft.com/documentation/gallery/gallery-user-guide/)
+* [[Doc] How to Receive Trial License](https://bestwebsoft.com/documentation/gallery/how-to-receive-and-activate-gallery-pro-trial-license/)
+* [[Doc] Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
+* [[Doc] Purchase](https://bestwebsoft.com/documentation/how-to-purchase-a-wordpress-plugin/how-to-purchase-wordpress-plugin-from-bestwebsoft/)
+* [[Video] How to Add](https://www.youtube.com/watch?v=-P9o6-APlv0)
+* [[Video] Installation Instruction](https://www.youtube.com/watch?v=3u-Ov-HxZ7U)
+* [[Video] Purchase, Installation, Configuration Tutorial](https://www.youtube.com/watch?v=KAbiac-iORw)
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <https://support.bestwebsoft.com/>
+For questions or assistance, visit our Help Center: <https://support.bestwebsoft.com/>
 
 = Affiliate Program =
 
-Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — [https://bestwebsoft.com/affiliate/](https://bestwebsoft.com/affiliate/?utm_source=plugin&utm_medium=readme&utm_campaign=affiliate_program)
+Earn 20% commission by promoting BestWebSoft premium WordPress plugins and themes — [https://bestwebsoft.com/affiliate/](https://bestwebsoft.com/affiliate/?utm_source=plugin&utm_medium=readme&utm_campaign=affiliate_program)
 
 = Translation =
 
 * Brazilian Portuguese (pt_BR) (thanks to DJIO, www.djio.com.br)
 * Bulgarian (bg_BG) (thanks to Petya)
-* Chinese (zh_CN) (thanks to [Xiaobo Chen](mailto:mibcxb@gmail.com))
-* Czech (cs_CZ) (thanks to [Michal Kučera](mailto:kucerami@gmail.com) www.n0lim.it)
-* Dutch (nl_NL) (thanks to [J Goessens](mailto:j.goessens@gmail.com))
-* French (fr_FR) (thanks to Didier, [L Capronnier](mailto:lcapronnier@yahoo.com))
-* German (de_DE) (thanks to Thomas Bludau, [Jonas Seemann](mailto:info@ahoidesign.de))
-* Indonesian (id_ID) (thanks to [Jordan Silaen](mailto:jordan.silaen@chameleonjohn.com) www.chameleonjohn.com)
+* Chinese (zh_CN) (thanks to Xiaobo Chen)
+* Czech (cs_CZ) (thanks to Michal Kučera, www.n0lim.it)
+* Dutch (nl_NL) (thanks to J Goessens)
+* French (fr_FR) (thanks to Didier, L Capronnier)
+* German (de_DE) (thanks to Thomas Bludau, Jonas Seemann)
+* Indonesian (id_ID) (thanks to Jordan Silaen, www.chameleonjohn.com)
 * Russian (ru_RU)
-* Serbian (sr_RS) (thanks to [Andrijana Nikolic](mailto:andrijanan@webhostinggeeks.com) www.webhostinggeeks.com )
-* Slovak (sk_SK) (thanks to [Michal Kralik](mailto:ja@michalkralik.sk))
-* Slovenian (sl_SI) (thanks to [Tilen](mailto:tilen@divided.si))
-* Spanish (es_ES) (thanks to [Carlos Limia](mailto:climia@climia.es))
-* Turkish (tr) (thanks to [Ismail Demirbilek](mailto:ce.demirbilek@gmail.com))
+* Serbian (sr_RS) (thanks to Andrijana Nikolic, www.webhostinggeeks.com)
+* Slovak (sk_SK) (thanks to Michal Kralik)
+* Slovenian (sl_SI) (thanks to Tilen)
+* Spanish (es_ES) (thanks to Carlos Limia)
+* Turkish (tr) (thanks to Ismail Demirbilek)
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](https://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](https://www.poedit.net/download.php).
+If you want to contribute or update a translation, send PO and MO files to [BestWebSoft Support](https://support.bestwebsoft.com/hc/en-us/requests/new).  
+Use [Poedit](https://www.poedit.net/download.php) to work with translation files.
 
 = Recommended Plugins =
 
-* [Custom Search](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743) - Add custom post types to WordPress website search results.
-* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a) - Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
+* [Custom Search](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=b673f73379683aba054e98fab3bf7743) – Enhance WordPress search by adding custom post types
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=6ed3f1f40908b8eb7248953196a4753a) – Auto-update WordPress core, plugins, and themes
 
 == Installation ==
 
-1. Upload the `gallery-plugin` folder to the directory `/wp-content/plugins/`.
-2. Activate the plugin using the 'Plugins' menu in WordPress.
-3. Click 'Add New' in the 'Galleries' menu and fill out your page.
-4. You can adjust the necessary settings using your WordPress admin panel in "Gallery" > "Global Settings".
+1. Upload the `gallery-plugin` folder to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Click 'Add New' in the 'Galleries' menu and create your gallery page.
+4. Adjust global settings in WordPress admin panel under "Gallery" > "Global Settings".
 
 == Frequently Asked Questions ==
 
-= How to use the plugin? =
+= How do I use the plugin? =
 
-1. Click 'Add New' in the 'Galleries' menu and fill out your page.
-2. Add or Upload pictures via 'Add Media' button.
-3. Save the page.
+1. Go to 'Galleries' > 'Add New' in WordPress admin.
+2. Add or upload images via the 'Add Media' button.
+3. Save your gallery.
 
-[View a Step-by-step Instruction "How to Use"](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
+See detailed instructions here: [How to Use Gallery Plugin](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
 
-= How to change or override plugin templates? =
+= How to override plugin templates safely? =
 
-Plugin template files can be found in the `/wp-content/plugins/gallery-plugin/templates/` directory.
-You can edit these files in an upgrade-safe way using overrides. Copy them into a directory with your theme named `/bws-templates`.
+Template files are located in `/wp-content/plugins/gallery-plugin/templates/`.  
+To customize without losing changes during updates, copy templates to your theme folder:  
+`/wp-content/themes/your-theme/bws-templates/`
 
-Example: To override the single gallery template, please copy `/wp-content/plugins/gallery-plugin/templates/gallery-single-template.php` to `wp-content/themes/your-theme/bws-templates/gallery-single-template.php`.
+Example:  
+Copy `/wp-content/plugins/gallery-plugin/templates/gallery-single-template.php` to  
+`/wp-content/themes/your-theme/bws-templates/gallery-single-template.php`
 
-Do not edit these files in the plugin's core directly as they are overwritten during the upgrade process and any customizations will be lost.
+Do NOT edit plugin core files directly.
 
-= I'm getting the following error: "Fatal error: Call to undefined function get_post_thumbnail_id()". What should I do? =
+= I'm getting "Fatal error: Call to undefined function get_post_thumbnail_id()" - what to do? =
 
-This error means that your theme doesn't support thumbnail option, in order to add this option please find the file 'functions.php' in your theme and add the following strings to this file:
+Your theme likely lacks thumbnail support. Add this to your theme’s `functions.php` file:
 
-`add_action( 'after_setup_theme', 'theme_setup' );
-
+add_action( 'after_setup_theme', 'theme_setup' );
 function theme_setup() {
-    add_theme_support( 'post-thumbnails' );
-}`
+add_theme_support( 'post-thumbnails' );
+}
 
-After that your theme will support thumbnail option and the error will disappear.
 
-= How to change image order on the single gallery page? =
+This will enable thumbnails and fix the error.
 
-Please open the menu "Galleries" and choose a gallery from the list. It will take you to the gallery editing page. Use the drag and drop function to change the order of the images and do not forget to save the post. Do not forget to select `Sort images by` -> `Sorting order in the Gallery` in the plugin settings.
+= How to change image order in a single gallery? =
 
-= I am using WP with rtl language and I have a problem with the lightbox displaying on iPad/iPhone. =
+In the WordPress admin menu, go to "Galleries", select your gallery, and reorder images via drag-and-drop.  
+Make sure the plugin setting `Sort images by` is set to `Sorting order in the Gallery`.
 
-1. In the file header.php you should substitute `<html <?php language_attributes(); ?>>` with `<html>`
-2. Remove the "direction:rtl" from the css of the body, and move it to the main wrapper. For example, in your theme CSS file (usually it's rtl.css) remove the following lines:
+= Problems with RTL languages and lightbox on iPad/iPhone? =
 
-`body {
-    direction:rtl;
-}`
+1. Replace `<html <?php language_attributes(); ?>>` with `<html>` in your `header.php`.
+2. Remove `direction: rtl;` from `body` CSS and apply it to the main wrapper element instead.
 
-and add (for the themes Twenty Eleven or Twenty Ten):
-
-`.hfeed {
+Example for Twenty Eleven or Twenty Ten themes:  
+```css
+body {
+    /* remove this */
+    /* direction: rtl; */
+}
+.hfeed {
     direction: rtl;
-}`
+}
 
-= I have some problems with the plugin's work. What Information should I provide to receive proper support? =
-
-Please make sure that the problem hasn't been discussed yet on our forum (<https://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
-
-1. the link to the page where the problem occurs
-2. the name of the plugin and its version. If you are using a pro version - your order number.
-3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://bestwebsoft.com/documentation/admin-panel-issues/system-status/)
 
 == Screenshots ==
 
@@ -238,6 +227,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 11. The adding of the Latest Galleries widget.
 
 == Changelog ==
+
+= V4.7.6 - 23.12.2025 =
+* Update : BWS Panel section was updated.
+* PRO : Added Watermark protection for image Gallery.
+* NEW: Gutenberg block has been added.
+* Update : All functionality was updated for WordPress 6.9
 
 = V4.7.5 - 10.03.2025 =
 * Bugfix : Import bug fixed.
@@ -747,6 +742,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * The file uploader is added to the Galleries page in admin section.
 
 == Upgrade Notice ==
+
+= V4.7.6 =
+* Usability improved.
+* The compatibility with new WordPress version updated.
+* New features added.
 
 = V4.7.5 =
 * Bugs fixed.

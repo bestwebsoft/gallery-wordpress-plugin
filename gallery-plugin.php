@@ -6,7 +6,7 @@ Description: Add beautiful galleries, albums & images to your WordPress website 
 Author: BestWebSoft
 Text Domain: gallery-plugin
 Domain Path: /languages
-Version: 4.7.5
+Version: 4.7.6
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
  */
@@ -138,6 +138,37 @@ if ( ! function_exists( 'gllr_init' ) ) {
 		$demo_options = get_option( 'gllr_demo_options' );
 		if ( ! empty( $demo_options ) || ( isset( $_GET['page'] ) && 'gallery-plugin.php' === $_GET['page'] ) ) {
 			gllr_include_demo_data();
+		}
+
+		/**
+		 * Registers the block(s) metadata from the `blocks-manifest.php` and registers the block type(s)
+		 * based on the registered block metadata.
+		 * Added in WordPress 6.8 to simplify the block metadata registration process added in WordPress 6.7.
+		 *
+		 * @see https://make.wordpress.org/core/2025/03/13/more-efficient-block-type-registration-in-6-8/
+		 */
+		if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) ) {
+			wp_register_block_types_from_metadata_collection( __DIR__ . '/includes/build', __DIR__ . '/includes/build/blocks-manifest.php' );
+			return;
+		}
+
+		/**
+		 * Registers the block(s) metadata from the `blocks-manifest.php` file.
+		 * Added to WordPress 6.7 to improve the performance of block type registration.
+		 *
+		 * @see https://make.wordpress.org/core/2024/10/17/new-block-type-registration-apis-to-improve-performance-in-wordpress-6-7/
+		 */
+		if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
+			wp_register_block_metadata_collection( __DIR__ . '/includes/build', __DIR__ . '/includes/build/blocks-manifest.php' );
+		}
+		/**
+		 * Registers the block type(s) in the `blocks-manifest.php` file.
+		 *
+		 * @see https://developer.wordpress.org/reference/functions/register_block_type/
+		 */
+		$manifest_data = require __DIR__ . '/includes/build/blocks-manifest.php';
+		foreach ( array_keys( $manifest_data ) as $block_type ) {
+			register_block_type( __DIR__ . "/includes/build/{$block_type}" );
 		}
 	}
 }
@@ -854,6 +885,14 @@ if ( ! function_exists( 'gllr_post_type_images' ) ) {
 	function gllr_post_type_images( $force_flush_rules = false ) {
 		global $gllr_options;
 
+		$show_in_rest = true;
+		
+		if ( ( isset( $_REQUEST['post'] ) && isset( $_REQUEST['action'] ) && 'edit' === $_REQUEST['action'] ) || isset( $_REQUEST['post_type'] ) ) {
+			if ( isset( $_REQUEST['post'] ) && 'bws-gallery' === get_post_type( $_REQUEST['post'] ) || ( isset( $_REQUEST['post_type'] )  && 'bws-gallery' === $_REQUEST['post_type'] ) ) {
+				$show_in_rest = false;
+			}
+		}
+
 		register_post_type(
 			$gllr_options['post_type_name'],
 			array(
@@ -882,6 +921,7 @@ if ( ! function_exists( 'gllr_post_type_images' ) ) {
 				'supports'             => array( 'title', 'editor', 'thumbnail', 'author', 'page-attributes', 'comments' ),
 				'register_meta_box_cb' => 'gllr_init_metaboxes',
 				'taxonomy'             => array( 'gallery_categories' ),
+				'show_in_rest'         => $show_in_rest
 			)
 		);
 
@@ -1804,7 +1844,7 @@ if ( ! function_exists( 'gllr_single_template_content' ) ) {
 							if ( '' === $post->post_content ) {
 								$output = ob_get_contents();
 								ob_end_clean();
-								echo wp_kses_post( apply_filters( 'the_content', $output ) );
+								echo apply_filters( 'the_content', $output );
 							}
 						}
 						if ( 1 === absint( $gllr_options['return_link'] ) ) {

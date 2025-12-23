@@ -598,6 +598,24 @@ if ( ! class_exists( 'Gllr_Settings_Tabs' ) ) {
 							<div class="bws_table_bg"></div>
 							<table class="form-table bws_pro_version">
 								<tr>
+									<th scope="row"><?php esc_html_e( 'Watermark Protection', 'gallery-plugin' ); ?></th>
+									<td>
+										<fieldset>
+											<label><input type="radio" disabled /> <?php esc_html_e( 'None', 'gallery-plugin' ); ?></label><br>
+											<label><input type="radio" disabled /> <?php esc_html_e( 'Text', 'gallery-plugin' ); ?></label><br>
+											<label><input type="radio" disabled /> <?php esc_html_e( 'Image', 'gallery-plugin' ); ?></label>
+										</fieldset>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><?php esc_html_e( 'Watermark Opacity', 'gallery-plugin' ); ?></th>
+									<td>
+										<fieldset>
+											<input type="number" min='0.1' max='1' step="0.05" disabled />
+										</fieldset>
+									</td>
+								</tr>
+								<tr>
 									<th scope="row"><?php esc_html_e( 'Pagination', 'gallery-plugin' ); ?></th>
 									<td>
 										<input disabled type="checkbox" value="1" />
